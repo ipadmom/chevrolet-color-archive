@@ -1,0 +1,1 @@
+CREATE INDEX `photo_upload_receipts_retention` ON `photo_upload_receipts` (`created_at`,`receipt_hash`);

@@ -6,6 +6,9 @@ interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
   UPLOADS: R2Bucket;
+  PUBLISH_QUEUE_TOKEN?: string;
+  UPLOAD_RATE_SALT?: string;
+  PUBLIC_CORS_ORIGIN?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {

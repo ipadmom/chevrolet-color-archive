@@ -1,0 +1,38 @@
+[
+  {
+    "id": 101,
+    "model": "camaro",
+    "year": "1969",
+    "colorId": "hugger-orange",
+    "colorName": "Hugger Orange",
+    "sourceKind": "community-upload",
+    "originalUrl": null,
+    "fileName": "camaro.png",
+    "contentType": "image/png",
+    "sizeBytes": 68,
+    "credit": "Alice Example",
+    "license": "CC BY 4.0",
+    "status": "staged",
+    "sha256": "431ced6916a2a21a156e38701afe55bbd7f88969fbbfc56d7fe099d47f265460",
+    "createdAt": "2026-07-20 11:00:00",
+    "downloadUrl": "__BASE__/api/photos/101"
+  },
+  {
+    "id": 102,
+    "model": "camaro",
+    "year": "1969",
+    "colorId": "hugger-orange",
+    "colorName": "Hugger Orange",
+    "sourceKind": "web-crawl",
+    "originalUrl": "https://example.test/photos/alternate",
+    "fileName": "alternate.gif",
+    "contentType": "image/gif",
+    "sizeBytes": 34,
+    "credit": "Bob Example",
+    "license": "Permission granted for archive use",
+    "status": "staged",
+    "sha256": "1e85ec81b9800b4c443d39caca0d0926089a3ac201120db1ceb45b93789480b8",
+    "createdAt": "2026-07-20 11:30:00",
+    "downloadUrl": "__BASE__/api/photos/102"
+  }
+]

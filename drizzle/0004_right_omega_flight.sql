@@ -1,0 +1,1 @@
+ALTER TABLE `photo_review_selections` DROP COLUMN `last_error`;

@@ -731,6 +731,10 @@ dd {
   position: relative;
 }
 
+.photo-option.reference-photo {
+  cursor: default;
+}
+
 .photo-option:has(input:checked) {
   border-color: var(--blue);
   box-shadow: 0 0 0 3px rgb(14 86 136 / 16%);
@@ -751,6 +755,20 @@ dd {
   background: #ddd8cd;
   object-fit: cover;
   width: 100%;
+}
+
+.photo-option > .photo-preview-placeholder {
+  align-items: center;
+  aspect-ratio: 16 / 10;
+  color: white;
+  display: flex;
+  font-size: 0.72rem;
+  font-weight: 750;
+  justify-content: center;
+  line-height: 1.4;
+  padding: 24px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 80%);
 }
 
 .photo-option > span {

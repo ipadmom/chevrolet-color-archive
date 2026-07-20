@@ -1,0 +1,2 @@
+CREATE INDEX `photo_candidates_context_page` ON `photo_candidates` (`model`,`year`,`color_id`,`id`);--> statement-breakpoint
+CREATE INDEX `photo_review_selections_status_page` ON `photo_review_selections` (`status`,`id`);

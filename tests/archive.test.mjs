@@ -66,6 +66,71 @@ test("every published year links to a precise official GM source", async () => {
   }
 });
 
+test("early Corvette tables preserve source qualifications, codes, and counts", async () => {
+  const { models } = await loadArchiveData();
+  const corvette = models.find((model) => model.id === "corvette");
+  const generation = corvette.generations[0];
+  const color = (id) =>
+    generation.colors.find((entry) => entry.id === id);
+
+  assert.deepEqual(generation.years, ["1954", "1955", "1956"]);
+  assert.equal(generation.colors.length, 12);
+  assert.equal(generation.listingCount, 15);
+  assert.equal(
+    generation.colors.filter((entry) => entry.availability["1954"]).length,
+    4,
+  );
+  assert.equal(
+    generation.colors.filter((entry) => entry.availability["1955"]).length,
+    5,
+  );
+  assert.equal(
+    generation.colors.filter((entry) => entry.availability["1956"]).length,
+    6,
+  );
+  assert.equal(
+    generation.colors
+      .flatMap((entry) =>
+        ["1954", "1955"]
+          .map((year) => entry.availability[year])
+          .filter(Boolean),
+      )
+      .every(
+        (availability) => availability.state === "restricted",
+      ),
+    true,
+  );
+  assert.equal(
+    generation.colors
+      .map((entry) => entry.availability["1956"])
+      .filter(Boolean)
+      .every((availability) => availability.state === "listed"),
+    true,
+  );
+  assert.equal(
+    color("corvette-polo-white-early").availability["1955"].code,
+    "567",
+  );
+  assert.equal(
+    color("corvette-harvest-gold-1955").availability["1955"].code,
+    "632",
+  );
+  assert.equal(
+    color("corvette-venetian-red-1956").availability["1956"].code,
+    "not stated",
+  );
+  assert.match(generation.revisionNote, /1953 remains unverified/);
+
+  for (const year of generation.years) {
+    assert.match(
+      generation.sources[year].url,
+      new RegExp(`${year}-Chevrolet-Corvette\\.pdf$`),
+    );
+    assert.match(generation.sources[year].locator, /PDF p\./);
+    assert.ok(generation.sources[year].revision);
+  }
+});
+
 test("production shell replaces the disposable starter", async () => {
   const [page, layout, explorer, packageJson] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),

@@ -12,7 +12,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "incremental": true,
+    "incremental": false,
+    "types": ["@cloudflare/workers-types"],
     "plugins": [
       {
         "name": "next"

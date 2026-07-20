@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="referrer" content="no-referrer">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; frame-src https://chevrolet-color-archive.amytato.chatgpt.site; script-src 'nonce-chevy-shell-v1'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-ancestors 'none'"
+    >
+    <title>Chevrolet Color Archive</title>
+    <meta
+      name="description"
+      content="A research archive for Chevrolet factory colors, model years, source records, and reference photos."
+    >
+    <style>
+      :root {
+        color: #13233a;
+        background: #eef2f7;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr);
+        min-width: 280px;
+      }
+
+      .shell-bar {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: 3.5rem;
+        padding: 0.65rem clamp(0.85rem, 2vw, 1.5rem);
+        color: #f8fbff;
+        background: #123b70;
+        border-bottom: 3px solid #e5b327;
+        box-shadow: 0 1px 6px rgb(14 32 54 / 22%);
+      }
+
+      .identity {
+        min-width: 0;
+      }
+
+      .identity strong,
+      .identity span {
+        display: block;
+      }
+
+      .identity strong {
+        font-size: 0.98rem;
+        letter-spacing: 0.01em;
+      }
+
+      .identity span {
+        margin-top: 0.12rem;
+        overflow: hidden;
+        color: #cedbf0;
+        font-size: 0.75rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .direct-link {
+        flex: none;
+        padding: 0.5rem 0.75rem;
+        color: #122238;
+        background: #fff;
+        border: 1px solid rgb(255 255 255 / 75%);
+        border-radius: 0.38rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .direct-link:hover,
+      .direct-link:focus-visible {
+        background: #fff4ce;
+        outline: 3px solid rgb(255 255 255 / 45%);
+        outline-offset: 2px;
+      }
+
+      main {
+        position: relative;
+        min-height: 0;
+        background: #e6ebf2;
+      }
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #fff;
+      }
+
+      .load-state {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        text-align: center;
+        pointer-events: none;
+        background: #eef2f7;
+        transition: opacity 160ms ease;
+      }
+
+      .load-state[hidden] {
+        display: none;
+      }
+
+      .load-card {
+        max-width: 34rem;
+        padding: 1.1rem 1.25rem;
+        background: #fff;
+        border: 1px solid #cad4e1;
+        border-radius: 0.65rem;
+        box-shadow: 0 8px 28px rgb(30 54 83 / 12%);
+      }
+
+      .load-card strong {
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+
+      .load-card span {
+        color: #53657b;
+        font-size: 0.88rem;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 560px) {
+        .shell-bar {
+          align-items: stretch;
+          gap: 0.55rem;
+        }
+
+        .identity {
+          align-self: center;
+        }
+
+        .identity span {
+          display: none;
+        }
+
+        .direct-link {
+          align-self: center;
+          padding-inline: 0.6rem;
+          font-size: 0.76rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="shell-bar">
+      <div class="identity">
+        <strong>Chevrolet Color Archive</strong>
+        <span>Factory color research, evidence, and reference photographs</span>
+      </div>
+      <a
+        class="direct-link"
+        href="https://chevrolet-color-archive.amytato.chatgpt.site"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Open live archive</a>
+    </header>
+    <main>
+      <iframe
+        id="archive-frame"
+        src="https://chevrolet-color-archive.amytato.chatgpt.site"
+        title="Chevrolet Color Archive application"
+        sandbox="allow-downloads allow-forms allow-modals allow-popups allow-same-origin allow-scripts"
+        referrerpolicy="no-referrer"
+      ></iframe>
+      <div class="load-state" id="load-state" role="status" aria-live="polite">
+        <div class="load-card">
+          <strong id="load-title">Loading the live archive</strong>
+          <span id="load-detail">If it does not appear, use “Open live archive” above.</span>
+        </div>
+      </div>
+    </main>
+    <script nonce="chevy-shell-v1">
+      const frame = document.getElementById("archive-frame");
+      const state = document.getElementById("load-state");
+      const title = document.getElementById("load-title");
+      const detail = document.getElementById("load-detail");
+
+      frame.addEventListener("load", () => {
+        state.hidden = true;
+      }, { once: true });
+
+      window.setTimeout(() => {
+        if (!state.hidden) {
+          title.textContent = "The embedded archive is taking longer than expected";
+          detail.textContent = "The archive may block framing or be temporarily unavailable. Use “Open live archive” above.";
+        }
+      }, 8000);
+    </script>
+  </body>
+</html>

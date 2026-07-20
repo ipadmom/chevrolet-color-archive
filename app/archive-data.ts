@@ -58,6 +58,9 @@ export type PhotoCandidate = {
 const gmKit = (year: string) =>
   `https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/${year}-Chevrolet-Camaro.pdf`;
 
+const gmCorvetteKit = (year: string) =>
+  `https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/${year}-Chevrolet-Corvette.pdf`;
+
 export const staticPhotoCandidates: PhotoCandidate[] = [
   {
     id: "commons-1969-camaro-ss396",
@@ -171,6 +174,232 @@ const firstGeneration: Generation = {
   ],
 };
 
+const earlyCorvetteTables: Generation = {
+  id: "early-corvette-audited-tables",
+  label: "Early Corvette audited tables",
+  range: "1954-1956",
+  years: ["1954", "1955", "1956"],
+  listingCount: 15,
+  revisionNote:
+    "The 1954 and 1955 tables warn that exterior quantities are estimates rather than Chevrolet production records, so those rows are marked restricted. The 1956 table says its exterior quantities come from Chevrolet records, reconcile exactly to production, and likely exhaust the available colors. The dedicated 1953 GM kit was reviewed but contains no exterior-color table, so 1953 remains unverified rather than unavailable.",
+  sources: {
+    "1954": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1954 Colors",
+      locator: "PDF p. 4, printed p. 23",
+      revision: "Undated historical table with explicit estimate warning",
+      url: gmCorvetteKit("1954"),
+    },
+    "1955": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1955 Colors",
+      locator: "PDF p. 3, printed p. 25",
+      revision: "Undated historical table with explicit estimate warning",
+      url: gmCorvetteKit("1955"),
+    },
+    "1956": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1956 Colors",
+      locator: "PDF p. 4, printed p. 27",
+      revision: "Undated historical table reconciled to Chevrolet production records",
+      url: gmCorvetteKit("1956"),
+    },
+  },
+  colors: [
+    {
+      id: "corvette-polo-white-early",
+      name: "Polo White",
+      swatch: "#eee9dc",
+      rowCode: "not stated / 567",
+      note: "The 1954 and 1956 tables do not state a code; the 1955 table states code 567.",
+      availability: {
+        "1954": {
+          state: "restricted",
+          label: "Polo White",
+          code: "not stated",
+          restriction:
+            "Quantity estimated; source says exterior quantities are not from Chevrolet records.",
+        },
+        "1955": {
+          state: "restricted",
+          label: "Polo White",
+          code: "567",
+          restriction:
+            "Quantity estimated; source says recorded color usage is incomplete and subject to question.",
+        },
+        "1956": {
+          state: "listed",
+          label: "Polo White",
+          code: "not stated",
+        },
+      },
+    },
+    {
+      id: "corvette-pennant-blue-early",
+      name: "Pennant Blue",
+      swatch: "#5d809e",
+      rowCode: "not stated / 570",
+      note: "The 1954 table does not state a code; the 1955 table states code 570.",
+      availability: {
+        "1954": {
+          state: "restricted",
+          label: "Pennant Blue",
+          code: "not stated",
+          restriction:
+            "Quantity estimated; source says exterior quantities are not from Chevrolet records.",
+        },
+        "1955": {
+          state: "restricted",
+          label: "Pennant Blue",
+          code: "570",
+          restriction:
+            "Quantity estimated; source reports discontinuance in April 1955.",
+        },
+      },
+    },
+    {
+      id: "corvette-sportsman-red-1954",
+      name: "Sportsman Red",
+      swatch: "#a72b32",
+      rowCode: "not stated",
+      availability: {
+        "1954": {
+          state: "restricted",
+          label: "Sportsman Red",
+          code: "not stated",
+          restriction:
+            "Quantity estimated; source says exterior quantities are not from Chevrolet records.",
+        },
+      },
+    },
+    {
+      id: "corvette-black-1954",
+      name: "Black",
+      swatch: "#1b1d1e",
+      rowCode: "not stated",
+      availability: {
+        "1954": {
+          state: "restricted",
+          label: "Black",
+          code: "not stated",
+          restriction:
+            "Quantity estimated; source says exterior quantities are not from Chevrolet records.",
+        },
+      },
+    },
+    {
+      id: "corvette-copper-1955",
+      name: "Corvette Copper",
+      swatch: "#9b6249",
+      rowCode: "573",
+      availability: {
+        "1955": {
+          state: "restricted",
+          label: "Corvette Copper",
+          code: "573",
+          restriction:
+            "Quantity estimated; source says this color is thought to have followed Pennant Blue.",
+        },
+      },
+    },
+    {
+      id: "corvette-gypsy-red-1955",
+      name: "Gypsy Red",
+      swatch: "#aa3031",
+      rowCode: "596",
+      availability: {
+        "1955": {
+          state: "restricted",
+          label: "Gypsy Red",
+          code: "596",
+          restriction:
+            "Quantity estimated; source says this color is thought to have followed Pennant Blue.",
+        },
+      },
+    },
+    {
+      id: "corvette-harvest-gold-1955",
+      name: "Harvest Gold",
+      swatch: "#b08c42",
+      rowCode: "632",
+      availability: {
+        "1955": {
+          state: "restricted",
+          label: "Harvest Gold",
+          code: "632",
+          restriction:
+            "Quantity estimated; source says recorded color usage is incomplete and subject to question.",
+        },
+      },
+    },
+    {
+      id: "corvette-onyx-black-1956",
+      name: "Onyx Black",
+      swatch: "#191b1d",
+      rowCode: "not stated",
+      availability: {
+        "1956": {
+          state: "listed",
+          label: "Onyx Black",
+          code: "not stated",
+        },
+      },
+    },
+    {
+      id: "corvette-aztec-copper-1956",
+      name: "Aztec Copper",
+      swatch: "#9b654d",
+      rowCode: "not stated",
+      availability: {
+        "1956": {
+          state: "listed",
+          label: "Aztec Copper",
+          code: "not stated",
+        },
+      },
+    },
+    {
+      id: "corvette-cascade-green-1956",
+      name: "Cascade Green",
+      swatch: "#57796b",
+      rowCode: "not stated",
+      availability: {
+        "1956": {
+          state: "listed",
+          label: "Cascade Green",
+          code: "not stated",
+        },
+      },
+    },
+    {
+      id: "corvette-arctic-blue-1956",
+      name: "Arctic Blue",
+      swatch: "#7ba0b4",
+      rowCode: "not stated",
+      availability: {
+        "1956": {
+          state: "listed",
+          label: "Arctic Blue",
+          code: "not stated",
+        },
+      },
+    },
+    {
+      id: "corvette-venetian-red-1956",
+      name: "Venetian Red",
+      swatch: "#9e3034",
+      rowCode: "not stated",
+      availability: {
+        "1956": {
+          state: "listed",
+          label: "Venetian Red",
+          code: "not stated",
+        },
+      },
+    },
+  ],
+};
+
 export const models: ArchiveModel[] = [
   { id: "camaro", name: "Camaro", era: "1967 onward", status: "3 official charts verified", generations: [firstGeneration] },
   {
@@ -179,9 +408,9 @@ export const models: ArchiveModel[] = [
     generations: [],
   },
   {
-    id: "corvette", name: "Corvette", era: "1953 onward", status: "Source inventory in progress",
-    pendingCopy: "Official model-year sources are being normalized before availability claims are added.",
-    generations: [],
+    id: "corvette", name: "Corvette", era: "1953 onward", status: "3 official tables audited",
+    pendingCopy: "The dedicated 1953 GM kit contains no exterior-color table. That year remains unverified while additional official documentation is sought.",
+    generations: [earlyCorvetteTables],
   },
   {
     id: "colorado", name: "Colorado", era: "Modern truck", status: "Source inventory in progress",

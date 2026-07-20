@@ -1,0 +1,14 @@
+[
+  {
+    "id": 7,
+    "model": "camaro",
+    "year": "1969",
+    "colorId": "hugger-orange",
+    "status": "queued",
+    "attemptCount": 0,
+    "leaseExpiresAt": null,
+    "lastErrorCode": null,
+    "createdAt": "2026-07-20 12:00:00",
+    "processedAt": null
+  }
+]
