@@ -12,7 +12,7 @@ import {
   sql,
 } from "drizzle-orm";
 import { models } from "../../archive-data";
-import { getDb } from "../../../db";
+import { getD1Database, getDb } from "../../../db";
 import {
   photoCandidates,
   photoReviewSelections,
@@ -327,95 +327,96 @@ async function enqueueSelectionAtomically({
   receiptHashes: string[];
   receiptCutoff: string;
 }): Promise<{ id: number; created: boolean } | null> {
-  const db = getDb();
-  const receiptList = sql.join(
-    receiptHashes.map((hash) => sql`${hash}`),
-    sql`, `,
-  );
-  const receiptEligibility = receiptHashes.length
-    ? sql`(
-        SELECT COUNT(DISTINCT ${photoUploadReceipts.receiptHash})
-        FROM ${photoUploadReceipts}
-        INNER JOIN ${photoCandidates}
-          ON ${photoUploadReceipts.candidateId} = ${photoCandidates.id}
-        WHERE ${photoUploadReceipts.receiptHash} IN (${receiptList})
-          AND ${photoUploadReceipts.consumedAt} IS NULL
-          AND datetime(${photoUploadReceipts.createdAt}) >= datetime(${receiptCutoff})
-          AND ${photoCandidates.model} = ${context.model}
-          AND ${photoCandidates.year} = ${context.year}
-          AND ${photoCandidates.colorId} = ${context.colorId}
-          AND ${photoCandidates.status} = 'staged'
-      ) = ${receiptHashes.length}`
-    : sql`1 = 1`;
-  const noActiveCandidateOverlap = receiptHashes.length
-    ? sql`NOT EXISTS (
-        SELECT 1
-        FROM photo_review_selections AS active_selection,
-          json_each(active_selection.candidate_ids_json) AS active_candidate
-        WHERE active_selection.status IN ('queued', 'leased')
-          AND CAST(active_candidate.value AS INTEGER) IN (
-            SELECT candidate_id
-            FROM photo_upload_receipts
-            WHERE receipt_hash IN (${receiptList})
-          )
-      )`
-    : sql`1 = 1`;
+  if (!receiptHashes.length) return null;
 
-  const insertSelection = db.run(sql`
-    INSERT OR IGNORE INTO photo_review_selections (
-      model,
-      year,
-      color_id,
-      candidate_ids_json,
-      status,
-      attempt_count,
-      created_at
-    )
-    SELECT
-      ${context.model},
-      ${context.year},
-      ${context.colorId},
-      ${candidateIdsJson},
-      'queued',
-      0,
-      CURRENT_TIMESTAMP
-    WHERE ${receiptEligibility}
-      AND ${noActiveCandidateOverlap}
-  `);
-  const consumedAt = new Date().toISOString();
-  const consumeReceipts = receiptHashes.length
-    ? db
-        .update(photoUploadReceipts)
-        .set({ consumedAt })
-        .where(
-          and(
-            inArray(photoUploadReceipts.receiptHash, receiptHashes),
-            isNull(photoUploadReceipts.consumedAt),
-            sql`datetime(${photoUploadReceipts.createdAt}) >= datetime(${receiptCutoff})`,
-            sql`EXISTS (
-              SELECT 1
-              FROM ${photoReviewSelections}
-              WHERE ${photoReviewSelections.model} = ${context.model}
-                AND ${photoReviewSelections.year} = ${context.year}
-                AND ${photoReviewSelections.colorId} = ${context.colorId}
-                AND ${photoReviewSelections.candidateIdsJson} = ${candidateIdsJson}
-                AND ${photoReviewSelections.status} != 'failed'
-            )`,
-          ),
+  const d1 = getD1Database();
+  const receiptPlaceholders = receiptHashes.map(() => "?").join(", ");
+  const insertSelection = d1
+    .prepare(`
+      INSERT OR IGNORE INTO photo_review_selections (
+        model,
+        year,
+        color_id,
+        candidate_ids_json,
+        status,
+        attempt_count,
+        created_at
+      )
+      SELECT ?, ?, ?, ?, 'queued', 0, CURRENT_TIMESTAMP
+      WHERE (
+        SELECT COUNT(DISTINCT upload_receipt.receipt_hash)
+        FROM photo_upload_receipts AS upload_receipt
+        INNER JOIN photo_candidates AS candidate
+          ON upload_receipt.candidate_id = candidate.id
+        WHERE upload_receipt.receipt_hash IN (${receiptPlaceholders})
+          AND upload_receipt.consumed_at IS NULL
+          AND datetime(upload_receipt.created_at) >= datetime(?)
+          AND candidate.model = ?
+          AND candidate.year = ?
+          AND candidate.color_id = ?
+          AND candidate.status = 'staged'
+      ) = ?
+        AND NOT EXISTS (
+          SELECT 1
+          FROM photo_review_selections AS active_selection,
+            json_each(active_selection.candidate_ids_json) AS active_candidate
+          WHERE active_selection.status IN ('queued', 'leased')
+            AND CAST(active_candidate.value AS INTEGER) IN (
+              SELECT candidate_id
+              FROM photo_upload_receipts
+              WHERE receipt_hash IN (${receiptPlaceholders})
+            )
         )
-        .returning({ receiptHash: photoUploadReceipts.receiptHash })
-    : null;
+    `)
+    .bind(
+      context.model,
+      context.year,
+      context.colorId,
+      candidateIdsJson,
+      ...receiptHashes,
+      receiptCutoff,
+      context.model,
+      context.year,
+      context.colorId,
+      receiptHashes.length,
+      ...receiptHashes,
+    );
+  const consumedAt = new Date().toISOString();
+  const consumeReceipts = d1
+    .prepare(`
+      UPDATE photo_upload_receipts
+      SET consumed_at = ?
+      WHERE receipt_hash IN (${receiptPlaceholders})
+        AND consumed_at IS NULL
+        AND datetime(created_at) >= datetime(?)
+        AND EXISTS (
+          SELECT 1
+          FROM photo_review_selections
+          WHERE model = ?
+            AND year = ?
+            AND color_id = ?
+            AND candidate_ids_json = ?
+            AND status != 'failed'
+        )
+    `)
+    .bind(
+      consumedAt,
+      ...receiptHashes,
+      receiptCutoff,
+      context.model,
+      context.year,
+      context.colorId,
+      candidateIdsJson,
+    );
 
   let created = false;
   let batchError: unknown;
   try {
-    if (consumeReceipts) {
-      const [insertResult] = await db.batch([insertSelection, consumeReceipts]);
-      created = Number(insertResult.meta?.changes ?? 0) > 0;
-    } else {
-      const [insertResult] = await db.batch([insertSelection]);
-      created = Number(insertResult.meta?.changes ?? 0) > 0;
-    }
+    const [insertResult] = await d1.batch([
+      insertSelection,
+      consumeReceipts,
+    ]);
+    created = Number(insertResult.meta?.changes ?? 0) > 0;
   } catch (error) {
     // D1 batch responses can be ambiguous after a transport failure. The
     // active canonical selection below is the idempotency record.

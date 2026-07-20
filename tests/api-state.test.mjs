@@ -259,7 +259,12 @@ test("route sources use D1 batches and published-only public visibility", async 
   assert.match(photos, /`\$\{sha256\}\.\$\{extensionForMime\(detectedType\)\}`/);
   assert.match(photos, /publishedAssetUrl/);
   assert.match(selections, /enqueueSelectionAtomically/);
-  assert.match(selections, /await db\.batch\(\[insertSelection, consumeReceipts\]\)/);
+  assert.match(selections, /const d1 = getD1Database\(\)/);
+  assert.match(
+    selections,
+    /await d1\.batch\(\[\s*insertSelection,\s*consumeReceipts,\s*\]\)/s,
+  );
+  assert.doesNotMatch(selections, /const insertSelection = db\.run/);
   assert.match(selections, /photoCandidates\.status\} = 'staged'/);
   assert.match(selections, /status: queued\.created \? 201 : 200/);
   assert.match(selections, /insertResult\.meta\?\.changes/);

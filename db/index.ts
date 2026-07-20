@@ -6,7 +6,7 @@ type DatabaseEnv = {
   DB?: D1Database;
 };
 
-export function getDb() {
+export function getD1Database() {
   const database = (env as unknown as DatabaseEnv).DB;
   if (!database) {
     throw new Error(
@@ -14,5 +14,9 @@ export function getDb() {
     );
   }
 
-  return drizzle(database, { schema });
+  return database;
+}
+
+export function getDb() {
+  return drizzle(getD1Database(), { schema });
 }
