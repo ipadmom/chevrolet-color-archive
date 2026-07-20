@@ -44,3 +44,5 @@ next-env.d.ts
 # local preview and crawler QA artifacts
 .codex-dev*.log
 /crawler/photos/output/
+__pycache__/
+*.py[cod]
