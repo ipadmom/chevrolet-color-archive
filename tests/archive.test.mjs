@@ -66,14 +66,14 @@ test("every published year links to a precise official GM source", async () => {
   }
 });
 
-test("Camaro 1970–1975 block preserves complete charts and generation order", async () => {
+test("Camaro second generation preserves complete charts and generation order", async () => {
   const { models } = await loadArchiveData();
   const camaro = models.find((model) => model.id === "camaro");
   const generation = camaro.generations[1];
 
   assert.deepEqual(
     camaro.generations.map((item) => item.range),
-    ["1967–1969", "1970–1975"],
+    ["1967–1969", "1970–1981"],
   );
   assert.deepEqual(generation.years, [
     "1970",
@@ -82,9 +82,15 @@ test("Camaro 1970–1975 block preserves complete charts and generation order", 
     "1973",
     "1974",
     "1975",
+    "1976",
+    "1977",
+    "1978",
+    "1979",
+    "1980",
+    "1981",
   ]);
-  assert.equal(generation.listingCount, 93);
-  assert.equal(generation.colors.length, 74);
+  assert.equal(generation.listingCount, 175);
+  assert.equal(generation.colors.length, 103);
   assert.deepEqual(
     Object.fromEntries(
       generation.years.map((year) => [
@@ -92,13 +98,26 @@ test("Camaro 1970–1975 block preserves complete charts and generation order", 
         generation.colors.filter((color) => color.availability[year]).length,
       ]),
     ),
-    { 1970: 15, 1971: 15, 1972: 15, 1973: 16, 1974: 16, 1975: 16 },
+    {
+      1970: 15,
+      1971: 15,
+      1972: 15,
+      1973: 16,
+      1974: 16,
+      1975: 16,
+      1976: 14,
+      1977: 14,
+      1978: 13,
+      1979: 14,
+      1980: 14,
+      1981: 13,
+    },
   );
   assert.equal(
     generation.colors
       .flatMap((color) => Object.values(color.availability))
-      .some((availability) => availability.state === "restricted"),
-    false,
+      .filter((availability) => availability.state === "restricted").length,
+    1,
   );
 });
 
@@ -110,16 +129,16 @@ test("Camaro 1970–1975 names, exclusions, and source locators stay literal", a
 
   assert.deepEqual(
     Object.keys(
-      color("camaro-1970-1975-antique-white-1971").availability,
+      color("camaro-second-generation-antique-white-1971").availability,
     ),
-    ["1971", "1972", "1973", "1974"],
+    ["1971", "1972", "1973", "1974", "1976", "1977"],
   );
   assert.equal(
-    color("camaro-1970-1975-cream-beige-1974").name,
+    color("camaro-second-generation-cream-beige-1974").name,
     "Cream Beige",
   );
   assert.equal(
-    color("camaro-1970-1975-cream-beige-1975").name,
+    color("camaro-second-generation-cream-beige-1975").name,
     "Cream-Beige",
   );
   assert.equal(
@@ -130,31 +149,31 @@ test("Camaro 1970–1975 names, exclusions, and source locators stay literal", a
     false,
   );
   assert.equal(
-    color("camaro-1970-1975-persimmon-metallic-1975").availability["1975"].code,
+    color("camaro-second-generation-persimmon-metallic-1975").availability["1975"].code,
     "64",
   );
   assert.equal(
-    color("camaro-1970-1975-antique-white-1971").availability["1973"].label,
+    color("camaro-second-generation-antique-white-1971").availability["1973"].label,
     "Antique White C/O",
   );
   assert.equal(
-    color("camaro-1970-1975-antique-white-1971").availability["1972"].label,
+    color("camaro-second-generation-antique-white-1971").availability["1972"].label,
     "Antique White",
   );
   assert.equal(
-    color("camaro-1970-1975-medium-dark-green-metallic-1974").availability["1974"].label,
+    color("camaro-second-generation-medium-dark-green-metallic-1974").availability["1974"].label,
     "Med. Dark Green Metallic",
   );
   assert.equal(
-    color("camaro-1970-1975-dark-sandstone-metallic-1975").availability["1975"].label,
+    color("camaro-second-generation-dark-sandstone-metallic-1975").availability["1975"].label,
     "Dark Sandstone Met.",
   );
   assert.equal(
-    color("camaro-1970-1975-persimmon-metallic-1975").availability["1975"].label,
+    color("camaro-second-generation-persimmon-metallic-1975").availability["1975"].label,
     "Persimmon Met.",
   );
   assert.equal(
-    color("camaro-1970-1975-red-1975").availability["1975"].label,
+    color("camaro-second-generation-red-1975").availability["1975"].label,
     "Red C/O",
   );
 
@@ -189,7 +208,7 @@ test("Camaro 1970–1975 names, exclusions, and source locators stay literal", a
       .sort((left, right) => left.join("\0").localeCompare(right.join("\0")));
   }
 
-  for (const year of generation.years) {
+  for (const year of ["1970", "1971", "1972", "1973", "1974", "1975"]) {
     const actual = generation.colors
       .filter((entry) => entry.availability[year])
       .map((entry) => [
@@ -211,6 +230,96 @@ test("Camaro 1970–1975 names, exclusions, and source locators stay literal", a
     /Canonical rows preserve[\s\S]*1975 `White`,[\r\n]+`Cream-Beige`, and `Persimmon Metallic`/,
   );
   assert.match(audit, /two-tone paint is unavailable/);
+});
+
+test("Camaro 1976–1981 rows, restriction, and source labels match the audit", async () => {
+  const { models } = await loadArchiveData();
+  const generation = models.find((model) => model.id === "camaro").generations[1];
+  const years = ["1976", "1977", "1978", "1979", "1980", "1981"];
+
+  const exactLocators = {
+    1976: "PDF p. 72, printed Camaro Page 4",
+    1977: "PDF p. 6, printed Camaro Page 4",
+    1978: "PDF pp. 30 and 34, printed Camaro Pages 2 and 6",
+    1979: "PDF p. 62, printed Camaro Page 6",
+    1980: "PDF p. 110, printed Camaro Page 6",
+    1981: "PDF p. 44, printed Camaro Page 6",
+  };
+  for (const [year, locator] of Object.entries(exactLocators)) {
+    assert.equal(generation.sources[year].locator, locator);
+    assert.match(
+      generation.sources[year].url,
+      new RegExp(`${year}-Chevrolet-Camaro\\.pdf$`),
+    );
+  }
+
+  const audit = await readFile(
+    new URL("docs/source-audit-camaro-1976-1981.md", root),
+    "utf8",
+  );
+
+  function documentedCamaroRows(year) {
+    const start = audit.indexOf(`## ${year}`);
+    assert.notEqual(start, -1, `missing ${year} audit section`);
+    const next = audit.indexOf("\n## ", start + 4);
+    const section = audit.slice(start, next === -1 ? undefined : next);
+    return [
+      ...section.matchAll(
+        /^\| (\d+) \| ([^|\r\n]+) \| (listed|restricted) \|\s*([^|\r\n]*?)\s*\|\r?$/gm,
+      ),
+    ]
+      .map((match) => [
+        match[1],
+        match[2].trim(),
+        match[3],
+        match[4].trim(),
+      ])
+      .sort((left, right) => left.join("\0").localeCompare(right.join("\0")));
+  }
+
+  for (const year of years) {
+    const actual = generation.colors
+      .filter((entry) => entry.availability[year])
+      .map((entry) => [
+        entry.availability[year].code,
+        entry.availability[year].label,
+        entry.availability[year].state,
+        entry.availability[year].restriction ?? "",
+      ])
+      .sort((left, right) => left.join("\0").localeCompare(right.join("\0")));
+    assert.deepEqual(actual, documentedCamaroRows(year));
+  }
+
+  const restricted = generation.colors.flatMap((entry) =>
+    years
+      .map((year) => ({ year, color: entry, value: entry.availability[year] }))
+      .filter(({ value }) => value?.state === "restricted"),
+  );
+  assert.equal(restricted.length, 1);
+  assert.equal(restricted[0].year, "1978");
+  assert.equal(restricted[0].value.code, "34");
+  assert.equal(restricted[0].value.label, "Yellow, Orange");
+  assert.equal(restricted[0].value.restriction, "Z28 only");
+
+  const brightBlue = generation.colors.find(
+    (entry) => entry.name === "Bright Blue Metallic",
+  );
+  assert.equal(brightBlue.availability["1980"].label, "Blue, Bright (Met)");
+  assert.equal(
+    brightBlue.availability["1981"].label,
+    "Blue, Bright (Metallic)",
+  );
+  assert.deepEqual(
+    Object.keys(
+      generation.colors.find((entry) => entry.name === "Antique White")
+        .availability,
+    ),
+    ["1971", "1972", "1973", "1974", "1976", "1977"],
+  );
+
+  assert.match(audit, /82 year-specific chart listings/);
+  assert.match(audit, /Z85 applications, stripe systems, and Z28 scheme labels/);
+  assert.match(audit, /A shared paint code does not merge/);
 });
 
 test("C1 Corvette tables preserve source qualifications, codes, and counts", async () => {
@@ -470,7 +579,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     models
       .flatMap((model) => model.generations)
       .reduce((total, item) => total + item.listingCount, 0),
-    258,
+    340,
   );
 });
 

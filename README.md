@@ -24,8 +24,8 @@ evidence separate from interpretive swatches and photographs.
 
 ## Published coverage
 
-The public matrices currently contain 258 source-linked chart listings,
-normalized into 202 timeline rows.
+The public matrices currently contain 340 source-linked chart listings,
+normalized into 231 timeline rows.
 
 First-generation Camaro:
 
@@ -39,7 +39,7 @@ The 48 chart listings normalize to 45 timeline rows because Rally
 Green/Rallye Green, LeMans Blue/Le Mans Blue, and Butternut Yellow span two
 charts. Exact year-specific names and codes remain visible.
 
-Second-generation Camaro, first audited block:
+Second-generation Camaro:
 
 | Year | Official chart listings | Source |
 |---|---:|---|
@@ -49,11 +49,18 @@ Second-generation Camaro, first audited block:
 | 1973 | 16 | GM Heritage Vehicle Information Kit, PDF pp. 30–31 |
 | 1974 | 16 | GM Heritage Vehicle Information Kit, PDF pp. 49–50 |
 | 1975 | 16 | GM Heritage Vehicle Information Kit, PDF pp. 22–23 |
+| 1976 | 14 | Dealer Order Guide, PDF p. 72 |
+| 1977 | 14 | Dealer Order Guide, PDF p. 6 |
+| 1978 | 13 | Camaro and Z28 guides, PDF pp. 30 and 34 |
+| 1979 | 14 | Dealer Order Guide, PDF p. 62 |
+| 1980 | 14 | Dealer Order Guide, PDF p. 110 |
+| 1981 | 13 | Dealer Order Guide, PDF p. 44 |
 
-These 93 chart listings normalize into 74 exact-name timeline rows. Both
-complete 1972 charts omit black, so the archive does not infer it. Carryover,
-ZP2, and vinyl-roof annotations are preserved as source qualifications rather
-than misclassified as color-level restrictions.
+These 175 chart listings normalize into 103 timeline rows. Both complete 1972
+charts omit black, so the archive does not infer it. The only restriction in
+the later block is 1978 `Yellow, Orange`, code 34, which is Z28-only. Carryover,
+ZP2, Rally Sport, stripe, and paint-scheme annotations remain source
+qualifications rather than extra solid-color rows.
 
 First-generation Chevelle:
 
@@ -193,6 +200,8 @@ The 1953-1962 Corvette evidence review is in
 [docs/source-audit-early-corvette.md](docs/source-audit-early-corvette.md).
 The 1970–1975 Camaro evidence review is in
 [docs/source-audit-camaro-1970-1975.md](docs/source-audit-camaro-1970-1975.md).
+The 1976–1981 Camaro evidence review is in
+[docs/source-audit-camaro-1976-1981.md](docs/source-audit-camaro-1976-1981.md).
 The 1964–1967 Chevelle evidence review is in
 [docs/source-audit-chevelle-1964-1967.md](docs/source-audit-chevelle-1964-1967.md).
 
