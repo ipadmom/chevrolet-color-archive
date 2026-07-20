@@ -174,14 +174,28 @@ const firstGeneration: Generation = {
   ],
 };
 
+const listedCorvetteColor = (label: string): Availability => ({
+  state: "listed",
+  label,
+  code: "not stated",
+});
+
+const restrictedCorvette1959 = (label: string): Availability => ({
+  state: "restricted",
+  label,
+  code: "not stated",
+  restriction:
+    "Historical table quantities cover 9,582 cars; five were non-standard and 83 export colors are unknown.",
+});
+
 const earlyCorvetteTables: Generation = {
   id: "early-corvette-audited-tables",
-  label: "Early Corvette audited tables",
-  range: "1954-1956",
-  years: ["1954", "1955", "1956"],
-  listingCount: 15,
+  label: "C1 Corvette audited tables",
+  range: "1954–1962",
+  years: ["1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962"],
+  listingCount: 58,
   revisionNote:
-    "The 1954 and 1955 tables warn that exterior quantities are estimates rather than Chevrolet production records, so those rows are marked restricted. The 1956 table says its exterior quantities come from Chevrolet records, reconcile exactly to production, and likely exhaust the available colors. The dedicated 1953 GM kit was reviewed but contains no exterior-color table, so 1953 remains unverified rather than unavailable.",
+    "The 1954 and 1955 tables use qualified estimates, so those rows are restricted. Direct Chevrolet color-combination charts support listed rows for 1957, 1958, and 1960–1962; the 1956 production table also reconciles exactly to production. The 1959 rows remain restricted because only the qualified historical table was located. The dedicated 1953 GM kit was reviewed but contains no exterior-color table, so 1953 remains unverified rather than unavailable.",
   sources: {
     "1954": {
       name: "GM Heritage Vehicle Information Kit",
@@ -203,6 +217,48 @@ const earlyCorvetteTables: Generation = {
       locator: "PDF p. 4, printed p. 27",
       revision: "Undated historical table reconciled to Chevrolet production records",
       url: gmCorvetteKit("1956"),
+    },
+    "1957": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Exterior - Interior Color Combinations",
+      locator: "PDF p. 33, printed CORVETTE SUPPLEMENT - 67",
+      revision: "Dated October 29, 1956",
+      url: gmCorvetteKit("1957"),
+    },
+    "1958": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Exterior - Interior Color Combinations",
+      locator: "PDF p. 12, printed CORVETTE SUPPLEMENT - P49",
+      revision: "Dated November 29, 1957",
+      url: gmCorvetteKit("1958"),
+    },
+    "1959": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1959 Colors",
+      locator: "PDF p. 5, printed p. 33",
+      revision: "Undated historical table with non-standard and unknown export colors",
+      url: gmCorvetteKit("1959"),
+    },
+    "1960": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Exterior - Interior Color Combinations",
+      locator: "PDF p. 6, printed CORVETTE-5",
+      revision: "October 1959; revised February 1960",
+      url: gmCorvetteKit("1960"),
+    },
+    "1961": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Exterior - Interior Color Combinations",
+      locator: "PDF p. 12, printed CORVETTE-5",
+      revision: "Revised February 1961",
+      url: gmCorvetteKit("1961"),
+    },
+    "1962": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Exterior - Interior Color Combinations",
+      locator: "PDF p. 14, printed CORVETTE-5",
+      revision: "October 1961",
+      url: gmCorvetteKit("1962"),
     },
   },
   colors: [
@@ -228,6 +284,11 @@ const earlyCorvetteTables: Generation = {
             "Quantity estimated; source says recorded color usage is incomplete and subject to question.",
         },
         "1956": {
+          state: "listed",
+          label: "Polo White",
+          code: "not stated",
+        },
+        "1957": {
           state: "listed",
           label: "Polo White",
           code: "not stated",
@@ -343,6 +404,11 @@ const earlyCorvetteTables: Generation = {
           label: "Onyx Black",
           code: "not stated",
         },
+        "1957": {
+          state: "listed",
+          label: "Onyx Black",
+          code: "not stated",
+        },
       },
     },
     {
@@ -352,6 +418,11 @@ const earlyCorvetteTables: Generation = {
       rowCode: "not stated",
       availability: {
         "1956": {
+          state: "listed",
+          label: "Aztec Copper",
+          code: "not stated",
+        },
+        "1957": {
           state: "listed",
           label: "Aztec Copper",
           code: "not stated",
@@ -369,6 +440,11 @@ const earlyCorvetteTables: Generation = {
           label: "Cascade Green",
           code: "not stated",
         },
+        "1957": {
+          state: "listed",
+          label: "Cascade Green",
+          code: "not stated",
+        },
       },
     },
     {
@@ -378,6 +454,11 @@ const earlyCorvetteTables: Generation = {
       rowCode: "not stated",
       availability: {
         "1956": {
+          state: "listed",
+          label: "Arctic Blue",
+          code: "not stated",
+        },
+        "1957": {
           state: "listed",
           label: "Arctic Blue",
           code: "not stated",
@@ -395,20 +476,248 @@ const earlyCorvetteTables: Generation = {
           label: "Venetian Red",
           code: "not stated",
         },
+        "1957": {
+          state: "listed",
+          label: "Venetian Red",
+          code: "not stated",
+        },
+      },
+    },
+    {
+      id: "corvette-charcoal-1958",
+      name: "Charcoal",
+      swatch: "#4f5555",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Charcoal"),
+      },
+    },
+    {
+      id: "corvette-snowcrest-white",
+      name: "Snowcrest White",
+      swatch: "#f1eee5",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Snowcrest White"),
+        "1959": restrictedCorvette1959("Snowcrest White"),
+      },
+    },
+    {
+      id: "corvette-silver-blue-1958",
+      name: "Silver Blue",
+      swatch: "#7898a8",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Silver Blue"),
+      },
+    },
+    {
+      id: "corvette-regal-turquoise-1958",
+      name: "Regal Turquoise",
+      swatch: "#3d8787",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Regal Turquoise"),
+      },
+    },
+    {
+      id: "corvette-panama-yellow-1958",
+      name: "Panama Yellow",
+      swatch: "#d8b64f",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Panama Yellow"),
+      },
+    },
+    {
+      id: "corvette-signet-red-1958",
+      name: "Signet Red",
+      swatch: "#a52d34",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Signet Red"),
+      },
+    },
+    {
+      id: "corvette-black-1958",
+      name: "Black",
+      swatch: "#191b1d",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Black"),
+      },
+    },
+    {
+      id: "corvette-silver-1958",
+      name: "Silver",
+      swatch: "#aeb3b4",
+      rowCode: "not stated",
+      availability: {
+        "1958": listedCorvetteColor("Silver"),
+      },
+    },
+    {
+      id: "corvette-tuxedo-black-1959",
+      name: "Tuxedo Black",
+      swatch: "#17191b",
+      rowCode: "not stated",
+      availability: {
+        "1959": restrictedCorvette1959("Tuxedo Black"),
+        "1960": listedCorvetteColor("Tuxedo Black"),
+        "1961": listedCorvetteColor("Tuxedo Black"),
+        "1962": listedCorvetteColor("Tuxedo Black"),
+      },
+    },
+    {
+      id: "corvette-classic-cream-1959",
+      name: "Classic Cream",
+      swatch: "#e3d3a8",
+      rowCode: "not stated",
+      availability: {
+        "1959": restrictedCorvette1959("Classic Cream"),
+      },
+    },
+    {
+      id: "corvette-frost-blue-1959",
+      name: "Frost Blue",
+      swatch: "#a3bdca",
+      rowCode: "not stated",
+      availability: {
+        "1959": restrictedCorvette1959("Frost Blue"),
+      },
+    },
+    {
+      id: "corvette-crown-sapphire-1959",
+      name: "Crown Sapphire",
+      swatch: "#365878",
+      rowCode: "not stated",
+      availability: {
+        "1959": restrictedCorvette1959("Crown Sapphire"),
+      },
+    },
+    {
+      id: "corvette-roman-red-1959",
+      name: "Roman Red",
+      swatch: "#a32e34",
+      rowCode: "not stated",
+      availability: {
+        "1959": restrictedCorvette1959("Roman Red"),
+        "1960": listedCorvetteColor("Roman Red"),
+        "1961": listedCorvetteColor("Roman Red"),
+        "1962": listedCorvetteColor("Roman Red"),
+      },
+    },
+    {
+      id: "corvette-inca-silver-1959",
+      name: "Inca Silver",
+      swatch: "#b6b7b2",
+      rowCode: "not stated",
+      availability: {
+        "1959": restrictedCorvette1959("Inca Silver"),
+      },
+    },
+    {
+      id: "corvette-tasco-turquoise-1960",
+      name: "Tasco Turquoise",
+      swatch: "#367e81",
+      rowCode: "not stated",
+      availability: {
+        "1960": listedCorvetteColor("Tasco Turquoise"),
+      },
+    },
+    {
+      id: "corvette-horizon-blue-1960",
+      name: "Horizon Blue",
+      swatch: "#648da9",
+      rowCode: "not stated",
+      availability: {
+        "1960": listedCorvetteColor("Horizon Blue"),
+      },
+    },
+    {
+      id: "corvette-honduras-maroon-1960",
+      name: "Honduras Maroon",
+      swatch: "#6e2f3b",
+      rowCode: "not stated",
+      availability: {
+        "1960": listedCorvetteColor("Honduras Maroon"),
+        "1961": listedCorvetteColor("Honduras Maroon"),
+        "1962": listedCorvetteColor("Honduras Maroon"),
+      },
+    },
+    {
+      id: "corvette-ermine-white-1960",
+      name: "Ermine White",
+      swatch: "#efeee7",
+      rowCode: "not stated",
+      availability: {
+        "1960": listedCorvetteColor("Ermine White"),
+        "1961": listedCorvetteColor("Ermine White"),
+        "1962": listedCorvetteColor("Ermine White"),
+      },
+    },
+    {
+      id: "corvette-sateen-silver-1960",
+      name: "Sateen Silver",
+      swatch: "#a9aaa5",
+      rowCode: "not stated",
+      availability: {
+        "1960": listedCorvetteColor("Sateen Silver"),
+        "1961": listedCorvetteColor("Sateen Silver"),
+        "1962": listedCorvetteColor("Sateen Silver"),
+      },
+    },
+    {
+      id: "corvette-cascade-green-1960",
+      name: "Cascade Green",
+      swatch: "#557b68",
+      rowCode: "not stated",
+      note:
+        "The 1960 source describes a metallic paint distinct from the 1956–1957 color with the same name.",
+      availability: {
+        "1960": listedCorvetteColor("Cascade Green"),
+      },
+    },
+    {
+      id: "corvette-jewel-blue-1961",
+      name: "Jewel Blue",
+      swatch: "#2c5d81",
+      rowCode: "not stated",
+      availability: {
+        "1961": listedCorvetteColor("Jewel Blue"),
+      },
+    },
+    {
+      id: "corvette-fawn-beige-1961",
+      name: "Fawn Beige",
+      swatch: "#ad9877",
+      rowCode: "not stated",
+      availability: {
+        "1961": listedCorvetteColor("Fawn Beige"),
+        "1962": listedCorvetteColor("Fawn Beige"),
+      },
+    },
+    {
+      id: "corvette-almond-beige-1962",
+      name: "Almond Beige",
+      swatch: "#c6ad82",
+      rowCode: "not stated",
+      availability: {
+        "1962": listedCorvetteColor("Almond Beige"),
       },
     },
   ],
 };
 
 export const models: ArchiveModel[] = [
-  { id: "camaro", name: "Camaro", era: "1967 onward", status: "3 official charts verified", generations: [firstGeneration] },
+  { id: "camaro", name: "Camaro", era: "1967–1969 audited", status: "3 official charts verified", generations: [firstGeneration] },
   {
     id: "bel-air", name: "Bel Air", era: "Historic passenger car", status: "Source inventory in progress",
     pendingCopy: "Generation boundaries and official chart locators are being audited. No matrix is published until a full year chart has been reviewed.",
     generations: [],
   },
   {
-    id: "corvette", name: "Corvette", era: "1953 onward", status: "3 official tables audited",
+    id: "corvette", name: "Corvette", era: "1953–1962 source series", status: "9 official tables audited",
     pendingCopy: "The dedicated 1953 GM kit contains no exterior-color table. That year remains unverified while additional official documentation is sought.",
     generations: [earlyCorvetteTables],
   },

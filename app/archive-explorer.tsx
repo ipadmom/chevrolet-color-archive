@@ -59,6 +59,16 @@ const modelSteps = ["Choose model", "Choose year", "Read timeline"];
 const apiBase = (process.env.NEXT_PUBLIC_ARCHIVE_API_BASE ?? "").replace(/\/$/, "");
 const stagedStorageKey = "chevrolet-color-archive:staged-receipts:v1";
 const receiptPattern = /^[A-Za-z0-9_-]{43}$/;
+const publishedGenerations = models.flatMap((model) =>
+  model.generations.map((generation) => ({ model, generation })),
+);
+const archiveListingCount = publishedGenerations.reduce(
+  (total, { generation }) => total + generation.listingCount,
+  0,
+);
+const archiveCoverageLabel = publishedGenerations
+  .map(({ model, generation }) => `${model.name} ${generation.range}`)
+  .join(" · ");
 
 function loadStagedReceipts(): StagedPhoto[] {
   try {
@@ -125,7 +135,12 @@ export function ArchiveExplorer() {
   const previewUrls = useRef(new Set<string>());
 
   const model = models.find((item) => item.id === modelId) ?? models[0];
-  const generation = model.generations[0];
+  const generation =
+    model.generations.find((item) => item.years.includes(year)) ??
+    model.generations[0];
+  const modelYears = model.generations.flatMap((item) =>
+    item.years.map((modelYear) => ({ generation: item, year: modelYear })),
+  );
   const years = generation?.years ?? [];
   const colors = generation?.colors ?? [];
   const visibleColors = showAll
@@ -223,11 +238,21 @@ export function ArchiveExplorer() {
   }
 
   function chooseYear(nextYear: string) {
+    const nextGeneration = model.generations.find((item) =>
+      item.years.includes(nextYear),
+    );
+    const nextColors = nextGeneration?.colors ?? [];
     setYear(nextYear);
     setShowAll(false);
     clearLocalPhotoState();
-    const firstListed = colors.find((color) => color.availability[nextYear]);
-    if (!selectedColor?.availability[nextYear] && firstListed) {
+    const firstListed = nextColors.find((color) => color.availability[nextYear]);
+    if (
+      !nextColors.find(
+        (color) =>
+          color.id === selectedColor?.id && color.availability[nextYear],
+      ) &&
+      firstListed
+    ) {
       setColorId(firstListed.id);
     }
   }
@@ -436,14 +461,14 @@ export function ArchiveExplorer() {
           <p className="eyebrow">Factory paint, documented year by year</p>
           <h1>Find the right Chevrolet color.</h1>
           <p className="hero-copy">
-            Pick a model and year, then read every documented factory color across
-            a complete timeline. Each claim links back to its chart.
+            Pick a model and year, then follow each documented color across the
+            fully audited chart block. Every claim links back to its source.
           </p>
         </div>
         <div className="coverage-card" aria-label="Current archive coverage">
-          <strong>48</strong>
-          <span>verified chart listings</span>
-          <small>1967–1969 Camaro</small>
+          <strong>{archiveListingCount}</strong>
+          <span>source-linked chart listings</span>
+          <small>{archiveCoverageLabel}</small>
         </div>
       </section>
 
@@ -501,13 +526,15 @@ export function ArchiveExplorer() {
               <p>{generation.label}, {generation.range}</p>
             </div>
             <div className="year-rail">
-              {years.map((item) => {
-                const count = colors.filter((color) => color.availability[item]).length;
+              {modelYears.map(({ generation: yearGeneration, year: item }) => {
+                const count = yearGeneration.colors.filter(
+                  (color) => color.availability[item],
+                ).length;
                 return (
                   <button
                     aria-pressed={year === item}
                     className={year === item ? "active" : ""}
-                    key={item}
+                    key={`${yearGeneration.id}-${item}`}
                     onClick={() => chooseYear(item)}
                     type="button"
                   >

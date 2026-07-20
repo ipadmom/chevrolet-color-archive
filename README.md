@@ -2,7 +2,7 @@
 title: Chevrolet Color Archive
 visibility: public
 classification: archive-internal
-period: 1913-present
+period: 1913-2007 source inventory
 sources:
   - https://www.gm.com/heritage/archive/vehicle-information-kits
 ---
@@ -24,7 +24,10 @@ evidence separate from interpretive swatches and photographs.
 
 ## Published coverage
 
-The first complete matrix covers first-generation Camaro:
+The public matrices currently contain 106 source-linked chart listings,
+normalized into 80 timeline rows.
+
+First-generation Camaro:
 
 | Year | Official chart listings | Source |
 |---|---:|---|
@@ -39,17 +42,23 @@ charts. Exact year-specific names and codes remain visible.
 Bel Air and Colorado remain research queues. They do not publish availability
 rows until the cited chart for a year has been completely reviewed.
 
-The early Corvette audit publishes three reviewed historical tables:
+C1 Corvette:
 
 | Year | Table listings | Source status |
 |---|---:|---|
 | 1954 | 4 | GM Heritage kit table; quantities described as estimates |
 | 1955 | 5 | GM Heritage kit table; usage described as incomplete and partly uncertain |
 | 1956 | 6 | GM Heritage kit table; quantities reconcile to Chevrolet production records |
+| 1957 | 6 | Dated Chevrolet color-combination chart |
+| 1958 | 8 | Dated Chevrolet color-combination chart |
+| 1959 | 7 | Qualified historical table; export colors partly unknown |
+| 1960 | 8 | Revised Chevrolet color-combination chart |
+| 1961 | 7 | Revised Chevrolet color-combination chart |
+| 1962 | 7 | Dated Chevrolet color-combination chart |
 
-The nine 1954-1955 listings are marked restricted. The six 1956 listings are
-listed because the source ties them to Chevrolet records and reconciles their
-quantities to total production. The dedicated 1953 kit was reviewed page by
+The 1954, 1955, and 1959 listings are marked restricted. The other 42 Corvette
+listings are listed because direct Chevrolet charts or reconciled Chevrolet
+production records support them. The dedicated 1953 kit was reviewed page by
 page but contains no exterior-color table, so that year remains unverified
 rather than unavailable.
 
@@ -115,6 +124,9 @@ credential never reaches the browser or a Git child-process environment.
 
 Published-photo checkboxes are local comparison choices, not new publication
 requests. The anonymous review endpoint accepts staged one-use receipts only.
+The infrastructure is live, but photo population is still incomplete: the
+repository currently has one reference-only candidate and no reviewed static
+gallery photos.
 
 ## Development
 
@@ -146,7 +158,7 @@ rights handling is in
 [docs/photo-candidate-pipeline.md](docs/photo-candidate-pipeline.md). Reviewed
 publication is documented in
 [docs/reviewed-photo-publication.md](docs/reviewed-photo-publication.md).
-The 1953-1955 Corvette evidence review is in
+The 1953-1962 Corvette evidence review is in
 [docs/source-audit-early-corvette.md](docs/source-audit-early-corvette.md).
 
 The VPS crawler runbook refuses large runs below 40 GB free or 20 percent free
