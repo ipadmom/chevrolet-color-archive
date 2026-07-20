@@ -1,0 +1,123 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 101,
+        "ns": 6,
+        "title": "File:1969 Chevrolet Camaro orange.jpg",
+        "fullurl": "https://commons.wikimedia.org/wiki/File:1969_Chevrolet_Camaro_orange.jpg",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-02T03:04:05Z",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/1969_Camaro.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:1969_Chevrolet_Camaro_orange.jpg",
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/1969_Camaro.jpg/1600px-1969_Camaro.jpg",
+            "size": 345678,
+            "width": 2400,
+            "height": 1600,
+            "sha1": "0123456789abcdef0123456789abcdef01234567",
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "ObjectName": {
+                "value": "1969 Chevrolet Camaro"
+              },
+              "Artist": {
+                "value": "<a href=\"https://example.test/alice\">Alice Example</a>"
+              },
+              "Credit": {
+                "value": "Own work"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              },
+              "AttributionRequired": {
+                "value": "true"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 102,
+        "ns": 6,
+        "title": "File:Duplicate Camaro photograph.jpg",
+        "fullurl": "https://commons.wikimedia.org/wiki/File:Duplicate_Camaro_photograph.jpg",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-02T03:04:05Z",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/1969_Camaro.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Duplicate_Camaro_photograph.jpg",
+            "size": 345678,
+            "width": 2400,
+            "height": 1600,
+            "sha1": "0123456789abcdef0123456789abcdef01234567",
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "ObjectName": {
+                "value": "Duplicate Camaro photograph"
+              },
+              "Artist": {
+                "value": "Alice Example"
+              },
+              "Credit": {
+                "value": "Own work"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "pageid": 103,
+        "ns": 6,
+        "title": "File:Restricted Camaro.jpg",
+        "fullurl": "https://commons.wikimedia.org/wiki/File:Restricted_Camaro.jpg",
+        "imageinfo": [
+          {
+            "timestamp": "2024-02-03T04:05:06Z",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Restricted_Camaro.jpg",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Restricted_Camaro.jpg",
+            "size": 123456,
+            "width": 1600,
+            "height": 900,
+            "sha1": "89abcdef0123456789abcdef0123456789abcdef",
+            "mime": "image/jpeg",
+            "extmetadata": {
+              "ObjectName": {
+                "value": "Restricted Camaro"
+              },
+              "Artist": {
+                "value": "Bob Example"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-NC 4.0"
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-nc/4.0/"
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-NonCommercial 4.0"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+
