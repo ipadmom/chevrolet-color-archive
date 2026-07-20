@@ -19,8 +19,8 @@ evidence separate from interpretive swatches and photographs.
   [chevrolet-color-archive.amytato.chatgpt.site](https://chevrolet-color-archive.amytato.chatgpt.site)
 - Public source:
   [github.com/ipadmom/chevrolet-color-archive](https://github.com/ipadmom/chevrolet-color-archive)
-- GitHub Pages entry point: published from `docs/` after the Pages deployment
-  check completes.
+- GitHub Pages entry point:
+  [ipadmom.github.io/chevrolet-color-archive](https://ipadmom.github.io/chevrolet-color-archive/)
 
 ## Published coverage
 
