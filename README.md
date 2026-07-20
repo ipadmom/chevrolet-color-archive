@@ -24,8 +24,8 @@ evidence separate from interpretive swatches and photographs.
 
 ## Published coverage
 
-The public matrices currently contain 106 source-linked chart listings,
-normalized into 80 timeline rows.
+The public matrices currently contain 258 source-linked chart listings,
+normalized into 202 timeline rows.
 
 First-generation Camaro:
 
@@ -38,6 +38,37 @@ First-generation Camaro:
 The 48 chart listings normalize to 45 timeline rows because Rally
 Green/Rallye Green, LeMans Blue/Le Mans Blue, and Butternut Yellow span two
 charts. Exact year-specific names and codes remain visible.
+
+Second-generation Camaro, first audited block:
+
+| Year | Official chart listings | Source |
+|---|---:|---|
+| 1970 | 15 | GM Heritage Vehicle Information Kit, PDF p. 17 |
+| 1971 | 15 | GM Heritage Vehicle Information Kit, PDF p. 48 |
+| 1972 | 15 | GM Heritage Vehicle Information Kit, PDF pp. 25–26 |
+| 1973 | 16 | GM Heritage Vehicle Information Kit, PDF pp. 30–31 |
+| 1974 | 16 | GM Heritage Vehicle Information Kit, PDF pp. 49–50 |
+| 1975 | 16 | GM Heritage Vehicle Information Kit, PDF pp. 22–23 |
+
+These 93 chart listings normalize into 74 exact-name timeline rows. Both
+complete 1972 charts omit black, so the archive does not infer it. Carryover,
+ZP2, and vinyl-roof annotations are preserved as source qualifications rather
+than misclassified as color-level restrictions.
+
+First-generation Chevelle:
+
+| Year | Solid-color listings | Source status |
+|---|---:|---|
+| 1964 | 14 | Dedicated Chevelle chart; Goldwood Yellow withheld |
+| 1965 | 15 | March 1 chart; 3 Malibu S.S.-only colors restricted |
+| 1966 | 15 | Revised dedicated Chevelle chart |
+| 1967 | 15 | Dedicated Chevelle series charts |
+
+The 59 solid-color listings normalize to 48 exact-name timeline rows. The
+audited two-tone combinations remain a separate evidence class because they
+require upper/lower order and body-series restrictions. The 1964 Goldwood
+Yellow row has no compatible interior mark and remains unverified rather than
+being published as available.
 
 Bel Air and Colorado remain research queues. They do not publish availability
 rows until the cited chart for a year has been completely reviewed.
@@ -160,6 +191,10 @@ publication is documented in
 [docs/reviewed-photo-publication.md](docs/reviewed-photo-publication.md).
 The 1953-1962 Corvette evidence review is in
 [docs/source-audit-early-corvette.md](docs/source-audit-early-corvette.md).
+The 1970–1975 Camaro evidence review is in
+[docs/source-audit-camaro-1970-1975.md](docs/source-audit-camaro-1970-1975.md).
+The 1964–1967 Chevelle evidence review is in
+[docs/source-audit-chevelle-1964-1967.md](docs/source-audit-chevelle-1964-1967.md).
 
 The VPS crawler runbook refuses large runs below 40 GB free or 20 percent free
 disk. Do not start this archive crawler on a host carrying an active court-data
