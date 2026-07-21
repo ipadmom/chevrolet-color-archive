@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 import ts from "typescript";
@@ -7,9 +6,16 @@ import ts from "typescript";
 const root = new URL("../", import.meta.url);
 
 async function loadArchiveData() {
-  const [archiveSource, catalogSource, tahoe1995Source, tahoe2001Source] = await Promise.all([
+  const [
+    archiveSource,
+    catalogSource,
+    platformEraSource,
+    tahoe1995Source,
+    tahoe2001Source,
+  ] = await Promise.all([
     readFile(new URL("app/archive-data.ts", root), "utf8"),
     readFile(new URL("data/catalog/chevrolet-us-nameplates.json", root), "utf8"),
+    readFile(new URL("data/catalog/chevrolet-platform-eras.json", root), "utf8"),
     readFile(new URL("data/audits/tahoe-1995-2000.json", root), "utf8"),
     readFile(new URL("data/audits/tahoe-2001-2007.json", root), "utf8"),
   ]);
@@ -17,6 +23,10 @@ async function loadArchiveData() {
     .replace(
       /^import modelCatalog from "\.\.\/data\/catalog\/chevrolet-us-nameplates\.json";\r?\n/m,
       `const modelCatalog = ${catalogSource};\n`,
+    )
+    .replace(
+      /^import platformEraData from "\.\.\/data\/catalog\/chevrolet-platform-eras\.json";\r?\n/m,
+      `const platformEraData = ${platformEraSource};\n`,
     )
     .replace(
       /^import tahoe1995to2000Audit from "\.\.\/data\/audits\/tahoe-1995-2000\.json";\r?\n/m,
@@ -33,6 +43,28 @@ async function loadArchiveData() {
     },
   }).outputText;
   return import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`);
+}
+
+async function loadReleasePhotoData() {
+  const [moduleSource, manifestSource] = await Promise.all([
+    readFile(new URL("app/release-photo-data.ts", root), "utf8"),
+    readFile(new URL("data/photos/commons-release-manifest.json", root), "utf8"),
+  ]);
+  const manifest = JSON.parse(manifestSource);
+  const source = moduleSource.replace(
+    /^import commonsManifest from "\.\.\/data\/photos\/commons-release-manifest\.json";\r?\n/m,
+    `const commonsManifest = ${manifestSource};\n`,
+  );
+  const output = ts.transpileModule(source, {
+    compilerOptions: {
+      module: ts.ModuleKind.ESNext,
+      target: ts.ScriptTarget.ES2022,
+    },
+  }).outputText;
+  const photoData = await import(
+    `data:text/javascript;base64,${Buffer.from(output).toString("base64")}`
+  );
+  return { manifest, moduleSource, photoData };
 }
 
 test("Camaro matrix has the exact reviewed chart counts", async () => {
@@ -97,8 +129,8 @@ test("Camaro second generation preserves complete charts and generation order", 
       "1970–1981",
       "1982–1992",
       "1993–2002",
-      "2010–2019",
-      "2020–2024",
+      "2010–2015",
+      "2016–2024",
     ],
   );
   assert.deepEqual(generation.years, [
@@ -542,62 +574,60 @@ test("Camaro 1982–1992 rows, package restrictions, and source conflicts match 
   );
 });
 
-test("Camaro photo references preserve review status, rights, and published bytes", async () => {
-  const { staticPhotoCandidates } = await loadArchiveData();
-  const reviewedIds = new Set([
+test("Wikimedia Commons photos use the pinned GitHub Release with complete attribution", async () => {
+  const { manifest, moduleSource, photoData } = await loadReleasePhotoData();
+  const releasePrefix =
+    "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/";
+  const legacyIds = manifest.assets.flatMap((asset) =>
+    asset.selection_contexts
+      .map((context) => context.legacy_id)
+      .filter(Boolean),
+  );
+
+  assert.equal(manifest.github_release.owner, "ipadmom");
+  assert.equal(manifest.github_release.repository, "chevrolet-color-archive");
+  assert.equal(manifest.github_release.tag, "photo-archive-v1");
+  assert.equal(new Set(manifest.assets.map((asset) => asset.candidate_id)).size, manifest.assets.length);
+  assert.deepEqual(new Set(legacyIds), new Set([
+    "commons-1969-camaro-ss396",
     "commons-1976-camaro-silver-f880311b",
-    "commons-1980-camaro-red-69ba1917",
-  ]);
-  const heldIds = new Set([
     "commons-1979-camaro-blue-09e19346",
+    "commons-1980-camaro-red-69ba1917",
     "commons-1981-camaro-black-cc3ffcaf",
-  ]);
-  const published = staticPhotoCandidates.filter(
-    (photo) => reviewedIds.has(photo.id) || heldIds.has(photo.id),
-  );
+  ]));
 
-  assert.equal(published.length, 4);
-  for (const photo of published) {
-    assert.equal(photo.status, reviewedIds.has(photo.id) ? "reviewed" : "candidate");
-    assert.match(photo.src, /^\/vehicle-photos\/assets\/[a-f0-9]{64}\.jpg$/);
-    assert.match(photo.sourceUrl, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
-    assert.ok(photo.note);
-  }
-  assert.equal(
-    published.find((photo) => photo.id === "commons-1979-camaro-blue-09e19346")
-      .note.includes("unverified visual classification"),
-    true,
-  );
-
-  const manifest = JSON.parse(
-    await readFile(new URL("public/vehicle-photos/attribution.json", root), "utf8"),
-  );
-  assert.equal(manifest.schemaVersion, 2);
-  assert.equal(manifest.assets.length, 4);
-  assert.equal(manifest.publications.length, 4);
   for (const asset of manifest.assets) {
-    const bytes = await readFile(new URL(asset.path, root));
-    assert.equal(bytes.length, asset.bytes);
-    assert.equal(createHash("sha256").update(bytes).digest("hex"), asset.sha256);
-    assert.equal(asset.sanitizer.name, "privacy-metadata-strip");
-    assert.equal(asset.sanitizer.version, 2);
+    assert.equal(asset.release_tag, manifest.github_release.tag);
+    assert.ok(asset.release_asset_url.startsWith(releasePrefix));
+    assert.ok(asset.site_asset_url.startsWith(releasePrefix));
+    assert.equal(
+      asset.site_asset_url,
+      asset.preview_release_asset_url ?? asset.release_asset_url,
+    );
+    assert.match(asset.source_page_url, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    assert.ok(asset.author.trim());
+    assert.ok(asset.attribution.trim());
+    assert.ok(asset.license.trim());
+    assert.match(asset.license_url, /^https?:\/\//);
   }
-  assert.deepEqual(
-    manifest.publications
-      .filter((publication) => publication.candidate.status === "reviewed")
-      .map((publication) => publication.selection.year)
-      .sort(),
-    ["1976", "1980"],
-  );
-  assert.equal(
-    manifest.publications.every(
-      (publication) =>
-        publication.rightsReview.decision === "approve" &&
-        publication.rightsReview.reviewedOriginalUrl ===
-          publication.candidate.originalUrl,
+
+  assert.equal(photoData.archivedPhotos.length, manifest.assets.length);
+  assert.ok(
+    photoData.archivedPhotos.every(
+      (photo) =>
+        photo.src.startsWith(releasePrefix) &&
+        photo.archiveOriginalUrl.startsWith(releasePrefix) &&
+        photo.sourceUrl.startsWith("https://commons.wikimedia.org/wiki/File:") &&
+        photo.attribution &&
+        photo.licenseUrl,
     ),
-    true,
   );
+  assert.ok(photoData.archivedModelYearPhotos("camaro", "1969").length > 0);
+  assert.equal(
+    photoData.archivedColorPhotos("camaro", "1969", "hugger-orange").length,
+    1,
+  );
+  assert.doesNotMatch(moduleSource, /upload\.wikimedia\.org|Special:Redirect\/file/);
 });
 
 test("C1 Corvette tables preserve source qualifications, codes, and counts", async () => {
@@ -1126,6 +1156,12 @@ test("production shell follows the Import Archive research flow", async () => {
   assert.match(explorer, /color timeline/);
   assert.match(explorer, /CLAIM-LEVEL EVIDENCE/);
   assert.match(explorer, /STAGE PHOTOGRAPH/);
+  assert.match(explorer, /not evidence of[\s\S]*factory paint or original finish/);
+  assert.match(explorer, /They never prove factory[\s\S]*availability or original paint/);
+  assert.match(explorer, /photo\.attribution/);
+  assert.match(explorer, /photo\.sourceUrl/);
+  assert.match(explorer, /photo\.licenseUrl/);
+  assert.match(explorer, /photo\.archiveOriginalUrl/);
   assert.match(explorer, /model\.generations\.flatMap/);
   assert.match(explorer, /item\.years\.includes\(year\)/);
   assert.match(explorer, /archiveListingCount/);

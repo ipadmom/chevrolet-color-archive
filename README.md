@@ -155,6 +155,20 @@ charts contribute 20 solid-color listings, and the official 2001 color page
 contributes nine more. The 52 two-tone rows for 1995–1996 remain a separate
 evidence class. Incomplete years remain visibly unverified.
 
+Fifty high-priority nameplates now use 162 sourced base, platform, and era bands
+instead of arbitrary year chunks. Tahoe and Suburban have complete model-year
+coverage across their audited GMT, K2, and T1 families, including the distinct
+GMT820 and GMT830 applications. Avalanche carries the separate GMT805 code; its
+audit note records that GMT806 belongs to the Cadillac Escalade EXT, not a
+Chevrolet nameplate. Every model and year tile uses an inline SVG vehicle
+profile selected by body class and design era.
+
+The Wikimedia Commons archive contains 277 audited originals across 123 models,
+plus 277 web previews. Both forms are stored under the pinned GitHub Release tag
+`photo-archive-v1`; the application does not serve Wikimedia hotlinks. Each
+photo card links the Commons source, license, and archived original. Photographs
+remain illustrations only and never establish factory paint availability.
+
 ## Evidence rules
 
 - “Listed” means the color appears in the cited chart.
@@ -165,8 +179,8 @@ evidence class. Incomplete years remain visibly unverified.
 - “Unverified” is used when source review is incomplete.
 - A photograph is a visual identification aid, never evidence that a factory
   color was available.
-- Automated crawler output is always an `unreviewed_candidate`. A person must
-  promote it.
+- Automated crawler output starts as an `unreviewed_candidate`. Vehicle-model
+  association and color classification are reviewed separately.
 - Each chart column reflects one dated source revision. Later bulletins or
   market-specific material can change the record.
 
@@ -219,10 +233,10 @@ credential never reaches the browser or a Git child-process environment.
 
 Published-photo checkboxes are local comparison choices, not new publication
 requests. The anonymous review endpoint accepts staged one-use receipts only.
-The static gallery now contains two reviewed Camaro illustrations and two
-clearly marked candidates. Each includes its source, license, and caveat.
-Photo population remains incomplete, including the unresolved 1978 code 34
-`Yellow, Orange` search.
+The archived Commons gallery uses pinned GitHub Release previews and preserves
+asset-level authorship, source, license, original bytes, and SHA-256 metadata.
+Color-specific photo population remains incomplete, including the unresolved
+1978 code 34 `Yellow, Orange` search.
 
 ## Development
 
@@ -236,6 +250,8 @@ npm run typecheck
 npm test
 npm run sources:validate
 npm run crawler:manifest
+npm run photos:commons
+npm run photos:previews -- --concurrency 8
 ```
 
 After editing `db/schema.ts`:
@@ -255,6 +271,8 @@ rights handling is in
 [docs/photo-candidate-pipeline.md](docs/photo-candidate-pipeline.md). Reviewed
 publication is documented in
 [docs/reviewed-photo-publication.md](docs/reviewed-photo-publication.md).
+The pinned Commons release pipeline and association audit are documented in
+[docs/commons-release-photo-archive.md](docs/commons-release-photo-archive.md).
 The 1953-1962 Corvette evidence review is in
 [docs/source-audit-early-corvette.md](docs/source-audit-early-corvette.md).
 The 1970–1975 Camaro evidence review is in

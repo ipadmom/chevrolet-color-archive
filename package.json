@@ -15,7 +15,9 @@
     "db:generate": "drizzle-kit generate",
     "sources:refresh": "node scripts/update-gm-heritage-manifest.mjs",
     "sources:validate": "node scripts/validate-gm-heritage-manifest.mjs",
-    "crawler:manifest": "node scripts/build-gm-heritage-crawler-manifest.mjs"
+    "crawler:manifest": "node scripts/build-gm-heritage-crawler-manifest.mjs",
+    "photos:commons": "node scripts/crawl-wikimedia-release-photos.mjs",
+    "photos:previews": "node scripts/build-release-photo-previews.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

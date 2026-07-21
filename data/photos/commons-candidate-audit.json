@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-21T04:46:25.5928308Z",
+  "source_manifest": "data/photos/commons-release-manifest.json",
+  "catalog": "data/catalog/chevrolet-us-nameplates.json",
+  "scope": "Read-only metadata and local-image audit of Wikimedia Commons release candidates before publication.",
+  "counts": {
+    "catalog_models": 149,
+    "candidate_assets_audited": 286,
+    "model_associations_audited": 288,
+    "flagged_candidate_assets": 12,
+    "flagged_model_associations": 12,
+    "recommended_asset_exclusions": 9,
+    "recommended_reassignments": 1,
+    "recommended_shared_asset_association_removals": 2
+  },
+  "audit_notes": [
+    "Flags are model-association specific. A candidate shared with a correct model may remain archived after the wrong association is removed.",
+    "Foreign photo location, repaint, modifications, and event or capture dates were not grounds for rejection by themselves.",
+    "Ambiguous Monza, Cruze, HHR, Tilt Cab, Eagle commercial-body, and Express cutaway candidates were visually spot-checked and retained.",
+    "The Classic Six calendar-year conflict is flagged because the catalog explicitly says 1912 launch material must not become a 1912 model-year row."
+  ],
+  "reject_list": [
+    {
+      "candidate_id": "commons-sha1-a12539ce54f9a55a04db",
+      "model_id": "classic-six",
+      "recommended_action": "exclude_pending_year_resolution",
+      "reason": "The only stated vehicle year is outside the catalog range, and the catalog specifically excludes the 1912 launch from model-year treatment.",
+      "evidence_text": "Commons title and description: '1912 Chevrolet Series C Classic Six' and '1912 Chevrolet Classic Six at the Alfred P. Sloan Museum, Flint Michigan.' Catalog range: 1913-1914; catalog note: calendar-year 1912 launch material must not be treated as a separate model-year color row."
+    },
+    {
+      "candidate_id": "commons-sha1-de9ddece722ddb89dbb7",
+      "model_id": "baby-grand",
+      "recommended_action": "exclude_candidate",
+      "reason": "The photo is explicitly a 1918 FA5, outside the Baby Grand catalog range and a different series from the cataloged H-4.",
+      "evidence_text": "Commons title and description: '1918 Chevrolet Baby Grand FA5' and '1918 Chevrolet Baby Grand (Model FA5).' Catalog range: 1914-1916; catalog alias: Series H-4."
+    },
+    {
+      "candidate_id": "commons-sha1-83425ace4b8f584139b2",
+      "model_id": "beauville-wagon",
+      "recommended_action": "exclude_candidate",
+      "reason": "Reused-name collision: this is the later G-Series Beauville van, not the 1955-1957 Beauville station wagon.",
+      "evidence_text": "Commons description: '1988 Chevrolet Beauville.' Catalog range: 1955-1957; catalog note says the later Beauville van trim belongs under G-Series Van."
+    },
+    {
+      "candidate_id": "commons-sha1-f5652025975af3a1530b",
+      "model_id": "beauville-wagon",
+      "recommended_action": "exclude_candidate",
+      "reason": "Reused-name collision: this is the later G-Series Beauville van, not the 1955-1957 Beauville station wagon.",
+      "evidence_text": "Commons filename and description: '83 Chevrolet Beauville.' Catalog range: 1955-1957; catalog note says the later Beauville van trim belongs under G-Series Van."
+    },
+    {
+      "candidate_id": "commons-sha1-d61aa9cb33913d69ba76",
+      "model_id": "independence",
+      "recommended_action": "exclude_candidate",
+      "reason": "Detail-only image, not a vehicle view.",
+      "evidence_text": "Commons filename: '1931 Chevrolet Independence Hood Mascot 3.jpg.' Description identifies only the hood mascot."
+    },
+    {
+      "candidate_id": "commons-sha1-7e266274ed942a330937",
+      "model_id": "copper-cooled",
+      "recommended_action": "exclude_candidate",
+      "reason": "Chassis-only image, not a complete vehicle view.",
+      "evidence_text": "Commons filename and description: 'Chevrolet copper cooled chassis.'"
+    },
+    {
+      "candidate_id": "commons-sha1-3ca17106fb554a9a0248",
+      "model_id": "eagle",
+      "recommended_action": "exclude_candidate",
+      "reason": "Detail-only hood ornament, with its only stated year also outside the catalog range.",
+      "evidence_text": "Commons filename and description: 'Chevrolet Eagle hood ornament (1932).' Catalog range: 1933 only."
+    },
+    {
+      "candidate_id": "commons-sha1-a21b4c25ae951237b479",
+      "model_id": "vega",
+      "recommended_action": "reassign_to_vega-panel-express",
+      "reason": "The vehicle is explicitly the separately cataloged Vega Panel Express commercial delivery model, not a generic Vega representative.",
+      "evidence_text": "Commons description: '1971 Chevrolet Vega Panel Express.' Catalog has a separate vega-panel-express entry for 1971-1975 with alias 'Vega Panel.'"
+    },
+    {
+      "candidate_id": "commons-sha1-b51c7a73ee7fa180bc60",
+      "model_id": "concours",
+      "recommended_action": "remove_model_association_keep_asset_for_concours-estate",
+      "reason": "The photo is explicitly Concours Estate, which the catalog keeps separate from Concours.",
+      "evidence_text": "Commons filename and description identify a 1970 Chevrolet Concours Estate. The same candidate is correctly associated with concours-estate; the catalog note says brochures distinguish Concours Estate from Concours."
+    },
+    {
+      "candidate_id": "commons-sha1-37090a96bd4c132a000e",
+      "model_id": "kingswood",
+      "recommended_action": "remove_model_association_keep_asset_for_kingswood-estate",
+      "reason": "The photo is explicitly Kingswood Estate, which the catalog keeps separate from Kingswood.",
+      "evidence_text": "Commons filename and description identify a 1970 Chevrolet Kingswood Estate with woodgrain. The same candidate is correctly associated with kingswood-estate; the catalog note calls Kingswood Estate a separate Caprice-related flagship wagon."
+    },
+    {
+      "candidate_id": "commons-sha1-083e7c769a5900ae86fd",
+      "model_id": "spectrum",
+      "recommended_action": "exclude_candidate",
+      "reason": "The only stated model year is outside the U.S. Chevrolet Spectrum catalog range.",
+      "evidence_text": "Commons filename and description: 'Chevrolet Spectrum 1.5 1989.' Catalog range: 1985-1988."
+    },
+    {
+      "candidate_id": "commons-sha1-87f83a143e0adfdd2c10",
+      "model_id": "classic-fleet",
+      "recommended_action": "exclude_candidate",
+      "reason": "Reused-name and market collision: this is the later global Chevrolet Classic wagon, not the 2004-2005 U.S. Malibu-derived fleet Classic.",
+      "evidence_text": "Commons filename and description: 'Chevrolet Classic 1.6 LT Wagon 2011.' Catalog range: 2004-2005; catalog notes define the U.S. entry as the fleet continuation of the prior Malibu generation."
+    }
+  ]
+}

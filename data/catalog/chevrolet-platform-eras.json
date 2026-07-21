@@ -1,0 +1,603 @@
+{
+  "suburban": [
+    {
+      "start": 1935,
+      "end": 1940,
+      "label": "First generation, all-steel Carryall",
+      "aliases": ["Carryall Suburban", "Suburban Carryall"],
+      "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "The first Chevrolet Suburban generation used an all-steel wagon body on a commercial chassis."
+    },
+    {
+      "start": 1941,
+      "end": 1942,
+      "label": "AK Series / Art Deco",
+      "aliases": ["Second generation", "AK Series", "Art Deco", "Carryall Suburban"],
+      "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1941-Chevrolet-Truck.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "Civilian production stopped after 1942."
+    },
+    {
+      "start": 1946,
+      "end": 1946,
+      "label": "AK Series / Art Deco, postwar continuation",
+      "aliases": ["Second generation", "AK Series", "Art Deco", "Carryall Suburban"],
+      "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks/1946-chevrolet-suburban", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "The 1946 model resumed the prewar body after the 1943-1945 civilian model-year gap."
+    },
+    {
+      "start": 1947,
+      "end": 1954,
+      "label": "Advance Design",
+      "aliases": ["Third generation"],
+      "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "Chevrolet's Advance Design truck body supplied the Suburban's third-generation base. Advance Design also appeared as the 1955 First Series, handled in the transition band."
+    },
+    {
+      "start": 1955,
+      "end": 1955,
+      "label": "Advance Design First Series / Task Force Second Series",
+      "aliases": ["1955 First Series", "1955 Second Series", "Advance Design", "Task Force"],
+      "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1955-Chevrolet-Truck-1st-Series.pdf", "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1955-Chevrolet-Truck-2nd-Series.pdf"],
+      "confidence": "high",
+      "notes": "Both designs existed in model year 1955, so the transition is one nonoverlapping mixed band."
+    },
+    {
+      "start": 1956,
+      "end": 1959,
+      "label": "Task Force",
+      "aliases": ["Fourth generation"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "Unambiguous full model years of the Task Force Suburban."
+    },
+    {
+      "start": 1960,
+      "end": 1966,
+      "label": "First-generation C/K chassis",
+      "aliases": ["Fifth generation", "C/K"],
+      "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1962-Chevrolet-Truck.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "This body follows Chevrolet's first C/K truck generation."
+    },
+    {
+      "start": 1967,
+      "end": 1972,
+      "label": "Action Line",
+      "aliases": ["Sixth generation", "C/K Action Line"],
+      "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "The three-side-door body is unique to this Action Line era."
+    },
+    {
+      "start": 1973,
+      "end": 1986,
+      "label": "Rounded Line C/K / Square Body",
+      "aliases": ["Seventh generation", "C/K", "Rounded Line", "Square Body"],
+      "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Suburban.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Suburban"],
+      "confidence": "high",
+      "notes": "Rounded Line is the GM-era name; Square Body is the dominant enthusiast alias."
+    },
+    {
+      "start": 1987,
+      "end": 1991,
+      "label": "Rounded Line R/V / Square Body continuation",
+      "aliases": ["Seventh generation", "R/V Series", "R10", "V10", "R1500", "V1500", "Square Body"],
+      "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks/1990-chevrolet-suburban", "https://en.wikipedia.org/wiki/Chevrolet_Suburban#R/V_series_(1987%E2%80%931991)"],
+      "confidence": "high",
+      "notes": "GM renamed the continuing C/K architecture R/V while the new GMT400 pickups entered production."
+    },
+    {
+      "start": 1992,
+      "end": 1999,
+      "label": "GMT400 family, GMT410",
+      "aliases": ["Eighth generation", "GMT410", "GMT400"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Suburban_(eighth_generation)", "https://en.wikipedia.org/wiki/GMT400"],
+      "confidence": "high",
+      "notes": "GMT410 is the Chevrolet Suburban program within the GMT400 family."
+    },
+    {
+      "start": 2000,
+      "end": 2006,
+      "label": "GMT800 family, GMT830",
+      "aliases": ["Ninth generation", "GMT830", "GMT800"],
+      "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Suburban.pdf", "https://en.wikipedia.org/wiki/GMT800"],
+      "confidence": "high",
+      "notes": "GMT830 is the long-wheelbase Suburban and Yukon XL derivative of GMT800."
+    },
+    {
+      "start": 2007,
+      "end": 2014,
+      "label": "GMT900 / GMT930 / GMT931",
+      "aliases": ["Tenth generation", "GMT900", "GMT930", "GMT931"],
+      "evidence_urls": ["https://www.gmupfitter.com/wp-content/uploads/2021/05/2007_LD_ElectricalUtilitiesSUV.pdf", "https://en.wikipedia.org/wiki/GMT900"],
+      "confidence": "high",
+      "notes": "GM's proprietary upfitter documentation identifies 931 as Chevrolet Suburban within the GMT900/GMT930 family."
+    },
+    {
+      "start": 2015,
+      "end": 2020,
+      "label": "K2XX / GMTK2YC",
+      "aliases": ["Eleventh generation", "GMTK2YC", "K2YC", "K2XX"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Suburban", "https://en.wikipedia.org/wiki/GMT_K2XX"],
+      "confidence": "high",
+      "notes": "K2YC is the Chevrolet long-wheelbase SUV program."
+    },
+    {
+      "start": 2021,
+      "end": 2024,
+      "label": "T1XX / GMTT1YC",
+      "aliases": ["Twelfth generation", "GMTT1YC", "T1YC", "GMT1YC", "T1XX"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/GMT_T1XX_platform", "https://www.gmupfitter.com/wp-content/uploads/2022/09/23_Suburban_Tahoe_Electrical_Body_Builder_SM_en_US_2022SEP13.pdf"],
+      "confidence": "high",
+      "notes": "Pre-refresh T1XX Suburban."
+    },
+    {
+      "start": 2025,
+      "end": 2026,
+      "label": "T1XX / GMTT1YC refresh",
+      "aliases": ["Twelfth generation refresh", "GMTT1YC", "T1YC", "GMT1YC", "T1XX"],
+      "evidence_urls": ["https://www.chevrolet.com/suvs/suburban", "https://www.gmupfitter.com/wp-content/uploads/2025/09/Suburban-Tahoe-Electrical-Body-Builder-Manual-Service-Manual-2026_en_US.pdf"],
+      "confidence": "high",
+      "notes": "The 2025 exterior and interior refresh remains on the T1XX/GMT1YC program."
+    }
+  ],
+  "tahoe": [
+    {
+      "start": 1995,
+      "end": 1999,
+      "label": "GMT400 family, GMT420",
+      "aliases": ["First generation", "GMT420", "GMT400"],
+      "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Tahoe.pdf", "https://en.wikipedia.org/wiki/GMT400"],
+      "confidence": "high",
+      "notes": "The Tahoe name replaced the full-size Blazer name for 1995."
+    },
+    {
+      "start": 2000,
+      "end": 2000,
+      "label": "GMT420 carryover / GMT820 launch",
+      "aliases": ["GMT400", "GMT420", "GMT800", "GMT820", "Tahoe Limited", "Tahoe Z71"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Tahoe", "https://en.wikipedia.org/wiki/GMT800"],
+      "confidence": "high",
+      "notes": "Model year 2000 is genuinely mixed: Tahoe Limited and Z71 retained GMT420 while the redesigned Tahoe launched on GMT820."
+    },
+    {
+      "start": 2001,
+      "end": 2006,
+      "label": "GMT800 family, GMT820",
+      "aliases": ["Second generation", "GMT820", "GMT800"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/GMT800"],
+      "confidence": "high",
+      "notes": "GMT820 is the standard-wheelbase Tahoe and Yukon derivative of GMT800."
+    },
+    {
+      "start": 2007,
+      "end": 2014,
+      "label": "GMT900 / GMT920 / GMT921",
+      "aliases": ["Third generation", "GMT900", "GMT920", "GMT921"],
+      "evidence_urls": ["https://www.gmupfitter.com/wp-content/uploads/2021/05/2007_LD_ElectricalUtilitiesSUV.pdf", "https://en.wikipedia.org/wiki/GMT900"],
+      "confidence": "high",
+      "notes": "GM's proprietary upfitter documentation identifies 921 as Chevrolet Tahoe within the GMT900/GMT920 family."
+    },
+    {
+      "start": 2015,
+      "end": 2020,
+      "label": "K2XX / GMTK2UC",
+      "aliases": ["Fourth generation", "GMTK2UC", "K2UC", "K2XX"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Tahoe", "https://en.wikipedia.org/wiki/GMT_K2XX"],
+      "confidence": "high",
+      "notes": "K2UC is the Chevrolet standard-wheelbase SUV program."
+    },
+    {
+      "start": 2021,
+      "end": 2024,
+      "label": "T1XX / GMTT1UC",
+      "aliases": ["Fifth generation", "GMTT1UC", "T1UC", "GMT1UC", "T1XX"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/GMT_T1XX_platform", "https://www.gmupfitter.com/wp-content/uploads/2022/09/23_Suburban_Tahoe_Electrical_Body_Builder_SM_en_US_2022SEP13.pdf"],
+      "confidence": "high",
+      "notes": "Pre-refresh T1XX Tahoe."
+    },
+    {
+      "start": 2025,
+      "end": 2026,
+      "label": "T1XX / GMTT1UC refresh",
+      "aliases": ["Fifth generation refresh", "GMTT1UC", "T1UC", "GMT1UC", "T1XX"],
+      "evidence_urls": ["https://www.chevrolet.com/suvs/tahoe", "https://www.gmupfitter.com/wp-content/uploads/2025/09/Suburban-Tahoe-Electrical-Body-Builder-Manual-Service-Manual-2026_en_US.pdf"],
+      "confidence": "high",
+      "notes": "The 2025 exterior and interior refresh remains on the T1XX/GMT1UC program."
+    }
+  ],
+  "avalanche": [
+    {
+      "start": 2002,
+      "end": 2006,
+      "label": "GMT800 family, GMT805",
+      "aliases": ["First generation", "GMT805"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/GMT800", "https://en.wikipedia.org/wiki/Chevrolet_Avalanche"],
+      "confidence": "high",
+      "notes": "GMT805 is the Chevrolet Avalanche program. Related GMT806 belongs to the Cadillac Escalade EXT and is not a Chevrolet model code."
+    },
+    {
+      "start": 2007,
+      "end": 2013,
+      "label": "GMT900 family, GMT941",
+      "aliases": ["Second generation", "GMT941", "GMT940"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/GMT900", "https://en.wikipedia.org/wiki/Chevrolet_Avalanche"],
+      "confidence": "high",
+      "notes": "Chevrolet's Avalanche program is GMT941 within the GMT940 derivative family."
+    }
+  ],
+  "blazer": [
+    {
+      "start": 1969,
+      "end": 1972,
+      "label": "First-generation K5 Blazer",
+      "aliases": ["K5", "Action Line"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_K5_Blazer"],
+      "confidence": "high",
+      "notes": "Short-wheelbase removable-roof SUV based on the Action Line C/K truck."
+    },
+    {
+      "start": 1973,
+      "end": 1991,
+      "label": "Second-generation K5, Rounded Line",
+      "aliases": ["K5", "Square Body", "C/K", "V-Series"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_K5_Blazer"],
+      "confidence": "high",
+      "notes": "The continuing K5 was renamed V-Series after the C/K pickup changeover."
+    },
+    {
+      "start": 1992,
+      "end": 1994,
+      "label": "Full-size Blazer, GMT415",
+      "aliases": ["Third-generation K5", "GMT400 family", "GMT415"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/GMT400", "https://en.wikipedia.org/wiki/Chevrolet_Tahoe"],
+      "confidence": "high",
+      "notes": "The full-size two-door Blazer became Tahoe for model year 1995."
+    },
+    {
+      "start": 1995,
+      "end": 2005,
+      "label": "S/T Blazer, GMT330 family",
+      "aliases": ["Second-generation S-10 Blazer", "GMT330"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_S-10_Blazer", "https://en.wikipedia.org/wiki/General_Motors_GMT_platform"],
+      "confidence": "high",
+      "notes": "After 1995, the unqualified Blazer name identified the compact and midsize S/T SUV."
+    },
+    {
+      "start": 2019,
+      "end": 2022,
+      "label": "C1XX crossover, C1UC",
+      "aliases": ["C1XX", "C1UC", "Third Blazer lineage"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Blazer_(crossover)", "https://www.chevrolet.com/suvs/previous-year/blazer"],
+      "confidence": "high",
+      "notes": "The revived Blazer is a unibody crossover unrelated to the K5 and S/T chassis."
+    },
+    {
+      "start": 2023,
+      "end": 2026,
+      "label": "C1XX crossover refresh, C1UC",
+      "aliases": ["C1XX", "C1UC", "Facelift"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Blazer_(crossover)", "https://www.chevrolet.com/suvs/previous-year/blazer"],
+      "confidence": "high",
+      "notes": "The 2023 appearance refresh remains on C1XX."
+    }
+  ],
+  "camaro": [
+    {
+      "start": 1967,
+      "end": 1969,
+      "label": "First generation, F-body",
+      "aliases": ["F-body"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(first_generation)"],
+      "confidence": "high",
+      "notes": "Original F-body Camaro."
+    },
+    {
+      "start": 1970,
+      "end": 1981,
+      "label": "Second generation, F-body",
+      "aliases": ["F-body"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(second_generation)"],
+      "confidence": "high",
+      "notes": "Second F-body generation."
+    },
+    {
+      "start": 1982,
+      "end": 1992,
+      "label": "Third generation, F-body",
+      "aliases": ["F-body"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(third_generation)"],
+      "confidence": "high",
+      "notes": "Third F-body generation."
+    },
+    {
+      "start": 1993,
+      "end": 2002,
+      "label": "Fourth generation, F-body",
+      "aliases": ["F-body"],
+      "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fourth_generation)"],
+      "confidence": "high",
+      "notes": "Final F-body generation."
+    },
+    {
+      "start": 2010,
+      "end": 2015,
+      "label": "Fifth generation, Zeta",
+      "aliases": ["Zeta", "GM Zeta"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fifth_generation)", "https://en.wikipedia.org/wiki/General_Motors_Zeta_platform"],
+      "confidence": "high",
+      "notes": "The revived Camaro used GM's Zeta rear-wheel-drive architecture."
+    },
+    {
+      "start": 2016,
+      "end": 2024,
+      "label": "Sixth generation, Alpha",
+      "aliases": ["Global Alpha", "A1BC", "A1AC"],
+      "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)", "https://cdn.motor1.com/pdf-files/programdirnam.pdf"],
+      "confidence": "high",
+      "notes": "Alpha coupe program A1BC and convertible program A1AC."
+    }
+  ],
+  "corvette": [
+    {"start": 1953, "end": 1962, "label": "C1", "aliases": ["First generation", "Solid Axle"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C1)"], "confidence": "high", "notes": "First-generation Corvette."},
+    {"start": 1963, "end": 1967, "label": "C2", "aliases": ["Second generation", "Sting Ray"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C2)"], "confidence": "high", "notes": "Second-generation Corvette."},
+    {"start": 1968, "end": 1982, "label": "C3", "aliases": ["Third generation", "Stingray"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C3)"], "confidence": "high", "notes": "Third-generation Corvette."},
+    {"start": 1984, "end": 1996, "label": "C4", "aliases": ["Fourth generation"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C4)"], "confidence": "high", "notes": "No retail 1983 Corvette exists."},
+    {"start": 1997, "end": 2004, "label": "C5", "aliases": ["Fifth generation", "Y-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C5)"], "confidence": "high", "notes": "Fifth-generation Corvette."},
+    {"start": 2005, "end": 2013, "label": "C6", "aliases": ["Sixth generation", "Y-body"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C6)", "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/oct/1026-corvette-z06.html"], "confidence": "high", "notes": "Sixth-generation Corvette."},
+    {"start": 2014, "end": 2019, "label": "C7", "aliases": ["Seventh generation", "Y-body", "Stingray"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)", "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/oct/1026-corvette-z06.html"], "confidence": "high", "notes": "Final front-engine Corvette generation."},
+    {"start": 2020, "end": 2026, "label": "C8", "aliases": ["Eighth generation", "Y2BC", "Y2AC", "ZERV"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)", "https://cdn.motor1.com/pdf-files/programdirnam.pdf"], "confidence": "high", "notes": "First production mid-engine Corvette generation."}
+  ],
+  "silverado": [
+    {"start": 1999, "end": 2006, "label": "First generation, GMT800", "aliases": ["GMT800", "NBS"], "evidence_urls": ["https://news.gm.com/home.detail.html/Pages/topic/us/en/2024/dec/1216-silverado.html", "https://en.wikipedia.org/wiki/Chevrolet_Silverado"], "confidence": "high", "notes": "Silverado became the pickup nameplate rather than a trim."},
+    {"start": 2007, "end": 2007, "label": "GMT800 Classic / GMT900 launch", "aliases": ["GMT800", "Silverado Classic", "GMT900"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Silverado", "https://en.wikipedia.org/wiki/Chevrolet_Silverado_(second_generation)"], "confidence": "high", "notes": "Both old-body Classic and redesigned GMT900 light-duty trucks were sold as 2007 models."},
+    {"start": 2008, "end": 2013, "label": "Second generation, GMT900", "aliases": ["GMT900", "NNBS"], "evidence_urls": ["https://news.gm.com/home.detail.html/Pages/topic/us/en/2024/dec/1216-silverado.html", "https://en.wikipedia.org/wiki/Chevrolet_Silverado"], "confidence": "high", "notes": "Light-duty GMT900 production."},
+    {"start": 2014, "end": 2018, "label": "Third generation, K2XX", "aliases": ["K2XX", "K2"], "evidence_urls": ["https://en.wikipedia.org/wiki/GMT_K2XX", "https://en.wikipedia.org/wiki/Chevrolet_Silverado"], "confidence": "high", "notes": "Light-duty K2XX production."},
+    {"start": 2019, "end": 2026, "label": "Fourth generation, T1XX", "aliases": ["T1XX", "T1RCF", "T1CCF"], "evidence_urls": ["https://news.gm.com/home.detail.html/Pages/topic/us/en/2024/dec/1216-silverado.html", "https://cdn.motor1.com/pdf-files/programdirnam.pdf"], "confidence": "high", "notes": "T1XX light-duty Silverado, including the 2022 midcycle refresh."}
+  ],
+  "silverado-hd": [
+    {"start": 2001, "end": 2006, "label": "First generation HD, GMT880", "aliases": ["GMT880", "GMT800 HD"], "evidence_urls": ["https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Silverado-HD.pdf", "https://en.wikipedia.org/wiki/General_Motors_GMT_platform"], "confidence": "high", "notes": "Dedicated heavy-duty derivative of GMT800."},
+    {"start": 2007, "end": 2007, "label": "GMT880 Classic / GMT910 launch", "aliases": ["GMT880", "GMT910", "HD Classic"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Silverado", "https://en.wikipedia.org/wiki/General_Motors_GMT_platform"], "confidence": "high", "notes": "Transition model year with old and redesigned HD trucks."},
+    {"start": 2008, "end": 2014, "label": "Second generation HD, GMT910", "aliases": ["GMT910", "GMT900 HD"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Silverado", "https://en.wikipedia.org/wiki/General_Motors_GMT_platform"], "confidence": "high", "notes": "GMT910 HD continued through model year 2014 after light-duty GMT900 ended."},
+    {"start": 2015, "end": 2019, "label": "Third generation HD, K2XX", "aliases": ["K2XX HD", "K2"], "evidence_urls": ["https://en.wikipedia.org/wiki/GMT_K2XX", "https://en.wikipedia.org/wiki/Chevrolet_Silverado"], "confidence": "high", "notes": "K2XX heavy-duty generation."},
+    {"start": 2020, "end": 2026, "label": "Fourth generation HD, T1XX", "aliases": ["T1XX HD", "T1RCH", "T1ECH", "T1CCH"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://www.chevrolet.com/trucks/previous-year/silverado/2500hd-3500hd"], "confidence": "high", "notes": "T1XX heavy-duty program."
+    }
+  ],
+  "ck-series": [
+    {"start": 1960, "end": 1966, "label": "First-generation C/K", "aliases": ["C/K first generation"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_C/K_(first_generation)"], "confidence": "high", "notes": "First C/K truck generation."},
+    {"start": 1967, "end": 1972, "label": "Action Line C/K", "aliases": ["Second generation", "Action Line"], "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://en.wikipedia.org/wiki/Chevrolet_C/K_(second_generation)"], "confidence": "high", "notes": "Second C/K generation."},
+    {"start": 1973, "end": 1987, "label": "Rounded Line / Square Body C/K", "aliases": ["Third generation", "Rounded Line", "Square Body"], "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://en.wikipedia.org/wiki/Chevrolet_C/K_(third_generation)"], "confidence": "high", "notes": "Light-duty C/K name ended after 1987 as the body continued under R/V for selected models."},
+    {"start": 1988, "end": 1998, "label": "Fourth generation, GMT400", "aliases": ["GMT400", "OBS"], "evidence_urls": ["https://en.wikipedia.org/wiki/GMT400", "https://en.wikipedia.org/wiki/Chevrolet_C/K_(fourth_generation)"], "confidence": "high", "notes": "GMT400 light-duty C/K era."},
+    {"start": 1999, "end": 2002, "label": "GMT400 Classic and C3500HD carryover", "aliases": ["GMT400", "GMT435", "GMT455", "C3500HD"], "evidence_urls": ["https://en.wikipedia.org/wiki/GMT400", "https://en.wikipedia.org/wiki/Chevrolet_C/K_(fourth_generation)"], "confidence": "high", "notes": "The catalog retains C/K through 2002 because heavy-duty and chassis-cab GMT400 derivatives outlived light-duty replacement."
+    }
+  ],
+  "colorado": [
+    {"start": 2004, "end": 2012, "label": "First generation, GMT355", "aliases": ["GMT355"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Colorado"], "confidence": "high", "notes": "North American first-generation Colorado."},
+    {"start": 2015, "end": 2022, "label": "Second generation, GMT31XX", "aliases": ["31XX", "GMT31XX"], "evidence_urls": ["https://gmauthority.com/blog/gm/gm-platforms/31xx/", "https://en.wikipedia.org/wiki/Chevrolet_Colorado"], "confidence": "high", "notes": "The global second generation returned to the U.S. for model year 2015."},
+    {"start": 2023, "end": 2026, "label": "Third generation, 31XX-2", "aliases": ["31XX-2", "GMT31XX-2"], "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/jul/0728-colorado.html", "https://gmauthority.com/blog/2022/11/heres-whats-new-about-the-2023-chevy-colorado-platform/"], "confidence": "high", "notes": "Chevrolet's chief engineer confirmed the updated 31XX-2 architecture."
+    }
+  ],
+  "express": [
+    {"start": 1996, "end": 2002, "label": "GMT600", "aliases": ["First Express chassis"], "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-G-Van.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Express"], "confidence": "high", "notes": "Original body-on-frame Express chassis."},
+    {"start": 2003, "end": 2026, "label": "GMT610", "aliases": ["GMT600 revision"], "evidence_urls": ["https://www.gmupfitter.com/wp-content/uploads/2021/05/Express_Savana_Electrical_Body_Builders_Manual_Service_Manual_2016_en_US.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Express"], "confidence": "high", "notes": "The 2003 chassis and front-body revision was redesignated GMT610 and continues through 2026."
+    }
+  ],
+  "kodiak": [
+    {"start": 1980, "end": 1989, "label": "First-generation Kodiak", "aliases": ["C-Series short-hood Kodiak"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Kodiak", "https://www.gm.com/heritage/archive/vehicle-information-kits"], "confidence": "high", "notes": "First Kodiak medium-duty generation."},
+    {"start": 1990, "end": 2002, "label": "Second generation, GMT530", "aliases": ["GMT530"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Kodiak", "https://en.wikipedia.org/wiki/General_Motors_GMT_platform"], "confidence": "high", "notes": "GMT530 used a GMT400-derived cab."},
+    {"start": 2003, "end": 2009, "label": "Third generation, GMT560", "aliases": ["GMT560"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Kodiak", "https://static.nhtsa.gov/odi/rcl/2007/RCMN-07V469-1939.pdf"], "confidence": "high", "notes": "GMT560 used an Express-derived cab."
+    }
+  ],
+  "trailblazer": [
+    {"start": 2002, "end": 2009, "label": "GMT360 / GMT370", "aliases": ["First generation", "GMT360", "GMT370 EXT"], "evidence_urls": ["https://en.wikipedia.org/wiki/GMT360", "https://en.wikipedia.org/wiki/Chevrolet_TrailBlazer_(SUV)"], "confidence": "high", "notes": "Standard-wheelbase models are GMT360; EXT models are GMT370."},
+    {"start": 2021, "end": 2023, "label": "VSS-F crossover", "aliases": ["Third-generation global Trailblazer", "VSS-F"], "evidence_urls": ["https://www.chevrolet.com/ownercenter/content/dam/gmownercenter/gmna/dynamic/manuals/2021/chevrolet/trailblazer/2021-chevrolet-trailblazer-owners-manual.pdf", "https://gmauthority.com/blog/2019/04/gm-officially-reveals-2020-chevrolet-trailblazer/amp/"], "confidence": "high", "notes": "U.S. return as a unibody subcompact crossover."},
+    {"start": 2024, "end": 2026, "label": "VSS-F crossover refresh", "aliases": ["VSS-F", "Facelift"], "evidence_urls": ["https://media.gm.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Trailblazer/2024/2024-Chevrolet-Trailblazer-110123.pdf", "https://www.chevrolet.com/suvs/trailblazer"], "confidence": "high", "notes": "The 2024 styling and cabin refresh remains on VSS-F."
+    }
+  ],
+  "ssr": [
+    {"start": 2003, "end": 2006, "label": "GMT368", "aliases": ["GMT360 short-wheelbase derivative"], "evidence_urls": ["https://en.wikipedia.org/wiki/GMT360", "https://en.wikipedia.org/wiki/Chevrolet_SSR"], "confidence": "high", "notes": "Retractable-hardtop pickup on the dedicated GMT368 derivative."
+    }
+  ],
+  "s10": [
+    {"start": 1982, "end": 1993, "label": "First-generation S/T pickup", "aliases": ["S-10 first generation", "S/T"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_S-10"], "confidence": "high", "notes": "First compact S/T pickup generation."},
+    {"start": 1994, "end": 2004, "label": "Second-generation S/T pickup", "aliases": ["S-10 second generation", "S/T"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_S-10"], "confidence": "high", "notes": "Second North American S-10 generation."
+    }
+  ],
+  "s10-blazer": [
+    {"start": 1983, "end": 1994, "label": "First-generation S/T Blazer", "aliases": ["S-10 Blazer", "GMT325", "GMT330"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_S-10_Blazer"], "confidence": "medium", "notes": "GMT325 and GMT330 are body/program variants within the first S/T SUV generation; unqualified Blazer replaces the S-10 Blazer catalog identity for 1995."
+    }
+  ],
+  "g-series-van": [
+    {"start": 1964, "end": 1966, "label": "First-generation Chevrolet van", "aliases": ["G-Series first generation"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_van"], "confidence": "high", "notes": "Forward-control first-generation G-Series."},
+    {"start": 1967, "end": 1970, "label": "Second-generation Chevrolet van", "aliases": ["G-Series second generation"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_van"], "confidence": "high", "notes": "Second forward-control generation."},
+    {"start": 1971, "end": 1996, "label": "Third-generation Chevrolet van", "aliases": ["G-Series third generation", "Chevy Van", "Sportvan", "Beauville"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_van"], "confidence": "high", "notes": "Long-running third generation, replaced by Express after 1996."
+    }
+  ],
+  "astro": [
+    {"start": 1985, "end": 1994, "label": "First generation, M-body van", "aliases": ["M-body", "M-van"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Astro"], "confidence": "high", "notes": "Original Astro body."},
+    {"start": 1995, "end": 2005, "label": "Second generation, M-body van", "aliases": ["M-body", "M-van"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Astro"], "confidence": "high", "notes": "Restyled second Astro generation."
+    }
+  ],
+  "equinox": [
+    {"start": 2005, "end": 2009, "label": "First generation, Theta", "aliases": ["Theta", "GMT191"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Equinox"], "confidence": "high", "notes": "First-generation Theta crossover."},
+    {"start": 2010, "end": 2017, "label": "Second generation, Theta II", "aliases": ["Theta II", "GMT192"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Equinox", "https://en.wikipedia.org/wiki/General_Motors_Theta_platform"], "confidence": "high", "notes": "Second-generation Theta crossover."},
+    {"start": 2018, "end": 2024, "label": "Third generation, D2XX / D2UC", "aliases": ["D2XX", "D2UC", "Global Delta"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Equinox"], "confidence": "high", "notes": "Global Delta compact crossover program."},
+    {"start": 2025, "end": 2026, "label": "Fourth generation, VSS-F / D2UC-2", "aliases": ["VSS-F", "D2UC-2"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://www.chevrolet.com/suvs/equinox"], "confidence": "high", "notes": "Fourth-generation Equinox program."
+    }
+  ],
+  "traverse": [
+    {"start": 2009, "end": 2017, "label": "First generation, Lambda", "aliases": ["Lambda", "GMT561"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Traverse", "https://en.wikipedia.org/wiki/GM_Lambda_platform"], "confidence": "high", "notes": "First-generation three-row Lambda crossover."},
+    {"start": 2018, "end": 2023, "label": "Second generation, C1XX / C1YC", "aliases": ["C1XX", "C1YC"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Traverse"], "confidence": "high", "notes": "Second-generation C1XX program."},
+    {"start": 2024, "end": 2026, "label": "Third generation, C1XX-2 / C1YC2", "aliases": ["C1XX-2", "C1YC2"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://www.chevrolet.com/suvs/traverse"], "confidence": "high", "notes": "Third-generation Traverse program."
+    }
+  ],
+  "traverse-limited": [
+    {"start": 2024, "end": 2024, "label": "C1XX / C1YC carryover", "aliases": ["Second-generation Traverse carryover", "C1YC"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Traverse", "https://www.chevrolet.com/discontinued-vehicles"], "confidence": "medium", "notes": "The Limited identity preserved the prior-generation C1YC vehicle alongside the redesigned 2024 Traverse."
+    }
+  ],
+  "trax": [
+    {"start": 2015, "end": 2022, "label": "First U.S. generation, Gamma II / G1XX", "aliases": ["Gamma II", "G1XX", "G1UC"], "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/trax/2022.html", "https://en.wikipedia.org/wiki/Chevrolet_Trax"], "confidence": "high", "notes": "First U.S. Trax generation."},
+    {"start": 2024, "end": 2026, "label": "Second U.S. generation, VSS-F", "aliases": ["VSS-F", "Global Emerging Markets platform"], "evidence_urls": ["https://www.chevrolet.com/suvs/trax", "https://en.wikipedia.org/wiki/Chevrolet_Trax"], "confidence": "high", "notes": "No U.S. 2023 Trax model year."
+    }
+  ],
+  "malibu": [
+    {"start": 1964, "end": 1967, "label": "First generation, A-body", "aliases": ["Chevelle Malibu", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"], "confidence": "high", "notes": "Malibu began as an upper Chevelle series."},
+    {"start": 1968, "end": 1972, "label": "Second generation, A-body", "aliases": ["Chevelle Malibu", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"], "confidence": "high", "notes": "Second Chevelle-based Malibu generation."},
+    {"start": 1973, "end": 1977, "label": "Third generation, Colonnade A-body", "aliases": ["Colonnade", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"], "confidence": "high", "notes": "Colonnade-era Malibu."},
+    {"start": 1978, "end": 1983, "label": "Fourth generation, downsized A/G-body", "aliases": ["A-body", "G-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"], "confidence": "high", "notes": "Downsized rear-wheel-drive Malibu."},
+    {"start": 1997, "end": 2003, "label": "Fifth generation, N-body", "aliases": ["N-body", "P90"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"], "confidence": "high", "notes": "Front-wheel-drive Malibu revival."},
+    {"start": 2004, "end": 2007, "label": "Sixth generation, Epsilon", "aliases": ["Epsilon", "GMX380"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"], "confidence": "high", "notes": "First Epsilon Malibu; the 2008 carryover is separately cataloged as Malibu Classic."},
+    {"start": 2008, "end": 2012, "label": "Seventh generation, Epsilon", "aliases": ["Epsilon", "GMX386"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Malibu", "https://www.gm.com/heritage/archive/vehicle-information-kits"], "confidence": "high", "notes": "Redesigned Epsilon Malibu."},
+    {"start": 2013, "end": 2015, "label": "Eighth generation, Epsilon II", "aliases": ["Epsilon II", "V300"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Malibu", "https://en.wikipedia.org/wiki/General_Motors_Epsilon_platform"], "confidence": "high", "notes": "Short eighth generation on Epsilon II."},
+    {"start": 2016, "end": 2025, "label": "Ninth generation, E2XX / E2SC", "aliases": ["E2XX", "E2SC", "Global Epsilon"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://www.chevrolet.com/discontinued-vehicles"], "confidence": "high", "notes": "Final U.S. Malibu generation."
+    }
+  ],
+  "impala": [
+    {"start": 1958, "end": 1958, "label": "First generation", "aliases": ["1958 full-size body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "One-year first Impala body."},
+    {"start": 1959, "end": 1960, "label": "Second generation", "aliases": ["GM B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Second-generation full-size Impala."},
+    {"start": 1961, "end": 1964, "label": "Third generation, B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Third-generation full-size body."},
+    {"start": 1965, "end": 1970, "label": "Fourth generation, B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Fourth-generation full-size body."},
+    {"start": 1971, "end": 1976, "label": "Fifth generation, B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Fifth-generation full-size body."},
+    {"start": 1977, "end": 1985, "label": "Sixth generation, downsized B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Downsized rear-wheel-drive Impala."},
+    {"start": 1994, "end": 1996, "label": "Seventh generation, B-body", "aliases": ["Impala SS", "B-body", "GMX383"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Rear-wheel-drive Impala SS revival."},
+    {"start": 2000, "end": 2005, "label": "Eighth generation, W-body", "aliases": ["W-body", "GMX210"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Impala"], "confidence": "high", "notes": "Front-wheel-drive W-body revival."},
+    {"start": 2006, "end": 2013, "label": "Ninth generation, W-body", "aliases": ["W-body", "GMX211"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Impala", "https://www.gm.com/heritage/archive/vehicle-information-kits"], "confidence": "high", "notes": "Second W-body Impala generation."},
+    {"start": 2014, "end": 2020, "label": "Tenth generation, Epsilon II", "aliases": ["Epsilon II", "E2XX", "GMX352"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Impala", "https://www.chevrolet.com/discontinued-vehicles"], "confidence": "high", "notes": "Final Impala generation."
+    }
+  ],
+  "caprice": [
+    {"start": 1965, "end": 1970, "label": "First generation, B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Caprice"], "confidence": "high", "notes": "Caprice began as a 1965 Impala subseries."},
+    {"start": 1971, "end": 1976, "label": "Second generation, B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Caprice"], "confidence": "high", "notes": "Second-generation full-size Caprice."},
+    {"start": 1977, "end": 1990, "label": "Third generation, downsized B-body", "aliases": ["B-body", "Box Caprice"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Caprice"], "confidence": "high", "notes": "Downsized box-body Caprice."},
+    {"start": 1991, "end": 1996, "label": "Fourth generation, B-body", "aliases": ["B-body", "Bubble Caprice"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Caprice"], "confidence": "high", "notes": "Final North American rear-wheel-drive Caprice generation."
+    }
+  ],
+  "monte-carlo": [
+    {"start": 1970, "end": 1972, "label": "First generation, A-body", "aliases": ["A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Original personal-luxury Monte Carlo."},
+    {"start": 1973, "end": 1977, "label": "Second generation, Colonnade A-body", "aliases": ["Colonnade", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Colonnade generation."},
+    {"start": 1978, "end": 1980, "label": "Third generation, downsized A-body", "aliases": ["A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Downsized third generation."},
+    {"start": 1981, "end": 1988, "label": "Fourth generation, G-body", "aliases": ["G-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Rear-wheel-drive G-body generation."},
+    {"start": 1995, "end": 1999, "label": "Fifth generation, W-body", "aliases": ["W-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Front-wheel-drive Monte Carlo revival."},
+    {"start": 2000, "end": 2007, "label": "Sixth generation, W-body", "aliases": ["W-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Final Monte Carlo generation."
+    }
+  ],
+  "chevelle": [
+    {"start": 1964, "end": 1967, "label": "First generation, A-body", "aliases": ["A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevelle"], "confidence": "high", "notes": "First Chevelle generation."},
+    {"start": 1968, "end": 1972, "label": "Second generation, A-body", "aliases": ["A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevelle"], "confidence": "high", "notes": "Second Chevelle generation."},
+    {"start": 1973, "end": 1977, "label": "Third generation, Colonnade A-body", "aliases": ["Colonnade", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevelle"], "confidence": "high", "notes": "Final Chevelle generation."
+    }
+  ],
+  "el-camino": [
+    {"start": 1959, "end": 1960, "label": "First generation, full-size B-body", "aliases": ["B-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_El_Camino"], "confidence": "high", "notes": "Full-size original El Camino."},
+    {"start": 1964, "end": 1967, "label": "Second generation, A-body", "aliases": ["Chevelle-based", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_El_Camino"], "confidence": "high", "notes": "Chevelle-based revival."},
+    {"start": 1968, "end": 1972, "label": "Third generation, A-body", "aliases": ["Chevelle-based", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_El_Camino"], "confidence": "high", "notes": "Third generation."},
+    {"start": 1973, "end": 1977, "label": "Fourth generation, Colonnade A-body", "aliases": ["Colonnade", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_El_Camino"], "confidence": "high", "notes": "Colonnade generation."},
+    {"start": 1978, "end": 1987, "label": "Fifth generation, A/G-body", "aliases": ["G-body", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_El_Camino"], "confidence": "high", "notes": "Final downsized El Camino generation."
+    }
+  ],
+  "corvair": [
+    {"start": 1960, "end": 1964, "label": "First generation, Z-body", "aliases": ["Z-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvair"], "confidence": "high", "notes": "First-generation rear-engine Corvair."},
+    {"start": 1965, "end": 1969, "label": "Second generation, Z-body", "aliases": ["Z-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Corvair"], "confidence": "high", "notes": "Second-generation rear-engine Corvair."
+    }
+  ],
+  "nova": [
+    {"start": 1962, "end": 1965, "label": "First generation, X-body", "aliases": ["Chevy II Nova", "X-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevy_II_/_Nova"], "confidence": "high", "notes": "Nova began as a Chevy II series."},
+    {"start": 1966, "end": 1967, "label": "Second generation, X-body", "aliases": ["Chevy II Nova", "X-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevy_II_/_Nova"], "confidence": "high", "notes": "Second Chevy II/Nova body."},
+    {"start": 1968, "end": 1974, "label": "Third generation, X-body", "aliases": ["Chevy II Nova", "X-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevy_II_/_Nova"], "confidence": "high", "notes": "Nova became the dominant model name during this generation."},
+    {"start": 1975, "end": 1979, "label": "Fourth generation, X-body", "aliases": ["X-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevy_II_/_Nova"], "confidence": "high", "notes": "Final rear-wheel-drive Nova generation."},
+    {"start": 1985, "end": 1988, "label": "Fifth generation, NUMMI E80", "aliases": ["Toyota Corolla E80 derivative", "NUMMI"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Chevy_II_/_Nova"], "confidence": "high", "notes": "Front-wheel-drive Toyota-derived Nova built at NUMMI."
+    }
+  ],
+  "cavalier": [
+    {"start": 1982, "end": 1987, "label": "First generation, J-body", "aliases": ["J-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Cavalier"], "confidence": "high", "notes": "First J-body Cavalier generation."},
+    {"start": 1988, "end": 1994, "label": "Second generation, J-body", "aliases": ["J-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Cavalier"], "confidence": "high", "notes": "Second J-body appearance generation."},
+    {"start": 1995, "end": 2005, "label": "Third generation, J-body", "aliases": ["J-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Cavalier"], "confidence": "high", "notes": "Final North American Cavalier generation."
+    }
+  ],
+  "lumina": [
+    {"start": 1990, "end": 1994, "label": "First generation, W-body", "aliases": ["W-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Lumina"], "confidence": "high", "notes": "First Lumina sedan and coupe generation."},
+    {"start": 1995, "end": 2001, "label": "Second generation, W-body", "aliases": ["W-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Lumina"], "confidence": "high", "notes": "Second Lumina generation."
+    }
+  ],
+  "cobalt": [
+    {"start": 2005, "end": 2010, "label": "Delta / GMX001", "aliases": ["GM Delta", "GMX001"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Cobalt"], "confidence": "high", "notes": "Single North American Cobalt generation."
+    }
+  ],
+  "hhr": [
+    {"start": 2006, "end": 2011, "label": "Delta / GMT001", "aliases": ["GM Delta", "GMT001"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_HHR"], "confidence": "high", "notes": "Single HHR generation."
+    }
+  ],
+  "cruze": [
+    {"start": 2011, "end": 2015, "label": "First U.S. generation, Delta II", "aliases": ["Delta II", "J300"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Cruze", "https://en.wikipedia.org/wiki/General_Motors_Delta_platform"], "confidence": "high", "notes": "First U.S.-market Cruze generation."},
+    {"start": 2016, "end": 2019, "label": "Second generation, D2XX", "aliases": ["D2XX", "D2LC"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Cruze", "https://en.wikipedia.org/wiki/GM_D2XX_platform"], "confidence": "high", "notes": "Second U.S.-market Cruze generation."
+    }
+  ],
+  "volt": [
+    {"start": 2011, "end": 2015, "label": "First generation, Delta II / Voltec", "aliases": ["Delta II", "Voltec", "D1JCI"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Volt", "https://en.wikipedia.org/wiki/Voltec_(propulsion_system)"], "confidence": "high", "notes": "First-generation range-extended electric Volt."},
+    {"start": 2016, "end": 2019, "label": "Second generation, D2UX / Voltec", "aliases": ["D2UX", "D2JCI", "Voltec"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Volt", "https://en.wikipedia.org/wiki/Voltec_(propulsion_system)"], "confidence": "high", "notes": "Second-generation Volt."
+    }
+  ],
+  "sonic": [
+    {"start": 2012, "end": 2020, "label": "Gamma II / T300", "aliases": ["Gamma II", "T300"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Aveo_(T300)", "https://en.wikipedia.org/wiki/General_Motors_Gamma_platform"], "confidence": "high", "notes": "The U.S. T300 was sold as Sonic."
+    }
+  ],
+  "spark": [
+    {"start": 2013, "end": 2015, "label": "M300 / Gamma II", "aliases": ["M300", "Gamma II"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Spark", "https://en.wikipedia.org/wiki/General_Motors_Gamma_platform"], "confidence": "high", "notes": "First U.S.-market Spark generation."},
+    {"start": 2016, "end": 2022, "label": "M400 / G2XX", "aliases": ["M400", "G2XX", "BEAT"], "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Spark", "https://en.wikipedia.org/wiki/List_of_General_Motors_platforms"], "confidence": "high", "notes": "Second U.S.-market Spark generation."
+    }
+  ],
+  "bolt-ev": [
+    {"start": 2017, "end": 2021, "label": "BEV2 / G2KCZ", "aliases": ["BEV2", "G2KCZ", "C110"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Bolt"], "confidence": "high", "notes": "Original Bolt EV appearance."},
+    {"start": 2022, "end": 2023, "label": "BEV2 / G2KCZ refresh", "aliases": ["BEV2", "G2KCZ", "C110", "Facelift"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Bolt"], "confidence": "high", "notes": "2022 appearance refresh on the same BEV2 program."
+    }
+  ],
+  "bolt-euv": [
+    {"start": 2022, "end": 2023, "label": "BEV2 / C121", "aliases": ["BEV2", "C121"], "evidence_urls": ["https://cdn.motor1.com/pdf-files/programdirnam.pdf", "https://en.wikipedia.org/wiki/Chevrolet_Bolt"], "confidence": "high", "notes": "Longer Bolt EUV derivative."
+    }
+  ],
+  "blazer-ev": [
+    {"start": 2024, "end": 2026, "label": "BEV3 / Ultium", "aliases": ["BEV3", "Ultium"], "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/jul/0718-blazerev.html", "https://www.chevrolet.com/electric/blazer-ev"], "confidence": "medium", "notes": "Electric Blazer is architecturally separate from the C1XX gasoline Blazer."
+    }
+  ],
+  "equinox-ev": [
+    {"start": 2024, "end": 2026, "label": "BEV3 / Ultium", "aliases": ["BEV3", "Ultium"], "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/sep/0908-equinoxev-reveal.html", "https://www.chevrolet.com/electric/equinox-ev"], "confidence": "medium", "notes": "Electric Equinox is architecturally separate from the gasoline Equinox."
+    }
+  ],
+  "silverado-ev": [
+    {"start": 2024, "end": 2026, "label": "BT1XX / Ultium", "aliases": ["BT1XX", "BT1", "Ultium"], "evidence_urls": ["https://en.wikipedia.org/wiki/GM_BT1_platform", "https://www.chevrolet.com/electric/silverado-ev"], "confidence": "high", "notes": "Dedicated electric truck architecture, not a T1XX powertrain variant."
+    }
+  ],
+  "brightdrop-400": [
+    {"start": 2025, "end": 2025, "label": "BV1 / Ultium commercial van", "aliases": ["BV1", "BV1GD", "Zevo 400"], "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://cdn.motor1.com/pdf-files/programdirnam.pdf"], "confidence": "high", "notes": "Chevrolet-badged BrightDrop 400 begins with model year 2025."
+    }
+  ],
+  "brightdrop-600": [
+    {"start": 2025, "end": 2025, "label": "BV1 / Ultium commercial van", "aliases": ["BV1", "BV1Hx/D", "Zevo 600"], "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://cdn.motor1.com/pdf-files/programdirnam.pdf"], "confidence": "high", "notes": "Chevrolet-badged BrightDrop 600 begins with model year 2025."
+    }
+  ],
+  "lumina-apv": [
+    {"start": 1990, "end": 1996, "label": "Second-generation U-body minivan", "aliases": ["U-body", "APV"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Lumina_APV"], "confidence": "high", "notes": "Composite-body U-platform minivan."
+    }
+  ],
+  "venture": [
+    {"start": 1997, "end": 2000, "label": "Third-generation U-body minivan", "aliases": ["U-body", "GMT200"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Venture"], "confidence": "high", "notes": "Original Venture appearance."},
+    {"start": 2001, "end": 2005, "label": "Third-generation U-body refresh", "aliases": ["U-body", "GMT200", "Facelift"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Venture"], "confidence": "high", "notes": "2001 front-body refresh."
+    }
+  ],
+  "uplander": [
+    {"start": 2005, "end": 2008, "label": "U-body crossover-styled minivan", "aliases": ["U-body", "GMT201"], "evidence_urls": ["https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Uplander.pdf", "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2k08uplander.pdf"], "confidence": "high", "notes": "Single U.S. Uplander generation."
+    }
+  ],
+  "city-express": [
+    {"start": 2015, "end": 2018, "label": "Nissan M20-derived compact van", "aliases": ["M20", "NV200 derivative"], "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/city-express/2018.html", "https://en.wikipedia.org/wiki/Chevrolet_City_Express"], "confidence": "high", "notes": "Chevrolet rebadge of Nissan NV200."
+    }
+  ],
+  "low-cab-forward": [
+    {"start": 2016, "end": 2026, "label": "Isuzu N-Series-derived LCF", "aliases": ["LCF", "N-Series cab-over"], "evidence_urls": ["https://www.chevrolet.com/commercial/low-cab-forward-cab-over-truck", "https://en.wikipedia.org/wiki/Isuzu_Elf"], "confidence": "high", "notes": "Current Chevrolet cab-over family sourced from Isuzu N-Series architecture."
+    }
+  ]
+}

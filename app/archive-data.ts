@@ -1,4 +1,5 @@
 import modelCatalog from "../data/catalog/chevrolet-us-nameplates.json";
+import platformEraData from "../data/catalog/chevrolet-platform-eras.json";
 import tahoe1995to2000Audit from "../data/audits/tahoe-1995-2000.json";
 import tahoe2001to2007Audit from "../data/audits/tahoe-2001-2007.json";
 
@@ -38,29 +39,19 @@ export type Generation = {
   sources: Record<string, YearSource>;
   colors: ArchiveColor[];
   catalogSources?: string[];
+  platformAliases?: string[];
+  platformConfidence?: string;
+  platformNotes?: string;
 };
 
 export type ArchiveModel = {
   id: string;
   name: string;
+  vehicleClass: string;
   era: string;
   status: string;
   pendingCopy?: string;
   generations: Generation[];
-};
-
-export type PhotoCandidate = {
-  id: string;
-  colorId: string;
-  year: string;
-  src: string;
-  alt: string;
-  credit: string;
-  license: string;
-  sourceUrl?: string;
-  licenseUrl?: string;
-  note?: string;
-  status: "candidate" | "reviewed";
 };
 
 const gmKit = (year: string) =>
@@ -74,80 +65,6 @@ const gmChevelleKit = (year: string) =>
 
 const gmSuburbanKit = (year: string) =>
   `https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/${year}-Chevrolet-Suburban.pdf`;
-
-export const staticPhotoCandidates: PhotoCandidate[] = [
-  {
-    id: "commons-1969-camaro-ss396",
-    colorId: "hugger-orange",
-    year: "1969",
-    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/1969_Chevrolet_Camaro_SS396_(21176690299).jpg",
-    alt: "Orange 1969 Chevrolet Camaro SS396 photographed outdoors",
-    credit: "Wikimedia Commons contributor",
-    license: "CC BY 2.0, attribution verification pending",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:1969_Chevrolet_Camaro_SS396_(21176690299).jpg",
-    note: "External reference; attribution review remains pending.",
-    status: "candidate",
-  },
-  {
-    id: "commons-1976-camaro-silver-f880311b",
-    colorId: "camaro-second-generation-silver-1976",
-    year: "1976",
-    src: "/vehicle-photos/assets/8f5994027985d5acb2433686035c75df44ed9cc05549d4fbaeaea527f3de4e17.jpg",
-    alt: "Silver 1976 Chevrolet Camaro at an outdoor car show",
-    credit: "Bull-Doser",
-    license: "Public domain",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:%2776_Chevrolet_Camaro_(Auto_classique_Laval_%2710).jpg",
-    note:
-      "Exact year and visible silver are verified; original factory paint is not established.",
-    status: "reviewed",
-  },
-  {
-    id: "commons-1979-camaro-blue-09e19346",
-    colorId: "camaro-second-generation-dark-blue-metallic-1973",
-    year: "1979",
-    src: "/vehicle-photos/assets/acd373df72da6ab8fe2f9d82c7e3d39e2ff701328a273ba89c500ddf916f202d.jpg",
-    alt: "Dark blue 1979 Chevrolet Camaro Z-28 at a car show",
-    credit: "Xnatedawgx",
-    license: "CC BY-SA 4.0",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:1979_Chevrolet_Camaro_Z-28,_blue,_right_side,_Golden_Super_Cruise_2026-07-04.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
-    note:
-      "Commons verifies a blue 1979 Z-28; code 29 Dark Blue Metallic remains an unverified visual classification.",
-    status: "candidate",
-  },
-  {
-    id: "commons-1980-camaro-red-69ba1917",
-    colorId: "camaro-second-generation-red-1975",
-    year: "1980",
-    src: "/vehicle-photos/assets/d55deb9cf24093edeaf223948cad54af2ded2365a48e2c58906b098ef0c39ca0.jpg",
-    alt: "Red 1980 Chevrolet Camaro at an outdoor car show",
-    credit: "Firing up the quattro from Manchester, UK",
-    license: "CC BY 2.0",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:1980_Chevrolet_Camaro.jpg",
-    licenseUrl: "https://creativecommons.org/licenses/by/2.0",
-    note:
-      "Exact year and a red body are verified; original factory paint is not established.",
-    status: "reviewed",
-  },
-  {
-    id: "commons-1981-camaro-black-cc3ffcaf",
-    colorId: "camaro-second-generation-black-1976",
-    year: "1981",
-    src: "/vehicle-photos/assets/a29926042dbb57beb8c45e2e4e7073440d6906d58055b3ff9e2f836f418added.jpg",
-    alt: "Black 1981 Chevrolet Camaro Z28 with its hood open at a car show",
-    credit: "Bull-Doser",
-    license: "Public domain",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:%2781_Chevrolet_Camaro_(Orange_Julep).JPG",
-    note:
-      "Exact year and a black body are credible; the modified, backlit, timestamped car remains a fallback candidate.",
-    status: "candidate",
-  },
-];
 
 const firstGeneration: Generation = {
   id: "first-generation",
@@ -2511,35 +2428,35 @@ const suburban1977: Generation = {
 
 const auditedModels: ArchiveModel[] = [
   {
-    id: "camaro", name: "Camaro", era: "1967–1992 audited", status: "26 official charts verified",
+    id: "camaro", name: "Camaro", vehicleClass: "sports coupe", era: "1967–1992 audited", status: "26 official charts verified",
     generations: [firstGeneration, secondGenerationCamaro, thirdGenerationCamaro],
   },
   {
-    id: "chevelle", name: "Chevelle", era: "1964–1967 audited", status: "4 official charts verified",
+    id: "chevelle", name: "Chevelle", vehicleClass: "midsize car", era: "1964–1967 audited", status: "4 official charts verified",
     generations: [firstChevelleGeneration],
   },
   {
-    id: "bel-air", name: "Bel Air", era: "Historic passenger car", status: "Source inventory in progress",
+    id: "bel-air", name: "Bel Air", vehicleClass: "full-size car", era: "Historic passenger car", status: "Source inventory in progress",
     pendingCopy: "Generation boundaries and official chart locators are being audited. No matrix is published until a full year chart has been reviewed.",
     generations: [],
   },
   {
-    id: "corvette", name: "Corvette", era: "1953–1962 source series", status: "9 official tables audited",
+    id: "corvette", name: "Corvette", vehicleClass: "sports car", era: "1953–1962 source series", status: "9 official tables audited",
     pendingCopy: "The dedicated 1953 GM kit contains no exterior-color table. That year remains unverified while additional official documentation is sought.",
     generations: [earlyCorvetteTables],
   },
   {
-    id: "colorado", name: "Colorado", era: "Modern truck", status: "Source inventory in progress",
+    id: "colorado", name: "Colorado", vehicleClass: "midsize pickup", era: "Modern truck", status: "Source inventory in progress",
     pendingCopy: "Order guides need market-specific validation. Missing records remain unverified.",
     generations: [],
   },
   {
-    id: "suburban", name: "Suburban", era: "1935–present catalog expansion", status: "1977 official chart verified",
+    id: "suburban", name: "Suburban", vehicleClass: "full-size SUV", era: "1935–present catalog expansion", status: "1977 official chart verified",
     pendingCopy: "All model years remain visible while official color charts are reviewed year by year.",
     generations: [suburban1977],
   },
   {
-    id: "tahoe", name: "Tahoe", era: "1995–present catalog expansion", status: "1995, 1996, and 2001 official color pages verified",
+    id: "tahoe", name: "Tahoe", vehicleClass: "full-size SUV", era: "1995–present catalog expansion", status: "1995, 1996, and 2001 official color pages verified",
     pendingCopy: "All model years remain visible while official color charts are reviewed year by year. Two-tone combinations stay separate from the solid-color timeline.",
     generations: tahoeAuditGenerations,
   },
@@ -2562,6 +2479,20 @@ type CatalogModel = {
   notes: string;
 };
 
+type PlatformEraBand = {
+  start: number;
+  end: number;
+  label: string;
+  aliases: string[];
+  evidence_urls: string[];
+  confidence: string;
+  notes: string;
+};
+
+type PlatformEraCatalog = Record<string, PlatformEraBand[]>;
+
+const platformEras = platformEraData as PlatformEraCatalog;
+
 function numericYears(start: number, end: number) {
   return Array.from({ length: end - start + 1 }, (_, index) =>
     String(start + index),
@@ -2574,22 +2505,61 @@ function compactYearRange(years: string[]) {
   return first === last ? first : `${first}–${last}`;
 }
 
-function splitCatalogYears(years: string[], maximum = 10) {
-  const groups: string[][] = [];
+function platformEraForYear(modelId: string, year: string) {
+  const numeric = Number(year);
+  return platformEras[modelId]?.find(
+    (band) => numeric >= band.start && numeric <= band.end,
+  );
+}
+
+function platformYearGroups(modelId: string, years: string[]) {
+  const groups: { band?: PlatformEraBand; years: string[] }[] = [];
   for (const year of years) {
+    const band = platformEraForYear(modelId, year);
     const current = groups.at(-1);
-    const previous = current?.at(-1);
+    const previous = current?.years.at(-1);
+    const sameBand = current?.band === band;
+    const canExtendUnknown = Boolean(band) || (current?.years.length ?? 0) < 10;
     if (
       !current ||
-      current.length >= maximum ||
+      !sameBand ||
+      !canExtendUnknown ||
       Number(year) !== Number(previous) + 1
     ) {
-      groups.push([year]);
+      groups.push({ band, years: [year] });
     } else {
-      current.push(year);
+      current.years.push(year);
     }
   }
   return groups;
+}
+
+function applyPlatformEra(modelId: string, generation: Generation): Generation {
+  const matchingBands = [
+    ...new Set(
+      generation.years
+        .map((year) => platformEraForYear(modelId, year))
+        .filter((band): band is PlatformEraBand => Boolean(band)),
+    ),
+  ];
+  if (
+    matchingBands.length !== 1 ||
+    !generation.years.every((year) => platformEraForYear(modelId, year) === matchingBands[0])
+  ) {
+    return generation;
+  }
+
+  const band = matchingBands[0];
+  return {
+    ...generation,
+    label: band.label,
+    catalogSources: [
+      ...new Set([...(generation.catalogSources ?? []), ...band.evidence_urls]),
+    ],
+    platformAliases: band.aliases,
+    platformConfidence: band.confidence,
+    platformNotes: band.notes,
+  };
 }
 
 function catalogEra(model: CatalogModel) {
@@ -2608,9 +2578,9 @@ function catalogGenerations(
     const pendingYears = numericYears(range.start, range.end).filter(
       (year) => !reviewedYears.has(year),
     );
-    return splitCatalogYears(pendingYears).map((years) => ({
+    return platformYearGroups(model.id, pendingYears).map(({ band, years }) => ({
       id: `catalog-${model.id}-${years[0]}-${years.at(-1)}`,
-      label: "Model years",
+      label: band?.label ?? "Base / era not yet confirmed",
       range: compactYearRange(years),
       years,
       listingCount: 0,
@@ -2618,14 +2588,21 @@ function catalogGenerations(
         "This model-year block is catalogued, but its exterior-color charts remain in the research queue. Adjacent-year colors are never inferred.",
       sources: {},
       colors: [],
-      catalogSources: [...new Set(range.evidence_urls)],
+      catalogSources: [
+        ...new Set([...range.evidence_urls, ...(band?.evidence_urls ?? [])]),
+      ],
+      platformAliases: band?.aliases,
+      platformConfidence: band?.confidence,
+      platformNotes: band?.notes,
     }));
   });
 }
 
 function mergeCatalogModel(model: CatalogModel): ArchiveModel {
   const audited = auditedModels.find((item) => item.id === model.id);
-  const auditedGenerations = audited?.generations ?? [];
+  const auditedGenerations = (audited?.generations ?? []).map((generation) =>
+    applyPlatformEra(model.id, generation),
+  );
   const reviewedYears = new Set(
     auditedGenerations.flatMap((generation) => Object.keys(generation.sources)),
   );
@@ -2645,6 +2622,7 @@ function mergeCatalogModel(model: CatalogModel): ArchiveModel {
   return {
     id: model.id,
     name: model.name,
+    vehicleClass: model.vehicle_class,
     era: catalogEra(model),
     status: listingCount
       ? `${audited?.status ?? `${listingCount} source-linked listings`}; ${reviewStatus}`

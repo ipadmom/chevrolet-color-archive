@@ -7,14 +7,19 @@ import {
   defaultModelId,
   defaultYear,
   models,
-  staticPhotoCandidates,
 } from "./archive-data";
 import type {
   ArchiveColor,
   ArchiveModel,
   Generation,
-  PhotoCandidate,
 } from "./archive-data";
+import { VehicleProfileSvg } from "./vehicle-profile-svg";
+import {
+  archivedColorPhotos,
+  archivedModelYearPhotos,
+  archivedPhotoStats,
+  isExactYearPhoto,
+} from "./release-photo-data";
 
 type ArchiveView = "models" | "years" | "archive";
 
@@ -141,46 +146,6 @@ function loadStagedReceipts(): StagedPhoto[] {
   }
 }
 
-function profilePhoto(modelId: string, year?: string) {
-  if (modelId !== "camaro") return undefined;
-  const exact = staticPhotoCandidates.find(
-    (photo) => photo.year === year && photo.status === "reviewed",
-  );
-  if (year) return exact;
-  return (
-    staticPhotoCandidates.find((photo) => photo.status === "reviewed") ??
-    staticPhotoCandidates[0]
-  );
-}
-
-function VehicleProfile({
-  accent = "#737f95",
-  label,
-  photo,
-}: {
-  accent?: string;
-  label: string;
-  photo?: PhotoCandidate;
-}) {
-  if (photo) {
-    return <img alt={photo.alt} className="vehicle-profile" src={photo.src} />;
-  }
-
-  return (
-    <div
-      aria-label={`${label} profile placeholder`}
-      className="vehicle-profile vehicle-placeholder"
-      role="img"
-    >
-      <span className="vehicle-body" style={{ backgroundColor: accent }} />
-      <span className="vehicle-window" />
-      <span className="vehicle-wheel vehicle-wheel-left" />
-      <span className="vehicle-wheel vehicle-wheel-right" />
-      <small>{label.toUpperCase()}</small>
-    </div>
-  );
-}
-
 function timelineSegments(color: ArchiveColor, years: string[]) {
   const segments: TimelineSegment[] = [];
 
@@ -224,6 +189,10 @@ function rangeLabel(segment: TimelineSegment) {
 function modelAccent(model: ArchiveModel) {
   const firstColor = model.generations[0]?.colors[0];
   return firstColor?.swatch ?? "#737f95";
+}
+
+function modelProfileYear(model: ArchiveModel) {
+  return model.generations.at(-1)?.years.at(-1);
 }
 
 function modelHasAuditedRows(model: ArchiveModel) {
@@ -270,9 +239,10 @@ export function ArchiveExplorer() {
       (color) => color.id === colorId && Boolean(color.availability[year]),
     ) ?? colors.find((color) => color.availability[year]);
   const yearSource = generation?.sources[year];
-  const staticPhotos = staticPhotoCandidates.filter(
-    (photo) => photo.colorId === selectedColor?.id && photo.year === year,
-  );
+  const staticPhotos = selectedColor
+    ? archivedColorPhotos(model.id, year, selectedColor.id)
+    : [];
+  const modelReferencePhotos = archivedModelYearPhotos(model.id, year);
   const visibleStagedPhotos = stagedPhotos.filter(
     (photo) =>
       photo.model === model.id &&
@@ -461,25 +431,23 @@ export function ArchiveExplorer() {
   }
 
   function openPhotoQueue() {
-    const photo =
-      staticPhotoCandidates.find((candidate) => candidate.status === "reviewed") ??
-      staticPhotoCandidates[0];
+    const photo = archivedColorPhotos("camaro", "1969", "hugger-orange")[0];
     if (!photo) {
       chooseModel("camaro");
       return;
     }
 
     setModelId("camaro");
-    setYear(photo.year);
-    setColorId(photo.colorId);
+    setYear("1969");
+    setColorId("hugger-orange");
     setView("archive");
     setSidebarOpen(false);
     setShowAll(true);
     clearLocalPhotoState();
     const params = new URLSearchParams({
-      color: photo.colorId,
+      color: "hugger-orange",
       model: "camaro",
-      year: photo.year,
+      year: "1969",
     });
     window.history.replaceState(null, "", `#${params.toString()}`);
     window.setTimeout(
@@ -732,6 +700,9 @@ export function ArchiveExplorer() {
         <a href="https://github.com/ipadmom/chevrolet-color-archive">
           Public source and audits
         </a>
+        <a href={archivedPhotoStats.releaseUrl}>
+          Archived Commons originals
+        </a>
         <button onClick={openPhotoQueue} type="button">
           Photo contribution queue
         </button>
@@ -739,6 +710,9 @@ export function ArchiveExplorer() {
           <strong>{archiveModelYearCount.toLocaleString("en-US")}</strong> model-year records
           <br />
           <strong>{archiveListingCount}</strong> source-linked color listings
+          <br />
+          <strong>{archivedPhotoStats.assetCount}</strong> Release-archived originals across{" "}
+          <strong>{archivedPhotoStats.modelCount}</strong> models
           <br />
           Facts cite official charts. Swatches and photographs are interpretive.
         </div>
@@ -764,10 +738,12 @@ export function ArchiveExplorer() {
                     onClick={() => chooseModel(item.id)}
                     type="button"
                   >
-                    <VehicleProfile
+                    <VehicleProfileSvg
                       accent={modelAccent(item)}
                       label={item.name}
-                      photo={profilePhoto(item.id)}
+                      modelId={item.id}
+                      vehicleClass={item.vehicleClass}
+                      year={modelProfileYear(item)}
                     />
                     <strong>{item.name}</strong>
                     {!modelHasAuditedRows(item) ? <small>COLOR RESEARCH QUEUE</small> : null}
@@ -814,10 +790,12 @@ export function ArchiveExplorer() {
                             onClick={() => chooseYear(itemYear)}
                             type="button"
                           >
-                            <VehicleProfile
+                            <VehicleProfileSvg
                               accent={generationAccent(item, itemYear)}
                               label={`${model.name} ${itemYear}`}
-                              photo={profilePhoto(model.id, itemYear)}
+                              modelId={model.id}
+                              vehicleClass={model.vehicleClass}
+                              year={itemYear}
                             />
                             <strong>{itemYear}</strong>
                             <small>{count ? `${count} COLORS` : "UNVERIFIED"}</small>
@@ -834,10 +812,12 @@ export function ArchiveExplorer() {
           {view === "archive" && generation ? (
             <>
               <div className="generation-profile">
-                <VehicleProfile
+                <VehicleProfileSvg
                   accent={selectedColor?.swatch}
                   label={`${model.name} ${generation.range}`}
-                  photo={profilePhoto(model.id, year)}
+                  modelId={model.id}
+                  vehicleClass={model.vehicleClass}
+                  year={year}
                 />
               </div>
 
@@ -877,10 +857,12 @@ export function ArchiveExplorer() {
                     onClick={() => chooseYear(itemYear)}
                     type="button"
                   >
-                    <VehicleProfile
+                    <VehicleProfileSvg
                       accent={generationAccent(generation, itemYear)}
                       label={`${model.name} ${itemYear}`}
-                      photo={profilePhoto(model.id, itemYear)}
+                      modelId={model.id}
+                      vehicleClass={model.vehicleClass}
+                      year={itemYear}
                     />
                     <strong>{itemYear}</strong>
                   </button>
@@ -891,6 +873,14 @@ export function ArchiveExplorer() {
                 <summary>▼ Archive status & source</summary>
                 <div>
                   <strong>{model.status}</strong>
+                  <div className="platform-facts">
+                    <span>BASE / ERA</span>
+                    <strong>{generation.label}</strong>
+                    {generation.platformAliases?.length ? (
+                      <small>{generation.platformAliases.join(" · ")}</small>
+                    ) : null}
+                    {generation.platformNotes ? <p>{generation.platformNotes}</p> : null}
+                  </div>
                   <p>{generation.revisionNote}</p>
                   {yearSource ? (
                     <dl>
@@ -928,6 +918,74 @@ export function ArchiveExplorer() {
                   )}
                 </div>
               </details>
+
+              {modelReferencePhotos.length ? (
+                <section aria-labelledby="commons-archive-heading" id="model-photos">
+                  <div className="colorcharttitle" id="commons-archive-heading">
+                    WIKIMEDIA COMMONS PHOTO ARCHIVE
+                  </div>
+                  <div className="ia-box commons-photo-archive">
+                    <p className="photo-disclaimer">
+                      These are archived identification references, not evidence of
+                      factory paint or original finish. The site serves pinned GitHub
+                      Release copies; Commons remains the attribution source.
+                    </p>
+                    <div className="archive-photo-grid">
+                      {modelReferencePhotos.map((photo) => {
+                        const exactYear = isExactYearPhoto(photo, model.id, year);
+                        return (
+                          <article className="archive-photo-card" key={photo.id}>
+                            <img
+                              alt={photo.alt}
+                              decoding="async"
+                              loading="lazy"
+                              src={photo.src}
+                            />
+                            <div>
+                              <strong>
+                                {exactYear
+                                  ? `${year} MODEL-YEAR MATCH`
+                                  : "MODEL REFERENCE"}
+                              </strong>
+                              <span>
+                                {exactYear
+                                  ? "Year stated in Commons metadata"
+                                  : photo.year
+                                    ? `Photographed vehicle identified as ${photo.year}`
+                                    : "Exact model year not established"}
+                              </span>
+                              <span>{photo.attribution}</span>
+                              <nav aria-label={`Links for ${photo.originalFilename}`}>
+                                <a href={photo.sourceUrl} rel="noreferrer" target="_blank">
+                                  COMMONS SOURCE ↗
+                                </a>
+                                <a href={photo.licenseUrl} rel="noreferrer" target="_blank">
+                                  LICENSE ↗
+                                </a>
+                                <a
+                                  href={photo.archiveOriginalUrl}
+                                  rel="noreferrer"
+                                  target="_blank"
+                                >
+                                  ARCHIVED ORIGINAL ↗
+                                </a>
+                              </nav>
+                            </div>
+                          </article>
+                        );
+                      })}
+                    </div>
+                    <a
+                      className="release-archive-link"
+                      href={archivedPhotoStats.releaseUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      OPEN PHOTO-ARCHIVE RELEASE ↗
+                    </a>
+                  </div>
+                </section>
+              ) : null}
 
               <section aria-labelledby="matrix-heading" className="colorcharts" id="matrix">
                 <div className="colorcharttitle">
@@ -1141,7 +1199,12 @@ export function ArchiveExplorer() {
                                   type="checkbox"
                                 />
                                 <label htmlFor={optionId}>
-                                  <img alt={photo.alt} src={photo.src} />
+                                  <img
+                                    alt={photo.alt}
+                                    decoding="async"
+                                    loading="lazy"
+                                    src={photo.src}
+                                  />
                                   <span className="photo-overlay">
                                     <small>{year} CHEVROLET</small>
                                     <strong>{model.name.toUpperCase()}</strong>
@@ -1157,7 +1220,7 @@ export function ArchiveExplorer() {
                                       ? "REVIEWED ILLUSTRATION"
                                       : "CANDIDATE ILLUSTRATION"}
                                   </strong>
-                                  <span>{photo.credit} · {photo.license}</span>
+                                  <span>{photo.attribution}</span>
                                   {photo.note ? <span>{photo.note}</span> : null}
                                   <span>
                                     {photo.sourceUrl ? (
@@ -1170,6 +1233,13 @@ export function ArchiveExplorer() {
                                         LICENSE ↗
                                       </a>
                                     ) : null}
+                                    <a
+                                      href={photo.archiveOriginalUrl}
+                                      rel="noreferrer"
+                                      target="_blank"
+                                    >
+                                      ARCHIVED ORIGINAL ↗
+                                    </a>
                                   </span>
                                 </div>
                               </article>
