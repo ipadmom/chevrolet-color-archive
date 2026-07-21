@@ -682,12 +682,16 @@ export function ArchiveExplorer() {
             onClick={() => chooseModel(item.id)}
             type="button"
           >
-            <span
-              aria-hidden="true"
-              className="ia-sidebar-swatch"
-              style={{ background: modelAccent(item) }}
-            />
-            <span>
+            <span aria-hidden="true" className="ia-sidebar-profile">
+              <VehicleProfileSvg
+                accent={modelAccent(item)}
+                label={item.name}
+                modelId={item.id}
+                vehicleClass={item.vehicleClass}
+                year={modelProfileYear(item)}
+              />
+            </span>
+            <span className="ia-sidebar-copy">
               <strong>{item.name}</strong>
               <small>{item.era}</small>
             </span>

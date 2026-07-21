@@ -150,7 +150,7 @@ a:hover {
   min-height: 58px;
 }
 
-.ia-sidebar > button span:not(.ia-sidebar-swatch) {
+.ia-sidebar > button .ia-sidebar-copy {
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -170,12 +170,21 @@ a:hover {
   text-transform: uppercase;
 }
 
-.ia-sidebar-swatch {
-  border: 1px solid #444d5e;
-  border-radius: 2px;
-  flex: 0 0 26px;
-  height: 26px;
+.ia-sidebar-profile {
+  flex: 0 0 68px;
+  height: 36px;
   margin-right: 8px;
+  overflow: hidden;
+}
+
+.ia-sidebar-profile .vehicle-profile {
+  display: block;
+  height: 36px;
+  width: 68px;
+}
+
+.ia-sidebar-profile text {
+  display: none;
 }
 
 .ia-sidebar-label {

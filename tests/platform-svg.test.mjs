@@ -267,7 +267,17 @@ test("archive explorer uses SVG profiles and cannot regress to the generic place
   });
 
   assert.ok(hasProfileImport, "archive explorer must import VehicleProfileSvg");
-  assert.ok(profileRenderCount >= 4, "all model, year, and archive profile surfaces need SVGs");
+  assert.ok(profileRenderCount >= 5, "sidebar, model, year, and archive profile surfaces need SVGs");
+  assert.equal(
+    stringLiterals.has("ia-sidebar-profile"),
+    true,
+    "the persistent model menu must render compact SVG thumbnails",
+  );
+  assert.equal(
+    stringLiterals.has("ia-sidebar-swatch"),
+    false,
+    "generic sidebar color swatches must not return",
+  );
   assert.equal(identifiers.has("profilePhoto"), false, "photo-backed profile hotlinks must not return");
   assert.equal(identifiers.has("VehicleProfile"), false, "the old placeholder component must not return");
 
