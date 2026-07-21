@@ -73,7 +73,7 @@
     "owner": "ipadmom",
     "repository": "chevrolet-color-archive",
     "tag": "photo-archive-v1",
-    "published": false,
+    "published": true,
     "base_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/"
   },
   "policy": {
