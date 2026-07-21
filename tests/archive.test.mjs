@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 import ts from "typescript";
@@ -73,7 +74,7 @@ test("Camaro second generation preserves complete charts and generation order", 
 
   assert.deepEqual(
     camaro.generations.map((item) => item.range),
-    ["1967–1969", "1970–1981"],
+    ["1967–1969", "1970–1981", "1982–1992"],
   );
   assert.deepEqual(generation.years, [
     "1970",
@@ -320,6 +321,258 @@ test("Camaro 1976–1981 rows, restriction, and source labels match the audit", 
   assert.match(audit, /82 year-specific chart listings/);
   assert.match(audit, /Z85 applications, stripe systems, and Z28 scheme labels/);
   assert.match(audit, /A shared paint code does not merge/);
+});
+
+test("Camaro 1982–1992 rows, package restrictions, and source conflicts match the audit", async () => {
+  const { models } = await loadArchiveData();
+  const generation = models.find((model) => model.id === "camaro").generations[2];
+  const years = [
+    "1982",
+    "1983",
+    "1984",
+    "1985",
+    "1986",
+    "1987",
+    "1988",
+    "1989",
+    "1990",
+    "1991",
+    "1992",
+  ];
+
+  assert.deepEqual(generation.years, years);
+  assert.equal(generation.listingCount, 108);
+  assert.equal(generation.colors.length, 32);
+  assert.deepEqual(
+    Object.fromEntries(
+      years.map((year) => [
+        year,
+        generation.colors.filter((entry) => entry.availability[year]).length,
+      ]),
+    ),
+    {
+      1982: 12,
+      1983: 11,
+      1984: 11,
+      1985: 12,
+      1986: 12,
+      1987: 10,
+      1988: 9,
+      1989: 7,
+      1990: 7,
+      1991: 8,
+      1992: 9,
+    },
+  );
+  assert.equal(
+    generation.colors
+      .flatMap((entry) => Object.values(entry.availability))
+      .filter((availability) => availability.state === "restricted").length,
+    47,
+  );
+  assert.equal(
+    generation.colors.every((entry) =>
+      entry.id.startsWith("camaro-third-generation-"),
+    ),
+    true,
+  );
+  assert.equal(
+    new Set(generation.colors.map((entry) => entry.id)).size,
+    generation.colors.length,
+  );
+
+  const exactLocators = {
+    1982: "PDF pp. 33, 36, and 38; printed Camaro Dealer Order Guide Pages 2 and 4",
+    1983: "PDF pp. 36, 38, and 40, printed Camaro Pages 2, 4, and 6",
+    1984:
+      "PDF pp. 8, 10, 12, and 15; printed Camaro Pages 2, 4, and 6 plus Exterior Colors overview",
+    1985:
+      "PDF pp. 30, 34, 36, 38, and 40; printed Camaro/26 and Dealer Order Guide Pages 2, 4, 6, and 8",
+    1986:
+      "PDF pp. 31–34, 40, 42, and 44; printed Camaro/21–22 and Dealer Order Guide Pages 2, 4, and 6",
+    1987:
+      "PDF pp. 45 and 17, printed Camaro/23 and unnumbered California RS chart",
+    1988:
+      "PDF pp. 34, 36, 38, and 40, printed Camaro Pages 2, 4, 6, and 8",
+    1989:
+      "PDF pp. 34, 38, 40, and 42, printed Camaro Pages 2, 6, 8, and 10",
+    1990:
+      "PDF pp. 36, 38, 40, and 42, printed Camaro Pages 2, 4, 6, and 8",
+    1991:
+      "PDF pp. 26, 28, 30, and 32, printed Camaro Pages 2, 4, 6, and 8",
+    1992:
+      "PDF pp. 84, 86, 88, and 90, printed Camaro Pages 2, 4, 6, and 8",
+  };
+  for (const [year, locator] of Object.entries(exactLocators)) {
+    assert.equal(generation.sources[year].locator, locator);
+    assert.match(
+      generation.sources[year].url,
+      new RegExp(`${year}-Chevrolet-Camaro\\.pdf$`),
+    );
+  }
+
+  const audit = await readFile(
+    new URL("docs/source-audit-camaro-1982-1992.md", root),
+    "utf8",
+  );
+
+  function documentedCamaroRows(year) {
+    const start = audit.indexOf(`## ${year}`);
+    assert.notEqual(start, -1, `missing ${year} audit section`);
+    const next = audit.indexOf("\n## ", start + 4);
+    const section = audit.slice(start, next === -1 ? undefined : next);
+    return [
+      ...section.matchAll(
+        /^\| (\d+) \| ([^|\r\n]+) \| (listed|restricted) \|\s*([^|\r\n]*?)\s*\|\r?$/gm,
+      ),
+    ]
+      .map((match) => [
+        match[1],
+        match[2].trim(),
+        match[3],
+        match[4].trim(),
+      ])
+      .sort((left, right) => left.join("\0").localeCompare(right.join("\0")));
+  }
+
+  for (const year of years) {
+    const actual = generation.colors
+      .filter((entry) => entry.availability[year])
+      .map((entry) => [
+        entry.availability[year].code,
+        entry.availability[year].label,
+        entry.availability[year].state,
+        entry.availability[year].restriction ?? "",
+      ])
+      .sort((left, right) => left.join("\0").localeCompare(right.join("\0")));
+    assert.deepEqual(actual, documentedCamaroRows(year));
+  }
+
+  const color = (id) => generation.colors.find((entry) => entry.id === id);
+  assert.equal(
+    color("camaro-third-generation-dark-gold-metallic-1982")
+      .availability["1982"].restriction,
+    "Not available on Berlinetta",
+  );
+  assert.equal(
+    color("camaro-third-generation-light-brown-metallic-1983")
+      .availability["1985"].restriction,
+    "Factory specification listing; absent from revised Dealer Order Guide",
+  );
+  assert.equal(
+    color("camaro-third-generation-light-brown-metallic-1983")
+      .availability["1986"].restriction,
+    "Initial chart only; absent from revised Dealer Order Guide",
+  );
+  assert.equal(
+    color("camaro-third-generation-copper-metallic-1985")
+      .availability["1986"].restriction,
+    "Initial chart only; absent from revised Dealer Order Guide",
+  );
+  assert.equal(
+    color("camaro-third-generation-ultra-blue-metallic-1991")
+      .availability["1991"].label,
+    "Blue, Ultra (Met)",
+  );
+  assert.equal(
+    color("camaro-third-generation-dark-green-gray-metallic-1992")
+      .availability["1992"].label,
+    "Green Dk, Gray (Met)",
+  );
+  assert.deepEqual(
+    generation.colors
+      .filter(
+        (entry) =>
+          entry.availability["1987"]?.restriction ===
+          "Not available on California RS",
+      )
+      .map((entry) => entry.availability["1987"].code)
+      .sort(),
+    ["13", "23", "28", "51", "68", "74", "84"],
+  );
+  assert.deepEqual(
+    generation.colors
+      .filter((entry) => entry.availability["1987"]?.state === "listed")
+      .map((entry) => entry.availability["1987"].code)
+      .sort(),
+    ["40", "41", "81"],
+  );
+  assert.equal(
+    color("camaro-third-generation-silver-metallic-1982")
+      .availability["1988"].restriction,
+    "Non-IROC-Z only",
+  );
+
+  assert.match(
+    audit,
+    /1985 factory exterior-color specification[\s\S]*January 28, 1985 Dealer Order Guide omits/,
+  );
+  assert.match(
+    audit,
+    /1987 Color & Trim Selections chart confirms[\s\S]*only ones available[\s\S]*California RS[\s\S]*Z28 or IROC-Z application[\s\S]*remain unresolved/,
+  );
+  assert.match(
+    audit,
+    /stripe and decal colors[\s\S]*do not create another solid exterior-color listing/,
+  );
+});
+
+test("Camaro photo references preserve review status, rights, and published bytes", async () => {
+  const { staticPhotoCandidates } = await loadArchiveData();
+  const reviewedIds = new Set([
+    "commons-1976-camaro-silver-f880311b",
+    "commons-1980-camaro-red-69ba1917",
+  ]);
+  const heldIds = new Set([
+    "commons-1979-camaro-blue-09e19346",
+    "commons-1981-camaro-black-cc3ffcaf",
+  ]);
+  const published = staticPhotoCandidates.filter(
+    (photo) => reviewedIds.has(photo.id) || heldIds.has(photo.id),
+  );
+
+  assert.equal(published.length, 4);
+  for (const photo of published) {
+    assert.equal(photo.status, reviewedIds.has(photo.id) ? "reviewed" : "candidate");
+    assert.match(photo.src, /^\/vehicle-photos\/assets\/[a-f0-9]{64}\.jpg$/);
+    assert.match(photo.sourceUrl, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    assert.ok(photo.note);
+  }
+  assert.equal(
+    published.find((photo) => photo.id === "commons-1979-camaro-blue-09e19346")
+      .note.includes("unverified visual classification"),
+    true,
+  );
+
+  const manifest = JSON.parse(
+    await readFile(new URL("public/vehicle-photos/attribution.json", root), "utf8"),
+  );
+  assert.equal(manifest.schemaVersion, 2);
+  assert.equal(manifest.assets.length, 4);
+  assert.equal(manifest.publications.length, 4);
+  for (const asset of manifest.assets) {
+    const bytes = await readFile(new URL(asset.path, root));
+    assert.equal(bytes.length, asset.bytes);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), asset.sha256);
+    assert.equal(asset.sanitizer.name, "privacy-metadata-strip");
+    assert.equal(asset.sanitizer.version, 2);
+  }
+  assert.deepEqual(
+    manifest.publications
+      .filter((publication) => publication.candidate.status === "reviewed")
+      .map((publication) => publication.selection.year)
+      .sort(),
+    ["1976", "1980"],
+  );
+  assert.equal(
+    manifest.publications.every(
+      (publication) =>
+        publication.rightsReview.decision === "approve" &&
+        publication.rightsReview.reviewedOriginalUrl ===
+          publication.candidate.originalUrl,
+    ),
+    true,
+  );
 });
 
 test("C1 Corvette tables preserve source qualifications, codes, and counts", async () => {
@@ -579,7 +832,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     models
       .flatMap((model) => model.generations)
       .reduce((total, item) => total + item.listingCount, 0),
-    340,
+    448,
   );
 });
 
@@ -699,11 +952,12 @@ test("each published model year resolves to exactly one generation", async () =>
   }
 });
 
-test("production shell replaces the disposable starter", async () => {
-  const [page, layout, explorer, packageJson] = await Promise.all([
+test("production shell follows the Import Archive research flow", async () => {
+  const [page, layout, explorer, styles, packageJson] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/archive-explorer.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
     readFile(new URL("package.json", root), "utf8"),
   ]);
 
@@ -712,12 +966,18 @@ test("production shell replaces the disposable starter", async () => {
   assert.match(explorer, /Choose a model/);
   assert.match(explorer, /Choose a year/);
   assert.match(explorer, /color timeline/);
-  assert.match(explorer, /Claim-level evidence/);
-  assert.match(explorer, /Stage photograph/);
+  assert.match(explorer, /CLAIM-LEVEL EVIDENCE/);
+  assert.match(explorer, /STAGE PHOTOGRAPH/);
   assert.match(explorer, /model\.generations\.flatMap/);
   assert.match(explorer, /item\.years\.includes\(year\)/);
   assert.match(explorer, /archiveListingCount/);
+  assert.match(styles, /\.ia-topbar[\s\S]*height:\s*50px/);
+  assert.match(styles, /\.ia-sidebar[\s\S]*width:\s*350px/);
+  assert.match(styles, /\.ia-content[\s\S]*max-width:\s*576px/);
+  assert.match(styles, /\.colorchartmain[\s\S]*width:\s*542px/);
+  assert.match(styles, /@media \(max-width:\s*942px\)/);
   assert.doesNotMatch(explorer, /<strong>48<\/strong>/);
+  assert.doesNotMatch(explorer, /The color archive Chevrolet never built/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   await assert.rejects(access(new URL("app/_sites-preview/SkeletonPreview.tsx", root)));
 });

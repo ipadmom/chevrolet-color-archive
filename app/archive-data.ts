@@ -52,6 +52,9 @@ export type PhotoCandidate = {
   alt: string;
   credit: string;
   license: string;
+  sourceUrl?: string;
+  licenseUrl?: string;
+  note?: string;
   status: "candidate" | "reviewed";
 };
 
@@ -73,6 +76,67 @@ export const staticPhotoCandidates: PhotoCandidate[] = [
     alt: "Orange 1969 Chevrolet Camaro SS396 photographed outdoors",
     credit: "Wikimedia Commons contributor",
     license: "CC BY 2.0, attribution verification pending",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:1969_Chevrolet_Camaro_SS396_(21176690299).jpg",
+    note: "External reference; attribution review remains pending.",
+    status: "candidate",
+  },
+  {
+    id: "commons-1976-camaro-silver-f880311b",
+    colorId: "camaro-second-generation-silver-1976",
+    year: "1976",
+    src: "/vehicle-photos/assets/8f5994027985d5acb2433686035c75df44ed9cc05549d4fbaeaea527f3de4e17.jpg",
+    alt: "Silver 1976 Chevrolet Camaro at an outdoor car show",
+    credit: "Bull-Doser",
+    license: "Public domain",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:%2776_Chevrolet_Camaro_(Auto_classique_Laval_%2710).jpg",
+    note:
+      "Exact year and visible silver are verified; original factory paint is not established.",
+    status: "reviewed",
+  },
+  {
+    id: "commons-1979-camaro-blue-09e19346",
+    colorId: "camaro-second-generation-dark-blue-metallic-1973",
+    year: "1979",
+    src: "/vehicle-photos/assets/acd373df72da6ab8fe2f9d82c7e3d39e2ff701328a273ba89c500ddf916f202d.jpg",
+    alt: "Dark blue 1979 Chevrolet Camaro Z-28 at a car show",
+    credit: "Xnatedawgx",
+    license: "CC BY-SA 4.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:1979_Chevrolet_Camaro_Z-28,_blue,_right_side,_Golden_Super_Cruise_2026-07-04.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+    note:
+      "Commons verifies a blue 1979 Z-28; code 29 Dark Blue Metallic remains an unverified visual classification.",
+    status: "candidate",
+  },
+  {
+    id: "commons-1980-camaro-red-69ba1917",
+    colorId: "camaro-second-generation-red-1975",
+    year: "1980",
+    src: "/vehicle-photos/assets/d55deb9cf24093edeaf223948cad54af2ded2365a48e2c58906b098ef0c39ca0.jpg",
+    alt: "Red 1980 Chevrolet Camaro at an outdoor car show",
+    credit: "Firing up the quattro from Manchester, UK",
+    license: "CC BY 2.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:1980_Chevrolet_Camaro.jpg",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0",
+    note:
+      "Exact year and a red body are verified; original factory paint is not established.",
+    status: "reviewed",
+  },
+  {
+    id: "commons-1981-camaro-black-cc3ffcaf",
+    colorId: "camaro-second-generation-black-1976",
+    year: "1981",
+    src: "/vehicle-photos/assets/a29926042dbb57beb8c45e2e4e7073440d6906d58055b3ff9e2f836f418added.jpg",
+    alt: "Black 1981 Chevrolet Camaro Z28 with its hood open at a car show",
+    credit: "Bull-Doser",
+    license: "Public domain",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:%2781_Chevrolet_Camaro_(Orange_Julep).JPG",
+    note:
+      "Exact year and a black body are credible; the modified, backlit, timestamped car remains a fallback candidate.",
     status: "candidate",
   },
 ];
@@ -808,10 +872,21 @@ function interpretiveArchiveSwatch(name: string) {
   const value = name.toLowerCase();
   if (value.includes("black")) return "#1b1e20";
   if (value.includes("white")) return "#eeeae1";
-  if (value.includes("silver") || value.includes("gray") || value.includes("slate")) {
+  if (
+    value.includes("silver") ||
+    value.includes("gray") ||
+    value.includes("slate") ||
+    value.includes("charcoal")
+  ) {
     return "#a8adae";
   }
-  if (value.includes("orchid") || value.includes("plum")) return "#76516d";
+  if (
+    value.includes("orchid") ||
+    value.includes("plum") ||
+    value.includes("purple")
+  ) {
+    return "#76516d";
+  }
   if (
     value.includes("maroon") ||
     value.includes("palomar") ||
@@ -821,7 +896,11 @@ function interpretiveArchiveSwatch(name: string) {
   }
   if (value.includes("red")) return "#a73537";
   if (value.includes("orange")) return "#c5642e";
-  if (value.includes("turquoise") || value.includes("aqua")) {
+  if (
+    value.includes("turquoise") ||
+    value.includes("aqua") ||
+    value.includes("teal")
+  ) {
     return value.includes("dark") || value.includes("dk.")
       ? "#32676b"
       : "#579494";
@@ -833,7 +912,7 @@ function interpretiveArchiveSwatch(name: string) {
     }
     return "#6f91aa";
   }
-  if (value.includes("green")) {
+  if (value.includes("green") || value.includes("jade")) {
     return value.includes("bahama") || value.includes("cypress")
       ? "#3f674c"
       : "#718a6a";
@@ -1456,6 +1535,527 @@ const camaro1976to1981Inventory: AuditedSolidColor[] = [
   },
 ];
 
+const camaro1982to1992Inventory: AuditedSolidColor[] = [
+  { year: "1982", code: "11", name: "White" },
+  {
+    year: "1982",
+    code: "16",
+    name: "Silver Metallic",
+    label: "Silver (Metallic)",
+  },
+  {
+    year: "1982",
+    code: "19",
+    name: "Black",
+    restriction: "Not available on Sport Coupe",
+  },
+  {
+    year: "1982",
+    code: "21",
+    name: "Light Blue Metallic",
+    label: "Light Blue (Metallic)",
+    restriction: "Not available on Z28",
+  },
+  {
+    year: "1982",
+    code: "29",
+    name: "Dark Blue Metallic",
+    label: "Dark Blue (Metallic)",
+  },
+  {
+    year: "1982",
+    code: "45",
+    name: "Light Jade Metallic",
+    label: "Light Jade (Metallic)",
+    restriction: "Not available on Z28",
+  },
+  {
+    year: "1982",
+    code: "49",
+    name: "Dark Jade Metallic",
+    label: "Dark Jade (Metallic)",
+    restriction: "Berlinetta only",
+  },
+  {
+    year: "1982",
+    code: "55",
+    name: "Gold Metallic",
+    label: "Gold (Metallic)",
+  },
+  {
+    year: "1982",
+    code: "67",
+    name: "Dark Gold Metallic",
+    label: "Dark Gold (Metallic)",
+    restriction: "Not available on Berlinetta",
+  },
+  { year: "1982", code: "75", name: "Red" },
+  {
+    year: "1982",
+    code: "78",
+    name: "Maroon Metallic",
+    label: "Maroon (Metallic)",
+    restriction: "Not available on Sport Coupe",
+  },
+  {
+    year: "1982",
+    code: "84",
+    name: "Charcoal Metallic",
+    label: "Charcoal (Metallic)",
+  },
+  { year: "1983", code: "59", name: "Beige" },
+  { year: "1983", code: "19", name: "Black" },
+  {
+    year: "1983",
+    code: "27",
+    name: "Dark Blue Metallic",
+    label: "Blue, Dark (Met)",
+    restriction: "Not available on Berlinetta",
+  },
+  {
+    year: "1983",
+    code: "22",
+    name: "Light Blue Metallic",
+    label: "Blue, Light (Met)",
+    restriction: "Not available on Z28",
+  },
+  {
+    year: "1983",
+    code: "67",
+    name: "Dark Brown Metallic",
+    label: "Brown, Dark (Met)",
+    restriction: "Not available on Berlinetta",
+  },
+  {
+    year: "1983",
+    code: "62",
+    name: "Light Brown Metallic",
+    label: "Brown, Light (Met)",
+    restriction: "Not available on Z28",
+  },
+  {
+    year: "1983",
+    code: "82",
+    name: "Charcoal Metallic",
+    label: "Charcoal (Met)",
+  },
+  {
+    year: "1983",
+    code: "65",
+    name: "Dark Gold Metallic",
+    label: "Gold, Dark (Met)",
+  },
+  { year: "1983", code: "75", name: "Red" },
+  {
+    year: "1983",
+    code: "15",
+    name: "Silver Metallic",
+    label: "Silver (Met)",
+  },
+  { year: "1983", code: "11", name: "White" },
+  { year: "1984", code: "59", name: "Beige" },
+  { year: "1984", code: "19", name: "Black" },
+  {
+    year: "1984",
+    code: "27",
+    name: "Dark Blue Metallic",
+    label: "Blue, Dark (Met)",
+    restriction: "Not available on Berlinetta",
+  },
+  {
+    year: "1984",
+    code: "22",
+    name: "Light Blue Metallic",
+    label: "Blue, Light (Met)",
+    restriction: "Not available on Z28",
+  },
+  {
+    year: "1984",
+    code: "67",
+    name: "Dark Brown Metallic",
+    label: "Brown, Dark (Met)",
+    restriction: "Not available on Berlinetta",
+  },
+  {
+    year: "1984",
+    code: "62",
+    name: "Light Brown Metallic",
+    label: "Brown, Light (Met)",
+    restriction: "Not available on Z28",
+  },
+  {
+    year: "1984",
+    code: "82",
+    name: "Charcoal Metallic",
+    label: "Charcoal (Met)",
+  },
+  {
+    year: "1984",
+    code: "65",
+    name: "Dark Gold Metallic",
+    label: "Gold, Dark (Met)",
+  },
+  { year: "1984", code: "75", name: "Red" },
+  {
+    year: "1984",
+    code: "15",
+    name: "Silver Metallic",
+    label: "Silver (Met)",
+  },
+  { year: "1984", code: "11", name: "White" },
+  { year: "1985", code: "11", name: "White" },
+  { year: "1985", code: "12", name: "Silver Metallic" },
+  {
+    year: "1985",
+    code: "15",
+    name: "Medium Gray Metallic",
+    restriction: "Not available with IROC-Z package",
+  },
+  { year: "1985", code: "19", name: "Black" },
+  {
+    year: "1985",
+    code: "26",
+    name: "Dark Blue",
+    restriction: "Not available with IROC-Z package",
+  },
+  {
+    year: "1985",
+    code: "30",
+    name: "Bright Blue Metallic",
+    restriction: "Not available on Berlinetta",
+  },
+  { year: "1985", code: "50", name: "Yellow" },
+  {
+    year: "1985",
+    code: "54",
+    name: "Light Yellow",
+    restriction: "Not available with IROC-Z package",
+  },
+  {
+    year: "1985",
+    code: "60",
+    name: "Light Brown Metallic",
+    restriction:
+      "Factory specification listing; absent from revised Dealer Order Guide",
+  },
+  {
+    year: "1985",
+    code: "69",
+    name: "Copper Metallic",
+    restriction: "Not available with IROC-Z package",
+  },
+  { year: "1985", code: "75", name: "Red" },
+  {
+    year: "1985",
+    code: "78",
+    name: "Maroon",
+    restriction: "Not available with IROC-Z package",
+  },
+  {
+    year: "1986",
+    code: "13",
+    name: "Silver Metallic",
+    restriction: "Not available with IROC-Z package",
+  },
+  {
+    year: "1986",
+    code: "23",
+    name: "Bright Blue Metallic",
+    restriction: "Not available on Berlinetta",
+  },
+  {
+    year: "1986",
+    code: "28",
+    name: "Dark Blue Metallic",
+    restriction: "Not available with IROC-Z package",
+  },
+  { year: "1986", code: "40", name: "White" },
+  { year: "1986", code: "41", name: "Black" },
+  { year: "1986", code: "51", name: "Yellow" },
+  {
+    year: "1986",
+    code: "60",
+    name: "Light Brown Metallic",
+    restriction: "Initial chart only; absent from revised Dealer Order Guide",
+  },
+  {
+    year: "1986",
+    code: "66",
+    name: "Copper Metallic",
+    restriction: "Initial chart only; absent from revised Dealer Order Guide",
+  },
+  {
+    year: "1986",
+    code: "68",
+    name: "Dark Brown Metallic",
+    restriction: "Not available with IROC-Z package",
+  },
+  { year: "1986", code: "74", name: "Dark Red Metallic" },
+  { year: "1986", code: "81", name: "Bright Red" },
+  {
+    year: "1986",
+    code: "84",
+    name: "Medium Gray Metallic",
+    restriction: "Not available with IROC-Z package",
+  },
+  { year: "1987", code: "41", name: "Black" },
+  {
+    year: "1987",
+    code: "23",
+    name: "Bright Blue Metallic",
+    restriction: "Not available on California RS",
+  },
+  {
+    year: "1987",
+    code: "28",
+    name: "Dark Blue Metallic",
+    restriction: "Not available on California RS",
+  },
+  {
+    year: "1987",
+    code: "68",
+    name: "Dark Brown Metallic",
+    restriction: "Not available on California RS",
+  },
+  {
+    year: "1987",
+    code: "84",
+    name: "Medium Gray Metallic",
+    restriction: "Not available on California RS",
+  },
+  { year: "1987", code: "81", name: "Bright Red" },
+  {
+    year: "1987",
+    code: "74",
+    name: "Dark Red Metallic",
+    restriction: "Not available on California RS",
+  },
+  {
+    year: "1987",
+    code: "13",
+    name: "Silver Metallic",
+    restriction: "Not available on California RS",
+  },
+  { year: "1987", code: "40", name: "White" },
+  {
+    year: "1987",
+    code: "51",
+    name: "Yellow",
+    restriction: "Not available on California RS",
+  },
+  { year: "1988", code: "41", name: "Black" },
+  {
+    year: "1988",
+    code: "23",
+    name: "Bright Blue Metallic",
+    label: "Blue, Bright (Met)",
+    restriction: "Not available on IROC-Z",
+  },
+  {
+    year: "1988",
+    code: "87",
+    name: "Medium Gray Metallic",
+    label: "Gray, Medium (Met)",
+  },
+  {
+    year: "1988",
+    code: "63",
+    name: "Medium Orange Metallic",
+    label: "Orange, Medium (Met)",
+  },
+  {
+    year: "1988",
+    code: "81",
+    name: "Bright Red",
+    label: "Red, Bright",
+  },
+  {
+    year: "1988",
+    code: "74",
+    name: "Dark Red Metallic",
+    label: "Red, Dark (Met)",
+  },
+  {
+    year: "1988",
+    code: "13",
+    name: "Silver Metallic",
+    label: "Silver (Met)",
+    restriction: "Non-IROC-Z only",
+  },
+  { year: "1988", code: "40", name: "White" },
+  {
+    year: "1988",
+    code: "51",
+    name: "Yellow",
+    restriction: "Not available on IROC-Z",
+  },
+  { year: "1989", code: "41", name: "Black" },
+  {
+    year: "1989",
+    code: "98",
+    name: "Bright Blue Metallic",
+    label: "Blue, Bright (Met)",
+  },
+  {
+    year: "1989",
+    code: "23",
+    name: "Light Blue Metallic",
+    label: "Blue, Lt (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1989",
+    code: "87",
+    name: "Medium Gray Metallic",
+    label: "Gray, Med (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1989",
+    code: "81",
+    name: "Bright Red",
+    label: "Red, Bright",
+  },
+  {
+    year: "1989",
+    code: "74",
+    name: "Dark Red Metallic",
+    label: "Red, Dk (Met)",
+  },
+  { year: "1989", code: "40", name: "White" },
+  { year: "1990", code: "41", name: "Black" },
+  {
+    year: "1990",
+    code: "98",
+    name: "Bright Blue Metallic",
+    label: "Blue, Bright (Met)",
+  },
+  {
+    year: "1990",
+    code: "23",
+    name: "Light Blue Metallic",
+    label: "Blue, Lt (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1990",
+    code: "87",
+    name: "Medium Gray Metallic",
+    label: "Gray, Med (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1990",
+    code: "81",
+    name: "Bright Red",
+    label: "Red, Bright",
+  },
+  {
+    year: "1990",
+    code: "75",
+    name: "Dark Red Metallic",
+    label: "Red, Dk (Met)",
+  },
+  { year: "1990", code: "40", name: "White" },
+  { year: "1991", code: "41", name: "Black" },
+  {
+    year: "1991",
+    code: "23",
+    name: "Light Blue Metallic",
+    label: "Blue, Lt (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1991",
+    code: "98",
+    name: "Ultra Blue Metallic",
+    label: "Blue, Ultra (Met)",
+  },
+  {
+    year: "1991",
+    code: "87",
+    name: "Medium Gray Metallic",
+    label: "Gray, Med (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1991",
+    code: "81",
+    name: "Bright Red",
+    label: "Red, Bright",
+  },
+  {
+    year: "1991",
+    code: "75",
+    name: "Dark Red Metallic",
+    label: "Red, Dk (Met)",
+  },
+  {
+    year: "1991",
+    code: "37",
+    name: "Dark Teal Metallic",
+    label: "Teal, Dk (Met)",
+    restriction: "RS only",
+  },
+  {
+    year: "1991",
+    code: "10",
+    name: "Arctic White",
+    label: "White, Arctic",
+  },
+  { year: "1992", code: "41", name: "Black" },
+  {
+    year: "1992",
+    code: "80",
+    name: "Medium Quasar Blue Metallic",
+    label: "Blue, Med Quasar (Met)",
+  },
+  {
+    year: "1992",
+    code: "18",
+    name: "Dark Green-Gray Metallic",
+    label: "Green Dk, Gray (Met)",
+    restriction: "NA on Z28",
+  },
+  {
+    year: "1992",
+    code: "45",
+    name: "Polo Green II Metallic",
+    label: "Green, Polo II (Met)",
+    restriction: "NA on Z28",
+  },
+  {
+    year: "1992",
+    code: "84",
+    name: "Purple Haze Metallic",
+    label: "Purple Haze (Met)",
+  },
+  {
+    year: "1992",
+    code: "81",
+    name: "Bright Red",
+    label: "Red, Bright",
+  },
+  {
+    year: "1992",
+    code: "75",
+    name: "Dark Red Metallic",
+    label: "Red, Dk (Met)",
+  },
+  {
+    year: "1992",
+    code: "37",
+    name: "Dark Teal Metallic",
+    label: "Teal, Dk (Met)",
+  },
+  {
+    year: "1992",
+    code: "10",
+    name: "Arctic White",
+    label: "White, Arctic",
+  },
+];
+
 const secondGenerationCamaro: Generation = {
   id: "second-generation-1970-1981",
   label: "Second generation",
@@ -1570,6 +2170,124 @@ const secondGenerationCamaro: Generation = {
   ]),
 };
 
+const thirdGenerationCamaro: Generation = {
+  id: "third-generation-1982-1992",
+  label: "Third generation",
+  range: "1982–1992",
+  years: [
+    "1982",
+    "1983",
+    "1984",
+    "1985",
+    "1986",
+    "1987",
+    "1988",
+    "1989",
+    "1990",
+    "1991",
+    "1992",
+  ],
+  listingCount: camaro1982to1992Inventory.length,
+  revisionNote:
+    "Every row comes from a complete official GM inventory or the union of exclusive model charts. Restrictions preserve model and package coverage. The 1985 Light Brown and 1986 Light Brown and Copper rows remain flagged because early listings conflict with later revised guides. The 1987 charts confirm Sport Coupe and LT coverage and mark seven paints unavailable on California RS; Z28 and IROC-Z applications remain unresolved. Stripe, decal, accent, wheel, top, and Heritage-package tables do not create additional solid-color rows.",
+  sources: {
+    "1982": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1982 Camaro exterior colors and Dealer Order Guide model grids",
+      locator:
+        "PDF pp. 33, 36, and 38; printed Camaro Dealer Order Guide Pages 2 and 4",
+      revision: "Exterior Colors overview; Dealer Order Guide revised January 11, 1982",
+      url: gmKit("1982"),
+    },
+    "1983": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1983 Camaro Dealer Order Guide exterior-color grids",
+      locator:
+        "PDF pp. 36, 38, and 40, printed Camaro Pages 2, 4, and 6",
+      revision: "Revised February 1, 1983",
+      url: gmKit("1983"),
+    },
+    "1984": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1984 Camaro exterior colors and Dealer Order Guide model grids",
+      locator:
+        "PDF pp. 8, 10, 12, and 15; printed Camaro Pages 2, 4, and 6 plus Exterior Colors overview",
+      revision: "Dealer Order Guide revised March 2, 1984",
+      url: gmKit("1984"),
+    },
+    "1985": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1985 Camaro exterior colors and Dealer Order Guide package grids",
+      locator:
+        "PDF pp. 30, 34, 36, 38, and 40; printed Camaro/26 and Dealer Order Guide Pages 2, 4, 6, and 8",
+      revision:
+        "Exterior Colors specification; Dealer Order Guide revised January 28, 1985",
+      url: gmKit("1985"),
+    },
+    "1986": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1986 Camaro exterior colors and Dealer Order Guide package grids",
+      locator:
+        "PDF pp. 31–34, 40, 42, and 44; printed Camaro/21–22 and Dealer Order Guide Pages 2, 4, and 6",
+      revision:
+        "Exterior Colors publication April 1985; Dealer Order Guide revised December 2, 1985",
+      url: gmKit("1986"),
+    },
+    "1987": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1987 Camaro Color & Trim Selections and California RS chart",
+      locator:
+        "PDF pp. 45 and 17, printed Camaro/23 and unnumbered California RS chart",
+      revision: "No date printed; California RS PUBLISHED field blank",
+      url: gmKit("1987"),
+    },
+    "1988": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1988 Camaro IROC-Z and base-model color-and-trim grids",
+      locator:
+        "PDF pp. 34, 36, 38, and 40, printed Camaro Pages 2, 4, 6, and 8",
+      revision: "Revised December 4, 1987",
+      url: gmKit("1988"),
+    },
+    "1989": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1989 Camaro IROC-Z and RS color-and-trim grids",
+      locator:
+        "PDF pp. 34, 38, 40, and 42, printed Camaro Pages 2, 6, 8, and 10",
+      revision: "Revised January 30, 1989",
+      url: gmKit("1989"),
+    },
+    "1990": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1990 Camaro IROC-Z and RS color-and-trim grids",
+      locator:
+        "PDF pp. 36, 38, 40, and 42, printed Camaro Pages 2, 4, 6, and 8",
+      revision: "Revised September 15, 1989",
+      url: gmKit("1990"),
+    },
+    "1991": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1991 Camaro Z28 and RS color-and-trim grids",
+      locator:
+        "PDF pp. 26, 28, 30, and 32, printed Camaro Pages 2, 4, 6, and 8",
+      revision: "Revised February 25, 1991",
+      url: gmKit("1991"),
+    },
+    "1992": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "1992 Camaro Z28 and RS color-and-trim grids",
+      locator:
+        "PDF pp. 84, 86, 88, and 90, printed Camaro Pages 2, 4, 6, and 8",
+      revision: "Revised September 13, 1991",
+      url: gmKit("1992"),
+    },
+  },
+  colors: buildExactNameTimeline(
+    "camaro-third-generation",
+    camaro1982to1992Inventory,
+  ),
+};
+
 const firstChevelleGeneration: Generation = {
   id: "first-generation-chevelle-audited-solids",
   label: "First-generation Chevelle audited solids",
@@ -1613,8 +2331,8 @@ const firstChevelleGeneration: Generation = {
 
 export const models: ArchiveModel[] = [
   {
-    id: "camaro", name: "Camaro", era: "1967–1981 audited", status: "15 official charts verified",
-    generations: [firstGeneration, secondGenerationCamaro],
+    id: "camaro", name: "Camaro", era: "1967–1992 audited", status: "26 official charts verified",
+    generations: [firstGeneration, secondGenerationCamaro, thirdGenerationCamaro],
   },
   {
     id: "chevelle", name: "Chevelle", era: "1964–1967 audited", status: "4 official charts verified",

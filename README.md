@@ -13,6 +13,13 @@ A source-linked research archive for Chevrolet factory paint colors. The
 interface follows a model → year → timeline workflow and keeps documentary
 evidence separate from interpretive swatches and photographs.
 
+The public interface deliberately follows
+[Import Archive’s](https://importarchive.com/) compact research pattern: a
+50-pixel black masthead, fixed 350-pixel archive menu, 140 × 64 model and year
+tiles, a narrow 576-pixel reading column, and a 542-pixel generation timeline.
+On small screens the menu becomes an overlay and the unchanged timeline scrolls
+horizontally.
+
 ## Live archive
 
 - Primary application:
@@ -24,8 +31,8 @@ evidence separate from interpretive swatches and photographs.
 
 ## Published coverage
 
-The public matrices currently contain 340 source-linked chart listings,
-normalized into 231 timeline rows.
+The public matrices currently contain 448 source-linked chart listings,
+normalized into 263 timeline rows.
 
 First-generation Camaro:
 
@@ -61,6 +68,31 @@ charts omit black, so the archive does not infer it. The only restriction in
 the later block is 1978 `Yellow, Orange`, code 34, which is Z28-only. Carryover,
 ZP2, Rally Sport, stripe, and paint-scheme annotations remain source
 qualifications rather than extra solid-color rows.
+
+Third-generation Camaro:
+
+| Year | Official chart listings | Source |
+|---|---:|---|
+| 1982 | 12 | Exterior-color overview and Dealer Order Guide, PDF pp. 33, 36, 38 |
+| 1983 | 11 | Dealer Order Guide, PDF pp. 36, 38, 40 |
+| 1984 | 11 | Exterior-color overview and Dealer Order Guide, PDF pp. 8, 10, 12, 15 |
+| 1985 | 12 | Factory specification and revised Dealer Order Guide, PDF pp. 30, 34, 36, 38, 40 |
+| 1986 | 12 | Initial chart and revised Dealer Order Guide, PDF pp. 31–34, 40, 42, 44 |
+| 1987 | 10 | Color & Trim Selections and California RS chart, PDF pp. 45, 17 |
+| 1988 | 9 | IROC-Z and base-model grids, PDF pp. 34, 36, 38, 40 |
+| 1989 | 7 | IROC-Z and RS grids, PDF pp. 34, 38, 40, 42 |
+| 1990 | 7 | IROC-Z and RS grids, PDF pp. 36, 38, 40, 42 |
+| 1991 | 8 | Z28 and RS grids, PDF pp. 26, 28, 30, 32 |
+| 1992 | 9 | Z28 and RS grids, PDF pp. 84, 86, 88, 90 |
+
+These 108 chart listings normalize into 32 timeline rows. Forty-seven year cells
+preserve a model or package qualification or an official-source conflict. The
+1985 code 60 and 1986 codes 60 and 66 remain visible but flagged because initial
+factory listings conflict with later revised guides. The 1987 sources confirm
+the complete Sport Coupe and LT color set and mark seven paints unavailable on
+California RS; Z28 and IROC-Z applications remain unresolved. Camaro now covers
+1967–1992 with 331 listings and 180
+timeline rows.
 
 First-generation Chevelle:
 
@@ -162,9 +194,10 @@ credential never reaches the browser or a Git child-process environment.
 
 Published-photo checkboxes are local comparison choices, not new publication
 requests. The anonymous review endpoint accepts staged one-use receipts only.
-The infrastructure is live, but photo population is still incomplete: the
-repository currently has one reference-only candidate and no reviewed static
-gallery photos.
+The static gallery now contains two reviewed Camaro illustrations and two
+clearly marked candidates. Each includes its source, license, and caveat.
+Photo population remains incomplete, including the unresolved 1978 code 34
+`Yellow, Orange` search.
 
 ## Development
 
@@ -202,6 +235,10 @@ The 1970–1975 Camaro evidence review is in
 [docs/source-audit-camaro-1970-1975.md](docs/source-audit-camaro-1970-1975.md).
 The 1976–1981 Camaro evidence review is in
 [docs/source-audit-camaro-1976-1981.md](docs/source-audit-camaro-1976-1981.md).
+The 1982–1992 Camaro evidence review is in
+[docs/source-audit-camaro-1982-1992.md](docs/source-audit-camaro-1982-1992.md).
+The 1976–1981 Camaro photograph review is in
+[docs/photo-audit-camaro-1976-1981.md](docs/photo-audit-camaro-1976-1981.md).
 The 1964–1967 Chevelle evidence review is in
 [docs/source-audit-chevelle-1964-1967.md](docs/source-audit-chevelle-1964-1967.md).
 

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "archive": "Chevrolet Color Archive",
+  "assets": [
+    {
+      "sha256": "8f5994027985d5acb2433686035c75df44ed9cc05549d4fbaeaea527f3de4e17",
+      "path": "public/vehicle-photos/assets/8f5994027985d5acb2433686035c75df44ed9cc05549d4fbaeaea527f3de4e17.jpg",
+      "mediaType": "image/jpeg",
+      "bytes": 435210,
+      "width": 2283,
+      "height": 1130,
+      "sanitizer": {
+        "name": "privacy-metadata-strip",
+        "version": 2
+      }
+    },
+    {
+      "sha256": "a29926042dbb57beb8c45e2e4e7073440d6906d58055b3ff9e2f836f418added",
+      "path": "public/vehicle-photos/assets/a29926042dbb57beb8c45e2e4e7073440d6906d58055b3ff9e2f836f418added.jpg",
+      "mediaType": "image/jpeg",
+      "bytes": 483055,
+      "width": 2129,
+      "height": 1705,
+      "sanitizer": {
+        "name": "privacy-metadata-strip",
+        "version": 2
+      }
+    },
+    {
+      "sha256": "acd373df72da6ab8fe2f9d82c7e3d39e2ff701328a273ba89c500ddf916f202d",
+      "path": "public/vehicle-photos/assets/acd373df72da6ab8fe2f9d82c7e3d39e2ff701328a273ba89c500ddf916f202d.jpg",
+      "mediaType": "image/jpeg",
+      "bytes": 1512700,
+      "width": 3906,
+      "height": 1695,
+      "sanitizer": {
+        "name": "privacy-metadata-strip",
+        "version": 2
+      }
+    },
+    {
+      "sha256": "d55deb9cf24093edeaf223948cad54af2ded2365a48e2c58906b098ef0c39ca0",
+      "path": "public/vehicle-photos/assets/d55deb9cf24093edeaf223948cad54af2ded2365a48e2c58906b098ef0c39ca0.jpg",
+      "mediaType": "image/jpeg",
+      "bytes": 3218215,
+      "width": 4000,
+      "height": 3000,
+      "sanitizer": {
+        "name": "privacy-metadata-strip",
+        "version": 2
+      }
+    }
+  ],
+  "publications": [
+    {
+      "publicationKey": "commons:commons-sha1-09e19346c974c4d4d3ed",
+      "assetSha256": "acd373df72da6ab8fe2f9d82c7e3d39e2ff701328a273ba89c500ddf916f202d",
+      "sourceBaseUrl": "https://commons.wikimedia.org",
+      "sourceDownloadPath": "/wiki/File:1979_Chevrolet_Camaro_Z-28,_blue,_right_side,_Golden_Super_Cruise_2026-07-04.jpg",
+      "selection": {
+        "model": "camaro",
+        "year": "1979",
+        "colorId": "camaro-second-generation-dark-blue-metallic-1973",
+        "source": "Wikimedia Commons crawl"
+      },
+      "candidate": {
+        "id": "commons-sha1-09e19346c974c4d4d3ed",
+        "title": "1979 Chevrolet Camaro Z-28, blue, right side, Golden Super Cruise 2026-07-04",
+        "fileName": "commons-sha1-09e19346c974c4d4d3ed-1979-Chevrolet-Camaro-Z-28-blue-right-side-Golden-Super-Cruise-2026-07-04.jpg",
+        "originalUrl": "https://commons.wikimedia.org/wiki/File:1979_Chevrolet_Camaro_Z-28,_blue,_right_side,_Golden_Super_Cruise_2026-07-04.jpg",
+        "sourceFileUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/1979_Chevrolet_Camaro_Z-28%2C_blue%2C_right_side%2C_Golden_Super_Cruise_2026-07-04.jpg",
+        "creator": "Xnatedawgx",
+        "credit": "Xnatedawgx - 1979 Chevrolet Camaro Z-28, blue, right side, Golden Super Cruise 2026-07-04 - CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceSha1": "09e19346c974c4d4d3edebc14f8a83983dfaf92d",
+        "sourceSha256": "84decb0dc4a26d3f2eed3b42d52138db66c046d0d2f9eb6592c333a7a729cb43",
+        "sourceBytes": 1207929,
+        "status": "candidate",
+        "caveat": "Commons verifies a blue 1979 Z-28; code 29 Dark Blue Metallic remains an unverified visual classification."
+      },
+      "rightsReview": {
+        "decision": "approve",
+        "reviewedBy": "Chevrolet Color Archive source review",
+        "reviewedAt": "2026-07-20T23:00:17.169Z",
+        "approvedCredit": "Xnatedawgx - 1979 Chevrolet Camaro Z-28, blue, right side, Golden Super Cruise 2026-07-04 - CC BY-SA 4.0",
+        "approvedLicense": "CC BY-SA 4.0",
+        "approvedSha256": "84decb0dc4a26d3f2eed3b42d52138db66c046d0d2f9eb6592c333a7a729cb43",
+        "reviewedOriginalUrl": "https://commons.wikimedia.org/wiki/File:1979_Chevrolet_Camaro_Z-28,_blue,_right_side,_Golden_Super_Cruise_2026-07-04.jpg",
+        "rightsBasis": "Live Wikimedia Commons metadata declares CC BY-SA 4.0; the source digest and downloaded bytes were independently verified."
+      },
+      "transform": {
+        "name": "privacy-metadata-strip",
+        "version": 2,
+        "sourceBytes": 1207929,
+        "publishedBytes": 1512700,
+        "width": 3906,
+        "height": 1695,
+        "removedMetadata": [
+          "reencode:all-container-metadata",
+          "jpeg:0xe1",
+          "jpeg:0xe2"
+        ]
+      }
+    },
+    {
+      "publicationKey": "commons:commons-sha1-69ba19178a8c867d739b",
+      "assetSha256": "d55deb9cf24093edeaf223948cad54af2ded2365a48e2c58906b098ef0c39ca0",
+      "sourceBaseUrl": "https://commons.wikimedia.org",
+      "sourceDownloadPath": "/wiki/File:1980_Chevrolet_Camaro.jpg",
+      "selection": {
+        "model": "camaro",
+        "year": "1980",
+        "colorId": "camaro-second-generation-red-1975",
+        "source": "Wikimedia Commons crawl"
+      },
+      "candidate": {
+        "id": "commons-sha1-69ba19178a8c867d739b",
+        "title": "1980 Chevrolet Camaro",
+        "fileName": "commons-sha1-69ba19178a8c867d739b-1980-Chevrolet-Camaro.jpg",
+        "originalUrl": "https://commons.wikimedia.org/wiki/File:1980_Chevrolet_Camaro.jpg",
+        "sourceFileUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/1980_Chevrolet_Camaro.jpg",
+        "creator": "Firing up the quattro from Manchester, UK",
+        "credit": "Firing up the quattro from Manchester, UK - 1980 Chevrolet Camaro - CC BY 2.0",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "sourceSha1": "69ba19178a8c867d739bfe36f745ccbd7a88e875",
+        "sourceSha256": "6c3e6617f3e43eeb083e2eb841537254776a9d9227cabe1a130f16109ffe58f6",
+        "sourceBytes": 5480538,
+        "status": "reviewed",
+        "caveat": "Exact year and a red body are verified; original factory paint is not established."
+      },
+      "rightsReview": {
+        "decision": "approve",
+        "reviewedBy": "Chevrolet Color Archive source review",
+        "reviewedAt": "2026-07-20T23:00:17.169Z",
+        "approvedCredit": "Firing up the quattro from Manchester, UK - 1980 Chevrolet Camaro - CC BY 2.0",
+        "approvedLicense": "CC BY 2.0",
+        "approvedSha256": "6c3e6617f3e43eeb083e2eb841537254776a9d9227cabe1a130f16109ffe58f6",
+        "reviewedOriginalUrl": "https://commons.wikimedia.org/wiki/File:1980_Chevrolet_Camaro.jpg",
+        "rightsBasis": "Live Wikimedia Commons metadata declares CC BY 2.0; the source digest and downloaded bytes were independently verified."
+      },
+      "transform": {
+        "name": "privacy-metadata-strip",
+        "version": 2,
+        "sourceBytes": 5480538,
+        "publishedBytes": 3218215,
+        "width": 4000,
+        "height": 3000,
+        "removedMetadata": [
+          "reencode:all-container-metadata",
+          "jpeg:0xe1"
+        ]
+      }
+    },
+    {
+      "publicationKey": "commons:commons-sha1-cc3ffcaf1f88b227692b",
+      "assetSha256": "a29926042dbb57beb8c45e2e4e7073440d6906d58055b3ff9e2f836f418added",
+      "sourceBaseUrl": "https://commons.wikimedia.org",
+      "sourceDownloadPath": "/wiki/File:%2781_Chevrolet_Camaro_(Orange_Julep).JPG",
+      "selection": {
+        "model": "camaro",
+        "year": "1981",
+        "colorId": "camaro-second-generation-black-1976",
+        "source": "Wikimedia Commons crawl"
+      },
+      "candidate": {
+        "id": "commons-sha1-cc3ffcaf1f88b227692b",
+        "title": "'81 Chevrolet Camaro (Orange Julep)",
+        "fileName": "commons-sha1-cc3ffcaf1f88b227692b-81-Chevrolet-Camaro-Orange-Julep.jpg",
+        "originalUrl": "https://commons.wikimedia.org/wiki/File:%2781_Chevrolet_Camaro_(Orange_Julep).JPG",
+        "sourceFileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/%2781_Chevrolet_Camaro_%28Orange_Julep%29.JPG",
+        "creator": "Bull-Doser",
+        "credit": "Bull-Doser - '81 Chevrolet Camaro (Orange Julep) - Public domain",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "sourceSha1": "cc3ffcaf1f88b227692b656a667e5ae97deb2542",
+        "sourceSha256": "c5ac10d86a773a47339d23f3e4a8ed2bd2606fb44ec61aca8ccd555d5e64efd2",
+        "sourceBytes": 393027,
+        "status": "candidate",
+        "caveat": "Exact year and a black body are credible; the modified, backlit, timestamped car remains a fallback candidate."
+      },
+      "rightsReview": {
+        "decision": "approve",
+        "reviewedBy": "Chevrolet Color Archive source review",
+        "reviewedAt": "2026-07-20T23:00:17.169Z",
+        "approvedCredit": "Bull-Doser - '81 Chevrolet Camaro (Orange Julep) - Public domain",
+        "approvedLicense": "Public domain",
+        "approvedSha256": "c5ac10d86a773a47339d23f3e4a8ed2bd2606fb44ec61aca8ccd555d5e64efd2",
+        "reviewedOriginalUrl": "https://commons.wikimedia.org/wiki/File:%2781_Chevrolet_Camaro_(Orange_Julep).JPG",
+        "rightsBasis": "Live Wikimedia Commons metadata declares Public domain; the source digest and downloaded bytes were independently verified."
+      },
+      "transform": {
+        "name": "privacy-metadata-strip",
+        "version": 2,
+        "sourceBytes": 393027,
+        "publishedBytes": 483055,
+        "width": 2129,
+        "height": 1705,
+        "removedMetadata": [
+          "reencode:all-container-metadata",
+          "jpeg:0xe1",
+          "jpeg:0xe2"
+        ]
+      }
+    },
+    {
+      "publicationKey": "commons:commons-sha1-f880311b0a61ac02ba3c",
+      "assetSha256": "8f5994027985d5acb2433686035c75df44ed9cc05549d4fbaeaea527f3de4e17",
+      "sourceBaseUrl": "https://commons.wikimedia.org",
+      "sourceDownloadPath": "/wiki/File:%2776_Chevrolet_Camaro_(Auto_classique_Laval_%2710).jpg",
+      "selection": {
+        "model": "camaro",
+        "year": "1976",
+        "colorId": "camaro-second-generation-silver-1976",
+        "source": "Wikimedia Commons crawl"
+      },
+      "candidate": {
+        "id": "commons-sha1-f880311b0a61ac02ba3c",
+        "title": "'76 Chevrolet Camaro (Auto classique Laval '10)",
+        "fileName": "commons-sha1-f880311b0a61ac02ba3c-76-Chevrolet-Camaro-Auto-classique-Laval-10.jpg",
+        "originalUrl": "https://commons.wikimedia.org/wiki/File:%2776_Chevrolet_Camaro_(Auto_classique_Laval_%2710).jpg",
+        "sourceFileUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/%2776_Chevrolet_Camaro_%28Auto_classique_Laval_%2710%29.jpg",
+        "creator": "Bull-Doser",
+        "credit": "Bull-Doser - '76 Chevrolet Camaro (Auto classique Laval '10) - Public domain",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "sourceSha1": "f880311b0a61ac02ba3cde7f909938d3958b25bb",
+        "sourceSha256": "0871ddcf48012fe104d6b82aacdc2ef23cd33177b6dcc49f8366ec59c0b2c4a2",
+        "sourceBytes": 314318,
+        "status": "reviewed",
+        "caveat": "Exact year and visible silver are verified; original factory paint is not established."
+      },
+      "rightsReview": {
+        "decision": "approve",
+        "reviewedBy": "Chevrolet Color Archive source review",
+        "reviewedAt": "2026-07-20T23:00:17.169Z",
+        "approvedCredit": "Bull-Doser - '76 Chevrolet Camaro (Auto classique Laval '10) - Public domain",
+        "approvedLicense": "Public domain",
+        "approvedSha256": "0871ddcf48012fe104d6b82aacdc2ef23cd33177b6dcc49f8366ec59c0b2c4a2",
+        "reviewedOriginalUrl": "https://commons.wikimedia.org/wiki/File:%2776_Chevrolet_Camaro_(Auto_classique_Laval_%2710).jpg",
+        "rightsBasis": "Live Wikimedia Commons metadata declares Public domain; the source digest and downloaded bytes were independently verified."
+      },
+      "transform": {
+        "name": "privacy-metadata-strip",
+        "version": 2,
+        "sourceBytes": 314318,
+        "publishedBytes": 435210,
+        "width": 2283,
+        "height": 1130,
+        "removedMetadata": [
+          "reencode:all-container-metadata",
+          "jpeg:0xe1"
+        ]
+      }
+    }
+  ]
+}
