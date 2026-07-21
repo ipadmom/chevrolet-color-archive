@@ -2,7 +2,7 @@
 title: Chevrolet Color Archive
 visibility: public
 classification: archive-internal
-period: 1913-2007 source inventory
+period: 1913-2026 model-year catalog
 sources:
   - https://www.gm.com/heritage/archive/vehicle-information-kits
 ---
@@ -31,8 +31,15 @@ horizontally.
 
 ## Published coverage
 
-The public matrices currently contain 448 source-linked chart listings,
-normalized into 263 timeline rows.
+The public index contains 149 Chevrolet U.S. nameplates and every catalogued
+model year from 1913 through 2026. The civilian-production gap for 1943–1945 is
+preserved rather than filled. Every recorded model year opens in the interface;
+an unreviewed year shows an explicit `UNVERIFIED` matrix instead of borrowing
+colors from an adjacent year.
+
+The reviewed public matrices currently contain 492 source-linked chart
+listings, normalized into 299 timeline rows. Model-year presence and exterior
+paint availability are separate claims with separate evidence.
 
 First-generation Camaro:
 
@@ -109,8 +116,9 @@ require upper/lower order and body-series restrictions. The 1964 Goldwood
 Yellow row has no compatible interior mark and remains unverified rather than
 being published as available.
 
-Bel Air and Colorado remain research queues. They do not publish availability
-rows until the cited chart for a year has been completely reviewed.
+Every nameplate outside the reviewed matrices remains in the color-research
+queue. It does not publish availability rows until the cited chart for that
+year has been completely reviewed.
 
 C1 Corvette:
 
@@ -131,6 +139,21 @@ listings are listed because direct Chevrolet charts or reconciled Chevrolet
 production records support them. The dedicated 1953 kit was reviewed page by
 page but contains no exterior-color table, so that year remains unverified
 rather than unavailable.
+
+Suburban:
+
+| Year | Solid-color listings | Source status |
+|---|---:|---|
+| 1977 | 15 | GM Heritage Suburban Interior and Exterior Color Availability Chart, PDF p. 6 |
+
+The six two-tone combinations on PDF p. 7 remain a separate evidence class.
+Suburban model years 1935–1942 and 1946–2026 are all navigable. The explicit
+1943–1945 civilian-production gap is not represented as a model year.
+
+Tahoe model years 1995–2026 are all navigable. The 1995 and 1996 official color
+charts contribute 20 solid-color listings, and the official 2001 color page
+contributes nine more. The 52 two-tone rows for 1995–1996 remain a separate
+evidence class. Incomplete years remain visibly unverified.
 
 ## Evidence rules
 
@@ -153,7 +176,9 @@ rather than unavailable.
 app/                    Public archive UI and upload/review API
 db/                     D1 schema for staged photos and review selections
 drizzle/                Generated database migrations
-data/sources/            Official GM source-discovery manifest
+data/catalog/            U.S. Chevrolet nameplate and model-year catalog
+data/audits/             Machine-readable direct-source color audits
+data/sources/            Official GM source-discovery inventory
 crawler/                 Resumable PDF/OCR evidence pipeline
 crawler/photos/          Rights-aware Wikimedia candidate pipeline
 crawler/publish/         Authenticated reviewed-photo publisher
@@ -210,6 +235,7 @@ npm run lint
 npm run typecheck
 npm test
 npm run sources:validate
+npm run crawler:manifest
 ```
 
 After editing `db/schema.ts`:
@@ -241,6 +267,16 @@ The 1976–1981 Camaro photograph review is in
 [docs/photo-audit-camaro-1976-1981.md](docs/photo-audit-camaro-1976-1981.md).
 The 1964–1967 Chevelle evidence review is in
 [docs/source-audit-chevelle-1964-1967.md](docs/source-audit-chevelle-1964-1967.md).
+The complete model-year catalog audit is in
+[docs/model-catalog-audit.md](docs/model-catalog-audit.md).
+The 1977 Suburban evidence review is in
+[docs/source-audit-suburban-1977.md](docs/source-audit-suburban-1977.md).
+The Tahoe evidence reviews are in
+[docs/source-audit-tahoe-1995-2000.md](docs/source-audit-tahoe-1995-2000.md)
+and
+[docs/source-audit-tahoe-2001-2007.md](docs/source-audit-tahoe-2001-2007.md).
+The rolling all-year status is in
+[docs/source-audit-tahoe-all-years.md](docs/source-audit-tahoe-all-years.md).
 
 The VPS crawler runbook refuses large runs below 40 GB free or 20 percent free
 disk. Do not start this archive crawler on a host carrying an active court-data
@@ -248,7 +284,9 @@ capture workload.
 
 ## Known source boundaries
 
-The GM Heritage index snapshot has no Chevrolet-directory entry for 1917 or
-1943–1945 and stops at 2007. These are index gaps, not claims about production,
-colors, brochures, or surviving documentation. Modern years require additional
-official order-guide sources.
+The complete Chevrolet model-year catalog and the GM Heritage PDF inventory are
+different datasets. The model-year catalog spans 1913–2026. The Heritage index
+snapshot contains 691 official Chevrolet-directory PDFs through 2007 and has
+no entry for 1917 or 1943–1945. Heritage index gaps are not claims about
+production, colors, brochures, or surviving documentation. Modern years
+require additional official order-guide sources.

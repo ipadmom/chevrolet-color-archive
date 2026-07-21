@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "model": "Tahoe",
+  "market": "United States",
+  "visibility": "public",
+  "audit_scope": {
+    "year_start": 2001,
+    "year_end": 2007,
+    "method": "Direct visual transcription from official General Motors vehicle information kits. Empty arrays are not claims that no colors existed; they mark years not yet transcribed."
+  },
+  "years": [
+    {
+      "year": 2001,
+      "status": "verified",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Tahoe.pdf",
+        "title": "2001 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit",
+        "pdf_page": 12,
+        "printed_page": 10,
+        "section": "Vehicle Overview - Color and Trim - Exterior Colors",
+        "publication_date": null,
+        "publication_note": "The kit identifies the 2001 model year on its cover. No separate publication date was found on the verified page."
+      },
+      "exterior_colors": [
+        { "name": "Onyx Black", "code": null, "finish": null },
+        { "name": "Indigo Blue Metallic", "code": null, "finish": "metallic" },
+        { "name": "Victory Red", "code": null, "finish": null },
+        { "name": "Sunset Gold Metallic", "code": null, "finish": "metallic" },
+        { "name": "Summit White", "code": null, "finish": null },
+        { "name": "Medium Charcoal Gray Metallic", "code": null, "finish": "metallic" },
+        { "name": "Forest Green Metallic", "code": null, "finish": "metallic" },
+        { "name": "Light Pewter Metallic", "code": null, "finish": "metallic" },
+        { "name": "Redfire Metallic", "code": null, "finish": "metallic" }
+      ],
+      "color_code_note": "The verified color list prints names but no paint or RPO codes. Codes remain null rather than being inferred from secondary sources.",
+      "availability_notes": [
+        "The kit states that Z71 colors were limited to Onyx Black, Summit White, Forest Green Metallic, and Light Pewter Metallic."
+      ],
+      "two_tone_combinations": [],
+      "two_tone_status": "No two-tone combination list appears on the verified Color and Trim page. This is not a claim that no two-tone treatments were offered elsewhere."
+    },
+    {
+      "year": 2002,
+      "status": "incomplete",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Tahoe.pdf",
+        "title": "2002 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit"
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+    },
+    {
+      "year": 2003,
+      "status": "incomplete",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
+        "title": "2003 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit"
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+    },
+    {
+      "year": 2004,
+      "status": "incomplete",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Tahoe.pdf",
+        "title": "2004 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit"
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+    },
+    {
+      "year": 2005,
+      "status": "incomplete",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Tahoe.pdf",
+        "title": "2005 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit"
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+    },
+    {
+      "year": 2006,
+      "status": "incomplete",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Tahoe.pdf",
+        "title": "2006 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit"
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+    },
+    {
+      "year": 2007,
+      "status": "incomplete",
+      "source": {
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Tahoe.pdf",
+        "title": "2007 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit"
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+    }
+  ]
+}

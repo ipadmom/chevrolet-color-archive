@@ -14,7 +14,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "sources:refresh": "node scripts/update-gm-heritage-manifest.mjs",
-    "sources:validate": "node scripts/validate-gm-heritage-manifest.mjs"
+    "sources:validate": "node scripts/validate-gm-heritage-manifest.mjs",
+    "crawler:manifest": "node scripts/build-gm-heritage-crawler-manifest.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

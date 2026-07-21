@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "model": "Tahoe",
+  "market": "United States",
+  "audit_as_of": "2026-07-20",
+  "scope": "Model years 1995-2000. Only colors read directly from official GM Heritage vehicle-information-kit charts are included.",
+  "years": [
+    {
+      "year": 1995,
+      "coverage_status": "verified_complete",
+      "publication": {
+        "title": "1995 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "Chevrolet / General Motors",
+        "source_type": "official_vehicle_information_kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Tahoe.pdf",
+        "pages": [
+          "PDF p. 18: 2-door solid and conventional two-tone availability chart",
+          "PDF p. 19: 4-door gray-gunmetal two-tone availability chart"
+        ],
+        "publication_date": null
+      },
+      "exterior_colors": [
+        {"name": "Autumnwood, Light", "code": "55U", "finish": "metallic"},
+        {"name": "Black, Onyx", "code": "41U", "finish": "solid"},
+        {"name": "Blue, Atlantic", "code": "30U", "finish": "metallic"},
+        {"name": "Blue, Indigo", "code": "39U", "finish": "metallic"},
+        {"name": "Blue, Teal", "code": "36U", "finish": "metallic"},
+        {"name": "Green, Emerald", "code": "43U", "finish": "metallic"},
+        {"name": "Quicksilver", "code": "96U", "finish": "metallic"},
+        {"name": "Red, Burnt", "code": "76U", "finish": "metallic"},
+        {"name": "Red, Victory", "code": "74U", "finish": "solid"},
+        {"name": "White, Summit", "code": "50U", "finish": "solid"}
+      ],
+      "two_tone_combinations": [
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Blue, Indigo", "code_2": "39L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Teal", "code_1": "36U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Teal", "code_1": "36U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Blue, Atlantic", "code_2": "30L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Black, Onyx", "code_2": "41L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Atlantic", "code_2": "30L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Indigo", "code_2": "39L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Red, Burnt", "code_2": "76L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Burnt", "code_1": "76U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Burnt", "code_1": "76U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Black, Onyx", "code_2": "41L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Blue, Indigo", "code_2": "39L"},
+        {"body_style": "2-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Red, Burnt", "code_2": "76L"},
+        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
+        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
+        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
+        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Red, Burnt", "code_1": "76U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
+        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
+        {"body_style": "4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Gray, Gunmetal", "code_2": "91L"}
+      ],
+      "notes": "The chart uses U and L suffixes for Color Code 1 and Color Code 2. Gray, Gunmetal (91L) is listed only as the 4-door secondary color, not as a standalone ZY1 paint."
+    },
+    {
+      "year": 1996,
+      "coverage_status": "verified_complete",
+      "publication": {
+        "title": "1996 Chevrolet Tahoe Vehicle Information Kit / 1996 Order Guide",
+        "publisher": "Chevrolet / General Motors",
+        "source_type": "official_vehicle_information_kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Tahoe.pdf",
+        "pages": [
+          "PDF p. 29 / order-guide p. 8: 2-door chart",
+          "PDF p. 38 / order-guide p. 17: 4-door chart"
+        ],
+        "publication_date": "1996-01-29",
+        "publication_date_note": "Both chart pages are marked REVISED: 1-29-96."
+      },
+      "exterior_colors": [
+        {"name": "Autumnwood, Light", "code": "55U", "finish": "metallic"},
+        {"name": "Black, Onyx", "code": "41U", "finish": "solid"},
+        {"name": "Blue, Atlantic", "code": "30U", "finish": "metallic"},
+        {"name": "Blue, Indigo", "code": "39U", "finish": "metallic"},
+        {"name": "Green, Emerald", "code": "43U", "finish": "metallic"},
+        {"name": "Quicksilver", "code": "96U", "finish": "metallic"},
+        {"name": "Red, Cherry", "code": "77U", "finish": "metallic"},
+        {"name": "Cherry Ice", "code": "59U", "finish": "metallic"},
+        {"name": "Red, Victory", "code": "74U", "finish": "solid"},
+        {"name": "White, Summit", "code": "50U", "finish": "solid"}
+      ],
+      "two_tone_combinations": [
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Blue, Indigo", "code_2": "39L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Blue, Atlantic", "code_2": "30L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Black, Onyx", "code_2": "41L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Atlantic", "code_2": "30L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Indigo", "code_2": "39L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Red, Cherry", "code_2": "77L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Cherry", "code_1": "77U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Cherry", "code_1": "77U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Cherry", "code_1": "77U", "color_2": "Cherry Ice", "code_2": "59L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Cherry Ice", "code_1": "59U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Cherry Ice", "code_1": "59U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Cherry Ice", "code_1": "59U", "color_2": "Red, Cherry", "code_2": "77L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Black, Onyx", "code_2": "41L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Quicksilver", "code_2": "96L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Autumnwood, Light", "code_2": "55L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Blue, Indigo", "code_2": "39L"},
+        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Red, Cherry", "code_2": "77L"}
+      ],
+      "notes": "The 2-door and 4-door charts print the same ten ZY1 colors and the same 24 ZY2 pairings. Wheel-flare molding restrictions are outside this color-inventory scope."
+    },
+    {
+      "year": 1997,
+      "coverage_status": "incomplete",
+      "publication": {
+        "title": "1997 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "Chevrolet / General Motors",
+        "source_type": "official_vehicle_information_kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Tahoe.pdf",
+        "pages": [],
+        "publication_date": null
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "incomplete_reason": "Official kit located and preserved, but its complete color chart was not page-verified in this bounded audit."
+    },
+    {
+      "year": 1998,
+      "coverage_status": "incomplete",
+      "publication": {
+        "title": "1998 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "Chevrolet / General Motors",
+        "source_type": "official_vehicle_information_kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Tahoe.pdf",
+        "pages": [],
+        "publication_date": null
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "incomplete_reason": "Official kit located and preserved, but its complete color chart was not page-verified in this bounded audit."
+    },
+    {
+      "year": 1999,
+      "coverage_status": "incomplete",
+      "publication": {
+        "title": "1999 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "Chevrolet / General Motors",
+        "source_type": "official_vehicle_information_kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Tahoe.pdf",
+        "pages": [],
+        "publication_date": null
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "incomplete_reason": "Official kit located and preserved, but its complete color chart was not page-verified in this bounded audit."
+    },
+    {
+      "year": 2000,
+      "coverage_status": "incomplete",
+      "publication": {
+        "title": "2000 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "Chevrolet / General Motors",
+        "source_type": "official_vehicle_information_kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Tahoe.pdf",
+        "pages": [],
+        "publication_date": null
+      },
+      "exterior_colors": [],
+      "two_tone_combinations": [],
+      "incomplete_reason": "Official kit located and preserved. The redesigned Tahoe and carryover Tahoe Limited/Z71 palettes require variant-specific page verification."
+    }
+  ]
+}

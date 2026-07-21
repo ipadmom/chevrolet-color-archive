@@ -1,0 +1,1419 @@
+{
+  "market": "United States",
+  "retrieved_on": "2026-07-20",
+  "scope_note": "Consumer-searchable Chevrolet-badged passenger cars, sports cars, wagons, coupe utilities, pickups, SUVs, vans, EVs, fleet vehicles, and commercial trucks offered for a U.S. model year. Distinctive rebadges and major renamed variants are separate entries. Trim packages, concepts, race-only vehicles, non-U.S. nameplates, and Geo-badged years are excluded. Early calendar-year and model-year terminology is imperfect; confidence and notes identify those boundaries.",
+  "models": [
+    {
+      "id": "classic-six",
+      "name": "Classic Six",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1913, "end": 1914, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://media.gm.com/content/dam/Media/images/Shared/Banner/Chevrolet/2011/110930_CH_CENT_Newspaper_Schweiz_RZ_low.pdf", "https://www.gm.com/heritage/durant"]}],
+      "aliases": ["Series C", "Model C", "Type C"],
+      "current": false,
+      "notes": "GM identifies the first Chevrolet outside the factory in 1912, but the GM Heritage kit index starts the retail/model-year archive at 1913. Calendar-year 1912 launch material must not be treated as a separate model-year color row."
+    },
+    {
+      "id": "baby-grand",
+      "name": "Baby Grand",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1914, "end": 1916, "confidence": "high", "evidence_urls": ["https://media.gm.com/content/dam/Media/images/INTL/chevrolet/company-tab/2014/history/chevrolet_history_en_2014.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Series H-4"],
+      "current": false,
+      "notes": "Touring-car body in the Series H family."
+    },
+    {
+      "id": "royal-mail",
+      "name": "Royal Mail",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1914, "end": 1916, "confidence": "high", "evidence_urls": ["https://media.gm.com/content/dam/Media/images/INTL/chevrolet/company-tab/2014/history/chevrolet_history_en_2014.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Series H-2", "Series H-2 1/2"],
+      "current": false,
+      "notes": "Roadster in the Series H family."
+    },
+    {
+      "id": "amesbury-special",
+      "name": "Amesbury Special",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1915, "end": 1915, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Series_H"]}],
+      "aliases": ["Series H-3"],
+      "current": false,
+      "notes": "One-year Series H roadster; secondary evidence supplies the precise model-year boundary."
+    },
+    {
+      "id": "light-six",
+      "name": "Light Six",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1914, "end": 1915, "confidence": "medium", "evidence_urls": ["https://media.gm.com/content/dam/Media/images/INTL/chevrolet/company-tab/2014/history/chevrolet_history_en_2014.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Series L", "Little Six"],
+      "current": false,
+      "notes": "The official Chevrolet history names the L Light Six; exact model-year treatment varies among histories."
+    },
+    {
+      "id": "four-ninety",
+      "name": "Four-Ninety",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1915, "end": 1922, "confidence": "high", "evidence_urls": ["https://media.gm.com/content/dam/Media/images/Shared/Banner/Chevrolet/2011/110930_CH_CENT_Newspaper_Schweiz_RZ_low.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["490", "Series 490", "Four Ninety"],
+      "current": false,
+      "notes": "Introduced in 1915 and named for its original $490 price."
+    },
+    {
+      "id": "series-d",
+      "name": "Series D",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1917, "end": 1918, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Type D", "D Series V8"],
+      "current": false,
+      "notes": "Chevrolet's first V8 production series."
+    },
+    {
+      "id": "series-f",
+      "name": "Series F",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1917, "end": 1917, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["F Series"],
+      "current": false,
+      "notes": "Larger four-cylinder line sold alongside the Four-Ninety; Series FA succeeded it for 1918."
+    },
+    {
+      "id": "series-fa",
+      "name": "Series FA",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1918, "end": 1918, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["FA Series"],
+      "current": false,
+      "notes": "One-year development of the Series F, followed by Series FB."
+    },
+    {
+      "id": "series-fb",
+      "name": "Series FB",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1919, "end": 1922, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Series_FB"]}],
+      "aliases": ["FB Series"],
+      "current": false,
+      "notes": "Succeeded Series FA and was replaced by Superior."
+    },
+    {
+      "id": "superior",
+      "name": "Superior",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1923, "end": 1926, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet/1926-chevrolet-superior-series-v", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Series B", "Series F", "Series K", "Series V"],
+      "current": false,
+      "notes": "Annual series letters changed within the Superior nameplate."
+    },
+    {
+      "id": "copper-cooled",
+      "name": "Copper-Cooled",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1923, "end": 1923, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Series_M_Copper-Cooled"]}],
+      "aliases": ["Series M Copper-Cooled", "Copper Cooled"],
+      "current": false,
+      "notes": "Short-lived air-cooled model sold alongside the conventional Superior; exact surviving retail totals are small."
+    },
+    {
+      "id": "capitol",
+      "name": "Capitol",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1927, "end": 1927, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://media.gm.com/content/dam/Media/images/Shared/Banner/Chevrolet/2011/110930_CH_CENT_Newspaper_Schweiz_RZ_low.pdf"]}],
+      "aliases": ["Series AA Capitol"],
+      "current": false,
+      "notes": "One-year successor to Superior."
+    },
+    {
+      "id": "national",
+      "name": "National",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1928, "end": 1928, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Series AB National"],
+      "current": false,
+      "notes": "One-year four-cylinder passenger-car series."
+    },
+    {
+      "id": "international",
+      "name": "International",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1929, "end": 1929, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Series AC International"],
+      "current": false,
+      "notes": "First model year of Chevrolet's Stovebolt six-cylinder era."
+    },
+    {
+      "id": "universal",
+      "name": "Universal",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1930, "end": 1930, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Series AD Universal"],
+      "current": false,
+      "notes": "One-year passenger-car series."
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1931, "end": 1931, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Series AE Independence"],
+      "current": false,
+      "notes": "One-year passenger-car series."
+    },
+    {
+      "id": "confederate",
+      "name": "Confederate",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1932, "end": 1932, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet/1932-chevrolet-deluxe", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Series BA Confederate"],
+      "current": false,
+      "notes": "One-year passenger-car series."
+    },
+    {
+      "id": "eagle",
+      "name": "Eagle",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1933, "end": 1933, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Master Eagle", "Series CA Eagle"],
+      "current": false,
+      "notes": "Upper 1933 series, renamed Master during the model year in some documentation."
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1933, "end": 1933, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Standard Mercury", "Series CC Mercury"],
+      "current": false,
+      "notes": "Lower-priced 1933 series; not related to Ford's later Mercury marque."
+    },
+    {
+      "id": "standard",
+      "name": "Standard",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1933, "end": 1936, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Standard Six"],
+      "current": false,
+      "notes": "Entry Chevrolet series; annual GM series codes changed."
+    },
+    {
+      "id": "master",
+      "name": "Master",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1933, "end": 1938, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Master Six"],
+      "current": false,
+      "notes": "Upper series whose labels overlap Master Deluxe and annual series-code naming."
+    },
+    {
+      "id": "master-deluxe",
+      "name": "Master Deluxe",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1935, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Deluxe"]}],
+      "aliases": ["Master De Luxe"],
+      "current": false,
+      "notes": "Series and subseries use changed over this span; year brochures control color assignments."
+    },
+    {
+      "id": "master-85",
+      "name": "Master 85",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1939, "end": 1940, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Master Eighty-Five"],
+      "current": false,
+      "notes": "Entry full-size Chevrolet series."
+    },
+    {
+      "id": "special-deluxe",
+      "name": "Special Deluxe",
+      "vehicle_class": "prewar passenger car",
+      "model_year_ranges": [{"start": 1940, "end": 1942, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Deluxe"]}],
+      "aliases": ["Special De Luxe"],
+      "current": false,
+      "notes": "Upper Chevrolet passenger-car series immediately before civilian production stopped."
+    },
+    {
+      "id": "fleetline",
+      "name": "Fleetline",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [
+        {"start": 1941, "end": 1942, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1946, "end": 1952, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}
+      ],
+      "aliases": ["Fleetline Aerosedan", "Fleetline Sportmaster"],
+      "current": false,
+      "notes": "Fastback-oriented model family; no civilian 1943-1945 model years."
+    },
+    {
+      "id": "fleetmaster",
+      "name": "Fleetmaster",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1946, "end": 1948, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "No civilian 1943-1945 model years."
+    },
+    {
+      "id": "stylemaster",
+      "name": "Stylemaster",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1946, "end": 1948, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Stylemaster Series"],
+      "current": false,
+      "notes": "Postwar entry series."
+    },
+    {
+      "id": "styleline",
+      "name": "Styleline",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1949, "end": 1952, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1950-Chevrolet.pdf"]}],
+      "aliases": ["Styleline Special", "Styleline Deluxe"],
+      "current": false,
+      "notes": "Not the same as the contemporaneous Fleetline fastback body family."
+    },
+    {
+      "id": "bel-air",
+      "name": "Bel Air",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1950, "end": 1975, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]}],
+      "aliases": ["Bel Air Sport Coupe", "Bel Air Series"],
+      "current": false,
+      "notes": "Began as a Styleline hardtop designation and became a distinct series for 1953; retained because users search the nameplate from 1950."
+    },
+    {
+      "id": "one-fifty",
+      "name": "One-Fifty",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1953, "end": 1957, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["150", "150 Special"],
+      "current": false,
+      "notes": "Entry Chevrolet passenger-car series."
+    },
+    {
+      "id": "two-ten",
+      "name": "Two-Ten",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1953, "end": 1957, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["210", "210 Deluxe"],
+      "current": false,
+      "notes": "Midlevel Chevrolet passenger-car series."
+    },
+    {
+      "id": "handyman",
+      "name": "Handyman",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [{"start": 1953, "end": 1957, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Handyman Wagon"],
+      "current": false,
+      "notes": "Two-door wagon designation used in One-Fifty and Two-Ten lines."
+    },
+    {
+      "id": "townsman",
+      "name": "Townsman",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [
+        {"start": 1953, "end": 1957, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Townsman"]},
+        {"start": 1969, "end": 1972, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Townsman"]}
+      ],
+      "aliases": ["Townsman Wagon"],
+      "current": false,
+      "notes": "Two discontinuous full-size wagon runs."
+    },
+    {
+      "id": "beauville-wagon",
+      "name": "Beauville",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [{"start": 1955, "end": 1957, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["210 Beauville", "Bel Air Beauville"],
+      "current": false,
+      "notes": "Nine-passenger wagon designation; later Beauville van trim is indexed as an alias under G-Series Van rather than a separate model."
+    },
+    {
+      "id": "nomad",
+      "name": "Nomad",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [
+        {"start": 1955, "end": 1961, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Nomad"]},
+        {"start": 1968, "end": 1972, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Nomad"]}
+      ],
+      "aliases": ["Bel Air Nomad", "Chevelle Nomad"],
+      "current": false,
+      "notes": "The 1968-1972 use was a Chevelle wagon designation but remains searchable as Nomad."
+    },
+    {
+      "id": "corvette",
+      "name": "Corvette",
+      "vehicle_class": "sports car",
+      "model_year_ranges": [
+        {"start": 1953, "end": 1982, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]},
+        {"start": 1984, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/vehicles"]}
+      ],
+      "aliases": ["Sting Ray", "Stingray"],
+      "current": true,
+      "notes": "No retail 1983 Corvette model year; the archive must not synthesize 1983 production colors from the surviving pilot car."
+    },
+    {
+      "id": "delray",
+      "name": "Delray",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1954, "end": 1958, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Del Ray"],
+      "current": false,
+      "notes": "Began as a Two-Ten club-coupe designation for 1954 and became a distinct entry series for 1958."
+    },
+    {
+      "id": "biscayne",
+      "name": "Biscayne",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1958, "end": 1972, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "U.S. range ends in 1972; Canadian continuation through 1975 is excluded."
+    },
+    {
+      "id": "brookwood",
+      "name": "Brookwood",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [
+        {"start": 1958, "end": 1961, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Brookwood"]},
+        {"start": 1969, "end": 1972, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Brookwood"]}
+      ],
+      "aliases": ["Brookwood Wagon"],
+      "current": false,
+      "notes": "Two discontinuous Biscayne-related wagon runs."
+    },
+    {
+      "id": "impala",
+      "name": "Impala",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [
+        {"start": 1958, "end": 1985, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1994, "end": 1996, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 2000, "end": 2020, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}
+      ],
+      "aliases": ["Impala SS"],
+      "current": false,
+      "notes": "Impala Limited fleet years are separately searchable."
+    },
+    {
+      "id": "yeoman",
+      "name": "Yeoman",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [{"start": 1958, "end": 1958, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Yeoman"]}],
+      "aliases": ["Yeoman Wagon"],
+      "current": false,
+      "notes": "One-year Delray-related wagon series."
+    },
+    {
+      "id": "parkwood",
+      "name": "Parkwood",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [{"start": 1959, "end": 1961, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Parkwood Wagon"],
+      "current": false,
+      "notes": "Six-passenger Bel Air-related wagon."
+    },
+    {
+      "id": "kingswood",
+      "name": "Kingswood",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [
+        {"start": 1959, "end": 1960, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Kingswood"]},
+        {"start": 1969, "end": 1972, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Kingswood"]}
+      ],
+      "aliases": ["Kingswood Wagon"],
+      "current": false,
+      "notes": "Nine-passenger wagon in its first run and an Impala-related wagon in its second."
+    },
+    {
+      "id": "el-camino",
+      "name": "El Camino",
+      "vehicle_class": "coupe utility",
+      "model_year_ranges": [
+        {"start": 1959, "end": 1960, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1964, "end": 1987, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}
+      ],
+      "aliases": [],
+      "current": false,
+      "notes": "Two discontinuous U.S. runs."
+    },
+    {
+      "id": "corvair",
+      "name": "Corvair",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 1960, "end": 1969, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]}],
+      "aliases": ["Corvair Monza", "Corvair Corsa"],
+      "current": false,
+      "notes": "Passenger-car family; Greenbrier, Rampside, Loadside, and Lakewood are also indexed separately."
+    },
+    {
+      "id": "lakewood",
+      "name": "Lakewood",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [{"start": 1961, "end": 1962, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Corvair Lakewood"],
+      "current": false,
+      "notes": "Corvair-based station wagon."
+    },
+    {
+      "id": "chevy-ii",
+      "name": "Chevy II",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 1962, "end": 1968, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet/1963-chevrolet-nova"]}],
+      "aliases": ["Chevrolet II", "Chevy II Nova"],
+      "current": false,
+      "notes": "Nova was initially a Chevy II series name and is indexed separately for consumer search."
+    },
+    {
+      "id": "nova",
+      "name": "Nova",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [
+        {"start": 1962, "end": 1979, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet/1970-chevrolet-nova-ss"]},
+        {"start": 1985, "end": 1988, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}
+      ],
+      "aliases": ["Chevy II Nova", "Nova SS"],
+      "current": false,
+      "notes": "The 1985-1988 front-wheel-drive rebadge is a distinct run under the same searchable nameplate."
+    },
+    {
+      "id": "chevelle",
+      "name": "Chevelle",
+      "vehicle_class": "midsize car",
+      "model_year_ranges": [{"start": 1964, "end": 1977, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]}],
+      "aliases": ["Chevelle SS"],
+      "current": false,
+      "notes": "Malibu and Laguna subseries are separately searchable."
+    },
+    {
+      "id": "concours",
+      "name": "Concours",
+      "vehicle_class": "midsize station wagon and sedan",
+      "model_year_ranges": [{"start": 1967, "end": 1972, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://over-drive-magazine.com/wp-content/uploads/2023/12/1968-Chevrolet-Station-Wagons-Brochure-1-16C.pdf", "https://xr793.com/wp-content/uploads/2017/07/1972-Chevrolet-Wagons.pdf"]}],
+      "aliases": ["Chevelle Concours"],
+      "current": false,
+      "notes": "Chevelle-derived consumer-facing series; body availability changed during the run."
+    },
+    {
+      "id": "concours-estate",
+      "name": "Concours Estate",
+      "vehicle_class": "midsize station wagon",
+      "model_year_ranges": [{"start": 1968, "end": 1972, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://over-drive-magazine.com/wp-content/uploads/2023/12/1968-Chevrolet-Station-Wagons-Brochure-1-16C.pdf", "https://xr793.com/wp-content/uploads/2017/07/1972-Chevrolet-Wagons.pdf"]}],
+      "aliases": ["Chevelle Concours Estate"],
+      "current": false,
+      "notes": "Premium Chevelle wagon badge, retained separately from Concours because brochures distinguish it."
+    },
+    {
+      "id": "malibu",
+      "name": "Malibu",
+      "vehicle_class": "midsize car",
+      "model_year_ranges": [
+        {"start": 1964, "end": 1983, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1997, "end": 2025, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://news.gm.com/home.detail.html/Pages/news/us/en/2024/may/0508-malibu.html"]}
+      ],
+      "aliases": ["Chevelle Malibu", "Malibu Classic"],
+      "current": false,
+      "notes": "The 2025 model year is the final U.S. run; the 2004-2005 fleet Classic and Malibu Maxx are separately searchable."
+    },
+    {
+      "id": "camaro",
+      "name": "Camaro",
+      "vehicle_class": "sports coupe",
+      "model_year_ranges": [
+        {"start": 1967, "end": 2002, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]},
+        {"start": 2010, "end": 2024, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/mar/0322-camaro.html"]}
+      ],
+      "aliases": ["Camaro SS", "Camaro Z28", "Camaro ZL1"],
+      "current": false,
+      "notes": "No 2003-2009 model years. The sixth-generation run ended with model year 2024."
+    },
+    {
+      "id": "caprice",
+      "name": "Caprice",
+      "vehicle_class": "full-size car",
+      "model_year_ranges": [{"start": 1965, "end": 1996, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Caprice Classic"],
+      "current": false,
+      "notes": "Introduced as an upper full-size subseries for 1965 and made a standalone series for 1966. The later police-only imported Caprice PPV is separately searchable."
+    },
+    {
+      "id": "kingswood-estate",
+      "name": "Kingswood Estate",
+      "vehicle_class": "station wagon",
+      "model_year_ranges": [{"start": 1969, "end": 1972, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Kingswood"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "Caprice-related flagship wagon, separate from Kingswood in Chevrolet literature."
+    },
+    {
+      "id": "monte-carlo",
+      "name": "Monte Carlo",
+      "vehicle_class": "personal luxury coupe",
+      "model_year_ranges": [
+        {"start": 1970, "end": 1988, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1995, "end": 2007, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}
+      ],
+      "aliases": ["Monte Carlo SS"],
+      "current": false,
+      "notes": "Two discontinuous runs."
+    },
+    {
+      "id": "vega",
+      "name": "Vega",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 1971, "end": 1977, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]}],
+      "aliases": ["Cosworth Vega"],
+      "current": false,
+      "notes": "Cosworth is retained as an alias because it was a performance variant, not a separate base nameplate."
+    },
+    {
+      "id": "laguna",
+      "name": "Laguna",
+      "vehicle_class": "midsize car",
+      "model_year_ranges": [{"start": 1973, "end": 1976, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Chevelle Laguna", "Laguna S-3"],
+      "current": false,
+      "notes": "Chevelle-derived series with its own consumer-facing badge."
+    },
+    {
+      "id": "monza",
+      "name": "Monza",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 1975, "end": 1980, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Monza 2+2", "Monza Towne Coupe"],
+      "current": false,
+      "notes": "U.S. H-body line."
+    },
+    {
+      "id": "chevette",
+      "name": "Chevette",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 1976, "end": 1987, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "U.S. T-body hatchback."
+    },
+    {
+      "id": "citation",
+      "name": "Citation",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 1980, "end": 1985, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Citation II"],
+      "current": false,
+      "notes": "Citation II was the 1984-1985 marketing name."
+    },
+    {
+      "id": "cavalier",
+      "name": "Cavalier",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 1982, "end": 2005, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Cavalier Z24"],
+      "current": false,
+      "notes": "U.S. J-body line."
+    },
+    {
+      "id": "celebrity",
+      "name": "Celebrity",
+      "vehicle_class": "midsize car",
+      "model_year_ranges": [{"start": 1982, "end": 1990, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Celebrity Eurosport"],
+      "current": false,
+      "notes": "U.S. A-body line."
+    },
+    {
+      "id": "spectrum",
+      "name": "Spectrum",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 1985, "end": 1988, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Spectrum Express"],
+      "current": false,
+      "notes": "Chevrolet-badged Isuzu rebadge; Geo-badged 1989 years are excluded."
+    },
+    {
+      "id": "sprint",
+      "name": "Sprint",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 1985, "end": 1988, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Chevy Sprint", "Sprint Metro"],
+      "current": false,
+      "notes": "Chevrolet-badged Suzuki rebadge; Geo Metro years are excluded."
+    },
+    {
+      "id": "beretta",
+      "name": "Beretta",
+      "vehicle_class": "compact coupe",
+      "model_year_ranges": [{"start": 1987, "end": 1996, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Beretta GTZ", "Beretta Z26"],
+      "current": false,
+      "notes": "GM Heritage's dedicated kits begin with 1988; secondary sources identify 1987 as the first model year."
+    },
+    {
+      "id": "corsica",
+      "name": "Corsica",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 1987, "end": 1996, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Corsica LT"],
+      "current": false,
+      "notes": "Initially launched to fleets before broad retail sale."
+    },
+    {
+      "id": "lumina",
+      "name": "Lumina",
+      "vehicle_class": "midsize car",
+      "model_year_ranges": [{"start": 1990, "end": 2001, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Lumina Sedan", "Lumina Coupe"],
+      "current": false,
+      "notes": "Lumina APV is separately searchable."
+    },
+    {
+      "id": "metro",
+      "name": "Metro",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 1998, "end": 2001, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Chevrolet Metro"],
+      "current": false,
+      "notes": "Only Chevrolet-badged U.S. years are included; 1989-1997 Geo Metro years are excluded."
+    },
+    {
+      "id": "prizm",
+      "name": "Prizm",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 1998, "end": 2002, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Chevrolet Prizm"],
+      "current": false,
+      "notes": "Only Chevrolet-badged years are included; Geo Prizm years are excluded."
+    },
+    {
+      "id": "classic-fleet",
+      "name": "Classic",
+      "vehicle_class": "fleet midsize car",
+      "model_year_ranges": [{"start": 2004, "end": 2005, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Malibu Classic", "Chevrolet Classic"],
+      "current": false,
+      "notes": "Fleet continuation of the prior Malibu generation, not the 1912 Classic Six."
+    },
+    {
+      "id": "aveo",
+      "name": "Aveo",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 2004, "end": 2011, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Aveo5"],
+      "current": false,
+      "notes": "U.S. Daewoo-derived subcompact; later non-U.S. Aveo years are excluded."
+    },
+    {
+      "id": "malibu-maxx",
+      "name": "Malibu Maxx",
+      "vehicle_class": "midsize hatchback",
+      "model_year_ranges": [{"start": 2004, "end": 2007, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Maxx"],
+      "current": false,
+      "notes": "Extended-wheelbase hatchback variant with its own consumer-facing Maxx name."
+    },
+    {
+      "id": "malibu-limited",
+      "name": "Malibu Limited",
+      "vehicle_class": "fleet midsize car",
+      "model_year_ranges": [{"start": 2016, "end": 2016, "confidence": "medium", "evidence_urls": ["https://www.chevrolet.com/discontinued-vehicles", "https://en.wikipedia.org/wiki/Chevrolet_Malibu"]}],
+      "aliases": ["2016 Malibu Limited"],
+      "current": false,
+      "notes": "Fleet continuation of the eighth-generation Malibu alongside the redesigned 2016 retail Malibu."
+    },
+    {
+      "id": "malibu-classic-2008",
+      "name": "Malibu Classic (2008)",
+      "vehicle_class": "fleet midsize car",
+      "model_year_ranges": [{"start": 2008, "end": 2008, "confidence": "high", "evidence_urls": ["https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2k08malibu_classic.pdf"]}],
+      "aliases": ["2008 Malibu Classic"],
+      "current": false,
+      "notes": "Fleet continuation of the 2004-2007 Malibu generation, distinct from the 2004-2005 Chevrolet Classic fleet nameplate."
+    },
+    {
+      "id": "cobalt",
+      "name": "Cobalt",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 2005, "end": 2010, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Cobalt SS"],
+      "current": false,
+      "notes": "U.S. Delta-platform line."
+    },
+    {
+      "id": "hhr",
+      "name": "HHR",
+      "vehicle_class": "compact wagon",
+      "model_year_ranges": [{"start": 2006, "end": 2011, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Heritage High Roof", "HHR Panel"],
+      "current": false,
+      "notes": "Passenger and panel versions share the HHR nameplate."
+    },
+    {
+      "id": "cruze",
+      "name": "Cruze",
+      "vehicle_class": "compact car",
+      "model_year_ranges": [{"start": 2011, "end": 2019, "confidence": "high", "evidence_urls": ["https://media.gm.com/content/dam/Media/gmcom/investor/2011/DeliveriesDecember2010.pdf", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Cruze Limited"],
+      "current": false,
+      "notes": "U.S. model-year run; later global Cruze production is excluded."
+    },
+    {
+      "id": "cruze-limited",
+      "name": "Cruze Limited",
+      "vehicle_class": "fleet compact car",
+      "model_year_ranges": [{"start": 2016, "end": 2016, "confidence": "medium", "evidence_urls": ["https://www.chevrolet.com/discontinued-vehicles", "https://en.wikipedia.org/wiki/Chevrolet_Cruze"]}],
+      "aliases": ["2016 Cruze Limited"],
+      "current": false,
+      "notes": "Fleet continuation of the first-generation Cruze alongside the redesigned 2016 Cruze."
+    },
+    {
+      "id": "volt",
+      "name": "Volt",
+      "vehicle_class": "plug-in hybrid hatchback",
+      "model_year_ranges": [{"start": 2011, "end": 2019, "confidence": "high", "evidence_urls": ["https://media.gm.com/content/dam/Media/gmcom/investor/2011/DeliveriesDecember2010.pdf", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "Extended-range electric passenger car."
+    },
+    {
+      "id": "caprice-ppv",
+      "name": "Caprice PPV",
+      "vehicle_class": "police fleet sedan",
+      "model_year_ranges": [{"start": 2011, "end": 2017, "confidence": "medium", "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Caprice", "https://www.nhtsa.gov/vehicle"]}],
+      "aliases": ["Chevrolet Police Patrol Vehicle", "9C1 Caprice"],
+      "current": false,
+      "notes": "Imported police-only U.S. model; secondary and federal evidence is used because it falls outside the retail brochure run."
+    },
+    {
+      "id": "sonic",
+      "name": "Sonic",
+      "vehicle_class": "subcompact car",
+      "model_year_ranges": [{"start": 2012, "end": 2020, "confidence": "high", "evidence_urls": ["https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles", "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/sonic/2020.html"]}],
+      "aliases": ["Sonic Sedan", "Sonic Hatch"],
+      "current": false,
+      "notes": "U.S. successor to Aveo."
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "vehicle_class": "city car",
+      "model_year_ranges": [{"start": 2013, "end": 2022, "confidence": "high", "evidence_urls": ["https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles", "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/spark/2022.html"]}],
+      "aliases": ["Spark LS", "Spark Activ"],
+      "current": false,
+      "notes": "U.S. retail run; earlier and later global Spark/Matiz years are excluded."
+    },
+    {
+      "id": "spark-ev",
+      "name": "Spark EV",
+      "vehicle_class": "electric city car",
+      "model_year_ranges": [{"start": 2014, "end": 2016, "confidence": "medium", "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Spark", "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/spark-ev/2016.html"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "Limited-state U.S. compliance-car offering."
+    },
+    {
+      "id": "ss-sedan",
+      "name": "SS",
+      "vehicle_class": "performance sedan",
+      "model_year_ranges": [{"start": 2014, "end": 2017, "confidence": "high", "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/ss/2017.html", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Chevrolet SS Sedan"],
+      "current": false,
+      "notes": "Standalone imported U.S. model, distinct from SS trim packages on other nameplates."
+    },
+    {
+      "id": "impala-limited",
+      "name": "Impala Limited",
+      "vehicle_class": "fleet full-size car",
+      "model_year_ranges": [{"start": 2014, "end": 2016, "confidence": "medium", "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_Impala", "https://www.nhtsa.gov/vehicle"]}],
+      "aliases": ["Impala Limited Fleet"],
+      "current": false,
+      "notes": "Fleet continuation of the ninth-generation Impala alongside the new retail model."
+    },
+    {
+      "id": "bolt-ev",
+      "name": "Bolt EV",
+      "vehicle_class": "electric hatchback",
+      "model_year_ranges": [{"start": 2017, "end": 2023, "confidence": "high", "evidence_urls": ["https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Cars/BoltEV/2023/2023-Chevrolet-Bolt-EV-062422.pdf", "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/apr/0425-bolt.html"]}],
+      "aliases": ["Bolt"],
+      "current": false,
+      "notes": "First-generation production ended after 2023. Chevrolet has announced a future Bolt, but no post-2023 year is added to this through-2026 catalog without a released U.S. model-year record."
+    },
+    {
+      "id": "bolt-euv",
+      "name": "Bolt EUV",
+      "vehicle_class": "electric crossover",
+      "model_year_ranges": [{"start": 2022, "end": 2023, "confidence": "high", "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/bolt-euv/2023.html", "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/apr/0425-bolt.html"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "Distinct longer-body Bolt variant."
+    },
+    {
+      "id": "pre-ck-truck",
+      "name": "Chevrolet Truck (pre-C/K)",
+      "vehicle_class": "pickup and commercial truck family",
+      "model_year_ranges": [
+        {"start": 1918, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.chevrolet.com/legacy/trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1946, "end": 1959, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.gm.com/heritage/collection/chevrolet-trucks"]}
+      ],
+      "aliases": ["Series 490 Light Delivery", "One-Ton", "Advance Design", "Task Force", "Pickup"],
+      "current": false,
+      "notes": "Umbrella search entry for years when Chevrolet literature organized truck paint by numbered series rather than one stable consumer nameplate. Detailed badge families are also indexed where appropriate."
+    },
+    {
+      "id": "canopy-express",
+      "name": "Canopy Express",
+      "vehicle_class": "commercial delivery vehicle",
+      "model_year_ranges": [
+        {"start": 1929, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1946, "end": 1955, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}
+      ],
+      "aliases": ["Canopy Delivery", "Depot Hack"],
+      "current": false,
+      "notes": "Commercial open-sided delivery body; precise first year is supported by secondary catalog history and retained at medium confidence."
+    },
+    {
+      "id": "sedan-delivery",
+      "name": "Sedan Delivery",
+      "vehicle_class": "car-based commercial delivery vehicle",
+      "model_year_ranges": [
+        {"start": 1928, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Sedan_delivery"]},
+        {"start": 1946, "end": 1960, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Sedan_delivery"]}
+      ],
+      "aliases": ["Chevrolet Sedan Delivery"],
+      "current": false,
+      "notes": "Car-based windowless delivery body, distinct from truck-based Panel Truck; no civilian 1943-1945 model years."
+    },
+    {
+      "id": "panel-truck",
+      "name": "Panel Truck",
+      "vehicle_class": "truck-based commercial delivery vehicle",
+      "model_year_ranges": [
+        {"start": 1929, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Panel_truck"]},
+        {"start": 1946, "end": 1967, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Panel_truck"]}
+      ],
+      "aliases": ["Chevrolet Panel", "Panel Delivery"],
+      "current": false,
+      "notes": "Truck-chassis enclosed delivery body; exact series badges vary by year."
+    },
+    {
+      "id": "suburban",
+      "name": "Suburban",
+      "vehicle_class": "full-size SUV",
+      "model_year_ranges": [
+        {"start": 1935, "end": 1942, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1946, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/vehicles"]}
+      ],
+      "aliases": ["Carryall Suburban", "Suburban Carryall"],
+      "current": true,
+      "notes": "Civilian model-year gap for 1943-1945 is explicit. GMC Suburban years are outside this Chevrolet-only catalog."
+    },
+    {
+      "id": "3100",
+      "name": "3100",
+      "vehicle_class": "light-duty pickup",
+      "model_year_ranges": [{"start": 1947, "end": 1959, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks/1948-chevrolet-pickup", "https://www.gm.com/heritage/collection/chevrolet-trucks"]}],
+      "aliases": ["Thriftmaster 3100", "Advance Design 3100"],
+      "current": false,
+      "notes": "Half-ton numbered badge; broader truck-family years remain under Chevrolet Truck (pre-C/K)."
+    },
+    {
+      "id": "3600",
+      "name": "3600",
+      "vehicle_class": "three-quarter-ton truck",
+      "model_year_ranges": [{"start": 1947, "end": 1959, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://news.classicindustries.com/1947-1959-chevy-truck-model-years-guide"]}],
+      "aliases": ["Series 3600", "Advance Design 3600"],
+      "current": false,
+      "notes": "Three-quarter-ton numbered badge; broader truck-family years remain under Chevrolet Truck (pre-C/K)."
+    },
+    {
+      "id": "3800",
+      "name": "3800",
+      "vehicle_class": "one-ton truck",
+      "model_year_ranges": [{"start": 1947, "end": 1959, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://news.classicindustries.com/1947-1959-chevy-truck-model-years-guide"]}],
+      "aliases": ["Series 3800", "Advance Design 3800"],
+      "current": false,
+      "notes": "One-ton numbered badge; broader truck-family years remain under Chevrolet Truck (pre-C/K)."
+    },
+    {
+      "id": "cameo-carrier",
+      "name": "Cameo Carrier",
+      "vehicle_class": "light-duty pickup",
+      "model_year_ranges": [{"start": 1955, "end": 1958, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Cameo", "3124 Cameo Carrier"],
+      "current": false,
+      "notes": "Distinct Task Force fiberglass-fender pickup."
+    },
+    {
+      "id": "apache",
+      "name": "Apache",
+      "vehicle_class": "light-duty truck",
+      "model_year_ranges": [{"start": 1958, "end": 1961, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf"]}],
+      "aliases": ["Apache 10", "Apache 20", "Apache 30", "Apache 40"],
+      "current": false,
+      "notes": "Light-duty Task Force name continued onto early C/K trucks for 1960-1961."
+    },
+    {
+      "id": "viking",
+      "name": "Viking",
+      "vehicle_class": "medium-duty truck",
+      "model_year_ranges": [{"start": 1958, "end": 1961, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf"]}],
+      "aliases": ["Viking 50", "Viking 60"],
+      "current": false,
+      "notes": "Medium-duty Task Force and early C/K badge family."
+    },
+    {
+      "id": "spartan",
+      "name": "Spartan",
+      "vehicle_class": "heavy-duty truck",
+      "model_year_ranges": [{"start": 1958, "end": 1961, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf"]}],
+      "aliases": ["Spartan 70", "Spartan 80", "Spartan 100"],
+      "current": false,
+      "notes": "Heavy-duty Task Force and early C/K badge family."
+    },
+    {
+      "id": "ck-series",
+      "name": "C/K Series",
+      "vehicle_class": "full-size pickup and commercial truck",
+      "model_year_ranges": [{"start": 1960, "end": 2002, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/legacy/trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_C/K"]}],
+      "aliases": ["C10", "C20", "C30", "K10", "K20", "K30", "R/V Series", "C1500", "K1500", "C2500", "K2500", "C3500"],
+      "current": false,
+      "notes": "C/K pickups ended after 2000, while limited heavier and chassis-cab derivatives continued through 2002; year-level sources must determine the applicable series."
+    },
+    {
+      "id": "greenbrier",
+      "name": "Greenbrier",
+      "vehicle_class": "passenger van",
+      "model_year_ranges": [
+        {"start": 1961, "end": 1965, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]},
+        {"start": 1969, "end": 1972, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}
+      ],
+      "aliases": ["Corvair Greenbrier", "Greenbrier Sports Wagon", "Chevelle Greenbrier"],
+      "current": false,
+      "notes": "Corvair 95 passenger van in 1961-1965; the name returned on an entry Chevelle wagon in 1969-1972."
+    },
+    {
+      "id": "corvan",
+      "name": "Corvan",
+      "vehicle_class": "compact cargo van",
+      "model_year_ranges": [{"start": 1961, "end": 1964, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Greenbrier"]}],
+      "aliases": ["Corvair 95 Corvan", "Corvair Corvan"],
+      "current": false,
+      "notes": "Cargo-van counterpart to Greenbrier in the Corvair 95 family."
+    },
+    {
+      "id": "rampside",
+      "name": "Rampside",
+      "vehicle_class": "compact pickup",
+      "model_year_ranges": [{"start": 1961, "end": 1964, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Corvair 95 Rampside"],
+      "current": false,
+      "notes": "Side-ramp Corvair 95 pickup."
+    },
+    {
+      "id": "loadside",
+      "name": "Loadside",
+      "vehicle_class": "compact pickup",
+      "model_year_ranges": [{"start": 1961, "end": 1962, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": ["Corvair 95 Loadside"],
+      "current": false,
+      "notes": "Conventional-bed Corvair 95 pickup."
+    },
+    {
+      "id": "g-series-van",
+      "name": "G-Series Van",
+      "vehicle_class": "full-size van",
+      "model_year_ranges": [{"start": 1964, "end": 1996, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Chevy Van", "Sportvan", "Beauville Van", "G10", "G20", "G30", "Vandura"],
+      "current": false,
+      "notes": "Chevrolet literature alternated among G Van, Chevy Van, Sportvan, and model-number badges; Express replaced the line."
+    },
+    {
+      "id": "sportvan",
+      "name": "Sportvan",
+      "vehicle_class": "full-size passenger van",
+      "model_year_ranges": [{"start": 1964, "end": 1995, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_van"]}],
+      "aliases": ["Chevrolet Sportvan", "Sport Van", "Beauville Sportvan"],
+      "current": false,
+      "notes": "Passenger-oriented G-Series marketing name retained separately because period brochures and buyers use it as a model name."
+    },
+    {
+      "id": "p-series-step-van",
+      "name": "P-Series / Step-Van",
+      "vehicle_class": "commercial walk-in van and stripped chassis",
+      "model_year_ranges": [
+        {"start": 1940, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Step-Van"]},
+        {"start": 1946, "end": 1998, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Step-Van"]}
+      ],
+      "aliases": ["Dubl-Duti", "Step-Van", "Stepvan", "P10", "P20", "P30", "P-Series Motorhome Chassis", "Forward Control Chassis"],
+      "current": false,
+      "notes": "Commercial body/chassis family rather than one retail body; retained because Chevrolet published distinct paint and equipment literature for Step-Van and motorhome chassis."
+    },
+    {
+      "id": "l-series-tilt-cab",
+      "name": "L-Series Tilt Cab",
+      "vehicle_class": "medium and heavy cab-over truck",
+      "model_year_ranges": [{"start": 1960, "end": 1981, "confidence": "medium", "evidence_urls": ["https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1962-Chevrolet-Truck.pdf", "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf"]}],
+      "aliases": ["Tilt Cab", "Steel Tilt Cab", "L-Series"],
+      "current": false,
+      "notes": "Steel cab-over commercial family. Contemporary Chevrolet brochures often say Tilt Cab rather than L-Series."
+    },
+    {
+      "id": "b-series-bus-chassis",
+      "name": "B-Series Bus Chassis",
+      "vehicle_class": "commercial bus chassis",
+      "model_year_ranges": [{"start": 1967, "end": 2003, "confidence": "medium", "evidence_urls": ["https://xr793.com/wp-content/uploads/2017/07/1981-Chevrolet-Bus-Chassis.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet/GMC_B_series"]}],
+      "aliases": ["S-Series Bus Chassis", "B60", "B6", "B7"],
+      "current": false,
+      "notes": "Incomplete cowled chassis for second-stage bus bodies. Chevrolet used S-series nomenclature before adopting B-series/B60 in 1980."
+    },
+    {
+      "id": "titan-90",
+      "name": "Titan 90",
+      "vehicle_class": "Class 8 cab-over truck",
+      "model_year_ranges": [{"start": 1969, "end": 1980, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf"]}],
+      "aliases": ["Chevrolet Titan", "Titan"],
+      "current": false,
+      "notes": "Chevrolet left the Class 8 market after 1980; later GMC Astro years are excluded."
+    },
+    {
+      "id": "chevy-90",
+      "name": "Chevy 90",
+      "vehicle_class": "Class 7-8 conventional truck",
+      "model_year_ranges": [{"start": 1966, "end": 1977, "confidence": "low", "evidence_urls": ["https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Chevrolet 90 Series", "J90"],
+      "current": false,
+      "notes": "Heavy conventional predecessor to Bruin. Exact first-year nomenclature remains a brochure-level audit item, so this range is intentionally low confidence."
+    },
+    {
+      "id": "blazer",
+      "name": "Blazer",
+      "vehicle_class": "SUV",
+      "model_year_ranges": [
+        {"start": 1969, "end": 1994, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1995, "end": 2005, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 2019, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/vehicles"]}
+      ],
+      "aliases": ["K5 Blazer", "Full-Size Blazer", "Blazer Crossover"],
+      "current": true,
+      "notes": "Three very different consumer-facing uses of the same name. S-10 Blazer and Blazer EV are separately searchable."
+    },
+    {
+      "id": "luv",
+      "name": "LUV",
+      "vehicle_class": "compact pickup",
+      "model_year_ranges": [{"start": 1972, "end": 1982, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.motortrend.com/features/chevy-truck-history"]}],
+      "aliases": ["Light Utility Vehicle", "LUV Pickup"],
+      "current": false,
+      "notes": "U.S. Isuzu-built compact pickup; later foreign-market LUV years are excluded."
+    },
+    {
+      "id": "vega-panel-express",
+      "name": "Vega Panel Express",
+      "vehicle_class": "car-based commercial delivery vehicle",
+      "model_year_ranges": [{"start": 1971, "end": 1975, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Vega"]}],
+      "aliases": ["Panel Express", "Vega Panel"],
+      "current": false,
+      "notes": "Windowless Vega wagon derivative sold as a compact delivery vehicle."
+    },
+    {
+      "id": "bison",
+      "name": "Bison",
+      "vehicle_class": "Class 8 conventional truck",
+      "model_year_ranges": [{"start": 1977, "end": 1980, "confidence": "medium", "evidence_urls": ["https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf", "https://www.trucksplanet.com/catalog/model.php?id=1309"]}],
+      "aliases": ["Chevrolet Bison 90"],
+      "current": false,
+      "notes": "Production Chevrolet, not the unrelated 1964 GM turbine concept or later Bison trim packages."
+    },
+    {
+      "id": "bruin",
+      "name": "Bruin",
+      "vehicle_class": "Class 7-8 conventional truck",
+      "model_year_ranges": [{"start": 1978, "end": 1980, "confidence": "medium", "evidence_urls": ["https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf", "https://de.wikipedia.org/wiki/Chevrolet_Bruin"]}],
+      "aliases": ["Chevy 90", "J90 Bruin"],
+      "current": false,
+      "notes": "Chevrolet-badged production ended when Chevrolet exited heavy Class 7-8 sales after 1980; later GMC Brigadier years are excluded."
+    },
+    {
+      "id": "kodiak",
+      "name": "Kodiak",
+      "vehicle_class": "medium-duty truck",
+      "model_year_ranges": [{"start": 1980, "end": 2009, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Kodiak"]}],
+      "aliases": ["Kodiak C4500", "Kodiak C5500", "Kodiak C6500", "Kodiak C7500", "Kodiak C8500"],
+      "current": false,
+      "notes": "Medium-duty conventional truck; replaced in today's lineup by Silverado medium-duty chassis cabs."
+    },
+    {
+      "id": "s10",
+      "name": "S-10",
+      "vehicle_class": "compact pickup",
+      "model_year_ranges": [{"start": 1982, "end": 2004, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.cars.com/research/chevrolet-s_10/"]}],
+      "aliases": ["S10", "S-10 Pickup"],
+      "current": false,
+      "notes": "U.S. compact pickup; later international S10 and S10 Max products are excluded."
+    },
+    {
+      "id": "s10-blazer",
+      "name": "S-10 Blazer",
+      "vehicle_class": "compact SUV",
+      "model_year_ranges": [{"start": 1983, "end": 1994, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["S10 Blazer", "S/T Blazer"],
+      "current": false,
+      "notes": "Compact Blazer retained separately from the contemporary full-size Blazer."
+    },
+    {
+      "id": "tiltmaster-w-series",
+      "name": "Tiltmaster / W-Series",
+      "vehicle_class": "low-cab-forward commercial truck",
+      "model_year_ranges": [{"start": 1984, "end": 2009, "confidence": "medium", "evidence_urls": ["https://static.nhtsa.gov/nhtsa/downloads/MfrMail/01-022-N11B-8753.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Tiltmaster", "Forward", "W4", "W5", "W-Series"],
+      "current": false,
+      "notes": "Isuzu-derived Chevrolet-badged cab-over line; GM/NHTSA documentation alternates Forward, Tiltmaster, and W-Series labels."
+    },
+    {
+      "id": "t-series-medium-duty",
+      "name": "T-Series Medium Duty",
+      "vehicle_class": "medium-duty commercial truck",
+      "model_year_ranges": [{"start": 1997, "end": 2009, "confidence": "medium", "evidence_urls": ["https://static.nhtsa.gov/nhtsa/downloads/MfrMail/01-022-N11B-8753.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["T-Series", "T5500", "T6500", "T7500", "T8500"],
+      "current": false,
+      "notes": "Isuzu-derived conventional medium-duty family, distinct from W-Series cab-over and Kodiak."
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "vehicle_class": "midsize van",
+      "model_year_ranges": [{"start": 1985, "end": 2005, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Astro Van"],
+      "current": false,
+      "notes": "Passenger and cargo versions share the Astro nameplate."
+    },
+    {
+      "id": "lumina-apv",
+      "name": "Lumina APV",
+      "vehicle_class": "minivan",
+      "model_year_ranges": [{"start": 1990, "end": 1996, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": ["Lumina Minivan", "APV"],
+      "current": false,
+      "notes": "Renamed Lumina Minivan in later advertising but retained under the better-known APV search name."
+    },
+    {
+      "id": "tahoe",
+      "name": "Tahoe",
+      "vehicle_class": "full-size SUV",
+      "model_year_ranges": [{"start": 1995, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/vehicles"]}],
+      "aliases": ["Tahoe PPV", "Tahoe SSV"],
+      "current": true,
+      "notes": "Replaced the full-size Blazer name in Chevrolet's U.S. lineup."
+    },
+    {
+      "id": "express",
+      "name": "Express",
+      "vehicle_class": "full-size van and cutaway",
+      "model_year_ranges": [{"start": 1996, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/commercial/express/vans/specs-models", "https://www.chevrolet.com/commercial/express/cutaway"]}],
+      "aliases": ["Express Cargo", "Express Passenger", "Express Cutaway", "Express 2500", "Express 3500", "Express 4500"],
+      "current": true,
+      "notes": "Passenger, cargo, and incomplete cutaway configurations remain one Express nameplate."
+    },
+    {
+      "id": "s10-ev",
+      "name": "S-10 EV",
+      "vehicle_class": "electric compact pickup",
+      "model_year_ranges": [{"start": 1997, "end": 1998, "confidence": "medium", "evidence_urls": ["https://en.wikipedia.org/wiki/Chevrolet_S-10_EV", "https://www.energy.gov/eere/vehicles/articles/alternative-fuels-data-center"]}],
+      "aliases": ["Electric S-10"],
+      "current": false,
+      "notes": "Limited fleet battery-electric pickup; secondary evidence supplies exact model years."
+    },
+    {
+      "id": "venture",
+      "name": "Venture",
+      "vehicle_class": "minivan",
+      "model_year_ranges": [{"start": 1997, "end": 2005, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "Overlapped Uplander for its final U.S. model year."
+    },
+    {
+      "id": "tracker",
+      "name": "Tracker",
+      "vehicle_class": "compact SUV",
+      "model_year_ranges": [{"start": 1999, "end": 2004, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Tracker_(Americas)"]}],
+      "aliases": ["Chevrolet Tracker"],
+      "current": false,
+      "notes": "Only Chevrolet-badged U.S. years are included; Geo Tracker and later non-U.S. Tracker runs are excluded."
+    },
+    {
+      "id": "silverado",
+      "name": "Silverado",
+      "vehicle_class": "full-size pickup",
+      "model_year_ranges": [{"start": 1999, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/vehicles"]}],
+      "aliases": ["Silverado 1500", "Silverado LD", "Silverado Light Duty"],
+      "current": true,
+      "notes": "Silverado was a C/K trim before becoming the pickup nameplate for 1999; pre-1999 colors belong under C/K."
+    },
+    {
+      "id": "silverado-hd",
+      "name": "Silverado HD",
+      "vehicle_class": "heavy-duty and medium-duty pickup/chassis cab",
+      "model_year_ranges": [{"start": 2001, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/commercial/silverado/4500hd-5500hd-6500hd-chassis-cab", "https://www.chevrolet.com/vehicles"]}],
+      "aliases": ["Silverado 2500HD", "Silverado 3500HD", "Silverado 4500HD", "Silverado 5500HD", "Silverado 6500HD", "Silverado Chassis Cab"],
+      "current": true,
+      "notes": "Includes HD pickups and current 4500HD-6500HD medium-duty chassis cabs; source-level data should preserve series-specific colors."
+    },
+    {
+      "id": "trailblazer",
+      "name": "TrailBlazer",
+      "vehicle_class": "SUV",
+      "model_year_ranges": [
+        {"start": 2002, "end": 2009, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 2021, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/vehicles"]}
+      ],
+      "aliases": ["Trailblazer", "TrailBlazer EXT"],
+      "current": true,
+      "notes": "Body-on-frame and later subcompact-crossover runs are discontinuous and mechanically unrelated."
+    },
+    {
+      "id": "avalanche",
+      "name": "Avalanche",
+      "vehicle_class": "crew-cab sport utility pickup",
+      "model_year_ranges": [{"start": 2002, "end": 2013, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/List_of_Chevrolet_pickup_trucks"]}],
+      "aliases": ["Avalanche 1500", "Avalanche 2500"],
+      "current": false,
+      "notes": "Convertible-midgate full-size pickup."
+    },
+    {
+      "id": "ssr",
+      "name": "SSR",
+      "vehicle_class": "retractable-hardtop sport pickup",
+      "model_year_ranges": [{"start": 2003, "end": 2006, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_SSR"]}],
+      "aliases": ["Super Sport Roadster"],
+      "current": false,
+      "notes": "Production ended in 2006; no U.S. 2007 model-year run is included."
+    },
+    {
+      "id": "colorado",
+      "name": "Colorado",
+      "vehicle_class": "midsize pickup",
+      "model_year_ranges": [
+        {"start": 2004, "end": 2012, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 2015, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/vehicles"]}
+      ],
+      "aliases": ["Colorado ZR2"],
+      "current": true,
+      "notes": "No U.S. 2013-2014 model years."
+    },
+    {
+      "id": "uplander",
+      "name": "Uplander",
+      "vehicle_class": "minivan",
+      "model_year_ranges": [{"start": 2005, "end": 2008, "confidence": "high", "evidence_urls": ["https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2k08uplander.pdf", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
+      "aliases": [],
+      "current": false,
+      "notes": "U.S. sales ended after 2008; 2009 Canada and Mexico continuation is excluded."
+    },
+    {
+      "id": "equinox",
+      "name": "Equinox",
+      "vehicle_class": "compact crossover SUV",
+      "model_year_ranges": [{"start": 2005, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://www.chevrolet.com/vehicles"]}],
+      "aliases": [],
+      "current": true,
+      "notes": "Equinox EV is a separate electric nameplate."
+    },
+    {
+      "id": "traverse",
+      "name": "Traverse",
+      "vehicle_class": "midsize crossover SUV",
+      "model_year_ranges": [{"start": 2009, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/vehicles", "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"]}],
+      "aliases": [],
+      "current": true,
+      "notes": "U.S. three-row crossover."
+    },
+    {
+      "id": "traverse-limited",
+      "name": "Traverse Limited",
+      "vehicle_class": "midsize crossover SUV",
+      "model_year_ranges": [{"start": 2024, "end": 2024, "confidence": "medium", "evidence_urls": ["https://www.chevrolet.com/discontinued-vehicles", "https://en.wikipedia.org/wiki/Chevrolet_Traverse"]}],
+      "aliases": ["2024 Traverse Limited"],
+      "current": false,
+      "notes": "Short fleet/retail continuation of the prior Traverse generation alongside the redesigned 2024 model."
+    },
+    {
+      "id": "captiva-sport",
+      "name": "Captiva Sport",
+      "vehicle_class": "fleet compact crossover SUV",
+      "model_year_ranges": [{"start": 2012, "end": 2015, "confidence": "medium", "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/captiva-sport/2015.html", "https://en.wikipedia.org/wiki/Chevrolet_Captiva_Sport"]}],
+      "aliases": ["Chevrolet Captiva"],
+      "current": false,
+      "notes": "U.S. fleet-only Saturn Vue derivative; global Captiva years are excluded."
+    },
+    {
+      "id": "trax",
+      "name": "Trax",
+      "vehicle_class": "subcompact crossover SUV",
+      "model_year_ranges": [
+        {"start": 2015, "end": 2022, "confidence": "high", "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/trax/2022.html"]},
+        {"start": 2024, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/vehicles"]}
+      ],
+      "aliases": [],
+      "current": true,
+      "notes": "No U.S. 2023 model year."
+    },
+    {
+      "id": "city-express",
+      "name": "City Express",
+      "vehicle_class": "compact cargo van",
+      "model_year_ranges": [{"start": 2015, "end": 2018, "confidence": "medium", "evidence_urls": ["https://media.chevrolet.com/media/us/en/chevrolet/vehicles/city-express/2018.html", "https://en.wikipedia.org/wiki/Chevrolet_City_Express"]}],
+      "aliases": ["Chevrolet City Express Cargo Van"],
+      "current": false,
+      "notes": "Nissan NV200 rebadge sold through Chevrolet commercial dealers."
+    },
+    {
+      "id": "low-cab-forward",
+      "name": "Low Cab Forward",
+      "vehicle_class": "commercial cab-over truck",
+      "model_year_ranges": [{"start": 2016, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/commercial/low-cab-forward-cab-over-truck", "https://www.chevrolet.com/commercial"]}],
+      "aliases": ["LCF", "3500 HG", "4500 HG", "4500 HD", "4500 XD", "5500 HG", "5500 XG", "5500 XD", "6500 XD", "7500 XD"],
+      "current": true,
+      "notes": "Current Isuzu-derived gas and diesel cab-over family; predecessor Tiltmaster/W-Series is separate."
+    },
+    {
+      "id": "blazer-ev",
+      "name": "Blazer EV",
+      "vehicle_class": "electric midsize crossover SUV",
+      "model_year_ranges": [{"start": 2024, "end": 2026, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/jul/0718-blazerev.html", "https://www.chevrolet.com/electric/blazer-ev"]}],
+      "aliases": ["Blazer EV PPV"],
+      "current": true,
+      "notes": "Distinct electric model, not a powertrain option on the gasoline Blazer."
+    },
+    {
+      "id": "equinox-ev",
+      "name": "Equinox EV",
+      "vehicle_class": "electric compact crossover SUV",
+      "model_year_ranges": [{"start": 2024, "end": 2026, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/sep/0908-equinoxev-reveal.html", "https://www.chevrolet.com/electric/ev-range-battery"]}],
+      "aliases": [],
+      "current": true,
+      "notes": "Distinct electric model, not a powertrain option on the gasoline Equinox."
+    },
+    {
+      "id": "silverado-ev",
+      "name": "Silverado EV",
+      "vehicle_class": "electric full-size pickup",
+      "model_year_ranges": [{"start": 2024, "end": 2026, "confidence": "high", "evidence_urls": ["https://www.chevrolet.com/electric/ev-range-battery", "https://www.chevrolet.com/vehicles"]}],
+      "aliases": ["Silverado EV WT", "Silverado EV RST"],
+      "current": true,
+      "notes": "Distinct electric pickup architecture and nameplate."
+    },
+    {
+      "id": "brightdrop-400",
+      "name": "BrightDrop 400",
+      "vehicle_class": "electric commercial van",
+      "model_year_ranges": [{"start": 2025, "end": 2025, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://www.chevrolet.com/commercial/brightdrop"]}],
+      "aliases": ["Chevrolet BrightDrop 400", "Zevo 400"],
+      "current": true,
+      "notes": "Chevrolet-badged beginning with model year 2025; earlier BrightDrop-brand Zevo years are excluded. Chevrolet still offers 2025 inventory as of retrieval."
+    },
+    {
+      "id": "brightdrop-600",
+      "name": "BrightDrop 600",
+      "vehicle_class": "electric commercial van",
+      "model_year_ranges": [{"start": 2025, "end": 2025, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://www.chevrolet.com/commercial/brightdrop"]}],
+      "aliases": ["Chevrolet BrightDrop 600", "Zevo 600"],
+      "current": true,
+      "notes": "Chevrolet-badged beginning with model year 2025; earlier BrightDrop-brand Zevo years are excluded. Chevrolet still offers 2025 inventory as of retrieval."
+    }
+  ]
+}

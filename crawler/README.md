@@ -36,7 +36,7 @@ evidence queue, not a set of automatically verified availability claims.
 ```text
 crawler/
   chevy_archive/       Python implementation
-  manifests/           reviewed source queues
+  manifests/           reviewed source queues, including the full GM inventory
   tests/               small, offline fixtures and unit tests
   cli.py               command line entry point
   config.example.json  non-secret example
@@ -68,6 +68,21 @@ python crawler/cli.py --config crawler/config.example.json audit --full-hash
 python crawler/cli.py --config crawler/config.example.json export \
   --output /path/outside/repo/color-candidates.jsonl
 ```
+
+The repository also ships a deterministic queue for every official Chevrolet PDF
+in the GM Heritage inventory. Rebuild it after refreshing the official source
+snapshot, then enqueue it on the VPS:
+
+```bash
+npm run crawler:manifest
+python crawler/cli.py --config crawler/config.json enqueue \
+  --manifest crawler/manifests/gm-heritage-chevrolet-all.jsonl
+```
+
+The full queue currently contains 691 official PDFs covering every Chevrolet
+entry exposed by GM Heritage from 1913 through 2007. It is a discovery queue,
+not proof that every PDF contains a paint chart. Later model years require
+separate official brochure and order-guide manifests.
 
 `work --max-jobs 0` continues until no eligible job remains. Multiple workers
 may use the same SQLite database, but the deployment runbook recommends starting

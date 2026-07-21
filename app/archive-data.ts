@@ -1,3 +1,7 @@
+import modelCatalog from "../data/catalog/chevrolet-us-nameplates.json";
+import tahoe1995to2000Audit from "../data/audits/tahoe-1995-2000.json";
+import tahoe2001to2007Audit from "../data/audits/tahoe-2001-2007.json";
+
 export type AvailabilityState = "listed" | "restricted";
 
 export type Availability = {
@@ -33,6 +37,7 @@ export type Generation = {
   revisionNote: string;
   sources: Record<string, YearSource>;
   colors: ArchiveColor[];
+  catalogSources?: string[];
 };
 
 export type ArchiveModel = {
@@ -66,6 +71,9 @@ const gmCorvetteKit = (year: string) =>
 
 const gmChevelleKit = (year: string) =>
   `https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/${year}-Chevrolet-Chevelle.pdf`;
+
+const gmSuburbanKit = (year: string) =>
+  `https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/${year}-Chevrolet-Suburban.pdf`;
 
 export const staticPhotoCandidates: PhotoCandidate[] = [
   {
@@ -982,6 +990,140 @@ function buildExactNameTimeline(
   }
   return [...grouped.values()];
 }
+
+type TahoeAuditColor = {
+  name: string;
+  code: string | null;
+  finish: string | null;
+};
+
+type TahoeAuditPublication = {
+  title: string;
+  publisher: string;
+  url: string;
+  pages?: string[];
+  publication_date?: string | null;
+  publication_date_note?: string;
+};
+
+type TahoeAuditSource = {
+  title: string;
+  publisher: string;
+  url: string;
+  pdf_page?: number;
+  printed_page?: number;
+  section?: string;
+  publication_date?: string | null;
+  publication_note?: string;
+};
+
+type TahoeAuditYear = {
+  year: number;
+  coverage_status?: string;
+  status?: string;
+  publication?: TahoeAuditPublication;
+  source?: TahoeAuditSource;
+  exterior_colors: TahoeAuditColor[];
+  two_tone_combinations?: unknown[];
+};
+
+function tahoeAuditIsVerified(item: TahoeAuditYear) {
+  return (
+    item.coverage_status === "verified_complete" || item.status === "verified"
+  );
+}
+
+function tahoeDisplayName(color: TahoeAuditColor) {
+  if (color.finish === "metallic" && !/metallic/i.test(color.name)) {
+    return `${color.name} Metallic`;
+  }
+  return color.name;
+}
+
+function tahoeAuditSource(item: TahoeAuditYear): YearSource {
+  if (item.publication) {
+    return {
+      name: item.publication.publisher,
+      chart: `${item.publication.title} exterior-color availability chart`,
+      locator: item.publication.pages?.join("; ") ?? "Official chart page",
+      revision:
+        item.publication.publication_date_note ??
+        item.publication.publication_date ??
+        "Model-year publication; chart date not printed",
+      url: item.publication.url,
+    };
+  }
+
+  const source = item.source;
+  if (!source) throw new Error(`Verified Tahoe year ${item.year} has no source`);
+  const locator = [
+    source.pdf_page ? `PDF p. ${source.pdf_page}` : null,
+    source.printed_page ? `printed p. ${source.printed_page}` : null,
+  ]
+    .filter(Boolean)
+    .join(", ");
+  return {
+    name: source.publisher,
+    chart: source.section ?? `${source.title} exterior-color list`,
+    locator: locator || "Official model-year kit",
+    revision:
+      source.publication_note ??
+      source.publication_date ??
+      "Model-year publication; chart date not printed",
+    url: source.url,
+  };
+}
+
+function buildTahoeAuditGenerations(audits: TahoeAuditYear[]) {
+  const verified = audits
+    .filter(
+      (item) => tahoeAuditIsVerified(item) && item.exterior_colors.length > 0,
+    )
+    .sort((left, right) => left.year - right.year);
+  const groups: TahoeAuditYear[][] = [];
+  for (const item of verified) {
+    const current = groups.at(-1);
+    if (!current || item.year !== current.at(-1)!.year + 1) {
+      groups.push([item]);
+    } else {
+      current.push(item);
+    }
+  }
+
+  return groups.map((group): Generation => {
+    const years = group.map((item) => String(item.year));
+    const rows: AuditedSolidColor[] = group.flatMap((item) =>
+      item.exterior_colors.map((color) => ({
+        year: String(item.year),
+        code: color.code ?? "Not printed",
+        name: tahoeDisplayName(color),
+      })),
+    );
+    const twoToneCount = group.reduce(
+      (total, item) => total + (item.two_tone_combinations?.length ?? 0),
+      0,
+    );
+    return {
+      id: `tahoe-official-${years[0]}-${years.at(-1)}`,
+      label: "Official color charts",
+      range: compactYearRange(years),
+      years,
+      listingCount: rows.length,
+      revisionNote:
+        `${rows.length} solid-color listings are transcribed from complete official model-year pages. ` +
+        `${twoToneCount} two-tone rows remain a separate evidence class. Missing paint codes stay marked “Not printed.”`,
+      sources: Object.fromEntries(
+        group.map((item) => [String(item.year), tahoeAuditSource(item)]),
+      ),
+      colors: buildExactNameTimeline("tahoe", rows),
+    };
+  });
+}
+
+const tahoeAuditGenerations = buildTahoeAuditGenerations([
+  ...(tahoe1995to2000Audit.years as TahoeAuditYear[]),
+  ...(tahoe2001to2007Audit.years as TahoeAuditYear[]),
+]);
 
 const camaro1970to1975Inventory: AuditedSolidColor[] = [
   { year: "1970", code: "10", name: "Classic White" },
@@ -2329,7 +2471,45 @@ const firstChevelleGeneration: Generation = {
   colors: buildExactNameTimeline("chevelle", chevelleSolidInventory),
 };
 
-export const models: ArchiveModel[] = [
+const suburban1977SolidInventory: AuditedSolidColor[] = [
+  { year: "1977", code: "86", name: "Black, Midnight" },
+  { year: "1977", code: "20", name: "Blue, Lite (Light)" },
+  { year: "1977", code: "23", name: "Blue, Hawaiian (Medium)" },
+  { year: "1977", code: "25", name: "Blue, Mariner (Dark) (M)" },
+  { year: "1977", code: "81", name: "Brown, Cordova (Dark) (M)" },
+  { year: "1977", code: "65", name: "Buckskin" },
+  { year: "1977", code: "43", name: "Green, Seamist (Light) (M)" },
+  { year: "1977", code: "76", name: "Mahogany" },
+  { year: "1977", code: "70", name: "Red, Cardinal (Medium)" },
+  { year: "1977", code: "71", name: "Red, Metallic (Dark) (M)" },
+  { year: "1977", code: "68", name: "Russet Metallic (M)" },
+  { year: "1977", code: "17", name: "Silver, Saratoga (M)" },
+  { year: "1977", code: "60", name: "Tan, Santa Fe" },
+  { year: "1977", code: "12", name: "White, Frost" },
+  { year: "1977", code: "53", name: "Yellow, Colonial" },
+];
+
+const suburban1977: Generation = {
+  id: "suburban-1977-audited-solid-colors",
+  label: "1977 audited chart",
+  range: "1977",
+  years: ["1977"],
+  listingCount: suburban1977SolidInventory.length,
+  revisionNote:
+    "The solid-color timeline publishes the chart's boldface primary colors. Page 7 two-tone combinations remain a separate evidence class.",
+  sources: {
+    "1977": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 6, printed Suburban Page 6",
+      revision: "August 9, 1976",
+      url: gmSuburbanKit("1977"),
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1977SolidInventory),
+};
+
+const auditedModels: ArchiveModel[] = [
   {
     id: "camaro", name: "Camaro", era: "1967–1992 audited", status: "26 official charts verified",
     generations: [firstGeneration, secondGenerationCamaro, thirdGenerationCamaro],
@@ -2353,6 +2533,144 @@ export const models: ArchiveModel[] = [
     pendingCopy: "Order guides need market-specific validation. Missing records remain unverified.",
     generations: [],
   },
+  {
+    id: "suburban", name: "Suburban", era: "1935–present catalog expansion", status: "1977 official chart verified",
+    pendingCopy: "All model years remain visible while official color charts are reviewed year by year.",
+    generations: [suburban1977],
+  },
+  {
+    id: "tahoe", name: "Tahoe", era: "1995–present catalog expansion", status: "1995, 1996, and 2001 official color pages verified",
+    pendingCopy: "All model years remain visible while official color charts are reviewed year by year. Two-tone combinations stay separate from the solid-color timeline.",
+    generations: tahoeAuditGenerations,
+  },
+];
+
+type CatalogRange = {
+  start: number;
+  end: number;
+  confidence: string;
+  evidence_urls: string[];
+};
+
+type CatalogModel = {
+  id: string;
+  name: string;
+  vehicle_class: string;
+  model_year_ranges: CatalogRange[];
+  aliases: string[];
+  current: boolean;
+  notes: string;
+};
+
+function numericYears(start: number, end: number) {
+  return Array.from({ length: end - start + 1 }, (_, index) =>
+    String(start + index),
+  );
+}
+
+function compactYearRange(years: string[]) {
+  const first = years[0];
+  const last = years.at(-1) ?? first;
+  return first === last ? first : `${first}–${last}`;
+}
+
+function splitCatalogYears(years: string[], maximum = 10) {
+  const groups: string[][] = [];
+  for (const year of years) {
+    const current = groups.at(-1);
+    const previous = current?.at(-1);
+    if (
+      !current ||
+      current.length >= maximum ||
+      Number(year) !== Number(previous) + 1
+    ) {
+      groups.push([year]);
+    } else {
+      current.push(year);
+    }
+  }
+  return groups;
+}
+
+function catalogEra(model: CatalogModel) {
+  return model.model_year_ranges
+    .map((range) =>
+      range.start === range.end ? String(range.start) : `${range.start}–${range.end}`,
+    )
+    .join(", ");
+}
+
+function catalogGenerations(
+  model: CatalogModel,
+  reviewedYears: Set<string>,
+): Generation[] {
+  return model.model_year_ranges.flatMap((range) => {
+    const pendingYears = numericYears(range.start, range.end).filter(
+      (year) => !reviewedYears.has(year),
+    );
+    return splitCatalogYears(pendingYears).map((years) => ({
+      id: `catalog-${model.id}-${years[0]}-${years.at(-1)}`,
+      label: "Model years",
+      range: compactYearRange(years),
+      years,
+      listingCount: 0,
+      revisionNote:
+        "This model-year block is catalogued, but its exterior-color charts remain in the research queue. Adjacent-year colors are never inferred.",
+      sources: {},
+      colors: [],
+      catalogSources: [...new Set(range.evidence_urls)],
+    }));
+  });
+}
+
+function mergeCatalogModel(model: CatalogModel): ArchiveModel {
+  const audited = auditedModels.find((item) => item.id === model.id);
+  const auditedGenerations = audited?.generations ?? [];
+  const reviewedYears = new Set(
+    auditedGenerations.flatMap((generation) => Object.keys(generation.sources)),
+  );
+  const generations = [
+    ...auditedGenerations,
+    ...catalogGenerations(model, reviewedYears),
+  ].sort((left, right) => Number(left.years[0]) - Number(right.years[0]));
+  const catalogYears = new Set(
+    model.model_year_ranges.flatMap((range) => numericYears(range.start, range.end)),
+  );
+  const listingCount = auditedGenerations.reduce(
+    (total, generation) => total + generation.listingCount,
+    0,
+  );
+  const reviewStatus = `${reviewedYears.size} of ${catalogYears.size} model years chart-reviewed`;
+
+  return {
+    id: model.id,
+    name: model.name,
+    era: catalogEra(model),
+    status: listingCount
+      ? `${audited?.status ?? `${listingCount} source-linked listings`}; ${reviewStatus}`
+      : `${catalogYears.size} model years catalogued; color charts in research queue`,
+    pendingCopy:
+      audited?.pendingCopy ??
+      `${model.vehicle_class}. ${model.notes} Model-year presence is catalogued separately from color availability.`,
+    generations,
+  };
+}
+
+const mergedCatalogModels = (modelCatalog.models as CatalogModel[]).map(
+  mergeCatalogModel,
+);
+const catalogIds = new Set(mergedCatalogModels.map((model) => model.id));
+const uncataloguedAuditedModels = auditedModels.filter(
+  (model) => !catalogIds.has(model.id),
+);
+const camaroModel = mergedCatalogModels.find((model) => model.id === "camaro");
+
+export const models: ArchiveModel[] = [
+  ...(camaroModel ? [camaroModel] : []),
+  ...mergedCatalogModels
+    .filter((model) => model.id !== "camaro")
+    .sort((left, right) => left.name.localeCompare(right.name)),
+  ...uncataloguedAuditedModels,
 ];
 
 export const defaultModelId = "camaro";

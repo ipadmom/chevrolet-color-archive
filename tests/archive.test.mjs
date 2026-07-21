@@ -7,7 +7,25 @@ import ts from "typescript";
 const root = new URL("../", import.meta.url);
 
 async function loadArchiveData() {
-  const source = await readFile(new URL("app/archive-data.ts", root), "utf8");
+  const [archiveSource, catalogSource, tahoe1995Source, tahoe2001Source] = await Promise.all([
+    readFile(new URL("app/archive-data.ts", root), "utf8"),
+    readFile(new URL("data/catalog/chevrolet-us-nameplates.json", root), "utf8"),
+    readFile(new URL("data/audits/tahoe-1995-2000.json", root), "utf8"),
+    readFile(new URL("data/audits/tahoe-2001-2007.json", root), "utf8"),
+  ]);
+  const source = archiveSource
+    .replace(
+      /^import modelCatalog from "\.\.\/data\/catalog\/chevrolet-us-nameplates\.json";\r?\n/m,
+      `const modelCatalog = ${catalogSource};\n`,
+    )
+    .replace(
+      /^import tahoe1995to2000Audit from "\.\.\/data\/audits\/tahoe-1995-2000\.json";\r?\n/m,
+      `const tahoe1995to2000Audit = ${tahoe1995Source};\n`,
+    )
+    .replace(
+      /^import tahoe2001to2007Audit from "\.\.\/data\/audits\/tahoe-2001-2007\.json";\r?\n/m,
+      `const tahoe2001to2007Audit = ${tahoe2001Source};\n`,
+    );
   const output = ts.transpileModule(source, {
     compilerOptions: {
       module: ts.ModuleKind.ESNext,
@@ -74,7 +92,14 @@ test("Camaro second generation preserves complete charts and generation order", 
 
   assert.deepEqual(
     camaro.generations.map((item) => item.range),
-    ["1967–1969", "1970–1981", "1982–1992"],
+    [
+      "1967–1969",
+      "1970–1981",
+      "1982–1992",
+      "1993–2002",
+      "2010–2019",
+      "2020–2024",
+    ],
   );
   assert.deepEqual(generation.years, [
     "1970",
@@ -578,7 +603,9 @@ test("Camaro photo references preserve review status, rights, and published byte
 test("C1 Corvette tables preserve source qualifications, codes, and counts", async () => {
   const { models } = await loadArchiveData();
   const corvette = models.find((model) => model.id === "corvette");
-  const generation = corvette.generations[0];
+  const generation = corvette.generations.find(
+    (item) => item.id === "early-corvette-audited-tables",
+  );
   const color = (id) =>
     generation.colors.find((entry) => entry.id === id);
 
@@ -832,9 +859,118 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     models
       .flatMap((model) => model.generations)
       .reduce((total, item) => total + item.listingCount, 0),
-    448,
+    492,
   );
 });
+
+test("1977 Suburban publishes the complete primary-color chart", async () => {
+  const { models } = await loadArchiveData();
+  const suburban = models.find((model) => model.id === "suburban");
+  const generation = suburban.generations.find((item) => item.years.includes("1977"));
+  const rows = generation.colors
+    .filter((color) => color.availability["1977"])
+    .map((color) => [
+      color.availability["1977"].code,
+      color.availability["1977"].label,
+      color.availability["1977"].state,
+    ]);
+
+  assert.equal(generation.listingCount, 15);
+  assert.equal(rows.length, 15);
+  assert.deepEqual(rows[0], ["86", "Black, Midnight", "listed"]);
+  assert.deepEqual(rows.at(-1), ["53", "Yellow, Colonial", "listed"]);
+  assert.match(generation.sources["1977"].locator, /PDF p\. 6/);
+  assert.match(generation.sources["1977"].url, /1977-Chevrolet-Suburban\.pdf$/);
+
+  const audit = await readFile(
+    new URL("docs/source-audit-suburban-1977.md", root),
+    "utf8",
+  );
+  for (const [code, name] of rows) {
+    assert.ok(audit.includes(`| ${code} | ${name} | Listed |`));
+  }
+  assert.match(audit, /Withheld two-tone evidence/);
+});
+
+test("Tahoe publishes only directly verified official color pages", async () => {
+  const { models } = await loadArchiveData();
+  const tahoe = models.find((model) => model.id === "tahoe");
+  const reviewed = tahoe.generations.filter((generation) => generation.listingCount);
+  const reviewedYears = reviewed.flatMap((generation) => generation.years);
+
+  assert.deepEqual(reviewedYears, ["1995", "1996", "2001"]);
+  assert.deepEqual(
+    reviewed.map((generation) => generation.listingCount),
+    [20, 9],
+  );
+  assert.equal(
+    reviewed[0].colors.filter((color) => color.availability["1995"]).length,
+    10,
+  );
+  assert.equal(
+    reviewed[0].colors.filter((color) => color.availability["1996"]).length,
+    10,
+  );
+  assert.equal(
+    reviewed[1].colors.filter((color) => color.availability["2001"]).length,
+    9,
+  );
+  assert.match(reviewed[0].sources["1995"].locator, /PDF p\. 18/);
+  assert.match(reviewed[0].sources["1996"].revision, /1-29-96/);
+  assert.equal(
+    reviewed[1].colors.every((color) => color.rowCode === "Not printed"),
+    true,
+  );
+  assert.equal(
+    tahoe.generations
+      .filter((generation) => !generation.listingCount)
+      .flatMap((generation) => generation.years)
+      .includes("2002"),
+    true,
+  );
+});
+
+test("catalog exposes every recorded U.S. nameplate and model year", async () => {
+  const [{ models }, catalogText] = await Promise.all([
+    loadArchiveData(),
+    readFile(new URL("data/catalog/chevrolet-us-nameplates.json", root), "utf8"),
+  ]);
+  const catalog = JSON.parse(catalogText);
+  const tahoe = models.find((model) => model.id === "tahoe");
+  const suburban = models.find((model) => model.id === "suburban");
+  const tahoeYears = tahoe.generations.flatMap((generation) => generation.years);
+  const suburbanYears = suburban.generations.flatMap((generation) => generation.years);
+
+  assert.equal(catalog.models.length, 149);
+  assert.equal(models.length, 149);
+  assert.equal(new Set(catalog.models.map((model) => model.id)).size, 149);
+  assert.equal(catalog.models.filter((model) => model.current).length, 18);
+  assert.equal(models[0].id, "camaro");
+  assert.deepEqual(tahoeYears, numericRangeForTest(1995, 2026));
+  assert.equal(new Set(tahoeYears).size, 32);
+  assert.equal(suburbanYears[0], "1935");
+  assert.equal(suburbanYears.at(-1), "2026");
+  assert.ok(!suburbanYears.includes("1943"));
+  assert.ok(!suburbanYears.includes("1944"));
+  assert.ok(!suburbanYears.includes("1945"));
+  assert.ok(suburbanYears.includes("1977"));
+  assert.ok(
+    tahoe.generations
+      .flatMap((generation) => generation.catalogSources ?? [])
+      .some((url) => url === "https://www.chevrolet.com/vehicles"),
+  );
+  assert.ok(models.every((model) => model.generations.length > 0));
+  assert.ok(
+    catalog.models
+      .flatMap((model) => model.model_year_ranges)
+      .flatMap((range) => range.evidence_urls)
+      .every((url) => url.startsWith("https://")),
+  );
+});
+
+function numericRangeForTest(start, end) {
+  return Array.from({ length: end - start + 1 }, (_, index) => String(start + index));
+}
 
 test("Chevelle restrictions, exclusions, normalization, and sources are explicit", async () => {
   const { models } = await loadArchiveData();
@@ -952,6 +1088,26 @@ test("each published model year resolves to exactly one generation", async () =>
   }
 });
 
+test("full GM Heritage crawler manifest preserves the complete official inventory", async () => {
+  const manifestText = await readFile(
+    new URL("crawler/manifests/gm-heritage-chevrolet-all.jsonl", root),
+    "utf8",
+  );
+  const records = manifestText
+    .trim()
+    .split(/\r?\n/)
+    .map((line) => JSON.parse(line));
+
+  assert.equal(records.length, 691);
+  assert.equal(new Set(records.map((record) => record.source_id)).size, 691);
+  assert.ok(records.every((record) => record.officiality === "official"));
+  assert.ok(records.every((record) => record.make === "Chevrolet"));
+  assert.ok(records.some((record) => record.model === "Tahoe"));
+  assert.ok(records.some((record) => record.model === "Suburban"));
+  assert.ok(records.some((record) => record.year_start === 1913));
+  assert.ok(records.some((record) => record.year_end === 2007));
+});
+
 test("production shell follows the Import Archive research flow", async () => {
   const [page, layout, explorer, styles, packageJson] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
@@ -965,12 +1121,15 @@ test("production shell follows the Import Archive research flow", async () => {
   assert.match(layout, /Chevrolet Color Archive/);
   assert.match(explorer, /Choose a model/);
   assert.match(explorer, /Choose a year/);
+  assert.match(explorer, /all model years/);
+  assert.match(explorer, /UNVERIFIED/);
   assert.match(explorer, /color timeline/);
   assert.match(explorer, /CLAIM-LEVEL EVIDENCE/);
   assert.match(explorer, /STAGE PHOTOGRAPH/);
   assert.match(explorer, /model\.generations\.flatMap/);
   assert.match(explorer, /item\.years\.includes\(year\)/);
   assert.match(explorer, /archiveListingCount/);
+  assert.match(explorer, /archiveModelYearCount/);
   assert.match(styles, /\.ia-topbar[\s\S]*height:\s*50px/);
   assert.match(styles, /\.ia-sidebar[\s\S]*width:\s*350px/);
   assert.match(styles, /\.ia-content[\s\S]*max-width:\s*576px/);

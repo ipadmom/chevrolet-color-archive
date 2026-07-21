@@ -85,6 +85,11 @@ const archiveListingCount = publishedGenerations.reduce(
   (total, { generation }) => total + generation.listingCount,
   0,
 );
+const archiveModelYearCount = models.reduce(
+  (total, model) =>
+    total + model.generations.reduce((count, generation) => count + generation.years.length, 0),
+  0,
+);
 
 function apiUrl(path: string) {
   return `${apiBase}${path}`;
@@ -162,40 +167,17 @@ function VehicleProfile({
   }
 
   return (
-    <svg
-      aria-label={`${label} profile illustration`}
-      className="vehicle-profile"
+    <div
+      aria-label={`${label} profile placeholder`}
+      className="vehicle-profile vehicle-placeholder"
       role="img"
-      viewBox="0 0 140 64"
     >
-      <rect fill="#f7f7f7" height="64" width="140" />
-      <path
-        d="M12 42h5l5-12c2-5 6-8 12-9l44-5c7-1 13 1 18 6l9 9 17 4c4 1 6 4 6 8v4h-8a11 11 0 0 0-21 0H43a11 11 0 0 0-21 0H12z"
-        fill={accent}
-        opacity=".92"
-        stroke="#444d5e"
-        strokeWidth="1.5"
-      />
-      <path
-        d="m38 24 38-5c5-1 10 1 14 5l6 7H31l4-6c1-1 2-1 3-1Z"
-        fill="#dce1e8"
-        stroke="#444d5e"
-        strokeWidth="1"
-      />
-      <circle cx="32" cy="47" fill="#fff" r="8" stroke="#444d5e" strokeWidth="3" />
-      <circle cx="109" cy="47" fill="#fff" r="8" stroke="#444d5e" strokeWidth="3" />
-      <text
-        fill="#444d5e"
-        fontFamily="Arial, sans-serif"
-        fontSize="7"
-        fontWeight="700"
-        textAnchor="middle"
-        x="70"
-        y="61"
-      >
-        {label.toUpperCase()}
-      </text>
-    </svg>
+      <span className="vehicle-body" style={{ backgroundColor: accent }} />
+      <span className="vehicle-window" />
+      <span className="vehicle-wheel vehicle-wheel-left" />
+      <span className="vehicle-wheel vehicle-wheel-right" />
+      <small>{label.toUpperCase()}</small>
+    </div>
   );
 }
 
@@ -244,6 +226,10 @@ function modelAccent(model: ArchiveModel) {
   return firstColor?.swatch ?? "#737f95";
 }
 
+function modelHasAuditedRows(model: ArchiveModel) {
+  return model.generations.some((generation) => generation.listingCount > 0);
+}
+
 function generationAccent(generation: Generation, year: string) {
   return (
     generation.colors.find((color) => color.availability[year])?.swatch ??
@@ -280,9 +266,10 @@ export function ArchiveExplorer() {
     ? colors
     : colors.filter((color) => color.availability[year]);
   const selectedColor =
-    colors.find((color) => color.id === colorId) ??
-    colors.find((color) => color.availability[year]) ??
-    colors[0];
+    colors.find(
+      (color) => color.id === colorId && Boolean(color.availability[year]),
+    ) ?? colors.find((color) => color.availability[year]);
+  const yearSource = generation?.sources[year];
   const staticPhotos = staticPhotoCandidates.filter(
     (photo) => photo.colorId === selectedColor?.id && photo.year === year,
   );
@@ -706,7 +693,9 @@ export function ArchiveExplorer() {
         <button className="ia-brand" onClick={showModelIndex} type="button">
           CHEVROLET COLOR ARCHIVE
         </button>
-        <span className="ia-top-count">{archiveListingCount} LISTINGS</span>
+        <span className="ia-top-count">
+          {models.length} MODELS · {archiveModelYearCount.toLocaleString("en-US")} MODEL YEARS · {archiveListingCount} LISTINGS
+        </span>
       </header>
 
       <nav
@@ -716,7 +705,7 @@ export function ArchiveExplorer() {
         <button className="ia-sidebar-home" onClick={showModelIndex} type="button">
           Chevrolet Models
         </button>
-        <div className="ia-sidebar-label">AUDITED MODELS</div>
+        <div className="ia-sidebar-label">ALL MODELS</div>
         {models.map((item) => (
           <button
             aria-current={item.id === model.id && view !== "models" ? "page" : undefined}
@@ -732,7 +721,7 @@ export function ArchiveExplorer() {
             />
             <span>
               <strong>{item.name}</strong>
-              <small>{item.generations.length ? item.era : "research queue"}</small>
+              <small>{item.era}</small>
             </span>
           </button>
         ))}
@@ -747,7 +736,9 @@ export function ArchiveExplorer() {
           Photo contribution queue
         </button>
         <div className="ia-sidebar-summary">
-          <strong>{archiveListingCount}</strong> source-linked listings
+          <strong>{archiveModelYearCount.toLocaleString("en-US")}</strong> model-year records
+          <br />
+          <strong>{archiveListingCount}</strong> source-linked color listings
           <br />
           Facts cite official charts. Swatches and photographs are interpretive.
         </div>
@@ -764,11 +755,11 @@ export function ArchiveExplorer() {
         <div className="ia-content">
           {view === "models" ? (
             <>
-              <h1 className="pageheader">Chevrolet Models (USA audited archive)</h1>
+              <h1 className="pageheader">Chevrolet Models (USA, all model years)</h1>
               <div className="profile-grid" aria-label="Choose a model">
                 {models.map((item) => (
                   <button
-                    className={`profile-tile ${item.generations.length ? "" : "pending"}`}
+                    className={`profile-tile ${modelHasAuditedRows(item) ? "" : "pending"}`}
                     key={item.id}
                     onClick={() => chooseModel(item.id)}
                     type="button"
@@ -779,13 +770,13 @@ export function ArchiveExplorer() {
                       photo={profilePhoto(item.id)}
                     />
                     <strong>{item.name}</strong>
-                    {!item.generations.length ? <small>RESEARCH QUEUE</small> : null}
+                    {!modelHasAuditedRows(item) ? <small>COLOR RESEARCH QUEUE</small> : null}
                   </button>
                 ))}
               </div>
               <div className="ia-accuracy-note">
-                Choose a model, then a year. Only chart-complete years open a
-                color timeline.
+                Choose a model, then a year. Every catalogued model year opens.
+                Color rows appear only when a source chart has been reviewed.
               </div>
             </>
           ) : null}
@@ -829,7 +820,7 @@ export function ArchiveExplorer() {
                               photo={profilePhoto(model.id, itemYear)}
                             />
                             <strong>{itemYear}</strong>
-                            <small>{count} COLORS</small>
+                            <small>{count ? `${count} COLORS` : "UNVERIFIED"}</small>
                           </button>
                         );
                       })}
@@ -896,25 +887,45 @@ export function ArchiveExplorer() {
                 ))}
               </div>
 
-              <details className="ia-details">
+              <details className="ia-details" open={!yearSource}>
                 <summary>▼ Archive status & source</summary>
                 <div>
                   <strong>{model.status}</strong>
                   <p>{generation.revisionNote}</p>
-                  <dl>
-                    <div>
-                      <dt>Chart</dt>
-                      <dd>{generation.sources[year].chart}</dd>
-                    </div>
-                    <div>
-                      <dt>Locator</dt>
-                      <dd>{generation.sources[year].locator}</dd>
-                    </div>
-                    <div>
-                      <dt>Revision</dt>
-                      <dd>{generation.sources[year].revision}</dd>
-                    </div>
-                  </dl>
+                  {yearSource ? (
+                    <dl>
+                      <div>
+                        <dt>Chart</dt>
+                        <dd>{yearSource.chart}</dd>
+                      </div>
+                      <div>
+                        <dt>Locator</dt>
+                        <dd>{yearSource.locator}</dd>
+                      </div>
+                      <div>
+                        <dt>Revision</dt>
+                        <dd>{yearSource.revision}</dd>
+                      </div>
+                    </dl>
+                  ) : (
+                    <>
+                      <p className="year-unverified">
+                        The exterior-color chart for {year} has not been completely
+                        reviewed. This year stays visible because unverified is not
+                        unavailable.
+                      </p>
+                      {generation.catalogSources?.length ? (
+                        <div className="catalog-source-links">
+                          <strong>MODEL-YEAR EVIDENCE</strong>
+                          {generation.catalogSources.map((url, index) => (
+                            <a href={url} key={url} rel="noreferrer" target="_blank">
+                              SOURCE {index + 1} ↗
+                            </a>
+                          ))}
+                        </div>
+                      ) : null}
+                    </>
+                  )}
                 </div>
               </details>
 
@@ -961,6 +972,14 @@ export function ArchiveExplorer() {
                       </tr>
                     </thead>
                     <tbody>
+                      {!visibleColors.length ? (
+                        <tr className="colorchart-empty">
+                          <td colSpan={2}>
+                            NO VERIFIED COLOR ROWS FOR {year}. SOURCE REVIEW IS IN
+                            PROGRESS.
+                          </td>
+                        </tr>
+                      ) : null}
                       {visibleColors.map((color) => {
                         const selectedValue = color.availability[year];
                         return (
@@ -970,7 +989,11 @@ export function ArchiveExplorer() {
                             key={color.id}
                           >
                             <th scope="row">
-                              <button onClick={() => chooseColor(color.id)} type="button">
+                              <button
+                                onClick={() => chooseColor(color.id)}
+                                title={`${color.name}, code ${color.rowCode}`}
+                                type="button"
+                              >
                                 <span className="paint-name">{color.name}</span>
                                 <span className="paint-meta">
                                   {color.name.toLowerCase().includes("metallic") ? (
@@ -1020,9 +1043,9 @@ export function ArchiveExplorer() {
                   </table>
                 </div>
                 <p className="ia-accuracy-note">
-                  ALL AVAILABILITY CLAIMS CITE COMPLETE OFFICIAL GM CHARTS. THE
-                  SELECTED YEAR IS SHADED. STRIPED BARS CARRY A MODEL, PACKAGE, OR
-                  SOURCE QUALIFICATION.
+                  {yearSource
+                    ? "ALL PUBLISHED AVAILABILITY CLAIMS CITE REVIEWED SOURCE CHARTS. THE SELECTED YEAR IS SHADED. STRIPED BARS CARRY A MODEL, PACKAGE, OR SOURCE QUALIFICATION."
+                    : "THIS MODEL YEAR IS CATALOGUED, BUT ITS COLOR CHART IS NOT YET VERIFIED. NO AVAILABILITY IS INFERRED FROM ADJACENT YEARS."}
                 </p>
               </section>
 
