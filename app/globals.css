@@ -958,7 +958,11 @@ a:hover {
   z-index: 1;
 }
 
-.timeline-bar.restricted {
+.timeline-bar.restricted,
+.timeline-bar.available_through_authorized_upfitter,
+.timeline-bar.available_with_minimum_batch,
+.timeline-bar.available_with_possible_extended_lead,
+.timeline-bar.closed_after_2026-02-02 {
   background-image:
     repeating-linear-gradient(
       135deg,

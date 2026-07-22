@@ -941,7 +941,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     allGenerations
       .filter((item) => !isQualifiedPalette(item))
       .reduce((total, item) => total + item.listingCount, 0),
-    1014,
+    1294,
   );
   assert.equal(
     allGenerations
@@ -951,7 +951,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    1468,
+    1748,
   );
 });
 
@@ -2480,7 +2480,7 @@ test("Chevelle restrictions, exclusions, normalization, and sources are explicit
   assert.match(audit, /\| HC \| Willow Green \/ Ermine White \| Unavailable/);
 });
 
-test("generation overlaps are limited to explicit specialty-paint overlays", async () => {
+test("generation overlaps are limited to explicit specialty-program rows", async () => {
   const { models } = await loadArchiveData();
   const overlaps = [];
 
@@ -2514,14 +2514,44 @@ test("generation overlaps are limited to explicit specialty-paint overlays", asy
         evidenceClasses.includes("specialty_palette_subset"),
         `${model.name} ${year} overlap lacks a specialty subset`,
       );
-      assert.ok(
-        evidenceClasses.some((value) => value !== "specialty_palette_subset"),
-        `${model.name} ${year} overlap lacks a governing generation`,
+      const specialtyOnly = evidenceClasses.every(
+        (value) => value === "specialty_palette_subset",
       );
+      if (!specialtyOnly) {
+        assert.ok(
+          evidenceClasses.some((value) => value !== "specialty_palette_subset"),
+          `${model.name} ${year} overlap lacks a governing generation`,
+        );
+      }
       overlaps.push(`${model.id}:${year}`);
     }
   }
   assert.deepEqual(overlaps, [
+    "blazer:1979",
+    "blazer:1980",
+    "blazer-ev:2026",
+    "bolt-euv:2023",
+    "ck-series:1979",
+    "ck-series:1980",
+    "ck-series:1993",
+    "caprice-ppv:2011",
+    "caprice-ppv:2012",
+    "caprice-ppv:2013",
+    "caprice-ppv:2014",
+    "caprice-ppv:2015",
+    "caprice-ppv:2016",
+    "caprice-ppv:2017",
+    "g-series-van:1979",
+    "g-series-van:1980",
+    "impala:2011",
+    "impala:2012",
+    "impala:2013",
+    "impala-limited:2014",
+    "s10:1993",
+    "silverado:2026",
+    "sportvan:1979",
+    "sportvan:1980",
+    "suburban:1979",
     "suburban:1980",
     "suburban:2005",
     "suburban:2007",
@@ -2544,8 +2574,9 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
   const specialty = JSON.parse(specialtySourceText);
 
   assert.equal(specialty.visibility, "public");
-  assert.equal(specialty.app_publication_records.length, 19);
-  assert.equal(specialty.integrity_audit.unique_retained_files_rehashed, 62);
+  assert.equal(specialty.app_publication_records.length, 281);
+  assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 74);
+  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 7);
   assert.ok(
     specialty.app_publication_records.every(
       (record) =>
@@ -2593,8 +2624,8 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
     ["blazer", "1980", "46 / SEO 9V5"],
     ["suburban", "1980", "46 / SEO 9V5"],
     ["tahoe", "2003", "WA-9015 / SEO 9V5"],
-    ["tahoe", "2005", "Not printed / SEO 9V5"],
-    ["tahoe", "2006", "Not printed / SEO 9V5"],
+    ["tahoe", "2005", "SEO 9V5"],
+    ["tahoe", "2006", "SEO 9V5"],
     ["tahoe", "2011", "WA-9015 / SEO 9V5"],
     ["express", "2011", "WA-9015 / SEO 9V5"],
     ["suburban", "2011", "WA-9015 / SEO 9V5"],

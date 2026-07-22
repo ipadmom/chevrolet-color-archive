@@ -252,6 +252,22 @@ test("long-run platform expansion exposes exact known era labels without hiding 
   );
 });
 
+test("Caprice PPV uses one sourced Zeta and Holden WM-WN band for 2011-2017", async () => {
+  const platformEras = await readJson("data/catalog/chevrolet-platform-eras.json");
+  const bands = platformEras["caprice-ppv"];
+
+  assert.equal(bands.length, 1);
+  assert.deepEqual(
+    bands.map(({ start, end }) => [start, end]),
+    [[2011, 2017]],
+  );
+  assert.equal(bandForYear(bands, 2011)?.label, "GM Zeta, Holden WM/WN Caprice PPV era");
+  assert.equal(bandForYear(bands, 2017)?.label, "GM Zeta, Holden WM/WN Caprice PPV era");
+  assert.ok(bands[0].aliases.includes("GM Zeta"));
+  assert.ok(bands[0].aliases.includes("Holden WM"));
+  assert.ok(bands[0].aliases.includes("Holden WN"));
+});
+
 test("commercial body and cab-over boundaries retain only documented model years and Chevrolet names", async () => {
   const [catalog, platformEras] = await Promise.all([
     readJson("data/catalog/chevrolet-us-nameplates.json"),
@@ -426,7 +442,15 @@ test("signature Chevrolet models participate in executable SVG design overrides"
     }
   });
 
-  for (const modelId of ["camaro", "corvette", "tahoe", "suburban", "avalanche", "ssr"]) {
+  for (const modelId of [
+    "camaro",
+    "corvette",
+    "tahoe",
+    "suburban",
+    "avalanche",
+    "ssr",
+    "caprice-ppv",
+  ]) {
     assert.ok(modelComparisons.has(modelId), `${modelId} needs an explicit SVG design override`);
   }
 });

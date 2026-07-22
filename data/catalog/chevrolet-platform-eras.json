@@ -476,6 +476,21 @@
     {"start": 1991, "end": 1996, "label": "Fourth generation, B-body", "aliases": ["B-body", "Bubble Caprice"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Caprice"], "confidence": "high", "notes": "Final North American rear-wheel-drive Caprice generation."
     }
   ],
+  "caprice-ppv": [
+    {
+      "start": 2011,
+      "end": 2017,
+      "label": "GM Zeta, Holden WM/WN Caprice PPV era",
+      "aliases": ["GM Zeta", "Zeta", "Holden WM", "Holden WN", "Caprice 9C1", "Caprice 9C3"],
+      "evidence_urls": [
+        "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+        "https://www.gmupfitter.com/wp-content/uploads/2021/05/Caprice-9C1-Specification-Guide-2017.pdf",
+        "https://en.wikipedia.org/wiki/Holden_Caprice_(WM)"
+      ],
+      "confidence": "high",
+      "notes": "Official General Motors guides establish the continuous 2011-2017 U.S. Caprice police-package run. The Holden WM/WN source identifies the exported U.S. PPV and its GM Zeta lineage. The 9C3 Detective package ends after 2013, but the shared base-era band continues through the 2017 9C1 program."
+    }
+  ],
   "monte-carlo": [
     {"start": 1970, "end": 1972, "label": "First generation, A-body", "aliases": ["A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Original personal-luxury Monte Carlo."},
     {"start": 1973, "end": 1977, "label": "Second generation, Colonnade A-body", "aliases": ["Colonnade", "A-body"], "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"], "confidence": "high", "notes": "Colonnade generation."},

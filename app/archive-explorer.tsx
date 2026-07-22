@@ -1376,6 +1376,12 @@ export function ArchiveExplorer() {
                   <div className="platform-facts">
                     <span>BASE / ERA</span>
                     <strong>{generation.label}</strong>
+                    {generation.programLabel ? (
+                      <>
+                        <span>PROGRAM / VARIANT</span>
+                        <strong>{generation.programLabel}</strong>
+                      </>
+                    ) : null}
                     {generation.platformAliases?.length ? (
                       <small>{generation.platformAliases.join(" · ")}</small>
                     ) : null}

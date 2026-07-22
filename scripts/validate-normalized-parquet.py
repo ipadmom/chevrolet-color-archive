@@ -16,12 +16,11 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 PARQUET_ROOT = ROOT / "data" / "parquet"
-ROCKAUTO_LEADS_PATH = (
-    ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
+ROCKAUTO_LEADS_PATH = ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
+SPECIALTY_LEDGER_PATH = (
+    ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
 )
-SUBURBAN_2000_2007_AUDIT_PATH = (
-    ROOT / "data" / "audits" / "suburban-2000-2007.json"
-)
+SUBURBAN_2000_2007_AUDIT_PATH = ROOT / "data" / "audits" / "suburban-2000-2007.json"
 URL_PATTERN = re.compile(r"https?://[^\s<>\"`]+")
 PLACEHOLDER_SOURCE_HOSTS = {
     "example.com",
@@ -54,6 +53,11 @@ FACTORY_CODE_REJECTED_PLACEHOLDERS = {
     "unknown",
     "unavailable",
 }
+UNRESOLVED_FOREST_GREEN_LABEL_PATTERN = re.compile(
+    r"\b(?:u\.?s\.?\s+)?forest service green\b|\bforestry green\b",
+    re.IGNORECASE,
+)
+UNRESOLVED_FOREST_GREEN_IDENTIFIER_PATTERN = re.compile(r"(?<!\d)(?:14260|5032)(?!\d)")
 
 
 def canonical_url(value: str) -> str:
@@ -92,6 +96,17 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def contains_unresolved_forest_green_identity(*values: Any) -> bool:
+    return any(
+        isinstance(value, str)
+        and (
+            UNRESOLVED_FOREST_GREEN_LABEL_PATTERN.search(value)
+            or UNRESOLVED_FOREST_GREEN_IDENTIFIER_PATTERN.search(value)
+        )
+        for value in values
+    )
+
+
 def read_rows(table_name: str) -> list[dict]:
     return pq.read_table(PARQUET_ROOT / f"{table_name}.parquet").to_pylist()
 
@@ -107,7 +122,12 @@ def require_unique(rows: list[dict], key: str, table_name: str) -> set:
 
 
 def require_fk(
-    rows: list[dict], field: str, target: set, table_name: str, *, nullable: bool = False
+    rows: list[dict],
+    field: str,
+    target: set,
+    table_name: str,
+    *,
+    nullable: bool = False,
 ) -> None:
     missing = sorted(
         {
@@ -117,7 +137,9 @@ def require_fk(
         }
     )
     if missing:
-        raise AssertionError(f"{table_name}.{field} has missing foreign keys: {missing[:5]}")
+        raise AssertionError(
+            f"{table_name}.{field} has missing foreign keys: {missing[:5]}"
+        )
     if not nullable and any(row[field] is None for row in rows):
         raise AssertionError(f"{table_name}.{field} unexpectedly contains null")
 
@@ -169,8 +191,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     manifest = json.loads((PARQUET_ROOT / "manifest.json").read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != 8:
-        raise AssertionError("normalized Parquet manifest must use schema version 8")
+    if manifest.get("schema_version") != 9:
+        raise AssertionError("normalized Parquet manifest must use schema version 9")
     tables = {item["table"]: item for item in manifest["tables"]}
     required_paint_tables = {"paint_schemes", "paint_scheme_components"}
     if not required_paint_tables <= set(tables):
@@ -224,7 +246,9 @@ def main() -> int:
         "model_year_generation_membership_id",
         "model_year_generation_memberships",
     )
-    platform_era_ids = require_unique(rows["platform_eras"], "platform_era_id", "platform_eras")
+    platform_era_ids = require_unique(
+        rows["platform_eras"], "platform_era_id", "platform_eras"
+    )
     color_identity_ids = require_unique(
         rows["color_identities"], "color_identity_id", "color_identities"
     )
@@ -279,8 +303,12 @@ def main() -> int:
     require_unique(rows["evidence_claims"], "evidence_claim_id", "evidence_claims")
     require_unique(rows["source_links"], "source_link_id", "source_links")
     photo_ids = require_unique(rows["photo_assets"], "photo_id", "photo_assets")
-    require_unique(rows["model_photo_links"], "model_photo_link_id", "model_photo_links")
-    require_unique(rows["photo_color_links"], "photo_color_link_id", "photo_color_links")
+    require_unique(
+        rows["model_photo_links"], "model_photo_link_id", "model_photo_links"
+    )
+    require_unique(
+        rows["photo_color_links"], "photo_color_link_id", "photo_color_links"
+    )
 
     require_fk(rows["generations"], "model_id", model_ids, "generations")
     require_fk(rows["model_years"], "model_id", model_ids, "model_years")
@@ -484,7 +512,9 @@ def main() -> int:
         color_identity_ids,
         "evidence_claims",
     )
-    require_fk(rows["photo_assets"], "source_page_source_id", source_ids, "photo_assets")
+    require_fk(
+        rows["photo_assets"], "source_page_source_id", source_ids, "photo_assets"
+    )
     require_fk(
         rows["photo_assets"], "source_original_source_id", source_ids, "photo_assets"
     )
@@ -504,9 +534,7 @@ def main() -> int:
         nullable=True,
     )
 
-    model_year_lookup = {
-        row["model_year_id"]: row for row in rows["model_years"]
-    }
+    model_year_lookup = {row["model_year_id"]: row for row in rows["model_years"]}
     membership_pairs = [
         (row["model_year_id"], row["generation_id"])
         for row in rows["model_year_generation_memberships"]
@@ -515,9 +543,9 @@ def main() -> int:
         raise AssertionError("model-year generation memberships repeat a pair")
     memberships_by_model_year: dict[str, list[dict]] = {}
     for membership in rows["model_year_generation_memberships"]:
-        memberships_by_model_year.setdefault(
-            membership["model_year_id"], []
-        ).append(membership)
+        memberships_by_model_year.setdefault(membership["model_year_id"], []).append(
+            membership
+        )
         model_year = model_year_lookup[membership["model_year_id"]]
         if (
             membership["model_id"] != model_year["model_id"]
@@ -535,7 +563,10 @@ def main() -> int:
             raise AssertionError(
                 f"model-year does not have exactly one primary generation: {model_year_id}"
             )
-        if primary[0]["generation_id"] != model_year_lookup[model_year_id]["generation_id"]:
+        if (
+            primary[0]["generation_id"]
+            != model_year_lookup[model_year_id]["generation_id"]
+        ):
             raise AssertionError(
                 f"model-year primary generation disagrees with membership: {model_year_id}"
             )
@@ -544,7 +575,9 @@ def main() -> int:
         for row in rows["color_availability"]
     )
     if set(availability_counts_by_membership) - set(membership_pairs):
-        raise AssertionError("availability references an unregistered generation membership")
+        raise AssertionError(
+            "availability references an unregistered generation membership"
+        )
     for membership in rows["model_year_generation_memberships"]:
         count = availability_counts_by_membership[
             (membership["model_year_id"], membership["generation_id"])
@@ -570,6 +603,31 @@ def main() -> int:
         if row["membership_role"] == "specialty_overlay"
     ]
     expected_specialty_overlay_model_years = {
+        "blazer-ev:2026",
+        "blazer:1979",
+        "blazer:1980",
+        "bolt-euv:2023",
+        "caprice-ppv:2011",
+        "caprice-ppv:2012",
+        "caprice-ppv:2013",
+        "caprice-ppv:2014",
+        "caprice-ppv:2015",
+        "caprice-ppv:2016",
+        "caprice-ppv:2017",
+        "ck-series:1979",
+        "ck-series:1980",
+        "ck-series:1993",
+        "g-series-van:1979",
+        "g-series-van:1980",
+        "impala-limited:2014",
+        "impala:2011",
+        "impala:2012",
+        "impala:2013",
+        "s10:1993",
+        "silverado:2026",
+        "sportvan:1979",
+        "sportvan:1980",
+        "suburban:1979",
         "suburban:1980",
         "suburban:2005",
         "suburban:2007",
@@ -579,7 +637,7 @@ def main() -> int:
         "tahoe:2006",
     }
     if (
-        len(specialty_memberships) != 18
+        len(specialty_memberships) != 278
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -588,7 +646,9 @@ def main() -> int:
             for row in specialty_memberships
         )
     ):
-        raise AssertionError("generation overlays do not match the explicit specialty subsets")
+        raise AssertionError(
+            "generation overlays do not match the explicit specialty subsets"
+        )
     program_memberships = [
         row
         for row in overlay_memberships
@@ -596,8 +656,7 @@ def main() -> int:
     ]
     if (
         len(program_memberships) != 3
-        or {row["model_year_id"] for row in program_memberships}
-        != {"tahoe:2000"}
+        or {row["model_year_id"] for row in program_memberships} != {"tahoe:2000"}
         or any(
             not row["generation_id"].startswith("tahoe:tahoe-2000-")
             for row in program_memberships
@@ -606,7 +665,9 @@ def main() -> int:
         raise AssertionError("2000 Tahoe program partitions are not preserved")
     suburban_2011 = model_year_lookup["suburban:2011"]
     if suburban_2011["generation_id"] != "suburban:gm-fleet-guide-qualified-2011":
-        raise AssertionError("Suburban 2011 specialty subset incorrectly became primary")
+        raise AssertionError(
+            "Suburban 2011 specialty subset incorrectly became primary"
+        )
     color_identity_generation = {
         row["color_identity_id"]: row["generation_id"]
         for row in rows["color_identities"]
@@ -624,7 +685,9 @@ def main() -> int:
         None,
     )
     if rockauto_source is None:
-        raise AssertionError("RockAuto secondary source is missing from sources.parquet")
+        raise AssertionError(
+            "RockAuto secondary source is missing from sources.parquet"
+        )
     if (
         rockauto_source["officiality"] != "secondary"
         or rockauto_source["source_type"] != "retailer_catalog_fitment"
@@ -634,7 +697,10 @@ def main() -> int:
     normalized_rockauto_tables = {
         "secondary_catalog_configurations": (
             "catalog_configuration_id",
-            [{"source_id": rockauto_source_id, **row} for row in rockauto["configurations"]],
+            [
+                {"source_id": rockauto_source_id, **row}
+                for row in rockauto["configurations"]
+            ],
         ),
         "secondary_paint_products": ("product_id", rockauto["products"]),
         "secondary_paint_fitments": ("fitment_id", rockauto["fitments"]),
@@ -647,7 +713,9 @@ def main() -> int:
         expected_by_id = {row[key]: row for row in expected_rows}
         actual_by_id = {row[key]: row for row in rows[table_name]}
         if actual_by_id != expected_by_id:
-            raise AssertionError(f"{table_name} does not exactly mirror the RockAuto ledger")
+            raise AssertionError(
+                f"{table_name} does not exactly mirror the RockAuto ledger"
+            )
 
     coded_fitment_ids = {
         row["fitment_id"]
@@ -668,10 +736,10 @@ def main() -> int:
     if any(
         row["evidence_source_id"] == rockauto_source_id
         for row in rows["color_availability"]
-    ) or any(
-        row["source_id"] == rockauto_source_id for row in rows["evidence_claims"]
-    ):
-        raise AssertionError("RockAuto secondary leads contaminated primary availability")
+    ) or any(row["source_id"] == rockauto_source_id for row in rows["evidence_claims"]):
+        raise AssertionError(
+            "RockAuto secondary leads contaminated primary availability"
+        )
 
     suburban_audit = json.loads(
         SUBURBAN_2000_2007_AUDIT_PATH.read_text(encoding="utf-8")
@@ -686,7 +754,9 @@ def main() -> int:
         for row in rows["supplemental_color_mentions"]
     }
     if set(actual_supplemental) != set(expected_supplemental):
-        raise AssertionError("supplemental color mentions drifted from the audit ledger")
+        raise AssertionError(
+            "supplemental color mentions drifted from the audit ledger"
+        )
     for key, row in actual_supplemental.items():
         year_record, mention = expected_supplemental[key]
         source = year_record["source"]
@@ -720,9 +790,7 @@ def main() -> int:
                     ),
                     "secondary_paint_products": len(secondary_product_ids),
                     "secondary_paint_fitments": len(secondary_fitment_ids),
-                    "color_code_crosswalk_candidates": len(
-                        crosswalk_candidate_ids
-                    ),
+                    "color_code_crosswalk_candidates": len(crosswalk_candidate_ids),
                 },
                 sort_keys=True,
             )
@@ -730,10 +798,14 @@ def main() -> int:
         return 0
 
     if len(rows["paint_schemes"]) != 1369:
-        raise AssertionError("paint_schemes must contain 184 Tahoe and 1,185 Suburban rows")
+        raise AssertionError(
+            "paint_schemes must contain 184 Tahoe and 1,185 Suburban rows"
+        )
     paint_scheme_counts = Counter(row["model_id"] for row in rows["paint_schemes"])
     if paint_scheme_counts != Counter({"tahoe": 184, "suburban": 1185}):
-        raise AssertionError(f"paint-scheme model counts drifted: {paint_scheme_counts}")
+        raise AssertionError(
+            f"paint-scheme model counts drifted: {paint_scheme_counts}"
+        )
     if len(rows["paint_scheme_components"]) != 2738:
         raise AssertionError("paint_scheme_components must contain two rows per scheme")
     components_by_scheme: dict[str, list[dict]] = {}
@@ -768,8 +840,7 @@ def main() -> int:
         row["model_id"] == "tahoe"
         and row["model_year"] == 1995
         and (
-            row["factory_code"] == "91L"
-            or row["source_color_name"] == "Gray, Gunmetal"
+            row["factory_code"] == "91L" or row["source_color_name"] == "Gray, Gunmetal"
         )
         for row in rows["color_availability"]
     ):
@@ -858,9 +929,13 @@ def main() -> int:
     link_counts = Counter(row["source_id"] for row in rows["source_links"])
     for source in rows["sources"]:
         if source["citation_count"] != link_counts[source["source_id"]]:
-            raise AssertionError(f"source citation count is stale: {source['source_id']}")
+            raise AssertionError(
+                f"source citation count is stale: {source['source_id']}"
+            )
         if source["citation_count"] < 1:
-            raise AssertionError(f"source has no claim or provenance link: {source['source_id']}")
+            raise AssertionError(
+                f"source has no claim or provenance link: {source['source_id']}"
+            )
 
     required_urls: set[str] = set()
     for directory in ("catalog", "audits", "photos", "sources"):
@@ -889,9 +964,7 @@ def main() -> int:
         )
 
     registry = json.loads(
-        (ROOT / "data" / "sources" / "source-registry.json").read_text(
-            encoding="utf-8"
-        )
+        (ROOT / "data" / "sources" / "source-registry.json").read_text(encoding="utf-8")
     )
     if registry["source_count"] != len(rows["sources"]):
         raise AssertionError("JSON source registry count is stale")
@@ -923,12 +996,9 @@ def main() -> int:
         raise AssertionError("JSON source registry and sources.parquet disagree")
 
     artifact_ledger = json.loads(
-        (
-            ROOT
-            / "data"
-            / "sources"
-            / "gm-heritage-chevrolet-artifacts.json"
-        ).read_text(encoding="utf-8")
+        (ROOT / "data" / "sources" / "gm-heritage-chevrolet-artifacts.json").read_text(
+            encoding="utf-8"
+        )
     )
     artifact_entries = artifact_ledger["entries"]
     if artifact_ledger["source_count"] != 691 or len(artifact_entries) != 691:
@@ -955,16 +1025,11 @@ def main() -> int:
 
     modern_ledger = json.loads(
         (
-            ROOT
-            / "data"
-            / "sources"
-            / "modern-chevrolet-color-source-candidates.json"
+            ROOT / "data" / "sources" / "modern-chevrolet-color-source-candidates.json"
         ).read_text(encoding="utf-8")
     )
     retained_modern_sources = [
-        item
-        for item in modern_ledger["sources"]
-        if item.get("local_file_path")
+        item for item in modern_ledger["sources"] if item.get("local_file_path")
     ]
     fleet_guides = [
         item
@@ -979,9 +1044,7 @@ def main() -> int:
         "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
         "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
     }
-    retained_modern_source_ids = {
-        item["source_id"] for item in retained_modern_sources
-    }
+    retained_modern_source_ids = {item["source_id"] for item in retained_modern_sources}
     if len(retained_modern_sources) != 23:
         raise AssertionError("modern source ledger no longer retains 23 complete PDFs")
     if not qualified_palette_source_ids <= retained_modern_source_ids:
@@ -1024,7 +1087,9 @@ def main() -> int:
                 f"modern source retrieval host type is stale: {source_id}"
             )
         if source["http_status"] != item.get("http_status"):
-            raise AssertionError(f"modern source HTTP status was synthesized: {source_id}")
+            raise AssertionError(
+                f"modern source HTTP status was synthesized: {source_id}"
+            )
         if source["content_sha256"] != item["sha256"]:
             raise AssertionError(f"modern source hash is stale: {source_id}")
         if source["content_length_bytes"] != item["bytes"]:
@@ -1041,27 +1106,44 @@ def main() -> int:
         if revision["artifact_sha256"] != item["sha256"]:
             raise AssertionError(f"modern source revision hash is stale: {source_id}")
         if revision["byte_length"] != item["bytes"]:
-            raise AssertionError(f"modern source revision byte count is stale: {source_id}")
+            raise AssertionError(
+                f"modern source revision byte count is stale: {source_id}"
+            )
         if revision["pdf_page_count"] != item["page_count"]:
-            raise AssertionError(f"modern source revision page count is stale: {source_id}")
+            raise AssertionError(
+                f"modern source revision page count is stale: {source_id}"
+            )
         if revision["artifact_relpath"] != item["local_file_path"]:
-            raise AssertionError(f"modern source revision local path is stale: {source_id}")
+            raise AssertionError(
+                f"modern source revision local path is stale: {source_id}"
+            )
         if revision["http_status"] != item.get("http_status"):
             raise AssertionError(
                 f"modern source revision HTTP status was synthesized: {source_id}"
             )
         if revision["integrity_status"] != "complete_file_rehashed":
-            raise AssertionError(f"modern source revision lost rehash status: {source_id}")
+            raise AssertionError(
+                f"modern source revision lost rehash status: {source_id}"
+            )
 
         retained_path = (ROOT / item["local_file_path"]).resolve()
-        if not retained_path.is_relative_to(ROOT.resolve()) or not retained_path.is_file():
-            raise AssertionError(f"retained modern source is missing or unsafe: {source_id}")
+        if (
+            not retained_path.is_relative_to(ROOT.resolve())
+            or not retained_path.is_file()
+        ):
+            raise AssertionError(
+                f"retained modern source is missing or unsafe: {source_id}"
+            )
         if retained_path.stat().st_size != item["bytes"]:
-            raise AssertionError(f"retained modern source byte count changed: {source_id}")
+            raise AssertionError(
+                f"retained modern source byte count changed: {source_id}"
+            )
         if sha256_file(retained_path) != item["sha256"]:
             raise AssertionError(f"retained modern source hash changed: {source_id}")
         if len(PdfReader(retained_path, strict=False).pages) != item["page_count"]:
-            raise AssertionError(f"retained modern source page count changed: {source_id}")
+            raise AssertionError(
+                f"retained modern source page count changed: {source_id}"
+            )
 
         expected_provenance_urls = {"source_retrieval_url": item["retrieval_url"]}
         if item.get("landing_url"):
@@ -1089,7 +1171,9 @@ def main() -> int:
         if source["content_sha256"] != artifact["artifact_sha256"]:
             raise AssertionError(f"artifact hash is stale: {artifact['source_id']}")
         if source["content_length_bytes"] != artifact["byte_length"]:
-            raise AssertionError(f"artifact byte count is stale: {artifact['source_id']}")
+            raise AssertionError(
+                f"artifact byte count is stale: {artifact['source_id']}"
+            )
 
     availability_links = {
         row["entity_id"]
@@ -1098,11 +1182,15 @@ def main() -> int:
     }
     if availability_links != availability_ids:
         raise AssertionError("not every availability row has exactly one evidence link")
-    claimed_availability_ids = [row["availability_id"] for row in rows["evidence_claims"]]
+    claimed_availability_ids = [
+        row["availability_id"] for row in rows["evidence_claims"]
+    ]
     if len(claimed_availability_ids) != len(set(claimed_availability_ids)):
         raise AssertionError("an availability row has multiple current evidence claims")
     if set(claimed_availability_ids) != availability_ids:
-        raise AssertionError("not every availability row has an immutable evidence claim")
+        raise AssertionError(
+            "not every availability row has an immutable evidence claim"
+        )
     revision_lookup = {
         row["source_revision_id"]: row for row in rows["source_revisions"]
     }
@@ -1154,11 +1242,13 @@ def main() -> int:
             availability["model_year_id"], set()
         ).add(availability["claim_status"])
     research_audit_state_by_model_year = {
-        row["model_year_id"]: row["audit_state"]
-        for row in rows["model_year_research"]
+        row["model_year_id"]: row["audit_state"] for row in rows["model_year_research"]
     }
     for model_year in rows["model_years"]:
-        if model_year["verified_color_count"] != verified_counts[model_year["model_year_id"]]:
+        if (
+            model_year["verified_color_count"]
+            != verified_counts[model_year["model_year_id"]]
+        ):
             raise AssertionError(
                 f"verified-color count is stale: {model_year['model_year_id']}"
             )
@@ -1184,7 +1274,9 @@ def main() -> int:
             )
 
     if research_model_year_ids != model_year_ids:
-        raise AssertionError("model-year research ledger does not cover the full catalog")
+        raise AssertionError(
+            "model-year research ledger does not cover the full catalog"
+        )
     audit_counts = Counter(row["audit_state"] for row in rows["model_year_research"])
     allowed_audit_states = {
         "verified_complete",
@@ -1207,9 +1299,10 @@ def main() -> int:
                 raise AssertionError(
                     f"qualified historical status is stale: {model_year['model_year_id']}"
                 )
-            if not research["color_chart_reviewed"] or research[
-                "completely_reviewed_color_chart"
-            ]:
+            if (
+                not research["color_chart_reviewed"]
+                or research["completely_reviewed_color_chart"]
+            ):
                 raise AssertionError(
                     f"qualified historical review flags are invalid: {model_year['model_year_id']}"
                 )
@@ -1218,9 +1311,10 @@ def main() -> int:
                 raise AssertionError(
                     f"qualified palette status is stale: {model_year['model_year_id']}"
                 )
-            if not research["color_chart_reviewed"] or research[
-                "completely_reviewed_color_chart"
-            ]:
+            if (
+                not research["color_chart_reviewed"]
+                or research["completely_reviewed_color_chart"]
+            ):
                 raise AssertionError(
                     f"qualified palette review flags are invalid: {model_year['model_year_id']}"
                 )
@@ -1229,20 +1323,27 @@ def main() -> int:
                 raise AssertionError(
                     f"specialty subset status is stale: {model_year['model_year_id']}"
                 )
-            if not research["color_chart_reviewed"] or research[
-                "completely_reviewed_color_chart"
-            ]:
+            if (
+                not research["color_chart_reviewed"]
+                or research["completely_reviewed_color_chart"]
+            ):
                 raise AssertionError(
                     f"specialty subset review flags are invalid: {model_year['model_year_id']}"
                 )
     for research in rows["model_year_research"]:
-        if research["exact_listing_count"] != verified_counts[research["model_year_id"]]:
+        if (
+            research["exact_listing_count"]
+            != verified_counts[research["model_year_id"]]
+        ):
             raise AssertionError(
                 f"research ledger listing count is stale: {research['model_year_id']}"
             )
-        if research["listed_count"] + research["restricted_count"] != research[
-            "exact_listing_count"
-        ]:
+        if (
+            research["listed_count"]
+            + research["restricted_count"]
+            + research["other_availability_state_count"]
+            != research["exact_listing_count"]
+        ):
             raise AssertionError(
                 f"research ledger state counts do not reconcile: {research['model_year_id']}"
             )
@@ -1253,10 +1354,33 @@ def main() -> int:
         if row["claim_status"] == "published_specialty_palette_subset"
     ]
     expected_specialty_model_years = {
+        "blazer-ev:2026",
+        "blazer:1979",
         "blazer:1980",
+        "bolt-euv:2023",
+        "caprice-ppv:2011",
+        "caprice-ppv:2012",
+        "caprice-ppv:2013",
+        "caprice-ppv:2014",
+        "caprice-ppv:2015",
+        "caprice-ppv:2016",
+        "caprice-ppv:2017",
+        "ck-series:1979",
         "ck-series:1980",
+        "ck-series:1993",
         "express:2011",
+        "g-series-van:1979",
+        "g-series-van:1980",
+        "impala-limited:2014",
+        "impala:2011",
+        "impala:2012",
+        "impala:2013",
+        "s10:1993",
+        "silverado:2026",
         "silverado-hd:2011",
+        "sportvan:1979",
+        "sportvan:1980",
+        "suburban:1979",
         "suburban:1980",
         "suburban:2005",
         "suburban:2007",
@@ -1266,22 +1390,186 @@ def main() -> int:
         "tahoe:2006",
         "tahoe:2011",
     }
-    if len(specialty_rows) != 41 or {
-        row["model_year_id"] for row in specialty_rows
-    } != expected_specialty_model_years:
-        raise AssertionError("published specialty subset coverage is not the reviewed set")
+    if (
+        len(specialty_rows) != 321
+        or {row["model_year_id"] for row in specialty_rows}
+        != expected_specialty_model_years
+    ):
+        raise AssertionError(
+            "published specialty subset coverage is not the reviewed set"
+        )
+    expected_application_type_counts = Counter(
+        {
+            "manufacturer_listed": 1_427,
+            "authorized_upfitter_post_build": 120,
+            "special_equipment_option_paint": 46,
+            "specialty_program_unspecified": 41,
+            "manufacturer_special_equipment_option": 28,
+            "standard_program_palette": 82,
+            "factory_installed_special_equipment_option": 4,
+        }
+    )
+    application_type_counts = Counter(
+        row["application_type"] for row in rows["color_availability"]
+    )
+    if application_type_counts != expected_application_type_counts or any(
+        not row["application_type"].strip() for row in rows["color_availability"]
+    ):
+        raise AssertionError("availability application types are incomplete or stale")
+    expected_specialty_state_counts = Counter(
+        {
+            "available": 107,
+            "available_through_authorized_upfitter": 120,
+            "available_with_minimum_batch": 7,
+            "available_with_possible_extended_lead": 4,
+            "closed_after_2026-02-02": 42,
+            "restricted": 41,
+        }
+    )
+    if Counter(row["availability_state"] for row in specialty_rows) != (
+        expected_specialty_state_counts
+    ):
+        raise AssertionError("specialty availability states are incomplete or stale")
+
+    kerr_rows = [
+        row
+        for row in specialty_rows
+        if row["application_type"] == "authorized_upfitter_post_build"
+    ]
+    if (
+        len(kerr_rows) != 120
+        or {row["model_year_id"] for row in kerr_rows}
+        != {"impala:2011", "impala:2012", "impala:2013", "impala-limited:2014"}
+        or {row["availability_state"] for row in kerr_rows}
+        != {"available_through_authorized_upfitter"}
+        or any(not row["restriction"] for row in kerr_rows)
+    ):
+        raise AssertionError("Impala Kerr authorized-upfitter palettes are incomplete")
+
+    silverado_2026 = [
+        row for row in specialty_rows if row["model_year_id"] == "silverado:2026"
+    ]
+    if (
+        len(silverado_2026) != 50
+        or Counter(row["evidence_source_id"] for row in silverado_2026)
+        != Counter(
+            {
+                "gm-2026-silverado-9c1-041426": 25,
+                "gm-2026-silverado-5w4-041426": 25,
+            }
+        )
+        or Counter(row["availability_state"] for row in silverado_2026)
+        != Counter({"available": 8, "closed_after_2026-02-02": 42})
+    ):
+        raise AssertionError("2026 Silverado 9C1 and 5W4 palettes are incomplete")
+
+    blazer_ev_rows = [row for row in specialty_rows if row["model_id"] == "blazer-ev"]
+    if (
+        len(blazer_ev_rows) != 4
+        or {row["model_year"] for row in blazer_ev_rows} != {2026}
+        or {row["availability_state"] for row in blazer_ev_rows}
+        != {"available_with_possible_extended_lead"}
+    ):
+        raise AssertionError(
+            "Blazer EV negative-year boundary or 2026 SEO palette drifted"
+        )
+
+    bolt_euv_rows = [
+        row for row in specialty_rows if row["model_year_id"] == "bolt-euv:2023"
+    ]
+    if len(bolt_euv_rows) != 7 or {
+        row["application_type"] for row in bolt_euv_rows
+    } != {"standard_program_palette"}:
+        raise AssertionError("2023 Bolt EUV 5W4 palette is incomplete")
+
+    caprice_rows = [row for row in specialty_rows if row["model_id"] == "caprice-ppv"]
+    expected_caprice_year_counts = Counter(
+        {2011: 14, 2012: 16, 2013: 14, 2014: 7, 2015: 6, 2016: 6, 2017: 4}
+    )
+    if (
+        len(caprice_rows) != 67
+        or Counter(row["model_year"] for row in caprice_rows)
+        != expected_caprice_year_counts
+        or Counter(row["availability_state"] for row in caprice_rows)
+        != Counter({"available": 60, "available_with_minimum_batch": 7})
+        or {row["application_type"] for row in caprice_rows}
+        != {"standard_program_palette"}
+        or {row["factory_code"] for row in caprice_rows} != {None}
+        or {row["factory_code_status"] for row in caprice_rows}
+        != {"not_printed_in_source"}
+        or any(not row["restriction"] for row in caprice_rows)
+    ):
+        raise AssertionError("2011-2017 Caprice PPV program palettes are incomplete")
+
+    caprice_generation_rows = [
+        row for row in rows["generations"] if row["model_id"] == "caprice-ppv"
+    ]
+    expected_caprice_program_ids = {
+        f"gm-{year}-caprice-{program}-standard-palette"
+        for year, programs in {
+            2011: ("9c1-ppv", "9c3-detective"),
+            2012: ("9c1-ppv", "9c3-detective"),
+            2013: ("9c1-ppv", "9c3-detective"),
+            2014: ("9c1-ppv",),
+            2015: ("9c1-ppv",),
+            2016: ("9c1-ppv",),
+            2017: ("9c1-ppv",),
+        }.items()
+        for program in programs
+    }
+    if {
+        row["program_id"] for row in caprice_generation_rows if row["program_id"]
+    } != expected_caprice_program_ids or any(
+        not row["program_label"] for row in caprice_generation_rows if row["program_id"]
+    ):
+        raise AssertionError("Caprice PPV program identities are not normalized")
+    ck_1993_rows = [
+        row for row in specialty_rows if row["model_year_id"] == "ck-series:1993"
+    ]
+    if (
+        Counter((row["source_color_name"], row["factory_code"]) for row in ck_1993_rows)
+        != Counter(
+            {
+                ("Tangier Orange", "WE9417"): 1,
+                ("Wheatland Yellow", "WE9418"): 1,
+                ("Woodland Green", "WE9015"): 1,
+                ("Doeskin Tan", "WE9403"): 1,
+            }
+        )
+        or {row["evidence_source_id"] for row in ck_1993_rows}
+        != {"gm-heritage-1993-chevrolet-truck"}
+        or {row["application_type"] for row in ck_1993_rows}
+        != {"manufacturer_special_equipment_option"}
+        or {row["availability_state"] for row in ck_1993_rows} != {"available"}
+        or {row["factory_code_status"] for row in ck_1993_rows} != {"printed_in_source"}
+        or any(
+            "does not state that the paint was installed at the assembly plant"
+            not in row["restriction"]
+            for row in ck_1993_rows
+        )
+    ):
+        raise AssertionError("1993 C/K Pickup specialty paints are incomplete")
     woodland_rows = [
         row
         for row in specialty_rows
-        if row["source_color_name"] == "Woodland Green"
+        if row["source_color_name"] in {"Woodland Green", "Green, Woodland"}
     ]
-    if len(woodland_rows) != 11 or any(
-        row["source_color_name"] != "Woodland Green"
-        or row["availability_state"] != "restricted"
-        or not row["restriction"]
-        for row in woodland_rows
+    if (
+        len(woodland_rows) != 16
+        or Counter(row["availability_state"] for row in woodland_rows)
+        != Counter({"restricted": 12, "closed_after_2026-02-02": 2, "available": 2})
+        or Counter(row["application_type"] for row in woodland_rows)
+        != Counter(
+            {
+                "specialty_program_unspecified": 12,
+                "special_equipment_option_paint": 2,
+                "factory_installed_special_equipment_option": 1,
+                "manufacturer_special_equipment_option": 1,
+            }
+        )
+        or any(not row["restriction"] for row in woodland_rows)
     ):
-        raise AssertionError("Woodland Green subset rows lost their exact restricted scope")
+        raise AssertionError("Woodland Green rows lost their exact program scope")
     seo_rows = [
         row
         for row in specialty_rows
@@ -1291,7 +1579,9 @@ def main() -> int:
         (
             int(year_record["year"]),
             color["name"],
-            None if color["factory_code_status"] == "explicit none" else color["factory_code"],
+            None
+            if color["factory_code_status"] == "explicit none"
+            else color["factory_code"],
             (
                 "explicit_none_in_source"
                 if color["factory_code_status"] == "explicit none"
@@ -1319,15 +1609,71 @@ def main() -> int:
         for row in seo_rows
     ):
         raise AssertionError("Suburban SEO rows lost their restricted scope")
-    if any(
-        row["source_color_name"] in {"Forest Service Green", "Forestry Green"}
-        for row in rows["color_availability"]
-    ):
-        raise AssertionError("an unresolved specialty research lead became availability")
-
     claim_by_availability = {
         row["availability_id"]: row for row in rows["evidence_claims"]
     }
+    source_by_id = {row["source_id"]: row for row in rows["sources"]}
+    specialty_ledger = json.loads(SPECIALTY_LEDGER_PATH.read_text(encoding="utf-8"))
+    unresolved_identities = {
+        row["identity_id"]: row
+        for row in specialty_ledger["identity_ledger"]
+        if "unresolved" in row["status"]
+    }
+    expected_unresolved_identity_ids = {
+        "usfs-forest-service-green-fs595-14260",
+        "usfs-forest-service-green-5032",
+    }
+    if set(unresolved_identities) != expected_unresolved_identity_ids:
+        raise AssertionError("Forest Service Green unresolved identities drifted")
+    unresolved_source_urls = {
+        canonical_url(source["url"])
+        for source in specialty_ledger["usda_primary_sources"]
+    }
+
+    for availability in rows["color_availability"]:
+        if contains_unresolved_forest_green_identity(
+            availability["source_color_name"],
+            availability["factory_code"],
+            availability["touch_up_code"],
+        ):
+            raise AssertionError(
+                "an unresolved Forest Service Green identity or identifier became availability"
+            )
+        claim = claim_by_availability[availability["availability_id"]]
+        if contains_unresolved_forest_green_identity(
+            claim["transcribed_color_name"],
+            claim["transcribed_factory_code"],
+            claim["transcribed_touch_up_code"],
+        ):
+            raise AssertionError(
+                "an unresolved Forest Service Green identity entered an evidence claim"
+            )
+        source = source_by_id[claim["source_id"]]
+        if canonical_url(source["canonical_url"]) in unresolved_source_urls:
+            raise AssertionError(
+                "a USDA Forest Service research source was promoted to Chevrolet availability evidence"
+            )
+
+    for record in specialty_ledger["app_publication_records"]:
+        if record.get("identity_id") in expected_unresolved_identity_ids or (
+            contains_unresolved_forest_green_identity(
+                record.get("label"),
+                record.get("source_label_raw"),
+                record.get("paint_code"),
+                record.get("rpo_code"),
+                record.get("seo_code"),
+                record.get("code_display"),
+                record.get("touch_up_paint_number"),
+            )
+        ):
+            raise AssertionError(
+                "the specialty publication ledger contains an unresolved Forest Service Green identity"
+            )
+        if canonical_url(record["source"]["url"]) in unresolved_source_urls:
+            raise AssertionError(
+                "the specialty publication ledger routes a USDA research source as Chevrolet availability"
+            )
+
     if any(
         claim_by_availability[row["availability_id"]]["verification_status"]
         != "human_checked_specialty_palette_subset"
@@ -1340,7 +1686,9 @@ def main() -> int:
         if row["claim_type"] == "model_year_source_candidate"
     }
     if candidate_links != source_candidate_ids:
-        raise AssertionError("not every model-year source candidate has a provenance link")
+        raise AssertionError(
+            "not every model-year source candidate has a provenance link"
+        )
     expected_ranks = {"dedicated": 1, "related_line": 2, "generic_full_line": 3}
     for candidate in rows["model_year_source_candidates"]:
         if candidate["candidate_rank"] != expected_ranks[candidate["relation"]]:
@@ -1352,14 +1700,18 @@ def main() -> int:
         row["factory_paint_match_status"] != "unverified"
         for row in rows["photo_color_links"]
     ):
-        raise AssertionError("a photo was promoted to factory-paint evidence without review")
+        raise AssertionError(
+            "a photo was promoted to factory-paint evidence without review"
+        )
     for photo in rows["photo_assets"]:
         expected_prefix = (
             "https://github.com/ipadmom/chevrolet-color-archive/releases/download/"
             f"{photo['release_tag']}/"
         )
         if not photo["archive_url"].startswith(expected_prefix):
-            raise AssertionError(f"photo is not archived in the pinned GitHub Release: {photo['photo_id']}")
+            raise AssertionError(
+                f"photo is not archived in the pinned GitHub Release: {photo['photo_id']}"
+            )
 
     coverage = manifest["coverage"]
     expected = {
@@ -1378,9 +1730,7 @@ def main() -> int:
         ),
         "secondary_paint_products": len(rows["secondary_paint_products"]),
         "secondary_paint_fitments": len(rows["secondary_paint_fitments"]),
-        "color_code_crosswalk_candidates": len(
-            rows["color_code_crosswalk_candidates"]
-        ),
+        "color_code_crosswalk_candidates": len(rows["color_code_crosswalk_candidates"]),
         "supplemental_color_mentions": len(rows["supplemental_color_mentions"]),
         "sources": len(rows["sources"]),
         "source_revisions": len(rows["source_revisions"]),
@@ -1395,9 +1745,7 @@ def main() -> int:
                 if row["research_status"] == "reviewed_specialty_palette_subset"
             }
         ),
-        "specialty_palette_subset_model_years": len(
-            expected_specialty_model_years
-        ),
+        "specialty_palette_subset_model_years": len(expected_specialty_model_years),
         "specialty_palette_subset_availability_rows": len(specialty_rows),
     }
     for key, value in expected.items():

@@ -8,12 +8,20 @@ import suburbanBrochurePaletteAudit from "../data/audits/suburban-brochure-palet
 import modernColorSourceData from "../data/sources/modern-chevrolet-color-source-candidates.json";
 import specialtyColorSourceData from "../data/sources/specialty-color-source-candidates.json";
 
-export type AvailabilityState = "listed" | "restricted";
+export type AvailabilityState =
+  | "listed"
+  | "restricted"
+  | "available"
+  | "available_through_authorized_upfitter"
+  | "available_with_minimum_batch"
+  | "available_with_possible_extended_lead"
+  | "closed_after_2026-02-02";
 
 export type Availability = {
   state: AvailabilityState;
   label: string;
   code: string;
+  applicationType?: string;
   factoryCode?: string | null;
   factoryCodeStatus?: string;
   touchUpCode?: string;
@@ -70,6 +78,7 @@ export type YearSource = YearSourceCitation & {
 export type Generation = {
   id: string;
   label: string;
+  programId?: string;
   programLabel?: string;
   range: string;
   years: string[];
@@ -1233,6 +1242,7 @@ function buildTahoeProgramGenerations(audits: TahoeAuditYear[]) {
       return {
         id: `tahoe-${year}-${program.program_id}`,
         label: program.platform_family,
+        programId: program.program_id,
         programLabel: program.program_label,
         range: year,
         years: [year],
@@ -4075,9 +4085,16 @@ type SpecialtyPublicationRecord = {
   catalog_model_ids: string[];
   source_model_scope: string[];
   label: string;
+  source_label_raw?: string;
   finish: string;
   paint_code: string;
-  seo_code: string;
+  rpo_code?: string;
+  seo_code?: string;
+  code_display?: string;
+  program_id?: string;
+  program_label?: string;
+  application_type?: string;
+  availability_state?: AvailabilityState;
   touch_up_paint_number: string | null;
   restrictions: string[];
   refinish_numbers?: Record<string, string>;
@@ -4102,23 +4119,40 @@ function buildSpecialtyColorGenerations() {
         record.paint_code.trim().toLowerCase() === "not printed"
           ? null
           : record.paint_code;
-      const code = [record.paint_code, `SEO ${record.seo_code}`]
-        .filter(Boolean)
-        .join(" / ");
+      const code =
+        record.code_display ??
+        [
+          printedPaintCode,
+          record.rpo_code ? `RPO ${record.rpo_code}` : null,
+          record.seo_code ? `SEO ${record.seo_code}` : null,
+        ]
+          .filter(Boolean)
+          .join(" / ");
       const refinishNote = record.refinish_numbers
         ? ` Refinish references printed by GM: ${Object.entries(record.refinish_numbers)
             .map(([maker, value]) => `${maker.replaceAll("_", " ")} ${value}`)
             .join("; ")}.`
         : "";
+      const applicationNote =
+        record.application_type?.startsWith("authorized_upfitter")
+          ? " The cited program applied this paint after vehicle assembly through the named authorized upfitter; it is not represented as an assembly-plant factory finish."
+          : "";
+      const sourceLabelNote =
+        record.source_label_raw && record.source_label_raw !== record.label
+          ? ` The cited table prints the label as “${record.source_label_raw}”.`
+          : "";
       const generation: Generation = {
         id: `specialty-${modelId}-${record.record_id}`,
         label: `${year} Chevrolet specialty paint subset`,
+        programId: record.program_id,
+        programLabel: record.program_label,
         range: year,
         years: [year],
         listingCount: 1,
         revisionNote:
           `This is an exact specialty-paint subset for ${record.source_model_scope.join("; ")}. ` +
-          "It is not a complete model-year exterior-color palette, and adjacent years are not inferred.",
+          "It is not a complete model-year exterior-color palette, and adjacent years are not inferred." +
+          applicationNote,
         sources: {
           [year]: {
             name: record.source.title,
@@ -4151,12 +4185,15 @@ function buildSpecialtyColorGenerations() {
             rowCode: code,
             note:
               "Interpretive screen swatch only; it is not sampled factory paint evidence." +
-              refinishNote,
+              refinishNote +
+              sourceLabelNote,
             availability: {
               [year]: {
-                state: "restricted",
+                state: record.availability_state ?? "restricted",
                 label: record.label,
                 code,
+                applicationType:
+                  record.application_type ?? "specialty_program_unspecified",
                 factoryCode: printedPaintCode,
                 factoryCodeStatus: printedPaintCode ? "printed" : "not printed",
                 restriction: record.restrictions.join(" "),

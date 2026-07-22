@@ -69,6 +69,646 @@ QUALIFIED_PALETTE_ARTIFACTS = {
 }
 
 
+class SpecialtyProgramDataTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.specialty = BUILD.json_load(
+            ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
+        )
+        cls.records = cls.specialty["app_publication_records"]
+        cls.records_by_id = {row["record_id"]: row for row in cls.records}
+
+    @classmethod
+    def program_rows(cls, program_id: str) -> list[dict]:
+        return [row for row in cls.records if row.get("program_id") == program_id]
+
+    def test_specialty_publication_boundary_is_exact(self) -> None:
+        self.assertEqual(281, len(self.records))
+        self.assertEqual(281, len(self.records_by_id))
+        self.assertEqual(
+            301,
+            sum(len(row["catalog_model_ids"]) for row in self.records),
+        )
+        self.assertTrue(
+            all(
+                row["publication_status"] == "published_specialty_subset"
+                for row in self.records
+            )
+        )
+        self.assertTrue(
+            all(
+                row["source"]["archive_url"].startswith(
+                    "https://github.com/ipadmom/chevrolet-color-archive/releases/"
+                )
+                for row in self.records
+            )
+        )
+
+        nonpublished = self.specialty["verified_not_published"]
+        self.assertEqual(10, len(nonpublished))
+        self.assertEqual(10, len({row["record_id"] for row in nonpublished}))
+        self.assertFalse(
+            set(self.records_by_id) & {row["record_id"] for row in nonpublished}
+        )
+
+    def test_forest_service_green_stays_unresolved_and_nonrouting(self) -> None:
+        self.assertFalse(
+            any(row["label"] == "Forest Service Green" for row in self.records)
+        )
+        self.assertFalse(
+            any(
+                row["label"] == "Forest Service Green"
+                for row in self.specialty["verified_not_published"]
+            )
+        )
+
+        leads = self.specialty["search_leads"]
+        self.assertEqual(1, len(leads))
+        self.assertEqual(
+            "research_only_unresolved_chevrolet_application",
+            leads[0]["status"],
+        )
+        self.assertNotIn("catalog_model_ids", leads[0])
+        self.assertNotIn("model_year", leads[0])
+
+        identities = {
+            row["identity_id"]: row for row in self.specialty["identity_ledger"]
+        }
+        self.assertEqual(
+            "verified_agency_color_unresolved_chevrolet_application",
+            identities["usfs-forest-service-green-fs595-14260"]["status"],
+        )
+        self.assertEqual(
+            "verified_identifier_relationship_to_fs595_14260_unresolved",
+            identities["usfs-forest-service-green-5032"]["status"],
+        )
+        ck_woodland = identities["gm-woodland-green-we9015-1993-ck"]
+        self.assertEqual(["WE9015", "SEO 9V5"], ck_woodland["codes"])
+        self.assertIn("Forest Service Green", ck_woodland["not_equated_to"])
+        self.assertIn("Woodland Green WA-9015", ck_woodland["not_equated_to"])
+        self.assertEqual(6, len(self.specialty["usda_primary_sources"]))
+
+    def test_historic_factory_and_fleet_rows_preserve_printed_codes(self) -> None:
+        rows_1979 = [row for row in self.records if row["model_year"] == 1979]
+        self.assertEqual(
+            {
+                "9V2": (
+                    "Tangier Orange",
+                    "Not printed",
+                    {
+                        "ck-series",
+                        "blazer",
+                        "suburban",
+                        "g-series-van",
+                        "sportvan",
+                    },
+                ),
+                "9V4": (
+                    "Wheatland Yellow",
+                    "Not printed",
+                    {
+                        "ck-series",
+                        "blazer",
+                        "suburban",
+                        "g-series-van",
+                        "sportvan",
+                    },
+                ),
+                "9V8": (
+                    "Crimson Red",
+                    "Not printed",
+                    {"g-series-van", "sportvan"},
+                ),
+            },
+            {
+                row["seo_code"]: (
+                    row["label"],
+                    row["paint_code"],
+                    set(row["catalog_model_ids"]),
+                )
+                for row in rows_1979
+            },
+        )
+        self.assertEqual(
+            {"gm-heritage-1979-chevrolet-blazer"},
+            {row["source"]["source_id"] for row in rows_1979},
+        )
+        self.assertEqual({14}, {row["source"]["pdf_page"] for row in rows_1979})
+
+        rows_1980 = [row for row in self.records if row["model_year"] == 1980]
+        self.assertEqual(
+            {
+                ("Woodland Green", "46", "9V5"),
+                ("Tangier Orange", "Not printed", "9V2"),
+                ("Wheatland Yellow", "Not printed", "9V4"),
+                ("Crimson Red", "Not printed", "9V8"),
+            },
+            {(row["label"], row["paint_code"], row["seo_code"]) for row in rows_1980},
+        )
+        crimson_1980 = next(row for row in rows_1980 if row["seo_code"] == "9V8")
+        restrictions = " ".join(crimson_1980["restrictions"])
+        self.assertIn("Crimson Red", restrictions)
+        self.assertIn("CARDINAL RED", restrictions)
+        for code in ("9V2", "9V4"):
+            row = next(item for item in rows_1980 if item["seo_code"] == code)
+            self.assertTrue(
+                any(
+                    "not projected" in restriction
+                    for restriction in row["restrictions"]
+                )
+            )
+
+        rows_1993 = [
+            row
+            for row in self.records
+            if row["model_year"] == 1993 and row["catalog_model_ids"] == ["s10"]
+        ]
+        self.assertEqual(
+            {
+                "9W4": ("Tangier Orange", "WE9417"),
+                "9W3": ("Wheatland Yellow", "WE9418"),
+                "9V5": ("Woodland Green", "WE7156"),
+                "9V9": ("Doeskin Tan", "WE8265"),
+            },
+            {row["seo_code"]: (row["label"], row["paint_code"]) for row in rows_1993},
+        )
+        self.assertTrue(
+            all(
+                row["application_type"] == "factory_installed_special_equipment_option"
+                for row in rows_1993
+            )
+        )
+
+        ck_rows_1993 = self.program_rows(
+            "gm-1993-ck-pickup-special-equipment-option-paint"
+        )
+        self.assertEqual(4, len(ck_rows_1993))
+        self.assertEqual(
+            {
+                "9W4": ("Tangier Orange", "Orange, Tangier", "WE9417"),
+                "9W3": ("Wheatland Yellow", "Yellow, Wheatland", "WE9418"),
+                "9V5": ("Woodland Green", "Green, Woodland", "WE9015"),
+                "9V9": ("Doeskin Tan", "Tan, Doeskin", "WE9403"),
+            },
+            {
+                row["seo_code"]: (
+                    row["label"],
+                    row["source_label_raw"],
+                    row["paint_code"],
+                )
+                for row in ck_rows_1993
+            },
+        )
+        self.assertTrue(
+            all(
+                row["catalog_model_ids"] == ["ck-series"]
+                and row["source_model_scope"] == ["C/K Pickup"]
+                and row["application_type"] == "manufacturer_special_equipment_option"
+                and row["availability_state"] == "available"
+                and row["lead_time_days"] == 0
+                for row in ck_rows_1993
+            )
+        )
+        self.assertTrue(
+            all(
+                row["source"]["source_id"] == "gm-heritage-1993-chevrolet-truck"
+                and row["source"]["pdf_page"] == 12
+                and row["source"]["printed_page"] == "Page 18 - C/K Pickup"
+                and row["source"]["bytes"] == 13_034_550
+                and row["source"]["pdf_page_count"] == 94
+                and row["source"]["sha256"]
+                == "5183176f4af0d61bd63cc7d6fb02117129c870c28c42bc9fe22abcc2eea52d3e"
+                for row in ck_rows_1993
+            )
+        )
+        self.assertTrue(
+            all(
+                any(
+                    "does not state that the paint was installed at the assembly plant"
+                    in restriction
+                    for restriction in row["restrictions"]
+                )
+                for row in ck_rows_1993
+            )
+        )
+        program = next(
+            row
+            for row in self.specialty["program_definitions"]
+            if row["program_id"] == "gm-1993-ck-pickup-special-equipment-option-paint"
+        )
+        self.assertFalse(program["factory_installation_claim"])
+        self.assertEqual("C/K Pickup only", program["source_scope"])
+        self.assertTrue(
+            all(
+                any("0 days" in restriction for restriction in row["restrictions"])
+                for row in rows_1993
+            )
+        )
+
+    def test_kerr_program_is_complete_and_not_misclassified_as_factory_paint(
+        self,
+    ) -> None:
+        expected_colors = {
+            "121A": ("Adriatic Blue", "BEA", "BFE"),
+            "311B": ("Olive", "BEB", "BFF"),
+            "5120": ("Blue", "BEQ", "BFU"),
+            "5236": ("Neutral", "BEC", "BFG"),
+            "5322": ("Driftwood", "BER", "BFV"),
+            "5665": ("Blue", "BED", "BFH"),
+            "5749": ("Gold", "BES", "BFW"),
+            "5845": ("Beige", "BEE", "BFI"),
+            "7153": ("Blue", "BET", "BFX"),
+            "7159": ("Blue", "BEF", "BFJ"),
+            "7262": ("Brown", "BEU", "BFY"),
+            "7801": ("Brown", "BEG", "BFK"),
+            "7840": ("Silver", "BEV", "BFZ"),
+            "7868": ("Blue", "BEH", "BFL"),
+            "7888": ("Blue", "BEW", "BGA"),
+            "7889": ("Blue", "BEP", "BFT"),
+            "7964": ("Green", "BEI", "BFM"),
+            "7999": ("Blue", "BEX", "BGB"),
+            "8380": ("Blue", "BEJ", "BFN"),
+            "8381": ("Gray", "BEY", "BGC"),
+            "8401": ("Yellow", "BEK", "BFO"),
+            "8412": ("Green", "BEZ", "BGD"),
+            "8431": ("Rose Metallic", "BEL", "BFP"),
+            "8554": ("White", "BFA", "BGE"),
+            "8555": ("Black (41U)", "BEM", "BFQ"),
+            "8624": ("Summit White (50U)", "BG8", "BGK"),
+            "8743": ("Blue Black", "BFB", "BGF"),
+            "9021": ("Silver", "BEN", "BFR"),
+            "9382": ("Blue", "BFC", "BGG"),
+            "9403": ("Tan", "BEO", "BFS"),
+        }
+        year_contracts = {
+            2011: ("impala", "gm-2011-police-manual", [52, 53, 54, 55, 56, 57]),
+            2012: ("impala", "gm-2012-municipal-manual", [54, 55, 56, 57, 58, 59]),
+            2013: ("impala", "gm-2013-municipal-guide", [55, 56, 57]),
+            2014: ("impala-limited", "gm-2014-police-guide", [50, 51, 52]),
+        }
+
+        for year, (model_id, source_id, pdf_pages) in year_contracts.items():
+            rows = self.program_rows(
+                f"gm-{year}-{'impala-limited' if year == 2014 else 'impala'}-kerr-authorized-upfitter-paint"
+            )
+            self.assertEqual(30, len(rows), year)
+            self.assertEqual(
+                expected_colors,
+                {
+                    row["paint_code"]: (
+                        row["label"],
+                        row["upfitter_order_codes"]["code_1"],
+                        row["upfitter_order_codes"]["code_2"],
+                    )
+                    for row in rows
+                },
+                year,
+            )
+            self.assertTrue(all(row["catalog_model_ids"] == [model_id] for row in rows))
+            self.assertTrue(
+                all(row["source"]["source_id"] == source_id for row in rows)
+            )
+            self.assertTrue(
+                all(row["source"]["pdf_pages"] == pdf_pages for row in rows)
+            )
+            self.assertTrue(
+                all(
+                    row["application_type"] == "authorized_upfitter_post_build"
+                    for row in rows
+                )
+            )
+            self.assertTrue(
+                all(
+                    row["availability_state"] == "available_through_authorized_upfitter"
+                    for row in rows
+                )
+            )
+            self.assertTrue(all(row["paint_code_heading"] == "WA#" for row in rows))
+            self.assertTrue(
+                all(not row["paint_code"].startswith("WA-") for row in rows)
+            )
+            self.assertTrue(all(row["seo_code"] == "Not applicable" for row in rows))
+
+        self.assertEqual(3, len(self.specialty["program_definitions"]))
+        program = next(
+            row
+            for row in self.specialty["program_definitions"]
+            if row["program_id"] == "gm-impala-kerr-authorized-upfitter-paint-2011-2014"
+        )
+        self.assertEqual("authorized_upfitter_post_build", program["application_type"])
+        self.assertFalse(program["factory_finish_claim"])
+        self.assertEqual(["White 50U", "Black 41U"], program["base_rpo_requirement"])
+        self.assertEqual(
+            [
+                ("W001", "1PA"),
+                ("W002", "1PB"),
+                ("W003", "1PC"),
+                ("W006", "1PF"),
+                ("W008", "1PH"),
+                ("W009", "1PI"),
+                ("W012", "1PL"),
+            ],
+            [
+                (row["source_scheme"], row["order_code"])
+                for row in program["two_tone_schemes"]
+            ],
+        )
+
+    def test_caprice_ppv_program_palettes_and_source_precedence_are_exact(self) -> None:
+        expected_counts = {
+            "gm-2011-caprice-9c1-ppv-standard-palette": 7,
+            "gm-2011-caprice-9c3-detective-standard-palette": 7,
+            "gm-2012-caprice-9c1-ppv-standard-palette": 8,
+            "gm-2012-caprice-9c3-detective-standard-palette": 8,
+            "gm-2013-caprice-9c1-ppv-standard-palette": 7,
+            "gm-2013-caprice-9c3-detective-standard-palette": 7,
+            "gm-2014-caprice-9c1-ppv-standard-palette": 7,
+            "gm-2015-caprice-9c1-ppv-standard-palette": 6,
+            "gm-2016-caprice-9c1-ppv-standard-palette": 6,
+            "gm-2017-caprice-9c1-ppv-standard-palette": 4,
+        }
+        caprice = [
+            row for row in self.records if row["catalog_model_ids"] == ["caprice-ppv"]
+        ]
+        self.assertEqual(67, len(caprice))
+        self.assertEqual(
+            expected_counts,
+            {
+                program_id: len(self.program_rows(program_id))
+                for program_id in expected_counts
+            },
+        )
+        self.assertEqual(
+            {"standard_program_palette"},
+            {row["application_type"] for row in caprice},
+        )
+        self.assertTrue(all(row["paint_code"] == "Not printed" for row in caprice))
+        self.assertTrue(all(row["factory_paint_code"] is None for row in caprice))
+        self.assertTrue(all(row["wa_code"] is None for row in caprice))
+        self.assertTrue(all(row["seo_code"] is None for row in caprice))
+        self.assertTrue(
+            all(
+                row["code_display"].startswith(f"RPO {row['rpo_code']}")
+                for row in caprice
+            )
+        )
+
+        hugo = [row for row in caprice if row["rpo_code"] == "GYW"]
+        self.assertEqual(7, len(hugo))
+        self.assertEqual(
+            {2012, 2013, 2014, 2015, 2016},
+            {row["model_year"] for row in hugo},
+        )
+        self.assertTrue(
+            all(
+                row["availability_state"] == "available_with_minimum_batch"
+                and row["minimum_batch_units"] == 20
+                for row in hugo
+            )
+        )
+        self.assertTrue(
+            all(
+                row["availability_state"] == "available"
+                for row in caprice
+                if row["rpo_code"] != "GYW"
+            )
+        )
+
+        by_year = {
+            year: {row["rpo_code"] for row in caprice if row["model_year"] == year}
+            for year in range(2011, 2018)
+        }
+        self.assertNotIn("GST", by_year[2013])
+        self.assertNotIn("GGG", by_year[2014])
+        self.assertNotIn("GYW", by_year[2017])
+        self.assertNotIn("GZ7", by_year[2017])
+        self.assertFalse(
+            any(
+                row["program_code"] == "9C3" and row["model_year"] >= 2014
+                for row in caprice
+            )
+        )
+
+        self.assertEqual(6, len(self.specialty["source_conflict_assertions"]))
+        self.assertEqual(6, len(self.specialty["program_lifecycle_assertions"]))
+        self.assertTrue(
+            all(
+                row["precedence_policy_id"]
+                == "caprice-model-specific-guide-over-fleet-summary"
+                for row in self.specialty["source_conflict_assertions"]
+            )
+        )
+        conflict_2014 = next(
+            row
+            for row in self.specialty["source_conflict_assertions"]
+            if row["model_year"] == 2014
+        )
+        self.assertEqual(
+            "Mystic Green (New)", conflict_2014["differences"][0]["model_guide"]
+        )
+        self.assertEqual(
+            "Prussian Steel (new)", conflict_2014["differences"][0]["fleet_guide"]
+        )
+
+        retained = {
+            row["source_id"]: row
+            for row in self.specialty["historic_gm_upfitter_candidates"]
+        }
+        self.assertEqual(
+            37, retained["gm-2015-caprice-9c1-specification-guide"]["pdf_page_count"]
+        )
+        self.assertEqual(
+            37, retained["gm-2016-caprice-9c1-specification-guide"]["pdf_page_count"]
+        )
+        self.assertEqual(
+            40, retained["gm-2017-caprice-9c1-specification-guide"]["pdf_page_count"]
+        )
+
+    def test_bolt_and_blazer_public_safety_availability_is_year_exact(self) -> None:
+        bolt = self.program_rows("gm-2023-bolt-euv-5w4-ssv")
+        self.assertEqual(
+            {
+                "GSJ": ("Silver Flare Metallic", "WA-251F"),
+                "GB8": ("Mosaic Black Metallic", "WA-384A"),
+                "G7X": ("Ice Blue Metallic", "WA-621G"),
+                "GLT": ("Bright Blue Metallic", "WA-327E"),
+                "GNT": ("Radiant Red Tintcoat", "WA-170H"),
+                "GRC": ("Gray Ghost Metallic", "WA-247F"),
+                "GAZ": ("Summit White", "WA-8624"),
+            },
+            {
+                row["factory_order_code"]: (row["label"], row["paint_code"])
+                for row in bolt
+            },
+        )
+        self.assertTrue(all(row["availability_state"] == "available" for row in bolt))
+        self.assertEqual(
+            {"GLT", "GNT"},
+            {
+                row["factory_order_code"]
+                for row in bolt
+                if any("additional charge" in text for text in row["restrictions"])
+            },
+        )
+
+        blazer_2026 = self.program_rows("gm-2026-blazer-ev-9c1-9c3-5w4-seo-paint")
+        self.assertEqual(
+            {
+                "5T4": ("Victory Red", "WA-9260"),
+                "9V2": ("MSP Blue Goose", "WA-5665"),
+                "9V7": ("Dark Blue Metallic", "WA-722J"),
+                "9W5": ("Silver Ice Metallic", "WA-636R"),
+            },
+            {row["seo_code"]: (row["label"], row["paint_code"]) for row in blazer_2026},
+        )
+        self.assertTrue(
+            all(
+                row["availability_state"] == "available_with_possible_extended_lead"
+                for row in blazer_2026
+            )
+        )
+
+        snapshots = [
+            row
+            for row in self.specialty["verified_not_published"]
+            if "blazer-ev" in row["catalog_model_ids"]
+        ]
+        self.assertEqual(8, len(snapshots))
+        self.assertEqual(
+            {"not_available_at_snapshot"},
+            {
+                row["availability_state"]
+                for row in snapshots
+                if row["model_year"] == 2024
+            },
+        )
+        self.assertEqual(
+            {
+                "planned_q1_2025_at_snapshot": 1,
+                "not_available_at_snapshot": 3,
+            },
+            {
+                state: len(
+                    [
+                        row
+                        for row in snapshots
+                        if row["model_year"] == 2025
+                        and row["availability_state"] == state
+                    ]
+                )
+                for state in {
+                    row["availability_state"]
+                    for row in snapshots
+                    if row["model_year"] == 2025
+                }
+            },
+        )
+        self.assertFalse(
+            any(
+                row["model_year"] in {2024, 2025}
+                and "blazer-ev" in row["catalog_model_ids"]
+                for row in self.records
+            )
+        )
+
+    def test_silverado_ppv_and_ssv_programs_remain_separate_and_complete(self) -> None:
+        expected_standard = {
+            "G7C": ("Red Hot", "WA-130X"),
+            "GAZ": ("Summit White", "WA-8624"),
+            "GNO": ("Sterling Gray Metallic", "WA-130H"),
+            "GBA": ("Black", "WA-8555"),
+        }
+        expected_seo = {
+            ("Doeskin Tan", "WA-9403", "Not printed"),
+            ("Dark Toredor Red", "WA-334D", "Not printed"),
+            ("Unripened Green Metallic", "WA-136X", "Not printed"),
+            ("Indigo Blue", "WA-9792", "Not printed"),
+            ("Yellow", "WA-5248", "Not printed"),
+            ("Yellow", "WA-5445", "Not printed"),
+            ("Yellow", "WA-5456", "Not printed"),
+            ("Yellow", "WA-9414", "Not printed"),
+            ("Orange", "WA-770H", "Not printed"),
+            ("Blue", "WA-454N", "Not printed"),
+            ("Lt. Autumnwood Metallic", "WA-228A", "Not printed"),
+            ("Pewter", "WA-382E", "Not printed"),
+            ("Blue", "WA-5405", "Not printed"),
+            ("Blue", "WA-7154", "Not printed"),
+            ("Orange", "WA-9419", "Not printed"),
+            ("Arrival Blue Metallic", "WA-815K", "Not printed"),
+            ("Green", "WA-7927", "Not printed"),
+            ("Silver Ice Metallic", "WA-363R", "5IS"),
+            ("Tangier Orange", "WA-9417", "9W4"),
+            ("Wheatland Yellow", "WA-253A", "9W3"),
+            ("Woodland Green", "WA-9015", "9V5"),
+        }
+        source_ids = {
+            "gm-2026-silverado-9c1": "gm-2026-silverado-9c1-041426",
+            "gm-2026-silverado-5w4": "gm-2026-silverado-5w4-041426",
+        }
+
+        for program_id, source_id in source_ids.items():
+            rows = self.program_rows(program_id)
+            self.assertEqual(25, len(rows), program_id)
+            standard = [
+                row
+                for row in rows
+                if row["application_type"] == "standard_program_palette"
+            ]
+            seo = [
+                row
+                for row in rows
+                if row["application_type"] == "special_equipment_option_paint"
+            ]
+            self.assertEqual(
+                expected_standard,
+                {
+                    row["factory_order_code"]: (row["label"], row["paint_code"])
+                    for row in standard
+                },
+                program_id,
+            )
+            self.assertEqual(
+                expected_seo,
+                {(row["label"], row["paint_code"], row["seo_code"]) for row in seo},
+                program_id,
+            )
+            self.assertTrue(
+                all(row["availability_state"] == "available" for row in standard)
+            )
+            self.assertTrue(
+                all(
+                    row["availability_state"] == "closed_after_2026-02-02"
+                    for row in seo
+                )
+            )
+            self.assertTrue(
+                all(row["source"]["source_id"] == source_id for row in rows)
+            )
+            self.assertTrue(all(row["source"]["pdf_pages"] == [3, 11] for row in rows))
+            self.assertTrue(
+                all(
+                    any("five orders" in text for text in row["restrictions"])
+                    for row in seo
+                )
+            )
+
+        ppv_rows = self.program_rows("gm-2026-silverado-9c1")
+        self.assertTrue(
+            any(
+                "5W4 SSV" in text
+                for row in ppv_rows
+                for text in row.get("restrictions", [])
+            )
+        )
+        wheatland_ppv = next(row for row in ppv_rows if row["paint_code"] == "WA-253A")
+        self.assertTrue(
+            any(
+                "Whealtland Yellow" in text
+                for text in wheatland_ppv["source_literal_anomalies"]
+            )
+        )
+
+
 class ModernFleetProvenanceTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -121,9 +761,7 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             row["source_id"]: row for row in builder.rows["source_revisions"]
         }
         cls.brochure_manifest = builder.brochure_source_release_manifest
-        cls.brochure_release_source_ids = (
-            builder.brochure_release_source_ids_by_asset
-        )
+        cls.brochure_release_source_ids = builder.brochure_release_source_ids_by_asset
 
     def test_gap_inventory_binds_artifacts_to_retrieval_urls(self) -> None:
         records_by_year = REFRESH.modern_fleet_source_records()
@@ -197,9 +835,7 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             self.assertEqual(entry["bytes"], revision["byte_length"])
             self.assertEqual(media_type, source["content_type"])
             self.assertEqual(media_type, revision["media_type"])
-            self.assertEqual(
-                entry.get("pdf_page_count"), revision["pdf_page_count"]
-            )
+            self.assertEqual(entry.get("pdf_page_count"), revision["pdf_page_count"])
             self.assertEqual(entry["archive_url"], revision["archive_url"])
             self.assertEqual(
                 "release_manifest_hash_recorded", revision["integrity_status"]
@@ -212,9 +848,7 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             )
 
     def test_brochure_release_provenance_urls_remain_separate_links(self) -> None:
-        sources_by_id = {
-            row["source_id"]: row for row in self.builder.rows["sources"]
-        }
+        sources_by_id = {row["source_id"]: row for row in self.builder.rows["sources"]}
         links_by_entity_and_type = {
             (row["entity_id"], row["claim_type"]): row
             for row in self.builder.rows["source_links"]
@@ -410,13 +1044,23 @@ class ModernFleetProvenanceTest(unittest.TestCase):
         )
         self.assertNotIn(anonymous_id, builder.source_id_to_url)
 
-    def test_specialty_artifact_registration_contract_remains_62(self) -> None:
+    def test_specialty_artifact_registration_contract_is_reconciled(self) -> None:
         specialty = BUILD.json_load(
             ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
         )
         self.assertEqual(
-            62, specialty["integrity_audit"]["unique_retained_files_rehashed"]
+            74,
+            specialty["integrity_audit"]["unique_retained_artifacts_reconciled"],
         )
+        self.assertEqual(
+            7,
+            specialty["integrity_audit"]["last_updater_rehash"]["file_count"],
+        )
+        updater = (
+            ROOT / "scripts" / "update-caprice-ppv-specialty-tranche.mjs"
+        ).read_text(encoding="utf-8")
+        self.assertNotIn("Math.max", updater)
+        self.assertIn("collectArtifactIdentities", updater)
         self.assertTrue(specialty["integrity_audit"]["byte_lengths_reconciled"])
         self.assertTrue(specialty["integrity_audit"]["sha256_digests_reconciled"])
 

@@ -24,13 +24,9 @@ SOURCE_REGISTRY_PATH = ROOT / "data" / "sources" / "source-registry.json"
 BROCHURE_SOURCE_RELEASE_MANIFEST_PATH = (
     ROOT / "data" / "sources" / "brochure-source-release-manifest.json"
 )
-ROCKAUTO_LEADS_PATH = (
-    ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
-)
-SUBURBAN_2000_2007_AUDIT_PATH = (
-    ROOT / "data" / "audits" / "suburban-2000-2007.json"
-)
-SCHEMA_VERSION = 8
+ROCKAUTO_LEADS_PATH = ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
+SUBURBAN_2000_2007_AUDIT_PATH = ROOT / "data" / "audits" / "suburban-2000-2007.json"
+SCHEMA_VERSION = 9
 URL_PATTERN = re.compile(r"https?://[^\s<>\"`]+")
 PLACEHOLDER_SOURCE_HOSTS = frozenset(
     {"example.com", "example.net", "example.org", "example.invalid"}
@@ -59,9 +55,7 @@ FACTORY_CODE_REJECTED_PLACEHOLDERS = frozenset(
         "unavailable",
     }
 )
-SOURCE_OFFICIALITY_VALUES = frozenset(
-    {"official", "secondary", "licensed", "unknown"}
-)
+SOURCE_OFFICIALITY_VALUES = frozenset({"official", "secondary", "licensed", "unknown"})
 DOCUMENT_AUTHORITY_VALUES = frozenset({"official_manufacturer_document"})
 RETRIEVAL_HOST_TYPE_VALUES = frozenset({"official_live", "archival_mirror"})
 MODERN_SOURCE_CLASSIFICATIONS = {
@@ -128,12 +122,8 @@ def expand_suburban_scheme_set(
         return list(scheme_set["schemes"])
 
     legend_id = str(scheme_set.get("color_legend_id") or "")
-    primary_legend_id = str(
-        scheme_set.get("primary_color_legend_id") or legend_id
-    )
-    secondary_legend_id = str(
-        scheme_set.get("secondary_color_legend_id") or legend_id
-    )
+    primary_legend_id = str(scheme_set.get("primary_color_legend_id") or legend_id)
+    secondary_legend_id = str(scheme_set.get("secondary_color_legend_id") or legend_id)
     try:
         primary_legend = audit["color_legends"][primary_legend_id]
         secondary_legend = audit["color_legends"][secondary_legend_id]
@@ -284,9 +274,8 @@ def normalize_factory_code(value: Any) -> tuple[str | None, str]:
     missing_status = FACTORY_CODE_MISSING_MARKERS.get(normalized_marker)
     if missing_status:
         return None, missing_status
-    if (
-        normalized_marker in FACTORY_CODE_REJECTED_PLACEHOLDERS
-        or any(marker in normalized_marker for marker in FACTORY_CODE_MISSING_MARKERS)
+    if normalized_marker in FACTORY_CODE_REJECTED_PLACEHOLDERS or any(
+        marker in normalized_marker for marker in FACTORY_CODE_MISSING_MARKERS
     ):
         raise ValueError(f"factory-code field contains placeholder prose: {value!r}")
     return code, "printed_in_source"
@@ -452,9 +441,11 @@ def source_defaults(url: str) -> dict[str, Any]:
     document_authority = None
     retrieval_host_type = None
     if is_official_manufacturer_url(url):
-        publisher = "Chevrolet" if host == "chevrolet.com" or host.endswith(
-            ".chevrolet.com"
-        ) else "General Motors"
+        publisher = (
+            "Chevrolet"
+            if host == "chevrolet.com" or host.endswith(".chevrolet.com")
+            else "General Motors"
+        )
         officiality = "official"
         source_type = "official_web_page"
         document_authority = "official_manufacturer_document"
@@ -495,7 +486,9 @@ def load_archive_snapshot() -> dict[str, Any]:
     cli = ROOT / "node_modules" / "tsx" / "dist" / "cli.mjs"
     exporter = ROOT / "scripts" / "export-archive-snapshot.ts"
     if not cli.is_file():
-        raise RuntimeError("tsx is not installed; run npm install before building Parquet")
+        raise RuntimeError(
+            "tsx is not installed; run npm install before building Parquet"
+        )
     result = subprocess.run(
         ["node", str(cli), str(exporter)],
         cwd=ROOT,
@@ -508,7 +501,9 @@ def load_archive_snapshot() -> dict[str, Any]:
 
 
 def schema(fields: list[tuple[str, pa.DataType, bool]]) -> pa.Schema:
-    return pa.schema([pa.field(name, dtype, nullable=nullable) for name, dtype, nullable in fields])
+    return pa.schema(
+        [pa.field(name, dtype, nullable=nullable) for name, dtype, nullable in fields]
+    )
 
 
 SCHEMAS: dict[str, pa.Schema] = {
@@ -533,6 +528,8 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("model_id", pa.string(), False),
             ("generation_key", pa.string(), False),
             ("label", pa.string(), False),
+            ("program_id", pa.string(), True),
+            ("program_label", pa.string(), True),
             ("year_start", pa.int16(), False),
             ("year_end", pa.int16(), False),
             ("model_year_count", pa.int16(), False),
@@ -608,6 +605,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("factory_code_status", pa.string(), False),
             ("touch_up_code", pa.string(), True),
             ("availability_state", pa.string(), False),
+            ("application_type", pa.string(), False),
             ("restriction", pa.string(), True),
             ("claim_status", pa.string(), False),
             ("evidence_source_id", pa.string(), False),
@@ -667,6 +665,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("exact_listing_count", pa.int16(), False),
             ("listed_count", pa.int16(), False),
             ("restricted_count", pa.int16(), False),
+            ("other_availability_state_count", pa.int16(), False),
             ("likely_source_availability", pa.string(), False),
             ("official_source_record_count", pa.int16(), False),
             ("crawler_source_record_count", pa.int16(), False),
@@ -920,9 +919,7 @@ PRIMARY_KEYS = {
     "models": ["model_id"],
     "generations": ["generation_id"],
     "model_years": ["model_year_id"],
-    "model_year_generation_memberships": [
-        "model_year_generation_membership_id"
-    ],
+    "model_year_generation_memberships": ["model_year_generation_membership_id"],
     "platform_eras": ["platform_era_id"],
     "color_identities": ["color_identity_id"],
     "color_availability": ["availability_id"],
@@ -1047,9 +1044,7 @@ FACTORY_CODE_COLUMNS = {
 }
 
 
-def validate_factory_code_rows(
-    table_name: str, rows: list[dict[str, Any]]
-) -> None:
+def validate_factory_code_rows(table_name: str, rows: list[dict[str, Any]]) -> None:
     code_field, status_field = FACTORY_CODE_COLUMNS[table_name]
     for index, row in enumerate(rows):
         code = row.get(code_field)
@@ -1068,8 +1063,7 @@ def validate_factory_code_rows(
         normalized_code, normalized_status = normalize_factory_code(code)
         if normalized_code != code or normalized_status != "printed_in_source":
             raise ValueError(
-                f"{table_name}[{index}].{code_field} is not a normalized code: "
-                f"{code!r}"
+                f"{table_name}[{index}].{code_field} is not a normalized code: {code!r}"
             )
         if status != "printed_in_source":
             raise ValueError(
@@ -1082,7 +1076,9 @@ def validate_normalized_rows(rows_by_table: dict[str, list[dict[str, Any]]]) -> 
     if set(rows_by_table) != set(SCHEMAS):
         missing = sorted(set(SCHEMAS) - set(rows_by_table))
         extra = sorted(set(rows_by_table) - set(SCHEMAS))
-        raise ValueError(f"normalized table set drifted; missing={missing}, extra={extra}")
+        raise ValueError(
+            f"normalized table set drifted; missing={missing}, extra={extra}"
+        )
 
     for table_name, table_schema in SCHEMAS.items():
         expected_fields = set(table_schema.names)
@@ -1139,7 +1135,9 @@ def validate_normalized_rows(rows_by_table: dict[str, list[dict[str, Any]]]) -> 
 class NormalizedArchiveBuilder:
     def __init__(self, crawler_db: Path | None = None):
         self.snapshot = load_archive_snapshot()
-        self.catalog = json_load(ROOT / "data" / "catalog" / "chevrolet-us-nameplates.json")
+        self.catalog = json_load(
+            ROOT / "data" / "catalog" / "chevrolet-us-nameplates.json"
+        )
         self.platform_catalog = json_load(
             ROOT / "data" / "catalog" / "chevrolet-platform-eras.json"
         )
@@ -1149,7 +1147,9 @@ class NormalizedArchiveBuilder:
         self.gm_artifacts = json_load(
             ROOT / "data" / "sources" / "gm-heritage-chevrolet-artifacts.json"
         )
-        self.photos = json_load(ROOT / "data" / "photos" / "commons-release-manifest.json")
+        self.photos = json_load(
+            ROOT / "data" / "photos" / "commons-release-manifest.json"
+        )
         self.gap_inventory = json_load(
             ROOT / "data" / "audits" / "color-research-gap-inventory.json"
         )
@@ -1171,10 +1171,7 @@ class NormalizedArchiveBuilder:
             ROOT / "data" / "audits" / "tahoe-1995-2000.json"
         )
         self.suburban_paint_schemes = json_load(
-            ROOT
-            / "data"
-            / "audits"
-            / "suburban-paint-schemes-1977-1999.json"
+            ROOT / "data" / "audits" / "suburban-paint-schemes-1977-1999.json"
         )
         self.crawler_db = crawler_db if crawler_db and crawler_db.is_file() else None
         self.rows: dict[str, list[dict[str, Any]]] = {name: [] for name in SCHEMAS}
@@ -1248,10 +1245,16 @@ class NormalizedArchiveBuilder:
             )
         existing = self.sources_by_url.get(url)
         requested_id = updates.pop("source_id", None)
-        source_id = requested_id or (existing and existing["source_id"]) or stable_id("src", url)
+        source_id = (
+            requested_id
+            or (existing and existing["source_id"])
+            or stable_id("src", url)
+        )
         other_url = self.source_id_to_url.get(source_id)
         if other_url and other_url != url:
-            raise ValueError(f"source ID collision: {source_id} maps to {other_url} and {url}")
+            raise ValueError(
+                f"source ID collision: {source_id} maps to {other_url} and {url}"
+            )
         if existing and requested_id and existing["source_id"] != requested_id:
             old_id = existing["source_id"]
             if old_id != stable_id("src", url):
@@ -1297,7 +1300,11 @@ class NormalizedArchiveBuilder:
                     str(existing.get(key)), 0
                 ):
                     existing[key] = value
-            elif existing.get(key) in (None, "", source_defaults(url).get(key)) or key in {
+            elif existing.get(key) in (
+                None,
+                "",
+                source_defaults(url).get(key),
+            ) or key in {
                 "content_sha256",
                 "content_length_bytes",
                 "archive_url",
@@ -1427,8 +1434,7 @@ class NormalizedArchiveBuilder:
                 not isinstance(pdf_page_count, int) or pdf_page_count <= 0
             ):
                 raise ValueError(
-                    "brochure source Release PDF has no valid page count: "
-                    f"{asset_name}"
+                    f"brochure source Release PDF has no valid page count: {asset_name}"
                 )
             if media_type != "application/pdf" and pdf_page_count is not None:
                 raise ValueError(
@@ -1451,7 +1457,9 @@ class NormalizedArchiveBuilder:
                         "brochure source Release source ID maps to multiple URLs: "
                         f"{upstream_source_id}"
                     )
-                upstream_source_id_urls[str(upstream_source_id)] = normalized_original_url
+                upstream_source_id_urls[str(upstream_source_id)] = (
+                    normalized_original_url
+                )
 
             metadata = {
                 "asset_name": asset_name,
@@ -1521,9 +1529,7 @@ class NormalizedArchiveBuilder:
                 if not raw_url:
                     continue
                 source_updates = (
-                    {"source_id": str(related_source_id)}
-                    if related_source_id
-                    else {}
+                    {"source_id": str(related_source_id)} if related_source_id else {}
                 )
                 relation_source_id = self.ensure_source(str(raw_url), **source_updates)
                 self.add_source_link(
@@ -1568,7 +1574,9 @@ class NormalizedArchiveBuilder:
             item["canonical_url"]: item
             for item in (
                 json.loads(line)
-                for line in (ROOT / "crawler" / "manifests" / "gm-heritage-chevrolet-all.jsonl")
+                for line in (
+                    ROOT / "crawler" / "manifests" / "gm-heritage-chevrolet-all.jsonl"
+                )
                 .read_text(encoding="utf-8")
                 .splitlines()
                 if line.strip()
@@ -1665,9 +1673,7 @@ class NormalizedArchiveBuilder:
             raise ValueError(
                 "modern source inventory must retain exactly 19 Fleet Guide PDFs"
             )
-        retained_source_ids = {
-            item["source_id"] for item in retained_modern_sources
-        }
+        retained_source_ids = {item["source_id"] for item in retained_modern_sources}
         missing_qualified_palettes = sorted(
             QUALIFIED_MODERN_PALETTE_SOURCE_IDS - retained_source_ids
         )
@@ -1687,7 +1693,9 @@ class NormalizedArchiveBuilder:
                     f"retained modern source escapes the repository: {item['source_id']}"
                 )
             if local_path and not local_path.is_file():
-                raise ValueError(f"retained modern source is missing: {item['source_id']}")
+                raise ValueError(
+                    f"retained modern source is missing: {item['source_id']}"
+                )
             if local_path:
                 actual_bytes = local_path.stat().st_size
                 actual_sha256 = sha256_file(local_path)
@@ -1742,7 +1750,9 @@ class NormalizedArchiveBuilder:
                     if local_relpath
                     else "Recorded retrieval endpoint for the modern source"
                 ),
-                confidence="artifact_rehashed" if local_relpath else "manifest_recorded",
+                confidence="artifact_rehashed"
+                if local_relpath
+                else "manifest_recorded",
                 review_state="verified_snapshot" if local_relpath else "documented",
                 revision=item.get("revision_or_document_date"),
             )
@@ -1937,15 +1947,10 @@ class NormalizedArchiveBuilder:
                 ),
             )
 
-        for artifact in self.specialty_color_sources[
-            "historic_gm_upfitter_candidates"
-        ]:
+        for artifact in self.specialty_color_sources["historic_gm_upfitter_candidates"]:
             add_record(
                 category="historic_gm_upfitter_candidates",
-                entity_id=(
-                    "historic_gm_upfitter_candidates:"
-                    f"{artifact['source_id']}"
-                ),
+                entity_id=(f"historic_gm_upfitter_candidates:{artifact['source_id']}"),
                 artifact=artifact,
                 title=(
                     f"{artifact['year']} Chevrolet municipal/fleet manual candidate"
@@ -2066,11 +2071,16 @@ class NormalizedArchiveBuilder:
                     "source_type",
                     "retrieved_at",
                 ):
-                    if existing.get(field) is None and normalized.get(field) is not None:
+                    if (
+                        existing.get(field) is None
+                        and normalized.get(field) is not None
+                    ):
                         existing[field] = normalized[field]
                 existing["categories"].update(normalized["categories"])
 
-        expected_artifact_count = int(audit.get("unique_retained_files_rehashed", -1))
+        expected_artifact_count = int(
+            audit.get("unique_retained_artifacts_reconciled", -1)
+        )
         if len(self.specialty_artifacts_by_url) != expected_artifact_count:
             raise ValueError(
                 "specialty artifact count does not match the integrity audit: "
@@ -2083,10 +2093,11 @@ class NormalizedArchiveBuilder:
             if existing_source:
                 if (
                     existing_source.get("content_sha256") is not None
-                    and existing_source["content_sha256"]
-                    != artifact["content_sha256"]
+                    and existing_source["content_sha256"] != artifact["content_sha256"]
                 ):
-                    raise ValueError(f"specialty artifact hash conflicts with source: {url}")
+                    raise ValueError(
+                        f"specialty artifact hash conflicts with source: {url}"
+                    )
                 if (
                     existing_source.get("content_length_bytes") is not None
                     and int(existing_source["content_length_bytes"])
@@ -2166,7 +2177,9 @@ class NormalizedArchiveBuilder:
                 for year in range(int(era["start"]), int(era["end"]) + 1):
                     key = (model_id, year)
                     if key in platform_for_year:
-                        raise ValueError(f"overlapping platform eras for {model_id} {year}")
+                        raise ValueError(
+                            f"overlapping platform eras for {model_id} {year}"
+                        )
                     platform_for_year[key] = platform_era_id
                 for url in era["evidence_urls"]:
                     source_id = self.ensure_source(url)
@@ -2243,10 +2256,14 @@ class NormalizedArchiveBuilder:
                         "model_id": model_id,
                         "generation_key": generation["id"],
                         "label": generation["label"],
+                        "program_id": generation.get("programId"),
+                        "program_label": generation.get("programLabel"),
                         "year_start": min(years),
                         "year_end": max(years),
                         "model_year_count": len(years),
-                        "platform_aliases": list(generation.get("platformAliases") or []),
+                        "platform_aliases": list(
+                            generation.get("platformAliases") or []
+                        ),
                         "platform_confidence": generation.get("platformConfidence"),
                         "platform_notes": generation.get("platformNotes"),
                         "revision_note": generation["revisionNote"],
@@ -2284,8 +2301,7 @@ class NormalizedArchiveBuilder:
                         publisher=year_source.get("publisher") or "General Motors",
                         officiality="official",
                         source_type=(
-                            year_source.get("sourceType")
-                            or "fleet_guide_pdf"
+                            year_source.get("sourceType") or "fleet_guide_pdf"
                             if is_palette_union
                             else "specialty_paint_primary_pdf"
                             if is_specialty_subset
@@ -2395,8 +2411,8 @@ class NormalizedArchiveBuilder:
                             supporting_page_count = int(
                                 supporting_source["pdfPageCount"]
                             )
-                            prior_supporting_page_count = self.source_pdf_page_counts.get(
-                                supporting_source_id
+                            prior_supporting_page_count = (
+                                self.source_pdf_page_counts.get(supporting_source_id)
                             )
                             if prior_supporting_page_count not in (
                                 None,
@@ -2408,9 +2424,9 @@ class NormalizedArchiveBuilder:
                                     f"({prior_supporting_page_count} != "
                                     f"{supporting_page_count})"
                                 )
-                            self.source_pdf_page_counts[
-                                supporting_source_id
-                            ] = supporting_page_count
+                            self.source_pdf_page_counts[supporting_source_id] = (
+                                supporting_page_count
+                            )
                         self.add_source_link(
                             supporting_source_id,
                             claim_type="supporting_color_evidence",
@@ -2430,9 +2446,13 @@ class NormalizedArchiveBuilder:
                 for color in generation["colors"]:
                     color_identity_id = f"{generation_id}:{color['id']}"
                     if color_identity_id in color_keys:
-                        raise ValueError(f"duplicate color identity: {color_identity_id}")
+                        raise ValueError(
+                            f"duplicate color identity: {color_identity_id}"
+                        )
                     color_keys.add(color_identity_id)
-                    normalized_name = re.sub(r"[^a-z0-9]+", " ", color["name"].lower()).strip()
+                    normalized_name = re.sub(
+                        r"[^a-z0-9]+", " ", color["name"].lower()
+                    ).strip()
                     self.rows["color_identities"].append(
                         {
                             "color_identity_id": color_identity_id,
@@ -2453,9 +2473,13 @@ class NormalizedArchiveBuilder:
                                 f"availability has no source: {model_id} {year} {color['id']}"
                             )
                         year_source = year_sources[year]
-                        availability_id = f"{model_id}:{year}:{generation['id']}:{color['id']}"
+                        availability_id = (
+                            f"{model_id}:{year}:{generation['id']}:{color['id']}"
+                        )
                         if availability_id in availability_keys:
-                            raise ValueError(f"duplicate availability ID: {availability_id}")
+                            raise ValueError(
+                                f"duplicate availability ID: {availability_id}"
+                            )
                         availability_keys.add(availability_id)
                         color_count_by_year[year] += 1
                         is_palette_union = (
@@ -2513,6 +2537,12 @@ class NormalizedArchiveBuilder:
                                 "factory_code_status": factory_code_status,
                                 "touch_up_code": availability.get("touchUpCode"),
                                 "availability_state": availability["state"],
+                                "application_type": availability.get("applicationType")
+                                or (
+                                    "specialty_program_unspecified"
+                                    if is_specialty_subset
+                                    else "manufacturer_listed"
+                                ),
                                 "restriction": availability.get("restriction"),
                                 "claim_status": (
                                     "published_qualified_palette_union"
@@ -2597,11 +2627,8 @@ class NormalizedArchiveBuilder:
                             "generation_id": generation_id,
                             "membership_role": "pending",
                             "evidence_class": generation_evidence_class,
-                            "has_published_availability": color_count_by_year[year]
-                            > 0,
-                            "published_availability_count": color_count_by_year[
-                                year
-                            ],
+                            "has_published_availability": color_count_by_year[year] > 0,
+                            "published_availability_count": color_count_by_year[year],
                         }
                     )
                     matching_range = next(
@@ -2636,7 +2663,9 @@ class NormalizedArchiveBuilder:
                             raise ValueError(
                                 f"overlapping model-year generations: {model_year_id}"
                             )
-                        combined_color_count += int(existing_row["verified_color_count"])
+                        combined_color_count += int(
+                            existing_row["verified_color_count"]
+                        )
                     governing_classes = combined_classes - {
                         "qualified_palette_union",
                         "specialty_palette_subset",
@@ -2671,18 +2700,17 @@ class NormalizedArchiveBuilder:
                     model_year_evidence_classes[model_year_id] = combined_classes
                     model_year_source_ids[model_year_id] = combined_source_ids
                     if model_year_id in model_year_keys:
-                        if (
-                            existing_classes == {"specialty_palette_subset"}
-                            and evidence_classes
-                            - {"specialty_palette_subset"}
-                        ):
+                        if existing_classes == {
+                            "specialty_palette_subset"
+                        } and evidence_classes - {"specialty_palette_subset"}:
                             existing_row["generation_id"] = generation_id
                         existing_row["research_status"] = status
                         existing_row["verified_color_count"] = combined_color_count
-                        existing_row["evidence_source_count"] = len(
-                            combined_source_ids
-                        )
-                        if generation["revisionNote"] not in existing_row["research_note"]:
+                        existing_row["evidence_source_count"] = len(combined_source_ids)
+                        if (
+                            generation["revisionNote"]
+                            not in existing_row["research_note"]
+                        ):
                             existing_row["research_note"] += (
                                 " | " + generation["revisionNote"]
                             )
@@ -2723,12 +2751,9 @@ class NormalizedArchiveBuilder:
                 membership["membership_role"] = "primary"
             elif membership["evidence_class"] == "specialty_palette_subset":
                 membership["membership_role"] = "specialty_overlay"
-            elif (
-                membership["model_year_id"] == "tahoe:2000"
-                and membership["generation_id"].startswith(
-                    "tahoe:tahoe-2000-"
-                )
-            ):
+            elif membership["model_year_id"] == "tahoe:2000" and membership[
+                "generation_id"
+            ].startswith("tahoe:tahoe-2000-"):
                 membership["membership_role"] = "program_partition"
             else:
                 raise ValueError(
@@ -2883,7 +2908,9 @@ class NormalizedArchiveBuilder:
                 "title": publication["title"],
                 "url": publication["url"],
                 "chart": f"{publication['title']} two-tone availability chart",
-                "locator": "; ".join(publication.get("pages") or ["Official chart page"]),
+                "locator": "; ".join(
+                    publication.get("pages") or ["Official chart page"]
+                ),
                 "revision": (
                     publication.get("publication_date_note")
                     or publication.get("publication_date")
@@ -2917,7 +2944,9 @@ class NormalizedArchiveBuilder:
                 )
         tahoe_count = len(self.rows["paint_schemes"]) - tahoe_count_before
         if tahoe_count != 184:
-            raise ValueError(f"Tahoe paint-scheme audit count drifted: {tahoe_count} != 184")
+            raise ValueError(
+                f"Tahoe paint-scheme audit count drifted: {tahoe_count} != 184"
+            )
 
         scheme_sets = {
             item["scheme_set_id"]: item
@@ -2979,7 +3008,9 @@ class NormalizedArchiveBuilder:
         if len(self.rows["paint_scheme_components"]) != 2 * len(
             self.rows["paint_schemes"]
         ):
-            raise ValueError("paint schemes must retain exactly primary and secondary components")
+            raise ValueError(
+                "paint schemes must retain exactly primary and secondary components"
+            )
 
     def build_research_inventory(self) -> None:
         rank = {
@@ -3003,7 +3034,9 @@ class NormalizedArchiveBuilder:
         for item in self.gap_inventory["model_years"]:
             model_year_id = item["model_year_key"]
             if model_year_id not in expected_model_year_ids:
-                raise ValueError(f"gap inventory has unknown model-year: {model_year_id}")
+                raise ValueError(
+                    f"gap inventory has unknown model-year: {model_year_id}"
+                )
             if model_year_id in seen_model_year_ids:
                 raise ValueError(f"gap inventory repeats model-year: {model_year_id}")
             seen_model_year_ids.add(model_year_id)
@@ -3061,6 +3094,10 @@ class NormalizedArchiveBuilder:
                     ),
                     "restricted_count": sum(
                         row["availability_state"] == "restricted"
+                        for row in availability_rows
+                    ),
+                    "other_availability_state_count": sum(
+                        row["availability_state"] not in {"listed", "restricted"}
                         for row in availability_rows
                     ),
                     "likely_source_availability": item["likely_source_availability"],
@@ -3124,8 +3161,7 @@ class NormalizedArchiveBuilder:
                         else f"{source['title']} Vehicle Information Kit"
                     ),
                     publisher=source.get("publisher") or "General Motors",
-                    source_type=source.get("source_type")
-                    or "vehicle_information_kit",
+                    source_type=source.get("source_type") or "vehicle_information_kit",
                     officiality=source_officiality,
                     document_authority=document_authority,
                     retrieval_host_type=retrieval_host_type,
@@ -3289,9 +3325,21 @@ class NormalizedArchiveBuilder:
                 }
             )
             for source_id, claim_type, summary in (
-                (page_source_id, "photo_metadata_and_attribution", "Commons file-description metadata"),
-                (original_source_id, "photo_original_bytes", "Commons original media bytes"),
-                (archive_source_id, "photo_archive_copy", "Pinned GitHub Release archive copy"),
+                (
+                    page_source_id,
+                    "photo_metadata_and_attribution",
+                    "Commons file-description metadata",
+                ),
+                (
+                    original_source_id,
+                    "photo_original_bytes",
+                    "Commons original media bytes",
+                ),
+                (
+                    archive_source_id,
+                    "photo_archive_copy",
+                    "Pinned GitHub Release archive copy",
+                ),
                 (
                     preview_archive_source_id,
                     "photo_archive_preview",
@@ -3311,7 +3359,9 @@ class NormalizedArchiveBuilder:
             for context in asset["selection_contexts"]:
                 model_id = context["model_id"]
                 year = context.get("exact_year")
-                evidence = context.get("explicit_year_evidence") or context.get("legacy_note")
+                evidence = context.get("explicit_year_evidence") or context.get(
+                    "legacy_note"
+                )
                 link_id = stable_id(
                     "mph",
                     asset["candidate_id"],
@@ -3331,20 +3381,27 @@ class NormalizedArchiveBuilder:
                         "evidence": evidence,
                     }
                 )
-                archive_color_key = context.get("color_id") or context.get("legacy_color_id")
+                archive_color_key = context.get("color_id") or context.get(
+                    "legacy_color_id"
+                )
                 if archive_color_key and year is not None:
                     color_identity_id = color_lookup.get((model_id, archive_color_key))
                     self.rows["photo_color_links"].append(
                         {
                             "photo_color_link_id": stable_id(
-                                "pcl", asset["candidate_id"], model_id, year, archive_color_key
+                                "pcl",
+                                asset["candidate_id"],
+                                model_id,
+                                year,
+                                archive_color_key,
                             ),
                             "photo_id": asset["candidate_id"],
                             "model_id": model_id,
                             "model_year": int(year),
                             "archive_color_key": archive_color_key,
                             "color_identity_id": color_identity_id,
-                            "visual_review_status": context.get("legacy_prior_status") or "candidate",
+                            "visual_review_status": context.get("legacy_prior_status")
+                            or "candidate",
                             "factory_paint_match_status": "unverified",
                             "note": context.get("legacy_note"),
                         }
@@ -3364,7 +3421,9 @@ class NormalizedArchiveBuilder:
             files.update(ROOT.glob(pattern))
         for path in sorted(files):
             relative = path.relative_to(ROOT).as_posix()
-            for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            for line_number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(), 1
+            ):
                 for match in URL_PATTERN.finditer(line):
                     url = canonical_url(match.group(0))
                     source_id = self.ensure_source(url)
@@ -3607,8 +3666,7 @@ class NormalizedArchiveBuilder:
                     "last_modified": source.get("last_modified"),
                     "pdf_page_count": (
                         int(gm_artifact["pdf_page_count"])
-                        if gm_artifact
-                        and gm_artifact.get("pdf_page_count") is not None
+                        if gm_artifact and gm_artifact.get("pdf_page_count") is not None
                         else int(modern_artifact["page_count"])
                         if modern_artifact
                         else int(specialty_artifact["pdf_page_count"])
@@ -3746,8 +3804,7 @@ class NormalizedArchiveBuilder:
             raise ValueError("RockAuto source ID was not preserved exactly")
 
         configurations = {
-            row["catalog_configuration_id"]: row
-            for row in ledger["configurations"]
+            row["catalog_configuration_id"]: row for row in ledger["configurations"]
         }
         products = {row["product_id"]: row for row in ledger["products"]}
         fitments = {row["fitment_id"]: row for row in ledger["fitments"]}
@@ -3778,7 +3835,9 @@ class NormalizedArchiveBuilder:
         )
         for row in ledger["fitments"]:
             if row["catalog_configuration_id"] not in configurations:
-                raise ValueError(f"RockAuto fitment lacks configuration: {row['fitment_id']}")
+                raise ValueError(
+                    f"RockAuto fitment lacks configuration: {row['fitment_id']}"
+                )
             if row["product_id"] not in products:
                 raise ValueError(f"RockAuto fitment lacks product: {row['fitment_id']}")
             self.rows["secondary_paint_fitments"].append(dict(row))
@@ -3787,11 +3846,17 @@ class NormalizedArchiveBuilder:
             fitment = fitments.get(row["fitment_id"])
             product = products.get(row["product_id"])
             if fitment is None or product is None:
-                raise ValueError(f"RockAuto candidate is orphaned: {row['candidate_id']}")
+                raise ValueError(
+                    f"RockAuto candidate is orphaned: {row['candidate_id']}"
+                )
             if not product["has_explicit_paint_code"]:
-                raise ValueError(f"uncoded RockAuto product became a candidate: {row['candidate_id']}")
+                raise ValueError(
+                    f"uncoded RockAuto product became a candidate: {row['candidate_id']}"
+                )
             if row["verification_status"] != "unverified_secondary_lead":
-                raise ValueError(f"RockAuto candidate was promoted: {row['candidate_id']}")
+                raise ValueError(
+                    f"RockAuto candidate was promoted: {row['candidate_id']}"
+                )
             if row["governing_official_source_id"] is not None:
                 raise ValueError(
                     f"RockAuto candidate has unverified official corroboration: "
@@ -3835,9 +3900,7 @@ class NormalizedArchiveBuilder:
             source_id = source["source_id"]
             if source_id not in self.source_id_to_url:
                 raise ValueError(f"supplemental source is not registered: {source_id}")
-            source_revision_id = stable_id(
-                "rev", source_id, source["artifact_sha256"]
-            )
+            source_revision_id = stable_id("rev", source_id, source["artifact_sha256"])
             model_year = int(year_record["year"])
             model_year_id = f"suburban:{model_year}"
             for mention in supplemental:
@@ -3914,7 +3977,11 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
     table_manifest: list[dict[str, Any]] = []
     for name, rows in builder.rows.items():
         primary_key = PRIMARY_KEYS[name]
-        rows.sort(key=lambda row: tuple("" if row.get(key) is None else str(row[key]) for key in primary_key))
+        rows.sort(
+            key=lambda row: tuple(
+                "" if row.get(key) is None else str(row[key]) for key in primary_key
+            )
+        )
         table = pa.Table.from_pylist(rows, schema=SCHEMAS[name])
         metadata = dict(table.schema.metadata or {})
         metadata.update(
@@ -3966,9 +4033,7 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
             builder.rows["secondary_catalog_configurations"]
         ),
         "secondary_paint_products": len(builder.rows["secondary_paint_products"]),
-        "supplemental_color_mentions": len(
-            builder.rows["supplemental_color_mentions"]
-        ),
+        "supplemental_color_mentions": len(builder.rows["supplemental_color_mentions"]),
         "secondary_paint_fitments": len(builder.rows["secondary_paint_fitments"]),
         "color_code_crosswalk_candidates": len(
             builder.rows["color_code_crosswalk_candidates"]
@@ -4047,12 +4112,16 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
         "source_link_count": len(builder.rows["source_links"]),
         "sources": builder.rows["sources"],
     }
-    SOURCE_REGISTRY_PATH.write_text(json.dumps(registry, indent=2) + "\n", encoding="utf-8")
+    SOURCE_REGISTRY_PATH.write_text(
+        json.dumps(registry, indent=2) + "\n", encoding="utf-8"
+    )
     return manifest
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Build normalized Chevrolet archive Parquet tables")
+    parser = argparse.ArgumentParser(
+        description="Build normalized Chevrolet archive Parquet tables"
+    )
     parser.add_argument(
         "--crawler-db",
         type=Path,

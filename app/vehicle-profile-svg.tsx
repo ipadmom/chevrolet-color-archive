@@ -100,6 +100,7 @@ function designEra(modelId: string, year: number) {
     if (year <= 2020) return "k2xx";
     return "t1xx";
   }
+  if (modelId === "caprice-ppv") return "zeta-wm-wn";
   if (year < 1933) return "coachbuilt";
   if (year < 1949) return "streamline";
   if (year < 1960) return "fifties";
@@ -150,6 +151,20 @@ function profileSpec(kind: BodyKind, modelId: string, year: number): ProfileSpec
   if (modelId === "corvette") {
     selected.roofY += year >= 1984 ? 3 : 0;
     selected.hoodY += 2;
+  }
+  if (modelId === "caprice-ppv") {
+    Object.assign(selected, {
+      rearX: 17,
+      frontX: 223,
+      bodyY: 49,
+      hoodX: 177,
+      hoodY: 44,
+      roofRearX: 61,
+      roofFrontX: 151,
+      roofY: 24,
+      wheelRearX: 58,
+      wheelFrontX: 189,
+    });
   }
   return selected;
 }
@@ -256,6 +271,13 @@ export function VehicleProfileSvg({
       {modelId === "ssr" ? <path d={`M ${spec.rearX + 7} ${spec.bodyY} Q ${spec.rearX + 35} ${spec.bodyY - 9} ${spec.roofRearX - 2} ${spec.bodyY}`} fill="none" stroke={dark} strokeWidth="1.4" /> : null}
       {modelId === "corvette" && modelYear <= 1962 ? <path d="M 83 33 Q 103 25 125 33" fill="none" stroke={dark} strokeWidth="2" /> : null}
       {modelId === "camaro" && modelYear >= 1982 && modelYear <= 1992 ? <path d="M 29 54 L 78 46" stroke={dark} strokeWidth="1.4" /> : null}
+      {modelId === "caprice-ppv" ? (
+        <>
+          <path d="M 27 51 Q 43 46 64 45" fill="none" stroke={dark} strokeWidth="1.15" />
+          <path d="M 166 48 L 170 48 L 169 54 L 165 54 Z" fill={dark} />
+          <path d="M 73 62 H 166" stroke={dark} strokeWidth="0.9" opacity="0.65" />
+        </>
+      ) : null}
       <path d={`M ${spec.hoodX + 2} ${spec.hoodY + 4} H ${spec.frontX - 7}`} stroke={dark} strokeWidth="1.1" />
       <path d={`M ${spec.rearX + 3} ${spec.baseY - 4} H ${spec.frontX - 3}`} stroke={dark} strokeWidth="1" opacity="0.7" />
       <path d={`M ${spec.roofFrontX + 3} ${spec.bodyY - 5} V ${spec.baseY - 4}`} stroke={dark} strokeWidth="1" />

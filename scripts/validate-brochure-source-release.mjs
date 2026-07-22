@@ -13,16 +13,17 @@ const REPOSITORY = "ipadmom/chevrolet-color-archive";
 const RELEASE_URL = `https://github.com/${REPOSITORY}/releases/tag/${RELEASE_TAG}`;
 const RELEASE_DOWNLOAD_BASE =
   `https://github.com/${REPOSITORY}/releases/download/${RELEASE_TAG}/`;
-const EXPECTED_ASSET_COUNT = 110;
-const EXPECTED_PDF_COUNT = 86;
-const EXPECTED_PDF_BYTES = 1_030_803_863;
-const EXPECTED_PDF_PAGE_COUNT = 6_844;
+const EXPECTED_ASSET_COUNT = 126;
+const EXPECTED_PDF_COUNT = 102;
+const EXPECTED_PDF_BYTES = 1_226_505_194;
+const EXPECTED_PDF_PAGE_COUNT = 7_904;
 const EXPECTED_MODERN_SOURCE_COUNT = 23;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 19;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
 const EXPECTED_MODERN_TABLE_COUNT = 61;
 const EXPECTED_MODERN_ASSERTION_COUNT = 483;
-const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 19;
+const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 281;
+const EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT = 10;
 const EARLY_SUBURBAN_AUDIT_RELATIVE_PATH =
   "data/audits/suburban-1969-1976.json";
 const BROCHURE_PALETTE_AUDIT_RELATIVE_PATH =
@@ -173,6 +174,128 @@ const publishedSpecialtyAssets = new Map([
     {
       sourceId: "gm-2011-police-manual",
       role: "controlling_specialty_vehicle_manual",
+    },
+  ],
+]);
+
+const specialtyResearchAssets = new Map([
+  [
+    "1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-heritage-1979-chevrolet-blazer",
+      role: "controlling_specialty_vehicle_information_kit",
+    },
+  ],
+  [
+    "1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-heritage-1993-chevrolet-s-10",
+      role: "controlling_specialty_vehicle_information_kit",
+    },
+  ],
+  [
+    "1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-heritage-1993-chevrolet-truck",
+      role: "controlling_specialty_vehicle_information_kit",
+    },
+  ],
+  [
+    "2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
+    {
+      sourceId: "gm-2012-municipal-manual",
+      role: "controlling_specialty_vehicle_manual",
+    },
+  ],
+  [
+    "2013-chevrolet-municipal-vehicles-guide-gm.pdf",
+    {
+      sourceId: "gm-2013-municipal-guide",
+      role: "controlling_specialty_vehicle_manual",
+    },
+  ],
+  [
+    "2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
+    {
+      sourceId: "gm-2014-police-guide",
+      role: "controlling_specialty_vehicle_manual",
+    },
+  ],
+  [
+    "2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2015-caprice-9c1-specification-guide",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2016-caprice-9c1-specification-guide",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2017-caprice-9c1-specification-guide",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2023-bolt-euv-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2024-blazer-ev-9c1-9c3",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2025-blazer-ev-9c1-9c3-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+    {
+      sourceId: "gm-order-guide-2025-blazer-ev-police-22887",
+      role: "supporting_specialty_vehicle_order_guide_snapshot",
+    },
+  ],
+  [
+    "2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2026-blazer-ev-9c1-9c3-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+    {
+      sourceId: "gm-order-guide-2026-blazer-ev-police-23158",
+      role: "supporting_specialty_vehicle_order_guide_snapshot",
+    },
+  ],
+  [
+    "2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2026-silverado-9c1-041426",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2026-silverado-5w4-041426",
+      role: "controlling_specialty_vehicle_specification_guide",
     },
   ],
 ]);
@@ -458,6 +581,18 @@ function assertManifestContract(manifest) {
   for (const [assetName, { sourceId, role }] of publishedSpecialtyAssets) {
     const entry = entriesByName.get(assetName);
     invariant(entry, `missing published specialty asset: ${assetName}`);
+    invariant(
+      entry.source_id === sourceId,
+      `${assetName} must have source_id ${sourceId}`,
+    );
+    invariant(
+      entry.role === role,
+      `${assetName} must have role ${role}`,
+    );
+  }
+  for (const [assetName, { sourceId, role }] of specialtyResearchAssets) {
+    const entry = entriesByName.get(assetName);
+    invariant(entry, `missing specialty research asset: ${assetName}`);
     invariant(
       entry.source_id === sourceId,
       `${assetName} must have source_id ${sourceId}`,
@@ -1020,11 +1155,24 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "published specialty record_id",
   );
   const expectedPublishedSpecialtySourceIds = [
+    "gm-heritage-1979-chevrolet-blazer",
     "gm-1980-chevrolet-truck-color-trim",
+    "gm-heritage-1993-chevrolet-s-10",
+    "gm-heritage-1993-chevrolet-truck",
     "gm-heritage-2003-chevrolet-tahoe",
     "new-jersey-tahoe-police-contract-2005",
     "new-jersey-tahoe-police-contract-2006",
     "gm-2011-police-manual",
+    "gm-2012-municipal-manual",
+    "gm-2013-municipal-guide",
+    "gm-2014-police-guide",
+    "gm-2015-caprice-9c1-specification-guide",
+    "gm-2016-caprice-9c1-specification-guide",
+    "gm-2017-caprice-9c1-specification-guide",
+    "gm-2023-bolt-euv-5w4",
+    "gm-2026-blazer-ev-9c1-9c3-5w4",
+    "gm-2026-silverado-9c1-041426",
+    "gm-2026-silverado-5w4-041426",
   ].sort();
   const actualPublishedSpecialtySourceIds = [
     ...new Set(
@@ -1034,7 +1182,43 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualPublishedSpecialtySourceIds) ===
       JSON.stringify(expectedPublishedSpecialtySourceIds),
-    "published specialty rows must resolve to the five audited governing sources",
+    "published specialty rows must resolve to the 18 audited governing sources",
+  );
+  const verifiedNotPublishedSpecialtyRecords =
+    specialtyColorSource.verified_not_published;
+  invariant(
+    Array.isArray(verifiedNotPublishedSpecialtyRecords) &&
+    verifiedNotPublishedSpecialtyRecords.length ===
+      EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT,
+    `specialty source audit must retain exactly ${EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT} verified-not-published rows`,
+  );
+  assertUnique(
+    verifiedNotPublishedSpecialtyRecords.map(({ record_id: recordId }) => recordId),
+    "verified-not-published specialty record_id",
+  );
+  const expectedVerifiedNotPublishedSourceIds = [
+    "gm-2024-blazer-ev-9c1-9c3",
+    "gm-2025-blazer-ev-9c1-9c3-5w4",
+  ].sort();
+  const retainedVerifiedNotPublishedSpecialtyRecords =
+    verifiedNotPublishedSpecialtyRecords.filter(
+      ({ source }) => typeof source?.source_id === "string",
+    );
+  invariant(
+    retainedVerifiedNotPublishedSpecialtyRecords.length === 8,
+    "specialty source audit must retain exactly eight nonrouting Blazer EV source snapshots",
+  );
+  const actualVerifiedNotPublishedSourceIds = [
+    ...new Set(
+      retainedVerifiedNotPublishedSpecialtyRecords.map(
+        ({ source }) => source.source_id,
+      ),
+    ),
+  ].sort();
+  invariant(
+    JSON.stringify(actualVerifiedNotPublishedSourceIds) ===
+      JSON.stringify(expectedVerifiedNotPublishedSourceIds),
+    "verified-not-published specialty rows must resolve to the 2024 and 2025 Blazer EV guides",
   );
   const tahoeSpecialtyRecords = specialtyColorSource.app_publication_records.filter(
     (record) =>
@@ -1060,6 +1244,33 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "Tahoe specialty rows must resolve to the four retained governing sources",
   );
   for (const record of publishedSpecialtyRecords) {
+    const { source } = record;
+    invariant(
+      typeof source.archive_url === "string" &&
+        source.archive_url.startsWith(RELEASE_DOWNLOAD_BASE),
+      `${record.record_id} is not pinned to ${RELEASE_TAG}`,
+    );
+    const entry = manifestEntriesByUrl.get(source.archive_url);
+    invariant(entry, `missing manifest entry for ${record.record_id}`);
+    invariant(
+      source.source_id === entry.source_id,
+      `${record.record_id} source_id does not match the Release manifest`,
+    );
+    invariant(
+      source.sha256 === entry.sha256,
+      `${record.record_id} SHA-256 does not match the Release manifest`,
+    );
+    invariant(
+      source.bytes === entry.bytes,
+      `${record.record_id} byte size does not match the Release manifest`,
+    );
+    invariant(
+      source.pdf_page_count === entry.pdf_page_count,
+      `${record.record_id} page count does not match the Release manifest`,
+    );
+    allAppReleaseUrls.add(source.archive_url);
+  }
+  for (const record of retainedVerifiedNotPublishedSpecialtyRecords) {
     const { source } = record;
     invariant(
       typeof source.archive_url === "string" &&
@@ -1144,6 +1355,8 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     modernPaletteTableCount: modernPaletteTables.length,
     modernPaletteAssertionCount,
     publishedSpecialtyRecordCount: publishedSpecialtyRecords.length,
+    verifiedNotPublishedSpecialtyRecordCount:
+      verifiedNotPublishedSpecialtyRecords.length,
   };
 }
 
@@ -1263,6 +1476,8 @@ export async function validateBrochureSourceRelease({
       appCitationReport.modernPaletteAssertionCount,
     published_specialty_record_count:
       appCitationReport.publishedSpecialtyRecordCount,
+    verified_not_published_specialty_record_count:
+      appCitationReport.verifiedNotPublishedSpecialtyRecordCount,
     local_staging: hasStaging ? "verified" : "not-present",
     local_staging_verified_asset_count: hasStaging ? manifest.entries.length : 0,
     remote_release: verifyRemote ? "verified" : "not-checked",

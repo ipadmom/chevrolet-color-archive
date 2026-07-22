@@ -25,7 +25,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         cls.components = cls.builder.rows["paint_scheme_components"]
 
     def test_schema_uses_nullable_codes_and_required_controlled_statuses(self) -> None:
-        self.assertEqual(8, BUILD.SCHEMA_VERSION)
+        self.assertEqual(9, BUILD.SCHEMA_VERSION)
         expected = {
             "color_availability": ("factory_code", "factory_code_status"),
             "paint_scheme_components": ("factory_code", "factory_code_status"),
@@ -51,6 +51,9 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "not_stated_in_source",
             },
             set(BUILD.FACTORY_CODE_STATUS_VALUES),
+        )
+        self.assertFalse(
+            BUILD.SCHEMAS["color_availability"].field("application_type").nullable
         )
 
     def test_placeholder_hosts_cannot_become_normalized_sources(self) -> None:
@@ -113,9 +116,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         )
 
     def test_claims_copy_both_nullable_value_and_status(self) -> None:
-        availability_by_id = {
-            row["availability_id"]: row for row in self.availability
-        }
+        availability_by_id = {row["availability_id"]: row for row in self.availability}
         self.assertEqual(len(self.availability), len(self.claims))
         for claim in self.claims:
             availability = availability_by_id[claim["availability_id"]]
@@ -171,15 +172,13 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         self.assertEqual(14, len(rows))
         self.assertEqual(
             {"printed_in_source"},
-            {
-                row["factory_code_status"]
-                for row in rows
-                if row["model_year"] == 2003
-            },
+            {row["factory_code_status"] for row in rows if row["model_year"] == 2003},
         )
         recent_rows = [row for row in rows if row["model_year"] in {2005, 2006}]
         printed_rows = [
-            row for row in recent_rows if row["factory_code_status"] == "printed_in_source"
+            row
+            for row in recent_rows
+            if row["factory_code_status"] == "printed_in_source"
         ]
         self.assertEqual(
             {
@@ -207,6 +206,31 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         ]
         self.assertEqual(
             {
+                "blazer-ev:2026",
+                "blazer:1979",
+                "blazer:1980",
+                "bolt-euv:2023",
+                "caprice-ppv:2011",
+                "caprice-ppv:2012",
+                "caprice-ppv:2013",
+                "caprice-ppv:2014",
+                "caprice-ppv:2015",
+                "caprice-ppv:2016",
+                "caprice-ppv:2017",
+                "ck-series:1979",
+                "ck-series:1980",
+                "ck-series:1993",
+                "g-series-van:1979",
+                "g-series-van:1980",
+                "impala-limited:2014",
+                "impala:2011",
+                "impala:2012",
+                "impala:2013",
+                "s10:1993",
+                "silverado:2026",
+                "sportvan:1979",
+                "sportvan:1980",
+                "suburban:1979",
                 "suburban:1980",
                 "suburban:2005",
                 "suburban:2007",
@@ -217,15 +241,13 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
             },
             {row["model_year_id"] for row in overlays},
         )
-        self.assertEqual(18, len(overlays))
+        self.assertEqual(278, len(overlays))
         self.assertEqual(
             {"specialty_palette_subset"},
             {row["evidence_class"] for row in overlays},
         )
         program_partitions = [
-            row
-            for row in memberships
-            if row["membership_role"] == "program_partition"
+            row for row in memberships if row["membership_role"] == "program_partition"
         ]
         self.assertEqual(3, len(program_partitions))
         self.assertEqual(
@@ -249,7 +271,9 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
             if row["model_id"] == "suburban" and row["model_year"] == 1993
         ]
         self.assertEqual(10, len(claims))
-        self.assertEqual({"image_region"}, {row["evidence_locator_type"] for row in claims})
+        self.assertEqual(
+            {"image_region"}, {row["evidence_locator_type"] for row in claims}
+        )
         self.assertEqual({()}, {tuple(row["pdf_pages"]) for row in claims})
         revisions = {
             row["source_revision_id"]: row

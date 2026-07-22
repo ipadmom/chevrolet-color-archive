@@ -38,12 +38,12 @@ each matrix spans only the selected sourced platform, base, or era band. An
 unreviewed year remains as an explicit blank column instead of borrowing colors
 from an adjacent year.
 
-The reviewed public matrices currently contain 1,468 source-linked listings.
+The reviewed public matrices currently contain 1,748 source-linked listings.
 They divide into 973 direct source transcriptions, 454 qualified official
-palette-union rows across 56 model-years, and 41 reviewed specialty-paint subset
-rows across 12 model-year applications. Five model-years remain specialty-only
-incomplete records; four Suburban and three Tahoe specialty applications
-coexist with a separately complete or qualified regular palette. Complete exact-year
+palette-union rows across 56 model-years, and 321 reviewed specialty-paint subset
+rows across 35 model-years. Twenty-five model-years remain specialty-only
+incomplete records; the other ten coexist with a separately complete or
+qualified regular palette. Complete exact-year
 Suburban palettes now cover 1969, 1972-2005, and 2007. The 2002 and 2003
 brochures and the 2004 service table are pinned in the GitHub Release with
 artifact hashes and retrieval-carrier provenance. Model-year presence and
@@ -244,14 +244,14 @@ eight-color qualified unions. The T1XX refresh matrix joins 2025 and 2026 only
 where the exact color label, code, state, and restriction semantics match.
 Incomplete years remain blank and visibly unverified.
 
-60 high-priority nameplates now use 217 sourced base, platform, and era bands
+61 high-priority nameplates now use 218 sourced base, platform, and era bands
 instead of arbitrary year chunks. Tahoe and Suburban have complete model-year
 coverage across their audited GMT, K2, and T1 families, including the distinct
 GMT820 and GMT830 applications. Avalanche carries the separate GMT805 code; its
 audit note records that GMT806 belongs to the Cadillac Escalade EXT, not a
 Chevrolet nameplate. Every model and year tile uses an inline SVG vehicle
-profile selected by body class and design era. The platform audit covers 1,332
-of 1,792 catalog model-years; all 460 unresolved years stay explicit rather
+profile selected by body class and design era. The platform audit covers 1,339
+of 1,792 catalog model-years; all 453 unresolved years stay explicit rather
 than inheriting adjacent bands.
 
 The Wikimedia Commons archive contains 302 audited originals across 140 models,
@@ -260,15 +260,17 @@ plus 302 web previews. Both forms are stored under the pinned GitHub Release tag
 photo card links the Commons source, license, and archived original. Photographs
 remain illustrations only and never establish factory paint availability.
 
-The pinned `brochure-source-archive-v1` Release preserves 110 audited assets,
-including 86 PDFs totaling 1,030,803,863 bytes and 6,844 pages. Eighty-one
-retained source assets include 77 source PDFs totaling 975,606,620 bytes. The
-archive closes the Tahoe 1995–2007 evidence set, the modern 2008–2026 Fleet
-Guide and eBrochure set, and every currently published specialty citation. The
-flat-filename checksum manifest covers all 109 other assets. Release validation
-identifies 30 governing assets, 30 app-fed citations, 79 application Release
-URLs, 61 modern palette tables, 483 modern color assertions, and 19 published
-specialty records.
+The pinned `brochure-source-archive-v1` Release preserves 126 audited assets,
+including 102 PDFs totaling 1,226,505,194 bytes and 7,904 pages. Of those, 97 are
+retained source assets, including 93 retained source PDFs totaling 1,171,307,951
+bytes. The archive closes the Tahoe 1995–2007 evidence set, all 19 audited
+2008–2026 GM Fleet Guides, the retained eBrochure set, and every currently
+published specialty citation. The
+flat-filename checksum manifest covers all 125 other assets. Release validation
+identifies 30 governing audit assets, 30 app-fed audit citations, 94
+application Release URLs, 61 modern palette tables, 483 modern color
+assertions, 281 published specialty records, and 10 verified nonpublished,
+nonrouting specialty snapshots.
 
 ## Evidence rules
 

@@ -190,10 +190,19 @@ async function loadArchiveModels() {
   return (await import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`)).models;
 }
 
-function generation({ aliases = [], id, label, years, colors = [], sources = {} }) {
+function generation({
+  aliases = [],
+  id,
+  label,
+  programLabel,
+  years,
+  colors = [],
+  sources = {},
+}) {
   return {
     id,
     label,
+    ...(programLabel ? { programLabel } : {}),
     range: `${years[0]}-${years.at(-1)}`,
     years,
     listingCount: colors.length,
@@ -483,6 +492,79 @@ test("matrix bands retain era years but populate only exact sourced cells", asyn
   );
 });
 
+test("specialty matrices merge a stable program across years but keep simultaneous programs separate", async () => {
+  const { buildArchiveMatrix } = await loadSearchModule();
+  const aliases = ["Fixture platform"];
+  const specialtySource = (year) => ({
+    ...fixtureSource(year),
+    evidenceClass: "specialty_palette_subset",
+  });
+  const model = {
+    id: "fixture",
+    name: "Fixture",
+    vehicleClass: "fixture",
+    era: "fixture",
+    status: "fixture",
+    generations: [
+      generation({
+        aliases,
+        id: "kerr-2020-green",
+        label: "Fixture platform",
+        programLabel: "9C1 / 9C3 Kerr special paint",
+        years: ["2020"],
+        colors: [fixtureColor("2020", { code: "WA-7964 / BEI / BFM" })],
+        sources: { "2020": specialtySource("2020") },
+      }),
+      generation({
+        aliases,
+        id: "kerr-2021-green",
+        label: "Fixture platform",
+        programLabel: "9C1 / 9C3 Kerr special paint",
+        years: ["2021"],
+        colors: [fixtureColor("2021", { code: "WA-7964 / BEI / BFM" })],
+        sources: { "2021": specialtySource("2021") },
+      }),
+      generation({
+        aliases,
+        id: "ssv-2021-green",
+        label: "Fixture platform",
+        programLabel: "5W4 SSV",
+        years: ["2021"],
+        colors: [fixtureColor("2021", { code: "9V5 / WA-9015" })],
+        sources: { "2021": specialtySource("2021") },
+      }),
+      generation({
+        aliases,
+        id: "kerr-2021-second-green",
+        label: "Fixture platform",
+        programLabel: "9C1 / 9C3 Kerr special paint",
+        years: ["2021"],
+        colors: [fixtureColor("2021", { code: "WA-8412 / BEZ / BGD" })],
+        sources: { "2021": specialtySource("2021") },
+      }),
+    ],
+  };
+
+  const matrix = buildArchiveMatrix(model, "2021");
+  assert.deepEqual(matrix.years, ["2020", "2021"]);
+  assert.equal(matrix.colors.length, 3);
+  const acrossYears = matrix.colors.find(
+    (color) => Object.keys(color.availability).length === 2,
+  );
+  assert.ok(acrossYears);
+  assert.deepEqual(Object.keys(acrossYears.availability).sort(), ["2020", "2021"]);
+  const ssv = matrix.colors.find(
+    (color) => color.availability["2021"]?.code === "9V5 / WA-9015",
+  );
+  assert.ok(ssv);
+  assert.deepEqual(Object.keys(ssv.availability), ["2021"]);
+  assert.ok(
+    matrix.colors.some(
+      (color) => color.availability["2021"]?.code === "WA-8412 / BEZ / BGD",
+    ),
+  );
+});
+
 test("real Tahoe matrices join exact T1XX rows and leave unreviewed era years blank", async () => {
   const [{ buildArchiveMatrix }, models] = await Promise.all([
     loadSearchModule(),
@@ -535,7 +617,19 @@ test("real Suburban matrices preserve governing rows and same-year specialty ove
   );
   assert.equal(
     matrix.colors.filter((color) => color.availability["1980"]).length,
-    16,
+    18,
+  );
+  assert.equal(
+    matrix.colors.filter(
+      (color) => color.availability["1980"]?.label === "Tangier Orange",
+    ).length,
+    1,
+  );
+  assert.equal(
+    matrix.colors.filter(
+      (color) => color.availability["1980"]?.label === "Wheatland Yellow",
+    ).length,
+    1,
   );
   const woodlandGreen = matrix.colors.filter(
     (color) => color.availability["1980"]?.label === "Woodland Green",
@@ -554,6 +648,187 @@ test("real Suburban matrices preserve governing rows and same-year specialty ove
     "governing_chart",
     "specialty_palette_subset",
   ]);
+});
+
+test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualified", async () => {
+  const [{ buildArchiveMatrix, relevantYearBand }, models] = await Promise.all([
+    loadSearchModule(),
+    loadArchiveModels(),
+  ]);
+  const byId = new Map(models.map((model) => [model.id, model]));
+
+  const s10 = buildArchiveMatrix(byId.get("s10"), "1993");
+  assert.equal(
+    s10.colors.filter((color) => color.availability["1993"]).length,
+    4,
+  );
+  assert.ok(
+    s10.colors.some(
+      (color) => color.availability["1993"]?.code === "WE7156 / SEO 9V5",
+    ),
+  );
+
+  const ck = buildArchiveMatrix(byId.get("ck-series"), "1993");
+  const ck1993 = ck.colors.filter((color) => color.availability["1993"]);
+  assert.equal(ck1993.length, 4);
+  assert.deepEqual(
+    new Set(ck1993.map((color) => color.availability["1993"]?.code)),
+    new Set([
+      "WE9417 / SEO 9W4",
+      "WE9418 / SEO 9W3",
+      "WE9015 / SEO 9V5",
+      "WE9403 / SEO 9V9",
+    ]),
+  );
+  assert.ok(
+    ck1993.every(
+      (color) =>
+        color.availability["1993"]?.applicationType ===
+        "manufacturer_special_equipment_option",
+    ),
+  );
+
+  const impala = buildArchiveMatrix(byId.get("impala"), "2012");
+  assert.equal(
+    impala.colors.filter((color) => color.availability["2012"]).length,
+    30,
+  );
+  assert.ok(
+    impala.colors.every(
+      (color) =>
+        !color.availability["2012"] ||
+        color.availability["2012"].applicationType ===
+          "authorized_upfitter_post_build",
+    ),
+  );
+  const impalaLimited = buildArchiveMatrix(byId.get("impala-limited"), "2014");
+  assert.equal(
+    impalaLimited.colors.filter((color) => color.availability["2014"]).length,
+    30,
+  );
+
+  const bolt = buildArchiveMatrix(byId.get("bolt-euv"), "2023");
+  assert.equal(
+    bolt.colors.filter((color) => color.availability["2023"]).length,
+    7,
+  );
+
+  const capricePpv = byId.get("caprice-ppv");
+  assert.deepEqual(relevantYearBand(capricePpv, "2014"), [
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+  ]);
+  const caprice = buildArchiveMatrix(capricePpv, "2014");
+  assert.deepEqual(caprice.years, [
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+  ]);
+  assert.deepEqual(
+    Object.fromEntries(
+      caprice.years.map((year) => [
+        year,
+        caprice.colors.filter((item) => item.availability[year]).length,
+      ]),
+    ),
+    { 2011: 14, 2012: 16, 2013: 14, 2014: 7, 2015: 6, 2016: 6, 2017: 4 },
+  );
+  const hugoBlue = caprice.colors.filter(
+    (item) => item.name === "Hugo Blue (Dark Blue) Metallic",
+  );
+  assert.equal(hugoBlue.length, 2);
+  assert.deepEqual(
+    hugoBlue.map((item) => Object.keys(item.availability)).sort(),
+    [["2012", "2013"], ["2012", "2013", "2014", "2015", "2016"]],
+  );
+  assert.ok(
+    hugoBlue.every((item) =>
+      Object.values(item.availability).every(
+        ({ state }) => state === "available_with_minimum_batch",
+      ),
+    ),
+  );
+  const detectiveMirage = caprice.colors.find(
+    (item) =>
+      item.matrixKey.includes("Caprice 9C3 Detective") &&
+      item.rowCode.startsWith("RPO GST;"),
+  );
+  assert.ok(detectiveMirage);
+  assert.deepEqual(Object.keys(detectiveMirage.availability), ["2011", "2012"]);
+  assert.equal(
+    detectiveMirage.availability["2011"].label,
+    "Mirage Glow Metallic",
+  );
+  assert.equal(
+    detectiveMirage.availability["2012"].label,
+    "Mirage Gold Metallic",
+  );
+
+  const blazer2024 = byId
+    .get("blazer-ev")
+    .generations.filter(
+      (generation) =>
+        generation.years.includes("2024") &&
+        generation.sources["2024"]?.evidenceClass === "specialty_palette_subset",
+    );
+  assert.equal(blazer2024.length, 0);
+  const blazer2026 = byId
+    .get("blazer-ev")
+    .generations.filter(
+      (generation) =>
+        generation.years.includes("2026") &&
+        generation.sources["2026"]?.evidenceClass === "specialty_palette_subset",
+    );
+  assert.equal(blazer2026.length, 4);
+
+  const silverado2026 = byId
+    .get("silverado")
+    .generations.filter(
+      (generation) =>
+        generation.years.includes("2026") &&
+        generation.sources["2026"]?.evidenceClass === "specialty_palette_subset",
+    );
+  assert.equal(silverado2026.length, 50);
+  assert.deepEqual(
+    [...new Set(silverado2026.map((generation) => generation.programLabel))].sort(),
+    ["2026 Silverado 5W4 SSV", "2026 Silverado 9C1 PPV"],
+  );
+  assert.ok(
+    models.every((model) =>
+      model.generations.every((generation) =>
+        generation.colors.every(
+          (color) => !/forest service green/i.test(color.name),
+        ),
+      ),
+    ),
+  );
+});
+
+test("all-field search indexes the normalized fallback specialty application type", async () => {
+  const [
+    { buildArchiveSearchRecords, compileSafeArchivePattern, recordMatchesPattern },
+    models,
+  ] = await Promise.all([loadSearchModule(), loadArchiveModels()]);
+  const records = buildArchiveSearchRecords(models, [], {
+    includeDefaultSupplementalRecords: false,
+  });
+  const compiled = compileSafeArchivePattern("specialty_program_unspecified");
+  assert.equal(compiled.error, null);
+  assert.ok(compiled.regex);
+  const matches = records.filter((record) =>
+    recordMatchesPattern(record, compiled.regex),
+  );
+  assert.equal(matches.length, 21);
+  assert.ok(matches.every((record) => record.recordKind === "availability"));
 });
 
 test("real commercial-model strips stop at sourced era and production boundaries", async () => {
@@ -623,6 +898,7 @@ test("all-field search indexes specialty and fleet colors without hard-coded nam
     availability: {
       "1977": {
         state: "restricted",
+        applicationType: "authorized_upfitter_post_build",
         label: "Forest Service Green",
         code: "9C1-FSG",
         restriction: "Federal fleet order only",
@@ -643,11 +919,17 @@ test("all-field search indexes specialty and fleet colors without hard-coded nam
   assert.equal(records.length, 1);
   assert.equal(records[0].colorId, "forest-service-green");
   assert.match(records[0].searchText, /Federal fleet order only/);
+  assert.match(records[0].searchText, /authorized_upfitter_post_build/);
 
   const compiled = compileSafeArchivePattern("forest.*green|9C1");
   assert.equal(compiled.error, null);
   assert.ok(compiled.regex);
   assert.equal(recordMatchesPattern(records[0], compiled.regex), true);
+  const applicationTypePattern = compileSafeArchivePattern("authorized.*upfitter");
+  assert.equal(
+    recordMatchesPattern(records[0], applicationTypePattern.regex),
+    true,
+  );
 });
 
 test("all-field search indexes catalog aliases, source candidates, and archived photo metadata", async () => {

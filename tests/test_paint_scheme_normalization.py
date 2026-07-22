@@ -28,10 +28,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.suburban_audit = BUILD.json_load(
-            ROOT
-            / "data"
-            / "audits"
-            / "suburban-paint-schemes-1977-1999.json"
+            ROOT / "data" / "audits" / "suburban-paint-schemes-1977-1999.json"
         )
 
         # Build the complete relational rows in memory. write_outputs is
@@ -53,23 +50,18 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         cls.schemes = cls.builder.rows["paint_schemes"]
         cls.components = cls.builder.rows["paint_scheme_components"]
         cls.availability = availability
-        cls.sources = {
-            row["source_id"]: row for row in cls.builder.rows["sources"]
-        }
+        cls.sources = {row["source_id"]: row for row in cls.builder.rows["sources"]}
         cls.revisions = {
             row["source_revision_id"]: row
             for row in cls.builder.rows["source_revisions"]
         }
         cls.components_by_scheme = defaultdict(list)
         for component in cls.components:
-            cls.components_by_scheme[component["paint_scheme_id"]].append(
-                component
-            )
+            cls.components_by_scheme[component["paint_scheme_id"]].append(component)
 
     def test_structured_suburban_audit_reconciles_every_documented_year(self) -> None:
         scheme_sets = {
-            item["scheme_set_id"]: item
-            for item in self.suburban_audit["scheme_sets"]
+            item["scheme_set_id"]: item for item in self.suburban_audit["scheme_sets"]
         }
         counts = Counter()
         package_counts = Counter()
@@ -139,11 +131,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
                 (1998, "ZY2"): 21,
                 (1999, "ZY2"): 34,
             },
-            {
-                key: package_counts[key]
-                for key in package_counts
-                if key[0] >= 1987
-            },
+            {key: package_counts[key] for key in package_counts if key[0] >= 1987},
         )
         self.assertEqual(1185, sum(counts.values()))
         for year in self.suburban_audit["years"]:
@@ -166,12 +154,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         self.assertEqual(1369, len({row["paint_scheme_id"] for row in self.schemes}))
         self.assertEqual(
             2738,
-            len(
-                {
-                    row["paint_scheme_component_id"]
-                    for row in self.components
-                }
-            ),
+            len({row["paint_scheme_component_id"] for row in self.components}),
         )
 
     def test_primary_and_secondary_roles_are_ordered_and_never_standalone(self) -> None:
@@ -183,16 +166,10 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
             self.assertEqual(2, len(components))
             self.assertEqual(
                 [(1, "primary"), (2, "secondary")],
-                [
-                    (row["component_order"], row["component_role"])
-                    for row in components
-                ],
+                [(row["component_order"], row["component_role"]) for row in components],
             )
             self.assertTrue(
-                all(
-                    not row["standalone_availability_asserted"]
-                    for row in components
-                )
+                all(not row["standalone_availability_asserted"] for row in components)
             )
         self.assertNotIn(
             "color_identity_id",
@@ -226,13 +203,17 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
             )
         )
 
-    def test_package_stripe_interior_and_duplicate_source_rows_are_preserved(self) -> None:
+    def test_package_stripe_interior_and_duplicate_source_rows_are_preserved(
+        self,
+    ) -> None:
         carmine_schemes = []
         for scheme in self.schemes:
             if scheme["model_id"] != "suburban" or scheme["model_year"] != 1981:
                 continue
             components = self.components_by_scheme[scheme["paint_scheme_id"]]
-            primary = next(row for row in components if row["component_role"] == "primary")
+            primary = next(
+                row for row in components if row["component_role"] == "primary"
+            )
             secondary = next(
                 row for row in components if row["component_role"] == "secondary"
             )
@@ -247,7 +228,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
             {"Carmine or Slate", "Doeskin"},
             {row["interior_colors"] for row in carmine_schemes},
         )
-        self.assertTrue(all(row["package_code"] == "ZY3 / ZY5" for row in carmine_schemes))
+        self.assertTrue(
+            all(row["package_code"] == "ZY3 / ZY5" for row in carmine_schemes)
+        )
 
     def test_late_square_body_printed_variants_are_preserved(self) -> None:
         def matching_schemes(year: int, package_code: str) -> list[dict]:
@@ -302,7 +285,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
                 for scheme in matching_schemes(1989, package_code)
                 if {
                     component["component_role"]: component["factory_code"]
-                    for component in self.components_by_scheme[scheme["paint_scheme_id"]]
+                    for component in self.components_by_scheme[
+                        scheme["paint_scheme_id"]
+                    ]
                 }
                 == {"primary": "50", "secondary": "96"}
             ]
@@ -343,7 +328,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
             )
 
     def test_1991_source_anomaly_and_1992_d85_divergence_are_preserved(self) -> None:
-        def matching(year: int, package: str, primary: str, secondary: str) -> list[dict]:
+        def matching(
+            year: int, package: str, primary: str, secondary: str
+        ) -> list[dict]:
             matches = []
             for scheme in self.schemes:
                 if (
@@ -354,7 +341,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
                     continue
                 components = {
                     component["component_role"]: component["factory_code"]
-                    for component in self.components_by_scheme[scheme["paint_scheme_id"]]
+                    for component in self.components_by_scheme[
+                        scheme["paint_scheme_id"]
+                    ]
                 }
                 if components == {"primary": primary, "secondary": secondary}:
                     matches.append(scheme)
@@ -416,7 +405,10 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         }
         actual = Counter()
         for scheme in self.schemes:
-            if scheme["model_id"] != "suburban" or not 1994 <= scheme["model_year"] <= 1997:
+            if (
+                scheme["model_id"] != "suburban"
+                or not 1994 <= scheme["model_year"] <= 1997
+            ):
                 continue
             if scheme["package_code"] != "ZY4":
                 continue
@@ -424,7 +416,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
                 component["component_role"]: component["factory_code"]
                 for component in self.components_by_scheme[scheme["paint_scheme_id"]]
             }
-            actual[(scheme["model_year"], components["primary"], components["secondary"])] += 1
+            actual[
+                (scheme["model_year"], components["primary"], components["secondary"])
+            ] += 1
         for key, expected in expected_pair_counts.items():
             self.assertEqual(expected, actual[key], key)
 
@@ -485,20 +479,59 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
 
     def test_1990_1999_source_artifact_identity_is_exact(self) -> None:
         expected = {
-            1990: ("46b985c6943036e27efd890122a3d3ffc5d0ba625d19305a978da5d3fec57df9", 1130037, 27),
-            1991: ("24f2a80e283d48d02a137e0c71114e76d31466515130aa8b21a93d1ac1a0ff7f", 1229801, 29),
-            1992: ("c91ee8f67a3e33f5e6485572f1347e90d12de287dcf8720e0529599032a05b78", 746842, 23),
-            1993: ("607f0de7aa91612d9c406dd41df126b1959bd13d9d74c05c3137f01739b23341", 573990, 14),
-            1994: ("895ef9992d0f5172084047683acfa8d543acea6bf37464df24fee50d9e3385df", 1078053, 28),
-            1995: ("19161144f0aecfd285c1d4e51e549a8e39c70e7b3d42a139c240404fcef4fe9b", 962051, 28),
-            1996: ("c7f1f9a1537331b0f4b5ba6bb96baf3d9bfe3919b4cb3e5241e2cf704ecdb217", 770378, 24),
-            1997: ("1d28da68523c509ffce68ce2e96ef5566894dd886caf761071afce6b5b240a1d", 948044, 33),
-            1998: ("7975a9871c0b41551bc5802aa1c833c25e31de238abce8d424def565261c3449", 2294103, 56),
-            1999: ("684a88324706a990ad05687faee61b1d45f2e7af3ce7f291df4f47c3c3800598", 1747598, 47),
+            1990: (
+                "46b985c6943036e27efd890122a3d3ffc5d0ba625d19305a978da5d3fec57df9",
+                1130037,
+                27,
+            ),
+            1991: (
+                "24f2a80e283d48d02a137e0c71114e76d31466515130aa8b21a93d1ac1a0ff7f",
+                1229801,
+                29,
+            ),
+            1992: (
+                "c91ee8f67a3e33f5e6485572f1347e90d12de287dcf8720e0529599032a05b78",
+                746842,
+                23,
+            ),
+            1993: (
+                "607f0de7aa91612d9c406dd41df126b1959bd13d9d74c05c3137f01739b23341",
+                573990,
+                14,
+            ),
+            1994: (
+                "895ef9992d0f5172084047683acfa8d543acea6bf37464df24fee50d9e3385df",
+                1078053,
+                28,
+            ),
+            1995: (
+                "19161144f0aecfd285c1d4e51e549a8e39c70e7b3d42a139c240404fcef4fe9b",
+                962051,
+                28,
+            ),
+            1996: (
+                "c7f1f9a1537331b0f4b5ba6bb96baf3d9bfe3919b4cb3e5241e2cf704ecdb217",
+                770378,
+                24,
+            ),
+            1997: (
+                "1d28da68523c509ffce68ce2e96ef5566894dd886caf761071afce6b5b240a1d",
+                948044,
+                33,
+            ),
+            1998: (
+                "7975a9871c0b41551bc5802aa1c833c25e31de238abce8d424def565261c3449",
+                2294103,
+                56,
+            ),
+            1999: (
+                "684a88324706a990ad05687faee61b1d45f2e7af3ce7f291df4f47c3c3800598",
+                1747598,
+                47,
+            ),
         }
         artifact_ledger = {
-            item["source_id"]: item
-            for item in self.builder.gm_artifacts["entries"]
+            item["source_id"]: item for item in self.builder.gm_artifacts["entries"]
         }
         for year in range(1990, 2000):
             sources = {
@@ -511,9 +544,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
                 if item["year"] == year
             }
             self.assertEqual({expected[year]}, sources)
-            ledger_entry = artifact_ledger[
-                f"gm-heritage-{year}-chevrolet-suburban"
-            ]
+            ledger_entry = artifact_ledger[f"gm-heritage-{year}-chevrolet-suburban"]
             self.assertEqual(
                 expected[year],
                 (
@@ -553,16 +584,16 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
             all(row["model_id"] == "suburban" for row in corroborating_links)
         )
 
-    def test_specialty_overlap_coalesces_without_losing_complete_chart_status(self) -> None:
+    def test_specialty_overlap_coalesces_without_losing_complete_chart_status(
+        self,
+    ) -> None:
         model_year_rows = {
             row["model_year_id"]: row for row in self.builder.rows["model_years"]
         }
-        self.assertEqual(
-            len(self.builder.rows["model_years"]), len(model_year_rows)
-        )
+        self.assertEqual(len(self.builder.rows["model_years"]), len(model_year_rows))
         suburban_1980 = model_year_rows["suburban:1980"]
         self.assertEqual("color_chart_verified", suburban_1980["research_status"])
-        self.assertEqual(16, suburban_1980["verified_color_count"])
+        self.assertEqual(18, suburban_1980["verified_color_count"])
         tahoe_2011 = model_year_rows["tahoe:2011"]
         self.assertEqual(
             "reviewed_specialty_palette_subset", tahoe_2011["research_status"]
@@ -571,11 +602,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
 
     def test_specialty_overlap_keeps_the_governing_source_primary(self) -> None:
         availability = [
-            row
-            for row in self.availability
-            if row["model_year_id"] == "suburban:1980"
+            row for row in self.availability if row["model_year_id"] == "suburban:1980"
         ]
-        self.assertEqual(16, len(availability))
+        self.assertEqual(18, len(availability))
         self.assertEqual(2, len({row["evidence_source_id"] for row in availability}))
         primary_source_id = BUILD.primary_evidence_source_id(availability)
         primary_rows = [
@@ -598,7 +627,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         )
 
     def test_schema_manifest_contract_exposes_both_tables(self) -> None:
-        self.assertEqual(8, BUILD.SCHEMA_VERSION)
+        self.assertEqual(9, BUILD.SCHEMA_VERSION)
         for field in ("d85_stripe_colors", "wheel_flare_color", "source_annotation"):
             self.assertIn(field, BUILD.SCHEMAS["paint_schemes"].names)
         self.assertEqual(["paint_scheme_id"], BUILD.PRIMARY_KEYS["paint_schemes"])

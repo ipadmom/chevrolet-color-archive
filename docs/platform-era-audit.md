@@ -23,9 +23,9 @@ tier_note: Public-source research only. Manufacturer material controls model yea
 
 ## Result
 
-`data/catalog/chevrolet-platform-eras.json` is the sourced label overlay for model-year bands. It maps 60 catalog model IDs to 217 ordered, nonoverlapping era records. Each record carries its inclusive model-year bounds, display label, aliases, evidence URLs, confidence, and a short qualification.
+`data/catalog/chevrolet-platform-eras.json` is the sourced label overlay for model-year bands. It maps 61 catalog model IDs to 218 ordered, nonoverlapping era records. Each record carries its inclusive model-year bounds, display label, aliases, evidence URLs, confidence, and a short qualification.
 
-The exhaustive machine audit is [`data/audits/chevrolet-platform-era-coverage.json`](../data/audits/chevrolet-platform-era-coverage.json). It lists all 149 catalog models, all 1,792 catalog model-years, each model's platform-band count, and every unresolved year range. After this expansion, 58 models have complete platform coverage, two are partial, and 89 remain without a defensible overlay. The sourced overlay now covers 1,332 model-years; 460 remain explicit gaps.
+The exhaustive machine audit is [`data/audits/chevrolet-platform-era-coverage.json`](../data/audits/chevrolet-platform-era-coverage.json). It lists all 149 catalog models, all 1,792 catalog model-years, each model's platform-band count, and every unresolved year range. After this expansion, 59 models have complete platform coverage, two are partial, and 88 remain without a defensible overlay. The sourced overlay now covers 1,339 model-years; 453 remain explicit gaps.
 
 Tahoe and Suburban are complete across every model year in `chevrolet-us-nameplates.json`:
 
@@ -161,14 +161,14 @@ The overlay marks a record `medium` when the platform label is sound but its exa
 
 The JSON and exhaustive coverage audit were parsed and checked against `chevrolet-us-nameplates.json` on 2026-07-21. Results:
 
-- 60 valid catalog model IDs.
-- 217 total era bands.
+- 61 valid catalog model IDs.
+- 218 total era bands.
 - Zero invalid model IDs.
 - Zero reversed bands.
 - Zero overlapping bands.
 - Zero platform years outside the catalog.
-- 1,332 of 1,792 catalog model-years have sourced labels.
-- 58 models are complete, two are partial, and 89 are missing.
+- 1,339 of 1,792 catalog model-years have sourced labels.
+- 59 models are complete, two are partial, and 88 are missing.
 - Tahoe coverage: 32 of 32 catalog years.
 - Suburban coverage: 89 of 89 catalog years.
 
@@ -178,6 +178,6 @@ The two partial models are B-Series Bus Chassis and Sedan Delivery. B-Series ban
 
 ## Remaining queue
 
-Eighty-nine of the 149 nameplate records still rely on their existing catalog range rather than a researched platform overlay. Many are short annual series or wagon/body-style identities where repeating the model name as an “era” would add no information. They should receive new records only when a brochure, body manual, VIN filing, or reliable platform history supplies a real distinction. Every one is enumerated in the machine audit; none is hidden behind a summary count.
+Eighty-eight of the 149 nameplate records still rely on their existing catalog range rather than a researched platform overlay. Many are short annual series or wagon/body-style identities where repeating the model name as an “era” would add no information. They should receive new records only when a brochure, body manual, VIN filing, or reliable platform history supplies a real distinction. Every one is enumerated in the machine audit; none is hidden behind a summary count.
 
 Priority remaining families are the 1913-1942 passenger-series hierarchy; full-size Chevrolet wagon derivatives from 1953-1972; Beretta, Corsica, Celebrity, Citation, Chevette, Monza, Vega, Aveo, Tracker, Prizm, and Metro; 3100/3600/3800 truck-era splits; T-Series medium duty; and former Class 8 trucks.

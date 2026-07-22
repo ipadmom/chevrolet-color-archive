@@ -36,9 +36,7 @@ SOURCE_AVAILABILITY_STATES = (
     "none_identified",
 )
 
-SOURCE_OFFICIALITY_VALUES = frozenset(
-    {"official", "secondary", "licensed", "unknown"}
-)
+SOURCE_OFFICIALITY_VALUES = frozenset({"official", "secondary", "licensed", "unknown"})
 MODERN_SOURCE_CLASSIFICATIONS = {
     "official_manufacturer_document_archival_mirror": (
         "official",
@@ -199,10 +197,7 @@ def modern_source_classification(source: dict[str, Any]) -> tuple[str, str, str]
 
 def modern_fleet_source_records(root: Path = ROOT) -> dict[int, list[dict[str, Any]]]:
     data = load_json(
-        root
-        / "data"
-        / "sources"
-        / "modern-chevrolet-color-source-candidates.json"
+        root / "data" / "sources" / "modern-chevrolet-color-source-candidates.json"
     )
     by_year: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for source in data["sources"]:
@@ -349,8 +344,7 @@ def current_generation_index(
             model_id == "tahoe"
             and year == 2000
             and all(
-                generation["id"].startswith("tahoe-2000-")
-                for generation in generations
+                generation["id"].startswith("tahoe-2000-") for generation in generations
             )
         )
         evidence_classes = {
@@ -418,9 +412,7 @@ def resolved_audit_state(
     }
     if evidence_class in qualified_states:
         if not listings:
-            raise ValueError(
-                f"{evidence_class} source has no published listings"
-            )
+            raise ValueError(f"{evidence_class} source has no published listings")
         return qualified_states[evidence_class]
     if source and listings:
         if prior_state == "reviewed_qualified_historical_table":
@@ -456,6 +448,8 @@ def model_year_listings(generation: dict[str, Any], year: int) -> list[dict[str,
                 "display_label": availability["label"],
                 "paint_code": availability["code"],
                 "availability_state": availability["state"],
+                "application_type": availability.get("applicationType"),
+                "program_label": generation.get("programLabel"),
                 "restriction": availability.get("restriction"),
                 "evidence_class": evidence_class,
             }
@@ -483,9 +477,7 @@ def count_bucket(records: list[dict[str, Any]]) -> dict[str, int]:
         "reviewed_specialty_palette_subset_count": states[
             "reviewed_specialty_palette_subset"
         ],
-        "reviewed_no_chart_count": states[
-            "source_reviewed_no_color_chart_found"
-        ],
+        "reviewed_no_chart_count": states["source_reviewed_no_color_chart_found"],
         "source_located_chart_unreviewed_count": states[
             "source_located_chart_unreviewed"
         ],
@@ -504,10 +496,13 @@ def build_model_years(
     platform_catalog: dict[str, list[dict[str, Any]]],
     snapshot: dict[str, Any],
     modern_source_records_by_year: dict[int, list[dict[str, Any]]] | None = None,
-    reviewed_no_chart_by_model_year: dict[
-        tuple[str, int], dict[str, Any]
-    ] | None = None,
-) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]], dict[tuple[str, int], dict[str, Any]]]:
+    reviewed_no_chart_by_model_year: dict[tuple[str, int], dict[str, Any]]
+    | None = None,
+) -> tuple[
+    list[dict[str, Any]],
+    dict[str, dict[str, Any]],
+    dict[tuple[str, int], dict[str, Any]],
+]:
     prior = {item["model_year_key"]: item for item in base["model_years"]}
     if len(prior) != len(base["model_years"]):
         raise ValueError("base inventory repeats a model-year key")
@@ -516,7 +511,9 @@ def build_model_years(
     if set(app_models) != catalog_ids:
         missing = sorted(catalog_ids - set(app_models))
         extra = sorted(set(app_models) - catalog_ids)
-        raise ValueError(f"app/catalog model mismatch; missing={missing}, extra={extra}")
+        raise ValueError(
+            f"app/catalog model mismatch; missing={missing}, extra={extra}"
+        )
 
     records: list[dict[str, Any]] = []
     expected_years: set[tuple[str, int]] = set()
@@ -535,16 +532,18 @@ def build_model_years(
                 expected_years.add((model_id, year))
                 generations = app_years.get((model_id, year))
                 if generations is None:
-                    raise ValueError(f"catalog model-year is absent from app: {model_id} {year}")
+                    raise ValueError(
+                        f"catalog model-year is absent from app: {model_id} {year}"
+                    )
                 structural_generation = structural_generation_for_year(
                     generations, year
                 )
-                source_generation = source_generation_for_year(
-                    generations, year
-                )
+                source_generation = source_generation_for_year(generations, year)
                 key = f"{model_id}:{year}"
                 old = prior.get(key, {})
-                official_records = copy.deepcopy(old.get("official_source_records") or [])
+                official_records = copy.deepcopy(
+                    old.get("official_source_records") or []
+                )
                 modern_records = (modern_source_records_by_year or {}).get(year, [])
                 modern_source_ids = {
                     modern_record["crawler_source_id"]
@@ -562,8 +561,12 @@ def build_model_years(
                         item.get("crawler_source_id", ""),
                     )
                 )
-                catalog_urls = list(dict.fromkeys(model_range.get("evidence_urls") or []))
-                official_urls = [url for url in catalog_urls if is_official_catalog_url(url)]
+                catalog_urls = list(
+                    dict.fromkeys(model_range.get("evidence_urls") or [])
+                )
+                official_urls = [
+                    url for url in catalog_urls if is_official_catalog_url(url)
+                ]
                 nonofficial_urls = [
                     url for url in catalog_urls if not is_official_catalog_url(url)
                 ]
@@ -575,9 +578,7 @@ def build_model_years(
                 if len(matching_platform) > 1:
                     raise ValueError(f"overlapping platform bands: {model_id} {year}")
                 platform = matching_platform[0] if matching_platform else None
-                source = copy.deepcopy(
-                    source_generation["sources"].get(str(year))
-                )
+                source = copy.deepcopy(source_generation["sources"].get(str(year)))
                 listings = [
                     listing
                     for generation in generations
@@ -589,9 +590,7 @@ def build_model_years(
                 prior_state = old.get("audit_state", "unreviewed")
                 if reviewed_no_chart:
                     prior_state = "source_reviewed_no_color_chart_found"
-                audit_state = resolved_audit_state(
-                    prior_state, source, listings
-                )
+                audit_state = resolved_audit_state(prior_state, source, listings)
                 if audit_state in AUDIT_NOTE_BY_STATE:
                     audit_note = AUDIT_NOTE_BY_STATE[audit_state]
                 elif reviewed_no_chart:
@@ -638,6 +637,13 @@ def build_model_years(
                     "restricted_count": sum(
                         item["availability_state"] == "restricted" for item in listings
                     ),
+                    "availability_state_counts": dict(
+                        sorted(
+                            Counter(
+                                item["availability_state"] for item in listings
+                            ).items()
+                        )
+                    ),
                     "current_app_source": source,
                     "likely_source_availability": "none_identified",
                     "official_source_record_count": len(official_records),
@@ -661,7 +667,9 @@ def build_model_years(
     if set(app_years) != expected_years:
         extra = sorted(set(app_years) - expected_years)
         missing = sorted(expected_years - set(app_years))
-        raise ValueError(f"app/catalog model-year mismatch; missing={missing}, extra={extra}")
+        raise ValueError(
+            f"app/catalog model-year mismatch; missing={missing}, extra={extra}"
+        )
     return records, app_models, app_years
 
 
@@ -687,8 +695,7 @@ def build_by_model(
             item["model_year"]
             for item in model_records
             if item["likely_source_availability"] == "dedicated_official_kit"
-            and item["audit_state"]
-            in {"source_located_chart_unreviewed", "unreviewed"}
+            and item["audit_state"] in {"source_located_chart_unreviewed", "unreviewed"}
         )
         result.append(row)
     return result
@@ -717,11 +724,9 @@ def build_extraction_batches(
     model_order = {model["id"]: index for index, model in enumerate(catalog["models"])}
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in records:
-        if (
-            record["likely_source_availability"] == "dedicated_official_kit"
-            and record["audit_state"]
-            in {"source_located_chart_unreviewed", "unreviewed"}
-        ):
+        if record["likely_source_availability"] == "dedicated_official_kit" and record[
+            "audit_state"
+        ] in {"source_located_chart_unreviewed", "unreviewed"}:
             grouped[record["model_id"]].append(record)
     rows: list[dict[str, Any]] = []
     for model_id, model_records in grouped.items():
@@ -821,9 +826,7 @@ def update_schema_recommendation(
     return {
         "schema_version": manifest["schema_version"],
         "canonical_manifest": "data/parquet/manifest.json",
-        "key_rules": copy.deepcopy(
-            base["parquet_schema_recommendation"]["key_rules"]
-        ),
+        "key_rules": copy.deepcopy(base["parquet_schema_recommendation"]["key_rules"]),
         "tables": [
             {
                 "name": Path(table["path"]).name,
@@ -869,7 +872,9 @@ def build_inventory(
         for model in snapshot["models"]
         for generation in model["generations"]
     )
-    app_source_count = sum(record["current_app_source"] is not None for record in records)
+    app_source_count = sum(
+        record["current_app_source"] is not None for record in records
+    )
     app_source_url_count = len(
         {
             record["current_app_source"]["url"]
@@ -927,9 +932,7 @@ def build_inventory(
         **source_counts,
         "crawler_source_document_count": ocr_coverage["source_documents"],
         "crawler_candidate_page_count": ocr_coverage["candidate_pages"],
-        "crawler_color_candidate_export_record_count": ocr_coverage[
-            "color_candidates"
-        ],
+        "crawler_color_candidate_export_record_count": ocr_coverage["color_candidates"],
         "crawler_visually_reviewed_candidate_page_count": ocr_coverage[
             "visually_reviewed_candidate_pages"
         ],
@@ -1027,7 +1030,9 @@ def build_inventory(
         },
         "audit_state_partition": {
             "expected": len(records),
-            "actual": sum(Counter(record["audit_state"] for record in records).values()),
+            "actual": sum(
+                Counter(record["audit_state"] for record in records).values()
+            ),
             "pass": len(records)
             == sum(Counter(record["audit_state"] for record in records).values()),
         },
@@ -1380,9 +1385,7 @@ def main() -> int:
                 "qualified_palette_rows": summary[
                     "reviewed_qualified_palette_union_listing_count"
                 ],
-                "specialty_subsets": summary[
-                    "reviewed_specialty_palette_subset_count"
-                ],
+                "specialty_subsets": summary["reviewed_specialty_palette_subset_count"],
                 "specialty_subset_rows": summary[
                     "reviewed_specialty_palette_subset_listing_count"
                 ],

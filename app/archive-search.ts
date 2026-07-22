@@ -8,6 +8,7 @@ import suburbanPaintSchemeData from "../data/audits/suburban-paint-schemes-1977-
 import type {
   ArchiveColor,
   ArchiveModel,
+  AvailabilityState,
   Generation,
   YearSource,
 } from "./archive-data";
@@ -159,7 +160,7 @@ export type ArchiveTimelineSegment = {
   label: string;
   restriction?: string;
   start: number;
-  state: "listed" | "restricted";
+  state: AvailabilityState;
   years: string[];
 };
 
@@ -584,6 +585,18 @@ function generationBandKey(generation: Generation) {
       generation.platformConfidence ?? "",
     ].join("\u001f");
   }
+  const exactProgramOnly = generation.years.every((year) => {
+    const evidenceClass = generation.sources[year]?.evidenceClass;
+    return (
+      evidenceClass === "specialty_palette_subset" ||
+      evidenceClass === "qualified_exact_program_palette"
+    );
+  });
+  if (exactProgramOnly) {
+    return ["exact-program-year", generation.label, ...generation.years].join(
+      "\u001f",
+    );
+  }
   return `generation\u001f${generation.id}`;
 }
 
@@ -700,15 +713,22 @@ function exactColorIdentity(
   source: YearSource,
   generation: Generation,
 ) {
-  const simultaneousProgramDiscriminator =
+  const programQualified =
     source.evidenceClass === "qualified_exact_program_palette" ||
-    source.evidenceClass === "specialty_palette_subset"
-      ? generation.id
-      : null;
-  return JSON.stringify([
-    color.name,
-    simultaneousProgramDiscriminator,
-  ]);
+    source.evidenceClass === "specialty_palette_subset";
+  if (programQualified) {
+    const stableProgramColorKey = /^not printed(?:$|[; /])/i.test(
+      color.rowCode.trim(),
+    )
+      ? `source-name:${color.name}`
+      : `source-code:${color.rowCode}`;
+    return JSON.stringify([
+      "program-color",
+      generation.programLabel ?? generation.id,
+      stableProgramColorKey,
+    ]);
+  }
+  return JSON.stringify(["source-name", color.name]);
 }
 
 export function buildArchiveMatrix(
@@ -902,6 +922,7 @@ export function buildArchiveSearchRecords(
               ...(catalogAliasesByModelId.get(model.id) ?? []),
               generation.id,
               generation.label,
+              generation.programId,
               generation.programLabel,
               generation.range,
               generation.revisionNote,
@@ -916,6 +937,7 @@ export function buildArchiveSearchRecords(
               availability?.label,
               availability?.code,
               availability?.state,
+              availability?.applicationType,
               availability?.restriction,
               ...flattenSearchValues(availability?.sourceIds),
               source?.name,

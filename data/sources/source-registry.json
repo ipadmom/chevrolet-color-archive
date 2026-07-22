@@ -1,9 +1,9 @@
 {
-  "schema_version": 8,
-  "generated_at": "2026-07-22T20:59:51Z",
+  "schema_version": 9,
+  "generated_at": "2026-07-22T23:29:52Z",
   "scope": "Canonical source registry for catalog, platform, factory-color, photo, archive, license, and research-document citations.",
-  "source_count": 2665,
-  "source_link_count": 23936,
+  "source_count": 2693,
+  "source_link_count": 26000,
   "sources": [
     {
       "source_id": "autocolorlibrary-1970-chevrolet-truck",
@@ -86,7 +86,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-chevrolet-tahoe-ebrochure.pdf",
       "archive_relpath": "tmp/modern-color-sources/2022-chevrolet-tahoe-ebrochure.pdf",
-      "citation_count": 21,
+      "citation_count": 22,
       "notes": "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; trim-level restrictions remain recorded in the qualified palette table."
     },
     {
@@ -107,7 +107,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-colorado-ebrochure.pdf",
       "archive_relpath": "tmp/modern-color-sources/2023-chevrolet-colorado-ebrochure.pdf",
-      "citation_count": 17,
+      "citation_count": 18,
       "notes": "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; trim-level restrictions remain recorded in the qualified palette table."
     },
     {
@@ -128,7 +128,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
       "archive_relpath": "tmp/modern-color-sources/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
-      "citation_count": 9,
+      "citation_count": 10,
       "notes": "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; chassis-cab applicability remains recorded in the qualified palette table."
     },
     {
@@ -149,7 +149,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
       "archive_relpath": "tmp/modern-color-sources/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
-      "citation_count": 24,
+      "citation_count": 25,
       "notes": "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; model and trim restrictions remain recorded in the qualified palette table."
     },
     {
@@ -401,7 +401,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-tahoe-brochure-motorologist.pdf",
       "archive_relpath": null,
-      "citation_count": 15,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -443,7 +443,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": "Original retrieval URL: https://web.archive.org/web/20240216125333id_/https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf"
     },
     {
@@ -464,7 +464,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-suburban-canada.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": "Original retrieval URL: https://web.archive.org/web/20240216130715id_/https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf"
     },
     {
@@ -485,7 +485,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-suburban-canada.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": "Original retrieval URL: https://web.archive.org/web/20240216125819id_/https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf"
     },
     {
@@ -548,7 +548,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-tahoe-spec-sheet.pdf",
       "archive_relpath": null,
-      "citation_count": 15,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -569,7 +569,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-spec-sheet.pdf",
       "archive_relpath": null,
-      "citation_count": 15,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -590,7 +590,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-spec-sheet.pdf",
       "archive_relpath": null,
-      "citation_count": 15,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -632,7 +632,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 44,
+      "citation_count": 75,
       "notes": "Retained specialty-color research artifact; categories: app_publication_records"
     },
     {
@@ -653,15 +653,15 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 22,
+      "citation_count": 234,
       "notes": "Retained specialty-color research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-2012-municipal-manual",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2012-Police-Specifications-Manual-9-29-11.pdf",
-      "title": "2012 Chevrolet municipal/fleet manual candidate",
+      "title": "2012 Chevrolet Municipal Vehicles Technical Manual",
       "publisher": "General Motors",
-      "source_type": "official_municipal_fleet_manual_candidate",
+      "source_type": "specialty_paint_primary_pdf",
       "officiality": "official",
       "document_authority": null,
       "retrieval_host_type": null,
@@ -672,17 +672,17 @@
       "content_length_bytes": 8600436,
       "content_sha256": "2bf54f148d063b69a2b114166163b7225641daf1fba62bc41ca20a4a7dd4473d",
       "last_modified": null,
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "citation_count": 151,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2013-municipal-guide",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2013-Municipal-Guide.pdf",
-      "title": "2013 Chevrolet municipal/fleet manual candidate",
+      "title": "2013 Chevrolet Municipal Vehicles Technical Manual",
       "publisher": "General Motors",
-      "source_type": "official_municipal_fleet_manual_candidate",
+      "source_type": "specialty_paint_primary_pdf",
       "officiality": "official",
       "document_authority": null,
       "retrieval_host_type": null,
@@ -693,17 +693,17 @@
       "content_length_bytes": 10595751,
       "content_sha256": "1753082e7bcea94e29737e8d09470ee9e87059bd5fb8a560ffe463b850abc18c",
       "last_modified": null,
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-chevrolet-municipal-vehicles-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "citation_count": 146,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2014-police-guide",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/06/2014_Police_Technical_Guide_FINAL.pdf",
-      "title": "2014 Chevrolet municipal/fleet manual candidate",
+      "title": "2014 Chevrolet Police Vehicles Technical Guide",
       "publisher": "General Motors",
-      "source_type": "official_municipal_fleet_manual_candidate",
+      "source_type": "specialty_paint_primary_pdf",
       "officiality": "official",
       "document_authority": null,
       "retrieval_host_type": null,
@@ -714,10 +714,31 @@
       "content_length_bytes": 9610503,
       "content_sha256": "d21cdc63dc71d20295d94075573f083560be5c73204bba13b939c8699dd77fdc",
       "last_modified": null,
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "citation_count": 126,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2015-caprice-9c1-specification-guide",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2015_caprice_specification_guide_4_10.pdf",
+      "title": "2015 Chevrolet Caprice Police Package Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T22:30:40Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 16376061,
+      "content_sha256": "6f6431fa6f246e493c3f3da26b2bf05b463ec1d26c68a2ced3282c7ecf91823a",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 27,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2015-silverado-ssv",
@@ -741,6 +762,27 @@
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
+      "source_id": "gm-2016-caprice-9c1-specification-guide",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Caprice-Specification-Guide.pdf",
+      "title": "2016 Chevrolet Caprice Police Package Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T22:30:38Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9492057,
+      "content_sha256": "48c2d7112bede1f7aac294d3024fdd1002614fdcf6d5d34c1ce5c3b48a95c2e0",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 26,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
       "source_id": "gm-2016-tahoe-9c1",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2016-Tahoe-9C1-2WD-Specification-Guide.pdf",
       "title": "2016 Chevrolet municipal/fleet manual candidate",
@@ -760,6 +802,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2017-caprice-9c1-specification-guide",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/Caprice-9C1-Specification-Guide-2017.pdf",
+      "title": "2017 Chevrolet Caprice Police Package Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T22:30:43Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 37298379,
+      "content_sha256": "850e9f0196641ef73f0ab9e892047f25e7212d2e772999f4de545d63653c615d",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 92,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2017-express-passenger",
@@ -972,6 +1035,27 @@
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
+      "source_id": "gm-2023-bolt-euv-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2022/12/2023-BOLT-EUV-SSV-1.pdf",
+      "title": "2023 Chevrolet Bolt EUV SSV Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T21:44:49Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 12264737,
+      "content_sha256": "65e753fc12bd6bc4d53c31c7738c9271516da6048082c06fcb079beb630fe047",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 27,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+    },
+    {
       "source_id": "gm-2023-silverado-9c1",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2022/11/2023-Silverado-9C1-Specification-Guide_4_24_2023.pdf",
       "title": "2023 Chevrolet municipal/fleet manual candidate",
@@ -1014,6 +1098,27 @@
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
+      "source_id": "gm-2024-blazer-ev-9c1-9c3",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2023/12/2024-BLAZER-EV-9C1-Municipal-Specification-Guide-V112525.pdf",
+      "title": "2024 Chevrolet Electronic Order Guide",
+      "publisher": "General Motors",
+      "source_type": "official_electronic_order_guide",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T21:44:52Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 14926196,
+      "content_sha256": "8f200edcf1471f031620fd985470ddcc69c3f977bb4e1f9d42a252a1d77c511b",
+      "last_modified": null,
+      "archive_url": null,
+      "archive_relpath": null,
+      "citation_count": 11,
+      "notes": "Retained specialty-color research artifact; categories: verified_not_published"
+    },
+    {
       "source_id": "gm-2024-silverado-9c1",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2023/10/2024-Silverado-9C1-Specification-Guide-V2-1.pdf",
       "title": "2024 Chevrolet municipal/fleet manual candidate",
@@ -1054,6 +1159,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2025-blazer-ev-9c1-9c3-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2024/12/2025-BLAZER-EV-9C1-Municipal-Specification-Guide-V042825.pdf",
+      "title": "2025 Chevrolet Electronic Order Guide",
+      "publisher": "General Motors",
+      "source_type": "official_electronic_order_guide",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T21:44:55Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 14498399,
+      "content_sha256": "1c1ef303bda0ee42ec874a20d2d9926ccd119e21f45e6d830950d5d537310011",
+      "last_modified": null,
+      "archive_url": null,
+      "archive_relpath": null,
+      "citation_count": 11,
+      "notes": "Retained specialty-color research artifact; categories: verified_not_published"
     },
     {
       "source_id": "gm-2025-silverado-5w4",
@@ -1119,6 +1245,48 @@
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
+      "source_id": "gm-2026-blazer-ev-9c1-9c3-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2025/12/2026-BLAZER-EV-9C1-9C3-5W4-Specification-Guide-V041026.pdf",
+      "title": "2026 Chevrolet Blazer EV 9C1/9C3/5W4 Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T21:44:58Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 21290909,
+      "content_sha256": "9cfbcb2fb053b0a48526c79a1a2c8617ed8a9b3525715ff2073d3dafe213f13c",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 16,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+    },
+    {
+      "source_id": "gm-2026-silverado-5w4-041426",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-SSV-Specification-Guide-041426.pdf",
+      "title": "2026 Chevrolet Silverado 5W4 SSV Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T21:45:05Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 16899437,
+      "content_sha256": "ff1940144fd4c8426ac98a2e7fc9d48a685ff68a2d8fe2be3e6aa3dfc51e50ba",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 79,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+    },
+    {
       "source_id": "gm-2026-silverado-9c1",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-9C1-Specification-Guide-041026.pdf",
       "title": "2026 Chevrolet municipal/fleet manual candidate",
@@ -1138,6 +1306,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2026-silverado-9c1-041426",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-9C1-Specification-Guide-041426.pdf",
+      "title": "2026 Chevrolet Silverado 9C1 PPV Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22T21:45:02Z",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 21324144,
+      "content_sha256": "f752054c635fd45b3f27adc65631b19de2521a6e9441b8b4e348cfcbb8e310fc",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 79,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-brochure-1982-chevrolet-suburban-xr793",
@@ -1220,7 +1409,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-gm-fleet-guide-v2-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2008-gm-fleet-guide-v2-mirror.pdf",
-      "citation_count": 75,
+      "citation_count": 76,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1241,7 +1430,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-gm-fleet-guide-v2-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2009-gm-fleet-guide-v2-mirror.pdf",
-      "citation_count": 73,
+      "citation_count": 74,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1262,7 +1451,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2010-gm-fleet-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2010-gm-fleet-guide-mirror.pdf",
-      "citation_count": 65,
+      "citation_count": 66,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1283,7 +1472,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-gm-fleet-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2011-gm-fleet-guide-mirror.pdf",
-      "citation_count": 72,
+      "citation_count": 73,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1304,7 +1493,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-gm-car-truck-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2012-gm-car-truck-guide-mirror.pdf",
-      "citation_count": 69,
+      "citation_count": 70,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1325,7 +1514,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-gm-car-truck-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2013-gm-car-truck-guide-mirror.pdf",
-      "citation_count": 71,
+      "citation_count": 72,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
     },
     {
@@ -1346,7 +1535,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-gm-fleet-car-truck-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2014-gm-fleet-car-truck-guide-mirror.pdf",
-      "citation_count": 75,
+      "citation_count": 76,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
     },
     {
@@ -1367,7 +1556,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-gm-fleet-car-truck-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2015-gm-fleet-car-truck-guide-mirror.pdf",
-      "citation_count": 84,
+      "citation_count": 85,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; The mirror filename preserves the host's 'Feet' typo; the PDF title is the GM Fleet guide."
     },
     {
@@ -1388,7 +1577,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-gm-fleet-guide-november-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2016-gm-fleet-guide-november-mirror.pdf",
-      "citation_count": 92,
+      "citation_count": 93,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1409,7 +1598,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-gm-fleet-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2017-gm-fleet-guide-mirror.pdf",
-      "citation_count": 82,
+      "citation_count": 83,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
     },
     {
@@ -1430,7 +1619,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-gm-fleet-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2018-gm-fleet-guide-mirror.pdf",
-      "citation_count": 77,
+      "citation_count": 78,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
     },
     {
@@ -1451,7 +1640,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-gm-fleet-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2019-gm-fleet-guide-mirror.pdf",
-      "citation_count": 76,
+      "citation_count": 77,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1472,7 +1661,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-gm-fleet-guide-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2020-gm-fleet-guide-mirror.pdf",
-      "citation_count": 69,
+      "citation_count": 70,
       "notes": "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1493,7 +1682,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2021-gm-fleet-guide-v3-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2021-gm-fleet-guide-v3-mirror.pdf",
-      "citation_count": 67,
+      "citation_count": 68,
       "notes": "The complete bytes were retrieved from an archival mirror because the historical GM URL is no longer a reliable live download.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1514,7 +1703,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-gm-fleet-guide-v6-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2022-gm-fleet-guide-v6-mirror.pdf",
-      "citation_count": 71,
+      "citation_count": 72,
       "notes": "The complete bytes were retrieved from an archival mirror because the historical GM URL is no longer a reliable live download.; Candidate page detection is not yet a table-level completeness assertion."
     },
     {
@@ -1535,7 +1724,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2023-gm-fleet-guide-v3-mirror.pdf",
-      "citation_count": 65,
+      "citation_count": 66,
       "notes": "The GM-authored document is hosted by an archival mirror; a stable direct GM URL for this exact V3 byte revision was not recovered.; PDF page 19 is labeled 2024 Silverado EV; pages 77-78 are labeled 2024 Low Cab Forward."
     },
     {
@@ -1556,7 +1745,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
       "archive_relpath": "tmp/modern-color-sources/2024-gm-fleet-guide-v3-mirror.pdf",
-      "citation_count": 73,
+      "citation_count": 74,
       "notes": "The current historical GM URL redirects instead of serving this complete byte revision; the complete GM-authored PDF was retrieved from an archival mirror.; A Wayback replay of the historical GM URL returned only a malformed 1 MiB partial and is not used as evidence.; PDF page 49 is labeled 2023 Traverse; pages 82-84 are labeled 2025 Low Cab Forward."
     },
     {
@@ -1577,7 +1766,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
       "archive_relpath": "tmp/modern-color-sources/2025-gm-fleet-guide.pdf",
-      "citation_count": 278,
+      "citation_count": 297,
       "notes": "Printed palettes are guide-listed unions and vary by trim; the Online Order Guide controls detailed restrictions.; Pages 125-127 are explicitly labeled 2026 Low Cab Forward and must not be assigned to model year 2025.; Some SEO special-order colors are not enumerated in the printed palette."
     },
     {
@@ -1598,7 +1787,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
       "archive_relpath": "tmp/modern-color-sources/2026-gm-fleet-guide.pdf",
-      "citation_count": 274,
+      "citation_count": 291,
       "notes": "Printed palettes are guide-listed unions and vary by trim; the Online Order Guide controls detailed restrictions.; Pages 139-141 are explicitly labeled 2027 Low Cab Forward and must not be assigned to model year 2026.; Some SEO special-order colors are not enumerated in the printed palette."
     },
     {
@@ -6573,9 +6762,9 @@
       "content_length_bytes": 1739347,
       "content_sha256": "868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add",
       "last_modified": "Tue, 21 Jul 2026 06:26:20 GMT",
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
       "archive_relpath": "86/85/868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add.pdf",
-      "citation_count": 7,
+      "citation_count": 43,
       "notes": "Official index title: 1979 Chevrolet Blazer"
     },
     {
@@ -11445,9 +11634,9 @@
       "content_length_bytes": 390453,
       "content_sha256": "625756846b0c70441a808c737a2d3f93ce7ee25b0d52696d286252225d6c233f",
       "last_modified": "Tue, 21 Jul 2026 06:31:19 GMT",
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
       "archive_relpath": "62/57/625756846b0c70441a808c737a2d3f93ce7ee25b0d52696d286252225d6c233f.pdf",
-      "citation_count": 7,
+      "citation_count": 25,
       "notes": "Official index title: 1993 Chevrolet S-10"
     },
     {
@@ -11495,23 +11684,23 @@
     {
       "source_id": "gm-heritage-1993-chevrolet-truck",
       "canonical_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1993-Chevrolet-Truck.pdf",
-      "title": "1993-Chevrolet-Truck.pdf",
+      "title": "1993 Chevrolet Light-Duty Truck Technical Guide: C/K Pickup",
       "publisher": "General Motors",
-      "source_type": "pdf",
+      "source_type": "specialty_paint_primary_pdf",
       "officiality": "official",
       "document_authority": "official_manufacturer_document",
       "retrieval_host_type": "official_live",
       "retrieved_on": null,
       "discovered_from_url": null,
       "http_status": null,
-      "content_type": null,
-      "content_length_bytes": null,
-      "content_sha256": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 13034550,
+      "content_sha256": "5183176f4af0d61bd63cc7d6fb02117129c870c28c42bc9fe22abcc2eea52d3e",
       "last_modified": null,
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
-      "notes": null
+      "citation_count": 19,
+      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-heritage-1994-chevrolet-astro-van",
@@ -12224,7 +12413,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:05:58 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "40/49/4049fe25311a8482f5c40db31eacda7946e0ac39aa44e750cad23c8dc5eb1ec7.pdf",
-      "citation_count": 57,
+      "citation_count": 58,
       "notes": "Official index title: 1995 Chevrolet Tahoe"
     },
     {
@@ -12413,7 +12602,7 @@
       "last_modified": "Tue, 21 Jul 2026 06:32:10 GMT",
       "archive_url": null,
       "archive_relpath": "ab/08/ab08a6e92b13d07b659617fb7214b732f49b1bd35ad9f8545d2111deb743617b.pdf",
-      "citation_count": 51,
+      "citation_count": 58,
       "notes": "Official index title: 1996 Chevrolet G Van"
     },
     {
@@ -12602,7 +12791,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:02 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "0a/85/0a85633660b46b67c9c61f35e7c85ccb1a05611b27fadf83a566d7f25d73a48a.pdf",
-      "citation_count": 48,
+      "citation_count": 49,
       "notes": "Official index title: 1996 Chevrolet Tahoe"
     },
     {
@@ -12875,7 +13064,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:04 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "8e/16/8e1612dd85ecaa7320cc4fd4c66f439a57a5f93a3bffc026a8c62ec55992e7bb.pdf",
-      "citation_count": 58,
+      "citation_count": 59,
       "notes": "Official index title: 1997 Chevrolet Tahoe"
     },
     {
@@ -13169,7 +13358,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:05 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "91/1b/911b0cf105a0cdce54ecf9c4a3ef863aafa31134ba6a9aea550724ef1e78d44a.pdf",
-      "citation_count": 75,
+      "citation_count": 76,
       "notes": "Official index title: 1998 Chevrolet Tahoe"
     },
     {
@@ -13442,7 +13631,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:07 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "e1/f9/e1f9cd07d4c6a2b0e18b4c28900c9ba9c5834eeabc18d12d38239dae183f3735.pdf",
-      "citation_count": 68,
+      "citation_count": 69,
       "notes": "Official index title: 1999 Chevrolet Tahoe"
     },
     {
@@ -13736,7 +13925,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:10 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "e5/2e/e52e59031146ac0b1574f1ac41cfa7ac76599568987598bd6913baf516497dbc.pdf",
-      "citation_count": 34,
+      "citation_count": 35,
       "notes": "Official index title: 2000 Chevrolet Tahoe"
     },
     {
@@ -14030,7 +14219,7 @@
       "last_modified": "Tue, 21 Jul 2026 06:34:31 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "archive_relpath": "fd/24/fd24c0732861c15cb7754db8138c94fe6945fe76a4a90ee54400dc98bc98085a.pdf",
-      "citation_count": 45,
+      "citation_count": 49,
       "notes": "Official index title: 2001 Chevrolet Suburban"
     },
     {
@@ -14051,7 +14240,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:27 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "fd/9e/fd9ee45ef8bd1e465687e187877640f349d850f2c526c9d8d1477a9b7dbe9093.pdf",
-      "citation_count": 26,
+      "citation_count": 27,
       "notes": "Official index title: 2001 Chevrolet Tahoe"
     },
     {
@@ -14366,7 +14555,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:46 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "ee/ed/eeedace0f77151da0ea4138c4464258daed8a180e8eeb4ee3dadddfa85b5560b.pdf",
-      "citation_count": 16,
+      "citation_count": 17,
       "notes": "Official index title: 2002 Chevrolet Tahoe"
     },
     {
@@ -14744,7 +14933,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:06:58 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "1c/54/1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284.pdf",
-      "citation_count": 35,
+      "citation_count": 37,
       "notes": "Official index title: 2003 Chevrolet Tahoe"
     },
     {
@@ -16151,7 +16340,7 @@
       "last_modified": "Tue, 21 Jul 2026 03:08:47 GMT",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": "65/c3/65c3a1c9ef314d64c4f8ef99289be32974000fbe0453b04d57c99f3aee479a09.pdf",
-      "citation_count": 24,
+      "citation_count": 25,
       "notes": "Official index title: 2007 Chevrolet Tahoe"
     },
     {
@@ -16214,7 +16403,7 @@
       "last_modified": "Fri, 17 Jul 2026 04:52:43 GMT",
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 3126,
+      "citation_count": 3232,
       "notes": "Every link in the official index whose resolved URL is in the GM Chevrolet vehicle-information-kits PDF directory."
     },
     {
@@ -16237,6 +16426,48 @@
       "archive_relpath": null,
       "citation_count": 5,
       "notes": "The public API is mutable and requires a short-lived bearer token from api/sso/PublicLogin/.; The current public catalog returned model years 2025-2027 only; it did not expose 2008-2024.; This is an observed application API, not a published stability contract."
+    },
+    {
+      "source_id": "gm-order-guide-2025-blazer-ev-police-22887",
+      "canonical_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22887/all/en-us",
+      "title": "en-us",
+      "publisher": "General Motors",
+      "source_type": "official_web_page",
+      "officiality": "official",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "retrieved_on": null,
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": null,
+      "content_length_bytes": null,
+      "content_sha256": null,
+      "last_modified": null,
+      "archive_url": null,
+      "archive_relpath": null,
+      "citation_count": 2,
+      "notes": null
+    },
+    {
+      "source_id": "gm-order-guide-2026-blazer-ev-police-23158",
+      "canonical_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23158/all/en-us",
+      "title": "en-us",
+      "publisher": "General Motors",
+      "source_type": "official_web_page",
+      "officiality": "official",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "retrieved_on": null,
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": null,
+      "content_length_bytes": null,
+      "content_sha256": null,
+      "last_modified": null,
+      "archive_url": null,
+      "archive_relpath": null,
+      "citation_count": 2,
+      "notes": null
     },
     {
       "source_id": "gm-service-table-2004-tahoe-suburban-color-compatibility",
@@ -16277,7 +16508,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
       "archive_relpath": null,
-      "citation_count": 20,
+      "citation_count": 21,
       "notes": "Retained specialty-color research artifact; categories: app_publication_records"
     },
     {
@@ -16298,7 +16529,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
       "archive_relpath": null,
-      "citation_count": 20,
+      "citation_count": 21,
       "notes": "Retained specialty-color research artifact; categories: app_publication_records"
     },
     {
@@ -16361,7 +16592,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-gm-color-compatibility-guide.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": null
     },
     {
@@ -16382,7 +16613,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-sherwin-williams-gm-color-compatibility-guide.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": null
     },
     {
@@ -16403,7 +16634,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-sherwin-williams-gm-color-compatibility-guide.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": null
     },
     {
@@ -16634,7 +16865,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 11,
+      "citation_count": 15,
       "notes": null
     },
     {
@@ -17289,6 +17520,27 @@
       "notes": null
     },
     {
+      "source_id": "src_049a03ae84cfaa49b00d6a3e",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 14926196,
+      "content_sha256": "8f200edcf1471f031620fd985470ddcc69c3f977bb4e1f9d42a252a1d77c511b",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 7,
+      "notes": "{\"asset_name\":\"2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2024-blazer-ev-9c1-9c3\"}"
+    },
+    {
       "source_id": "src_04fb89b0e6dfe3da32aeec2d",
       "canonical_url": "https://www.flickr.com/photos/50415738@N04/8702905239/",
       "title": "8702905239",
@@ -17896,6 +18148,27 @@
       "archive_relpath": null,
       "citation_count": 3,
       "notes": null
+    },
+    {
+      "source_id": "src_0a1af3d579ee824462799cda",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-chevrolet-municipal-vehicles-guide-gm.pdf",
+      "title": "Retained source Release asset: 2013-chevrolet-municipal-vehicles-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 10595751,
+      "content_sha256": "1753082e7bcea94e29737e8d09470ee9e87059bd5fb8a560ffe463b850abc18c",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-chevrolet-municipal-vehicles-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 52,
+      "notes": "{\"asset_name\":\"2013-chevrolet-municipal-vehicles-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2013-municipal-guide\"}"
     },
     {
       "source_id": "src_0a29a49eb6081c44cb98acf8",
@@ -18629,7 +18902,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2023-gm-fleet-guide-v3-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2023-v3\"}"
     },
     {
@@ -19154,7 +19427,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 8,
+      "citation_count": 9,
       "notes": "{\"asset_name\":\"2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-2003-chevrolet-tahoe\"}"
     },
     {
@@ -19536,6 +19809,27 @@
       "notes": null
     },
     {
+      "source_id": "src_1508997e959c17e799c736cf",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 14498399,
+      "content_sha256": "1c1ef303bda0ee42ec874a20d2d9926ccd119e21f45e6d830950d5d537310011",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 7,
+      "notes": "{\"asset_name\":\"2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2025-blazer-ev-9c1-9c3-5w4\"}"
+    },
+    {
       "source_id": "src_1516e7eaa6709f663d6f37bb",
       "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-56eff63660fd3bf51706-fb5784e86e2d8c8f.webp",
       "title": "Archived web preview: preview-commons-sha1-56eff63660fd3bf51706-fb5784e86e2d8c8f.webp",
@@ -19595,7 +19889,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 11,
       "notes": "{\"asset_name\":\"1980-chevrolet-truck-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_information_kit\",\"upstream_source_id\":\"gm-1980-chevrolet-truck-color-trim\"}"
     },
     {
@@ -22157,7 +22451,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2021-gm-fleet-guide-v3-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2021-gm-fleet-guide-v3-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2021-v3\"}"
     },
     {
@@ -23400,6 +23694,27 @@
       "notes": "{\"asset_name\":\"2006-chevrolet-tahoe-spec-sheet.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_us_specification_sheet\",\"upstream_source_id\":\"chevrolet-spec-sheet-us-2006-tahoe\"}"
     },
     {
+      "source_id": "src_2f4e22f86b782c57ab6dde2e",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 21324144,
+      "content_sha256": "f752054c635fd45b3f27adc65631b19de2521a6e9441b8b4e348cfcbb8e310fc",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 28,
+      "notes": "{\"asset_name\":\"2026-chevrolet-silverado-9c1-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2026-silverado-9c1-041426\"}"
+    },
+    {
       "source_id": "src_2f655f515113aa8bf1d8043b",
       "canonical_url": "https://commons.wikimedia.org/wiki/File:1986_Chevrolet_Sprint_Plus_5-dr.jpg",
       "title": "Wikimedia Commons file page: 1986 Chevrolet Sprint Plus 5-dr.jpg",
@@ -23879,7 +24194,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 89,
+      "citation_count": 90,
       "notes": null
     },
     {
@@ -24320,7 +24635,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 18,
+      "citation_count": 23,
       "notes": null
     },
     {
@@ -24845,7 +25160,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-gm-fleet-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 7,
       "notes": "{\"asset_name\":\"2011-gm-fleet-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2011\"}"
     },
     {
@@ -24992,7 +25307,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 6,
+      "citation_count": 10,
       "notes": null
     },
     {
@@ -25181,7 +25496,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-gm-fleet-guide-v6-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2022-gm-fleet-guide-v6-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2022-v6\"}"
     },
     {
@@ -26021,7 +26336,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
       "archive_relpath": null,
-      "citation_count": 4,
+      "citation_count": 5,
       "notes": "{\"asset_name\":\"2023-chevrolet-silverado-hd-commercial-ebrochure.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_brochure\",\"upstream_source_id\":\"chevrolet-ebrochure-us-2023-silverado-hd-commercial\"}"
     },
     {
@@ -26966,7 +27281,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-gm-fleet-car-truck-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 7,
       "notes": "{\"asset_name\":\"2014-gm-fleet-car-truck-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2014\"}"
     },
     {
@@ -27470,7 +27785,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "{\"asset_name\":\"1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1996-chevrolet-tahoe\"}"
     },
     {
@@ -27659,7 +27974,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-gm-fleet-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2018-gm-fleet-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2018\"}"
     },
     {
@@ -27827,7 +28142,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 52,
+      "citation_count": 53,
       "notes": null
     },
     {
@@ -28186,6 +28501,27 @@
       "archive_relpath": null,
       "citation_count": 5,
       "notes": "{\"asset_name\":\"1962-october-chevrolet-service-news-vol-34-no-9.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"parent_service_news_issue\",\"upstream_source_id\":\"chevrolet-service-news-volume-34-no-9\"}"
+    },
+    {
+      "source_id": "src_523e7b060fd2954603aab15d",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "title": "Retained source Release asset: 1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 1739347,
+      "content_sha256": "868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 10,
+      "notes": "{\"asset_name\":\"1979-chevrolet-blazer-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1979-chevrolet-blazer\"}"
     },
     {
       "source_id": "src_525aacdcb5946a163f1b9739",
@@ -29133,6 +29469,27 @@
       "notes": null
     },
     {
+      "source_id": "src_5864ec4b3f5de1a90076571d",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 16376061,
+      "content_sha256": "6f6431fa6f246e493c3f3da26b2bf05b463ec1d26c68a2ced3282c7ecf91823a",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 12,
+      "notes": "{\"asset_name\":\"2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2015-caprice-9c1-specification-guide\"}"
+    },
+    {
       "source_id": "src_58acc02769572031caf8c9ec",
       "canonical_url": "https://www.carmanual.org/OwnersManual/chevrolet/1993_chevrolet_suburban.pdf",
       "title": "1993 chevrolet suburban.pdf",
@@ -29460,8 +29817,8 @@
       "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
       "http_status": null,
       "content_type": "text/plain",
-      "content_length_bytes": 12464,
-      "content_sha256": "2ac6c47a2b837de0abfbfbb5ab168072904b756ab0fc69018c4350e48f60f97c",
+      "content_length_bytes": 14411,
+      "content_sha256": "79cf8d14ed9ef9d64f89f43b5261d76fba857fdcc3c475dd1c6a2889816043cf",
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest.txt",
       "archive_relpath": null,
@@ -30431,7 +30788,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 6,
+      "citation_count": 57,
       "notes": "{\"asset_name\":\"2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2011-police-manual\"}"
     },
     {
@@ -30872,7 +31229,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 18,
+      "citation_count": 17,
       "notes": null
     },
     {
@@ -30895,6 +31252,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": "{\"asset_name\":\"1993-chevrolet-blazer-suburban-brochure-image-07.jpg\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"complete_carrier_image_set\",\"upstream_source_id\":null}"
+    },
+    {
+      "source_id": "src_633e326ac58f3ca55f12fbd2",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
+      "title": "Retained source Release asset: 2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9610503,
+      "content_sha256": "d21cdc63dc71d20295d94075573f083560be5c73204bba13b939c8699dd77fdc",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 47,
+      "notes": "{\"asset_name\":\"2014-chevrolet-police-vehicles-technical-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2014-police-guide\"}"
     },
     {
       "source_id": "src_636342853afb98f88c89f7d3",
@@ -31754,7 +32132,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 8,
+      "citation_count": 12,
       "notes": null
     },
     {
@@ -32048,7 +32426,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": "{\"asset_name\":\"2005-new-jersey-tahoe-police-contract.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_configuration_contract\",\"upstream_source_id\":\"new-jersey-tahoe-police-contract-2005\"}"
     },
     {
@@ -32993,7 +33371,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "{\"asset_name\":\"1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1999-chevrolet-tahoe\"}"
     },
     {
@@ -33728,7 +34106,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-colorado-ebrochure.pdf",
       "archive_relpath": null,
-      "citation_count": 4,
+      "citation_count": 5,
       "notes": "{\"asset_name\":\"2023-chevrolet-colorado-ebrochure.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_brochure\",\"upstream_source_id\":\"chevrolet-ebrochure-us-2023-colorado\"}"
     },
     {
@@ -33959,7 +34337,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 40,
+      "citation_count": 41,
       "notes": null
     },
     {
@@ -34022,7 +34400,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 12,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -34400,7 +34778,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-gm-car-truck-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 7,
       "notes": "{\"asset_name\":\"2013-gm-car-truck-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2013\"}"
     },
     {
@@ -34883,7 +35261,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-gm-car-truck-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 7,
       "notes": "{\"asset_name\":\"2012-gm-car-truck-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2012\"}"
     },
     {
@@ -36105,6 +36483,27 @@
       "notes": null
     },
     {
+      "source_id": "src_8551b211e7af4cef614f283c",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+      "title": "Retained source Release asset: 2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 200912,
+      "content_sha256": "923db29e3afb311fc812f2059c5196333c9dad0d4d119fbf3961316d57002753",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 2,
+      "notes": "{\"asset_name\":\"2026-chevrolet-blazer-ev-police-order-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"supporting_specialty_vehicle_order_guide_snapshot\",\"upstream_source_id\":\"gm-order-guide-2026-blazer-ev-police-23158\"}"
+    },
+    {
       "source_id": "src_855ee8bd8afd5069caf7ceb4",
       "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-55101512-7e8dbaa4b9a9-chevrolet-titan-90-heavy-duty-truck-1979-model-year.jpg",
       "title": "Archived photo: commons-55101512-7e8dbaa4b9a9-chevrolet-titan-90-heavy-duty-truck-1979-model-year.jpg",
@@ -36983,8 +37382,8 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 2,
-      "notes": "{\"asset_name\":\"1993-chevrolet-truck-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"comparison_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1993-chevrolet-truck\"}"
+      "citation_count": 8,
+      "notes": "{\"asset_name\":\"1993-chevrolet-truck-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1993-chevrolet-truck\"}"
     },
     {
       "source_id": "src_8bff224478e13c80a22b04a3",
@@ -37613,7 +38012,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 6,
+      "citation_count": 11,
       "notes": null
     },
     {
@@ -38180,7 +38579,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2010-gm-fleet-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2010-gm-fleet-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2010\"}"
     },
     {
@@ -38203,6 +38602,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_95911d303c08c85d5611b4b0",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+      "title": "Retained source Release asset: 2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 193610,
+      "content_sha256": "feb62128b5b002901f83d51d4ba69e85630d13baa301f13a26e7b7246bb26c5f",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 2,
+      "notes": "{\"asset_name\":\"2025-chevrolet-blazer-ev-police-order-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"supporting_specialty_vehicle_order_guide_snapshot\",\"upstream_source_id\":\"gm-order-guide-2025-blazer-ev-police-22887\"}"
     },
     {
       "source_id": "src_95ad7e258bad76bcdf69d759",
@@ -38285,7 +38705,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "{\"asset_name\":\"1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1997-chevrolet-tahoe\"}"
     },
     {
@@ -39272,7 +39692,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-gm-fleet-car-truck-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 7,
       "notes": "{\"asset_name\":\"2015-gm-fleet-car-truck-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2015\"}"
     },
     {
@@ -40028,7 +40448,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 23,
+      "citation_count": 22,
       "notes": null
     },
     {
@@ -41439,6 +41859,27 @@
       "notes": null
     },
     {
+      "source_id": "src_a8002f1b7eb6a40d4ba3936d",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
+      "title": "Retained source Release asset: 1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 390453,
+      "content_sha256": "625756846b0c70441a808c737a2d3f93ce7ee25b0d52696d286252225d6c233f",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 8,
+      "notes": "{\"asset_name\":\"1993-chevrolet-s-10-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1993-chevrolet-s-10\"}"
+    },
+    {
       "source_id": "src_a821e0f0becd67c4993bafd6",
       "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-75350736-77bf73b71404-chevrolet-t7500-cabover.jpg",
       "title": "Archived photo: commons-75350736-77bf73b71404-chevrolet-t7500-cabover.jpg",
@@ -42130,6 +42571,27 @@
       "archive_relpath": null,
       "citation_count": 6,
       "notes": null
+    },
+    {
+      "source_id": "src_ab4b8e1a0230d9eac96a532e",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
+      "title": "Retained source Release asset: 2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 8600436,
+      "content_sha256": "2bf54f148d063b69a2b114166163b7225641daf1fba62bc41ca20a4a7dd4473d",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 53,
+      "notes": "{\"asset_name\":\"2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2012-municipal-manual\"}"
     },
     {
       "source_id": "src_ab81e239612ba4bfc424b031",
@@ -43199,7 +43661,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-gm-fleet-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2019-gm-fleet-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2019\"}"
     },
     {
@@ -43346,7 +43808,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-gm-fleet-guide-v2-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2009-gm-fleet-guide-v2-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2009-v2\"}"
     },
     {
@@ -43913,7 +44375,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 8,
       "notes": "{\"asset_name\":\"2006-new-jersey-tahoe-police-contract.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_configuration_contract\",\"upstream_source_id\":\"new-jersey-tahoe-police-contract-2006\"}"
     },
     {
@@ -44124,6 +44586,27 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-2334570-50019c8039dd-85-90-chevrolet-camaro-iroc-z.jpg",
       "archive_relpath": null,
       "citation_count": 2,
+      "notes": null
+    },
+    {
+      "source_id": "src_b795ef263b79313dc1c01a98",
+      "canonical_url": "https://en.wikipedia.org/wiki/Holden_Caprice_(WM)",
+      "title": "Holden Caprice (WM)",
+      "publisher": "Wikipedia",
+      "source_type": "encyclopedia_article",
+      "officiality": "secondary",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": null,
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": null,
+      "content_length_bytes": null,
+      "content_sha256": null,
+      "last_modified": null,
+      "archive_url": null,
+      "archive_relpath": null,
+      "citation_count": 69,
       "notes": null
     },
     {
@@ -44543,7 +45026,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 54,
+      "citation_count": 58,
       "notes": null
     },
     {
@@ -45597,6 +46080,27 @@
       "notes": null
     },
     {
+      "source_id": "src_c28f2c31f0f4001d0c5a6a4d",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 12264737,
+      "content_sha256": "65e753fc12bd6bc4d53c31c7738c9271516da6048082c06fcb079beb630fe047",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 11,
+      "notes": "{\"asset_name\":\"2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2023-bolt-euv-5w4\"}"
+    },
+    {
       "source_id": "src_c291ff293f3285072e919592",
       "canonical_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/1913_Chevrolet_%286331885333%29.jpg",
       "title": "1913 Chevrolet (6331885333).jpg",
@@ -46202,7 +46706,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-chevrolet-tahoe-ebrochure.pdf",
       "archive_relpath": null,
-      "citation_count": 4,
+      "citation_count": 5,
       "notes": "{\"asset_name\":\"2022-chevrolet-tahoe-ebrochure.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_brochure\",\"upstream_source_id\":\"chevrolet-ebrochure-us-2022-tahoe\"}"
     },
     {
@@ -47840,7 +48344,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 213,
+      "citation_count": 217,
       "notes": null
     },
     {
@@ -48764,7 +49268,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 9,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -49814,7 +50318,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 58,
+      "citation_count": 115,
       "notes": null
     },
     {
@@ -51141,6 +51645,27 @@
       "notes": null
     },
     {
+      "source_id": "src_e46ffedf90ba31d64cf21f75",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 21290909,
+      "content_sha256": "9cfbcb2fb053b0a48526c79a1a2c8617ed8a9b3525715ff2073d3dafe213f13c",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 7,
+      "notes": "{\"asset_name\":\"2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2026-blazer-ev-9c1-9c3-5w4\"}"
+    },
+    {
       "source_id": "src_e4d361877a215976641a2f28",
       "canonical_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/2nd_Chevrolet_Lumina_1.jpg",
       "title": "2nd Chevrolet Lumina 1.jpg",
@@ -51179,7 +51704,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-gm-fleet-guide-v2-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2008-gm-fleet-guide-v2-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2008-v2\"}"
     },
     {
@@ -51662,7 +52187,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 37,
+      "citation_count": 127,
       "notes": null
     },
     {
@@ -51683,7 +52208,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
       "archive_relpath": null,
-      "citation_count": 4,
+      "citation_count": 5,
       "notes": "{\"asset_name\":\"2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_brochure\",\"upstream_source_id\":\"chevrolet-ebrochure-us-2023-silverado-4500-6500-hd\"}"
     },
     {
@@ -52040,7 +52565,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 54,
+      "citation_count": 68,
       "notes": null
     },
     {
@@ -52145,7 +52670,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-gm-fleet-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2020-gm-fleet-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2020\"}"
     },
     {
@@ -52376,7 +52901,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "{\"asset_name\":\"1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1995-chevrolet-tahoe\"}"
     },
     {
@@ -53048,7 +53573,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "{\"asset_name\":\"1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1998-chevrolet-tahoe\"}"
     },
     {
@@ -53071,6 +53596,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_eea4f556aad83b8f53d24bff",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 37298379,
+      "content_sha256": "850e9f0196641ef73f0ab9e892047f25e7212d2e772999f4de545d63653c615d",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 12,
+      "notes": "{\"asset_name\":\"2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2017-caprice-9c1-specification-guide\"}"
     },
     {
       "source_id": "src_eeafad0fc882b6c7ed2038b7",
@@ -53636,7 +54182,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-gm-fleet-guide-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 7,
       "notes": "{\"asset_name\":\"2017-gm-fleet-guide-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2017\"}"
     },
     {
@@ -53846,7 +54392,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 9,
       "notes": null
     },
     {
@@ -54224,7 +54770,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 13,
+      "citation_count": 63,
       "notes": null
     },
     {
@@ -54539,7 +55085,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2024-gm-fleet-guide-v3-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2024-v3\"}"
     },
     {
@@ -54583,6 +55129,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_f7aa457fd7b4e081e35aa7ad",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9492057,
+      "content_sha256": "48c2d7112bede1f7aac294d3024fdd1002614fdcf6d5d34c1ce5c3b48a95c2e0",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 11,
+      "notes": "{\"asset_name\":\"2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2016-caprice-9c1-specification-guide\"}"
     },
     {
       "source_id": "src_f7e56e0248cfd8cea879e093",
@@ -54707,7 +55274,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-gm-fleet-guide-november-mirror.pdf",
       "archive_relpath": null,
-      "citation_count": 5,
+      "citation_count": 6,
       "notes": "{\"asset_name\":\"2016-gm-fleet-guide-november-mirror.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2016-november\"}"
     },
     {
@@ -54833,7 +55400,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
       "archive_relpath": null,
-      "citation_count": 25,
+      "citation_count": 44,
       "notes": "{\"asset_name\":\"2025-gm-fleet-guide-r2024-12-11.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2025-r2024-12-11\"}"
     },
     {
@@ -55341,6 +55908,27 @@
       "notes": null
     },
     {
+      "source_id": "src_fc7f422b23f0d88c3667bc4a",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 16899437,
+      "content_sha256": "ff1940144fd4c8426ac98a2e7fc9d48a685ff68a2d8fe2be3e6aa3dfc51e50ba",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 28,
+      "notes": "{\"asset_name\":\"2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2026-silverado-5w4-041426\"}"
+    },
+    {
       "source_id": "src_fcb83a87c1ee443dd9c9c1ef",
       "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-29981c89433851379024-12cab08a72d220b4.webp",
       "title": "Archived web preview: preview-commons-sha1-29981c89433851379024-12cab08a72d220b4.webp",
@@ -55736,7 +56324,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
       "archive_relpath": null,
-      "citation_count": 21,
+      "citation_count": 38,
       "notes": "{\"asset_name\":\"2026-gm-fleet-guide-r2026-04-01.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_palette_fleet_guide\",\"upstream_source_id\":\"gm-fleet-guide-us-2026-r2026-04-01\"}"
     },
     {
@@ -55862,7 +56450,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 2,
+      "citation_count": 3,
       "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
     },
     {
@@ -55883,7 +56471,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
     },
     {
@@ -55904,7 +56492,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 2,
+      "citation_count": 3,
       "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
     },
     {
@@ -55925,7 +56513,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 2,
+      "citation_count": 3,
       "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
     },
     {
@@ -55946,7 +56534,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
     },
     {
@@ -55967,7 +56555,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 3,
+      "citation_count": 4,
       "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
     }
   ]

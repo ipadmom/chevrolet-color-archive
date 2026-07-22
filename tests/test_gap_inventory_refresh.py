@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import importlib.util
 import unittest
+from collections import Counter
 from pathlib import Path
 
 
@@ -23,18 +24,22 @@ class GapInventoryRefreshTest(unittest.TestCase):
         summary = self.inventory["summary"]
         self.assertEqual(149, summary["model_count"])
         self.assertEqual(1_792, summary["model_year_count"])
-        self.assertEqual(1_468, summary["listing_count"])
+        self.assertEqual(1_748, summary["listing_count"])
         self.assertEqual(85, summary["completely_reviewed_count"])
         self.assertEqual(3, summary["reviewed_qualified_historical_table_count"])
         self.assertEqual(56, summary["reviewed_qualified_palette_union_count"])
         self.assertEqual(454, summary["reviewed_qualified_palette_union_listing_count"])
-        self.assertEqual(5, summary["reviewed_specialty_palette_subset_count"])
-        self.assertEqual(12, summary["reviewed_specialty_palette_subset_application_year_count"])
-        self.assertEqual(41, summary["reviewed_specialty_palette_subset_listing_count"])
+        self.assertEqual(25, summary["reviewed_specialty_palette_subset_count"])
+        self.assertEqual(
+            35, summary["reviewed_specialty_palette_subset_application_year_count"]
+        )
+        self.assertEqual(
+            321, summary["reviewed_specialty_palette_subset_listing_count"]
+        )
         self.assertEqual(973, summary["source_transcription_listing_count"])
         self.assertEqual(4, summary["reviewed_no_chart_count"])
         self.assertEqual(0, summary["source_located_chart_unreviewed_count"])
-        self.assertEqual(1_639, summary["wholly_unreviewed_count"])
+        self.assertEqual(1_619, summary["wholly_unreviewed_count"])
         self.assertEqual(1_862, summary["official_source_candidate_link_count"])
         self.assertEqual(691, summary["crawler_source_document_count"])
         self.assertEqual(2_774, summary["crawler_candidate_page_count"])
@@ -52,9 +57,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
         }
         self.assertEqual({1963, 1970, 1971}, set(rows))
         for row in rows.values():
-            self.assertEqual(
-                "source_reviewed_no_color_chart_found", row["audit_state"]
-            )
+            self.assertEqual("source_reviewed_no_color_chart_found", row["audit_state"])
             self.assertTrue(row["color_chart_reviewed"])
             self.assertFalse(row["completely_reviewed_color_chart"])
             self.assertEqual(0, row["exact_listing_count"])
@@ -79,7 +82,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
             self.assertEqual(row["exact_listing_count"], len(row["listings"]))
             self.assertEqual(
                 row["exact_listing_count"],
-                row["listed_count"] + row["restricted_count"],
+                sum(row["availability_state_counts"].values()),
             )
             if row["listings"]:
                 self.assertIsNotNone(row["current_app_source"])
@@ -97,8 +100,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
         )
         self.assertTrue(
             all(
-                row["current_app_source"]["evidenceClass"]
-                == "qualified_palette_union"
+                row["current_app_source"]["evidenceClass"] == "qualified_palette_union"
                 for row in palette_rows
             )
         )
@@ -107,13 +109,33 @@ class GapInventoryRefreshTest(unittest.TestCase):
             self.inventory["parquet_schema_recommendation"]["audit_state_enum"],
         )
 
-    def test_specialty_subsets_remain_incomplete_and_restricted(self) -> None:
-        expected_keys = {
-            "ck-series:1980",
-            "blazer:1980",
-            "express:2011",
-            "silverado-hd:2011",
-            "tahoe:2011",
+    def test_specialty_subsets_remain_incomplete_and_program_scoped(self) -> None:
+        expected_counts = {
+            "blazer:1979": 2,
+            "blazer:1980": 3,
+            "bolt-euv:2023": 7,
+            "caprice-ppv:2011": 14,
+            "caprice-ppv:2012": 16,
+            "caprice-ppv:2013": 14,
+            "caprice-ppv:2014": 7,
+            "caprice-ppv:2015": 6,
+            "caprice-ppv:2016": 6,
+            "caprice-ppv:2017": 4,
+            "ck-series:1979": 2,
+            "ck-series:1980": 3,
+            "ck-series:1993": 4,
+            "express:2011": 1,
+            "g-series-van:1979": 3,
+            "g-series-van:1980": 3,
+            "impala:2011": 30,
+            "impala:2012": 30,
+            "impala:2013": 30,
+            "impala-limited:2014": 30,
+            "s10:1993": 4,
+            "silverado-hd:2011": 1,
+            "sportvan:1979": 3,
+            "sportvan:1980": 3,
+            "tahoe:2011": 1,
         }
         specialty_rows = [
             row
@@ -121,16 +143,25 @@ class GapInventoryRefreshTest(unittest.TestCase):
             if row["audit_state"] == "reviewed_specialty_palette_subset"
         ]
         self.assertEqual(
-            expected_keys, {row["model_year_key"] for row in specialty_rows}
+            set(expected_counts), {row["model_year_key"] for row in specialty_rows}
         )
         for row in specialty_rows:
             self.assertTrue(row["color_chart_reviewed"])
             self.assertFalse(row["completely_reviewed_color_chart"])
-            self.assertEqual(1, row["exact_listing_count"])
+            self.assertEqual(
+                expected_counts[row["model_year_key"]], row["exact_listing_count"]
+            )
             self.assertEqual(0, row["listed_count"])
-            self.assertEqual(1, row["restricted_count"])
-            self.assertEqual("Woodland Green", row["listings"][0]["display_label"])
-            self.assertEqual("restricted", row["listings"][0]["availability_state"])
+            self.assertEqual(
+                row["exact_listing_count"],
+                sum(row["availability_state_counts"].values()),
+            )
+            self.assertTrue(
+                all(
+                    listing["evidence_class"] == "specialty_palette_subset"
+                    for listing in row["listings"]
+                )
+            )
             self.assertEqual(
                 "specialty_palette_subset",
                 row["current_app_source"]["evidenceClass"],
@@ -150,9 +181,13 @@ class GapInventoryRefreshTest(unittest.TestCase):
             "suburban-1977-1981-audited-solid-colors", row["generation_id"]
         )
         self.assertEqual("verified_complete", row["audit_state"])
-        self.assertEqual(16, row["exact_listing_count"])
+        self.assertEqual(18, row["exact_listing_count"])
         self.assertEqual(15, row["listed_count"])
         self.assertEqual(1, row["restricted_count"])
+        self.assertEqual(
+            {"available": 2, "listed": 15, "restricted": 1},
+            row["availability_state_counts"],
+        )
         woodland = next(
             listing
             for listing in row["listings"]
@@ -169,9 +204,9 @@ class GapInventoryRefreshTest(unittest.TestCase):
                 for listing in item["listings"]
             )
         ]
-        self.assertEqual(12, len(application_rows))
+        self.assertEqual(35, len(application_rows))
         self.assertEqual(
-            41,
+            321,
             sum(
                 listing["evidence_class"] == "specialty_palette_subset"
                 for item in application_rows
@@ -211,17 +246,16 @@ class GapInventoryRefreshTest(unittest.TestCase):
         specialty = MODULE.load_json(
             ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
         )
-        self.assertEqual(19, len(specialty["app_publication_records"]))
-        self.assertEqual(2, len(specialty["verified_not_published"]))
+        self.assertEqual(281, len(specialty["app_publication_records"]))
+        self.assertEqual(10, len(specialty["verified_not_published"]))
         self.assertEqual(6, len(specialty["usda_primary_sources"]))
         self.assertEqual(2, len(specialty["comparison_sources"]))
-        self.assertEqual(23, len(specialty["historic_gm_upfitter_candidates"]))
-        self.assertEqual(
-            24, len(specialty["modern_order_guide_snapshot_candidates"])
-        )
+        self.assertEqual(26, len(specialty["historic_gm_upfitter_candidates"]))
+        self.assertEqual(24, len(specialty["modern_order_guide_snapshot_candidates"]))
         self.assertEqual(5, len(specialty["rejected_or_unresolved_leads"]))
         self.assertEqual(
-            62, specialty["integrity_audit"]["unique_retained_files_rehashed"]
+            74,
+            specialty["integrity_audit"]["unique_retained_artifacts_reconciled"],
         )
         self.assertTrue(specialty["integrity_audit"]["byte_lengths_reconciled"])
         self.assertTrue(specialty["integrity_audit"]["sha256_digests_reconciled"])
@@ -234,17 +268,17 @@ class GapInventoryRefreshTest(unittest.TestCase):
             self.assertGreater(source["bytes"], 0)
             self.assertRegex(source["sha256"], r"^[0-9a-f]{64}$")
             self.assertTrue(
-                all(
-                    page and page <= source["pdf_page_count"]
-                    for page in pages
-                )
+                all(page and page <= source["pdf_page_count"] for page in pages)
             )
 
-        self.assertTrue(
-            all(
-                record["status"] == "page_rendered_needs_visual_qc"
-                for record in specialty["historic_gm_upfitter_candidates"]
-            )
+        self.assertEqual(
+            {"page_rendered_needs_visual_qc": 20, "visually_verified_and_published": 6},
+            dict(
+                Counter(
+                    record["status"]
+                    for record in specialty["historic_gm_upfitter_candidates"]
+                )
+            ),
         )
         modern_statuses = {
             record["status"]
@@ -278,7 +312,9 @@ class GapInventoryRefreshTest(unittest.TestCase):
         )
         self.assertEqual("unreviewed", tahoe_2020["audit_state"])
         self.assertEqual(0, tahoe_2020["exact_listing_count"])
-        self.assertEqual("generic_full_line_official_kit", tahoe_2020["likely_source_availability"])
+        self.assertEqual(
+            "generic_full_line_official_kit", tahoe_2020["likely_source_availability"]
+        )
         self.assertEqual(1, tahoe_2020["official_source_record_count"])
         source = tahoe_2020["official_source_records"][0]
         self.assertEqual("gm-fleet-guide-us-2020", source["crawler_source_id"])
@@ -312,9 +348,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
         synthesized = next(
             row for row in rows if row["model_year_key"] == "brightdrop-400:2026"
         )
-        self.assertEqual(
-            "reviewed_qualified_palette_union", synthesized["audit_state"]
-        )
+        self.assertEqual("reviewed_qualified_palette_union", synthesized["audit_state"])
         self.assertEqual(1, synthesized["exact_listing_count"])
         self.assertEqual([], synthesized["official_source_records"])
         self.assertEqual(0, synthesized["official_source_record_count"])

@@ -49,14 +49,16 @@ Chevrolet SSR`, represents two years and therefore has `year: 2003` plus
 
 ## Pinned brochure and source Release
 
-`brochure-source-release-manifest.json` records all 110 assets staged for the
+`brochure-source-release-manifest.json` records all 126 assets staged for the
 pinned `brochure-source-archive-v1` Release. The flat-filename checksum
-manifest covers all 109 other assets. The Release contains 86 PDFs totaling
-1,030,803,863 bytes and 6,844 pages. Eighty-one retained source assets include
-77 source PDFs totaling 975,606,620 bytes. Validation identifies 30 governing
-assets, 30 citations fed directly into the application, 79 application Release
-URLs, 61 modern palette tables, 483 modern color assertions, and 19 published
-specialty records.
+manifest covers all 125 other assets. The Release contains 102 PDFs totaling
+1,226,505,194 bytes and 7,904 pages. Of those, 97 are retained source assets,
+including 93 retained source PDFs totaling 1,171,307,951 bytes. Validation
+identifies 30 governing audit assets, 30 app-fed audit citations, 94
+application Release URLs, 61 modern palette tables, 483 modern color
+assertions, 281 published specialty records, and 10 verified nonpublished,
+nonrouting specialty snapshots. The retained modern set includes all 19 audited
+GM Fleet Guides for model years 2008 through 2026.
 
 The retained set closes the audited Tahoe 1995–2007 sources, the Suburban
 governing sources, and the comparison record for the reviewed 1963 Suburban

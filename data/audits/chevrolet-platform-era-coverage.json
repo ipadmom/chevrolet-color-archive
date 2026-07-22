@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_on": "2026-07-21",
+  "generated_on": "2026-07-22",
   "scope": "Every model and model year in data/catalog/chevrolet-us-nameplates.json, reconciled against sourced, nonoverlapping bands in data/catalog/chevrolet-platform-eras.json.",
   "status_definitions": {
     "complete": "Every catalog model year has a sourced platform or era band.",
@@ -9,14 +9,14 @@
   },
   "summary": {
     "catalog_model_count": 149,
-    "platform_model_count": 60,
-    "complete_model_count": 58,
+    "platform_model_count": 61,
+    "complete_model_count": 59,
     "partial_model_count": 2,
-    "missing_model_count": 89,
-    "platform_band_count": 217,
+    "missing_model_count": 88,
+    "platform_band_count": 218,
     "catalog_model_year_count": 1792,
-    "covered_model_year_count": 1332,
-    "uncovered_model_year_count": 460
+    "covered_model_year_count": 1339,
+    "uncovered_model_year_count": 453
   },
   "validation": {
     "invalid_model_id_count": 0,
@@ -1805,16 +1805,11 @@
         }
       ],
       "catalog_year_count": 7,
-      "platform_band_count": 0,
-      "platform_year_count": 0,
-      "uncovered_year_count": 7,
-      "uncovered_year_ranges": [
-        {
-          "start": 2011,
-          "end": 2017
-        }
-      ],
-      "coverage_status": "missing"
+      "platform_band_count": 1,
+      "platform_year_count": 7,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
     },
     {
       "model_id": "sonic",

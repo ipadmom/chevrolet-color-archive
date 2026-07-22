@@ -16,9 +16,11 @@ and `data/parquet/sources.parquet` contain one row per canonical URL.
 source. The separation prevents a source title or URL from being copied into
 hundreds of color records while retaining a complete, queryable citation trail.
 
-The public availability set contains 1,468 rows: 973 direct source
+The public availability set contains 1,748 rows: 973 direct source
 transcriptions, 454 qualified official palette-union rows across 56
-model-years, and 41 specialty subset rows across 12 applications. Complete
+model-years, and 321 specialty subset rows across 35 model-years. Twenty-five
+model-years remain specialty-only; the other ten also have a separately
+complete or qualified regular palette. Complete
 Suburban evidence added 114 exact-year rows for 1969, 1972-1976, and 2002-2004.
 Exact Tahoe program and regular-palette evidence adds 59 rows for 2000 and
 2002-2006 without flattening simultaneous programs or specialty subsets.
@@ -48,8 +50,11 @@ secondary component. Component rows explicitly set
 `standalone_availability_asserted = false`; they do not create color
 availability claims.
 
-Factory-code fields in schema version 8 retain the version 4 null semantics.
-Schema version 7 adds `evidence_locator_type`. PDF claims use `pdf_page` and
+Factory-code fields in schema version 9 retain the version 4 null semantics.
+Schema version 9 also requires `application_type` on every availability row and
+an `other_availability_state_count` research aggregate so program-specific
+states remain explicit without breaking row-count reconciliation. Schema
+version 7 added `evidence_locator_type`. PDF claims use `pdf_page` and
 retain nonempty parsed PDF pages. A retained brochure photograph uses
 `image_region` and may legitimately have no parsed PDF page. A code printed by
 the governing source is stored with `printed_in_source`. When a reviewed source
@@ -74,20 +79,23 @@ review. These records are research leads, not published availability claims.
 The ledger currently covers:
 
 - all 691 links in the 2026-07-20 official GM Heritage Chevrolet kit index;
-- the complete GM-authored Fleet Guide for every model year from 2008 through
+- all 19 complete GM-authored Fleet Guides for model years 2008 through
   2026, including direct GM-hosted 2025 and 2026 revisions with retained
   complete-file hashes;
 - four complete Chevrolet eBrochures supporting the published 2022 Tahoe and
   2023 Colorado and Silverado HD palettes, each bound to its exact live
   Chevrolet retrieval URL, local path, SHA-256, byte length, retrieval time,
   and PDF page count;
-- all 110 assets in the pinned `brochure-source-archive-v1` Release. The set
-  includes 86 PDFs totaling 1,030,803,863 bytes and 6,844 pages. Eighty-one
-  retained source assets include 77 source PDFs totaling 975,606,620 bytes. Other
-  retained formats include the complete 16-image 1993 carrier set, one listing
-  HTML file, the 2004 service-table image, and the flat-filename checksum
-  manifest covering all 109 other assets. The validated application surface
-  uses 30 governing assets, 30 app-fed citations, and 79 Release URLs;
+- all 126 assets in the pinned `brochure-source-archive-v1` Release. The set
+  includes 102 PDFs totaling 1,226,505,194 bytes and 7,904 pages. Of those, 97
+  are retained source assets, including 93 retained source PDFs totaling
+  1,171,307,951 bytes. Other retained formats include the complete 16-image
+  1993 carrier set, one listing HTML file, the 2004 service-table image, and the
+  flat-filename checksum
+  manifest covering all 125 other assets. The validated application surface
+  uses 30 governing audit assets, 30 app-fed audit citations, and 94
+  application Release URLs. It includes 281 published specialty records and
+  preserves 10 verified nonpublished, nonrouting specialty snapshots;
 - complete retained 2002 and 2003 sales-brochure palettes and the complete 2004
   GM service-table palette, with the earlier GM-kit change statements linked
   as supporting evidence rather than duplicate supplemental rows;
@@ -115,10 +123,11 @@ distinct SHA-256 identities totaling 5,133,028,799 bytes and 59,193 PDF pages,
 with requested and
 final URLs, retrieval times, safe response headers, declared and received byte
 counts, and content-addressed crawler object paths. The complete 5.1 GB corpus
-remains in ignored research storage. Eighty-one retained source assets,
-including 77 PDFs, are independently copied to the pinned public Release. They
-close the current Tahoe and Suburban audits, preserve the 1963 comparison
-record, and retain the published modern and specialty sources.
+remains in ignored research storage. The 97 retained source assets, including
+93 retained source PDFs totaling 1,171,307,951 bytes, are independently copied
+to the pinned public Release. They close the current Tahoe and Suburban audits,
+preserve the 1963 comparison record, and retain the published modern and
+specialty sources.
 The artifact ledger makes those copies and future archive batches auditable
 without treating the working cache
 as a public host.
@@ -161,15 +170,19 @@ adjacent years.
 ## Validation
 
 `scripts/validate-normalized-parquet.py` checks primary keys, foreign keys,
-manifest hashes, schema version 8 locator typing and model-year generation memberships, complete HTTPS source URLs,
+manifest hashes, schema version 9 locator typing, application classification,
+availability-state reconciliation, and model-year generation memberships,
+complete HTTPS source URLs,
 citation counts, per-year listing counts, one evidence link for every color
 availability row, qualified-palette and specialty-subset review flags, the
 empty post-promotion supplemental table, the bounded RockAuto 20/28/111/96
-counts, the published README row counts, 110 brochure Release assets, all 109
+counts, the published README row counts, 126 brochure Release assets, all 125
 non-manifest assets covered by the flat-filename checksum manifest, 30
-governing assets, 30 app-fed citations, 79 application Release URLs, pinned
-photo archive URLs, 1,369 exact paint schemes, 2,738 ordered primary and secondary components,
-immutable scheme evidence revisions, the no-flattening sentinel, the nullable
+  governing audit assets, 30 app-fed audit citations, 94 application Release
+  URLs, 281 published specialty records, 10 verified nonpublished, nonrouting
+specialty snapshots, pinned photo archive URLs, 1,369 exact paint schemes,
+2,738 ordered primary and secondary components, immutable scheme evidence
+revisions, the no-flattening sentinel, the nullable
 factory-code contract and controlled statuses, a complete flat-filename
 Release checksum manifest, and the rule that tentative
 photo-color links do not claim a verified factory paint match.

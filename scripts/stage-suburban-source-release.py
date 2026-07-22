@@ -25,13 +25,13 @@ MODERN_SOURCE_LEDGER_PATH = (
 )
 CRAWLER_OBJECT_ROOT = ROOT / "tmp" / "crawler-state" / "objects" / "sha256"
 
-EXPECTED_RETAINED_SOURCE_ASSET_COUNT = 81
+EXPECTED_RETAINED_SOURCE_ASSET_COUNT = 97
 EXPECTED_PRESERVED_ASSET_COUNT = 28
-EXPECTED_NON_CHECKSUM_ASSET_COUNT = 109
-EXPECTED_ASSET_COUNT = 110
-EXPECTED_PDF_COUNT = 86
-EXPECTED_PDF_BYTES = 1_030_803_863
-EXPECTED_PDF_PAGE_COUNT = 6_844
+EXPECTED_NON_CHECKSUM_ASSET_COUNT = 125
+EXPECTED_ASSET_COUNT = 126
+EXPECTED_PDF_COUNT = 102
+EXPECTED_PDF_BYTES = 1_226_505_194
+EXPECTED_PDF_PAGE_COUNT = 7_904
 
 
 PRESERVED_EXISTING_ASSET_NAMES = (
@@ -174,39 +174,171 @@ MODERN_SOURCES = (
 
 
 CRAWLER_SOURCES = (
-    ("gm-heritage-1963-chevrolet-suburban", "1963-chevrolet-suburban-vehicle-information-kit-gm.pdf", "reviewed_no_chart_vehicle_information_kit"),
-    ("gm-heritage-1969-chevrolet-suburban", "1969-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1970-chevrolet-suburban", "1970-chevrolet-suburban-vehicle-information-kit-gm.pdf", "reviewed_no_chart_vehicle_information_kit"),
-    ("gm-heritage-1971-chevrolet-suburban", "1971-chevrolet-suburban-vehicle-information-kit-gm.pdf", "reviewed_no_chart_vehicle_information_kit"),
-    ("gm-heritage-1971-chevrolet-blazer", "1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf", "comparison_vehicle_information_kit"),
-    ("gm-heritage-1972-chevrolet-suburban", "1972-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1973-chevrolet-suburban", "1973-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1974-chevrolet-suburban", "1974-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1975-chevrolet-suburban", "1975-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1976-chevrolet-suburban", "1976-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1982-chevrolet-suburban", "1982-chevrolet-suburban-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-1989-chevrolet-suburban", "1989-chevrolet-suburban-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-1993-chevrolet-suburban", "1993-chevrolet-suburban-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-2000-chevrolet-suburban", "2000-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-2001-chevrolet-suburban", "2001-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-2002-chevrolet-suburban", "2002-chevrolet-suburban-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-2003-chevrolet-suburban", "2003-chevrolet-suburban-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-2004-chevrolet-suburban", "2004-chevrolet-suburban-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-2005-chevrolet-suburban", "2005-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-2007-chevrolet-suburban", "2007-chevrolet-suburban-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1995-chevrolet-tahoe", "1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1996-chevrolet-tahoe", "1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1997-chevrolet-tahoe", "1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1998-chevrolet-tahoe", "1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-1999-chevrolet-tahoe", "1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-2000-chevrolet-tahoe", "2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_variant_vehicle_information_kit"),
-    ("gm-heritage-2001-chevrolet-tahoe", "2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-2002-chevrolet-tahoe", "2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "supporting_vehicle_information_kit"),
-    ("gm-heritage-2003-chevrolet-tahoe", "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
-    ("gm-heritage-2004-chevrolet-tahoe", "2004-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "source_review_vehicle_information_kit"),
-    ("gm-heritage-2005-chevrolet-tahoe", "2005-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "source_review_vehicle_information_kit"),
-    ("gm-heritage-2006-chevrolet-tahoe", "2006-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "source_review_vehicle_information_kit"),
-    ("gm-heritage-2007-chevrolet-tahoe", "2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf", "controlling_vehicle_information_kit"),
+    (
+        "gm-heritage-1963-chevrolet-suburban",
+        "1963-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "reviewed_no_chart_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1969-chevrolet-suburban",
+        "1969-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1970-chevrolet-suburban",
+        "1970-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "reviewed_no_chart_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1971-chevrolet-suburban",
+        "1971-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "reviewed_no_chart_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1971-chevrolet-blazer",
+        "1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf",
+        "comparison_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1972-chevrolet-suburban",
+        "1972-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1973-chevrolet-suburban",
+        "1973-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1974-chevrolet-suburban",
+        "1974-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1975-chevrolet-suburban",
+        "1975-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1976-chevrolet-suburban",
+        "1976-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1982-chevrolet-suburban",
+        "1982-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1989-chevrolet-suburban",
+        "1989-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1993-chevrolet-suburban",
+        "1993-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2000-chevrolet-suburban",
+        "2000-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2001-chevrolet-suburban",
+        "2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2002-chevrolet-suburban",
+        "2002-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2003-chevrolet-suburban",
+        "2003-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2004-chevrolet-suburban",
+        "2004-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2005-chevrolet-suburban",
+        "2005-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2007-chevrolet-suburban",
+        "2007-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1995-chevrolet-tahoe",
+        "1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1996-chevrolet-tahoe",
+        "1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1997-chevrolet-tahoe",
+        "1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1998-chevrolet-tahoe",
+        "1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1999-chevrolet-tahoe",
+        "1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2000-chevrolet-tahoe",
+        "2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_variant_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2001-chevrolet-tahoe",
+        "2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2002-chevrolet-tahoe",
+        "2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "supporting_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2003-chevrolet-tahoe",
+        "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2004-chevrolet-tahoe",
+        "2004-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "source_review_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2005-chevrolet-tahoe",
+        "2005-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "source_review_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2006-chevrolet-tahoe",
+        "2006-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "source_review_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-2007-chevrolet-tahoe",
+        "2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "controlling_vehicle_information_kit",
+    ),
 )
 
 
@@ -215,7 +347,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-sales-brochure-2002-tahoe",
         "asset_name": "2002-chevrolet-tahoe-brochure-motorologist.pdf",
         "role": "controlling_sales_brochure",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2002-chevrolet-tahoe-brochure-motorologist.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2002-chevrolet-tahoe-brochure-motorologist.pdf",
         "url": "https://www.motorologist.com/wp-content/uploads/2002-Chevrolet-Tahoe-brochure.pdf",
         "retrieval_url": "https://web.archive.org/web/20240609071421id_/https://www.motorologist.com/wp-content/uploads/2002-Chevrolet-Tahoe-brochure.pdf",
         "sha256": "97ca38b885817e64e831d640b4167df2edf93838d29d407610df38efb797e522",
@@ -226,7 +361,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-sales-brochure-2003-tahoe",
         "asset_name": "2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
         "role": "supporting_sales_brochure",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
         "url": "https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf",
         "retrieval_url": "https://web.archive.org/web/20240216125333id_/https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf",
         "sha256": "0d60ddd639614f5da8b85dcf3b438a5cd9d15c106cfa323d11467f82fe41b613",
@@ -237,7 +375,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-spec-sheet-us-2004-tahoe",
         "asset_name": "2004-chevrolet-tahoe-spec-sheet.pdf",
         "role": "controlling_us_specification_sheet",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2004-chevrolet-tahoe-spec-sheet.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2004-chevrolet-tahoe-spec-sheet.pdf",
         "url": "https://xr793.com/wp-content/uploads/2023/07/2004-Chevrolet-Tahoe-Spec-Sheet.pdf",
         "retrieval_url": "https://web.archive.org/web/20240225052652id_/https://xr793.com/wp-content/uploads/2023/07/2004-Chevrolet-Tahoe-Spec-Sheet.pdf",
         "sha256": "68b41b618bae2a61c93ee80d1f4655a68f3b177e380611ef8243babc6177b514",
@@ -248,7 +389,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-spec-sheet-us-2005-tahoe",
         "asset_name": "2005-chevrolet-tahoe-spec-sheet.pdf",
         "role": "controlling_us_specification_sheet",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2005-chevrolet-tahoe-spec-sheet.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2005-chevrolet-tahoe-spec-sheet.pdf",
         "url": "https://xr793.com/wp-content/uploads/2023/07/2005-Chevrolet-Tahoe-Spec-Sheet.pdf",
         "retrieval_url": "https://web.archive.org/web/20240421034221id_/https://xr793.com/wp-content/uploads/2023/07/2005-Chevrolet-Tahoe-Spec-Sheet.pdf",
         "sha256": "a7d04612d375b57aca0185e205461aff7cd3eeac96901f1c84152d2a632cc4aa",
@@ -259,7 +403,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-spec-sheet-us-2006-tahoe",
         "asset_name": "2006-chevrolet-tahoe-spec-sheet.pdf",
         "role": "controlling_us_specification_sheet",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2006-chevrolet-tahoe-spec-sheet.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2006-chevrolet-tahoe-spec-sheet.pdf",
         "url": "https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Tahoe-Spec-Sheet.pdf",
         "retrieval_url": "https://web.archive.org/web/20240223151410id_/https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Tahoe-Spec-Sheet.pdf",
         "sha256": "e805cef5d6e04f465c84df5cbad85997cde1d5797692cb02113cba25f6ee358f",
@@ -270,7 +417,10 @@ LOCAL_SOURCES = (
         "source_id": "sherwin-williams-gm-2004-color-compatibility-guide",
         "asset_name": "2004-sherwin-williams-gm-color-compatibility-guide.pdf",
         "role": "supporting_tahoe_code_compatibility_guide",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2004-sherwin-williams-gm-color-compatibility-guide.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2004-sherwin-williams-gm-color-compatibility-guide.pdf",
         "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2004_gm_ccg.pdf",
         "sha256": "3bd3709b52baae003adf94126fc63e49c64c7b9b46d817b4035910932b73bdd5",
         "bytes": 93_732,
@@ -280,7 +430,10 @@ LOCAL_SOURCES = (
         "source_id": "sherwin-williams-gm-2005-color-compatibility-guide",
         "asset_name": "2005-sherwin-williams-gm-color-compatibility-guide.pdf",
         "role": "supporting_tahoe_code_compatibility_guide",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2005-sherwin-williams-gm-color-compatibility-guide.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2005-sherwin-williams-gm-color-compatibility-guide.pdf",
         "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2005_gm_ccg.pdf",
         "sha256": "bf617161ec0875b9dce9c9bc2be087541a5b95cf848fde59177255af7273afaa",
         "bytes": 108_739,
@@ -290,7 +443,10 @@ LOCAL_SOURCES = (
         "source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
         "asset_name": "2006-sherwin-williams-gm-color-compatibility-guide.pdf",
         "role": "supporting_tahoe_code_compatibility_guide",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2006-sherwin-williams-gm-color-compatibility-guide.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2006-sherwin-williams-gm-color-compatibility-guide.pdf",
         "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/de/de-de/pdfs/marketing-uploads/swaf-2006_gm_ccg.pdf",
         "sha256": "e97ee68bca34867244a933db1bd6df11cf0e18781671207348db08bfb8cca31b",
         "bytes": 148_670,
@@ -300,7 +456,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-sales-brochure-canada-2005-tahoe-suburban",
         "asset_name": "2005-chevrolet-tahoe-suburban-canada.pdf",
         "role": "supporting_canadian_sales_brochure",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2005-chevrolet-tahoe-suburban-canada.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2005-chevrolet-tahoe-suburban-canada.pdf",
         "url": "https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf",
         "retrieval_url": "https://web.archive.org/web/20240216130715id_/https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf",
         "sha256": "96e11797686f4c36e095d285c2a1608a0f7109769ea3a8f951ad756d20a7c966",
@@ -311,7 +470,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-sales-brochure-canada-2006-tahoe-suburban",
         "asset_name": "2006-chevrolet-tahoe-suburban-canada.pdf",
         "role": "supporting_canadian_sales_brochure",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2006-chevrolet-tahoe-suburban-canada.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2006-chevrolet-tahoe-suburban-canada.pdf",
         "url": "https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf",
         "retrieval_url": "https://web.archive.org/web/20240216125819id_/https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf",
         "sha256": "6bb01616aa0ab6150ccdee2a8a4515d65e7dccc9bb26430c37ba0b74093562b3",
@@ -322,7 +484,10 @@ LOCAL_SOURCES = (
         "source_id": "new-jersey-tahoe-police-contract-2005",
         "asset_name": "2005-new-jersey-tahoe-police-contract.pdf",
         "role": "controlling_specialty_configuration_contract",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2005-new-jersey-tahoe-police-contract.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2005-new-jersey-tahoe-police-contract.pdf",
         "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
         "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
         "bytes": 342_819,
@@ -332,7 +497,10 @@ LOCAL_SOURCES = (
         "source_id": "new-jersey-tahoe-police-contract-2006",
         "asset_name": "2006-new-jersey-tahoe-police-contract.pdf",
         "role": "controlling_specialty_configuration_contract",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2006-new-jersey-tahoe-police-contract.pdf",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2006-new-jersey-tahoe-police-contract.pdf",
         "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
         "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
         "bytes": 265_662,
@@ -342,7 +510,11 @@ LOCAL_SOURCES = (
         "source_id": "gm-1980-chevrolet-truck-color-trim",
         "asset_name": "1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
         "role": "controlling_specialty_vehicle_information_kit",
-        "path": ROOT / "tmp" / "specialty-color-sources" / "gm-truck-kits" / "1980-Chevrolet-Truck.pdf",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-truck-kits"
+        / "1980-Chevrolet-Truck.pdf",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1980-Chevrolet-Truck.pdf",
         "sha256": "b44e4e8af7bba172885d003d5f88d2dab55bcefb5a15d0ce124b9a181ed89008",
         "bytes": 4_390_128,
@@ -352,17 +524,240 @@ LOCAL_SOURCES = (
         "source_id": "gm-2011-police-manual",
         "asset_name": "2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
         "role": "controlling_specialty_vehicle_manual",
-        "path": ROOT / "tmp" / "specialty-color-research" / "historic-official-pdfs" / "gm-2011-police-manual.pdf",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2011-police-manual.pdf",
         "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
         "sha256": "6c0eef224d9c67c4a841bbaf1fb68383bc74cc5a0ecc3c0d1a412683b6474534",
         "bytes": 8_346_299,
         "pdf_page_count": 182,
     },
     {
+        "source_id": "gm-heritage-1979-chevrolet-blazer",
+        "asset_name": "1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+        "role": "controlling_specialty_vehicle_information_kit",
+        "path": CRAWLER_OBJECT_ROOT
+        / "86"
+        / "85"
+        / "868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add.pdf",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Blazer.pdf",
+        "sha256": "868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add",
+        "bytes": 1_739_347,
+        "pdf_page_count": 22,
+    },
+    {
+        "source_id": "gm-heritage-1993-chevrolet-s-10",
+        "asset_name": "1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
+        "role": "controlling_specialty_vehicle_information_kit",
+        "path": CRAWLER_OBJECT_ROOT
+        / "62"
+        / "57"
+        / "625756846b0c70441a808c737a2d3f93ce7ee25b0d52696d286252225d6c233f.pdf",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-S-10.pdf",
+        "sha256": "625756846b0c70441a808c737a2d3f93ce7ee25b0d52696d286252225d6c233f",
+        "bytes": 390_453,
+        "pdf_page_count": 15,
+    },
+    {
+        "source_id": "gm-2012-municipal-manual",
+        "asset_name": "2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
+        "role": "controlling_specialty_vehicle_manual",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2012-municipal-manual.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2012-Police-Specifications-Manual-9-29-11.pdf",
+        "sha256": "2bf54f148d063b69a2b114166163b7225641daf1fba62bc41ca20a4a7dd4473d",
+        "bytes": 8_600_436,
+        "pdf_page_count": 199,
+    },
+    {
+        "source_id": "gm-2013-municipal-guide",
+        "asset_name": "2013-chevrolet-municipal-vehicles-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_manual",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2013-municipal-guide.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2013-Municipal-Guide.pdf",
+        "sha256": "1753082e7bcea94e29737e8d09470ee9e87059bd5fb8a560ffe463b850abc18c",
+        "bytes": 10_595_751,
+        "pdf_page_count": 197,
+    },
+    {
+        "source_id": "gm-2014-police-guide",
+        "asset_name": "2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_manual",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2014-police-guide.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/06/2014_Police_Technical_Guide_FINAL.pdf",
+        "sha256": "d21cdc63dc71d20295d94075573f083560be5c73204bba13b939c8699dd77fdc",
+        "bytes": 9_610_503,
+        "pdf_page_count": 147,
+    },
+    {
+        "source_id": "gm-2015-caprice-9c1-specification-guide",
+        "asset_name": "2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2015-caprice-9c1-specification-guide.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2015_caprice_specification_guide_4_10.pdf",
+        "sha256": "6f6431fa6f246e493c3f3da26b2bf05b463ec1d26c68a2ced3282c7ecf91823a",
+        "bytes": 16_376_061,
+        "pdf_page_count": 37,
+    },
+    {
+        "source_id": "gm-2016-caprice-9c1-specification-guide",
+        "asset_name": "2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2016-caprice-9c1-specification-guide.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Caprice-Specification-Guide.pdf",
+        "sha256": "48c2d7112bede1f7aac294d3024fdd1002614fdcf6d5d34c1ce5c3b48a95c2e0",
+        "bytes": 9_492_057,
+        "pdf_page_count": 37,
+    },
+    {
+        "source_id": "gm-2017-caprice-9c1-specification-guide",
+        "asset_name": "2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2017-caprice-9c1-specification-guide.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/Caprice-9C1-Specification-Guide-2017.pdf",
+        "sha256": "850e9f0196641ef73f0ab9e892047f25e7212d2e772999f4de545d63653c615d",
+        "bytes": 37_298_379,
+        "pdf_page_count": 40,
+    },
+    {
+        "source_id": "gm-2023-bolt-euv-5w4",
+        "asset_name": "2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-release-assets"
+        / "2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2022/12/2023-BOLT-EUV-SSV-1.pdf",
+        "sha256": "65e753fc12bd6bc4d53c31c7738c9271516da6048082c06fcb079beb630fe047",
+        "bytes": 12_264_737,
+        "pdf_page_count": 35,
+    },
+    {
+        "source_id": "gm-2024-blazer-ev-9c1-9c3",
+        "asset_name": "2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-release-assets"
+        / "2024-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2023/12/2024-BLAZER-EV-9C1-Municipal-Specification-Guide-V112525.pdf",
+        "sha256": "8f200edcf1471f031620fd985470ddcc69c3f977bb4e1f9d42a252a1d77c511b",
+        "bytes": 14_926_196,
+        "pdf_page_count": 54,
+    },
+    {
+        "source_id": "gm-2025-blazer-ev-9c1-9c3-5w4",
+        "asset_name": "2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-release-assets"
+        / "2025-chevrolet-blazer-ev-9c1-specification-guide-gm.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2024/12/2025-BLAZER-EV-9C1-Municipal-Specification-Guide-V042825.pdf",
+        "sha256": "1c1ef303bda0ee42ec874a20d2d9926ccd119e21f45e6d830950d5d537310011",
+        "bytes": 14_498_399,
+        "pdf_page_count": 55,
+    },
+    {
+        "source_id": "gm-order-guide-2025-blazer-ev-police-22887",
+        "asset_name": "2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+        "role": "supporting_specialty_vehicle_order_guide_snapshot",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "official-order-guides"
+        / "2025-blazer-ev-police-package-22887.pdf",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22887/all/en-us",
+        "sha256": "feb62128b5b002901f83d51d4ba69e85630d13baa301f13a26e7b7246bb26c5f",
+        "bytes": 193_610,
+        "pdf_page_count": 41,
+    },
+    {
+        "source_id": "gm-2026-blazer-ev-9c1-9c3-5w4",
+        "asset_name": "2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-release-assets"
+        / "2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2025/12/2026-BLAZER-EV-9C1-9C3-5W4-Specification-Guide-V041026.pdf",
+        "sha256": "9cfbcb2fb053b0a48526c79a1a2c8617ed8a9b3525715ff2073d3dafe213f13c",
+        "bytes": 21_290_909,
+        "pdf_page_count": 57,
+    },
+    {
+        "source_id": "gm-order-guide-2026-blazer-ev-police-23158",
+        "asset_name": "2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
+        "role": "supporting_specialty_vehicle_order_guide_snapshot",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "official-order-guides"
+        / "2026-blazer-ev-police-package-23158.pdf",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23158/all/en-us",
+        "sha256": "923db29e3afb311fc812f2059c5196333c9dad0d4d119fbf3961316d57002753",
+        "bytes": 200_912,
+        "pdf_page_count": 45,
+    },
+    {
+        "source_id": "gm-2026-silverado-9c1-041426",
+        "asset_name": "2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-release-assets"
+        / "2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-9C1-Specification-Guide-041426.pdf",
+        "sha256": "f752054c635fd45b3f27adc65631b19de2521a6e9441b8b4e348cfcbb8e310fc",
+        "bytes": 21_324_144,
+        "pdf_page_count": 41,
+    },
+    {
+        "source_id": "gm-2026-silverado-5w4-041426",
+        "asset_name": "2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-release-assets"
+        / "2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-SSV-Specification-Guide-041426.pdf",
+        "sha256": "ff1940144fd4c8426ac98a2e7fc9d48a685ff68a2d8fe2be3e6aa3dfc51e50ba",
+        "bytes": 16_899_437,
+        "pdf_page_count": 38,
+    },
+    {
         "source_id": "chevrolet-sales-brochure-2000-tahoe-z71-colors-scan",
         "asset_name": "2000-chevrolet-tahoe-z71-brochure-colors.jpg",
         "role": "qualified_original_brochure_scan",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2000-chevrolet-tahoe-z71-brochure-colors.jpg",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2000-chevrolet-tahoe-z71-brochure-colors.jpg",
         "url": "https://www.gmt400.com/attachments/2000-z71-tahoe-brochure-colors-jpg.372777/",
         "retrieval_url": "https://www.gmt400.com/data/attachments/357/357680-9100c496d554e77aafac98846d23a7f5.jpg",
         "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
@@ -373,7 +768,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-1-scan",
         "asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-1.jpg",
         "role": "qualified_original_order_guide_scan",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2000-chevrolet-tahoe-z71-order-guide-page-1.jpg",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2000-chevrolet-tahoe-z71-order-guide-page-1.jpg",
         "url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-1-jpg.372780/",
         "retrieval_url": "https://www.gmt400.com/data/attachments/357/357683-9c9e15526d8cf50107fcf239b3a19b05.jpg",
         "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
@@ -384,7 +782,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-2-scan",
         "asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-2.jpg",
         "role": "qualified_original_order_guide_scan",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2000-chevrolet-tahoe-z71-order-guide-page-2.jpg",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2000-chevrolet-tahoe-z71-order-guide-page-2.jpg",
         "url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-2-jpg.372781/",
         "retrieval_url": "https://www.gmt400.com/data/attachments/357/357684-87675e51d982900ffa260fba4eed7cc1.jpg",
         "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
@@ -395,7 +796,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-3-scan",
         "asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-3.jpg",
         "role": "qualified_original_order_guide_scan",
-        "path": ROOT / "tmp" / "tahoe-source-research" / "2000-chevrolet-tahoe-z71-order-guide-page-3.jpg",
+        "path": ROOT
+        / "tmp"
+        / "tahoe-source-research"
+        / "2000-chevrolet-tahoe-z71-order-guide-page-3.jpg",
         "url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-3-jpg.372782/",
         "retrieval_url": "https://www.gmt400.com/data/attachments/357/357685-dad7ee20c9a933a0e2609c430ba8e7a8.jpg",
         "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
@@ -406,7 +810,10 @@ LOCAL_SOURCES = (
         "source_id": "gm-heritage-1963-chevrolet-truck",
         "asset_name": "1963-chevrolet-truck-vehicle-information-kit-gm.pdf",
         "role": "comparison_vehicle_information_kit",
-        "path": ROOT / "tmp" / "source-gap-downloads" / "1963-chevrolet-truck-vehicle-information-kit-gm.pdf",
+        "path": ROOT
+        / "tmp"
+        / "source-gap-downloads"
+        / "1963-chevrolet-truck-vehicle-information-kit-gm.pdf",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1963-Chevrolet-Truck.pdf",
         "sha256": "a9388da4129296a00935a715fbf5e733b3cbdb2269b4a70a8a75827b0f49c08e",
         "bytes": 4_439_704,
@@ -416,7 +823,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-service-news-1963-truck-refinish-extract",
         "asset_name": "1963-chevrolet-service-news-paint-refinish-codes.pdf",
         "role": "comparison_refinish_extract",
-        "path": ROOT / "tmp" / "source-gap-downloads" / "1963-chevrolet-service-news-paint-refinish-codes.pdf",
+        "path": ROOT
+        / "tmp"
+        / "source-gap-downloads"
+        / "1963-chevrolet-service-news-paint-refinish-codes.pdf",
         "url": "http://www.corvair.org/chapters/corvanatics/files/resources/63-PntRefCodes.pdf",
         "retrieval_url": "https://web.archive.org/web/20171215004756id_/http://www.corvair.org/chapters/corvanatics/files/resources/63-PntRefCodes.pdf",
         "parent_source_url": "https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
@@ -428,7 +838,10 @@ LOCAL_SOURCES = (
         "source_id": "chevrolet-service-news-volume-34-no-9",
         "asset_name": "1962-october-chevrolet-service-news-vol-34-no-9.pdf",
         "role": "parent_service_news_issue",
-        "path": ROOT / "tmp" / "source-gap-downloads" / "1962-october-chevrolet-service-news-vol-34-no-9.pdf",
+        "path": ROOT
+        / "tmp"
+        / "source-gap-downloads"
+        / "1962-october-chevrolet-service-news-vol-34-no-9.pdf",
         "url": "https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
         "retrieval_url": "https://web.archive.org/web/20221017094958id_/https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
         "sha256": "a498ab3c02afd3186ade6e5edeabc3724346b8b3a2a1ef450f2a3901b65a896e",
@@ -439,7 +852,10 @@ LOCAL_SOURCES = (
         "source_id": "corvanatics-corvair95-paint-trim-refinish-codes",
         "asset_name": "corvair95-paint-trim-refinish-codes.pdf",
         "role": "comparison_refinish_compilation",
-        "path": ROOT / "tmp" / "source-gap-downloads" / "corvair95-paint-trim-refinish-codes.pdf",
+        "path": ROOT
+        / "tmp"
+        / "source-gap-downloads"
+        / "corvair95-paint-trim-refinish-codes.pdf",
         "url": "https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf",
         "retrieval_url": "https://web.archive.org/web/20240519115026id_/https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf",
         "sha256": "083bbdc28cd5e2e494a4285fbd786487f081a48a62d8edeab49fb3d0df3fbca5",
@@ -450,7 +866,11 @@ LOCAL_SOURCES = (
         "source_id": "gm-heritage-1982-chevrolet-truck",
         "asset_name": "1982-chevrolet-truck-vehicle-information-kit-gm.pdf",
         "role": "comparison_vehicle_information_kit",
-        "path": ROOT / "tmp" / "specialty-color-sources" / "gm-truck-kits" / "1982-Chevrolet-Truck.pdf",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-truck-kits"
+        / "1982-Chevrolet-Truck.pdf",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1982-Chevrolet-Truck.pdf",
         "sha256": "665d96d3115ef330fb232152c92d532a1f52ac63a6ec6b4e8e0387066c334b28",
         "bytes": 4_431_496,
@@ -460,7 +880,11 @@ LOCAL_SOURCES = (
         "source_id": "gm-heritage-1989-chevrolet-truck",
         "asset_name": "1989-chevrolet-truck-vehicle-information-kit-gm.pdf",
         "role": "comparison_vehicle_information_kit",
-        "path": ROOT / "tmp" / "specialty-color-sources" / "gm-truck-kits" / "1989-Chevrolet-Truck.pdf",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-truck-kits"
+        / "1989-Chevrolet-Truck.pdf",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1989-Chevrolet-Truck.pdf",
         "sha256": "c224e4fb79f74f3906b771b268edc28848dfd55a1d5f1e28523d0092cf414996",
         "bytes": 1_683_159,
@@ -469,8 +893,12 @@ LOCAL_SOURCES = (
     {
         "source_id": "gm-heritage-1993-chevrolet-truck",
         "asset_name": "1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
-        "role": "comparison_vehicle_information_kit",
-        "path": ROOT / "tmp" / "specialty-color-sources" / "gm-truck-kits" / "1993-Chevrolet-Truck.pdf",
+        "role": "controlling_specialty_vehicle_information_kit",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-truck-kits"
+        / "1993-Chevrolet-Truck.pdf",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1993-Chevrolet-Truck.pdf",
         "sha256": "5183176f4af0d61bd63cc7d6fb02117129c870c28c42bc9fe22abcc2eea52d3e",
         "bytes": 13_034_550,
@@ -546,8 +974,7 @@ def modern_entries() -> list[dict[str, Any]]:
         source["source_type"] == "fleet_guide_pdf" for source in retained_sources
     )
     brochure_count = sum(
-        source["source_type"]
-        in {"consumer_brochure_pdf", "commercial_brochure_pdf"}
+        source["source_type"] in {"consumer_brochure_pdf", "commercial_brochure_pdf"}
         for source in retained_sources
     )
     if (fleet_count, brochure_count) != (19, 4):
@@ -779,9 +1206,7 @@ def main() -> int:
     if checksum_name not in existing_by_name:
         raise ValueError(f"manifest is missing checksum asset: {checksum_name}")
     checksum_entry = dict(existing_by_name[checksum_name])
-    ordered = sorted(
-        final_non_checksum_entries, key=lambda entry: entry["asset_name"]
-    )
+    ordered = sorted(final_non_checksum_entries, key=lambda entry: entry["asset_name"])
     checksum_text = "".join(
         f"{entry['sha256']}  {entry['asset_name']}\n" for entry in ordered
     )
@@ -801,10 +1226,14 @@ def main() -> int:
         "and police-configuration contracts, plus the complete 1963 comparison record: "
         "the GM truck kit, exact Service News extract, its complete parent issue, and "
         "the Corvair 95 paint-and-trim compilation. The archive also retains the "
-        "1980 Chevrolet truck color-and-trim kit, the 2011 Chevrolet municipal "
-        "vehicles technical manual, all 19 audited 2008-2026 GM Fleet Guides, and "
-        "four audited 2022-2023 Chevrolet eBrochures that govern qualified modern "
-        "palette unions. Original, retrieval, and parent URLs are recorded separately "
+        "1979 Blazer and 1993 S-10 vehicle information kits, the 1980 Chevrolet "
+        "truck color-and-trim kit, the 2011-2014 Chevrolet municipal and police "
+        "manuals, the 2015-2017 Caprice PPV 9C1 specification guides, the 2023 "
+        "Bolt EUV SSV guide, the 2024-2026 Blazer EV municipal "
+        "guides, two dated Blazer EV order-guide snapshots, and the April 14, 2026 "
+        "Silverado 9C1 and 5W4 guides. It also retains all 19 audited 2008-2026 GM "
+        "Fleet Guides and four audited 2022-2023 Chevrolet eBrochures that govern "
+        "qualified modern palette unions. Original, retrieval, and parent URLs are recorded separately "
         "where the live carrier is unavailable. No source or carrier states a reuse "
         "license."
     )
