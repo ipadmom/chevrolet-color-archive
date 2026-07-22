@@ -3,6 +3,6 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.mjs",
-    "check": "node --check cli.mjs && node --check worker.mjs && node --check git.mjs && node --check credential-helper.mjs && node --check image-sanitizer.mjs"
+    "check": "node --check cli.mjs && node --check worker.mjs && node --check release.mjs && node --check git.mjs && node --check credential-helper.mjs && node --check image-sanitizer.mjs"
   }
 }

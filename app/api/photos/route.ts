@@ -10,6 +10,7 @@ import {
   normalizeCredit,
   normalizeRights,
   parseBoundedInteger,
+  publishedAttributionUrl,
   publishedAssetUrl,
   PUBLIC_PHOTO_STATUSES,
   resolveArchiveContext,
@@ -38,10 +39,19 @@ const allowedDeclaredTypes = new Set([
 function publicPhoto(row: typeof photoCandidates.$inferSelect) {
   const imageUrl = publishedAssetUrl(
     row.publishedSha256,
-    row.publishedAssetPath,
+    row.publishedReleaseTag,
+    row.publishedAssetName,
+    row.publishedAssetUrl,
     row.contentType,
   );
-  if (!imageUrl) return null;
+  const attributionUrl = publishedAttributionUrl(
+    row.id,
+    row.publishedSha256,
+    row.publishedReleaseTag,
+    row.publishedAttributionName,
+    row.publishedAttributionUrl,
+  );
+  if (!imageUrl || !attributionUrl) return null;
   return {
     id: row.id,
     model: row.model,
@@ -57,6 +67,12 @@ function publicPhoto(row: typeof photoCandidates.$inferSelect) {
     status: row.status,
     createdAt: row.createdAt,
     publishedSha256: row.publishedSha256,
+    publishedBytes: row.publishedAssetBytes,
+    releaseTag: row.publishedReleaseTag,
+    releaseAssetName: row.publishedAssetName,
+    attributionUrl,
+    attributionSha256: row.publishedAttributionSha256,
+    attributionBytes: row.publishedAttributionBytes,
     publishedAt: row.publishedAt,
     imageUrl,
   };
@@ -106,7 +122,14 @@ export async function GET(request: Request) {
       eq(photoCandidates.colorId, context.colorId),
       inArray(photoCandidates.status, [...PUBLIC_PHOTO_STATUSES]),
       isNotNull(photoCandidates.publishedSha256),
-      isNotNull(photoCandidates.publishedAssetPath),
+      isNotNull(photoCandidates.publishedAssetBytes),
+      isNotNull(photoCandidates.publishedReleaseTag),
+      isNotNull(photoCandidates.publishedAssetName),
+      isNotNull(photoCandidates.publishedAssetUrl),
+      isNotNull(photoCandidates.publishedAttributionName),
+      isNotNull(photoCandidates.publishedAttributionUrl),
+      isNotNull(photoCandidates.publishedAttributionSha256),
+      isNotNull(photoCandidates.publishedAttributionBytes),
       isNotNull(photoCandidates.publishedAt),
     );
     const rows = await getDb()
@@ -734,15 +757,24 @@ function alreadyPublishedResponse(
 ) {
   const imageUrl = publishedAssetUrl(
     candidate.publishedSha256,
-    candidate.publishedAssetPath,
+    candidate.publishedReleaseTag,
+    candidate.publishedAssetName,
+    candidate.publishedAssetUrl,
     candidate.contentType,
   );
-  if (!imageUrl || !candidate.publishedAt) {
+  const attributionUrl = publishedAttributionUrl(
+    candidate.id,
+    candidate.publishedSha256,
+    candidate.publishedReleaseTag,
+    candidate.publishedAttributionName,
+    candidate.publishedAttributionUrl,
+  );
+  if (!imageUrl || !attributionUrl || !candidate.publishedAt) {
     return jsonResponse(
       request,
       {
         error:
-          "The published record is not yet bound to a sanitized GitHub asset.",
+          "The published record is not yet bound to a sanitized GitHub Release asset.",
       },
       { status: 503 },
     );
@@ -751,6 +783,12 @@ function alreadyPublishedResponse(
     alreadyPublished: true,
     candidate: candidateSummary(candidate),
     publishedSha256: candidate.publishedSha256,
+    publishedBytes: candidate.publishedAssetBytes,
+    releaseTag: candidate.publishedReleaseTag,
+    releaseAssetName: candidate.publishedAssetName,
+    attributionUrl,
+    attributionSha256: candidate.publishedAttributionSha256,
+    attributionBytes: candidate.publishedAttributionBytes,
     publishedAt: candidate.publishedAt,
     imageUrl,
   });

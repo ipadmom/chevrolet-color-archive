@@ -274,7 +274,7 @@ test("uses bearer auth, follows bounded queue pages, and preserves hydrated meta
       completeQueueSnapshot: snapshot.completeQueueSnapshot,
       generatedAt: "2026-07-20T18:00:00.000Z",
     });
-    assert.equal(template.schemaVersion, 3);
+    assert.equal(template.schemaVersion, 4);
     assert.equal(template.completeQueueSnapshot, true);
     assert.equal(template.items[0].review.decision, "");
     assert.equal(
@@ -338,7 +338,7 @@ test("sends only enumerated queue error codes and rejects free-form errors", asy
   }
 });
 
-test("publishes approved bytes locally and deduplicates a rerun by SHA-256", async () => {
+test("prepares deterministic Release images and complete attribution receipts", async () => {
   const fixtureServer = await startFixtureServer();
   const repoRoot = await createTemporaryRepo();
   try {
@@ -370,14 +370,16 @@ test("publishes approved bytes locally and deduplicates a rerun by SHA-256", asy
       "image/gif",
     );
     const expectedSha = firstSanitized.publishedSha256;
-    const expectedAssetPath = `public/vehicle-photos/assets/${expectedSha}.png`;
-    assert.equal(first.writtenAssets, 2);
+    assert.equal(first.preparedImageAssets, 2);
+    assert.equal(first.preparedAttributionAssets, 2);
+    assert.equal(first.release.tag, "community-photo-archive-v1");
     assert.deepEqual(
-      first.publicationPaths,
+      first.releaseAssets.map((asset) => asset.name),
       [
-        expectedAssetPath,
-        `public/vehicle-photos/assets/${secondSanitized.publishedSha256}.gif`,
-        "public/vehicle-photos/attribution.json",
+        `${expectedSha}.png`,
+        `${secondSanitized.publishedSha256}.gif`,
+        `publication-7-101-${expectedSha}.json`,
+        `publication-7-102-${secondSanitized.publishedSha256}.json`,
       ].sort(),
     );
 
@@ -388,37 +390,35 @@ test("publishes approved bytes locally and deduplicates a rerun by SHA-256", asy
       approvalDocument: approvals,
       repoRoot,
     });
-    assert.equal(second.writtenAssets, 0);
-    assert.equal(second.deduplicatedAssets, 2);
-    assert.equal(second.manifestChanged, false);
-
-    const manifest = JSON.parse(
-      await readFile(
-        path.join(repoRoot, "public", "vehicle-photos", "attribution.json"),
-        "utf8",
-      ),
+    assert.deepEqual(second.releaseAssets, first.releaseAssets);
+    assert.deepEqual(second.publishedAssets, first.publishedAssets);
+    const receiptAsset = first.releaseUploadAssets.find(
+      (asset) => asset.kind === "attribution" && asset.candidateId === 101,
     );
+    const receipt = JSON.parse(Buffer.from(receiptAsset.bytes).toString("utf8"));
     const publicCandidate = structuredClone(approvals.items[0].candidate);
     delete publicCandidate.downloadUrl;
-    assert.deepEqual(manifest.publications[0].candidate, publicCandidate);
+    assert.deepEqual(receipt.candidate, publicCandidate);
     assert.equal(
-      manifest.publications[1].candidate.originalUrl,
+      JSON.parse(
+        Buffer.from(
+          first.releaseUploadAssets.find(
+            (asset) => asset.kind === "attribution" && asset.candidateId === 102,
+          ).bytes,
+        ).toString("utf8"),
+      ).candidate.originalUrl,
       "https://example.test/photos/alternate",
     );
-    assert.equal(
-      manifest.publications[1].rightsReview.reviewedOriginalUrl,
-      "https://example.test/photos/alternate",
-    );
-    assert.equal("downloadUrl" in manifest.publications[1].candidate, false);
+    assert.equal("downloadUrl" in receipt.candidate, false);
     const reviewedSelection = structuredClone(selectionFixtures[0]);
     delete reviewedSelection.lastErrorCode;
-    assert.deepEqual(manifest.publications[0].selection, reviewedSelection);
+    assert.deepEqual(receipt.selection, reviewedSelection);
     assert.equal(
-      manifest.publications[0].transform.sourceSha256,
+      receipt.transform.sourceSha256,
       approvals.items[0].candidate.sha256,
     );
-    assert.equal(manifest.assets[0].width, 1);
-    assert.equal(manifest.assets[0].height, 1);
+    assert.equal(receipt.asset.width, 1);
+    assert.equal(receipt.asset.height, 1);
   } finally {
     await fixtureServer.close();
     await removeTemporaryRepo(repoRoot);
@@ -498,7 +498,7 @@ test("rejects credential material before it can enter a review manifest", async 
   }
 });
 
-test("refuses metadata drift and never replaces another file at a hash path", async () => {
+test("refuses metadata drift and never writes a repository photo blob", async () => {
   const fixtureServer = await startFixtureServer();
   const repoRoot = await createTemporaryRepo();
   try {
@@ -534,15 +534,17 @@ test("refuses metadata drift and never replaces another file at a hash path", as
     );
     await mkdir(assetDirectory, { recursive: true });
     await writeFile(path.join(assetDirectory, `${expectedSha}.png`), "different bytes");
-    await assert.rejects(
-      publishReviewedSelections({
-        sitesBaseUrl: snapshot.baseUrl,
-        queueToken: QUEUE_TOKEN,
-        records: snapshot.records,
-        approvalDocument: approvals,
-        repoRoot,
-      }),
-      /Refusing to replace a different file/,
+    const publication = await publishReviewedSelections({
+      sitesBaseUrl: snapshot.baseUrl,
+      queueToken: QUEUE_TOKEN,
+      records: snapshot.records,
+      approvalDocument: approvals,
+      repoRoot,
+    });
+    assert.equal(publication.preparedImageAssets, 2);
+    assert.equal(
+      await readFile(path.join(assetDirectory, `${expectedSha}.png`), "utf8"),
+      "different bytes",
     );
   } finally {
     await fixtureServer.close();
@@ -550,7 +552,7 @@ test("refuses metadata drift and never replaces another file at a hash path", as
   }
 });
 
-test("claims, authenticates downloads, pushes, then acknowledges processed", async () => {
+test("claims, authenticates downloads, publishes the Release, then acknowledges processed", async () => {
   const fixtureServer = await startFixtureServer();
   const repoRoot = await createTemporaryRepo();
   try {
@@ -576,10 +578,10 @@ test("claims, authenticates downloads, pushes, then acknowledges processed", asy
       approvalDocument: approvals,
       repoRoot,
       fetchImpl: fetch,
-      pushPublication: async (publication) => {
-        fixtureServer.events.push("push");
-        assert.equal(publication.publicationPaths.length, 3);
-        return { committed: true, pushed: true };
+      publishRelease: async (publication) => {
+        fixtureServer.events.push("release");
+        assert.equal(publication.releaseUploadAssets.length, 4);
+        return { published: true, releaseTag: publication.release.tag };
       },
     });
     assert.equal(result.processedSelections, 1);
@@ -588,7 +590,7 @@ test("claims, authenticates downloads, pushes, then acknowledges processed", asy
       "claim",
       "download:101",
       "download:102",
-      "push",
+      "release",
       "ack:processed",
     ]);
     assert.equal(fixtureServer.acknowledgments[0].selectionId, 7);
@@ -622,7 +624,7 @@ test("fails an atomic selection when any candidate is rejected", async () => {
         generatedAt: "2026-07-20T18:00:00.000Z",
       }),
     );
-    let pushCalled = false;
+    let releaseCalled = false;
     const result = await publishClaimedQueue({
       sitesBaseUrl: snapshot.baseUrl,
       queueToken: QUEUE_TOKEN,
@@ -633,13 +635,13 @@ test("fails an atomic selection when any candidate is rejected", async () => {
       }),
       approvalDocument: approvals,
       repoRoot,
-      pushPublication: async () => {
-        pushCalled = true;
-        return { pushed: true };
+      publishRelease: async () => {
+        releaseCalled = true;
+        return { published: true };
       },
     });
     assert.equal(result.failedRightsSelections, 1);
-    assert.equal(pushCalled, false);
+    assert.equal(releaseCalled, false);
     assert.deepEqual(fixtureServer.events.slice(-2), ["claim", "ack:failed"]);
     assert.equal(
       fixtureServer.acknowledgments.at(-1).errorCode,
@@ -659,7 +661,7 @@ test("fails an atomic selection when any candidate is rejected", async () => {
   }
 });
 
-test("acknowledges retry when GitHub publication is not confirmed", async () => {
+test("acknowledges retry when GitHub Release publication is not confirmed", async () => {
   const fixtureServer = await startFixtureServer();
   const repoRoot = await createTemporaryRepo();
   try {
@@ -684,15 +686,15 @@ test("acknowledges retry when GitHub publication is not confirmed", async () => 
         }),
         approvalDocument: approvals,
         repoRoot,
-        pushPublication: async () => ({ committed: true, pushed: false }),
+        publishRelease: async () => ({ published: false }),
       }),
-      /GitHub push was not confirmed/,
+      /GitHub Release publication was not confirmed/,
     );
     assert.equal(fixtureServer.events.at(-1), "ack:retry");
     assert.equal(fixtureServer.acknowledgments.at(-1).outcome, "retry");
     assert.equal(
       fixtureServer.acknowledgments.at(-1).errorCode,
-      "publication_pre_push_failed",
+      "publication_pre_release_failed",
     );
   } finally {
     await fixtureServer.close();
@@ -729,7 +731,7 @@ test("acknowledges retry when claimed hydration is invalid", async () => {
         }),
         approvalDocument: approvals,
         repoRoot,
-        pushPublication: async () => ({ pushed: true }),
+        publishRelease: async () => ({ published: true }),
       }),
       /invalid stored SHA-256/,
     );
@@ -774,7 +776,7 @@ test("acknowledges retry when claimed approval metadata drifted", async () => {
         }),
         approvalDocument: approvals,
         repoRoot,
-        pushPublication: async () => ({ pushed: true }),
+        publishRelease: async () => ({ published: true }),
       }),
       /no longer matches current Sites metadata/,
     );
@@ -818,14 +820,14 @@ test("rejects changed bytes by stored SHA-256 and acknowledges retry", async () 
         }),
         approvalDocument: approvals,
         repoRoot,
-        pushPublication: async () => ({ pushed: true }),
+        publishRelease: async () => ({ published: true }),
       }),
       /SHA-256 changed after rights review/,
     );
     assert.equal(fixtureServer.events.at(-1), "ack:retry");
     assert.equal(
       fixtureServer.acknowledgments.at(-1).errorCode,
-      "publication_pre_push_failed",
+      "publication_pre_release_failed",
     );
   } finally {
     await fixtureServer.close();
@@ -1000,8 +1002,8 @@ test("skips a reviewed selection already terminal in the authenticated queue", a
       }),
       approvalDocument: approvals,
       repoRoot,
-      pushPublication: async () => {
-        throw new Error("Push must not run for a terminal selection.");
+      publishRelease: async () => {
+        throw new Error("Release publication must not run for a terminal selection.");
       },
     });
     assert.equal(result.skippedTerminalSelections, 1);
@@ -1038,7 +1040,7 @@ test("stops before claiming when the reviewed selection has an active lease", as
         }),
         approvalDocument: approvals,
         repoRoot,
-        pushPublication: async () => ({ pushed: true }),
+        publishRelease: async () => ({ published: true }),
       }),
       /active publisher lease/,
     );

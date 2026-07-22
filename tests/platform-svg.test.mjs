@@ -15,6 +15,19 @@ function expandRanges(ranges) {
   );
 }
 
+function compressYears(years) {
+  const ranges = [];
+  for (const year of [...new Set(years)].sort((left, right) => left - right)) {
+    const current = ranges.at(-1);
+    if (!current || year !== current.end + 1) {
+      ranges.push({ start: year, end: year });
+    } else {
+      current.end = year;
+    }
+  }
+  return ranges;
+}
+
 function bandForYear(bands, year) {
   return bands.find((band) => band.start <= year && year <= band.end);
 }
@@ -93,7 +106,7 @@ test("platform era bands are sourced, ordered, and bounded by the catalog", asyn
       for (const evidenceUrl of band.evidence_urls) {
         assert.match(
           evidenceUrl,
-          /^https?:\/\//,
+          /^https:\/\//,
           `${modelId} ${band.start}-${band.end} has an invalid evidence URL`,
         );
       }
@@ -106,6 +119,184 @@ test("platform era bands are sourced, ordered, and bounded by the catalog", asyn
       }
     }
   }
+});
+
+test("the exhaustive platform coverage audit reconciles every catalog model and year", async () => {
+  const [catalog, platformEras, audit] = await Promise.all([
+    readJson("data/catalog/chevrolet-us-nameplates.json"),
+    readJson("data/catalog/chevrolet-platform-eras.json"),
+    readJson("data/audits/chevrolet-platform-era-coverage.json"),
+  ]);
+
+  assert.deepEqual(
+    audit.records.map((record) => record.model_id),
+    catalog.models.map((model) => model.id),
+    "coverage audit must retain every catalog model in catalog order",
+  );
+
+  let coveredModelYears = 0;
+  let catalogModelYears = 0;
+  const statusCounts = { complete: 0, partial: 0, missing: 0 };
+  for (const model of catalog.models) {
+    const record = audit.records.find((candidate) => candidate.model_id === model.id);
+    const catalogYears = new Set(expandRanges(model.model_year_ranges));
+    const platformYears = new Set(expandRanges(platformEras[model.id] ?? []));
+    const uncoveredYears = [...catalogYears].filter((year) => !platformYears.has(year));
+    const expectedStatus =
+      uncoveredYears.length === 0
+        ? "complete"
+        : platformYears.size > 0
+          ? "partial"
+          : "missing";
+    catalogModelYears += catalogYears.size;
+    coveredModelYears += platformYears.size;
+    statusCounts[expectedStatus] += 1;
+
+    assert.equal(record.model_name, model.name, `${model.id} name drifted`);
+    assert.equal(record.vehicle_class, model.vehicle_class, `${model.id} class drifted`);
+    assert.deepEqual(record.catalog_year_ranges, model.model_year_ranges.map(({ start, end }) => ({ start, end })));
+    assert.equal(record.catalog_year_count, catalogYears.size, `${model.id} catalog count drifted`);
+    assert.equal(record.platform_band_count, (platformEras[model.id] ?? []).length, `${model.id} band count drifted`);
+    assert.equal(record.platform_year_count, platformYears.size, `${model.id} platform count drifted`);
+    assert.equal(record.uncovered_year_count, uncoveredYears.length, `${model.id} gap count drifted`);
+    assert.deepEqual(record.uncovered_year_ranges, compressYears(uncoveredYears), `${model.id} gap ranges drifted`);
+    assert.equal(record.coverage_status, expectedStatus, `${model.id} status drifted`);
+  }
+
+  assert.equal(audit.summary.catalog_model_count, catalog.models.length);
+  assert.equal(audit.summary.platform_model_count, Object.keys(platformEras).length);
+  assert.equal(audit.summary.platform_band_count, Object.values(platformEras).flat().length);
+  assert.equal(audit.summary.catalog_model_year_count, catalogModelYears);
+  assert.equal(audit.summary.covered_model_year_count, coveredModelYears);
+  assert.equal(
+    audit.summary.uncovered_model_year_count,
+    catalogModelYears - coveredModelYears,
+  );
+  assert.equal(audit.summary.complete_model_count, statusCounts.complete);
+  assert.equal(audit.summary.partial_model_count, statusCounts.partial);
+  assert.equal(audit.summary.missing_model_count, statusCounts.missing);
+  assert.deepEqual(audit.validation, {
+    invalid_model_id_count: 0,
+    invalid_band_count: 0,
+    overlap_count: 0,
+    out_of_catalog_year_count: 0,
+  });
+});
+
+test("README and platform audit documentation report the generated coverage totals", async () => {
+  const [audit, readme, auditDocument] = await Promise.all([
+    readJson("data/audits/chevrolet-platform-era-coverage.json"),
+    readFile(new URL("README.md", root), "utf8"),
+    readFile(new URL("docs/platform-era-audit.md", root), "utf8"),
+  ]);
+  const number = new Intl.NumberFormat("en-US").format;
+  const { summary } = audit;
+
+  assert.ok(
+    readme.includes(
+      `${summary.platform_model_count} high-priority nameplates now use ${number(summary.platform_band_count)} sourced base, platform, and era bands`,
+    ),
+    "README platform model or band count drifted",
+  );
+  assert.ok(
+    readme.includes(
+      `covers ${number(summary.covered_model_year_count)}\nof ${number(summary.catalog_model_year_count)} catalog model-years; all ${number(summary.uncovered_model_year_count)} unresolved years`,
+    ),
+    "README platform coverage count drifted",
+  );
+  assert.ok(
+    auditDocument.includes(
+      `maps ${summary.platform_model_count} catalog model IDs to ${number(summary.platform_band_count)} ordered`,
+    ),
+    "platform audit model or band count drifted",
+  );
+  assert.ok(
+    auditDocument.includes(
+      `${number(summary.covered_model_year_count)} of ${number(summary.catalog_model_year_count)} catalog model-years have sourced labels`,
+    ),
+    "platform audit coverage count drifted",
+  );
+});
+
+test("long-run platform expansion exposes exact known era labels without hiding the 1992 bus conflict", async () => {
+  const platformEras = await readJson("data/catalog/chevrolet-platform-eras.json");
+  const expectedLabels = [
+    ["p-series-step-van", 1940, "First-generation Dubl-Duti"],
+    ["p-series-step-van", 1941, "AK-Series Dubl-Duti"],
+    ["p-series-step-van", 1949, "Advance Design Dubl-Duti"],
+    ["p-series-step-van", 1955, "Dubl-Duti / forward-control chassis transition"],
+    ["p-series-step-van", 1964, "Round-front Step-Van / Step-Van 7 / Step-Van King"],
+    ["p-series-step-van", 1982, "Step-Van King / P-Series commercial chassis"],
+    ["pre-ck-truck", 1941, "AK Series / Art Deco"],
+    ["pre-ck-truck", 1955, "Advance Design First Series / Task Force Second Series"],
+    ["b-series-bus-chassis", 1980, "First-generation B60 bus chassis"],
+    ["b-series-bus-chassis", 1993, "Third-generation B7 / GMT530 bus chassis"],
+    ["panel-truck", 1970, "Action Line panel truck"],
+    ["sportvan", 1965, "First-generation G-Series Sportvan"],
+    ["sportvan", 1971, "Third-generation G-Series Sportvan"],
+    ["sedan-delivery", 1958, "Delray-based sedan delivery"],
+    ["bel-air", 1955, "Second generation, Tri-Five"],
+    ["tiltmaster-w-series", 2002, "Isuzu N-Series-derived Tiltmaster / W-Series"],
+    ["canopy-express", 1931, "Pre-AK Chevrolet truck-series Canopy Express"],
+    ["l-series-tilt-cab", 1970, "Chevrolet Tilt Cab"],
+    ["l-series-tilt-cab", 1979, "Chevrolet Steel Tilt Cab, W60 / W70"],
+  ];
+
+  for (const [modelId, year, label] of expectedLabels) {
+    assert.equal(bandForYear(platformEras[modelId], year)?.label, label);
+  }
+  assert.equal(
+    bandForYear(platformEras["b-series-bus-chassis"], 1992),
+    undefined,
+    "1992 must remain an explicit evidence conflict, not an invented transition band",
+  );
+});
+
+test("commercial body and cab-over boundaries retain only documented model years and Chevrolet names", async () => {
+  const [catalog, platformEras] = await Promise.all([
+    readJson("data/catalog/chevrolet-us-nameplates.json"),
+    readJson("data/catalog/chevrolet-platform-eras.json"),
+  ]);
+  const catalogById = new Map(catalog.models.map((model) => [model.id, model]));
+
+  assert.deepEqual(
+    platformEras["p-series-step-van"].map(({ start, end }) => [start, end]),
+    [[1940, 1940], [1941, 1942], [1946, 1948], [1949, 1954], [1955, 1955], [1956, 1957], [1958, 1960], [1961, 1963], [1964, 1967], [1968, 1981], [1982, 1998]],
+  );
+  assert.deepEqual(
+    platformEras["b-series-bus-chassis"].map(({ start, end }) => [start, end]),
+    [[1967, 1979], [1980, 1983], [1984, 1991], [1993, 2003]],
+  );
+  assert.deepEqual(
+    platformEras["bel-air"].map(({ start, end }) => [start, end]),
+    [[1950, 1954], [1955, 1957], [1958, 1958], [1959, 1960], [1961, 1964], [1965, 1970], [1971, 1975]],
+  );
+
+  assert.deepEqual(catalogById.get("sportvan").model_year_ranges.map(({ start, end }) => [start, end]), [[1965, 1996]]);
+  assert.equal(bandForYear(platformEras.sportvan, 1964), undefined);
+  assert.equal(bandForYear(platformEras.sportvan, 1996)?.label, "Third-generation G-Series Sportvan");
+
+  assert.deepEqual(catalogById.get("panel-truck").model_year_ranges.map(({ start, end }) => [start, end]), [[1929, 1942], [1946, 1970]]);
+  assert.equal(bandForYear(platformEras["panel-truck"], 1970)?.label, "Action Line panel truck");
+  assert.equal(bandForYear(platformEras["panel-truck"], 1971), undefined);
+
+  assert.equal(bandForYear(platformEras["canopy-express"], 1930), undefined);
+  assert.equal(bandForYear(platformEras["canopy-express"], 1931)?.start, 1931);
+  assert.equal(bandForYear(platformEras["sedan-delivery"], 1930), undefined);
+  assert.equal(bandForYear(platformEras["sedan-delivery"], 1946)?.label, "Stylemaster-based postwar sedan delivery");
+
+  assert.deepEqual(
+    platformEras["l-series-tilt-cab"].map(({ start, end }) => [start, end]),
+    [[1960, 1972], [1973, 1978], [1979, 1981]],
+  );
+  assert.ok(
+    platformEras["l-series-tilt-cab"].every((band) => !/L-Series/.test(band.label)),
+    "GMC L-Series must not appear as a Chevrolet display label",
+  );
+  assert.deepEqual(
+    platformEras["tiltmaster-w-series"].map(({ start, end }) => [start, end]),
+    [[1984, 2009]],
+  );
 });
 
 test("Tahoe and Suburban era bands cover every catalog year without filling model-year gaps", async () => {

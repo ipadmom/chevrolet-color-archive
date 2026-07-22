@@ -2,20 +2,15 @@
 
 import path from "node:path";
 
+import { withPublisherLock } from "./git.mjs";
+import { createGitHubReleasePublisher } from "./release.mjs";
 import {
-  commitAndPushPublication,
-  verifyGitHubPublicationTarget,
-  withPublisherLock,
-} from "./git.mjs";
-import {
-  DEFAULT_ASSET_ROOT,
   createReviewTemplate,
   fetchQueuedReviewRecords,
   publishClaimedQueue,
   publishReviewedSelections,
   readJsonFile,
   recordsFromApprovalDocument,
-  normalizeRelativeRepoPath,
   writeNewJson,
 } from "./worker.mjs";
 
@@ -26,39 +21,39 @@ Usage:
     --prepare-review work/photo-rights-review.json [--selection-id 7]
 
   SITES_BASE_URL=https://example node crawler/publish/cli.mjs \\
-    --approvals work/photo-rights-review.json [--repo-root PATH] [--push]
+    --approvals work/photo-rights-review.json [--repo-root PATH] [--publish-release]
 
 Options:
   --prepare-review PATH  Fetch queued metadata and create a new review template.
   --approvals PATH       Publish only candidates explicitly approved in this file.
-  --repo-root PATH       Git worktree root. Defaults to the current directory.
-  --asset-root PATH      Relative output root for local checks. Push uses public/vehicle-photos.
+  --repo-root PATH       Lock namespace. Defaults to the current directory.
   --selection-id ID      Limit work to one queued selection. Repeatable.
-  --push                 Verify ipadmom, exact HTTPS repo/main, commit outputs, and push.
+  --publish-release      Verify ipadmom and upload deterministic assets to the v1 Release.
+  --push                 Compatibility alias for --publish-release; no Git commit is made.
   --help                 Show this help.
 
 Environment:
   SITES_BASE_URL          Required. HTTPS Sites deployment base URL.
   PUBLISH_QUEUE_TOKEN     Required. Sent only as a bearer credential to Sites.
-  GH_TOKEN                Required only with --push. Never written or printed.`;
+  GH_TOKEN                Required only for Release publication. Never written or printed.`;
 
 function parseArgs(argv) {
   const options = {
     selectionIds: [],
     repoRoot: process.cwd(),
-    assetRoot: "public/vehicle-photos",
-    push: false,
+    publishRelease: false,
   };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === "--help") options.help = true;
-    else if (argument === "--push") options.push = true;
+    else if (["--push", "--publish-release"].includes(argument)) {
+      options.publishRelease = true;
+    }
     else if (
       [
         "--prepare-review",
         "--approvals",
         "--repo-root",
-        "--asset-root",
         "--selection-id",
       ].includes(argument)
     ) {
@@ -70,7 +65,6 @@ function parseArgs(argv) {
       if (argument === "--prepare-review") options.prepareReview = value;
       else if (argument === "--approvals") options.approvals = value;
       else if (argument === "--repo-root") options.repoRoot = value;
-      else if (argument === "--asset-root") options.assetRoot = value;
       else options.selectionIds.push(Number(value));
     } else {
       throw new Error(`Unknown argument: ${argument}`);
@@ -88,24 +82,17 @@ async function main() {
   if (Boolean(options.prepareReview) === Boolean(options.approvals)) {
     throw new Error("Choose exactly one of --prepare-review or --approvals.");
   }
-  if (options.push && options.prepareReview) {
-    throw new Error("--push can only be used with --approvals.");
+  if (options.publishRelease && options.prepareReview) {
+    throw new Error("--publish-release can only be used with --approvals.");
   }
-  if (options.push && options.selectionIds.length) {
-    throw new Error("--selection-id cannot be combined with --push.");
-  }
-  if (
-    options.push &&
-    normalizeRelativeRepoPath(options.assetRoot, "Asset root") !==
-      DEFAULT_ASSET_ROOT
-  ) {
-    throw new Error(`--push requires the canonical ${DEFAULT_ASSET_ROOT} asset root.`);
+  if (options.publishRelease && options.selectionIds.length) {
+    throw new Error("--selection-id cannot be combined with --publish-release.");
   }
   if (!process.env.PUBLISH_QUEUE_TOKEN) {
     throw new Error("PUBLISH_QUEUE_TOKEN is required.");
   }
 
-  if (options.push) {
+  if (options.publishRelease) {
     const result = await withPublisherLock({
       repoRoot: options.repoRoot,
       task: async () => {
@@ -115,31 +102,21 @@ async function main() {
           sitesBaseUrl: process.env.SITES_BASE_URL,
           requireCompleteQueue: true,
         });
-        verifyGitHubPublicationTarget({
-          repoRoot: options.repoRoot,
+        const releasePublisher = createGitHubReleasePublisher({
           environment: process.env,
-          allowCleanAheadPaths: [
-            normalizeRelativeRepoPath(options.assetRoot, "Asset root"),
-          ],
         });
+        await releasePublisher.verifyTarget();
         return publishClaimedQueue({
           sitesBaseUrl: process.env.SITES_BASE_URL,
           queueToken: process.env.PUBLISH_QUEUE_TOKEN,
           queueSnapshotRecords: reviewedRecords,
           approvalDocument,
-          repoRoot: options.repoRoot,
-          assetRoot: options.assetRoot,
-          pushPublication: (publication) =>
-            commitAndPushPublication({
-              repoRoot: options.repoRoot,
-              publicationPaths: publication.publicationPaths,
-              environment: process.env,
-            }),
+          publishRelease: (publication) => releasePublisher.publish(publication),
         });
       },
     });
     process.stdout.write(
-      `${JSON.stringify({ mode: "claim-publish", ...result })}\n`,
+      `${JSON.stringify({ mode: "claim-release-publish", ...result })}\n`,
     );
     return;
   }
@@ -177,15 +154,18 @@ async function main() {
         queueToken: process.env.PUBLISH_QUEUE_TOKEN,
         records,
         approvalDocument,
-        repoRoot: options.repoRoot,
-        assetRoot: options.assetRoot,
       }),
   });
+  const summary = { ...result };
+  delete summary.releaseUploadAssets;
   process.stdout.write(
     `${JSON.stringify({
-      mode: "local-publication-check",
-      ...result,
-      git: { committed: false, pushed: false, reason: "push-not-requested" },
+      mode: "local-release-check",
+      ...summary,
+      githubRelease: {
+        published: false,
+        reason: "release-publication-not-requested",
+      },
     })}\n`,
   );
 }

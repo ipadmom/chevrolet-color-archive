@@ -1,0 +1,905 @@
+{
+  "schema_version": 1,
+  "visibility": "public",
+  "classification": "archive-internal",
+  "scope": "Official Chevrolet Suburban exterior-color evidence for United States model years 2000 through 2007. Complete palettes, supplemental mentions, package subsets, and SEO solid paints remain separate evidence classes.",
+  "source_audit": "docs/source-audit-suburban-2000-2007.md",
+  "years": [
+    {
+      "year": 2000,
+      "audit_status": "verified_complete",
+      "source": {
+        "source_id": "gm-heritage-2000-chevrolet-suburban",
+        "title": "2000 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          17
+        ],
+        "page_locator": "PDF page 17, printed page 8, Exterior Paint / Paint Colors.",
+        "revision": "Model-year kit; governing color section has no printed publication date.",
+        "artifact_sha256": "4ecbb2793671cbbfbbc8ad7158e2555714950479aeaffeacaaad66b3a4d4189f",
+        "artifact_bytes": 15391647,
+        "pdf_page_count": 124,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "4ecbb2793671cbbfbbc8ad7158e2555714950479aeaffeacaaad66b3a4d4189f",
+        "bytes": 15391647,
+        "archive_asset_name": "2000-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "regular_colors": [
+        {
+          "order": 1,
+          "name": "Onyx Black",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; also listed in the LT five-color subset."
+        },
+        {
+          "order": 2,
+          "name": "Indigo Blue Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; not listed in the LT subset."
+        },
+        {
+          "order": 3,
+          "name": "Medium Charcoal Gray Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; also listed in the LT five-color subset."
+        },
+        {
+          "order": 4,
+          "name": "Light Pewter Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; also listed in the LT five-color subset."
+        },
+        {
+          "order": 5,
+          "name": "Sunset Gold Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; also listed in the LT five-color subset."
+        },
+        {
+          "order": 6,
+          "name": "Dark Copper Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; also listed in the LT five-color subset."
+        },
+        {
+          "order": 7,
+          "name": "Dark Carmine Red Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; not listed in the LT subset."
+        },
+        {
+          "order": 8,
+          "name": "Victory Red",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; not listed in the LT subset."
+        },
+        {
+          "order": 9,
+          "name": "Summit White",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "Base and LS; not listed in the LT subset."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [],
+      "limitations": [
+        "The kit states that custom two-tone paint is generally available on LS, but it supplies no exact upper/lower combinations or scheme codes."
+      ]
+    },
+    {
+      "year": 2001,
+      "audit_status": "verified_complete",
+      "source": {
+        "source_id": "gm-heritage-2001-chevrolet-suburban",
+        "title": "2001 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          13
+        ],
+        "page_locator": "PDF page 13, printed page 5, Vehicle Overview / Color and Trim / Exterior Colors.",
+        "revision": "Model-year kit; governing color section has no printed publication date.",
+        "artifact_sha256": "fd24c0732861c15cb7754db8138c94fe6945fe76a4a90ee54400dc98bc98085a",
+        "artifact_bytes": 16572173,
+        "pdf_page_count": 136,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "fd24c0732861c15cb7754db8138c94fe6945fe76a4a90ee54400dc98bc98085a",
+        "bytes": 16572173,
+        "archive_asset_name": "2001-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "regular_colors": [
+        {
+          "order": 1,
+          "name": "Onyx Black",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; available with Z71."
+        },
+        {
+          "order": 2,
+          "name": "Indigo Blue Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; not listed in the Z71 subset."
+        },
+        {
+          "order": 3,
+          "name": "Victory Red",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; not listed in the Z71 subset."
+        },
+        {
+          "order": 4,
+          "name": "Sunset Gold Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; not listed in the Z71 subset."
+        },
+        {
+          "order": 5,
+          "name": "Summit White",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; available with Z71."
+        },
+        {
+          "order": 6,
+          "name": "Medium Charcoal Gray Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; not listed in the Z71 subset."
+        },
+        {
+          "order": 7,
+          "name": "Forest Green Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; available with Z71, where the note shortens the name to Forest Green."
+        },
+        {
+          "order": 8,
+          "name": "Light Pewter Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; available with Z71, where the note shortens the name to Light Pewter."
+        },
+        {
+          "order": 9,
+          "name": "Redfire Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "General palette; not listed in the Z71 subset."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [],
+      "limitations": [
+        "No exact exterior two-tone or paint-scheme table was found."
+      ]
+    },
+    {
+      "year": 2002,
+      "audit_status": "verified_complete_with_archival_mirror_qualification",
+      "source": {
+        "source_id": "chevrolet-brochure-us-2002-suburban-auto-brochures",
+        "title": "2002 Chevrolet Suburban Sales Brochure",
+        "url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-suburban-brochure-auto-brochures.pdf",
+        "source_type": "sales_brochure_scan",
+        "publisher": "General Motors",
+        "carrier": "Auto-Brochures.com",
+        "retrieval_url": "https://www.auto-brochures.com/makes/Chevrolet/Suburban/Chevrolet_US%20Suburban_2002.pdf",
+        "landing_url": "https://www.auto-brochures.com/chevrolet.html",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-suburban-brochure-auto-brochures.pdf",
+        "reuse_license": "No reuse license is stated by General Motors or the retrieval carrier.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "pdf_pages": [
+          16,
+          17
+        ],
+        "page_locator": "PDF pages 16-17, Exterior Colors and LT / LS / Z71 Color Availability.",
+        "revision": "Lithographed in the United States, September 2001.",
+        "artifact_sha256": "9d0774ee1ff03ed840436c035cb788eac038291d191d67c246db9788ae33dc00",
+        "artifact_bytes": 3440353,
+        "pdf_page_count": 19,
+        "supporting_sources": [
+          {
+            "source_id": "gm-heritage-2002-chevrolet-suburban",
+            "title": "2002 Chevrolet Suburban Vehicle Information Kit",
+            "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Suburban.pdf",
+            "source_type": "vehicle_information_kit",
+            "publisher": "General Motors",
+            "page_locator": "PDF pages 9-10, printed pages 1-2, model-year change and New for 2002 statements.",
+            "revision": "Model-year kit; supplemental statements have no printed publication date.",
+            "artifact_sha256": "f8d41c1578965be6e1f21df95dc83a44cde290b0411e154070319141e61395dc",
+            "artifact_bytes": 11556922,
+            "pdf_page_count": 116,
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "official_live",
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+            "sha256": "f8d41c1578965be6e1f21df95dc83a44cde290b0411e154070319141e61395dc",
+            "bytes": 11556922,
+            "archive_asset_name": "2002-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+          }
+        ]
+      },
+      "regular_colors": [
+        {
+          "order": 1,
+          "name": "Onyx Black",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        },
+        {
+          "order": 2,
+          "name": "Indigo Blue Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 3,
+          "name": "Light Pewter Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        },
+        {
+          "order": 4,
+          "name": "Forest Green Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        },
+        {
+          "order": 5,
+          "name": "Medium Charcoal Gray Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 6,
+          "name": "Victory Red",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 7,
+          "name": "Redfire Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71 and not available on three-quarter-ton models."
+        },
+        {
+          "order": 8,
+          "name": "Summit White",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [],
+      "limitations": [
+        "The governing document is an official GM sales brochure retrieved through an archival mirror. The brochure prints no factory or WA codes; code aliases from secondary touch-up retailers are not promoted into the availability matrix."
+      ]
+    },
+    {
+      "year": 2003,
+      "audit_status": "verified_complete_with_archival_mirror_qualification",
+      "source": {
+        "source_id": "chevrolet-brochure-us-2003-suburban-auto-brochures",
+        "title": "2003 Chevrolet Suburban Sales Brochure",
+        "url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-suburban-brochure-auto-brochures.pdf",
+        "source_type": "sales_brochure_scan",
+        "publisher": "General Motors",
+        "carrier": "Auto-Brochures.com",
+        "retrieval_url": "https://www.auto-brochures.com/makes/Chevrolet/Suburban/Chevrolet_US%20Suburban_2003.pdf",
+        "landing_url": "https://www.auto-brochures.com/chevrolet.html",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-suburban-brochure-auto-brochures.pdf",
+        "reuse_license": "No reuse license is stated by General Motors or the retrieval carrier.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "pdf_pages": [
+          17,
+          19
+        ],
+        "page_locator": "PDF page 17, LT / LS / Z71 Color Availability; PDF page 19, Exterior Colors.",
+        "revision": "Model-year sales brochure; no separate chart revision is printed.",
+        "artifact_sha256": "67569652d048c8aaf091a3534dbd1809d9d6c0efcbc0784f2cf54c6cceb6aab7",
+        "artifact_bytes": 1784718,
+        "pdf_page_count": 21,
+        "supporting_sources": [
+          {
+            "source_id": "gm-heritage-2003-chevrolet-suburban",
+            "title": "2003 Chevrolet Suburban Vehicle Information Kit",
+            "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Suburban.pdf",
+            "source_type": "vehicle_information_kit",
+            "publisher": "General Motors",
+            "page_locator": "PDF page 11, printed page 3, new exterior color choices.",
+            "revision": "Model-year kit; supplemental statement has no printed publication date.",
+            "artifact_sha256": "ec8bb580f2185fff8919aeb1124adb62d7023991ced343583fa7ec3f229e4a20",
+            "artifact_bytes": 28338734,
+            "pdf_page_count": 184,
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "official_live",
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+            "sha256": "ec8bb580f2185fff8919aeb1124adb62d7023991ced343583fa7ec3f229e4a20",
+            "bytes": 28338734,
+            "archive_asset_name": "2003-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+          }
+        ]
+      },
+      "regular_colors": [
+        {
+          "order": 1,
+          "name": "Black",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        },
+        {
+          "order": 2,
+          "name": "Indigo Blue Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 3,
+          "name": "Light Pewter Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        },
+        {
+          "order": 4,
+          "name": "Dark Green Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        },
+        {
+          "order": 5,
+          "name": "Dark Gray Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 6,
+          "name": "Redfire Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 7,
+          "name": "Sandalwood Metallic",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; not listed for Z71."
+        },
+        {
+          "order": 8,
+          "name": "Summit White",
+          "factory_code": null,
+          "factory_code_status": "not printed",
+          "availability_note": "LT and LS; available on Z71."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [],
+      "limitations": [
+        "The governing document is an official GM sales brochure retrieved through an archival mirror. The brochure prints Dark Gray Metallic, while the GM vehicle information kit names the new finish Dark Spiral Gray Metallic. The brochure prints no factory or WA codes; secondary aliases are not promoted into the availability matrix."
+      ]
+    },
+    {
+      "year": 2004,
+      "audit_status": "verified_complete_service_table_with_mirror_qualification",
+      "source": {
+        "source_id": "gm-service-table-2004-tahoe-suburban-color-compatibility",
+        "title": "2004 Chevrolet Tahoe / Suburban Color Compatibility Guide table",
+        "url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-suburban-service-color-table.png",
+        "source_type": "service_manual_table_mirror",
+        "publisher": "General Motors",
+        "carrier": "Workshop-Manuals.com",
+        "retrieval_url": "https://workshop-manuals.com/chevrolet/suburban_1/2_ton_2wd/v8-5.3l_vin_t/body_and_frame/paint_striping_and_decals/paint/system_information/application_and_id/color_compatibility_guide_%28paint_codes%29/page_13495/",
+        "landing_url": "https://workshop-manuals.com/chevrolet/suburban_1/2_ton_2wd/v8-5.3l_vin_t/body_and_frame/paint_striping_and_decals/paint/system_information/application_and_id/color_compatibility_guide_%28paint_codes%29/page_13495/",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-suburban-service-color-table.png",
+        "reuse_license": "No reuse license is stated by General Motors or the retrieval carrier.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "image_locator": "Retained table image, all eight Tahoe / Suburban rows.",
+        "page_locator": "Retained General Motors service table image, all eight Tahoe / Suburban color rows.",
+        "revision": "2004 model-year color compatibility table; no separate revision date is printed in the retained image.",
+        "artifact_sha256": "84efa6eb1898c2420ac9bba9e75a144991c830e08dbb1784acc4a3a580284b3a",
+        "artifact_bytes": 22017,
+        "content_type": "image/png",
+        "supporting_sources": [
+          {
+            "source_id": "sherwin-williams-2004-north-american-color-manual",
+            "title": "Sherwin-Williams Automotive Finishes 2004 North American Color Manual",
+            "url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-north-american-color-manual.pdf",
+            "source_type": "refinish_color_manual",
+            "publisher": "Sherwin-Williams Automotive Finishes",
+            "retrieval_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2004_sw_domestic_colorboo.pdf",
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-north-american-color-manual.pdf",
+            "page_locator": "PDF pages 98, 99, 101, 107, 113, 116, 120, and 125, Tahoe / Suburban rows in the General Motors 2004 Color Compatibility Guide.",
+            "revision": "2004 North American Color Manual; compatibility pages carry an August 26, 2005 production footer.",
+            "artifact_sha256": "8b94ebfd068e23cdc162d69a597d4c35d5bb5fc97b731d36048219373ea821c6",
+            "artifact_bytes": 1428651,
+            "pdf_page_count": 132,
+            "retrieval_host_type": "official_live"
+          },
+          {
+            "source_id": "gm-heritage-2004-chevrolet-suburban",
+            "title": "2004 Chevrolet Suburban Vehicle Information Kit",
+            "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Suburban.pdf",
+            "source_type": "vehicle_information_kit",
+            "publisher": "General Motors",
+            "page_locator": "PDF page 13, printed page 3, new-color replacement statements.",
+            "revision": "Model-year kit; supplemental statement has no printed publication date.",
+            "artifact_sha256": "4830a4b87497e236ca5a35de983ec900fc332f28db4bc7bcb5369649a0a0b0dc",
+            "artifact_bytes": 14977618,
+            "pdf_page_count": 146,
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "official_live",
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+            "sha256": "4830a4b87497e236ca5a35de983ec900fc332f28db4bc7bcb5369649a0a0b0dc",
+            "bytes": 14977618,
+            "archive_asset_name": "2004-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+          }
+        ]
+      },
+      "regular_colors": [
+        {
+          "order": 1,
+          "name": "Sandalwood Metallic",
+          "factory_code": "58",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-711J",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 2,
+          "name": "Dark Ming Blue Metallic",
+          "factory_code": "25",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-722J",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 3,
+          "name": "Dark Spiral Gray Metallic",
+          "factory_code": "62",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-805K",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 4,
+          "name": "Sport Red Metallic",
+          "factory_code": "63",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-817K",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 5,
+          "name": "Black",
+          "factory_code": "41",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-8555",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 6,
+          "name": "Olympic White",
+          "factory_code": "50",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-8624",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 7,
+          "name": "Silver Birch Metallic",
+          "factory_code": "59",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-926L",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 8,
+          "name": "Medium Green Metallic",
+          "factory_code": "47",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9539",
+          "availability_note": "No restriction stated."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [],
+      "limitations": [
+        "The governing eight-row General Motors service table is retrieved through a third-party workshop-manual mirror, not a live GM endpoint. The retained image is independently corroborated row by row by the Sherwin-Williams 2004 Color Compatibility Guide and by the official GM vehicle information kit's replacement-color statements."
+      ]
+    },
+    {
+      "year": 2005,
+      "audit_status": "verified_complete_with_specialty_subset",
+      "source": {
+        "source_id": "gm-heritage-2005-chevrolet-suburban",
+        "title": "2005 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          167,
+          168,
+          169
+        ],
+        "page_locator": "PDF pages 167-169, printed pages 35-37, regular ZY1, Z71 subset, and SEO solid-paint sheets.",
+        "revision": "Color-and-trim supplement published August 4, 2004.",
+        "artifact_sha256": "0a4f9aece087719e81c7cd09cbab3fab4da9c61ee2378f5bfbcca775f278276b",
+        "artifact_bytes": 23300793,
+        "pdf_page_count": 176,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "0a4f9aece087719e81c7cd09cbab3fab4da9c61ee2378f5bfbcca775f278276b",
+        "bytes": 23300793,
+        "archive_asset_name": "2005-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "regular_page_locator": "PDF page 167, printed page 35, COLOR AND TRIM - SOLID PAINT ZY1 FOR LS AND LT; Z71 subset at PDF page 168, printed page 36.",
+      "specialty_page_locator": "PDF page 169, printed page 37, COLOR AND TRIM - SEO SOLID PAINT.",
+      "regular_colors": [
+        {
+          "order": 1,
+          "source_literal_name": "NEW! Sandstone Metallic",
+          "name": "Sandstone Metallic",
+          "factory_code": "15U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-929L",
+          "availability_note": "LS/LT; unavailable with Gray/Dark Charcoal interior; available with NYS 4-wheel steering."
+        },
+        {
+          "order": 2,
+          "name": "Dark Blue Metallic",
+          "factory_code": "25U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-722J",
+          "availability_note": "LS/LT; not listed in the Z71 or NYS subset."
+        },
+        {
+          "order": 3,
+          "source_literal_name": "NEW! Bermuda Blue Metallic",
+          "name": "Bermuda Blue Metallic",
+          "factory_code": "26U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-214M",
+          "availability_note": "LS/LT and Z71; not listed in the NYS subset."
+        },
+        {
+          "order": 4,
+          "name": "Black",
+          "factory_code": "41U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-8555",
+          "availability_note": "LS/LT and Z71; not listed in the NYS subset."
+        },
+        {
+          "order": 5,
+          "name": "Summit White",
+          "factory_code": "50U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-8624",
+          "availability_note": "LS/LT and Z71; available with NYS 4-wheel steering."
+        },
+        {
+          "order": 6,
+          "name": "Silver Birch Metallic",
+          "factory_code": "59U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-926L",
+          "availability_note": "LS/LT and Z71; available with NYS 4-wheel steering."
+        },
+        {
+          "order": 7,
+          "name": "Dark Gray Metallic",
+          "factory_code": "62U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-805K",
+          "availability_note": "LS/LT; not listed in the Z71 or NYS subset."
+        },
+        {
+          "order": 8,
+          "name": "Sport Red Metallic",
+          "factory_code": "63U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-817K",
+          "availability_note": "LS/LT and Z71; available with NYS 4-wheel steering."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [
+        {
+          "order": 1,
+          "source_literal_name": "NEW! Blue",
+          "name": "Blue",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-5665"
+        },
+        {
+          "order": 2,
+          "name": "Blue",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-7901"
+        },
+        {
+          "order": 3,
+          "name": "Green",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-7941"
+        },
+        {
+          "order": 4,
+          "name": "Green, Woodland",
+          "factory_code": "9V5",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9015"
+        },
+        {
+          "order": 5,
+          "name": "Victory Red",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-9260"
+        },
+        {
+          "order": 6,
+          "name": "Doeskin Tan",
+          "factory_code": "9V9",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9403"
+        },
+        {
+          "order": 7,
+          "name": "Yellow",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-9414"
+        },
+        {
+          "order": 8,
+          "name": "Tangier Orange",
+          "factory_code": "9W4",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9417"
+        },
+        {
+          "order": 9,
+          "name": "Wheatland Yellow",
+          "factory_code": "9W3",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-253A"
+        },
+        {
+          "order": 10,
+          "source_literal_name": "NEW! Dark Toreador Red",
+          "name": "Dark Toreador Red",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-334D"
+        }
+      ],
+      "specialty_scope": "Special Equipment Option solid paints; the sheet requires exterior non-metal body parts to be Black.",
+      "limitations": [
+        "The source's lighter/darker two-tone footnote describes the interior, not exterior paint."
+      ]
+    },
+    {
+      "year": 2006,
+      "audit_status": "source_missing",
+      "source": null,
+      "regular_colors": [],
+      "supplemental_colors": [],
+      "specialty_colors": [],
+      "limitations": [
+        "The retained official artifact ledger and crawler manifest contain no 2006 Chevrolet Suburban kit. No color is inferred from 2005 or 2007."
+      ]
+    },
+    {
+      "year": 2007,
+      "audit_status": "verified_complete_with_specialty_subset",
+      "source": {
+        "source_id": "gm-heritage-2007-chevrolet-suburban",
+        "title": "2007 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          13,
+          177,
+          178,
+          179,
+          180
+        ],
+        "page_locator": "PDF page 13 and PDF pages 177-180, printed product-information page 3 and order-guide pages 31-34.",
+        "revision": "Governing color-and-trim sheets published July 28, 2006.",
+        "artifact_sha256": "a0adfb3cb12d7ee058b2494b25837dd80ac31d0cd2fdde8818513448dae24efe",
+        "artifact_bytes": 45706014,
+        "pdf_page_count": 262,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "a0adfb3cb12d7ee058b2494b25837dd80ac31d0cd2fdde8818513448dae24efe",
+        "bytes": 45706014,
+        "archive_asset_name": "2007-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "regular_page_locator": "PDF page 177, printed page 31, COLOR AND TRIM - ZY1 FOR LS, LT AND LTZ; narrative count at PDF page 13, printed product-information page 3.",
+      "specialty_page_locator": "PDF page 179, printed page 33, COLOR AND TRIM - SEO SOLID PAINT.",
+      "regular_colors": [
+        {
+          "order": 1,
+          "source_literal_name": "NEW! Graystone Metallic",
+          "name": "Graystone Metallic",
+          "factory_code": "16U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-213M",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 2,
+          "name": "Dark Blue Metallic",
+          "factory_code": "25U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-722J",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 3,
+          "name": "Bermuda Blue Metallic",
+          "factory_code": "26U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-214M",
+          "availability_note": "Available at extra charge."
+        },
+        {
+          "order": 4,
+          "name": "Black",
+          "factory_code": "41U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-8555",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 5,
+          "name": "Summit White",
+          "factory_code": "50U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-8624",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 6,
+          "source_literal_name": "NEW! Gold Mist Metallic",
+          "name": "Gold Mist Metallic",
+          "factory_code": "51U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-316N",
+          "availability_note": "Not available with Light Titanium/Dark Titanium interior."
+        },
+        {
+          "order": 7,
+          "source_literal_name": "NEW! Amber Bronze Metallic",
+          "name": "Amber Bronze Metallic",
+          "factory_code": "53U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-317N",
+          "availability_note": "Not available on 3/4-ton models; not available with Light Titanium/Dark Titanium interior."
+        },
+        {
+          "order": 8,
+          "name": "Silver Birch Metallic",
+          "factory_code": "59U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-926L",
+          "availability_note": "No restriction stated."
+        },
+        {
+          "order": 9,
+          "name": "Sport Red Metallic",
+          "factory_code": "63U",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-817K",
+          "availability_note": "No restriction stated."
+        }
+      ],
+      "supplemental_colors": [],
+      "specialty_colors": [
+        {
+          "order": 1,
+          "name": "Blue",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-5665"
+        },
+        {
+          "order": 2,
+          "name": "Green",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-7941"
+        },
+        {
+          "order": 3,
+          "name": "Woodland Green",
+          "factory_code": "9V5",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9015"
+        },
+        {
+          "order": 4,
+          "name": "Victory Red",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-9260"
+        },
+        {
+          "order": 5,
+          "name": "Doeskin Tan",
+          "factory_code": "9V9",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9403"
+        },
+        {
+          "order": 6,
+          "name": "Yellow",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-9414"
+        },
+        {
+          "order": 7,
+          "name": "Tangier Orange",
+          "factory_code": "9W4",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-9417"
+        },
+        {
+          "order": 8,
+          "name": "Indigo Blue",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-9792"
+        },
+        {
+          "order": 9,
+          "name": "Wheatland Yellow",
+          "factory_code": "9W3",
+          "factory_code_status": "printed",
+          "touch_up_code": "WA-253A"
+        },
+        {
+          "order": 10,
+          "name": "Dark Toreador Red",
+          "factory_code": "none",
+          "factory_code_status": "explicit none",
+          "touch_up_code": "WA-334D"
+        }
+      ],
+      "specialty_scope": "Special Equipment Option solid paints; the sheet requires all exterior non-metal body parts to be gloss Black.",
+      "limitations": [
+        "The color-and-trim sheets on PDF pages 178 and 180 explicitly contain no Suburban data. Their unlabeled categories are not inferred."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4673 @@
+{
+  "schema_version": 2,
+  "make": "Chevrolet",
+  "model": "Suburban",
+  "market": "United States",
+  "audit_as_of": "2026-07-21",
+  "scope": "Exact two-tone and exterior-decor paint schemes transcribed from the reviewed 1977-1981 and 1983-1999 official Suburban charts. Scheme components preserve source placement roles and are not standalone color-availability assertions.",
+  "component_roles": {
+    "primary": "The source chart's primary paint placement for the recorded scheme.",
+    "secondary": "The source chart's secondary paint placement for the recorded scheme; this role does not establish standalone paint availability."
+  },
+  "color_legends": {
+    "1987": {
+      "19": "Black, Midnight",
+      "21": "Blue, Light (Metallic)",
+      "29": "Blue, Midnight",
+      "55": "Copper, Canyon (Metallic)",
+      "61": "Tan, Doeskin",
+      "66": "Bronze, Indian (Metallic)",
+      "67": "Gold, Nevada (Metallic)",
+      "72": "Red, Apple",
+      "90": "Gray, Steel (Metallic)",
+      "12": "White, Frost"
+    },
+    "1988": {
+      "19": "Black, Midnight",
+      "24": "Blue, Aspen (Metallic)",
+      "29": "Blue, Midnight",
+      "39": "Brown, Woodlands (Metallic)",
+      "44": "Emerald (Metallic)",
+      "61": "Tan, Doeskin",
+      "67": "Gold, Nevada (Metallic)",
+      "72": "Red, Apple",
+      "90": "Gray, Steel (Metallic)",
+      "12": "White, Frost"
+    },
+    "1989": {
+      "20": "Onyx Black",
+      "27": "Smoke Blue Met.",
+      "33": "Mojave Beige",
+      "34": "Sunset Gold Met.",
+      "36": "Wintergreen Met.",
+      "50": "Summit White",
+      "74": "Fire Red",
+      "83": "Gray Met.",
+      "96": "Quicksilver Met.",
+      "98": "Midnight Blue Met."
+    },
+    "suburban-1990-zy2": {
+      "20": "Onyx Black",
+      "34": "Sunset Gold Met.",
+      "83": "Gray Met.",
+      "96": "Quicksilver Met.",
+      "74": "Fire Red",
+      "50": "Summit White",
+      "27": "Smoke Blue Met.",
+      "98": "Midnight Blue Met.",
+      "33": "Mojave Beige",
+      "36": "Wintergreen Met."
+    },
+    "suburban-1990-zy3-zy4": {
+      "20": "Onyx Black",
+      "34": "Sunset Gold Met.",
+      "83": "Gray Met.",
+      "96": "Quicksilver Met.",
+      "74": "Fire Red",
+      "50": "Summit White",
+      "27": "Smoke Blue Met.",
+      "98": "Midnight Blue Met.",
+      "33": "Mojave Beige",
+      "36": "Wintergreen Met."
+    },
+    "suburban-1991-zy2": {
+      "22": "Brilliant Blue Met.",
+      "50": "Summit White",
+      "96": "Quicksilver Met.",
+      "98": "Midnight Blue Met.",
+      "27": "Smoke Blue Met.",
+      "33": "Mojave Beige",
+      "34": "Sunset Gold Met.",
+      "41": "Onyx Black",
+      "74": "Fire Red",
+      "97": "Slate Met.",
+      "76": "Fire Red"
+    },
+    "suburban-1991-zy3-zy4": {
+      "22": "Brilliant Blue Metallic",
+      "50": "Summit White",
+      "96": "Quicksilver Metallic",
+      "98": "Midnight Blue Metallic",
+      "27": "Smoke Blue Metallic",
+      "33": "Mojave Beige",
+      "34": "Sunset Gold Metallic",
+      "41": "Onyx Black",
+      "74": "Fire Red",
+      "97": "Slate Metallic"
+    },
+    "suburban-1992-zy2": {
+      "22": "Brilliant Blue Met.",
+      "50": "Summit White",
+      "96": "Quicksilver Met.",
+      "97": "Slate Met.",
+      "27": "Smoke Blue Met.",
+      "41": "Onyx Black",
+      "36": "Teal Blue Met.",
+      "57": "Sand Beige Met.",
+      "74": "Victory Red",
+      "76": "Burnt Red Met."
+    },
+    "suburban-1992-zy3": {
+      "22": "Brilliant Blue Met.",
+      "50": "Summit White",
+      "96": "Quicksilver Met.",
+      "97": "Slate Met.",
+      "27": "Smoke Blue Met.",
+      "41": "Onyx Black",
+      "36": "Teal Blue Met.",
+      "57": "Sand Beige Met.",
+      "74": "Victory Red",
+      "76": "Burnt Red Met."
+    },
+    "suburban-1992-zy4": {
+      "22": "Brilliant Blue Met.",
+      "50": "Summit White",
+      "96": "Quicksilver Met.",
+      "97": "Slate Met.",
+      "27": "Smoke Blue Met.",
+      "41": "Onyx Black",
+      "36": "Teal Blue Met.",
+      "57": "Sand Beige Met.",
+      "74": "Victory Red",
+      "76": "Burnt Red Met."
+    },
+    "suburban-1993-zy4": {
+      "57": "BEIGE,SAND(Metallic)",
+      "41": "Black, Onyx",
+      "39": "Blue,Indigo(Met)",
+      "36": "Blue,Teal(Metallic)",
+      "76": "Red Burnt",
+      "96": "Quicksilver (Metallic)",
+      "74": "Red, Victory",
+      "27": "Blue Smoke(Met)",
+      "97": "Slate (Metallic)",
+      "50": "White,Summit"
+    },
+    "suburban-1994-zy2": {
+      "56": "AUTUMNWOOD, DK (Met)",
+      "55": "Autumnwood, Lt (Met)",
+      "41": "BLACK, ONYX",
+      "96": "Quicksilver (Met)",
+      "30": "BLUE, ATLANTIC (Met)",
+      "39": "Blue, Indigo (Met)",
+      "36": "BLUE, TEAL (Met)",
+      "76": "Red, Burnt (Met)",
+      "74": "RED, VICTORY",
+      "50": "WHITE, SUMMIT"
+    },
+    "suburban-1994-zy4": {
+      "56": "AUTUMNWOOD, DK (Met)",
+      "55": "Autumnwood, Lt (Met)",
+      "41": "BLACK, ONYX",
+      "96": "Quicksilver (Met)",
+      "74": "Red, Victory",
+      "30": "BLUE, ATLANTIC (Met)",
+      "39": "Blue, Indigo (Met)",
+      "50": "White, Summit",
+      "36": "BLUE, TEAL (Met)",
+      "76": "Red, Burnt (Met)"
+    },
+    "suburban-1995-zy2": {
+      "41U": "BLACK, ONYX",
+      "55L": "Autumnwood, Lt (Met)",
+      "96L": "Quicksilver (Met)",
+      "30U": "BLUE, ATLANTIC (Met)",
+      "39L": "Blue Indigo (Met)",
+      "36U": "BLUE, TEAL (Met)",
+      "39U": "BLUE, INDIGO (Met)",
+      "30L": "Blue, Atlantic (Met)",
+      "43U": "GREEN, EMERALD (Met)",
+      "96U": "QUICKSILVER (Met)",
+      "41L": "Black, Onyx",
+      "76L": "Red, Burnt (Met)",
+      "76U": "RED, BURNT (Met)",
+      "74U": "RED, VICTORY",
+      "50U": "WHITE, SUMMIT"
+    },
+    "suburban-1995-zy4": {
+      "41U": "BLACK, ONYX",
+      "55L": "Autumnwood, Lt (Met)",
+      "96L": "Quicksilver (Met)",
+      "74L": "Red, Victory",
+      "30U": "BLUE, ATLANTIC (Met)",
+      "39L": "Blue Indigo (Met)",
+      "36U": "BLUE, TEAL (Met)",
+      "39U": "BLUE, INDIGO (Met)",
+      "30L": "Blue, Atlantic (Met)",
+      "50L": "White, Summit",
+      "43U": "GREEN, EMERALD (Met)",
+      "96U": "QUICKSILVER (Met)",
+      "41L": "Black, Onyx",
+      "76L": "Red, Burnt",
+      "76U": "RED, BURNT (Met)",
+      "74U": "RED, VICTORY"
+    },
+    "suburban-1996-zy2": {
+      "41U": "BLACK, ONYX",
+      "55L": "Autumnwood, Lt (Met)",
+      "96L": "Quicksilver (Met)",
+      "30U": "BLUE, ATLANTIC (Met)",
+      "39L": "Blue Indigo (Met)",
+      "39U": "BLUE, INDIGO (Met)",
+      "30L": "Blue, Atlantic (Met)",
+      "59U": "CHERRY ICE (Met)",
+      "77L": "Red, Cherry (Met)",
+      "43U": "GREEN, EMERALD (Met)",
+      "96U": "QUICKSILVER (Met)",
+      "41L": "Black, Onyx",
+      "77U": "RED, CHERRY (Met)",
+      "59L": "Cherry Ice (Met)",
+      "74U": "RED, VICTORY",
+      "50U": "WHITE, SUMMIT"
+    },
+    "suburban-1996-zy4": {
+      "41U": "BLACK, ONYX",
+      "55L": "Autumnwood, Lt (Met)",
+      "96L": "Quicksilver (Met)",
+      "74L": "Red, Victory",
+      "30U": "BLUE, ATLANTIC (Met)",
+      "39L": "Blue Indigo (Met)",
+      "39U": "BLUE, INDIGO (Met)",
+      "30L": "Blue, Atlantic (Met)",
+      "50L": "White, Summit",
+      "43U": "GREEN, EMERALD (Met)",
+      "96U": "QUICKSILVER (Met)",
+      "41L": "Black, Onyx",
+      "77L": "Red, Cherry",
+      "77U": "RED, CHERRY (Met)",
+      "59L": "Cherry Ice (Met)",
+      "59U": "CHERRY ICE (Met)",
+      "74U": "RED, VICTORY",
+      "50U": "WHITE, SUMMIT"
+    },
+    "suburban-1997-zy2": {
+      "65U": "BEIGE, MYSTIQUE MED (Met)",
+      "41L": "Black Onyx (Met)",
+      "77L": "Red, Cherry (Met)",
+      "41U": "BLACK, ONYX",
+      "55L": "Autumnwood, Lt (Met)",
+      "65L": "Beige, Mystique Med (Met)",
+      "96L": "Quicksilver (Met)",
+      "74L": "Red, Victory",
+      "39U": "BLUE, INDIGO (Met)",
+      "59U": "CHERRY ICE (Met)",
+      "43U": "GREEN, EMERALD (Met)",
+      "96U": "QUICKSILVER (Met)",
+      "39L": "Blue, Indigo (Met)",
+      "59L": "Cherry Ice (Met)",
+      "77U": "RED, CHERRY (Met)",
+      "74U": "RED, VICTORY",
+      "50U": "WHITE, SUMMIT"
+    },
+    "suburban-1997-zy4": {
+      "41U": "BLACK, ONYX",
+      "96L": "Quicksilver (Met)",
+      "74L": "Red, Victory",
+      "39U": "BLUE, INDIGO (Met)",
+      "59U": "CHERRY ICE (Met)",
+      "77L": "Red, Cherry (Met)",
+      "43U": "GREEN, EMERALD (Met)",
+      "96U": "QUICKSILVER (Met)",
+      "41L": "Black, Onyx",
+      "39L": "Blue, Indigo (Met)",
+      "77U": "RED, CHERRY (Met)",
+      "65L": "Beige, Mystique Med (Met)",
+      "59L": "Cherry Ice (Met)",
+      "74U": "RED, VICTORY",
+      "50L": "White, Summit"
+    },
+    "suburban-1998-zy2": {
+      "65U": "BEIGE, MYSTIQUE MED (Met)",
+      "41L": "Black Onyx",
+      "41U": "BLACK, ONYX",
+      "55L": "Autumnwood, Lt (Met)",
+      "65L": "Beige, Mystique (Met)",
+      "11L": "Pewter, Lt (Met)",
+      "74L": "Red, Victory (Met)",
+      "39U": "BLUE, INDIGO (Met)",
+      "69U": "COPPER (Met)",
+      "43U": "GREEN, EMERALD (Met)",
+      "11U": "PEWTER, LT (Met)",
+      "39L": "Blue, Indigo (Met)",
+      "51U": "RED, CARMINE DK (Met)",
+      "74U": "RED, VICTORY",
+      "50U": "WHITE, SUMMIT"
+    },
+    "suburban-1999-zy2": {
+      "41U": "BLACK, ONYX",
+      "60L": "Gold, Sunset (Met)",
+      "11L": "Pewter, Lt (Met)",
+      "14L": "Gray, Charcoal Med (Met)",
+      "74L": "Red, Victory (Met)",
+      "39U": "BLUE, INDIGO (Met)",
+      "69U": "COPPER (Met)",
+      "60U": "GOLD, SUNSET (Met)",
+      "41L": "Black, Onyx",
+      "14U": "GRAY, CHARCOAL MED (Met)",
+      "51L": "Red, Carmine Dark (Met)",
+      "68U": "GREEN, MEADOW (Met)",
+      "11U": "PEWTER, LT (Met)",
+      "39L": "Blue Indigo (Met)",
+      "69L": "Copper, Dk (Met)",
+      "51U": "RED, CARMINE DK, (Met)",
+      "74U": "RED, VICTORY",
+      "50U": "WHITE, SUMMIT"
+    }
+  },
+  "scheme_sets": [
+    {
+      "scheme_set_id": "suburban-1977-zy3-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "25",
+            "name": "Mariner Blue (Dark)"
+          },
+          "secondary": {
+            "code": "20",
+            "name": "Lite Blue (Light)"
+          },
+          "stripe_colors": "Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "43",
+            "name": "Seamist Green (Light)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "Frost White"
+          },
+          "stripe_colors": "Medium Green",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "53",
+            "name": "Colonial Yellow"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Santa Fe Tan"
+          },
+          "stripe_colors": "Gold",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "70",
+            "name": "Cardinal Red (Medium)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "Frost White"
+          },
+          "stripe_colors": "Dark Red",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "71",
+            "name": "Metallic Red (Dark)"
+          },
+          "secondary": {
+            "code": "76",
+            "name": "Mahogany"
+          },
+          "stripe_colors": "Light Red",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "81",
+            "name": "Cordova Brown (Dark)"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Santa Fe Tan"
+          },
+          "stripe_colors": "Bronze",
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1978-two-tone",
+      "schemes": [
+        {
+          "primary": {
+            "code": "25",
+            "name": "Blue, Mariner (Dark) (M)"
+          },
+          "secondary": {
+            "code": "20",
+            "name": "Blue, Lite (Light)"
+          },
+          "stripe_colors": null,
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "43",
+            "name": "Green, Seamist (Light) (M)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": null,
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "53",
+            "name": "Yellow, Colonial"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Tan, Santa Fe"
+          },
+          "stripe_colors": null,
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "70",
+            "name": "Red, Cardinal (Medium)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": null,
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "71",
+            "name": "Red, Metallic (Dark) (M)"
+          },
+          "secondary": {
+            "code": "76",
+            "name": "Mahogany"
+          },
+          "stripe_colors": null,
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "81",
+            "name": "Brown, Cordova (Dark) (M)"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Tan, Santa Fe"
+          },
+          "stripe_colors": null,
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1979-zy3-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "18",
+            "name": "Charcoal"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Mystic Silver"
+          },
+          "stripe_colors": "Orange to red",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "25",
+            "name": "Mariner Blue"
+          },
+          "secondary": {
+            "code": "26",
+            "name": "Deep Blue"
+          },
+          "stripe_colors": "Blues",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "65",
+            "name": "Light Camel"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Santa Fe Tan"
+          },
+          "stripe_colors": "Yellow",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "secondary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "stripe_colors": "Orange to red",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "81",
+            "name": "Cordova Brown"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Santa Fe Tan"
+          },
+          "stripe_colors": "Yellows",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "86",
+            "name": "Midnight Black"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Mystic Silver"
+          },
+          "stripe_colors": "Orange to red",
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1980-zy3-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "12",
+            "name": "Frost White"
+          },
+          "secondary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "stripe_colors": "Yellow to orange",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "18",
+            "name": "Charcoal (Metallic)"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Mystic Silver (Metallic)"
+          },
+          "stripe_colors": "Orange to red",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "30",
+            "name": "Nordic Blue (Metallic)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "Frost White"
+          },
+          "stripe_colors": "Blues",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "62",
+            "name": "Dark Camel (Metallic)"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Santa Fe Tan"
+          },
+          "stripe_colors": "Brown to gold",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "Frost White"
+          },
+          "stripe_colors": "Orange to red",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "73",
+            "name": "Cardinal Red"
+          },
+          "secondary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "stripe_colors": "Orange to red",
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1981-zy3-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "17",
+            "name": "Light Silver Metallic"
+          },
+          "secondary": {
+            "code": "86",
+            "name": "Midnight Black"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": "Slate"
+        },
+        {
+          "primary": {
+            "code": "18",
+            "name": "Charcoal Metallic"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Light Silver Metallic"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": "Slate"
+        },
+        {
+          "primary": {
+            "code": "25",
+            "name": "Light Blue Metallic"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Light Silver Metallic"
+          },
+          "stripe_colors": "Dark Blue/Light Slate",
+          "interior_colors": "Blue or Slate"
+        },
+        {
+          "primary": {
+            "code": "30",
+            "name": "Nordic Blue Metallic"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Light Silver Metallic"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": "Blue or Slate"
+        },
+        {
+          "primary": {
+            "code": "65",
+            "name": "Dark Chestnut Metallic"
+          },
+          "secondary": {
+            "code": "60",
+            "name": "Santa Fe Tan"
+          },
+          "stripe_colors": "Doeskin/Santa Fe Tan",
+          "interior_colors": "Doeskin"
+        },
+        {
+          "primary": {
+            "code": "70",
+            "name": "Carmine Red"
+          },
+          "secondary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "stripe_colors": "Vermillion/Dark Carmine Red",
+          "interior_colors": "Carmine or Slate"
+        },
+        {
+          "primary": {
+            "code": "70",
+            "name": "Carmine Red"
+          },
+          "secondary": {
+            "code": "71",
+            "name": "Dark Carmine Red"
+          },
+          "stripe_colors": "Doeskin/Dark Carmine Red",
+          "interior_colors": "Doeskin"
+        },
+        {
+          "primary": {
+            "code": "86",
+            "name": "Midnight Black"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Light Silver Metallic"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": "Slate"
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1983-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Dark Blue/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "63",
+            "name": "Bronze, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "59",
+            "name": "Almond"
+          },
+          "stripe_colors": "Dark Brown/Almond",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "70",
+            "name": "Red, Carmine"
+          },
+          "secondary": {
+            "code": "59",
+            "name": "Almond"
+          },
+          "stripe_colors": "Dark Carmine/Almond",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "70",
+            "name": "Red, Carmine"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "secondary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "stripe_colors": "Light Blue (Metallic)/Dark Blue",
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1984-1985-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "stripe_colors": "Light Blue/Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Dark Blue/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Dark Blue/White",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "secondary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "stripe_colors": "Light Blue/Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "66",
+            "name": "Bronze, Indian (Metallic)"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "66",
+            "name": "Bronze, Indian (Metallic)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Dark Carmine",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "secondary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "stripe_colors": "Dark Blue/Light Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "secondary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "stripe_colors": "Light Blue/Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "17",
+            "name": "Silver (Metallic)"
+          },
+          "secondary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Dark Carmine",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "secondary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "53",
+            "name": "Yellow, Colonial"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "53",
+            "name": "Yellow, Colonial"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1986-zy5",
+      "schemes": [
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "stripe_colors": "Light Blue/Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "stripe_colors": "Dark Blue/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Dark Blue/White",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "secondary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "stripe_colors": "Light Blue/Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "secondary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Light Slate",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "66",
+            "name": "Bronze, Indian (Metallic)"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "66",
+            "name": "Bronze, Indian (Metallic)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "55",
+            "name": "Copper, Canyon (Metallic)"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Dark Brown/Almond",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "55",
+            "name": "Copper, Canyon (Metallic)"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Almond/Dark Brown",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "stripe_colors": "Vermillion/Dark Carmine",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "secondary": {
+            "code": "12",
+            "name": "White, Frost"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "secondary": {
+            "code": "21",
+            "name": "Blue, Light (Metallic)"
+          },
+          "stripe_colors": "Dark Blue/Light Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "secondary": {
+            "code": "29",
+            "name": "Blue, Midnight"
+          },
+          "stripe_colors": "Light Blue/Dark Blue",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "90",
+            "name": "Gray, Steel (Metallic)"
+          },
+          "secondary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "secondary": {
+            "code": "19",
+            "name": "Black, Midnight"
+          },
+          "stripe_colors": "Vermillion/Dark Carmine",
+          "interior_colors": null
+        },
+        {
+          "primary": {
+            "code": "61",
+            "name": "Tan, Doeskin"
+          },
+          "secondary": {
+            "code": "72",
+            "name": "Red, Apple"
+          },
+          "stripe_colors": "Vermillion/Black",
+          "interior_colors": null
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1987-zy1-zy3",
+      "color_legend_id": "1987",
+      "groups": [
+        {
+          "primary_code": "19",
+          "secondary_codes": ["90", "61", "12"]
+        },
+        {
+          "primary_code": "21",
+          "secondary_codes": ["29", "90", "12"]
+        },
+        {
+          "primary_code": "29",
+          "secondary_codes": ["21", "90", "12"]
+        },
+        {
+          "primary_code": "66",
+          "secondary_codes": ["61", "12"]
+        },
+        {
+          "primary_code": "55",
+          "secondary_codes": ["19", "61", "12"]
+        },
+        {
+          "primary_code": "67",
+          "secondary_codes": ["19", "61", "12"]
+        },
+        {
+          "primary_code": "90",
+          "secondary_codes": ["19", "21", "29", "72", "12"]
+        },
+        {
+          "primary_code": "72",
+          "secondary_codes": ["90", "61", "12"]
+        },
+        {
+          "primary_code": "61",
+          "secondary_codes": ["19", "12"]
+        },
+        {
+          "primary_code": "12",
+          "secondary_codes": ["19", "21", "29", "72", "90", "61"]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1987-zy5",
+      "color_legend_id": "1987",
+      "groups": [
+        {
+          "primary_code": "19",
+          "pairs": [
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "21",
+          "pairs": [
+            {
+              "secondary_code": "29",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Blue/Light Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Blue/White"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "29",
+          "pairs": [
+            {
+              "secondary_code": "21",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Light Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "66",
+          "pairs": [
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dark Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dark Brown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "55",
+          "pairs": [
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dark Brown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "72",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "90",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "21",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Blue/Light Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "29",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "61",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1988-zy1-zy3",
+      "color_legend_id": "1988",
+      "groups": [
+        {
+          "primary_code": "19",
+          "secondary_codes": ["24", "67", "90", "72", "61"]
+        },
+        {
+          "primary_code": "24",
+          "secondary_codes": ["19", "29", "90", "12"]
+        },
+        {
+          "primary_code": "29",
+          "secondary_codes": ["24", "67", "90", "61", "12"]
+        },
+        {
+          "primary_code": "39",
+          "secondary_codes": ["19", "67", "61"]
+        },
+        {
+          "primary_code": "44",
+          "secondary_codes": ["67", "90", "61"]
+        },
+        {
+          "primary_code": "67",
+          "secondary_codes": ["19", "29", "39", "44", "72", "61"]
+        },
+        {
+          "primary_code": "90",
+          "secondary_codes": ["19", "24", "29", "44", "72", "12"]
+        },
+        {
+          "primary_code": "72",
+          "secondary_codes": ["19", "67", "90", "61", "12"]
+        },
+        {
+          "primary_code": "61",
+          "secondary_codes": ["19", "29", "39", "67", "72", "12"]
+        },
+        {
+          "primary_code": "12",
+          "secondary_codes": ["19", "24", "67", "90", "72", "61"]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1988-zy5",
+      "color_legend_id": "1988",
+      "groups": [
+        {
+          "primary_code": "19",
+          "pairs": [
+            {
+              "secondary_code": "24",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "24",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "29",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                },
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                },
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "29",
+          "pairs": [
+            {
+              "secondary_code": "24",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "39",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "44",
+          "pairs": [
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "67",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "29",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "39",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "44",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                },
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "90",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                },
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "24",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                },
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "29",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "44",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "72",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "61",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "29",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "39",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "12",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dark Brown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "12",
+          "pairs": [
+            {
+              "secondary_code": "19",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "24",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "67",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "90",
+              "variants": [
+                {
+                  "stripe_colors": "Light Blue/Dark Blue"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "72",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dark Carmine"
+                },
+                {
+                  "stripe_colors": "Vermillion/Light Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "61",
+              "variants": [
+                {
+                  "stripe_colors": "Dark Brown/Almond"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1989-zy2",
+      "color_legend_id": "1989",
+      "defaults": {
+        "source_note": "The stripe-color column prints a dash for every row."
+      },
+      "groups": [
+        {
+          "primary_code": "20",
+          "secondary_codes": ["33", "34", "83", "96", "74", "50"]
+        },
+        {
+          "primary_code": "27",
+          "secondary_codes": ["98", "83", "96", "50"]
+        },
+        {
+          "primary_code": "33",
+          "secondary_codes": ["20", "98", "34", "36"]
+        },
+        {
+          "primary_code": "34",
+          "secondary_codes": ["33", "20", "36"]
+        },
+        {
+          "primary_code": "36",
+          "secondary_codes": ["33", "34"]
+        },
+        {
+          "primary_code": "50",
+          "secondary_codes": ["33", "20", "27", "34", "83", "96", "74"]
+        },
+        {
+          "primary_code": "74",
+          "secondary_codes": ["33", "20", "34", "83", "96", "50"]
+        },
+        {
+          "primary_code": "83",
+          "secondary_codes": ["20", "98", "74", "50", "36"]
+        },
+        {
+          "primary_code": "96",
+          "secondary_codes": ["20", "27", "98", "74", "50"]
+        },
+        {
+          "primary_code": "98",
+          "secondary_codes": ["33", "27", "34", "83", "96", "50"]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1989-zy3",
+      "color_legend_id": "1989",
+      "groups": [
+        {
+          "primary_code": "20",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "27",
+          "pairs": [
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "33",
+          "pairs": [
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "36",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "34",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "36",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "36",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "50",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "27",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate",
+                  "interior_colors": "Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate",
+                  "interior_colors": "Saddle"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "74",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "83",
+          "pairs": [
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "36",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "96",
+          "pairs": [
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "27",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                },
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "98",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "27",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1989-zy4",
+      "color_legend_id": "1989",
+      "groups": [
+        {
+          "primary_code": "20",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "27",
+          "pairs": [
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "33",
+          "pairs": [
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "36",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "34",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "36",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "36",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "50",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "27",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Brown/Almond"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate",
+                  "interior_colors": "Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate",
+                  "interior_colors": "Saddle"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "74",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "83",
+          "pairs": [
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "36",
+              "variants": [
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "96",
+          "pairs": [
+            {
+              "secondary_code": "20",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                },
+                {
+                  "stripe_colors": "Vermillion/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "27",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "98",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "74",
+              "variants": [
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Dk. Blue/Slate"
+                },
+                {
+                  "stripe_colors": "Almond/Dk. Brown"
+                },
+                {
+                  "stripe_colors": "Vermillion/Dk. Carmine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "primary_code": "98",
+          "pairs": [
+            {
+              "secondary_code": "33",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "27",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            },
+            {
+              "secondary_code": "83",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Silver/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "34",
+              "variants": [
+                {
+                  "stripe_colors": "Gold/Black"
+                }
+              ]
+            },
+            {
+              "secondary_code": "96",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                },
+                {
+                  "stripe_colors": "Vermillion/Slate"
+                }
+              ]
+            },
+            {
+              "secondary_code": "50",
+              "variants": [
+                {
+                  "stripe_colors": "Lt. Blue/Dk. Blue"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1990-zy2",
+      "color_legend_id": "suburban-1990-zy2",
+      "rows": [
+        ["20", "34", "N/A", null, "Saddle"],
+        ["20", "83", "N/A", null, "Garnet, Slate Gray"],
+        ["20", "96", "N/A", null, "Garnet, Slate Gray"],
+        ["20", "74", "N/A", null, "Garnet, Slate Gray"],
+        ["20", "50", "N/A", null, "Garnet, Slate Gray"],
+        ["27", "98", "N/A", null, "Dk. Blue"],
+        ["27", "50", "N/A", null, "Dk. Blue, Slate Gray"],
+        ["33", "20", "N/A", null, "Saddle"],
+        ["33", "34", "N/A", null, "Garnet, Saddle"],
+        ["36", "33", "N/A", null, "Saddle"],
+        ["36", "34", "N/A", null, "Saddle"],
+        ["50", "20", "N/A", null, "Dk. Blue, Garnet, Saddle, Slate Gray"],
+        ["50", "27", "N/A", null, "Dk. Blue"],
+        ["50", "34", "N/A", null, "Saddle"],
+        ["50", "83", "N/A", null, "Dk. Blue, Garnet"],
+        ["50", "96", "N/A", null, "Dk. Blue"],
+        ["50", "74", "N/A", null, "Garnet, Slate Gray"],
+        ["74", "20", "N/A", null, "Garnet"],
+        ["74", "83", "N/A", null, "Garnet"],
+        ["74", "96", "N/A", null, "Garnet"],
+        ["74", "50", "N/A", null, "Garnet, Slate Gray"],
+        ["83", "20", "N/A", null, "Garnet, Slate Gray"],
+        ["83", "74", "N/A", null, "Garnet, Slate Gray"],
+        ["83", "50", "N/A", null, "Garnet, Slate Gray"],
+        ["83", "96", "N/A", null, "Garnet, Slate Gray"],
+        ["96", "20", "N/A", null, "Garnet, Slate Gray"],
+        ["96", "98", "N/A", null, "Dk. Blue, Slate Gray"],
+        ["96", "74", "N/A", null, "Garnet, Slate Gray"],
+        ["96", "83", "N/A", null, "Slate Gray"],
+        ["98", "27", "N/A", null, "Dk. Blue"],
+        ["98", "34", "N/A", null, "Saddle"],
+        ["98", "96", "N/A", null, "Dk. Blue, Slate Gray"],
+        ["98", "50", "N/A", null, "Dk. Blue"]
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1990-zy3-zy4",
+      "color_legend_id": "suburban-1990-zy3-zy4",
+      "rows": [
+        ["20", "34", "Gold/Black", null, "Saddle"],
+        ["20", "83", "Vermilion/Black", null, "Garnet"],
+        ["20", "83", "Silver/Black", null, "Slate Gray"],
+        ["20", "96", "Vermilion/Slate", null, "Slate Gray"],
+        ["20", "96", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["20", "74", "Vermilion/Slate", null, "Slate Gray"],
+        ["20", "74", "Vermilion/Black", null, "Garnet"],
+        ["20", "50", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["20", "50", "Silver/Black", null, "Slate Gray"],
+        ["27", "98", "Lt. Blue/Dk. Blue", null, "Dk. Blue"],
+        ["27", "50", "Lt. Blue/Dk. Blue", null, "Dk. Blue"],
+        ["27", "50", "Dk. Blue/Slate", null, "Slate Gray"],
+        ["33", "20", "Gold/Black", null, "Saddle"],
+        ["33", "34", "Dk. Brown/Almond", null, "Saddle"],
+        ["33", "34", "Gold/Black", null, "Garnet"],
+        ["36", "33", "Almond/Dk. Brown", null, "Saddle"],
+        ["36", "34", "Almond/Dk. Brown", null, "Saddle"],
+        ["50", "20", "Vermilion/Black", null, "Dk. Blue"],
+        ["50", "20", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["50", "20", "Almond/Dk. Brown", null, "Saddle"],
+        ["50", "20", "Silver/Black", null, "Slate Gray"],
+        ["50", "27", "Lt. Blue/Dk. Blue", null, "Dk. Blue"],
+        ["50", "34", "Dk. Brown/Almond", null, "Saddle"],
+        ["50", "83", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["50", "83", "Vermilion/Slate", null, "Dk. Blue"],
+        ["50", "98", "Lt. Blue/Dk. Blue", null, "Dk. Blue, Slate Gray"],
+        ["50", "74", "Vermilion/Slate", null, "Slate Gray"],
+        ["50", "74", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["74", "20", "Vermilion/Black", null, "Garnet"],
+        ["74", "83", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["74", "96", "Vermilion/Dk. Carmine", null, "Garnet, Slate Gray"],
+        ["74", "50", "Vermilion/Slate", null, "Garnet"],
+        ["83", "20", "Vermilion/Dk. Carmine", null, "Slate Gray"],
+        ["83", "20", "Silver/Black", null, "Slate Gray"],
+        ["83", "74", "Vermilion/Slate", null, "Garnet"],
+        ["83", "50", "Vermilion/Dk. Carmine", null, "Slate Gray"],
+        ["83", "50", "Silver/Black", null, "Garnet"],
+        ["83", "74", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["83", "96", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["83", "96", "Vermilion/Slate", null, "Slate Gray"],
+        ["96", "20", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["96", "20", "Vermilion/Black", null, "Slate Gray"],
+        ["96", "98", "Lt. Blue/Dk. Blue", null, "Dk. Blue, Slate Gray"],
+        ["96", "74", "Vermilion/Slate", null, "Slate Gray"],
+        ["96", "74", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["96", "83", "Vermilion/Slate", null, "Slate Gray"],
+        ["98", "27", "Lt. Blue/Dk. Blue", null, "Dk. Blue"],
+        ["98", "34", "Gold/Black", null, "Saddle"],
+        ["98", "96", "Lt. Blue/Dk. Blue", null, "Dk. Blue"],
+        ["98", "96", "Vermilion/Slate", null, "Slate Gray"],
+        ["98", "50", "Lt. Blue/Dk. Blue", null, "Dk. Blue"]
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1991-zy2",
+      "color_legend_id": "suburban-1991-zy2",
+      "rows": [
+        ["22", "50", "N/A", null, "Blue"],
+        ["22", "96", "N/A", null, "Blue"],
+        ["22", "98", "N/A", null, "Blue"],
+        ["27", "50", "N/A", null, "Blue"],
+        ["27", "98", "N/A", null, "Blue"],
+        ["33", "34", "N/A", null, "Garnet, Saddle"],
+        ["33", "41", "N/A", null, "Saddle"],
+        ["41", "34", "N/A", null, "Saddle"],
+        ["41", "50", "N/A", null, "Garnet, Gray"],
+        ["41", "74", "N/A", null, "Garnet, Gray"],
+        ["41", "96", "N/A", null, "Garnet, Gray"],
+        ["41", "97", "N/A", null, "Garnet, Gray"],
+        ["50", "22", "N/A", null, "Blue"],
+        ["50", "27", "N/A", null, "Blue"],
+        ["50", "34", "N/A", null, "Saddle"],
+        ["50", "41", "N/A", null, "Blue, Garnet, Saddle, Gray"],
+        ["50", "74", "N/A", null, "Garnet, Gray"],
+        ["50", "97", "N/A", null, "Garnet, Gray"],
+        ["50", "98", "N/A", null, "Blue"],
+        ["74", "41", "N/A", null, "Garnet"],
+        ["74", "50", "N/A", null, "Garnet, Gray"],
+        ["74", "96", "N/A", null, "Garnet"],
+        ["74", "97", "N/A", null, "Garnet"],
+        ["96", "22", "N/A", null, "Blue"],
+        ["96", "41", "N/A", null, "Garnet, Gray"],
+        ["96", "74", "N/A", null, "Garnet, Gray"],
+        ["96", "97", "N/A", null, "Gray"],
+        ["96", "98", "N/A", null, "Blue, Gray"],
+        ["97", "41", "N/A", null, "Garnet, Gray"],
+        ["97", "50", "N/A", null, "Garnet, Gray"],
+        ["97", "76", "N/A", null, "Garnet, Gray", null, null, null, "Source plainly prints 76 Fire Red in this row while the same-year swatch and ZY1 table print 74 Fire Red; preserved without correction."],
+        ["97", "96", "N/A", null, "Garnet, Gray"],
+        ["98", "22", "N/A", null, "Blue"],
+        ["98", "27", "N/A", null, "Blue"],
+        ["98", "34", "N/A", null, "Saddle"],
+        ["98", "50", "N/A", null, "Blue"],
+        ["98", "96", "N/A", null, "Blue, Gray"]
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1991-zy3-zy4",
+      "color_legend_id": "suburban-1991-zy3-zy4",
+      "rows": [
+        ["22", "50", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["22", "96", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["22", "98", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["27", "50", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["27", "50", "Dk. Blue/Slate", null, "Gray"],
+        ["27", "98", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["33", "34", "Dk. Brown/Almond", null, "Saddle"],
+        ["33", "34", "Gold/Black", null, "Garnet"],
+        ["33", "41", "Gold/Black", null, "Saddle"],
+        ["41", "34", "Gold/Black", null, "Saddle"],
+        ["41", "50", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["41", "50", "Silver/Black", null, "Gray"],
+        ["41", "74", "Vermilion/Slate", null, "Gray"],
+        ["41", "74", "Vermilion/Black", null, "Garnet"],
+        ["41", "96", "Vermilion/Slate", null, "Gray"],
+        ["41", "96", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["41", "97", "Vermilion/Black", null, "Garnet"],
+        ["41", "97", "Silver/Black", null, "Gray"],
+        ["50", "22", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["50", "27", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["50", "34", "Dk. Brown/Almond", null, "Saddle"],
+        ["50", "41", "Vermilion/Black", null, "Blue"],
+        ["50", "41", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["50", "41", "Almond/Dk. Brown", null, "Saddle"],
+        ["50", "41", "Silver/Black", null, "Gray"],
+        ["50", "74", "Vermilion/Slate", null, "Gray"],
+        ["50", "74", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["50", "97", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["50", "97", "Vermilion/Slate", null, "Gray"],
+        ["50", "98", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["74", "41", "Vermilion/Black", null, "Garnet"],
+        ["74", "50", "Vermilion/Dk. Carmine", null, "Garnet, Gray"],
+        ["74", "96", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["74", "97", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["96", "22", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["96", "41", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["96", "41", "Vermilion/Black", null, "Gray"],
+        ["96", "74", "Vermilion/Slate", null, "Gray"],
+        ["96", "74", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["96", "97", "Vermilion/Slate", null, "Gray"],
+        ["96", "98", "Lt. Blue/Dk. Blue", null, "Blue, Gray"],
+        ["97", "41", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["97", "41", "Silver/Black", null, "Gray"],
+        ["97", "50", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["97", "50", "Silver/Black", null, "Gray"],
+        ["97", "74", "Vermilion/Slate", null, "Gray"],
+        ["97", "74", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["97", "96", "Vermilion/Dk. Carmine", null, "Garnet"],
+        ["97", "96", "Vermilion/Slate", null, "Gray"],
+        ["98", "22", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["98", "27", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["98", "34", "Gold/Black", null, "Saddle"],
+        ["98", "50", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["98", "96", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["98", "96", "Vermilion/Slate", null, "Gray"]
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1992-zy2",
+      "color_legend_id": "suburban-1992-zy2",
+      "rows": [
+        ["22", "50", null, "Lt. Blue", "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["22", "96", null, "Silver", "Blue"],
+        ["22", "97", null, "Lt. Blue", "Blue"],
+        ["27", "41", null, "Lt. Blue", "Blue"],
+        ["27", "41", null, "Silver", "Gray"],
+        ["27", "50", null, "Lt. Blue", "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["27", "50", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "50", null, "Lt. Teal Met", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "57", null, "Beige Met", "Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "96", null, "Silver", "Gray"],
+        ["36", "97", null, "Lt. Teal Met", "Gray"],
+        ["41", "36", null, "Beige", "Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "36", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "50", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "57", null, "Beige", "Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "74", null, "Victory Red", "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "76", null, "Victory Red", "Garnet"],
+        ["41", "96", null, "Silver", "Garnet, Gray"],
+        ["41", "97", null, "Silver", "Gray"],
+        ["41", "97", null, "Victory Red", "Garnet"],
+        ["50", "22", null, "Lt. Blue", "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "27", null, "Lt. Blue", "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "36", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "41", null, "Victory Red", "Garnet"],
+        ["50", "41", null, "Silver", "Gray"],
+        ["50", "74", null, "Victory Red", "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "76", null, "Victory Red", "Garnet"],
+        ["50", "76", null, "Silver", "Gray"],
+        ["50", "97", null, "Victory Red", "Garnet"],
+        ["50", "97", null, "Silver", "Gray"],
+        ["57", "41", null, "Cinnamon", "Beige"],
+        ["57", "76", null, "Victory Red", "Garnet, Beige"],
+        ["57", "97", null, "Victory Red", "Beige"],
+        ["74", "41", null, "Silver", "Garnet, Gray"],
+        ["74", "50", null, "Silver", "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["74", "96", null, "Silver", "Garnet, Gray"],
+        ["74", "97", null, "Silver", "Garnet, Gray"],
+        ["76", "41", null, "Silver", "Gray"],
+        ["76", "41", null, "Victory Red", "Garnet"],
+        ["76", "50", null, "Victory Red", "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["76", "57", null, "Beige Met", "Garnet, Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["76", "96", null, "Silver", "Garnet, Gray"],
+        ["96", "22", null, "Lt. Blue", "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "41", null, "Victory Red", "Garnet, Gray"],
+        ["96", "74", null, "Victory Red", "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "76", null, "Victory Red", "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "97", null, "Victory Red", "Garnet, Gray"],
+        ["96", "97", null, "Silver", "Gray"],
+        ["97", "36", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "41", null, "Victory Red", "Garnet"],
+        ["97", "41", null, "Silver", "Gray"],
+        ["97", "50", null, "Victory Red", "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "50", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "74", null, "Victory Red", "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "74", null, "Silver", "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "96", null, "Victory Red", "Garnet"],
+        ["97", "96", null, "Silver", "Gray"]
+      ],
+      "defaults": {
+        "source_note": "K2500 wheel flares are color-keyed to Color Code 2 with ZY2."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1992-zy3",
+      "color_legend_id": "suburban-1992-zy3",
+      "rows": [
+        ["22", "50", "Lt. Blue/Dk. Blue", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["22", "96", "Lt. Blue/Slate", null, "Blue"],
+        ["22", "97", "Lt. Blue/Slate", null, "Blue"],
+        ["27", "41", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["27", "41", "Lt. Blue/Slate", null, "Gray"],
+        ["27", "50", "Lt. Blue/Dk. Blue", null, "Blue, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "50", "Lt. Teal/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "96", "Lt. Teal/Silver", null, "Gray"],
+        ["36", "97", "Lt. Teal/Silver", null, "Gray"],
+        ["41", "36", "Vermilion/Beige", null, "Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "36", "Vermilion/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "50", "Vermilion/Beige", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "57", "Vermilion/Beige", null, "Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "74", "Vermilion/Beige", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "76", "Vermilion/Silver", null, "Garnet"],
+        ["41", "96", "Vermilion/Silver", null, "Gray"],
+        ["41", "97", "Vermilion/Beige", null, "Garnet, Gray"],
+        ["50", "22", "Lt. Blue/Dk. Blue", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "27", "Lt. Blue/Dk. Blue", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "36", "Lt. Blue/Dk. Blue", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "41", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "41", "Vermilion/Silver", null, "Gray"],
+        ["50", "74", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "76", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "76", "Vermilion/Silver", null, "Gray"],
+        ["50", "97", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "97", "Vermilion/Silver", null, "Gray"],
+        ["57", "41", "Vermilion/Beige", null, "Beige"],
+        ["57", "76", "Vermilion/Beige", null, "Garnet, Beige"],
+        ["57", "97", "Vermilion/Beige", null, "Beige"],
+        ["74", "41", "Vermilion/Garnet", null, "Garnet"],
+        ["74", "41", "Vermilion/Silver", null, "Gray"],
+        ["74", "50", "Vermilion/Garnet", null, "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["74", "50", "Vermilion/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["74", "96", "Vermilion/Silver", null, "Garnet, Gray"],
+        ["74", "97", "Vermilion/Garnet", null, "Garnet"],
+        ["74", "97", "Vermilion/Silver", null, "Gray"],
+        ["76", "41", "Gold/Black", null, "Gray"],
+        ["76", "50", "Vermilion/Garnet", null, "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["76", "57", "Vermilion/Beige", null, "Garnet, Beige", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["76", "96", "Vermilion/Garnet", null, "Garnet"],
+        ["76", "96", "Vermilion/Silver", null, "Gray"],
+        ["96", "22", "Lt. Blue/Slate", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "41", "Vermilion/Garnet", null, "Garnet"],
+        ["96", "41", "Vermilion/Silver", null, "Gray"],
+        ["96", "74", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "76", "Vermilion/Garnet", null, "Garnet"],
+        ["96", "76", "Vermilion/Silver", null, "Gray"],
+        ["96", "97", "Vermilion/Garnet", null, "Garnet"],
+        ["96", "97", "Vermilion/Silver", null, "Gray"],
+        ["97", "36", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "41", "Vermilion/Silver", null, "Garnet, Gray"],
+        ["97", "50", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "74", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "96", "Vermilion/Silver", null, "Garnet, Gray"]
+      ],
+      "defaults": {
+        "source_note": "K2500 wheel flares are color-keyed to Color Code 2 with ZY3."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1992-zy4",
+      "color_legend_id": "suburban-1992-zy4",
+      "rows": [
+        ["22", "50", "Lt. Blue/Dk. Blue", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["22", "96", "Lt. Blue/Slate", null, "Blue"],
+        ["22", "97", "Lt. Blue/Slate", null, "Blue"],
+        ["27", "41", "Lt. Blue/Dk. Blue", null, "Blue"],
+        ["27", "41", "Lt. Blue/Slate", null, "Gray"],
+        ["27", "50", "Lt. Blue/Dk. Blue", null, "Blue, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "50", "Lt. Teal/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["36", "96", "Lt. Teal/Silver", null, "Gray"],
+        ["36", "97", "Lt. Teal/Silver", null, "Gray"],
+        ["41", "36", "Vermilion/Beige", null, "Saddle", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "36", "Vermilion/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "50", "Vermilion/Beige", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "57", "Vermilion/Beige", null, "Saddle", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "74", "Vermilion/Beige", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["41", "76", "Vermilion/Silver", null, "Garnet"],
+        ["41", "96", "Vermilion/Silver", null, "Gray"],
+        ["41", "97", "Vermilion/Beige", null, "Garnet, Gray"],
+        ["50", "22", "Lt. Blue/Dk. Blue", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "27", "Lt. Blue/Dk. Blue", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "36", "Lt. Blue/Dk. Blue", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["50", "41", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "41", "Vermilion/Silver", null, "Gray"],
+        ["50", "74", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "76", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "76", "Vermilion/Silver", null, "Gray"],
+        ["50", "97", "Vermilion/Garnet", null, "Garnet"],
+        ["50", "97", "Vermilion/Silver", null, "Gray"],
+        ["57", "41", "Vermilion/Beige", null, "Saddle"],
+        ["57", "76", "Vermilion/Beige", null, "Garnet, Saddle"],
+        ["57", "97", "Vermilion/Beige", null, "Saddle"],
+        ["74", "41", "Vermilion/Garnet", null, "Garnet"],
+        ["74", "41", "Vermilion/Silver", null, "Gray"],
+        ["74", "50", "Vermilion/Garnet", null, "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["74", "50", "Vermilion/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["74", "96", "Vermilion/Silver", null, "Garnet, Gray"],
+        ["74", "97", "Vermilion/Garnet", null, "Garnet"],
+        ["74", "97", "Vermilion/Silver", null, "Gray"],
+        ["76", "41", "Gold/Black", null, "Gray"],
+        ["76", "50", "Vermilion/Garnet", null, "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["76", "57", "Vermilion/Beige", null, "Garnet, Saddle", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["76", "96", "Vermilion/Garnet", null, "Garnet"],
+        ["76", "96", "Vermilion/Silver", null, "Gray"],
+        ["96", "22", "Lt. Blue/Slate", null, "Blue", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "41", "Vermilion/Garnet", null, "Garnet"],
+        ["96", "41", "Vermilion/Silver", null, "Gray"],
+        ["96", "74", "Vermilion/Garnet", null, "Garnet", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "74", "Vermilion/Silver", null, "Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["96", "76", "Vermilion/Garnet", null, "Garnet"],
+        ["96", "76", "Vermilion/Silver", null, "Gray"],
+        ["96", "97", "Vermilion/Garnet", null, "Garnet"],
+        ["96", "97", "Vermilion/Silver", null, "Gray"],
+        ["97", "36", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "41", "Vermilion/Silver", null, "Garnet, Gray"],
+        ["97", "50", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "74", "Vermilion/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 or K2500 models", null, "Source chart prints this row in bold."],
+        ["97", "96", "Vermilion/Silver", null, "Garnet, Gray"]
+      ],
+      "defaults": {
+        "source_note": "K2500 wheel flares are color-keyed to Color Code 2 with ZY4."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1993-zy4",
+      "color_legend_id": "suburban-1993-zy4",
+      "rows": [
+        ["57", "41", "Gold/Black", null, "Beige"],
+        ["57", "39", "Gold/Black", null, "Beige"],
+        ["57", "36", "Gold/Black", null, "Beige"],
+        ["57", "76", "Gold/Black", null, "Beige"],
+        ["41", "57", "Gold/Black", null, "Beige", null, null, null, null, "BLACK,ONYX", "Beige, Sand (Metallic)"],
+        ["41", "96", "Gunmetal/Silver", null, "Garnet, Gray", null, null, null, null, "BLACK,ONYX"],
+        ["41", "74", "Silver/Red", null, "Garnet, Gray", null, null, null, null, "BLACK,ONYX"],
+        ["39", "57", "Gold/Black", null, "Beige, Blue", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,INDIGO(Metallic)", "Beige, Sand (Met)"],
+        ["39", "27", "Blue/Silver", null, "Blue, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,INDIGO(Metallic)"],
+        ["39", "96", "Blue/Silver", null, "Blue, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,INDIGO(Metallic)", "Quicksilver (Met)"],
+        ["27", "39", "Blue/Silver", null, "Blue, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,SMOKE", "Blue,Indigo(Metallic)"],
+        ["27", "96", "Blue/Silver", null, "Blue, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,SMOKE(Metallic)", "Quicksilver(Metallic)"],
+        ["36", "57", "Gold/Black", null, "Beige", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,TEAL(Metallic)", "Beige,Sand (Metallic)"],
+        ["36", "96", "Teal/Silver", null, "Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "BLUE,TEAL(Metallic)"],
+        ["96", "41", "Gunmetal/Silver", null, "Garnet, Gray", null, null, null, null, "QUICKSILVER(Metallic)"],
+        ["96", "27", "Blue/Silver", null, "Blue, Gray", null, null, null, null, "QUICKSILVER(Metallic)", "Blue,Smoke(Metallic)"],
+        ["96", "39", "Blue/Silver", null, "Blue, Gray", null, null, null, null, "QUICKSILVER(Metallic)", "Indigo,Blue"],
+        ["96", "36", "Teal/Silver", null, "Gray", null, null, null, null, "QUICKSILVER(Metallic)"],
+        ["96", "76", "Gunmetal/Silver", null, "Garnet, Gray", null, null, null, null, "QUICKSILVER(Metallic)", "Red, Burnt (Metallic)"],
+        ["96", "74", "Black/Silver", null, "Garnet, Gray", null, null, null, null, "QUICKSILVER(Metallic)"],
+        ["96", "97", "Red/Silver", null, "Garnet, Gray", null, null, null, null, "QUICKSILVER(Metallic)"],
+        ["76", "57", "Gold/Black", null, "Beige, Garnet", null, null, null, null, "RED,BURNT(Metallic)", "Beige, Sand (Metallic)"],
+        ["76", "96", "Gunmetal/Silver", null, "Garnet, Gray", null, null, null, null, "RED,BURNT(Metallic)"],
+        ["74", "41", "Silver/Red", null, "Garnet, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "RED,VICTORY"],
+        ["74", "96", "Black/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "RED,VICTORY"],
+        ["74", "50", "Black/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "RED,VICTORY"],
+        ["97", "96", "Red/Silver", null, "Garnet, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "SLATE(Metallic)", "Quicksilver"],
+        ["97", "74", "Silver/Red", null, "Garnet, Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "SLATE(Metallic)"],
+        ["50", "39", "Blue/Silver", null, "Blue", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "WHITE,SUMMIT"],
+        ["50", "74", "Black/Silver", null, "Garnet", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "WHITE,SUMMIT", "Red,Victory"],
+        ["50", "97", "Silver/Red", null, "Gray", null, "N/A K1500 w/B71 Wheel Flare or on K2500 Models", null, "Source restriction marker: asterisk.", "WHITE,SUMMIT"]
+      ],
+      "defaults": {
+        "source_note": "With B71, wheel-flare color matches Color Code 1 where applicable."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1994-zy2",
+      "color_legend_id": "suburban-1994-zy2",
+      "rows": [
+        ["56", "55", null, null, "Beige", "Autumnwood"],
+        ["55", "56", null, null, "Beige", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "AUTUMNWOOD, LT (Met)", "Autumnwood, Dk (Met)"],
+        ["41", "55", null, null, "Beige", "Autumnwood"],
+        ["41", "96", null, null, "Garnet, Gray", "Silver"],
+        ["30", "39", null, null, "Blue, Gray", "Blue"],
+        ["30", "96", null, null, "Blue, Gray", "Silver"],
+        ["39", "55", null, null, "Beige, Blue", "Autumnwood", null, null, null, "BLUE, INDIGO (Met)"],
+        ["39", "30", null, null, "Blue, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "BLUE, INDIGO (Met)", "Blue, Atlantic (Met)"],
+        ["39", "96", null, null, "Blue, Gray", "Silver", null, null, null, "BLUE, INDIGO (Met)"],
+        ["36", "55", null, null, "Beige", "Autumnwood"],
+        ["36", "96", null, null, "Gray", "Silver"],
+        ["96", "41", null, null, "Garnet, Gray", "Black", null, null, null, "QUICKSILVER (Met)", "Black, Onyx"],
+        ["96", "30", null, null, "Blue, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "QUICKSILVER (Met)", "Blue, Atlantic (Met)"],
+        ["96", "39", null, null, "Blue, Gray", "Blue", null, null, null, "QUICKSILVER (Met)"],
+        ["96", "36", null, null, "Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "QUICKSILVER (Met)", "Blue, Teal (Met)"],
+        ["96", "76", null, null, "Garnet, Gray", "Dk Red", null, null, null, "QUICKSILVER (Met)"],
+        ["76", "96", null, null, "Garnet, Gray", "Silver", null, null, null, "RED, BURNT (Met)"],
+        ["74", "41", null, null, "Beige, Garnet, Gray", "Black", null, null, null, null, "Black, Onyx"],
+        ["74", "96", null, null, "Garnet, Gray", "Silver"],
+        ["50", "55", null, null, "Beige", "Autumnwood"],
+        ["50", "39", null, null, "Blue", "Blue"],
+        ["50", "76", null, null, "Garnet", "Dk Red"]
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1994-zy4",
+      "color_legend_id": "suburban-1994-zy4",
+      "rows": [
+        ["56", "55", "Beige/Autumnwood", null, "Beige", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk."],
+        ["55", "56", "Beige/Autumnwood", null, "Beige", "Autumnwood", null, null, null, "AUTUMNWOOD, LT (Met)", "Autumnwood, Dk (Met)"],
+        ["41", "55", "Beige/Autumnwood", null, "Beige", "Black"],
+        ["41", "96", "Gunmetal/Silver", null, "Garnet, Gray", "Black"],
+        ["41", "74", "Gold/Red", null, "Beige, Gray", "Black"],
+        ["30", "39", "Blue/Indigo", null, "Blue, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk."],
+        ["30", "96", "Blue/Indigo", null, "Blue, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk."],
+        ["39", "30", "Blue/Indigo", null, "Blue, Gray", "Blue", null, null, null, "BLUE, INDIGO (Met)", "Blue, Atlantic (Met)"],
+        ["39", "96", "Blue/Indigo", null, "Blue, Gray", "Blue", null, null, null, "BLUE, INDIGO (Met)"],
+        ["39", "50", "Blue/Indigo", null, "Blue, Gray", "Blue", null, null, null, "BLUE, INDIGO (Met)"],
+        ["36", "96", "Teal/Silver", null, "Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk."],
+        ["96", "41", "Gunmetal/Silver", null, "Garnet, Gray", "Silver", null, null, null, "QUICKSILVER (Met)", "Black, Onyx"],
+        ["96", "30", "Blue/Indigo", null, "Blue, Gray", "Silver", null, null, null, "QUICKSILVER (Met)", "Blue, Atlantic (Met)"],
+        ["96", "39", "Blue/Indigo", null, "Blue, Gray", "Silver", null, null, null, "QUICKSILVER (Met)"],
+        ["96", "36", "Teal/Silver", null, "Gray", "Silver", null, null, null, "QUICKSILVER (Met)", "Blue, Teal (Met)"],
+        ["96", "76", "Gunmetal/Silver", null, "Garnet, Gray", "Silver", null, null, null, "QUICKSILVER (Met)"],
+        ["76", "96", "Gunmetal/Silver", null, "Garnet, Gray", "Dk Red", null, null, null, "RED, BURNT (Met)"],
+        ["74", "41", "Silver/Red", null, "Garnet, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "RED, VICTORY", "Black, Onyx"],
+        ["74", "96", "Gunmetal/Red", null, "Garnet, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "RED, VICTORY"],
+        ["74", "50", "Gunmetal/Red", null, "Garnet, Gray", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "RED, VICTORY"],
+        ["74", "50", "Gold/Red", null, "Beige", "N/A", "N/A B71 Moldings or K2500 Models", null, "Source restriction marker: asterisk.", "RED, VICTORY"]
+      ]
+    },
+    {
+      "scheme_set_id": "suburban-1995-zy2",
+      "color_legend_id": "suburban-1995-zy2",
+      "rows": [
+        ["41U", "55L", null, null, "Beige", "Autumnwood"],
+        ["41U", "96L", null, null, "Gray, Red", "Silver"],
+        ["30U", "39L", null, null, "Blue, Gray", "Blue"],
+        ["30U", "96L", null, null, "Blue, Gray", "Silver"],
+        ["36U", "55L", null, null, "Beige", "Autumnwood", null, null, null, null, "Autumn, Lt (Met)"],
+        ["36U", "96L", null, null, "Gray", "Silver"],
+        ["39U", "55L", null, null, "Beige, Blue", "Autumnwood", null, null, null, null, "Autumn, Lt (Met)"],
+        ["39U", "30L", null, null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["39U", "96L", null, null, "Blue, Gray", "Silver"],
+        ["43U", "55L", null, null, "Beige", "Autumnwood", null, null, null, null, "Autumn, Lt (Met)"],
+        ["43U", "96L", null, null, "Gray", "Silver"],
+        ["96U", "41L", null, null, "Gray, Red", "Black"],
+        ["96U", "30L", null, null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["96U", "39L", null, null, "Blue, Gray", "Blue", null, null, null, null, "Blue, Indigo (Met)"],
+        ["96U", "76L", null, null, "Gray, Red", "Red"],
+        ["76U", "55L", null, null, "Beige, Red", "Autumnwood", null, null, null, null, "Autumn, Lt (Met)"],
+        ["76U", "96L", null, null, "Gray, Red", "Silver"],
+        ["74U", "41L", null, null, "Beige, Gray, Red", "Black"],
+        ["74U", "96L", null, null, "Gray, Red", "Silver"],
+        ["50U", "55L", null, null, "Beige", "Autumnwood", null, null, null, null, "Autumn, Lt (Met)"],
+        ["50U", "39L", null, null, "Blue", "Blue", null, null, null, null, "Blue, Indigo (Met)"],
+        ["50U", "76L", null, null, "Red", "Red", null, null, null, null, "Red, Burnt"]
+      ],
+      "defaults": {
+        "source_note": "Color Code 2 is a required (+) Plus option. ZY2 and ZY4 require LS/LT decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1995-zy4",
+      "color_legend_id": "suburban-1995-zy4",
+      "rows": [
+        ["41U", "55L", "Beige/Autumnwood", null, "Beige", "Black"],
+        ["41U", "96L", "Gunmetal/Silver", null, "Gray, Red", "Black"],
+        ["41U", "74L", "Gunmetal/Red", null, "Red", "Black"],
+        ["41U", "74L", "Gold/Red", null, "Beige", "Black"],
+        ["41U", "74L", "Silver/Red", null, "Gray", "Black"],
+        ["30U", "39L", "Blue/Indigo", null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["30U", "96L", "Blue/Indigo", null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["36U", "55L", "Beige/Autumnwood", null, "Beige", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *.", null, "Autumn, Lt (Met)"],
+        ["36U", "96L", "Blue/Silver", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["39U", "55L", "Beige/Autumnwood", null, "Beige, Blue", "Blue", null, null, null, null, "Autumn, Lt (Met)"],
+        ["39U", "30L", "Blue/Indigo", null, "Blue, Gray", "Blue"],
+        ["39U", "96L", "Blue/Indigo", null, "Blue, Gray", "Blue"],
+        ["39U", "50L", "Blue/Indigo", null, "Blue, Gray", "Blue"],
+        ["43U", "55L", "Beige/Autumnwood", null, "Beige", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *.", null, "Autumn, Lt (Met)"],
+        ["43U", "96L", "Gunmetal/Silver", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["96U", "30L", "Blue/Indigo", null, "Blue, Gray", "Silver"],
+        ["96U", "39L", "Blue/Indigo", null, "Blue, Gray", "Silver", null, null, null, null, "Blue, Indigo (Met)"],
+        ["96U", "41L", "Blue/Indigo", null, "Gray, Red", "Silver"],
+        ["96U", "76L", "Gunmetal/Silver", null, "Gray, Red", "Silver"],
+        ["76U", "55L", "Beige/Autumnwood", null, "Beige, Red", "Red", null, null, null, null, "Autumn, Lt (Met)"],
+        ["76U", "96L", "Gunmetal/Silver", null, "Gray, Red", "Red"],
+        ["74U", "41L", "Silver/Red", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["74U", "96L", "Gunmetal/Red", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["74U", "50L", "Gunmetal/Red", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["74U", "50L", "Gold/Red", null, "Beige", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."]
+      ],
+      "defaults": {
+        "source_note": "Color Code 2 is a required (+) Plus option. ZY2 and ZY4 require LS/LT decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1996-zy2",
+      "color_legend_id": "suburban-1996-zy2",
+      "rows": [
+        ["41U", "55L", null, null, "Neutral", "Autumnwood, Lt"],
+        ["41U", "96L", null, null, "Gray, Red", "Silver"],
+        ["30U", "39L", null, null, "Blue, Gray", "Blue, Indigo"],
+        ["30U", "96L", null, null, "Blue, Gray", "Silver"],
+        ["39U", "55L", null, null, "Neutral, Blue", "Autumnwood, Lt", null, null, null, null, "Autumn, Lt (Met)"],
+        ["39U", "30L", null, null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["39U", "96L", null, null, "Blue, Gray", "Silver"],
+        ["59U", "55L", null, null, "Neutral, Red", "Autumnwood, Lt", null, null, null, null, "Autumn, Lt (Met)"],
+        ["59U", "96L", null, null, "Gray, Red", "Silver"],
+        ["59U", "77L", null, null, "Gray", "Red, Cherry"],
+        ["43U", "55L", null, null, "Neutral", "Autumnwood, Lt", null, null, null, null, "Autumn, Lt (Met)"],
+        ["43U", "96L", null, null, "Gray", "Silver"],
+        ["96U", "41L", null, null, "Gray, Red", "Black"],
+        ["96U", "30L", null, null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["96U", "39L", null, null, "Blue, Gray", "Blue, Indigo", null, null, null, null, "Blue, Indigo (Met)"],
+        ["96U", "77L", null, null, "Gray, Red", "Red, Cherry"],
+        ["77U", "55L", null, null, "Neutral, Red", "Autumnwood, Lt", null, null, null, null, "Autumn, Lt (Met)"],
+        ["77U", "59L", null, null, "Neutral, Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["77U", "96L", null, null, "Gray, Red", "Silver"],
+        ["74U", "41L", null, null, "Neutral, Gray, Red", "Black"],
+        ["74U", "96L", null, null, "Gray, Red", "Silver"],
+        ["50U", "55L", null, null, "Neutral", "Autumnwood, Lt", null, null, null, null, "Autumn, Lt (Met)"],
+        ["50U", "39L", null, null, "Blue", "Blue, Indigo", null, null, null, null, "Blue, Indigo (Met)"],
+        ["50U", "77L", null, null, "Red", "Red, Cherry"]
+      ],
+      "defaults": {
+        "source_note": "Color Code 2 is a required (+) Plus option. ZY2 and ZY4 require LS/LT decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1996-zy4",
+      "color_legend_id": "suburban-1996-zy4",
+      "rows": [
+        ["41U", "55L", "Beige/Autumnwood", null, "Neutral", "Black"],
+        ["41U", "96L", "Gunmetal/Silver", null, "Gray, Red", "Black"],
+        ["41U", "74L", "Silver/Red", null, "Red", "Black"],
+        ["41U", "74L", "Gold/Black", null, "Neutral", "Black"],
+        ["41U", "74L", "Silver/Red", null, "Gray", "Black"],
+        ["30U", "39L", "Blue/Indigo", null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["30U", "96L", "Blue/Indigo", null, "Blue, Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["39U", "55L", "Beige/Autumnwood", null, "Neutral, Blue", "Blue, Indigo", null, null, null, null, "Autumn, Lt (Met)"],
+        ["39U", "30L", "Blue/Indigo", null, "Blue, Gray", "Blue, Indigo"],
+        ["39U", "96L", "Blue/Indigo", null, "Blue, Gray", "Blue, Indigo"],
+        ["39U", "50L", "Blue/Indigo", null, "Blue, Gray", "Blue, Indigo"],
+        ["43U", "55L", "Beige/Autumnwood", null, "Neutral", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *.", null, "Autumn, Lt (Met)"],
+        ["43U", "96L", "Gunmetal/Silver", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["96U", "30L", "Blue/Indigo", null, "Blue, Gray", "Silver"],
+        ["96U", "39L", "Blue/Indigo", null, "Blue, Gray", "Silver", null, null, null, null, "Blue, Indigo (Met)"],
+        ["96U", "41L", "Blue/Indigo", null, "Gray, Red", "Silve [sic, terminal `r` not visible in scan]"],
+        ["96U", "77L", "Gunmetal/Silver", null, "Gray, Red", "Silver"],
+        ["77U", "55L", "Beige/Autumnwood", null, "Neutral, Red", "Red, Cherry", null, null, null, null, "Autumn, Lt (Met)"],
+        ["77U", "96L", "Gunmetal/Silver", null, "Gray, Red", "Red, Cherry"],
+        ["77U", "59L", "Lt/Dk Cherry", null, "Neutral, Gray, Red", "Red, Cherry"],
+        ["59U", "96L", "Lt/Dk Cherry", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["59U", "77L", "Lt/Dk Cherry", null, "Neutral, Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *.", null, "Red, Cherry (Met)"],
+        ["74U", "41L", "Silver/Red", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["74U", "96L", "Gunmetal/Silver", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["74U", "50L", "Gunmetal/Silver", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["74U", "50L", "Gold/Black", null, "Neutral, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *."],
+        ["50U", "55L", "Beige/Autumnwood", null, "Neutral", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: *.", null, "Autumn, Lt (Met)"]
+      ],
+      "defaults": {
+        "source_note": "Color Code 2 is a required (+) Plus option. ZY2 and ZY4 require LS/LT decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1997-zy2",
+      "color_legend_id": "suburban-1997-zy2",
+      "rows": [
+        ["65U", "41L", null, null, "Neutral", "Black, Onyx", null, null, "Source caret indicates change."],
+        ["65U", "77L", null, null, "Neutral, Red", "Red, Cherry"],
+        ["41U", "55L", null, null, "Neutral", "Autumnwood", null, null, "Source caret indicates change."],
+        ["41U", "65L", null, null, "Neutral", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["41U", "96L", null, null, "Gray, Red", "Silver"],
+        ["41U", "74L", null, null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["39U", "96L", null, null, "Blue, Gray", "Silver"],
+        ["59U", "55L", null, null, "Neutral, Red", "Autumnwood", null, null, "Source caret indicates change."],
+        ["59U", "96L", null, null, "Gray, Red", "Quicksilver"],
+        ["59U", "77L", null, null, "Neutral, Gray, Red", "Red, Cherry"],
+        ["43U", "55L", null, null, "Neutral", "Autumnwood", null, null, "Source caret indicates change."],
+        ["43U", "65L", null, null, "Neutral", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +.", null, "Beige, Mystique (Met)"],
+        ["43U", "96L", null, null, "Gray", "Quicksilver"],
+        ["96U", "41L", null, null, "Gray, Red", "Black", null, null, null, null, "Black, Onyx"],
+        ["96U", "39L", null, null, "Blue, Gray", "Blue, Indigo"],
+        ["96U", "59L", null, null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["96U", "77L", null, null, "Gray, Red", "Red, Cherry", null, null, "Source caret indicates change."],
+        ["77U", "65L", null, null, "Neutral, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["77U", "59L", null, null, "Neutral, Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["77U", "96L", null, null, "Gray, Red", "Quicksilver"],
+        ["74U", "41L", null, null, "Gray, Red", "Black, Onyx", null, null, "Source caret indicates change.", null, "Black, Onyx (Met)"],
+        ["74U", "96L", null, null, "Gray, Red", "Quicksilver", null, null, "Source caret indicates change."],
+        ["50U", "55L", null, null, "Neutral", "Autumnwood", null, null, "Source caret indicates change."],
+        ["50U", "65L", null, null, "Neutral", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["50U", "39L", null, null, "Blue", "Blue, Indigo", null, null, null, null, "Blue Indigo (Met)"],
+        ["50U", "59L", null, null, "Neutral, Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["50U", "77L", null, null, "Red", "Red, Cherry", null, null, "Source caret indicates change."]
+      ],
+      "defaults": {
+        "source_note": "Color Code 2 is a required (+) Plus option. ZY2 and ZY4 require LS/LT decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1997-zy4",
+      "color_legend_id": "suburban-1997-zy4",
+      "rows": [
+        ["41U", "96L", "Gunmetal/Silver", null, "Gray, Red", "Black"],
+        ["41U", "74L", "Beige/Black", null, "Neutral", "Black"],
+        ["41U", "74L", "Gunmetal/Silver", null, "Gray, Red", "Black"],
+        ["39U", "96L", "Silver/Indigo", null, "Blue, Gray", "Blue, Indigo"],
+        ["59U", "96L", "Silver/Red", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["59U", "77L", "Silver/Red", null, "Neutral, Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["43U", "96L", "Silver/Green", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["96U", "41L", "Gunmetal/Silver", null, "Gray, Red", "Silver"],
+        ["96U", "39L", "Silver/Indigo", null, "Blue, Gray", "Silver"],
+        ["96U", "77L", "Silver/Red", null, "Gray, Red", "Silver", null, null, null, null, "Red, Cherry"],
+        ["77U", "65L", "Silver/Red", null, "Neutral, Red", "Red, Cherry"],
+        ["77U", "96L", "Silver/Red", null, "Gray, Red", "Red, Cherry"],
+        ["77U", "59L", "Silver/Red", null, "Neutral, Gray, Red", "Red, Cherry"],
+        ["74U", "41L", "Gunmetal/Silver", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["74U", "96L", "Gunmetal/Silver", null, "Gray, Red", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["74U", "50L", "Gunmetal/Silver", null, "Gray", "N/A", "N/A B71 Molding or K10906 w/L65 Eng or on K20906", null, "Source restriction marker: +."]
+      ],
+      "defaults": {
+        "source_note": "Color Code 2 is a required (+) Plus option. ZY2 and ZY4 require LS/LT decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1998-zy2",
+      "color_legend_id": "suburban-1998-zy2",
+      "rows": [
+        ["65U", "41L", null, null, "Neutral", "N/A", "N/A B71 or K10906 or w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["41U", "55L", null, null, "Neutral", "Autumnwood"],
+        ["41U", "65L", null, null, "Neutral", "N/A", "N/A B71 or K10906 or w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["41U", "11L", null, null, "Gray, Red", "Pewter"],
+        ["41U", "74L", null, null, "Gray", "N/A", "N/A B71 or K10906 or w/L65 Eng or on K20906", null, "Source restriction marker: +."],
+        ["39U", "55L", null, null, "Neutral, Blue", "Autumnwood"],
+        ["39U", "11L", null, null, "Blue, Gray", "Pewter"],
+        ["69U", "55L", null, null, "Neutral", "Autumnwood"],
+        ["69U", "11L", null, null, "Neutral, Gray", "Pewter"],
+        ["43U", "55L", null, null, "Neutral", "Autumnwood"],
+        ["43U", "65L", null, null, "Neutral", "N/A", "N/A B71 or K10906 or w/L65 Eng or on K20906", null, "Source restriction marker: +.", null, "Beige Med Mystique (Met)"],
+        ["43U", "11L", null, null, "Gray", "Pewter"],
+        ["11U", "41L", null, null, "Gray, Red", "Black", null, null, null, null, "Black, Onyx"],
+        ["11U", "39L", null, null, "Blue, Gray", "Blue, Indigo"],
+        ["51U", "55L", null, null, "Neutral, Red", "Autumnwood"],
+        ["51U", "11L", null, null, "Gray, Red", "Pewter"],
+        ["74U", "41L", null, null, "Gray, Red", "Black", null, null, null, null, "Black, Onyx"],
+        ["74U", "11L", null, null, "Gray, Red", "Pewter"],
+        ["50U", "55L", null, null, "Neutral", "Autumnwood"],
+        ["50U", "65L", null, null, "Neutral", "N/A", "N/A B71 or K10906 or w/L65 Eng or on K20906", null, "Source restriction marker: +.", null, "Beige Mystique Med (Met)"],
+        ["50U", "11L", null, null, "Blue, Gray, Red", "Pewter"]
+      ],
+      "defaults": {
+        "source_note": "ZY2 is not available with base decor."
+      }
+    },
+    {
+      "scheme_set_id": "suburban-1999-zy2",
+      "color_legend_id": "suburban-1999-zy2",
+      "rows": [
+        ["41U", "60L", null, null, "Neutral", "GOLD, SUNSET"],
+        ["41U", "11L", null, null, "Gray, Red", "PEWTER, LT"],
+        ["41U", "14L", null, null, "Gray, Red", "GRAY, CHARCOAL MED"],
+        ["41U", "74L", null, null, "Gray, Red", "N/A", "N/A B71, L65 Eng or 4-Wheel Drive", null, "Source restriction marker: (a)."],
+        ["39U", "14L", null, null, "Blue, Gray", "GRAY, CHARCOAL MED"],
+        ["39U", "60L", null, null, "Neutral, Blue", "GOLD, SUNSET"],
+        ["39U", "11L", null, null, "Blue, Gray", "PEWTER, LT"],
+        ["69U", "14L", null, null, "Gray", "GRAY, CHARCOAL MED"],
+        ["69U", "60L", null, null, "Neutral", "GOLD, SUNSET"],
+        ["69U", "11L", null, null, "Gray", "PEWTER, LT"],
+        ["60U", "41L", null, null, "Neutral", "BLACK, ONYX"],
+        ["60U", "14L", null, null, "Neutral, Gray", "GRAY, CHARCOAL MED"],
+        ["14U", "41L", null, null, "Gray, Red", "BLACK, ONYX"],
+        ["14U", "60L", null, null, "Neutral, Gray", "GOLD, SUNSET"],
+        ["14U", "11L", null, null, "Gray, Red", "PEWTER, LT"],
+        ["14U", "51L", null, null, "Gray, Red", "N/A", "N/A B71, L65 Eng or 4-Wheel Drive", null, "Source restriction marker: (a)."],
+        ["68U", "14L", null, null, "Gray", "GRAY, CHARCOAL MED"],
+        ["68U", "60L", null, null, "Neutral", "GOLD, SUNSET"],
+        ["68U", "11L", null, null, "Gray", "PEWTER, LT"],
+        ["11U", "41L", null, null, "Gray, Red", "BLACK, ONYX"],
+        ["11U", "39L", null, null, "Blue, Gray", "N/A", "N/A B71, L65 Eng or 4-Wheel Drive", null, "Source restriction marker: (a)."],
+        ["11U", "14L", null, null, "Blue, Gray, Red", "GRAY, CHARCOAL MED"],
+        ["11U", "69L", null, null, "Gray", "COPPER, DK"],
+        ["11U", "51L", null, null, "Gray, Red", "N/A", "N/A B71, L65 Eng or 4-Wheel Drive", null, "Source restriction marker: (a).", null, "Red, Dk Carmine (Met)"],
+        ["51U", "14L", null, null, "Gray, Red", "GRAY, CHARCOAL MED"],
+        ["51U", "60L", null, null, "Neutral, Red", "GOLD, SUNSET"],
+        ["51U", "11L", null, null, "Gray, Red", "PEWTER, LT"],
+        ["74U", "41L", null, null, "Gray, Red", "BLACK, ONYX"],
+        ["74U", "14L", null, null, "Gray, Red", "GRAY, CHARCOAL MED"],
+        ["74U", "11L", null, null, "Gray, Red", "PEWTER, LT"],
+        ["50U", "39L", null, null, "Blue", "N/A", "N/A B71, L65 Eng or 4-Wheel Drive", null, "Source restriction marker: (a).", null, "Blue, Indigo (Met)"],
+        ["50U", "14L", null, null, "Blue, Gray, Red", "GRAY, CHARCOAL MED"],
+        ["50U", "60L", null, null, "Neutral", "GOLD, SUNSET"],
+        ["50U", "11L", null, null, "Blue, Gray, Red", "PEWTER, LT"]
+      ],
+      "defaults": {
+        "source_note": "ZY2 is not available with base decor."
+      }
+    }
+  ],
+  "years": [
+    {
+      "year": 1977,
+      "scheme_set_id": "suburban-1977-zy3-zy5",
+      "package_code": "ZY3 / ZY5",
+      "package_name": "Special Two-Tone / Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1977-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Suburban.pdf",
+        "title": "1977 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "Special Two-Tone ZY3 and Exterior Decor Package ZY5 combinations",
+        "locator": "PDF p. 7, printed Suburban Page 7",
+        "revision": "Companion availability chart dated August 9, 1976"
+      }
+    },
+    {
+      "year": 1978,
+      "scheme_set_id": "suburban-1978-two-tone",
+      "package_code": null,
+      "package_name": "Two-tone paint combination",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1978-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Suburban.pdf",
+        "title": "1978 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "Suburban two-tone exterior color combinations",
+        "locator": "PDF p. 31",
+        "revision": "Companion availability chart dated December 23, 1977"
+      }
+    },
+    {
+      "year": 1979,
+      "scheme_set_id": "suburban-1979-zy3-zy5",
+      "package_code": "ZY3 / ZY5",
+      "package_name": "Special Two-Tone / Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1979-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Suburban.pdf",
+        "title": "1979 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "Special Two-Tone ZY3 and Exterior Decor Package ZY5 combinations",
+        "locator": "PDF pp. 33-34",
+        "revision": "Companion availability chart dated August 18, 1978"
+      }
+    },
+    {
+      "year": 1980,
+      "scheme_set_id": "suburban-1980-zy3-zy5",
+      "package_code": "ZY3 / ZY5",
+      "package_name": "Special Two-Tone / Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": "Primary covers the roof and body above and below the moldings; secondary fills the area between the moldings.",
+      "source": {
+        "source_id": "gm-heritage-1980-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1980-Chevrolet-Suburban.pdf",
+        "title": "1980 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "Special Two-Tone ZY3 and Exterior Decor Package ZY5 combinations",
+        "locator": "PDF p. 30, printed Suburban Page J",
+        "revision": "Companion availability chart dated August 3, 1979"
+      }
+    },
+    {
+      "year": 1981,
+      "scheme_set_id": "suburban-1981-zy3-zy5",
+      "package_code": "ZY3 / ZY5",
+      "package_name": "Special Two-Tone / Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": "ZY3 uses primary above the moldings and on the roof with secondary below; ZY5 reverses the body placement and adds coordinated striping.",
+      "source": {
+        "source_id": "gm-heritage-1981-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1981-Chevrolet-Suburban.pdf",
+        "title": "1981 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "Special Two-Tone ZY3 and Exterior Decor Package ZY5 combinations",
+        "locator": "PDF p. 27",
+        "revision": "Companion availability chart dated August 8, 1980"
+      }
+    },
+    {
+      "year": 1983,
+      "scheme_set_id": "suburban-1983-zy5",
+      "package_code": "ZY5",
+      "package_name": "Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1983-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1983-Chevrolet-Suburban.pdf",
+        "title": "1983 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY5 Exterior Decor Package combinations",
+        "locator": "PDF p. 27, lower section, printed C/K Suburban Page H",
+        "revision": "February 1983"
+      }
+    },
+    {
+      "year": 1984,
+      "scheme_set_id": "suburban-1984-1985-zy5",
+      "package_code": "ZY5",
+      "package_name": "Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1984-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1984-Chevrolet-Suburban.pdf",
+        "title": "1984 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY5 Exterior Decor Package combinations",
+        "locator": "PDF p. 31, lower section, printed C/K Suburban Page H",
+        "revision": "February 1984"
+      }
+    },
+    {
+      "year": 1985,
+      "scheme_set_id": "suburban-1984-1985-zy5",
+      "package_code": "ZY5",
+      "package_name": "Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1985-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1985-Chevrolet-Suburban.pdf",
+        "title": "1985 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY5 Exterior Decor Package combinations",
+        "locator": "PDF p. 31, lower section, printed C/K Suburban Page H",
+        "revision": "August 1984"
+      }
+    },
+    {
+      "year": 1986,
+      "scheme_set_id": "suburban-1986-zy5",
+      "package_code": "ZY5",
+      "package_name": "Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1986-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1986-Chevrolet-Suburban.pdf",
+        "title": "1986 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY5 Exterior Decor Package combinations",
+        "locator": "PDF p. 32, lower section, printed C/K Suburban Page H; complete duplicate at 1985 kit PDF p. 67",
+        "revision": "September 1985 duplicate revision; dedicated 1986 scan date cropped"
+      },
+      "corroborating_sources": [
+        {
+          "source_id": "gm-heritage-1985-chevrolet-suburban",
+          "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1985-Chevrolet-Suburban.pdf",
+          "locator": "PDF p. 67",
+          "note": "Complete duplicate of the cropped 1986 chart."
+        }
+      ]
+    },
+    {
+      "year": 1987,
+      "scheme_set_id": "suburban-1987-zy1-zy3",
+      "package_code": "ZY1 / ZY3",
+      "package_name": "ZY1 and ZY3 Two-Tone Paint",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1987-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1987-Chevrolet-Suburban.pdf",
+        "title": "1987 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Interior and Exterior Color Availability Chart, w/ZY1 or ZY3 paint",
+        "locator": "PDF p. 39, printed R/V Suburban Page H",
+        "revision": "February 1987"
+      }
+    },
+    {
+      "year": 1987,
+      "scheme_set_id": "suburban-1987-zy5",
+      "package_code": "ZY5",
+      "package_name": "Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1987-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1987-Chevrolet-Suburban.pdf",
+        "title": "1987 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Interior and Exterior Color Availability Chart, w/ZY5 paint",
+        "locator": "PDF p. 39, printed R/V Suburban Page H",
+        "revision": "February 1987"
+      }
+    },
+    {
+      "year": 1988,
+      "scheme_set_id": "suburban-1988-zy1-zy3",
+      "package_code": "ZY1 / ZY3",
+      "package_name": "ZY1 and ZY3 Two-Tone Paint",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1988-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1988-Chevrolet-Suburban.pdf",
+        "title": "1988 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Interior and Exterior Color Availability Chart with ZY1 and ZY3 Two-Tone Paint",
+        "locator": "PDF p. 29, printed R/V Suburban Page H",
+        "revision": "September 1987"
+      }
+    },
+    {
+      "year": 1988,
+      "scheme_set_id": "suburban-1988-zy5",
+      "package_code": "ZY5",
+      "package_name": "Exterior Decor Package",
+      "body_style_scope": null,
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1988-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1988-Chevrolet-Suburban.pdf",
+        "title": "1988 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Interior and Exterior Color Availability Chart with ZY5 Exterior Decor Package",
+        "locator": "PDF p. 30, printed R/V Suburban Page I",
+        "revision": "February 1988"
+      }
+    },
+    {
+      "year": 1989,
+      "scheme_set_id": "suburban-1989-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": null,
+      "placement_note": "Color code 1 covers the roof and the area above the moldings, including the area forward of the front wheel well; color code 2 covers the areas below the moldings.",
+      "source": {
+        "source_id": "gm-heritage-1989-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1989-Chevrolet-Suburban.pdf",
+        "title": "1989 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Conventional Two-Tone (ZY2) Color Combinations",
+        "locator": "PDF p. 18, printed R/V Suburban p. 21",
+        "revision": "Model-year kit; chart revision not printed"
+      }
+    },
+    {
+      "year": 1989,
+      "scheme_set_id": "suburban-1989-zy3",
+      "package_code": "ZY3",
+      "package_name": "Special Two-Tone",
+      "body_style_scope": null,
+      "placement_note": "Color code 1 covers the areas above the striping; color code 2 covers the areas below the striping.",
+      "source": {
+        "source_id": "gm-heritage-1989-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1989-Chevrolet-Suburban.pdf",
+        "title": "1989 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Special Two-Tone (ZY3) Color Combinations",
+        "locator": "PDF p. 19, printed R/V Suburban p. 22",
+        "revision": "Revision: January 1989"
+      }
+    },
+    {
+      "year": 1989,
+      "scheme_set_id": "suburban-1989-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": null,
+      "placement_note": "Color code 1 covers the areas above the striping, below the molding, and forward of the front wheel well; color code 2 covers the area between the striping and the molding.",
+      "source": {
+        "source_id": "gm-heritage-1989-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1989-Chevrolet-Suburban.pdf",
+        "title": "1989 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Deluxe Two-Tone (ZY4) Color Combinations",
+        "locator": "PDF p. 20, printed R/V Suburban p. 23",
+        "revision": "Model-year kit; chart revision not printed"
+      }
+    },
+    {
+      "year": 1990,
+      "scheme_set_id": "suburban-1990-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "R/V Suburban",
+      "placement_note": "Color Code 1 covers the roof and upper body; Color Code 2 covers the lower body.",
+      "source": {
+        "source_id": "gm-heritage-1990-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1990-Chevrolet-Suburban.pdf",
+        "title": "1990 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Conventional Two-Tone (ZY2) Color Combinations",
+        "locator": "PDF p. 21, printed p. 20",
+        "revision": "Model-year kit; chart revision not printed",
+        "artifact_sha256": "46b985c6943036e27efd890122a3d3ffc5d0ba625d19305a978da5d3fec57df9",
+        "artifact_bytes": 1130037,
+        "pdf_page_count": 27
+      }
+    },
+    {
+      "year": 1990,
+      "scheme_set_id": "suburban-1990-zy3-zy4",
+      "package_code": "ZY3",
+      "package_name": "Special Two-Tone",
+      "body_style_scope": "R/V Suburban",
+      "placement_note": "Color Code 1 covers the area above the striping; Color Code 2 covers the area below the striping.",
+      "source": {
+        "source_id": "gm-heritage-1990-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1990-Chevrolet-Suburban.pdf",
+        "title": "1990 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Special Two-Tone (ZY3) Color Combinations",
+        "locator": "PDF p. 25, printed p. 21",
+        "revision": "Model-year kit; chart revision not printed",
+        "artifact_sha256": "46b985c6943036e27efd890122a3d3ffc5d0ba625d19305a978da5d3fec57df9",
+        "artifact_bytes": 1130037,
+        "pdf_page_count": 27
+      }
+    },
+    {
+      "year": 1990,
+      "scheme_set_id": "suburban-1990-zy3-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "R/V Suburban",
+      "placement_note": "Color Code 1 and Color Code 2 retain the source chart's deluxe two-tone geometry.",
+      "source": {
+        "source_id": "gm-heritage-1990-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1990-Chevrolet-Suburban.pdf",
+        "title": "1990 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Deluxe Two-Tone (ZY4) Color Combinations",
+        "locator": "PDF p. 24, printed p. 22",
+        "revision": "Model-year kit; chart revision not printed",
+        "artifact_sha256": "46b985c6943036e27efd890122a3d3ffc5d0ba625d19305a978da5d3fec57df9",
+        "artifact_bytes": 1130037,
+        "pdf_page_count": 27
+      }
+    },
+    {
+      "year": 1991,
+      "scheme_set_id": "suburban-1991-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "R/V Suburban",
+      "placement_note": "Color Code 1 covers the roof and upper body; Color Code 2 covers the lower body.",
+      "source": {
+        "source_id": "gm-heritage-1991-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1991-Chevrolet-Suburban.pdf",
+        "title": "1991 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Conventional Two-Tone (ZY2) Color Combinations",
+        "locator": "PDF p. 21, printed p. 20",
+        "revision": "October 1990",
+        "artifact_sha256": "24f2a80e283d48d02a137e0c71114e76d31466515130aa8b21a93d1ac1a0ff7f",
+        "artifact_bytes": 1229801,
+        "pdf_page_count": 29
+      }
+    },
+    {
+      "year": 1991,
+      "scheme_set_id": "suburban-1991-zy3-zy4",
+      "package_code": "ZY3",
+      "package_name": "Special Two-Tone",
+      "body_style_scope": "R/V Suburban",
+      "placement_note": "Color Code 1 covers the area above the striping; Color Code 2 covers the area below the striping.",
+      "source": {
+        "source_id": "gm-heritage-1991-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1991-Chevrolet-Suburban.pdf",
+        "title": "1991 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Special Two-Tone (ZY3) Color Combinations",
+        "locator": "PDF p. 22, printed p. 21",
+        "revision": "October 1990",
+        "artifact_sha256": "24f2a80e283d48d02a137e0c71114e76d31466515130aa8b21a93d1ac1a0ff7f",
+        "artifact_bytes": 1229801,
+        "pdf_page_count": 29
+      }
+    },
+    {
+      "year": 1991,
+      "scheme_set_id": "suburban-1991-zy3-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "R/V Suburban",
+      "placement_note": "Color Code 1 and Color Code 2 retain the source chart's deluxe two-tone geometry.",
+      "source": {
+        "source_id": "gm-heritage-1991-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1991-Chevrolet-Suburban.pdf",
+        "title": "1991 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "R/V Suburban Deluxe Two-Tone (ZY4) Color Combinations",
+        "locator": "PDF p. 23, printed p. 22",
+        "revision": "October 1990",
+        "artifact_sha256": "24f2a80e283d48d02a137e0c71114e76d31466515130aa8b21a93d1ac1a0ff7f",
+        "artifact_bytes": 1229801,
+        "pdf_page_count": 29
+      }
+    },
+    {
+      "year": 1992,
+      "scheme_set_id": "suburban-1992-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K Suburban",
+      "placement_note": "Color Code 1 and Color Code 2 retain the source chart's conventional two-tone geometry.",
+      "source": {
+        "source_id": "gm-heritage-1992-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+        "title": "1992 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban Conventional Two-Tone (ZY2) Color Combinations",
+        "locator": "PDF p. 21, printed p. 20",
+        "revision": "Model-year kit; chart revision not printed",
+        "artifact_sha256": "c91ee8f67a3e33f5e6485572f1347e90d12de287dcf8720e0529599032a05b78",
+        "artifact_bytes": 746842,
+        "pdf_page_count": 23
+      }
+    },
+    {
+      "year": 1992,
+      "scheme_set_id": "suburban-1992-zy3",
+      "package_code": "ZY3",
+      "package_name": "Special Two-Tone",
+      "body_style_scope": "C/K Suburban",
+      "placement_note": "Color Code 1 covers the area above the striping; Color Code 2 covers the area below the striping.",
+      "source": {
+        "source_id": "gm-heritage-1992-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+        "title": "1992 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban Special Two-Tone (ZY3) Color Combinations",
+        "locator": "PDF p. 22, printed p. 21",
+        "revision": "Model-year kit; chart revision not printed",
+        "artifact_sha256": "c91ee8f67a3e33f5e6485572f1347e90d12de287dcf8720e0529599032a05b78",
+        "artifact_bytes": 746842,
+        "pdf_page_count": 23
+      }
+    },
+    {
+      "year": 1992,
+      "scheme_set_id": "suburban-1992-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "C/K Suburban",
+      "placement_note": "Color Code 1 is above the striping and below the lower feature-line groove; Color Code 2 is below the striping and above that groove.",
+      "source": {
+        "source_id": "gm-heritage-1992-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Suburban.pdf",
+        "title": "1992 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban Deluxe Two-Tone (ZY4) Color Combinations",
+        "locator": "PDF p. 23, printed p. 22",
+        "revision": "Model-year kit; chart revision not printed",
+        "artifact_sha256": "c91ee8f67a3e33f5e6485572f1347e90d12de287dcf8720e0529599032a05b78",
+        "artifact_bytes": 746842,
+        "pdf_page_count": 23
+      }
+    },
+    {
+      "year": 1993,
+      "scheme_set_id": "suburban-1993-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": "The governing chart supplies scheme rows only; it does not establish a standalone ZY1 palette.",
+      "source": {
+        "source_id": "gm-heritage-1993-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Suburban.pdf",
+        "title": "1993 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY4 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 10, printed Order Guide p. 15",
+        "revision": "1-22-93",
+        "artifact_sha256": "607f0de7aa91612d9c406dd41df126b1959bd13d9d74c05c3137f01739b23341",
+        "artifact_bytes": 573990,
+        "pdf_page_count": 14
+      }
+    },
+    {
+      "year": 1994,
+      "scheme_set_id": "suburban-1994-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1994-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Suburban.pdf",
+        "title": "1994 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban combined ZY1 and ZY2 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 19, printed Order Guide p. 14",
+        "revision": "1-10-94",
+        "artifact_sha256": "895ef9992d0f5172084047683acfa8d543acea6bf37464df24fee50d9e3385df",
+        "artifact_bytes": 1078053,
+        "pdf_page_count": 28
+      }
+    },
+    {
+      "year": 1994,
+      "scheme_set_id": "suburban-1994-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1994-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Suburban.pdf",
+        "title": "1994 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY4 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 20, printed Order Guide p. 15",
+        "revision": "1-10-94",
+        "artifact_sha256": "895ef9992d0f5172084047683acfa8d543acea6bf37464df24fee50d9e3385df",
+        "artifact_bytes": 1078053,
+        "pdf_page_count": 28
+      }
+    },
+    {
+      "year": 1995,
+      "scheme_set_id": "suburban-1995-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1995-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Suburban.pdf",
+        "title": "1995 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY2 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 20, printed Order Guide p. 14",
+        "revision": "4-10-95",
+        "artifact_sha256": "19161144f0aecfd285c1d4e51e549a8e39c70e7b3d42a139c240404fcef4fe9b",
+        "artifact_bytes": 962051,
+        "pdf_page_count": 28
+      }
+    },
+    {
+      "year": 1995,
+      "scheme_set_id": "suburban-1995-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1995-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Suburban.pdf",
+        "title": "1995 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY4 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 21, printed Order Guide p. 15",
+        "revision": "4-10-95",
+        "artifact_sha256": "19161144f0aecfd285c1d4e51e549a8e39c70e7b3d42a139c240404fcef4fe9b",
+        "artifact_bytes": 962051,
+        "pdf_page_count": 28
+      }
+    },
+    {
+      "year": 1996,
+      "scheme_set_id": "suburban-1996-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1996-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Suburban.pdf",
+        "title": "1996 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY2 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 22, printed Order Guide p. 14",
+        "revision": "1-29-96",
+        "artifact_sha256": "c7f1f9a1537331b0f4b5ba6bb96baf3d9bfe3919b4cb3e5241e2cf704ecdb217",
+        "artifact_bytes": 770378,
+        "pdf_page_count": 24
+      }
+    },
+    {
+      "year": 1996,
+      "scheme_set_id": "suburban-1996-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1996-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Suburban.pdf",
+        "title": "1996 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY4 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 23, printed Order Guide p. 15",
+        "revision": "1-29-96",
+        "artifact_sha256": "c7f1f9a1537331b0f4b5ba6bb96baf3d9bfe3919b4cb3e5241e2cf704ecdb217",
+        "artifact_bytes": 770378,
+        "pdf_page_count": 24
+      }
+    },
+    {
+      "year": 1997,
+      "scheme_set_id": "suburban-1997-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1997-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Suburban.pdf",
+        "title": "1997 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY2 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 22, printed Order Guide p. 14",
+        "revision": "12-16-96",
+        "artifact_sha256": "1d28da68523c509ffce68ce2e96ef5566894dd886caf761071afce6b5b240a1d",
+        "artifact_bytes": 948044,
+        "pdf_page_count": 33
+      }
+    },
+    {
+      "year": 1997,
+      "scheme_set_id": "suburban-1997-zy4",
+      "package_code": "ZY4",
+      "package_name": "Deluxe Two-Tone",
+      "body_style_scope": "C/K 1500 and C/K 2500 Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1997-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Suburban.pdf",
+        "title": "1997 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY4 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 23, printed Order Guide p. 15",
+        "revision": "12-16-96",
+        "artifact_sha256": "1d28da68523c509ffce68ce2e96ef5566894dd886caf761071afce6b5b240a1d",
+        "artifact_bytes": 948044,
+        "pdf_page_count": 33
+      }
+    },
+    {
+      "year": 1998,
+      "scheme_set_id": "suburban-1998-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1998-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Suburban.pdf",
+        "title": "1998 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY2 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 56, printed Order Guide p. 14; package list at PDF p. 53, printed Order Guide p. 11",
+        "revision": "9-2-97",
+        "artifact_sha256": "7975a9871c0b41551bc5802aa1c833c25e31de238abce8d424def565261c3449",
+        "artifact_bytes": 2294103,
+        "pdf_page_count": 56
+      }
+    },
+    {
+      "year": 1999,
+      "scheme_set_id": "suburban-1999-zy2",
+      "package_code": "ZY2",
+      "package_name": "Conventional Two-Tone",
+      "body_style_scope": "C/K Suburban",
+      "placement_note": null,
+      "source": {
+        "source_id": "gm-heritage-1999-chevrolet-suburban",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Suburban.pdf",
+        "title": "1999 Chevrolet Suburban Vehicle Information Kit",
+        "chart": "C/K Suburban ZY2 Interior and Exterior Color Availability Chart",
+        "locator": "PDF p. 39, printed Order Guide p. 14; package list at PDF p. 36, printed Order Guide p. 11",
+        "revision": "Published 4-1-98",
+        "artifact_sha256": "684a88324706a990ad05687faee61b1d45f2e7af3ce7f291df4f47c3c3800598",
+        "artifact_bytes": 1747598,
+        "pdf_page_count": 47
+      }
+    }
+  ],
+  "compact_scheme_row_fields": ["primary_code", "secondary_code", "stripe_colors", "d85_stripe_colors", "interior_colors", "wheel_flare_color", "restriction", "source_note", "source_annotation", "primary_name", "secondary_name"]
+}

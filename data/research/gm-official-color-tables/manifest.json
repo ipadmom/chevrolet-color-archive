@@ -1,0 +1,731 @@
+{
+  "archive": "Chevrolet Color Archive",
+  "artifact_ledger": {
+    "path": "data/sources/gm-heritage-chevrolet-artifacts.json",
+    "sha256": "6e5ef66a3cd582429e7c7512deb7167dc33379e7dcf2ae46a84f89837b29b1d7",
+    "source_count": 691
+  },
+  "caveats": [
+    "Every color row is an automated, unreviewed research candidate. It is not a published factory-availability finding.",
+    "A missing candidate is not evidence that a color was unavailable.",
+    "OCR can lose boldface, column boundaries, checkbox meaning, restrictions, body-style scope, and two-tone relationships.",
+    "The tracked corpus does not contain full page text or page renders. text_relpath and render_relpath resolve only against the complete extraction artifact root supplied to the consolidator.",
+    "Promotion requires visual comparison with the retained render and the complete official source PDF."
+  ],
+  "corpus": "GM official color-table extraction review queue",
+  "corpus_fingerprint": "1fab05a25d770177d94698bccaa5f781b5f295d785f5fef93f565ed93d5758c1",
+  "coverage": {
+    "candidate_pages": 2774,
+    "color_candidates": 11733,
+    "source_documents": 691,
+    "visually_reviewed_candidate_pages": 0
+  },
+  "extraction_artifact_contract": {
+    "render_bytes": 2075940242,
+    "render_files": 2774,
+    "render_path_field": "candidate_pages.render_relpath",
+    "root": "operator-supplied --input directory; intentionally not committed",
+    "text_bytes": 5784484,
+    "text_files": 2774,
+    "text_path_field": "candidate_pages.text_relpath"
+  },
+  "input_shards": [
+    {
+      "candidate_pages_jsonl": {
+        "bytes": 838382,
+        "file": "candidate_pages.part-00000-of-00004.jsonl",
+        "sha256": "babe62bdf0e01b22a8f1ce98b3706264fca1bc5f326174ba51f4b5367acf336a"
+      },
+      "candidate_pages_parquet": {
+        "bytes": 93771,
+        "file": "candidate_pages.part-00000-of-00004.parquet",
+        "sha256": "914bece924fb1f296d1c7b29b0e941c22910ec41bd00d7d1e335e635b036475a"
+      },
+      "color_candidates_jsonl": {
+        "bytes": 5246387,
+        "file": "color_candidates.part-00000-of-00004.jsonl",
+        "sha256": "22bbea01798a118f2fa8c790457898533eb1db014416cdb56054dc71c1f89a3a"
+      },
+      "color_candidates_parquet": {
+        "bytes": 250565,
+        "file": "color_candidates.part-00000-of-00004.parquet",
+        "sha256": "cad7237258b9ad12bec06e5fa9e9ba5f62f5b95c93d303453e444a63a743285a"
+      },
+      "counts": {
+        "candidate_pages": 585,
+        "color_candidates": 2481,
+        "source_documents": 154
+      },
+      "shard_index": 0,
+      "source_documents_jsonl": {
+        "bytes": 169780,
+        "file": "source_documents.part-00000-of-00004.jsonl",
+        "sha256": "230f026712f2fcd876b119570a82eef033d04f91f4843355110f9d6dcc6b9a3b"
+      },
+      "source_documents_parquet": {
+        "bytes": 30102,
+        "file": "source_documents.part-00000-of-00004.parquet",
+        "sha256": "ab7faf6ff7c6c7f55eac286c0ab33ed59f770a7aee9319c1694495f41d60dc71"
+      },
+      "summary": {
+        "bytes": 921,
+        "file": "run-summary.part-00000-of-00004.json",
+        "sha256": "d4aceb3cf74bce6f421f1537d0bd0b2250ba2e0ef79a8031904e6ceb52b5ea47"
+      }
+    },
+    {
+      "candidate_pages_jsonl": {
+        "bytes": 1059569,
+        "file": "candidate_pages.part-00001-of-00004.jsonl",
+        "sha256": "b9e034ff483d61b3269a2d5aa8db136b93c2406c9253e99311d7cef8ac54b98c"
+      },
+      "candidate_pages_parquet": {
+        "bytes": 111086,
+        "file": "candidate_pages.part-00001-of-00004.parquet",
+        "sha256": "dc51354a10a5189501472ab6b4e46357b8473fa022425debfcce4f53be670288"
+      },
+      "color_candidates_jsonl": {
+        "bytes": 6435708,
+        "file": "color_candidates.part-00001-of-00004.jsonl",
+        "sha256": "af8e424aa8c326e085b790be0b56e399c2bffa144f49aa326e9079fee272bc47"
+      },
+      "color_candidates_parquet": {
+        "bytes": 300031,
+        "file": "color_candidates.part-00001-of-00004.parquet",
+        "sha256": "ac2497076265fbffc4820af6917fd27c72e75c4a125bf87f7aa96fda522c4506"
+      },
+      "counts": {
+        "candidate_pages": 746,
+        "color_candidates": 3077,
+        "source_documents": 173
+      },
+      "shard_index": 1,
+      "source_documents_jsonl": {
+        "bytes": 187692,
+        "file": "source_documents.part-00001-of-00004.jsonl",
+        "sha256": "fa13c264c8b130ecc06c1b40aa42efe1174229cc10056a9bf0bafd728ec0db8d"
+      },
+      "source_documents_parquet": {
+        "bytes": 31924,
+        "file": "source_documents.part-00001-of-00004.parquet",
+        "sha256": "80dda35bc9b9f1c5196783f5867d059c918e6c0b207d0eeb7423e30937366c67"
+      },
+      "summary": {
+        "bytes": 921,
+        "file": "run-summary.part-00001-of-00004.json",
+        "sha256": "8a5e88e7d5701ad59e17a51dda6085358d55d91871f345858b189dba47950f9f"
+      }
+    },
+    {
+      "candidate_pages_jsonl": {
+        "bytes": 828821,
+        "file": "candidate_pages.part-00002-of-00004.jsonl",
+        "sha256": "268c98f8942d81602d10494daf5a6ac736cb069896052ad0e0dd422c0188e033"
+      },
+      "candidate_pages_parquet": {
+        "bytes": 92866,
+        "file": "candidate_pages.part-00002-of-00004.parquet",
+        "sha256": "741eb76024ad04cb72703bbe35081839e2ca8156b52471ac3065d0dfcdb88fe3"
+      },
+      "color_candidates_jsonl": {
+        "bytes": 5225281,
+        "file": "color_candidates.part-00002-of-00004.jsonl",
+        "sha256": "ddab494905b6f2fc7da4538ee8fd7107c3c54a87696bcf23e4f7052b6035992d"
+      },
+      "color_candidates_parquet": {
+        "bytes": 259168,
+        "file": "color_candidates.part-00002-of-00004.parquet",
+        "sha256": "01d1c767ca9ebe95ed9f5d19093022f67dd27dd5da6ab5d43dc4e111a32969b1"
+      },
+      "counts": {
+        "candidate_pages": 584,
+        "color_candidates": 2481,
+        "source_documents": 160
+      },
+      "shard_index": 2,
+      "source_documents_jsonl": {
+        "bytes": 174121,
+        "file": "source_documents.part-00002-of-00004.jsonl",
+        "sha256": "59e77376f3b2ea6b5111dcba288fee4ad6d286ba281bf09285c27e10c92a8cd7"
+      },
+      "source_documents_parquet": {
+        "bytes": 30431,
+        "file": "source_documents.part-00002-of-00004.parquet",
+        "sha256": "3352ab96a734a2e9db17519f4ad10f3ccab24b5de672c3ea9ba3462f9f13d1c7"
+      },
+      "summary": {
+        "bytes": 920,
+        "file": "run-summary.part-00002-of-00004.json",
+        "sha256": "a4d838e74769a22047bd4c488517200b335afd1858c136424e329c077fbd4c27"
+      }
+    },
+    {
+      "candidate_pages_jsonl": {
+        "bytes": 1244539,
+        "file": "candidate_pages.part-00003-of-00004.jsonl",
+        "sha256": "71b7f9b7a77a71e83a030b368d629e4902496eb9ada234c4e07301262807b6c2"
+      },
+      "candidate_pages_parquet": {
+        "bytes": 128309,
+        "file": "candidate_pages.part-00003-of-00004.parquet",
+        "sha256": "2f0dae3a1a096d30969eeed6d0c0fdfbf84fc4b1c2292c2af22ebcc0a956aee2"
+      },
+      "color_candidates_jsonl": {
+        "bytes": 7802871,
+        "file": "color_candidates.part-00003-of-00004.jsonl",
+        "sha256": "0ecbd705a4bc3074e466f596e3b72d758088a675ce94518d35ea18207845a918"
+      },
+      "color_candidates_parquet": {
+        "bytes": 357520,
+        "file": "color_candidates.part-00003-of-00004.parquet",
+        "sha256": "322168d9a5d5a9e9f912aaffbe564f9944138368ee2ef1ccbdbd21c75e8b00b9"
+      },
+      "counts": {
+        "candidate_pages": 859,
+        "color_candidates": 3694,
+        "source_documents": 204
+      },
+      "shard_index": 3,
+      "source_documents_jsonl": {
+        "bytes": 223047,
+        "file": "source_documents.part-00003-of-00004.jsonl",
+        "sha256": "f53398cdb5b72f85fc90576461a0885cfd325412dd1d68b1fc6e3aa6bd58bd9b"
+      },
+      "source_documents_parquet": {
+        "bytes": 35902,
+        "file": "source_documents.part-00003-of-00004.parquet",
+        "sha256": "fc3e515ae0263c4fe0efe5d58fe36a6fb31096091608077acf205b3e7d938249"
+      },
+      "summary": {
+        "bytes": 921,
+        "file": "run-summary.part-00003-of-00004.json",
+        "sha256": "267cc25ab73add428fae0bf333af53748164b43b7121cfd66733547e7cc042a0"
+      }
+    }
+  ],
+  "pipeline_version": "gm-official-color-tables-v1",
+  "schema_version": 1,
+  "shard_count": 4,
+  "tables": [
+    {
+      "columns": 19,
+      "foreign_keys": {},
+      "path": "source_documents.parquet",
+      "primary_key": [
+        "source_id"
+      ],
+      "rows": 691,
+      "schema": [
+        {
+          "name": "source_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "direct_url",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "final_url",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "document_title",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "publisher",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "source_type",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "officiality",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "make",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "model",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "year_start",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "year_end",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "document_revision_date_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "pdf_metadata_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "retrieved_at",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "artifact_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "artifact_bytes",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "artifact_relpath",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "pdf_page_count",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "pipeline_version",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "sha256": "7459b1b94622965342b68eefc621862eb9fb382fa9aa1f7f6c7ee209797986c7",
+      "table": "source_documents"
+    },
+    {
+      "columns": 29,
+      "foreign_keys": {
+        "source_id": "source_documents.source_id"
+      },
+      "path": "candidate_pages.parquet",
+      "primary_key": [
+        "source_id",
+        "pdf_page"
+      ],
+      "rows": 2774,
+      "schema": [
+        {
+          "name": "source_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "direct_url",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "document_title",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "model",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "year_start",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "year_end",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "artifact_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "artifact_bytes",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "retrieved_at",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "pdf_page",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "printed_page_locator",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "document_revision_date_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "candidate_page_score",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "extraction_method",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "extraction_engine",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "text_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "text_bytes",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "text_relpath",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "render_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "render_bytes",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "render_width",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "render_height",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "render_relpath",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "page_restrictions_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_review_status",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_reviewed_at",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_reviewer",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_review_notes",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "pipeline_version",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "sha256": "3a5658806850fa1ce51671272f7e8a1ed0c3b61e7b8e312e61eb04211f99c294",
+      "table": "candidate_pages"
+    },
+    {
+      "columns": 47,
+      "foreign_keys": {
+        "source_id": "source_documents.source_id",
+        "source_id,pdf_page": "candidate_pages.source_id,pdf_page"
+      },
+      "path": "color_candidates.parquet",
+      "primary_key": [
+        "candidate_id"
+      ],
+      "rows": 11733,
+      "schema": [
+        {
+          "name": "candidate_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "source_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "direct_url",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "document_title",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "publisher",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "source_type",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "officiality",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "make",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "model",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "model_year",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "year_start",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "year_end",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "document_revision_date_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "pdf_page",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "printed_page_locator",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "retrieved_at",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "artifact_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "artifact_bytes",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "color_name_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "color_name_normalized",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "paint_code_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "paint_code_normalized",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "secondary_color_name_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "secondary_paint_code_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "additional_columns_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "row_kind",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "restriction_raw",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "page_restrictions_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "availability_claim",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "record_status",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "verification_status",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "confidence",
+          "nullable": true,
+          "type": "float64"
+        },
+        {
+          "name": "confidence_band",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "evidence_text",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "evidence_line",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "extraction_method",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "extraction_engine",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "text_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "text_relpath",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "render_sha256",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "render_bytes",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "render_relpath",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_review_status",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_reviewed_at",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_reviewer",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "visual_review_notes",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "pipeline_version",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "sha256": "eb995822899c1e3b95a32874cb395c62c173f0454d9575002909a119a840f2b8",
+      "table": "color_candidates"
+    }
+  ]
+}

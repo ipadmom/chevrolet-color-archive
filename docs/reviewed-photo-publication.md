@@ -1,115 +1,135 @@
-# Reviewed photo publication
+# Reviewed community photo publication
 
-The publication worker is the hard boundary between public uploads in Sites and
-the GitHub-hosted archive. It does not infer permission from a filename,
-selection, upload form, or automated license label. A human must explicitly
-approve or reject every selected candidate against a complete metadata
-snapshot.
+The publication worker is the hard boundary between private staged uploads in
+Sites and the public GitHub archive. It never infers permission from a filename,
+vehicle selection, upload form, or automated label. A human must approve or
+reject every candidate against the complete saved review snapshot.
 
-The worker lives in `crawler/publish/`. It uses Node.js plus the pinned Sharp
-decoder/encoder. Its tests use a loopback fixture and make no live request.
+Reviewed community uploads are published to the versioned GitHub Release
+`community-photo-archive-v1`. They are not committed to the repository and are
+not served from `raw.githubusercontent.com`.
 
-## Credentials and API protocol
+## Existing archive choices
 
-The worker reads these values only from its process environment:
+The example-photo chooser also accepts one or more candidate IDs from the
+pinned Commons archive Release, `photo-archive-v1`. The selection endpoint
+resolves every ID against `data/photos/commons-release-manifest.json` and
+requires an exact model, year, and color selection context. A caller cannot
+substitute an arbitrary URL or reuse a candidate under a different record.
+
+An archive-only choice is stored immediately as a processed curatorial
+selection. A mixed archive-and-upload choice stores the same archive receipt on
+the queued upload selection. The canonical receipt records the Release owner,
+repository, tag, asset name, pinned GitHub URL, digest, byte count,
+attribution, license, and Commons description-page URL. Its SHA-256 is stored
+beside it in D1. It does not contain Wikimedia image URLs or image bytes, and it
+does not create another Release asset. Repeating the exact choice returns the
+existing selection record.
+
+## Credentials and protocol
+
+The worker reads credentials only from its process environment:
 
 - `SITES_BASE_URL`, the HTTPS Sites deployment origin;
 - `PUBLISH_QUEUE_TOKEN`, the private bearer token for queue reads, claims,
   downloads, and acknowledgments;
-- `GH_TOKEN`, required only for `--push`.
+- `GH_TOKEN`, required only for GitHub Release publication.
 
-Neither token is written, printed, included in an error, placed in a URL, or
-passed as a command argument.
+Tokens are never written, printed, placed in a URL, included in publication
+metadata, or passed as a process argument. GitHub publication first calls the
+authenticated user endpoint and requires the login to be exactly `ipadmom`.
 
 The Sites protocol is:
 
-1. `GET /api/selections?status=queued&limit=100` returns bounded pages shaped as
-   `{items,nextCursor}`. Every page requires
-   `Authorization: Bearer $PUBLISH_QUEUE_TOKEN`.
-2. `PATCH /api/selections` with `{action:"claim",leaseSeconds:1800}` leases one
-   atomic selection and returns `{leaseToken,selection}`. The hydrated selection
-   contains candidate provenance (`originalUrl`), the stored `sha256`, and a
-   private `downloadUrl`.
-3. Each approved candidate is downloaded from its returned `downloadUrl` using
-   the same bearer credential.
-4. After GitHub confirms the push, the worker sends
-   `{action:"ack",selectionId,leaseToken,outcome:"processed",publishedAssets}`
-   with an exact candidate-to-content-addressed GitHub path and digest mapping.
-5. A failure before confirmed GitHub publication is acknowledged as `retry`
-   with a server-approved `errorCode`. A selection containing a rights
-   rejection is acknowledged as `failed` with `rights_review_rejected` and the
-   exact `rejectedCandidateIds`. Free-form errors are never stored.
+1. Read every page of the authenticated `queued` selection list.
+2. Save a new schema-version-4 review document. Existing review files are never
+   replaced.
+3. Claim one reviewed selection with a bounded lease.
+4. Reconcile the claimed metadata against the saved review, then download each
+   approved private R2 object through its authenticated API URL.
+5. Verify the source digest and image type, decode and re-encode the image, and
+   strip private container metadata.
+6. Upload the deterministic image and attribution receipt to the GitHub Release.
+7. Acknowledge `processed` only after every Release asset is confirmed.
 
-Lease tokens remain in memory only. Queue and image URLs must stay on the exact
-Sites origin, use HTTPS outside loopback tests, and contain no URL credentials.
+A failure before confirmed Release publication is acknowledged as `retry` with
+an enumerated error code. A rights rejection fails the whole selection and names
+the rejected candidates. Free-form operational errors are not stored.
 
-## Publication guarantees
+## Release asset contract
 
-The worker:
+Each sanitized image has a content-addressed asset name:
 
-- paginates through the complete authenticated queue when preparing a full
-  review;
-- creates a review document without replacing an existing review file;
-- requires one explicit `approve` or `reject` decision for every candidate;
-- rejects publication if saved candidate metadata or immutable selection
-  metadata differs from the claimed record;
-- binds approval to `originalUrl` and the stored SHA-256, then rejects a
-  download whose bytes do not match that digest;
-- verifies byte count, HTTP type, metadata type, image magic bytes, dimensions,
-  a 40-million-pixel per-frame limit, at most 500 frames, and an 80-million
-  aggregate decoded-pixel limit;
-- decodes and re-encodes each image through pinned Sharp/libvips settings, then
-  strips unapproved chunks again. This removes EXIF, XMP, comments, ICC
-  payloads, private extensions, and other nonpixel container metadata before
-  publication. Animated WebP is rejected; other accepted animation is bounded;
-- records source and published digests, final dimensions, removed metadata
-  classes, and sanitizer version;
-- names assets by full SHA-256 at
-  `public/vehicle-photos/assets/<sha256>.<extension>`;
-- merges the reviewed selection, candidate provenance, attribution, rights
-  review, and audited transform record into
-  `public/vehicle-photos/attribution.json`; operational queue errors are omitted;
-- removes the private queue download URL and strips every query string and
-  fragment from public source provenance. The saved review still binds the
-  reviewer to the exact original URL;
-- rejects known or token-shaped credential material before a review document or
-  attribution manifest can be written;
-- never replaces different bytes at an existing hash path;
-- commits and pushes only when `--push` is present;
-- acknowledges `processed` only after the push succeeds.
+```text
+<published-sha256>.<jpg|png|gif|webp>
+```
 
-The server’s acknowledgment is atomic for the whole selection. It cannot mark
-only some selected candidates as published. If any candidate is rejected during
-rights review, the worker fails the entire selection without downloading or
-publishing any of its candidates and marks only the named rejected candidates
-as rejected. Approved candidates in that failed selection remain staged. A
-consumed receipt cannot be reused. To publish an approved subset, upload each
-approved file again. An exact-byte duplicate reuses the canonical staged object
-and issues a fresh one-use receipt, then the browser can submit a new selection.
+Its pinned public URL is:
 
-For a processed selection, the acknowledgment must map every candidate to its
-exact sanitized digest and canonical GitHub asset path. D1 stores that mapping
-in the same atomic transition. Anonymous photo lists and detail redirects use
-the pinned, content-addressed `ipadmom` GitHub asset. The original R2 object
-remains private and is available only to the authenticated publisher for audit
-and recovery.
+```text
+https://github.com/ipadmom/chevrolet-color-archive/releases/download/community-photo-archive-v1/<asset-name>
+```
 
-Upload receipts expire 24 hours after issue. The browser retains unconsumed
-receipts only in same-tab `sessionStorage`, never the staged image bytes. It
-removes a receipt after successful queue submission and discards expired
-receipts. If a tab is closed, storage is cleared, or a receipt expires, upload
-the same bytes again to obtain a fresh receipt.
+Each candidate also receives a deterministic JSON attribution receipt:
 
-Expired receipt rows are pruned in bounded batches only after the 24-hour TTL
-plus a seven-day grace period. Receipt cleanup never deletes candidate metadata
-or image bytes. A rights rejection keeps a D1 tombstone immediately; its
-private R2 object is eligible for bounded purge only after a two-hour grace
-period, so ambiguous acknowledgments and in-flight recovery do not race an
-immediate delete.
+```text
+publication-<selection-id>-<candidate-id>-<published-sha256>.json
+```
 
-## 1. Prepare the rights review
+The receipt preserves the reviewed vehicle context, public source provenance,
+credit, license, rights basis, source and published digests, sanitizer version,
+removed metadata classes, final dimensions, byte count, release tag, asset
+name, and pinned URL. Private queue download URLs are removed. Query strings and
+fragments are removed from public source URLs so temporary signatures cannot be
+archived accidentally. The original review document remains the exact reviewer
+receipt, including the source value the reviewer saw.
 
-Set the deployment origin and queue credential without echoing the credential:
+The worker computes and records SHA-256 and byte length for both the image and
+the attribution receipt. D1 accepts a processed acknowledgment only when every
+candidate is mapped exactly once and all of these fields pass the fixed Release
+contract:
+
+- release tag;
+- image asset name and pinned URL;
+- image SHA-256 and sanitized byte count;
+- attribution asset name and pinned URL;
+- attribution SHA-256 and byte count.
+
+The candidate rows and queue selection transition atomically. Public list and
+detail routes require all Release fields and redirect only to the pinned
+`ipadmom` Release URL. The retired `published_asset_path` column remains solely
+for migration audit and is set to null for new publications.
+
+## Privacy and retention
+
+The sanitizer decodes and re-encodes each accepted image through pinned
+Sharp/libvips settings, then strips unapproved chunks again. EXIF, XMP,
+comments, ICC payloads, private extensions, and other nonpixel container
+metadata are deleted before public upload. Animated WebP is rejected. Other
+animation is bounded by frame and aggregate decoded-pixel limits.
+
+The original upload remains in private R2 after approval for audit and recovery.
+It is never exposed to an anonymous request. A rejected candidate receives an
+immediate D1 tombstone; its private object becomes eligible for bounded deletion
+after the existing two-hour recovery grace period. Upload receipt cleanup does
+not delete candidate metadata or approved image bytes.
+
+## Idempotency and collision handling
+
+Asset names contain the full sanitized SHA-256. On retry, the publisher lists
+the existing Release assets and reuses a name only after verifying its state,
+byte count, pinned URL, and SHA-256. It uses GitHub's digest when present and
+otherwise downloads the public asset through a bounded reader and hashes the
+bytes locally.
+
+A matching asset is reused. A matching name with different size, URL, or digest
+fails closed. A concurrent upload collision is reconciled by listing the
+Release again and applying the same verification. The queue is never marked
+processed on an unverified collision.
+
+## Review and publication commands
+
+Prepare a complete review:
 
 ```powershell
 $env:SITES_BASE_URL = "https://the-deployed-sites-origin.example"
@@ -118,45 +138,11 @@ node crawler/publish/cli.mjs `
   --prepare-review work/photo-rights-review.json
 ```
 
-The command follows all queue pages and writes
-`"completeQueueSnapshot": true`. Use `--selection-id 7` one or more times only
-for a bounded inspection or local check. A filtered review is marked incomplete
-and cannot be used with `--push`, because the claim endpoint leases the next
-queue item rather than a requested ID.
+For each candidate, record `approve` or `reject`. Approval requires reviewer,
+timestamp, exact credit, exact license, approved source digest, reviewed source
+URL, and a written rights basis. Do not delete rejected review items.
 
-The command refuses to overwrite an existing review file. The review file
-preserves the exact queue and candidate metadata supplied by Sites.
-
-For every item, inspect the source record, actual image, authorship, stated
-license or permission, attribution requirements, and whether the license covers
-republication. Then edit `review`:
-
-```json
-{
-  "decision": "approve",
-  "reviewedBy": "Reviewer name",
-  "reviewedAt": "2026-07-20T19:00:00.000Z",
-  "approvedCredit": "Exact unchanged candidate credit",
-  "approvedLicense": "Exact unchanged candidate license",
-  "approvedSha256": "Exact lowercase SHA-256 from the candidate snapshot",
-  "reviewedOriginalUrl": "Exact source URL from the candidate snapshot, or null",
-  "rightsBasis": "What was checked and why republication is permitted",
-  "reason": "",
-  "notes": "Optional full review notes"
-}
-```
-
-For a rejection, set `decision` to `reject` and supply a concrete `reason`.
-Do not delete rejected items. An empty or missing decision stops the run before
-any claim or image download.
-
-For community uploads, verify the uploader’s authority to grant the stated
-permission. A vehicle appearing to match a factory color is not rights evidence
-and is not proof that the paint is original.
-
-## 2. Run a local publication check
-
-Run without `--push` first:
+Run the local check:
 
 ```powershell
 node crawler/publish/cli.mjs `
@@ -164,106 +150,36 @@ node crawler/publish/cli.mjs `
   --repo-root .
 ```
 
-This authenticated read-only queue pass downloads approved bytes through a
-streaming hard byte cap and builds the local asset store and attribution
-manifest. It does not claim or acknowledge a queue item, and it does not invoke
-Git. It applies the same atomic-selection rule as the push path: any rejection
-stops the local check before download. Inspect every new asset and the complete
-attribution manifest.
+The local check downloads and sanitizes the approved bytes, then prepares the
+exact image and receipt assets in memory. It neither writes photo blobs into the
+repository nor contacts GitHub.
 
-The binary store is globally deduplicated by SHA-256. A prior
-`selectionId:candidateId` publication record must remain identical on rerun.
-The default file limit is 25 MB. Oversized files are rejected in full, never
-partially saved.
-
-## 3. Claim, commit, push, and acknowledge
-
-After inspection, set `GH_TOKEN` from the approved credential source without
-echoing it:
+Publish after inspection:
 
 ```powershell
 $env:GH_TOKEN = (Get-Content -Raw $approvedGitHubTokenPath).Trim()
 node crawler/publish/cli.mjs `
   --approvals work/photo-rights-review.json `
   --repo-root . `
-  --push
+  --publish-release
 ```
 
-Before claiming anything, the worker verifies:
+`--push` remains a compatibility alias, but it performs the same Release upload
+and never creates a Git commit. Remove both tokens from the environment after
+the run.
 
-- `gh api --hostname github.com user` identifies the token owner as exactly
-  `ipadmom`;
-- the current branch is exactly `main`;
-- every fetch and push URL for `origin` is exactly
-  `https://github.com/ipadmom/chevrolet-color-archive.git`; SSH remotes, URL
-  rewrites, HTTP authorization headers, and alternate `pushurl` destinations
-  are rejected;
-- the supplied repository root is Git’s actual top level;
-- the worktree is clean before review publication begins;
-- fetched `origin/main` is an ancestor of local `main`, rebasing a clean local
-  branch before any claim when necessary;
-- local `main` has no unpushed commits, except one exact publication-only retry
-  commit whose paths stay under the canonical asset root.
-
-For each reviewed selection, the worker claims a lease, rechecks the claimed
-metadata, downloads with bearer authentication, writes or deduplicates the
-assets, commits only the publication paths, and pushes. Only then does it
-acknowledge `processed`.
-
-Before claiming, it reconciles the review against authenticated `processed`,
-`failed`, and `leased` queue pages. Already terminal selections are skipped,
-which makes a complete multi-selection review reusable after a partial run. An
-active lease on a reviewed selection stops the run before another claim.
-
-One host-local filesystem publisher lock serializes manifest writes and queue
-claims for the repository. A dead same-host owner is recovered by PID
-verification; a fresh malformed or unowned lock fails closed. Git hooks are
-disabled for publisher commands. Git child processes never inherit `GH_TOKEN`,
-`PUBLISH_QUEUE_TOKEN`, trace settings, or credential, executable, proxy, TLS,
-Node preload, or shell preload override variables. Executable paths are
-resolved before credentialed work. A loopback credential broker supplies the
-verified `ipadmom` token only when Git requests HTTPS credentials for the exact
-repository path, without placing the token in a file, process argument, Git
-configuration, or Git environment.
-
-If a push fails, the worker acknowledges `retry`. If the commit succeeded
-locally, a later run permits a push-only retry only for one exact
-publication-only commit. If an earlier push reached GitHub but acknowledgment
-did not, a later run first fetches `origin/main` and proves the reviewed
-content-addressed files and manifest are already present, even when newer
-commits have advanced the branch.
-
-If GitHub publication succeeds but the processed acknowledgment fails, the
-server lease remains authoritative. Reuse the original complete review after
-the lease expires. The push is idempotent, and acknowledgment will be retried
-without changing the reviewed manifest.
-
-If a claimed selection is not in the completed review, the worker immediately
-acknowledges `retry` and stops. It never applies approval from one queue item to
-another.
-
-Remove both tokens from the environment after the run:
-
-```powershell
-Remove-Item Env:PUBLISH_QUEUE_TOKEN
-Remove-Item Env:GH_TOKEN
-```
-
-## Offline checks
+## Offline verification
 
 ```powershell
 npm --prefix crawler/publish test
 npm --prefix crawler/publish run check
-node crawler/publish/cli.mjs --help
+npm run typecheck
+npm run build
+node --test tests/api-security.test.mjs tests/api-state.test.mjs
+node --test tests/api-routes.integration.mjs
 ```
 
-The tests cover authenticated pagination, claim ordering, bearer-protected
-downloads, streamed size enforcement, processed and retry acknowledgments,
-invalid-hydration lease recovery, atomic rights rejection, provenance and
-SHA-256 drift, decode/re-encode metadata stripping, per-frame and aggregate
-decompression limits, deduplication, overwrite refusal, exact GitHub
-account/repository/branch guards, token-free Git environments, stale-lock
-recovery, publisher locking, and credential-free URL policy. They use
-directories under
-`crawler/publish/test/.tmp/`, do not contact Sites or GitHub, do not read
-credentials, and do not run Git.
+The publisher tests mock GitHub. They do not read credentials, create a Release,
+or upload live user data. The API integration test uses isolated Miniflare D1
+and R2 instances and proves that a staged upload remains private until the full
+Release mapping is atomically acknowledged.

@@ -2,6 +2,11 @@ import modelCatalog from "../data/catalog/chevrolet-us-nameplates.json";
 import platformEraData from "../data/catalog/chevrolet-platform-eras.json";
 import tahoe1995to2000Audit from "../data/audits/tahoe-1995-2000.json";
 import tahoe2001to2007Audit from "../data/audits/tahoe-2001-2007.json";
+import suburban1969to1976Audit from "../data/audits/suburban-1969-1976.json";
+import suburban2000to2007Audit from "../data/audits/suburban-2000-2007.json";
+import suburbanBrochurePaletteAudit from "../data/audits/suburban-brochure-palettes-1982-1989-1993.json";
+import modernColorSourceData from "../data/sources/modern-chevrolet-color-source-candidates.json";
+import specialtyColorSourceData from "../data/sources/specialty-color-source-candidates.json";
 
 export type AvailabilityState = "listed" | "restricted";
 
@@ -9,7 +14,11 @@ export type Availability = {
   state: AvailabilityState;
   label: string;
   code: string;
+  factoryCode?: string | null;
+  factoryCodeStatus?: string;
+  touchUpCode?: string;
   restriction?: string;
+  sourceIds?: string[];
 };
 
 export type ArchiveColor = {
@@ -21,17 +30,47 @@ export type ArchiveColor = {
   availability: Record<string, Availability>;
 };
 
-export type YearSource = {
+export type YearSourceCitation = {
   name: string;
   chart: string;
   locator: string;
   revision: string;
   url: string;
+  sourceId?: string;
+  sourceType?: string;
+  publisher?: string;
+  carrier?: string;
+  reuseLicense?: string;
+  retrievalUrl?: string;
+  sourceNotes?: string;
+  contentType?: string;
+  documentAuthority?: "official_manufacturer_document";
+  retrievalHostType?: "official_live" | "archival_mirror";
+  archiveUrl?: string;
+  originalUrl?: string;
+  officialUrl?: string;
+  historicalOfficialUrl?: string;
+  landingUrl?: string;
+  evidenceClass?:
+    | "qualified_palette_union"
+    | "specialty_palette_subset"
+    | "qualified_exact_program_palette";
+  artifactSha256?: string;
+  artifactBytes?: number;
+  pdfPageCount?: number;
+  retrievedAt?: string;
+  availabilityScope?: string;
+  limitations?: string[];
+};
+
+export type YearSource = YearSourceCitation & {
+  supportingSources?: YearSourceCitation[];
 };
 
 export type Generation = {
   id: string;
   label: string;
+  programLabel?: string;
   range: string;
   years: string[];
   listingCount: number;
@@ -707,6 +746,7 @@ type AuditedSolidColor = {
   name: string;
   label?: string;
   restriction?: string;
+  sourceIds?: string[];
 };
 
 const chevelleSolidInventory: AuditedSolidColor[] = [
@@ -877,6 +917,7 @@ function buildExactNameTimeline(
   rows: AuditedSolidColor[],
 ): ArchiveColor[] {
   const grouped = new Map<string, ArchiveColor>();
+  const rowCodes = new Map<string, string[]>();
   for (const row of rows) {
     const availability: Availability = row.restriction
       ? {
@@ -884,19 +925,25 @@ function buildExactNameTimeline(
           label: row.label ?? row.name,
           code: row.code,
           restriction: row.restriction,
+          ...(row.sourceIds?.length ? { sourceIds: row.sourceIds } : {}),
         }
       : {
           state: "listed",
           label: row.label ?? row.name,
           code: row.code,
+          ...(row.sourceIds?.length ? { sourceIds: row.sourceIds } : {}),
         };
     const existing = grouped.get(row.name);
     if (existing) {
       existing.availability[row.year] = availability;
-      const codes = existing.rowCode.split(" / ");
-      if (!codes.includes(row.code)) existing.rowCode += ` / ${row.code}`;
+      const codes = rowCodes.get(row.name)!;
+      if (!codes.includes(row.code)) {
+        codes.push(row.code);
+        existing.rowCode = codes.join("; ");
+      }
       continue;
     }
+    rowCodes.set(row.name, [row.code]);
     grouped.set(row.name, {
       id: `${modelId}-${archiveColorId(row.name)}-${row.year}`,
       name: row.name,
@@ -912,35 +959,65 @@ type TahoeAuditColor = {
   name: string;
   code: string | null;
   finish: string | null;
+  wa_number?: string;
+  restriction?: string;
+  aliases?: string[];
+  source_ids?: string[];
 };
 
-type TahoeAuditPublication = {
+type TahoeAuditDocument = {
+  source_id?: string;
   title: string;
   publisher: string;
   url: string;
+  source_type?: string;
+  carrier?: string;
+  retrieval_url?: string;
+  archive_url?: string;
+  official_url?: string;
+  landing_url?: string;
+  content_type?: string;
   pages?: string[];
-  publication_date?: string | null;
-  publication_date_note?: string;
-};
-
-type TahoeAuditSource = {
-  title: string;
-  publisher: string;
-  url: string;
   pdf_page?: number;
-  printed_page?: number;
+  pdf_pages?: number[];
+  printed_page?: number | string;
+  printed_pages?: Array<number | string>;
   section?: string;
   publication_date?: string | null;
+  publication_date_note?: string;
   publication_note?: string;
+  document_authority?: string;
+  retrieval_host_type?: string;
+  sha256?: string;
+  bytes?: number;
+  pdf_page_count?: number;
+  retrieved_at?: string;
+  supporting_sources?: TahoeAuditDocument[];
+};
+
+type TahoeAuditProgramPalette = {
+  program_id: string;
+  program_label: string;
+  platform_family: string;
+  claim_scope: string;
+  evidence_class?: "qualified_exact_program_palette";
+  pdf_page?: number;
+  pdf_pages?: number[];
+  printed_page?: number;
+  printed_pages?: number[];
+  section?: string;
+  source?: TahoeAuditDocument;
+  colors: TahoeAuditColor[];
 };
 
 type TahoeAuditYear = {
   year: number;
   coverage_status?: string;
   status?: string;
-  publication?: TahoeAuditPublication;
-  source?: TahoeAuditSource;
+  publication?: TahoeAuditDocument;
+  source?: TahoeAuditDocument;
   exterior_colors: TahoeAuditColor[];
+  program_palettes?: TahoeAuditProgramPalette[];
   two_tone_combinations?: unknown[];
 };
 
@@ -957,38 +1034,121 @@ function tahoeDisplayName(color: TahoeAuditColor) {
   return color.name;
 }
 
-function tahoeAuditSource(item: TahoeAuditYear): YearSource {
-  if (item.publication) {
-    return {
-      name: item.publication.publisher,
-      chart: `${item.publication.title} exterior-color availability chart`,
-      locator: item.publication.pages?.join("; ") ?? "Official chart page",
-      revision:
-        item.publication.publication_date_note ??
-        item.publication.publication_date ??
-        "Model-year publication; chart date not printed",
-      url: item.publication.url,
-    };
-  }
+function naturalList(values: Array<string | number>) {
+  if (values.length < 2) return values.join("");
+  if (values.length === 2) return values.join(" and ");
+  return `${values.slice(0, -1).join(", ")}, and ${values.at(-1)}`;
+}
 
-  const source = item.source;
-  if (!source) throw new Error(`Verified Tahoe year ${item.year} has no source`);
-  const locator = [
-    source.pdf_page ? `PDF p. ${source.pdf_page}` : null,
-    source.printed_page ? `printed p. ${source.printed_page}` : null,
-  ]
-    .filter(Boolean)
-    .join(", ");
+function tahoeDocumentLocator(source: TahoeAuditDocument) {
+  if (source.pages?.length) return source.pages.join("; ");
+  const pdfPages = source.pdf_pages ??
+    (source.pdf_page !== undefined ? [source.pdf_page] : []);
+  const printedPages = source.printed_pages ??
+    (source.printed_page !== undefined ? [source.printed_page] : []);
+  const pdfPart = pdfPages.length
+    ? `PDF ${pdfPages.length === 1 ? "p." : "pp."} ${naturalList(pdfPages)}`
+    : null;
+  const printedPart = printedPages.length
+    ? `printed ${printedPages.length === 1 ? "p." : "pp."} ${naturalList(printedPages)}`
+    : null;
+  return [pdfPart, printedPart].filter(Boolean).join(", ") ||
+    source.section ||
+    "Source page";
+}
+
+function tahoeAuditCitation(
+  source: TahoeAuditDocument,
+  evidenceClass?: YearSourceCitation["evidenceClass"],
+): YearSourceCitation {
   return {
-    name: source.publisher,
-    chart: source.section ?? `${source.title} exterior-color list`,
-    locator: locator || "Official model-year kit",
+    name: source.title,
+    chart: source.section ?? `${source.title} exterior-color availability chart`,
+    locator: tahoeDocumentLocator(source),
     revision:
+      source.publication_date_note ??
       source.publication_note ??
       source.publication_date ??
       "Model-year publication; chart date not printed",
     url: source.url,
+    sourceId: source.source_id,
+    sourceType: source.source_type,
+    publisher: source.publisher,
+    carrier: source.carrier,
+    retrievalUrl: source.retrieval_url,
+    contentType: source.content_type,
+    documentAuthority:
+      source.document_authority === "official_manufacturer_document"
+        ? "official_manufacturer_document"
+        : undefined,
+    retrievalHostType:
+      source.retrieval_host_type === "official_live" ||
+      source.retrieval_host_type === "archival_mirror"
+        ? source.retrieval_host_type
+        : undefined,
+    archiveUrl: source.archive_url,
+    originalUrl:
+      source.archive_url && source.archive_url !== source.url
+        ? source.url
+        : undefined,
+    officialUrl: source.official_url,
+    landingUrl: source.landing_url,
+    evidenceClass,
+    artifactSha256: source.sha256,
+    artifactBytes: source.bytes,
+    pdfPageCount: source.pdf_page_count,
+    retrievedAt: source.retrieved_at,
   };
+}
+
+function tahoeAuditSource(
+  item: TahoeAuditYear,
+  sourceOverride?: TahoeAuditDocument,
+  evidenceClass?: YearSourceCitation["evidenceClass"],
+): YearSource {
+  const source = sourceOverride ?? item.source ?? item.publication;
+  if (!source) {
+    throw new Error(`Verified Tahoe year ${item.year} has no source`);
+  }
+  return {
+    ...tahoeAuditCitation(source, evidenceClass),
+    supportingSources: source.supporting_sources?.map((supportingSource) =>
+      tahoeAuditCitation(supportingSource),
+    ),
+  };
+}
+
+function tahoeAuditColorCode(color: TahoeAuditColor) {
+  return [color.code, color.wa_number].filter(Boolean).join(" / ") ||
+    "Not printed";
+}
+
+function tahoeSourceIds(source: TahoeAuditDocument) {
+  return [
+    source.source_id,
+    ...(source.supporting_sources?.map((item) => item.source_id) ?? []),
+  ].filter((sourceId): sourceId is string => Boolean(sourceId));
+}
+
+function tahoeAuditRows(
+  year: number,
+  colors: TahoeAuditColor[],
+  source: TahoeAuditDocument,
+  programLabel?: string,
+): AuditedSolidColor[] {
+  const defaultSourceIds = tahoeSourceIds(source);
+  return colors.map((color) => ({
+    year: String(year),
+    code: tahoeAuditColorCode(color),
+    name: tahoeDisplayName(color),
+    restriction: [
+      programLabel ? `Program-specific palette: ${programLabel}.` : null,
+      color.restriction,
+    ]
+      .filter(Boolean)
+      .join(" ") || undefined,
+    sourceIds: color.source_ids ?? defaultSourceIds,
+  }));
 }
 
 function buildTahoeAuditGenerations(audits: TahoeAuditYear[]) {
@@ -998,9 +1158,21 @@ function buildTahoeAuditGenerations(audits: TahoeAuditYear[]) {
     )
     .sort((left, right) => left.year - right.year);
   const groups: TahoeAuditYear[][] = [];
+  const eraKey = (year: number) =>
+    year <= 1999
+      ? "gmt420"
+      : year === 2000
+        ? "mixed-2000"
+        : year <= 2006
+          ? "gmt820"
+          : "gmt921";
   for (const item of verified) {
     const current = groups.at(-1);
-    if (!current || item.year !== current.at(-1)!.year + 1) {
+    if (
+      !current ||
+      item.year !== current.at(-1)!.year + 1 ||
+      eraKey(item.year) !== eraKey(current.at(-1)!.year)
+    ) {
       groups.push([item]);
     } else {
       current.push(item);
@@ -1009,13 +1181,11 @@ function buildTahoeAuditGenerations(audits: TahoeAuditYear[]) {
 
   return groups.map((group): Generation => {
     const years = group.map((item) => String(item.year));
-    const rows: AuditedSolidColor[] = group.flatMap((item) =>
-      item.exterior_colors.map((color) => ({
-        year: String(item.year),
-        code: color.code ?? "Not printed",
-        name: tahoeDisplayName(color),
-      })),
-    );
+    const rows: AuditedSolidColor[] = group.flatMap((item) => {
+      const source = item.source ?? item.publication;
+      if (!source) throw new Error(`Verified Tahoe year ${item.year} has no source`);
+      return tahoeAuditRows(item.year, item.exterior_colors, source);
+    });
     const twoToneCount = group.reduce(
       (total, item) => total + (item.two_tone_combinations?.length ?? 0),
       0,
@@ -1027,7 +1197,7 @@ function buildTahoeAuditGenerations(audits: TahoeAuditYear[]) {
       years,
       listingCount: rows.length,
       revisionNote:
-        `${rows.length} solid-color listings are transcribed from complete official model-year pages. ` +
+        `${rows.length} solid-color listings are transcribed from complete reviewed model-year tables. ` +
         `${twoToneCount} two-tone rows remain a separate evidence class. Missing paint codes stay marked “Not printed.”`,
       sources: Object.fromEntries(
         group.map((item) => [String(item.year), tahoeAuditSource(item)]),
@@ -1037,10 +1207,64 @@ function buildTahoeAuditGenerations(audits: TahoeAuditYear[]) {
   });
 }
 
-const tahoeAuditGenerations = buildTahoeAuditGenerations([
+function buildTahoeProgramGenerations(audits: TahoeAuditYear[]) {
+  return audits.flatMap((item): Generation[] =>
+    (item.program_palettes ?? []).map((program) => {
+      const baseSource = item.source ?? item.publication;
+      if (!baseSource && !program.source) {
+        throw new Error(`Tahoe ${item.year} ${program.program_id} has no source`);
+      }
+      const source = program.source ?? {
+        ...baseSource!,
+        pages: undefined,
+        pdf_page: program.pdf_page,
+        pdf_pages: program.pdf_pages,
+        printed_page: program.printed_page,
+        printed_pages: program.printed_pages,
+        section: program.section ?? baseSource!.section,
+      };
+      const year = String(item.year);
+      const rows = tahoeAuditRows(
+        item.year,
+        program.colors,
+        source,
+        program.program_label,
+      );
+      return {
+        id: `tahoe-${year}-${program.program_id}`,
+        label: program.platform_family,
+        programLabel: program.program_label,
+        range: year,
+        years: [year],
+        listingCount: rows.length,
+        revisionNote:
+          `${rows.length} colors are published only for ${program.program_label}. ` +
+          "The simultaneous GMT400 and GMT800 programs remain separate, and no all-Tahoe palette is inferred.",
+        sources: {
+          [year]: tahoeAuditSource(item, source, program.evidence_class),
+        },
+        colors: buildExactNameTimeline(
+          `tahoe-${program.program_id}`,
+          rows,
+        ),
+      };
+    }),
+  );
+}
+
+const tahoeAuditYears = [
   ...(tahoe1995to2000Audit.years as TahoeAuditYear[]),
   ...(tahoe2001to2007Audit.years as TahoeAuditYear[]),
-]);
+];
+
+const tahoeAuditGenerations = [
+  ...buildTahoeAuditGenerations(tahoeAuditYears),
+  ...buildTahoeProgramGenerations(tahoeAuditYears),
+].sort((left, right) => Number(left.years[0]) - Number(right.years[0]));
+
+const tahoeAuditVerifiedYearCount = new Set(
+  tahoeAuditGenerations.flatMap((generation) => generation.years),
+).size;
 
 const camaro1970to1975Inventory: AuditedSolidColor[] = [
   { year: "1970", code: "10", name: "Classic White" },
@@ -2388,7 +2612,7 @@ const firstChevelleGeneration: Generation = {
   colors: buildExactNameTimeline("chevelle", chevelleSolidInventory),
 };
 
-const suburban1977SolidInventory: AuditedSolidColor[] = [
+const suburban1977To1981SolidInventory: AuditedSolidColor[] = [
   { year: "1977", code: "86", name: "Black, Midnight" },
   { year: "1977", code: "20", name: "Blue, Lite (Light)" },
   { year: "1977", code: "23", name: "Blue, Hawaiian (Medium)" },
@@ -2404,16 +2628,76 @@ const suburban1977SolidInventory: AuditedSolidColor[] = [
   { year: "1977", code: "60", name: "Tan, Santa Fe" },
   { year: "1977", code: "12", name: "White, Frost" },
   { year: "1977", code: "53", name: "Yellow, Colonial" },
+  { year: "1978", code: "86", name: "Black, Midnight" },
+  { year: "1978", code: "20", name: "Blue, Lite (Light)" },
+  { year: "1978", code: "23", name: "Blue, Hawaiian (Medium)" },
+  { year: "1978", code: "25", name: "Blue, Mariner (Dark) (M)" },
+  { year: "1978", code: "81", name: "Brown, Cordova (Dark) (M)" },
+  { year: "1978", code: "65", name: "Buckskin" },
+  { year: "1978", code: "43", name: "Green, Seamist (Light) (M)" },
+  { year: "1978", code: "76", name: "Mahogany" },
+  { year: "1978", code: "70", name: "Red, Cardinal (Medium)" },
+  { year: "1978", code: "71", name: "Red, Metallic (Dark) (M)" },
+  { year: "1978", code: "68", name: "Russet Metallic (M)" },
+  { year: "1978", code: "17", name: "Silver, Saratoga (M)" },
+  { year: "1978", code: "60", name: "Tan, Santa Fe" },
+  { year: "1978", code: "12", name: "White, Frost" },
+  { year: "1978", code: "53", name: "Yellow, Colonial" },
+  { year: "1979", code: "12", name: "Frost White" },
+  { year: "1979", code: "17", name: "Mystic Silver" },
+  { year: "1979", code: "18", name: "Charcoal (Metallic)" },
+  { year: "1979", code: "23", name: "Hawaiian Blue" },
+  { year: "1979", code: "25", name: "Mariner Blue (Metallic)" },
+  { year: "1979", code: "26", name: "Deep Blue" },
+  { year: "1979", code: "43", name: "Shamrock Green (Metallic)" },
+  { year: "1979", code: "46", name: "Holly Green" },
+  { year: "1979", code: "53", name: "Colonial Yellow" },
+  { year: "1979", code: "60", name: "Santa Fe Tan" },
+  { year: "1979", code: "65", name: "Light Camel (Metallic)" },
+  { year: "1979", code: "71", name: "Dark Carmine Red" },
+  { year: "1979", code: "73", name: "Cardinal Red" },
+  { year: "1979", code: "81", name: "Cordova Brown (Metallic)" },
+  { year: "1979", code: "86", name: "Midnight Black" },
+  { year: "1980", code: "12", name: "Frost White" },
+  { year: "1980", code: "17", name: "Mystic Silver (Metallic)" },
+  { year: "1980", code: "18", name: "Charcoal (Metallic)" },
+  { year: "1980", code: "23", name: "Medium Blue" },
+  { year: "1980", code: "25", name: "Light Blue Metallic" },
+  { year: "1980", code: "30", name: "Nordic Blue Metallic" },
+  { year: "1980", code: "43", name: "Emerald Green" },
+  { year: "1980", code: "60", name: "Santa Fe Tan" },
+  { year: "1980", code: "62", name: "Dark Camel Metallic" },
+  { year: "1980", code: "65", name: "Camel Metallic" },
+  { year: "1980", code: "70", name: "Carmine Red" },
+  { year: "1980", code: "71", name: "Dark Carmine Red" },
+  { year: "1980", code: "73", name: "Cardinal Red" },
+  { year: "1980", code: "86", name: "Midnight Black" },
+  { year: "1980", code: "95", name: "Burnt Orange Metallic" },
+  { year: "1981", code: "12", name: "Frost White" },
+  { year: "1981", code: "17", name: "Light Silver Metallic" },
+  { year: "1981", code: "18", name: "Charcoal Metallic" },
+  { year: "1981", code: "23", name: "Medium Blue" },
+  { year: "1981", code: "25", name: "Light Blue Metallic" },
+  { year: "1981", code: "30", name: "Nordic Blue Metallic" },
+  { year: "1981", code: "43", name: "Emerald Green" },
+  { year: "1981", code: "53", name: "Colonial Yellow" },
+  { year: "1981", code: "60", name: "Santa Fe Tan" },
+  { year: "1981", code: "65", name: "Dark Chestnut Metallic" },
+  { year: "1981", code: "70", name: "Carmine Red" },
+  { year: "1981", code: "71", name: "Dark Carmine Red" },
+  { year: "1981", code: "73", name: "Cardinal Red" },
+  { year: "1981", code: "86", name: "Midnight Black" },
+  { year: "1981", code: "95", name: "Burnt Orange Metallic" },
 ];
 
-const suburban1977: Generation = {
-  id: "suburban-1977-audited-solid-colors",
-  label: "1977 audited chart",
-  range: "1977",
-  years: ["1977"],
-  listingCount: suburban1977SolidInventory.length,
+const suburban1977To1981: Generation = {
+  id: "suburban-1977-1981-audited-solid-colors",
+  label: "1977–1981 audited charts",
+  range: "1977–1981",
+  years: ["1977", "1978", "1979", "1980", "1981"],
+  listingCount: suburban1977To1981SolidInventory.length,
   revisionNote:
-    "The solid-color timeline publishes the chart's boldface primary colors. Page 7 two-tone combinations remain a separate evidence class.",
+    "The solid-color timeline publishes only each chart's boldface primary colors. Secondary-color rows and the two-tone or decor-package charts remain a separate evidence class.",
   sources: {
     "1977": {
       name: "GM Heritage Vehicle Information Kit",
@@ -2422,9 +2706,1474 @@ const suburban1977: Generation = {
       revision: "August 9, 1976",
       url: gmSuburbanKit("1977"),
     },
+    "1978": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 30, printed Suburban Page H",
+      revision: "December 23, 1977",
+      url: gmSuburbanKit("1978"),
+    },
+    "1979": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 32, printed Suburban Page H",
+      revision: "August 18, 1978",
+      url: gmSuburbanKit("1979"),
+    },
+    "1980": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 28, printed Suburban Page H",
+      revision: "August 3, 1979",
+      url: gmSuburbanKit("1980"),
+    },
+    "1981": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 26, printed Suburban Page H",
+      revision: "August 8, 1980",
+      url: gmSuburbanKit("1981"),
+    },
   },
-  colors: buildExactNameTimeline("suburban", suburban1977SolidInventory),
+  colors: buildExactNameTimeline("suburban", suburban1977To1981SolidInventory),
 };
+
+const suburban1983SolidInventory: AuditedSolidColor[] = [
+  { year: "1983", code: "59", name: "Almond" },
+  { year: "1983", code: "19", name: "Black, Midnight" },
+  { year: "1983", code: "21", name: "Blue, Light (Metallic)" },
+  { year: "1983", code: "29", name: "Blue, Midnight" },
+  { year: "1983", code: "63", name: "Bronze, Light (Metallic)" },
+  { year: "1983", code: "68", name: "Mahogany (Metallic)" },
+  { year: "1983", code: "70", name: "Red, Carmine" },
+  { year: "1983", code: "17", name: "Silver (Metallic)" },
+  { year: "1983", code: "12", name: "White, Frost" },
+  { year: "1983", code: "53", name: "Yellow, Colonial" },
+];
+
+const suburban1983: Generation = {
+  id: "suburban-1983-audited-solid-colors",
+  label: "1983 audited chart",
+  range: "1983",
+  years: ["1983"],
+  listingCount: suburban1983SolidInventory.length,
+  revisionNote:
+    "The solid-color timeline publishes only the chart's boldface primary colors. The eight ZY5 paint combinations remain a separate paint-scheme evidence class.",
+  sources: {
+    "1983": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 27, printed C/K Suburban Page H",
+      revision: "February 1983",
+      url: gmSuburbanKit("1983"),
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1983SolidInventory),
+};
+
+const suburban1984To1985SolidInventory: AuditedSolidColor[] = [
+  ...["1984", "1985"].flatMap((year) => [
+    { year, code: "19", name: "Black, Midnight" },
+    { year, code: "21", name: "Blue, Light (Metallic)" },
+    { year, code: "29", name: "Blue, Midnight" },
+    { year, code: "66", name: "Bronze, Indian (Metallic)" },
+    { year, code: "72", name: "Red, Apple" },
+    { year, code: "64", name: "Sand, Desert (Metallic)" },
+    { year, code: "17", name: "Silver (Metallic)" },
+    { year, code: "61", name: "Tan, Doeskin" },
+    { year, code: "12", name: "White, Frost" },
+    { year, code: "53", name: "Yellow, Colonial" },
+  ]),
+];
+
+const suburban1984To1985: Generation = {
+  id: "suburban-1984-1985-audited-solid-colors",
+  label: "1984–1985 audited charts",
+  range: "1984–1985",
+  years: ["1984", "1985"],
+  listingCount: suburban1984To1985SolidInventory.length,
+  revisionNote:
+    "The solid-color timeline publishes only each chart's ten primary colors. Each year's 23 ZY5 paint combinations remain a separate paint-scheme evidence class.",
+  sources: {
+    "1984": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 31, printed C/K Suburban Page H",
+      revision: "February 1984",
+      url: gmSuburbanKit("1984"),
+    },
+    "1985": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 31, printed C/K Suburban Page H",
+      revision: "August 1984",
+      url: gmSuburbanKit("1985"),
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1984To1985SolidInventory),
+};
+
+const suburban1986SolidInventory: AuditedSolidColor[] = [
+  { year: "1986", code: "19", name: "Black, Midnight" },
+  { year: "1986", code: "21", name: "Blue, Light (Metallic)" },
+  { year: "1986", code: "29", name: "Blue, Midnight" },
+  { year: "1986", code: "66", name: "Bronze, Indian (Metallic)" },
+  { year: "1986", code: "55", name: "Copper, Canyon (Metallic)" },
+  { year: "1986", code: "67", name: "Gold, Nevada (Metallic)" },
+  { year: "1986", code: "90", name: "Gray, Steel (Metallic)" },
+  { year: "1986", code: "72", name: "Red, Apple" },
+  { year: "1986", code: "61", name: "Tan, Doeskin" },
+  { year: "1986", code: "12", name: "White, Frost" },
+];
+
+const suburban1986: Generation = {
+  id: "suburban-1986-audited-solid-colors",
+  label: "1986 audited chart",
+  range: "1986",
+  years: ["1986"],
+  listingCount: suburban1986SolidInventory.length,
+  revisionNote:
+    "The solid-color timeline publishes only the chart's ten primary colors. The 23 ZY5 combinations remain a separate paint-scheme evidence class.",
+  sources: {
+    "1986": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 32, printed C/K Suburban Page H",
+      revision: "September 1985",
+      url: gmSuburbanKit("1986"),
+      sourceId: "gm-heritage-1986-chevrolet-suburban",
+      artifactSha256: "3992e771d8ed8f0c20db0c28332303c124e47e6833ec7ae790f3df7add526be3",
+      artifactBytes: 4864826,
+      pdfPageCount: 34,
+      supportingSources: [
+        {
+          name: "GM Heritage Vehicle Information Kit",
+          chart: "Complete duplicate of the 1986 C/K Suburban color chart",
+          locator: "1985 kit PDF p. 67, printed C/K Suburban Page H",
+          revision: "September 1985",
+          url: gmSuburbanKit("1985"),
+          sourceId: "gm-heritage-1985-chevrolet-suburban",
+          artifactSha256: "3c04a11f01549d4280b6fe379cdfdb720ec3e6d1a0dc2eb64ca33436a40194d8",
+          artifactBytes: 2341838,
+          pdfPageCount: 69,
+        },
+      ],
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1986SolidInventory),
+};
+
+const suburban1987SolidInventory: AuditedSolidColor[] = [
+  { year: "1987", code: "19", name: "Black, Midnight" },
+  { year: "1987", code: "21", name: "Blue, Light (Metallic)" },
+  { year: "1987", code: "29", name: "Blue, Midnight" },
+  { year: "1987", code: "66", name: "Bronze, Indian (Metallic)" },
+  { year: "1987", code: "55", name: "Copper, Canyon (Metallic)" },
+  { year: "1987", code: "67", name: "Gold, Nevada (Metallic)" },
+  { year: "1987", code: "90", name: "Gray, Steel (Metallic)" },
+  { year: "1987", code: "72", name: "Red, Apple" },
+  { year: "1987", code: "61", name: "Tan, Doeskin" },
+  { year: "1987", code: "12", name: "White, Frost" },
+];
+
+const suburban1987: Generation = {
+  id: "suburban-1987-audited-solid-colors",
+  label: "1987 audited chart",
+  range: "1987",
+  years: ["1987"],
+  listingCount: suburban1987SolidInventory.length,
+  revisionNote:
+    "The solid-color timeline publishes only the chart's ten primary colors. The independently reviewed 23 ZY5 combinations remain a separate paint-scheme evidence class.",
+  sources: {
+    "1987": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "R/V Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 39, printed R/V Suburban Page H",
+      revision: "February 1987",
+      url: gmSuburbanKit("1987"),
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1987SolidInventory),
+};
+
+const suburban1988SolidInventory: AuditedSolidColor[] = [
+  { year: "1988", code: "19", name: "Black, Midnight" },
+  { year: "1988", code: "24", name: "Blue, Aspen (Metallic)" },
+  { year: "1988", code: "29", name: "Blue, Midnight" },
+  { year: "1988", code: "39", name: "Brown, Woodlands (Metallic)" },
+  { year: "1988", code: "44", name: "Emerald (Metallic)" },
+  { year: "1988", code: "67", name: "Gold, Nevada (Metallic)" },
+  { year: "1988", code: "90", name: "Gray, Steel (Metallic)" },
+  { year: "1988", code: "72", name: "Red, Apple" },
+  { year: "1988", code: "61", name: "Tan, Doeskin" },
+  { year: "1988", code: "12", name: "White, Frost" },
+];
+
+const suburban1988: Generation = {
+  id: "suburban-1988-audited-solid-colors",
+  label: "1988 audited chart",
+  range: "1988",
+  years: ["1988"],
+  listingCount: suburban1988SolidInventory.length,
+  revisionNote:
+    "The solid-color timeline publishes only the chart's ten primary colors. The ZY1 and ZY3 chart and the separately revised ZY5 exterior-decor chart remain paint-scheme evidence.",
+  sources: {
+    "1988": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "R/V Suburban Interior and Exterior Color Availability Chart",
+      locator: "PDF p. 29, printed R/V Suburban Page H; ZY5 chart at PDF p. 30, printed Page I",
+      revision: "September 1987; ZY5 revision February 1988",
+      url: gmSuburbanKit("1988"),
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1988SolidInventory),
+};
+
+const suburban1990SolidInventory: AuditedSolidColor[] = [
+  { year: "1990", code: "20", name: "Onyx Black" },
+  { year: "1990", code: "27", name: "Smoke Blue Met." },
+  { year: "1990", code: "33", name: "Mojave Beige" },
+  { year: "1990", code: "36", name: "Wintergreen Met." },
+  { year: "1990", code: "50", name: "Summit White" },
+  { year: "1990", code: "74", name: "Fire Red" },
+  { year: "1990", code: "83", name: "Gray Met." },
+  { year: "1990", code: "96", name: "Quicksilver Met." },
+  { year: "1990", code: "98", name: "Midnight Blue Met." },
+];
+
+const suburban1990: Generation = {
+  id: "suburban-1990-audited-solid-colors",
+  label: "1990 audited chart",
+  range: "1990",
+  years: ["1990"],
+  listingCount: suburban1990SolidInventory.length,
+  revisionNote:
+    "The public timeline publishes only the nine same-code ZY1 rows. ZY2, ZY3, and ZY4 combinations remain separate paint-scheme evidence, and code 34 Sunset Gold Met. is not promoted from its source-labeled color-code-2-only role.",
+  sources: {
+    "1990": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "R/V Suburban Color Combinations, Solid Color (ZY1)",
+      locator:
+        "PDF p. 20, printed p. 19; ZY2 at PDF p. 21, ZY4 at PDF p. 24, and ZY3 at PDF p. 25",
+      revision: "No revision date printed",
+      url: gmSuburbanKit("1990"),
+      sourceId: "gm-heritage-1990-chevrolet-suburban",
+      artifactSha256: "46b985c6943036e27efd890122a3d3ffc5d0ba625d19305a978da5d3fec57df9",
+      artifactBytes: 1130037,
+      pdfPageCount: 27,
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1990SolidInventory),
+};
+
+const suburban1991SolidInventory: AuditedSolidColor[] = [
+  { year: "1991", code: "22", name: "Brilliant Blue Met." },
+  { year: "1991", code: "27", name: "Smoke Blue Met." },
+  { year: "1991", code: "33", name: "Mojave Beige" },
+  { year: "1991", code: "41", name: "Onyx Black" },
+  { year: "1991", code: "50", name: "Summit White" },
+  { year: "1991", code: "74", name: "Fire Red" },
+  { year: "1991", code: "96", name: "Quicksilver Met." },
+  { year: "1991", code: "97", name: "Slate Met." },
+  { year: "1991", code: "98", name: "Midnight Blue Met." },
+];
+
+const suburban1991: Generation = {
+  id: "suburban-1991-audited-solid-colors",
+  label: "1991 audited chart",
+  range: "1991",
+  years: ["1991"],
+  listingCount: suburban1991SolidInventory.length,
+  revisionNote:
+    "The public timeline publishes only the nine same-code ZY1 rows. ZY2, ZY3, and ZY4 combinations remain separate paint-scheme evidence; the ZY2 source's anomalous 76 Fire Red entry remains documented without changing the ZY1 code 74 row.",
+  sources: {
+    "1991": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "R/V Suburban Color Combinations, Solid Color (ZY1)",
+      locator:
+        "PDF p. 20, printed p. 19; ZY2, ZY3, and ZY4 at PDF pp. 21-23",
+      revision: "October 1990",
+      url: gmSuburbanKit("1991"),
+      sourceId: "gm-heritage-1991-chevrolet-suburban",
+      artifactSha256: "24f2a80e283d48d02a137e0c71114e76d31466515130aa8b21a93d1ac1a0ff7f",
+      artifactBytes: 1229801,
+      pdfPageCount: 29,
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1991SolidInventory),
+};
+
+const suburban1992SolidInventory: AuditedSolidColor[] = [
+  { year: "1992", code: "22", name: "Brilliant Blue Met." },
+  { year: "1992", code: "27", name: "Smoke Blue Met." },
+  { year: "1992", code: "36", name: "Teal Blue Met." },
+  { year: "1992", code: "41", name: "Onyx Black" },
+  { year: "1992", code: "50", name: "Summit White" },
+  { year: "1992", code: "57", name: "Sand Beige Met." },
+  { year: "1992", code: "74", name: "Victory Red" },
+  { year: "1992", code: "76", name: "Burnt Red Met." },
+  { year: "1992", code: "96", name: "Quicksilver Met." },
+  { year: "1992", code: "97", name: "Slate Met." },
+];
+
+const suburban1992: Generation = {
+  id: "suburban-1992-audited-solid-colors",
+  label: "1992 audited chart",
+  range: "1992",
+  years: ["1992"],
+  listingCount: suburban1992SolidInventory.length,
+  revisionNote:
+    "The ZY1 chart prints 22 same-code rows because optional D85 stripe and interior recommendations repeat primary paints. The timeline publishes the ten distinct primary exterior colors once each; ZY2, ZY3, and ZY4 rows remain separate schemes.",
+  sources: {
+    "1992": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Color Combinations, Solid Color (ZY1)",
+      locator:
+        "PDF p. 20, printed p. 19; ZY2, ZY3, and ZY4 at PDF pp. 21-23",
+      revision: "No revision date printed",
+      url: gmSuburbanKit("1992"),
+      sourceId: "gm-heritage-1992-chevrolet-suburban",
+      artifactSha256: "c91ee8f67a3e33f5e6485572f1347e90d12de287dcf8720e0529599032a05b78",
+      artifactBytes: 746842,
+      pdfPageCount: 23,
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1992SolidInventory),
+};
+
+const suburban1994SolidInventory: AuditedSolidColor[] = [
+  { year: "1994", code: "56", name: "Autumnwood, Dk (Met)" },
+  { year: "1994", code: "55", name: "Autumnwood, Lt (Met)" },
+  { year: "1994", code: "41", name: "Black, Onyx" },
+  { year: "1994", code: "30", name: "Blue, Atlantic (Met)" },
+  { year: "1994", code: "39", name: "Blue, Indigo (Met)" },
+  { year: "1994", code: "36", name: "Blue, Teal (Met)" },
+  { year: "1994", code: "96", name: "Quicksilver (Met)" },
+  { year: "1994", code: "76", name: "Red, Burnt (Met)" },
+  { year: "1994", code: "74", name: "Red, Victory" },
+  { year: "1994", code: "50", name: "White, Summit" },
+];
+
+const suburban1994: Generation = {
+  id: "suburban-1994-audited-solid-colors",
+  label: "1994 audited chart",
+  range: "1994",
+  years: ["1994"],
+  listingCount: suburban1994SolidInventory.length,
+  revisionNote:
+    "The public timeline publishes the ten same-code rows from the combined ZY1/ZY2 chart. ZY2 and ZY4 combinations remain separate schemes. The handwritten 50-55 note below the ZY4 table is retained as an unofficial annotation and does not replace printed factory rows.",
+  sources: {
+    "1994": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K 1500 and C/K 2500 Suburban Interior and Exterior Color Availability Chart with ZY1 and ZY2 Paint",
+      locator:
+        "PDF p. 19, printed Order Guide p. 14; ZY4 at PDF p. 20, printed Order Guide p. 15",
+      revision: "Revised 1-10-94",
+      url: gmSuburbanKit("1994"),
+      sourceId: "gm-heritage-1994-chevrolet-suburban",
+      artifactSha256: "895ef9992d0f5172084047683acfa8d543acea6bf37464df24fee50d9e3385df",
+      artifactBytes: 1078053,
+      pdfPageCount: 28,
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1994SolidInventory),
+};
+
+const suburban1995To1999SolidInventory: AuditedSolidColor[] = [
+  { year: "1995", code: "55U", name: "AUTUMNWOOD, LT (Met)" },
+  { year: "1995", code: "41U", name: "BLACK, ONYX" },
+  { year: "1995", code: "30U", name: "BLUE, ATLANTIC (Met)" },
+  { year: "1995", code: "39U", name: "BLUE, INDIGO (Met)" },
+  { year: "1995", code: "36U", name: "BLUE, TEAL (Met)" },
+  { year: "1995", code: "43U", name: "GREEN, EMERALD (Met)" },
+  { year: "1995", code: "96U", name: "QUICKSILVER (Met)" },
+  { year: "1995", code: "76U", name: "RED, BURNT (Met)" },
+  { year: "1995", code: "74U", name: "RED, VICTORY" },
+  { year: "1995", code: "50U", name: "WHITE, SUMMIT" },
+  { year: "1996", code: "55U", name: "AUTUMNWOOD, LT (Met)" },
+  { year: "1996", code: "41U", name: "BLACK, ONYX" },
+  { year: "1996", code: "30U", name: "BLUE, ATLANTIC (Met)" },
+  { year: "1996", code: "39U", name: "BLUE, INDIGO (Met)" },
+  { year: "1996", code: "43U", name: "GREEN, EMERALD (Met)" },
+  { year: "1996", code: "96U", name: "QUICKSILVER (Met)" },
+  { year: "1996", code: "77U", name: "RED, CHERRY (Met)" },
+  { year: "1996", code: "59U", name: "CHERRY ICE (Met)" },
+  { year: "1996", code: "74U", name: "RED, VICTORY" },
+  { year: "1996", code: "50U", name: "WHITE, SUMMIT" },
+  { year: "1997", code: "65U", name: "BEIGE, MYSTIQUE MED (Met)" },
+  { year: "1997", code: "41U", name: "BLACK, ONYX" },
+  { year: "1997", code: "39U", name: "BLUE, INDIGO (Met)" },
+  { year: "1997", code: "59U", name: "CHERRY ICE (Met)" },
+  { year: "1997", code: "43U", name: "GREEN, EMERALD (Met)" },
+  { year: "1997", code: "96U", name: "QUICKSILVER (Met)" },
+  { year: "1997", code: "77U", name: "RED, CHERRY (Met)" },
+  { year: "1997", code: "74U", name: "RED, VICTORY" },
+  { year: "1997", code: "50U", name: "WHITE, SUMMIT" },
+  { year: "1998", code: "65U", name: "BEIGE, MYSTIQUE MED (Met)" },
+  { year: "1998", code: "41U", name: "BLACK, ONYX" },
+  { year: "1998", code: "69U", name: "COPPER, DK (Met)" },
+  { year: "1998", code: "43U", name: "GREEN EMERALD (Met)" },
+  { year: "1998", code: "39U", name: "INDIGO, BLUE (Met)" },
+  { year: "1998", code: "11U", name: "PEWTER, LT (Met)" },
+  { year: "1998", code: "51U", name: "RED, CARMINE DK, (Met)" },
+  { year: "1998", code: "74U", name: "RED, VICTORY" },
+  { year: "1998", code: "50U", name: "WHITE, SUMMIT" },
+  { year: "1999", code: "41U", name: "BLACK, ONYX" },
+  { year: "1999", code: "39U", name: "BLUE, INDIGO (Met)" },
+  { year: "1999", code: "69U", name: "COPPER, DK (Met)" },
+  { year: "1999", code: "60U", name: "GOLD, SUNSET(Met)" },
+  { year: "1999", code: "14U", name: "GRAY, CHARCOAL MED (Met)" },
+  { year: "1999", code: "68U", name: "GREEN, MEADOW (Met)" },
+  { year: "1999", code: "11U", name: "PEWTER, LT (Met)" },
+  { year: "1999", code: "51U", name: "RED, CARMINE DK, (Met)" },
+  { year: "1999", code: "74U", name: "RED, VICTORY" },
+  { year: "1999", code: "50U", name: "WHITE, SUMMIT" },
+];
+
+const suburban1995To1999: Generation = {
+  id: "suburban-1995-1999-audited-solid-colors",
+  label: "1995–1999 audited charts",
+  range: "1995–1999",
+  years: ["1995", "1996", "1997", "1998", "1999"],
+  listingCount: suburban1995To1999SolidInventory.length,
+  revisionNote:
+    "Only the complete Suburban ZY1 tables publish standalone availability. Exact printed names and upper-role U codes are retained. Lower-role L codes, restriction markers, duplicate stripe variants, and interior compatibility remain ordered paint-scheme evidence. The 1998 and 1999 Suburban order guides explicitly list only ZY1 and ZY2, so no ZY4 rows are inferred.",
+  sources: {
+    "1995": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K 1500 and C/K 2500 Suburban Interior and Exterior Color Availability Chart with ZY1 Paint",
+      locator:
+        "PDF p. 20, printed order-guide p. 14; ZY2 on the same page and ZY4 at PDF p. 21, printed p. 15",
+      revision: "Revised 4-10-95",
+      url: gmSuburbanKit("1995"),
+      sourceId: "gm-heritage-1995-chevrolet-suburban",
+      artifactSha256: "19161144f0aecfd285c1d4e51e549a8e39c70e7b3d42a139c240404fcef4fe9b",
+      artifactBytes: 962051,
+      pdfPageCount: 28,
+    },
+    "1996": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Interior and Exterior Color Availability Chart with ZY1 Paint",
+      locator:
+        "PDF p. 22, printed order-guide p. 14; ZY2 on the same page and ZY4 at PDF p. 23, printed p. 15",
+      revision: "Revised 1-29-96",
+      url: gmSuburbanKit("1996"),
+      sourceId: "gm-heritage-1996-chevrolet-suburban",
+      artifactSha256: "c7f1f9a1537331b0f4b5ba6bb96baf3d9bfe3919b4cb3e5241e2cf704ecdb217",
+      artifactBytes: 770378,
+      pdfPageCount: 24,
+    },
+    "1997": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Interior and Exterior Color Availability Chart with ZY1 Paint",
+      locator:
+        "PDF p. 22, printed order-guide p. 14; ZY2 on the same page and ZY4 at PDF p. 23, printed p. 15",
+      revision: "Revised 12-16-96",
+      url: gmSuburbanKit("1997"),
+      sourceId: "gm-heritage-1997-chevrolet-suburban",
+      artifactSha256: "1d28da68523c509ffce68ce2e96ef5566894dd886caf761071afce6b5b240a1d",
+      artifactBytes: 948044,
+      pdfPageCount: 33,
+    },
+    "1998": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban ZY1 Paint Interior and Exterior Color Availability Chart",
+      locator:
+        "PDF p. 55, printed order-guide p. 13; ZY2 at PDF p. 56, printed p. 14; option list at PDF p. 53, printed p. 11 lists only ZY1 and ZY2",
+      revision: "Revised 9-2-97",
+      url: gmSuburbanKit("1998"),
+      sourceId: "gm-heritage-1998-chevrolet-suburban",
+      artifactSha256: "7975a9871c0b41551bc5802aa1c833c25e31de238abce8d424def565261c3449",
+      artifactBytes: 2294103,
+      pdfPageCount: 56,
+    },
+    "1999": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "C/K Suburban Exterior Colors with ZY1 Paint",
+      locator:
+        "PDF p. 38, printed order-guide p. 13; ZY2 at PDF p. 39, printed p. 14; option list at PDF p. 36, printed p. 11 lists only ZY1 and ZY2",
+      revision: "Published 4-1-98",
+      url: gmSuburbanKit("1999"),
+      sourceId: "gm-heritage-1999-chevrolet-suburban",
+      artifactSha256: "684a88324706a990ad05687faee61b1d45f2e7af3ce7f291df4f47c3c3800598",
+      artifactBytes: 1747598,
+      pdfPageCount: 47,
+    },
+  },
+  colors: buildExactNameTimeline("suburban", suburban1995To1999SolidInventory),
+};
+
+type SuburbanBrochurePaletteSource = {
+  source_id: string;
+  title: string;
+  source_type: string;
+  publisher: string;
+  carrier?: string;
+  retrieval_url: string;
+  landing_url?: string;
+  archive_url: string;
+  pdf_pages?: number[];
+  page_locator?: string;
+  image_locator?: string;
+  revision: string;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count?: number;
+  reuse_license: string;
+};
+
+type SuburbanBrochurePaletteColor = {
+  order: number;
+  name: string;
+  matrix_name?: string;
+  factory_code: string | null;
+  factory_code_status: string;
+};
+
+type SuburbanBrochurePaletteYear = {
+  year: number;
+  audit_status: string;
+  source: SuburbanBrochurePaletteSource;
+  colors: SuburbanBrochurePaletteColor[];
+  limitations: string[];
+};
+
+function buildSuburbanBrochurePaletteGenerations() {
+  return (
+    suburbanBrochurePaletteAudit.years as SuburbanBrochurePaletteYear[]
+  ).map((record): Generation => {
+    const year = String(record.year);
+    return {
+      id: `suburban-${year}-verified-brochure-palette`,
+      label: `${year} verified brochure palette`,
+      range: year,
+      years: [year],
+      listingCount: record.colors.length,
+      revisionNote:
+        record.audit_status === "verified_complete_with_carrier_qualification"
+          ? "The complete model-specific GM brochure palette is published with an explicit marketplace-carrier qualification. No adjacent model or year is used."
+          : "The complete model-specific GM sales-brochure palette is published exactly as printed. No adjacent model or year is used.",
+      sources: {
+        [year]: {
+          name: record.source.title,
+          chart: "Complete regular Chevrolet Suburban exterior-color palette",
+          locator:
+            record.source.page_locator ??
+            record.source.image_locator ??
+            "Exact brochure color panel",
+          revision: record.source.revision,
+          url: record.source.archive_url,
+          sourceId: record.source.source_id,
+          sourceType: record.source.source_type,
+          publisher: record.source.publisher,
+          ...(record.source.carrier ? { carrier: record.source.carrier } : {}),
+          reuseLicense: record.source.reuse_license,
+          retrievalUrl: record.source.retrieval_url,
+          sourceNotes: [
+            record.source.carrier ? `Carrier: ${record.source.carrier}.` : null,
+            `Reuse license: ${record.source.reuse_license}`,
+          ]
+            .filter(Boolean)
+            .join(" "),
+          contentType: record.source.pdf_page_count
+            ? "application/pdf"
+            : "image/jpeg",
+          documentAuthority: "official_manufacturer_document",
+          retrievalHostType: "archival_mirror",
+          archiveUrl: record.source.archive_url,
+          ...(record.source.landing_url
+            ? { landingUrl: record.source.landing_url }
+            : {}),
+          artifactSha256: record.source.artifact_sha256,
+          artifactBytes: record.source.artifact_bytes,
+          ...(record.source.pdf_page_count
+            ? { pdfPageCount: record.source.pdf_page_count }
+            : {}),
+          availabilityScope:
+            "Complete regular sales-brochure palette for this exact Suburban model year.",
+          limitations: record.limitations,
+        },
+      },
+      colors: record.colors.map((color) => {
+        const code = color.factory_code ?? "not printed";
+        return {
+          id: `suburban-${archiveColorId(color.name)}-${year}-brochure`,
+          name: color.name,
+          swatch: interpretiveArchiveSwatch(color.name),
+          rowCode: code,
+          note: [
+            color.matrix_name ? `Source matrix heading: ${color.matrix_name}.` : null,
+            "Interpretive screen swatch only; it is not sampled factory paint evidence.",
+          ]
+            .filter(Boolean)
+            .join(" "),
+          availability: {
+            [year]: {
+              state: "listed",
+              label: color.name,
+              code,
+              sourceIds: [record.source.source_id],
+            },
+          },
+        };
+      }),
+    };
+  });
+}
+
+const suburbanBrochurePaletteGenerations =
+  buildSuburbanBrochurePaletteGenerations();
+
+type SuburbanEarlySource = {
+  source_id: string;
+  title: string;
+  url: string;
+  archive_url?: string;
+  pdf_pages: number[];
+  page_locator: string;
+  revision: string;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count: number;
+};
+
+type SuburbanEarlyColor = {
+  order: number;
+  name: string;
+  factory_code: string;
+  factory_code_status: "printed";
+  conventional_two_tone_code?: string | null;
+  special_two_tone_code?: string | null;
+  two_tone_secondary?: string | null;
+};
+
+type SuburbanEarlyYear = {
+  year: number;
+  audit_status: string;
+  source: SuburbanEarlySource;
+  colors: SuburbanEarlyColor[];
+  limitations: string[];
+};
+
+function buildSuburbanEarlyVerifiedGenerations() {
+  return (suburban1969to1976Audit.years as SuburbanEarlyYear[]).map(
+    (record): Generation => {
+      const year = String(record.year);
+      return {
+        id: `suburban-${year}-verified-official-solid-palette`,
+        label: `${year} verified official solid palette`,
+        range: year,
+        years: [year],
+        listingCount: record.colors.length,
+        revisionNote:
+          "The complete model-specific solid-color chart is transcribed from the official GM kit. Two-tone codes and pairings remain scheme context; adjacent years and general truck charts are not inferred.",
+        sources: {
+          [year]: {
+            name: record.source.title,
+            chart: "Complete Chevrolet Suburban solid exterior-color palette",
+            locator: record.source.page_locator,
+            revision: record.source.revision,
+            url: record.source.url,
+            sourceId: record.source.source_id,
+            sourceType: "vehicle_information_kit",
+            publisher: "General Motors",
+            contentType: "application/pdf",
+            documentAuthority: "official_manufacturer_document",
+            retrievalHostType: "official_live",
+            ...(record.source.archive_url
+              ? { archiveUrl: record.source.archive_url }
+              : {}),
+            officialUrl: record.source.url,
+            artifactSha256: record.source.artifact_sha256,
+            artifactBytes: record.source.artifact_bytes,
+            pdfPageCount: record.source.pdf_page_count,
+            availabilityScope:
+              "Complete solid exterior-color palette for this exact Chevrolet Suburban model year.",
+            limitations: record.limitations,
+          },
+        },
+        colors: record.colors.map((color) => {
+          const schemeNote = [
+            color.conventional_two_tone_code
+              ? `Conventional two-tone code ${color.conventional_two_tone_code}.`
+              : null,
+            color.special_two_tone_code
+              ? `Special two-tone code ${color.special_two_tone_code}.`
+              : null,
+            color.two_tone_secondary
+              ? `Source-printed two-tone secondary: ${color.two_tone_secondary}.`
+              : null,
+          ]
+            .filter(Boolean)
+            .join(" ");
+          return {
+            id: `suburban-${archiveColorId(color.name)}-${year}-official-solid`,
+            name: color.name,
+            swatch: interpretiveArchiveSwatch(color.name),
+            rowCode: color.factory_code,
+            note: [
+              schemeNote || null,
+              "Interpretive screen swatch only; it is not sampled factory paint evidence.",
+            ]
+              .filter(Boolean)
+              .join(" "),
+            availability: {
+              [year]: {
+                state: "listed",
+                label: color.name,
+                code: color.factory_code,
+                factoryCode: color.factory_code,
+                factoryCodeStatus: color.factory_code_status,
+                sourceIds: [record.source.source_id],
+              },
+            },
+          };
+        }),
+      };
+    },
+  );
+}
+
+const suburbanEarlyVerifiedGenerations =
+  buildSuburbanEarlyVerifiedGenerations();
+
+type SuburbanEarlyNoChartYear = {
+  year: number;
+  source_id: string;
+  title: string;
+  url: string;
+  finding: string;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count: number;
+  archive_url: string;
+};
+
+type SuburbanEarlySupplementalSource = {
+  year: number;
+  source_id: string;
+  title: string;
+  source_type: string;
+  publisher: string;
+  carrier?: string;
+  url: string;
+  retrieval_url?: string;
+  archive_url?: string;
+  artifact_sha256?: string;
+  artifact_bytes?: number;
+  pdf_page_count?: number;
+  evidence_limit: string;
+};
+
+function suburbanEarlySupplementalCitation(
+  source: SuburbanEarlySupplementalSource,
+): YearSourceCitation {
+  const isGmSource = source.source_id.startsWith("gm-heritage-");
+  const isServiceNews = source.source_id.startsWith("chevrolet-service-news-");
+  return {
+    name: source.title,
+    chart: "Comparison evidence only; not Suburban availability",
+    locator: source.evidence_limit,
+    revision: isServiceNews
+      ? "Chevrolet Service News source retained from an archived carrier"
+      : "Complete comparison source reviewed",
+    url: source.url,
+    sourceId: source.source_id,
+    sourceType: source.source_type,
+    publisher: source.publisher,
+    ...(source.carrier ? { carrier: source.carrier } : {}),
+    ...(source.retrieval_url ? { retrievalUrl: source.retrieval_url } : {}),
+    ...(source.archive_url ? { archiveUrl: source.archive_url } : {}),
+    ...(isGmSource ? { officialUrl: source.url } : {}),
+    ...(source.artifact_sha256
+      ? { artifactSha256: source.artifact_sha256 }
+      : {}),
+    ...(source.artifact_bytes ? { artifactBytes: source.artifact_bytes } : {}),
+    ...(source.pdf_page_count ? { pdfPageCount: source.pdf_page_count } : {}),
+    limitations: [source.evidence_limit],
+  };
+}
+
+function buildSuburbanEarlyNoChartGenerations() {
+  const supplements =
+    suburban1969to1976Audit.supplemental_sources as SuburbanEarlySupplementalSource[];
+  return (
+    suburban1969to1976Audit.explicit_no_chart_years as SuburbanEarlyNoChartYear[]
+  ).map((record): Generation => {
+    const year = String(record.year);
+    const supportingSources = supplements
+      .filter((source) => source.year === record.year)
+      .map(suburbanEarlySupplementalCitation);
+    return {
+      id: `suburban-${year}-reviewed-no-color-table`,
+      label: `${year} official kit reviewed, no color table found`,
+      range: year,
+      years: [year],
+      listingCount: 0,
+      revisionNote:
+        "The complete official Suburban kit was reviewed, but its referenced exterior-color chart is absent. This is a documented no-chart result, not evidence that no colors were offered. Adjacent-year, Blazer, Corvair 95, and general truck palettes are not inferred.",
+      sources: {
+        [year]: {
+          name: record.title,
+          chart: "Official kit reviewed; no exterior-color table found",
+          locator: `Entire ${record.pdf_page_count}-page PDF reviewed`,
+          revision: "Complete retained artifact reviewed July 2026",
+          url: record.url,
+          sourceId: record.source_id,
+          sourceType: "vehicle_information_kit",
+          publisher: "General Motors",
+          contentType: "application/pdf",
+          documentAuthority: "official_manufacturer_document",
+          retrievalHostType: "official_live",
+          archiveUrl: record.archive_url,
+          officialUrl: record.url,
+          artifactSha256: record.artifact_sha256,
+          artifactBytes: record.artifact_bytes,
+          pdfPageCount: record.pdf_page_count,
+          availabilityScope:
+            "No Suburban color rows are published because the model-specific chart was not present in the reviewed official kit.",
+          limitations: [record.finding],
+          ...(supportingSources.length ? { supportingSources } : {}),
+        },
+      },
+      colors: [],
+    };
+  });
+}
+
+const suburbanEarlyNoChartGenerations =
+  buildSuburbanEarlyNoChartGenerations();
+
+type Suburban2000To2007Source = {
+  source_id: string;
+  title: string;
+  url: string;
+  source_type?: string;
+  publisher?: string;
+  carrier?: string;
+  retrieval_url?: string;
+  landing_url?: string;
+  archive_url?: string;
+  reuse_license?: string;
+  document_authority?: "official_manufacturer_document";
+  retrieval_host_type?: "official_live" | "archival_mirror";
+  pdf_pages?: number[];
+  image_locator?: string;
+  page_locator: string;
+  revision: string;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count?: number;
+  content_type?: string;
+  supporting_sources?: Suburban2000To2007SupportingSource[];
+};
+
+type Suburban2000To2007SupportingSource = {
+  source_id: string;
+  title: string;
+  url: string;
+  source_type?: string;
+  publisher?: string;
+  carrier?: string;
+  retrieval_url?: string;
+  landing_url?: string;
+  archive_url?: string;
+  reuse_license?: string;
+  document_authority?: "official_manufacturer_document";
+  retrieval_host_type?: "official_live" | "archival_mirror";
+  page_locator: string;
+  revision: string;
+  artifact_sha256?: string;
+  artifact_bytes?: number;
+  pdf_page_count?: number;
+  content_type?: string;
+};
+
+type Suburban2000To2007Color = {
+  order: number;
+  source_literal_name?: string;
+  name: string;
+  factory_code: string | null;
+  factory_code_status: string;
+  touch_up_code?: string;
+  availability_note?: string;
+};
+
+type Suburban2000To2007Year = {
+  year: number;
+  audit_status: string;
+  source: Suburban2000To2007Source | null;
+  regular_page_locator?: string;
+  specialty_page_locator?: string;
+  regular_colors: Suburban2000To2007Color[];
+  supplemental_colors: Suburban2000To2007Color[];
+  specialty_colors: Suburban2000To2007Color[];
+  specialty_scope?: string;
+  limitations: string[];
+};
+
+function suburban2000To2007Source(
+  record: Suburban2000To2007Year,
+  evidenceClass?: "specialty_palette_subset",
+): YearSource {
+  if (!record.source) {
+    throw new Error(`Suburban ${record.year} has rows but no source`);
+  }
+  const supportingSources = (record.source.supporting_sources ?? []).map(
+    (source): YearSourceCitation => ({
+      name: source.title,
+      chart: "Supporting color evidence",
+      locator: source.page_locator,
+      revision: source.revision,
+      url: source.url,
+      sourceId: source.source_id,
+      ...(source.source_type ? { sourceType: source.source_type } : {}),
+      ...(source.publisher ? { publisher: source.publisher } : {}),
+      ...(source.carrier ? { carrier: source.carrier } : {}),
+      ...(source.reuse_license ? { reuseLicense: source.reuse_license } : {}),
+      ...(source.retrieval_url ? { retrievalUrl: source.retrieval_url } : {}),
+      ...(source.content_type ? { contentType: source.content_type } : {}),
+      ...(source.document_authority
+        ? { documentAuthority: source.document_authority }
+        : {}),
+      ...(source.retrieval_host_type
+        ? { retrievalHostType: source.retrieval_host_type }
+        : {}),
+      ...(source.archive_url ? { archiveUrl: source.archive_url } : {}),
+      ...(source.archive_url !== undefined && source.archive_url !== source.url
+        ? { officialUrl: source.url }
+        : {}),
+      ...(source.landing_url ? { landingUrl: source.landing_url } : {}),
+      ...(source.artifact_sha256
+        ? { artifactSha256: source.artifact_sha256 }
+        : {}),
+      ...(source.artifact_bytes ? { artifactBytes: source.artifact_bytes } : {}),
+      ...(source.pdf_page_count ? { pdfPageCount: source.pdf_page_count } : {}),
+    }),
+  );
+  return {
+    name: record.source.title,
+    chart: evidenceClass
+      ? "COLOR AND TRIM - SEO SOLID PAINT"
+      : "Complete regular Suburban exterior-color palette",
+    locator:
+      (evidenceClass ? record.specialty_page_locator : record.regular_page_locator) ??
+      record.source.page_locator,
+    revision: record.source.revision,
+    url: record.source.url,
+    sourceId: record.source.source_id,
+    ...(record.source.source_type
+      ? { sourceType: record.source.source_type }
+      : {}),
+    ...(record.source.publisher ? { publisher: record.source.publisher } : {}),
+    ...(record.source.carrier ? { carrier: record.source.carrier } : {}),
+    ...(record.source.reuse_license
+      ? { reuseLicense: record.source.reuse_license }
+      : {}),
+    ...(record.source.retrieval_url
+      ? { retrievalUrl: record.source.retrieval_url }
+      : {}),
+    ...(record.source.content_type
+      ? { contentType: record.source.content_type }
+      : {}),
+    ...(record.source.document_authority
+      ? { documentAuthority: record.source.document_authority }
+      : {}),
+    ...(record.source.retrieval_host_type
+      ? { retrievalHostType: record.source.retrieval_host_type }
+      : {}),
+    ...(record.source.archive_url
+      ? { archiveUrl: record.source.archive_url }
+      : {}),
+    ...(record.source.archive_url !== undefined &&
+    record.source.archive_url !== record.source.url
+      ? { officialUrl: record.source.url }
+      : {}),
+    ...(record.source.landing_url
+      ? { landingUrl: record.source.landing_url }
+      : {}),
+    ...(evidenceClass ? { evidenceClass } : {}),
+    artifactSha256: record.source.artifact_sha256,
+    artifactBytes: record.source.artifact_bytes,
+    ...(record.source.pdf_page_count
+      ? { pdfPageCount: record.source.pdf_page_count }
+      : {}),
+    ...(supportingSources.length ? { supportingSources } : {}),
+    limitations: record.limitations,
+  };
+}
+
+function suburban2000To2007DisplayCode(color: Suburban2000To2007Color) {
+  return [color.factory_code ?? "not printed", color.touch_up_code]
+    .filter(Boolean)
+    .join(" / ");
+}
+
+function buildSuburban2000To2007Generations() {
+  const generations: Generation[] = [];
+  const records = suburban2000to2007Audit.years as Suburban2000To2007Year[];
+  for (const record of records) {
+    const year = String(record.year);
+    if (record.regular_colors.length) {
+      generations.push({
+        id: `suburban-${year}-audited-regular-colors`,
+        label: `${year} audited regular palette`,
+        range: year,
+        years: [year],
+        listingCount: record.regular_colors.length,
+        revisionNote:
+          record.source?.retrieval_host_type === "archival_mirror"
+            ? "A complete official-manufacturer Suburban palette is published with explicit archival-mirror provenance. Package and equipment subsets remain per-color restrictions; adjacent-year colors are not inferred."
+            : "A complete official Suburban palette is published. Package and equipment subsets remain per-color restrictions; adjacent-year colors are not inferred.",
+        sources: { [year]: suburban2000To2007Source(record) },
+        colors: record.regular_colors.map((color) => {
+          const displayCode = suburban2000To2007DisplayCode(color);
+          const unrestricted = color.availability_note === "No restriction stated.";
+          return {
+            id: `suburban-${archiveColorId(color.name)}-${year}-regular`,
+            name: color.name,
+            swatch: interpretiveArchiveSwatch(color.name),
+            rowCode: displayCode,
+            note: [
+              color.source_literal_name && color.source_literal_name !== color.name
+                ? `Source literal: ${color.source_literal_name}.`
+                : null,
+              "Interpretive screen swatch only; it is not sampled factory paint evidence.",
+            ]
+              .filter(Boolean)
+              .join(" "),
+            availability: {
+              [year]: {
+                state: unrestricted ? "listed" : "restricted",
+                label: color.name,
+                code: displayCode,
+                factoryCode: color.factory_code,
+                factoryCodeStatus: color.factory_code_status,
+                ...(color.touch_up_code ? { touchUpCode: color.touch_up_code } : {}),
+                ...(!unrestricted && color.availability_note
+                  ? { restriction: color.availability_note }
+                  : {}),
+                sourceIds: [record.source!.source_id],
+              },
+            },
+          };
+        }),
+      });
+    }
+    if (record.specialty_colors.length) {
+      generations.push({
+        id: `suburban-${year}-seo-solid-paint-subset`,
+        label: `${year} SEO solid-paint subset`,
+        range: year,
+        years: [year],
+        listingCount: record.specialty_colors.length,
+        revisionNote:
+          "This is a complete source-printed Special Equipment Option solid-paint list, not the regular retail palette. Literal none codes and WA touch-up numbers are preserved.",
+        sources: {
+          [year]: suburban2000To2007Source(record, "specialty_palette_subset"),
+        },
+        colors: record.specialty_colors.map((color) => {
+          const displayCode = suburban2000To2007DisplayCode(color);
+          return {
+            id: `suburban-${archiveColorId(color.name)}-${year}-seo-${color.order}`,
+            name: color.name,
+            swatch: interpretiveArchiveSwatch(color.name),
+            rowCode: displayCode,
+            note: [
+              color.source_literal_name && color.source_literal_name !== color.name
+                ? `Source literal: ${color.source_literal_name}.`
+                : null,
+              "Interpretive screen swatch only; it is not sampled factory paint evidence.",
+            ]
+              .filter(Boolean)
+              .join(" "),
+            availability: {
+              [year]: {
+                state: "restricted",
+                label: color.name,
+                code: displayCode,
+                factoryCode: color.factory_code,
+                factoryCodeStatus: color.factory_code_status,
+                ...(color.touch_up_code ? { touchUpCode: color.touch_up_code } : {}),
+                restriction: record.specialty_scope,
+                sourceIds: [record.source!.source_id],
+              },
+            },
+          };
+        }),
+      });
+    }
+  }
+  return generations;
+}
+
+const suburban2000To2007Generations = buildSuburban2000To2007Generations();
+
+type ModernPaletteSource = {
+  source_id: string;
+  title: string;
+  source_type: string;
+  direct_official_url: string | null;
+  historical_official_url?: string | null;
+  retrieval_url: string;
+  archive_asset_name?: string;
+  archive_url?: string;
+  landing_url: string | null;
+  revision_or_document_date: string | null;
+  retrieved_at: string | null;
+  page_count: number | null;
+  sha256: string | null;
+  bytes: number | null;
+};
+
+type ModernPaletteTable = {
+  table_id: string;
+  source_id: string;
+  model_year: number;
+  catalog_model_ids: string[];
+  source_model_label: string;
+  pdf_pages: number[];
+  page_locator: string;
+  colors: string[];
+  availability_scope: string;
+  ingestion_status: string;
+  limitations: string[];
+  color_restrictions?: Record<string, string[]>;
+  factory_codes?: Record<string, string>;
+};
+
+const publishedModernPaletteSourceIds = new Set([
+  "gm-fleet-guide-us-2008-v2",
+  "gm-fleet-guide-us-2009-v2",
+  "gm-fleet-guide-us-2010",
+  "gm-fleet-guide-us-2011",
+  "gm-fleet-guide-us-2012",
+  "gm-fleet-guide-us-2013",
+  "gm-fleet-guide-us-2014",
+  "gm-fleet-guide-us-2015",
+  "gm-fleet-guide-us-2016-november",
+  "gm-fleet-guide-us-2017",
+  "gm-fleet-guide-us-2018",
+  "gm-fleet-guide-us-2019",
+  "gm-fleet-guide-us-2020",
+  "gm-fleet-guide-us-2021-v3",
+  "gm-fleet-guide-us-2022-v6",
+  "gm-fleet-guide-us-2023-v3",
+  "gm-fleet-guide-us-2024-v3",
+  "gm-fleet-guide-us-2025-r2024-12-11",
+  "gm-fleet-guide-us-2026-r2026-04-01",
+  "chevrolet-ebrochure-us-2022-tahoe",
+  "chevrolet-ebrochure-us-2023-colorado",
+  "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
+  "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
+]);
+
+const modernPaletteSources = new Map(
+  (modernColorSourceData.sources as ModernPaletteSource[])
+    .filter((source) => publishedModernPaletteSourceIds.has(source.source_id))
+    .map((source) => [source.source_id, source]),
+);
+
+function buildModernPaletteGenerations() {
+  type PaletteCitation = {
+    source: ModernPaletteSource;
+    sourceLabels: Set<string>;
+    pageLocators: Set<string>;
+    availabilityScopes: Set<string>;
+    limitations: Set<string>;
+  };
+
+  type PaletteColor = {
+    sourceIds: Set<string>;
+    availabilityScopes: Set<string>;
+    restrictions: Set<string>;
+    factoryCodes: Set<string>;
+  };
+
+  type PaletteAggregate = {
+    modelId: string;
+    modelYear: number;
+    citations: Map<string, PaletteCitation>;
+    colors: Map<string, PaletteColor>;
+  };
+
+  const aggregates = new Map<string, PaletteAggregate>();
+  for (const table of modernColorSourceData.verified_palette_tables as ModernPaletteTable[]) {
+    if (!publishedModernPaletteSourceIds.has(table.source_id)) continue;
+    if (table.ingestion_status !== "ready_palette_union") {
+      throw new Error(`Published modern table is not ingestion-ready: ${table.table_id}`);
+    }
+    const source = modernPaletteSources.get(table.source_id);
+    if (!source) throw new Error(`Missing retained modern source ${table.source_id}`);
+    for (const modelId of table.catalog_model_ids) {
+      const key = `${modelId}:${table.model_year}`;
+      const existing = aggregates.get(key);
+      const aggregate =
+        existing ??
+        {
+          modelId,
+          modelYear: table.model_year,
+          citations: new Map<string, PaletteCitation>(),
+          colors: new Map<string, PaletteColor>(),
+        };
+
+      const citation = aggregate.citations.get(source.source_id) ?? {
+        source,
+        sourceLabels: new Set<string>(),
+        pageLocators: new Set<string>(),
+        availabilityScopes: new Set<string>(),
+        limitations: new Set<string>(),
+      };
+      citation.sourceLabels.add(table.source_model_label);
+      citation.pageLocators.add(table.page_locator);
+      citation.availabilityScopes.add(table.availability_scope);
+      table.limitations.forEach((limitation) => citation.limitations.add(limitation));
+      aggregate.citations.set(source.source_id, citation);
+
+      for (const color of table.colors) {
+        const colorEntry = aggregate.colors.get(color) ?? {
+          sourceIds: new Set<string>(),
+          availabilityScopes: new Set<string>(),
+          restrictions: new Set<string>(),
+          factoryCodes: new Set<string>(),
+        };
+        colorEntry.sourceIds.add(source.source_id);
+        colorEntry.availabilityScopes.add(table.availability_scope);
+        (table.color_restrictions?.[color] ?? []).forEach((restriction) =>
+          colorEntry.restrictions.add(restriction),
+        );
+        const factoryCode = table.factory_codes?.[color];
+        if (factoryCode) colorEntry.factoryCodes.add(factoryCode);
+        aggregate.colors.set(color, colorEntry);
+      }
+      aggregates.set(key, aggregate);
+    }
+  }
+
+  const byModel = new Map<string, Generation[]>();
+  for (const aggregate of aggregates.values()) {
+    const year = String(aggregate.modelYear);
+    const colors = [...aggregate.colors.entries()].sort(([left], [right]) =>
+      left.localeCompare(right),
+    );
+    const citations: YearSourceCitation[] = [...aggregate.citations.values()].map(
+      (citation) => {
+        const { source } = citation;
+        const retrievedDate = source.retrieved_at?.slice(0, 10);
+        return {
+          name: source.title,
+          chart: `EXTERIOR COLORS palette union for ${[...citation.sourceLabels].join("; ")}`,
+          locator: [...citation.pageLocators].join(" "),
+          revision:
+            source.revision_or_document_date ??
+            `Document date not printed${retrievedDate ? `; retrieved ${retrievedDate}` : ""}`,
+          url: source.retrieval_url,
+          ...(source.archive_url ? { archiveUrl: source.archive_url } : {}),
+          ...(source.archive_url ? { originalUrl: source.retrieval_url } : {}),
+          sourceId: source.source_id,
+          sourceType: source.source_type,
+          ...(source.direct_official_url
+            ? { officialUrl: source.direct_official_url }
+            : {}),
+          ...(source.historical_official_url
+            ? { historicalOfficialUrl: source.historical_official_url }
+            : {}),
+          ...(source.landing_url ? { landingUrl: source.landing_url } : {}),
+          evidenceClass: "qualified_palette_union",
+          ...(source.sha256 ? { artifactSha256: source.sha256 } : {}),
+          ...(source.bytes ? { artifactBytes: source.bytes } : {}),
+          ...(source.page_count ? { pdfPageCount: source.page_count } : {}),
+          ...(source.retrieved_at ? { retrievedAt: source.retrieved_at } : {}),
+          availabilityScope: [...citation.availabilityScopes].join(" "),
+          limitations: [...citation.limitations],
+        };
+      },
+    );
+    const primarySource = citations[0];
+    if (!primarySource) throw new Error(`No modern source citation for ${aggregate.modelId} ${year}`);
+    const fleetGuideOnly = [...aggregate.citations.values()].every(
+      ({ source }) => source.source_type === "fleet_guide_pdf",
+    );
+    const sourceKind = fleetGuideOnly ? "GM Fleet Guide" : "official Chevrolet brochure";
+    const idSuffix = fleetGuideOnly ? "gm-fleet-guide" : "official-brochure";
+    const generation: Generation = {
+      id: `${idSuffix}-qualified-${year}`,
+      label: `${year} ${sourceKind} palette`,
+      range: year,
+      years: [year],
+      listingCount: colors.length,
+      revisionNote:
+        `This ${sourceKind} palette was visually checked against every cited page. It is a qualified union across the cited trims or body series, not a complete option-code chart. Exact printed restrictions are retained; further applicability and paint codes require the governing Online Order Guide.`,
+      sources: {
+        [year]: {
+          ...primarySource,
+          ...(citations.length > 1 ? { supportingSources: citations.slice(1) } : {}),
+        },
+      },
+      colors: colors.map(([color, colorEntry]) => {
+        if (colorEntry.factoryCodes.size > 1) {
+          throw new Error(
+            `Conflicting factory codes for ${aggregate.modelId} ${year} ${color}: ${[
+              ...colorEntry.factoryCodes,
+            ].join(", ")}`,
+          );
+        }
+        const factoryCode = [...colorEntry.factoryCodes][0] ?? "not printed";
+        return {
+          id: `${aggregate.modelId}-${archiveColorId(color)}-${year}-${idSuffix}`,
+          name: color,
+          swatch: interpretiveArchiveSwatch(color),
+          rowCode: factoryCode,
+          note: "Interpretive screen swatch only; it is not sampled factory paint evidence.",
+          availability: {
+            [year]: {
+              state: "restricted" as const,
+              label: color,
+              code: factoryCode,
+              restriction: [
+                ...colorEntry.availabilityScopes,
+                ...colorEntry.restrictions,
+              ].join(" "),
+              sourceIds: [...colorEntry.sourceIds],
+            },
+          },
+        };
+      }),
+    };
+    byModel.set(aggregate.modelId, [
+      ...(byModel.get(aggregate.modelId) ?? []),
+      generation,
+    ]);
+  }
+  return byModel;
+}
+
+const modernPaletteGenerationsByModel = buildModernPaletteGenerations();
+
+type SpecialtyPublicationSource = {
+  source_id: string;
+  title: string;
+  publisher?: string;
+  carrier?: string;
+  source_type: string;
+  url: string;
+  archive_url?: string;
+  pdf_page?: number;
+  pdf_pages?: number[];
+  section: string;
+  revision: string;
+  retrieved_at: string | null;
+  bytes: number;
+  sha256: string;
+  pdf_page_count: number;
+};
+
+type SpecialtyPublicationRecord = {
+  record_id: string;
+  publication_status: string;
+  model_year: number;
+  catalog_model_ids: string[];
+  source_model_scope: string[];
+  label: string;
+  finish: string;
+  paint_code: string;
+  seo_code: string;
+  touch_up_paint_number: string | null;
+  restrictions: string[];
+  refinish_numbers?: Record<string, string>;
+  source: SpecialtyPublicationSource;
+};
+
+function specialtyPdfLocator(source: SpecialtyPublicationSource) {
+  const pages = source.pdf_pages ?? (source.pdf_page ? [source.pdf_page] : []);
+  const pageLabel = pages.length === 1 ? "p." : "pp.";
+  return `PDF ${pageLabel} ${pages.join(", ")}, ${source.section}.`;
+}
+
+function buildSpecialtyColorGenerations() {
+  const byModel = new Map<string, Generation[]>();
+  const records = specialtyColorSourceData.app_publication_records as SpecialtyPublicationRecord[];
+
+  for (const record of records) {
+    if (record.publication_status !== "published_specialty_subset") continue;
+    const year = String(record.model_year);
+    for (const modelId of record.catalog_model_ids) {
+      const printedPaintCode =
+        record.paint_code.trim().toLowerCase() === "not printed"
+          ? null
+          : record.paint_code;
+      const code = [record.paint_code, `SEO ${record.seo_code}`]
+        .filter(Boolean)
+        .join(" / ");
+      const refinishNote = record.refinish_numbers
+        ? ` Refinish references printed by GM: ${Object.entries(record.refinish_numbers)
+            .map(([maker, value]) => `${maker.replaceAll("_", " ")} ${value}`)
+            .join("; ")}.`
+        : "";
+      const generation: Generation = {
+        id: `specialty-${modelId}-${record.record_id}`,
+        label: `${year} Chevrolet specialty paint subset`,
+        range: year,
+        years: [year],
+        listingCount: 1,
+        revisionNote:
+          `This is an exact specialty-paint subset for ${record.source_model_scope.join("; ")}. ` +
+          "It is not a complete model-year exterior-color palette, and adjacent years are not inferred.",
+        sources: {
+          [year]: {
+            name: record.source.title,
+            chart: `Specialty paint subset for ${record.source_model_scope.join("; ")}`,
+            locator: specialtyPdfLocator(record.source),
+            revision: record.source.revision,
+            url: record.source.url,
+            sourceId: record.source.source_id,
+            sourceType: record.source.source_type,
+            publisher: record.source.publisher,
+            carrier: record.source.carrier,
+            archiveUrl: record.source.archive_url,
+            originalUrl:
+              record.source.archive_url &&
+              record.source.archive_url !== record.source.url
+                ? record.source.url
+                : undefined,
+            evidenceClass: "specialty_palette_subset",
+            artifactSha256: record.source.sha256,
+            artifactBytes: record.source.bytes,
+            pdfPageCount: record.source.pdf_page_count,
+            retrievedAt: record.source.retrieved_at ?? undefined,
+          },
+        },
+        colors: [
+          {
+            id: `${modelId}-${archiveColorId(record.label)}-${year}-${archiveColorId(record.record_id)}`,
+            name: record.label,
+            swatch: interpretiveArchiveSwatch(record.label),
+            rowCode: code,
+            note:
+              "Interpretive screen swatch only; it is not sampled factory paint evidence." +
+              refinishNote,
+            availability: {
+              [year]: {
+                state: "restricted",
+                label: record.label,
+                code,
+                factoryCode: printedPaintCode,
+                factoryCodeStatus: printedPaintCode ? "printed" : "not printed",
+                restriction: record.restrictions.join(" "),
+                sourceIds: [record.source.source_id],
+              },
+            },
+          },
+        ],
+      };
+      byModel.set(modelId, [...(byModel.get(modelId) ?? []), generation]);
+    }
+  }
+
+  return byModel;
+}
+
+const specialtyColorGenerationsByModel = buildSpecialtyColorGenerations();
 
 const auditedModels: ArchiveModel[] = [
   {
@@ -2451,13 +4200,30 @@ const auditedModels: ArchiveModel[] = [
     generations: [],
   },
   {
-    id: "suburban", name: "Suburban", vehicleClass: "full-size SUV", era: "1935–present catalog expansion", status: "1977 official chart verified",
+    id: "suburban", name: "Suburban", vehicleClass: "full-size SUV", era: "1935–present catalog expansion", status: "36 complete model-year color palettes verified (1969, 1972–2005, and 2007)",
     pendingCopy: "All model years remain visible while official color charts are reviewed year by year.",
-    generations: [suburban1977],
+    generations: [
+      ...suburbanEarlyNoChartGenerations,
+      ...suburbanEarlyVerifiedGenerations,
+      suburban1977To1981,
+      ...suburbanBrochurePaletteGenerations,
+      suburban1983,
+      suburban1984To1985,
+      suburban1986,
+      suburban1987,
+      suburban1988,
+      suburban1990,
+      suburban1991,
+      suburban1992,
+      suburban1994,
+      suburban1995To1999,
+      ...suburban2000To2007Generations,
+    ],
   },
   {
-    id: "tahoe", name: "Tahoe", vehicleClass: "full-size SUV", era: "1995–present catalog expansion", status: "1995, 1996, and 2001 official color pages verified",
-    pendingCopy: "All model years remain visible while official color charts are reviewed year by year. Two-tone combinations stay separate from the solid-color timeline.",
+    id: "tahoe", name: "Tahoe", vehicleClass: "full-size SUV", era: "1995–present catalog expansion",
+    status: `${tahoeAuditVerifiedYearCount} model years have complete source-linked palettes or exact program audits (1995–2007)`,
+    pendingCopy: "All model years remain visible while source tables are reviewed year by year. Program-specific, specialty-paint, and two-tone evidence remains separate from ordinary retail palettes.",
     generations: tahoeAuditGenerations,
   },
 ];
@@ -2600,9 +4366,11 @@ function catalogGenerations(
 
 function mergeCatalogModel(model: CatalogModel): ArchiveModel {
   const audited = auditedModels.find((item) => item.id === model.id);
-  const auditedGenerations = (audited?.generations ?? []).map((generation) =>
-    applyPlatformEra(model.id, generation),
-  );
+  const auditedGenerations = [
+    ...(audited?.generations ?? []),
+    ...(specialtyColorGenerationsByModel.get(model.id) ?? []),
+    ...(modernPaletteGenerationsByModel.get(model.id) ?? []),
+  ].map((generation) => applyPlatformEra(model.id, generation));
   const reviewedYears = new Set(
     auditedGenerations.flatMap((generation) => Object.keys(generation.sources)),
   );
@@ -2617,7 +4385,17 @@ function mergeCatalogModel(model: CatalogModel): ArchiveModel {
     (total, generation) => total + generation.listingCount,
     0,
   );
-  const reviewStatus = `${reviewedYears.size} of ${catalogYears.size} model years chart-reviewed`;
+  const qualifiedPaletteYears = new Set(
+    auditedGenerations.flatMap((generation) =>
+      Object.entries(generation.sources)
+        .filter(([, source]) => source.evidenceClass === "qualified_palette_union")
+        .map(([year]) => year),
+    ),
+  );
+  const reviewStatus = `${reviewedYears.size} of ${catalogYears.size} model years source-linked`;
+  const paletteStatus = qualifiedPaletteYears.size
+    ? `; ${qualifiedPaletteYears.size} qualified GM Fleet Guide palette ${qualifiedPaletteYears.size === 1 ? "year" : "years"}`
+    : "";
 
   return {
     id: model.id,
@@ -2625,7 +4403,7 @@ function mergeCatalogModel(model: CatalogModel): ArchiveModel {
     vehicleClass: model.vehicle_class,
     era: catalogEra(model),
     status: listingCount
-      ? `${audited?.status ?? `${listingCount} source-linked listings`}; ${reviewStatus}`
+      ? `${audited?.status ?? `${listingCount} source-linked listings`}; ${reviewStatus}${paletteStatus}`
       : `${catalogYears.size} model years catalogued; color charts in research queue`,
     pendingCopy:
       audited?.pendingCopy ??

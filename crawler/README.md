@@ -84,6 +84,13 @@ entry exposed by GM Heritage from 1913 through 2007. It is a discovery queue,
 not proof that every PDF contains a paint chart. Later model years require
 separate official brochure and order-guide manifests.
 
+`gm-heritage-camaro-1967-1969.jsonl` is the original bounded crawler example.
+Its three URLs and PDF hashes are already present in the complete 691-entry
+manifest under canonical index-derived source IDs. If both manifests exist in
+one crawler database, the color-table extractor verifies those exact
+URL/hash/metadata matches and suppresses the three legacy aliases before
+sharding. They are not three additional documents.
+
 `work --max-jobs 0` continues until no eligible job remains. Multiple workers
 may use the same SQLite database, but the deployment runbook recommends starting
 with one native-text worker and one OCR worker. SQLite leases prevent two workers

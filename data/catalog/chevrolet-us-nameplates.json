@@ -858,24 +858,24 @@
       "name": "Canopy Express",
       "vehicle_class": "commercial delivery vehicle",
       "model_year_ranges": [
-        {"start": 1929, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
+        {"start": 1931, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.hemmings.com/stories/1933-chevrolet-canopy-express/", "https://www.oldcarsweekly.com/features/a-beloved-canopy-express-1949-chevy-canopy-express", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
         {"start": 1946, "end": 1955, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/collection/chevrolet-trucks", "https://www.gm.com/heritage/archive/vehicle-information-kits"]}
       ],
       "aliases": ["Canopy Delivery", "Depot Hack"],
       "current": false,
-      "notes": "Commercial open-sided delivery body; precise first year is supported by secondary catalog history and retained at medium confidence."
+      "notes": "Commercial open-sided delivery body. Independent historical accounts place Chevrolet's in-house Canopy Express debut in 1931; the range remains medium confidence pending a primary 1931 body catalog."
     },
     {
       "id": "sedan-delivery",
       "name": "Sedan Delivery",
       "vehicle_class": "car-based commercial delivery vehicle",
       "model_year_ranges": [
-        {"start": 1928, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Sedan_delivery"]},
+        {"start": 1928, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.oldcarsweekly.com/features/sedan-deliveries-the-handsome-handy-haulers", "https://www.curbsideclassic.com/automotive-histories/the-american-sedan-delivery-a-unique-combination-of-style-and-utility/", "https://www.gm.com/heritage/archive/vehicle-information-kits"]},
         {"start": 1946, "end": 1960, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Sedan_delivery"]}
       ],
       "aliases": ["Chevrolet Sedan Delivery"],
       "current": false,
-      "notes": "Car-based windowless delivery body, distinct from truck-based Panel Truck; no civilian 1943-1945 model years."
+      "notes": "Car-based windowless delivery body, distinct from truck-based Panel Truck; no civilian 1943-1945 model years. Secondary histories conflict over whether Chevrolet's factory body began during 1928 or as a 1929 model, so the 1928 endpoint remains medium confidence and receives no inferred era overlay."
     },
     {
       "id": "panel-truck",
@@ -883,11 +883,11 @@
       "vehicle_class": "truck-based commercial delivery vehicle",
       "model_year_ranges": [
         {"start": 1929, "end": 1942, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Panel_truck"]},
-        {"start": 1946, "end": 1967, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Panel_truck"]}
+        {"start": 1946, "end": 1970, "confidence": "high", "evidence_urls": ["https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1970-Chevrolet-Truck.pdf", "https://en.wikipedia.org/wiki/Chevrolet_C/K_(second_generation)"]}
       ],
       "aliases": ["Chevrolet Panel", "Panel Delivery"],
       "current": false,
-      "notes": "Truck-chassis enclosed delivery body; exact series badges vary by year."
+      "notes": "Truck-chassis enclosed delivery body; exact series badges vary by year. Chevrolet's 1970 truck specifications list C10 Panel models CS10905 and CE10905; the body was discontinued after 1970."
     },
     {
       "id": "suburban",
@@ -1025,10 +1025,10 @@
       "id": "sportvan",
       "name": "Sportvan",
       "vehicle_class": "full-size passenger van",
-      "model_year_ranges": [{"start": 1964, "end": 1995, "confidence": "medium", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits", "https://en.wikipedia.org/wiki/Chevrolet_van"]}],
+      "model_year_ranges": [{"start": 1965, "end": 1996, "confidence": "high", "evidence_urls": ["https://www.oldcarbrochures.com/static/NA/GM%20Trucks%20and%20Vans/1965_Trucks_And_Vans/dirindex.html", "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-G-Van.pdf", "https://en.wikipedia.org/wiki/Chevrolet_van"]}],
       "aliases": ["Chevrolet Sportvan", "Sport Van", "Beauville Sportvan"],
       "current": false,
-      "notes": "Passenger-oriented G-Series marketing name retained separately because period brochures and buyers use it as a model name."
+      "notes": "Passenger-oriented G-Series marketing name retained separately because period brochures and buyers use it as a model name. The cargo Chevy Van began in 1964; the integrated-window Sportvan joined for 1965, and Chevrolet's 1996 order guide still lists Sportvan and Extended Sportvan models."
     },
     {
       "id": "p-series-step-van",
@@ -1044,12 +1044,12 @@
     },
     {
       "id": "l-series-tilt-cab",
-      "name": "L-Series Tilt Cab",
+      "name": "Tilt Cab / Steel Tilt Cab",
       "vehicle_class": "medium and heavy cab-over truck",
-      "model_year_ranges": [{"start": 1960, "end": 1981, "confidence": "medium", "evidence_urls": ["https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1962-Chevrolet-Truck.pdf", "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf"]}],
-      "aliases": ["Tilt Cab", "Steel Tilt Cab", "L-Series"],
+      "model_year_ranges": [{"start": 1960, "end": 1981, "confidence": "medium", "evidence_urls": ["https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1962-Chevrolet-Truck.pdf", "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1980-Chevrolet-Truck.pdf", "https://imcdb.opencommunity.be/forum_topic-7960-60340-Chevrolet_Tilt_Cab_and_Steel_Tilt_Cab__GMC_Steel_Tilt_Cab.html"]}],
+      "aliases": ["Tilt Cab", "Steel Tilt Cab", "T60", "T70", "T80", "TE60", "TE65", "W60", "W70", "L-Series Tilt Cab"],
       "current": false,
-      "notes": "Steel cab-over commercial family. Contemporary Chevrolet brochures often say Tilt Cab rather than L-Series."
+      "notes": "Chevrolet marketed this cab-over family as Tilt Cab and, from 1973, Steel Tilt Cab. The retained model ID and L-Series search alias are legacy cross-references; L-Series was GMC nomenclature and is not assigned to Chevrolet display bands."
     },
     {
       "id": "b-series-bus-chassis",
@@ -1401,19 +1401,19 @@
       "id": "brightdrop-400",
       "name": "BrightDrop 400",
       "vehicle_class": "electric commercial van",
-      "model_year_ranges": [{"start": 2025, "end": 2025, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://www.chevrolet.com/commercial/brightdrop"]}],
+      "model_year_ranges": [{"start": 2025, "end": 2026, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://www.chevrolet.com/commercial/brightdrop", "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf"]}],
       "aliases": ["Chevrolet BrightDrop 400", "Zevo 400"],
       "current": true,
-      "notes": "Chevrolet-badged beginning with model year 2025; earlier BrightDrop-brand Zevo years are excluded. Chevrolet still offers 2025 inventory as of retrieval."
+      "notes": "Chevrolet-badged beginning with model year 2025; earlier BrightDrop-brand Zevo years are excluded. The official 2026 GM Fleet Guide confirms continued Chevrolet BrightDrop 400 availability."
     },
     {
       "id": "brightdrop-600",
       "name": "BrightDrop 600",
       "vehicle_class": "electric commercial van",
-      "model_year_ranges": [{"start": 2025, "end": 2025, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://www.chevrolet.com/commercial/brightdrop"]}],
+      "model_year_ranges": [{"start": 2025, "end": 2026, "confidence": "high", "evidence_urls": ["https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html", "https://www.chevrolet.com/commercial/brightdrop", "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf"]}],
       "aliases": ["Chevrolet BrightDrop 600", "Zevo 600"],
       "current": true,
-      "notes": "Chevrolet-badged beginning with model year 2025; earlier BrightDrop-brand Zevo years are excluded. Chevrolet still offers 2025 inventory as of retrieval."
+      "notes": "Chevrolet-badged beginning with model year 2025; earlier BrightDrop-brand Zevo years are excluded. The official 2026 GM Fleet Guide confirms continued Chevrolet BrightDrop 600 availability."
     }
   ]
 }

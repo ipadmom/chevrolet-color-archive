@@ -109,7 +109,7 @@ Blazer, TrailBlazer, Nova, Malibu, Camaro, Monte Carlo, Impala, Nomad, Brookwood
 
 This audit is bounded through model year 2026. Chevrolet's live navigation now markets a redesigned Bolt, but Chevrolet has identified that return as model year 2027. The catalog therefore leaves Bolt EV at 2017-2023 and Bolt EUV at 2022-2023 for the through-2026 dataset. The new Bolt must be added as a new 2027 range in the next model-year rollover, not backfilled into 2024-2026.
 
-BrightDrop 400 and 600 are included only from model year 2025, when they became Chevrolet-badged products. Earlier BrightDrop-brand Zevo years remain excluded. Chevrolet still offers the Chevrolet-badged 2025 vehicles as of this audit, so `current` is true even though the latest displayed product model year is 2025.
+BrightDrop 400 and 600 are included only from model year 2025, when they became Chevrolet-badged products. Earlier BrightDrop-brand Zevo years remain excluded. The official 2026 GM Fleet Guide confirms both Chevrolet-badged models through model year 2026, so the catalog records 2025–2026 and keeps `current` true.
 
 ## Remaining uncertainty queue
 
@@ -120,7 +120,7 @@ The following areas need brochure-by-brochure confirmation before their year mat
 3. Wagon hierarchy from 1953 through 1972. Handyman, Beauville, Nomad, Yeoman, Brookwood, Parkwood, Kingswood, Townsman, Greenbrier, Concours, and Concours Estate sometimes functioned as model, series, or body-style labels depending on year.
 4. Pre-C/K truck numbered series beyond the consumer-searchable 3100, 3600, and 3800 rows. The umbrella Chevrolet Truck entry must retain exact series codes extracted from each annual truck kit.
 5. Chevy 90's first-year nomenclature. Its 1966-1977 range is intentionally `low` confidence until every annual heavy-truck brochure is reconciled.
-6. Commercial chassis end years and badge wording for L-Series Tilt Cab, B-Series, P-Series, Tiltmaster/W-Series, T-Series, and Kodiak. VIN standards and annual GM kits must both agree before color publication.
+6. Commercial chassis end years and badge wording for Chevrolet Tilt Cab / Steel Tilt Cab, B-Series, P-Series, Tiltmaster/W-Series, T-Series, and Kodiak. The legacy `l-series-tilt-cab` ID remains for compatibility, but L-Series is GMC nomenclature and must not appear as a Chevrolet display label. VIN standards and annual GM kits must both agree before color publication.
 7. Fleet-only first and last sale dates for Beretta/Corsica prelaunch units, Caprice PPV, Captiva Sport, and the Limited carryovers.
 
 These uncertainties are not silent gaps. They are encoded through range confidence, evidence URLs, and notes so the crawler can prioritize primary-source replacement.

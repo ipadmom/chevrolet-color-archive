@@ -1,0 +1,351 @@
+from __future__ import annotations
+
+import copy
+import importlib.util
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPT = ROOT / "scripts" / "refresh-color-research-gap-inventory.py"
+SPEC = importlib.util.spec_from_file_location("gap_inventory_refresh", SCRIPT)
+assert SPEC and SPEC.loader
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
+
+
+class GapInventoryRefreshTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.inventory = MODULE.build_inventory()
+
+    def test_exact_snapshot_reconciliation(self) -> None:
+        summary = self.inventory["summary"]
+        self.assertEqual(149, summary["model_count"])
+        self.assertEqual(1_792, summary["model_year_count"])
+        self.assertEqual(1_468, summary["listing_count"])
+        self.assertEqual(85, summary["completely_reviewed_count"])
+        self.assertEqual(3, summary["reviewed_qualified_historical_table_count"])
+        self.assertEqual(56, summary["reviewed_qualified_palette_union_count"])
+        self.assertEqual(454, summary["reviewed_qualified_palette_union_listing_count"])
+        self.assertEqual(5, summary["reviewed_specialty_palette_subset_count"])
+        self.assertEqual(12, summary["reviewed_specialty_palette_subset_application_year_count"])
+        self.assertEqual(41, summary["reviewed_specialty_palette_subset_listing_count"])
+        self.assertEqual(973, summary["source_transcription_listing_count"])
+        self.assertEqual(4, summary["reviewed_no_chart_count"])
+        self.assertEqual(0, summary["source_located_chart_unreviewed_count"])
+        self.assertEqual(1_639, summary["wholly_unreviewed_count"])
+        self.assertEqual(1_862, summary["official_source_candidate_link_count"])
+        self.assertEqual(691, summary["crawler_source_document_count"])
+        self.assertEqual(2_774, summary["crawler_candidate_page_count"])
+        self.assertEqual(11_733, summary["crawler_color_candidate_export_record_count"])
+        self.assertEqual(0, summary["crawler_visually_reviewed_candidate_page_count"])
+        self.assertTrue(
+            all(check["pass"] for check in self.inventory["reconciliation"].values())
+        )
+
+    def test_suburban_explicit_no_chart_reviews_are_preserved(self) -> None:
+        rows = {
+            row["model_year"]: row
+            for row in self.inventory["model_years"]
+            if row["model_id"] == "suburban" and row["model_year"] in {1963, 1970, 1971}
+        }
+        self.assertEqual({1963, 1970, 1971}, set(rows))
+        for row in rows.values():
+            self.assertEqual(
+                "source_reviewed_no_color_chart_found", row["audit_state"]
+            )
+            self.assertTrue(row["color_chart_reviewed"])
+            self.assertFalse(row["completely_reviewed_color_chart"])
+            self.assertEqual(0, row["exact_listing_count"])
+            self.assertEqual(
+                row["reviewed_no_chart_source"]["source_id"],
+                row["current_app_source"]["sourceId"],
+            )
+            self.assertEqual(
+                row["reviewed_no_chart_source"]["url"],
+                next(
+                    source["pdf_url"]
+                    for source in row["official_source_records"]
+                    if source["relation"] == "dedicated"
+                ),
+            )
+
+    def test_model_year_rows_are_unique_and_self_counting(self) -> None:
+        rows = self.inventory["model_years"]
+        keys = [row["model_year_key"] for row in rows]
+        self.assertEqual(len(keys), len(set(keys)))
+        for row in rows:
+            self.assertEqual(row["exact_listing_count"], len(row["listings"]))
+            self.assertEqual(
+                row["exact_listing_count"],
+                row["listed_count"] + row["restricted_count"],
+            )
+            if row["listings"]:
+                self.assertIsNotNone(row["current_app_source"])
+
+    def test_palette_union_remains_qualified(self) -> None:
+        palette_rows = [
+            row
+            for row in self.inventory["model_years"]
+            if row["audit_state"] == "reviewed_qualified_palette_union"
+        ]
+        self.assertEqual(56, len(palette_rows))
+        self.assertTrue(all(row["color_chart_reviewed"] for row in palette_rows))
+        self.assertTrue(
+            all(not row["completely_reviewed_color_chart"] for row in palette_rows)
+        )
+        self.assertTrue(
+            all(
+                row["current_app_source"]["evidenceClass"]
+                == "qualified_palette_union"
+                for row in palette_rows
+            )
+        )
+        self.assertIn(
+            "reviewed_qualified_palette_union",
+            self.inventory["parquet_schema_recommendation"]["audit_state_enum"],
+        )
+
+    def test_specialty_subsets_remain_incomplete_and_restricted(self) -> None:
+        expected_keys = {
+            "ck-series:1980",
+            "blazer:1980",
+            "express:2011",
+            "silverado-hd:2011",
+            "tahoe:2011",
+        }
+        specialty_rows = [
+            row
+            for row in self.inventory["model_years"]
+            if row["audit_state"] == "reviewed_specialty_palette_subset"
+        ]
+        self.assertEqual(
+            expected_keys, {row["model_year_key"] for row in specialty_rows}
+        )
+        for row in specialty_rows:
+            self.assertTrue(row["color_chart_reviewed"])
+            self.assertFalse(row["completely_reviewed_color_chart"])
+            self.assertEqual(1, row["exact_listing_count"])
+            self.assertEqual(0, row["listed_count"])
+            self.assertEqual(1, row["restricted_count"])
+            self.assertEqual("Woodland Green", row["listings"][0]["display_label"])
+            self.assertEqual("restricted", row["listings"][0]["availability_state"])
+            self.assertEqual(
+                "specialty_palette_subset",
+                row["current_app_source"]["evidenceClass"],
+            )
+        self.assertIn(
+            "reviewed_specialty_palette_subset",
+            self.inventory["parquet_schema_recommendation"]["audit_state_enum"],
+        )
+
+    def test_specialty_subset_overlays_a_governing_palette(self) -> None:
+        row = next(
+            row
+            for row in self.inventory["model_years"]
+            if row["model_year_key"] == "suburban:1980"
+        )
+        self.assertEqual(
+            "suburban-1977-1981-audited-solid-colors", row["generation_id"]
+        )
+        self.assertEqual("verified_complete", row["audit_state"])
+        self.assertEqual(16, row["exact_listing_count"])
+        self.assertEqual(15, row["listed_count"])
+        self.assertEqual(1, row["restricted_count"])
+        woodland = next(
+            listing
+            for listing in row["listings"]
+            if listing["display_label"] == "Woodland Green"
+        )
+        self.assertEqual("restricted", woodland["availability_state"])
+        self.assertIsNone(row["current_app_source"].get("evidenceClass"))
+
+        application_rows = [
+            item
+            for item in self.inventory["model_years"]
+            if any(
+                listing["evidence_class"] == "specialty_palette_subset"
+                for listing in item["listings"]
+            )
+        ]
+        self.assertEqual(12, len(application_rows))
+        self.assertEqual(
+            41,
+            sum(
+                listing["evidence_class"] == "specialty_palette_subset"
+                for item in application_rows
+                for listing in item["listings"]
+            ),
+        )
+
+    def test_forest_service_green_remains_a_non_route_research_lead(self) -> None:
+        specialty = MODULE.load_json(
+            ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
+        )
+        lead = next(
+            item
+            for item in specialty["search_leads"]
+            if item["id"] == "forest-service-green-fs-595-14260"
+        )
+        self.assertEqual(
+            "research_only_unresolved_chevrolet_application", lead["status"]
+        )
+        self.assertNotIn("model_id", lead)
+        self.assertNotIn("model_year", lead)
+        self.assertTrue(
+            all(
+                record["label"] not in {"Forest Service Green", "Forestry Green"}
+                for record in specialty["app_publication_records"]
+            )
+        )
+        published_labels = {
+            listing["display_label"]
+            for row in self.inventory["model_years"]
+            for listing in row["listings"]
+        }
+        self.assertNotIn("Forest Service Green", published_labels)
+        self.assertNotIn("Forestry Green", published_labels)
+
+    def test_specialty_candidate_ledger_does_not_promote_unreviewed_pages(self) -> None:
+        specialty = MODULE.load_json(
+            ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
+        )
+        self.assertEqual(19, len(specialty["app_publication_records"]))
+        self.assertEqual(2, len(specialty["verified_not_published"]))
+        self.assertEqual(6, len(specialty["usda_primary_sources"]))
+        self.assertEqual(2, len(specialty["comparison_sources"]))
+        self.assertEqual(23, len(specialty["historic_gm_upfitter_candidates"]))
+        self.assertEqual(
+            24, len(specialty["modern_order_guide_snapshot_candidates"])
+        )
+        self.assertEqual(5, len(specialty["rejected_or_unresolved_leads"]))
+        self.assertEqual(
+            62, specialty["integrity_audit"]["unique_retained_files_rehashed"]
+        )
+        self.assertTrue(specialty["integrity_audit"]["byte_lengths_reconciled"])
+        self.assertTrue(specialty["integrity_audit"]["sha256_digests_reconciled"])
+
+        for record in specialty["app_publication_records"]:
+            source = record["source"]
+            pages = source.get("pdf_pages") or [source.get("pdf_page")]
+            self.assertEqual("published_specialty_subset", record["publication_status"])
+            self.assertTrue(source["url"].startswith("https://"))
+            self.assertGreater(source["bytes"], 0)
+            self.assertRegex(source["sha256"], r"^[0-9a-f]{64}$")
+            self.assertTrue(
+                all(
+                    page and page <= source["pdf_page_count"]
+                    for page in pages
+                )
+            )
+
+        self.assertTrue(
+            all(
+                record["status"] == "page_rendered_needs_visual_qc"
+                for record in specialty["historic_gm_upfitter_candidates"]
+            )
+        )
+        modern_statuses = {
+            record["status"]
+            for record in specialty["modern_order_guide_snapshot_candidates"]
+        }
+        self.assertEqual(
+            {"exact_snapshot_page_located", "visually_verified_exact_snapshot"},
+            modern_statuses,
+        )
+        self.assertEqual(
+            2,
+            sum(
+                record["status"] == "visually_verified_exact_snapshot"
+                for record in specialty["modern_order_guide_snapshot_candidates"]
+            ),
+        )
+        published_record_ids = {
+            record["record_id"] for record in specialty["app_publication_records"]
+        }
+        self.assertTrue(
+            published_record_ids.isdisjoint(
+                record["record_id"] for record in specialty["verified_not_published"]
+            )
+        )
+
+    def test_modern_fleet_guides_are_model_year_leads_not_color_evidence(self) -> None:
+        tahoe_2020 = next(
+            row
+            for row in self.inventory["model_years"]
+            if row["model_year_key"] == "tahoe:2020"
+        )
+        self.assertEqual("unreviewed", tahoe_2020["audit_state"])
+        self.assertEqual(0, tahoe_2020["exact_listing_count"])
+        self.assertEqual("generic_full_line_official_kit", tahoe_2020["likely_source_availability"])
+        self.assertEqual(1, tahoe_2020["official_source_record_count"])
+        source = tahoe_2020["official_source_records"][0]
+        self.assertEqual("gm-fleet-guide-us-2020", source["crawler_source_id"])
+        self.assertEqual("generic_full_line", source["relation"])
+        self.assertEqual("fleet_guide_pdf", source["source_type"])
+        self.assertRegex(source["artifact_sha256"], r"^[a-f0-9]{64}$")
+
+    def test_new_catalog_year_is_synthesized_without_inventing_candidates(self) -> None:
+        base = MODULE.load_json(
+            ROOT / "data" / "audits" / "color-research-gap-inventory.json"
+        )
+        base = copy.deepcopy(base)
+        base["model_years"] = [
+            row
+            for row in base["model_years"]
+            if row["model_year_key"] != "brightdrop-400:2026"
+        ]
+        catalog = MODULE.load_json(
+            ROOT / "data" / "catalog" / "chevrolet-us-nameplates.json"
+        )
+        platforms = MODULE.load_json(
+            ROOT / "data" / "catalog" / "chevrolet-platform-eras.json"
+        )
+        snapshot = MODULE.load_archive_snapshot()
+        rows, _, _ = MODULE.build_model_years(
+            base=base,
+            catalog=catalog,
+            platform_catalog=platforms,
+            snapshot=snapshot,
+        )
+        synthesized = next(
+            row for row in rows if row["model_year_key"] == "brightdrop-400:2026"
+        )
+        self.assertEqual(
+            "reviewed_qualified_palette_union", synthesized["audit_state"]
+        )
+        self.assertEqual(1, synthesized["exact_listing_count"])
+        self.assertEqual([], synthesized["official_source_records"])
+        self.assertEqual(0, synthesized["official_source_record_count"])
+        self.assertEqual(
+            "gm-fleet-guide-us-2026-r2026-04-01",
+            synthesized["current_app_source"]["sourceId"],
+        )
+
+    def test_tracked_outputs_are_current_and_deterministic(self) -> None:
+        second = MODULE.build_inventory()
+        self.assertEqual(
+            MODULE.serialize_inventory(self.inventory),
+            MODULE.serialize_inventory(second),
+        )
+        self.assertEqual(
+            MODULE.render_document(self.inventory),
+            MODULE.render_document(second),
+        )
+        self.assertEqual(
+            (ROOT / "data" / "audits" / "color-research-gap-inventory.json").read_text(
+                encoding="utf-8-sig"
+            ),
+            MODULE.serialize_inventory(self.inventory),
+        )
+        self.assertEqual(
+            (ROOT / "docs" / "color-research-gap-inventory.md").read_text(
+                encoding="utf-8-sig"
+            ),
+            MODULE.render_document(self.inventory),
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -1,124 +1,909 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "make": "Chevrolet",
   "model": "Tahoe",
   "market": "United States",
   "visibility": "public",
+  "audit_as_of": "2026-07-22",
   "audit_scope": {
     "year_start": 2001,
     "year_end": 2007,
-    "method": "Direct visual transcription from official General Motors vehicle information kits. Empty arrays are not claims that no colors existed; they mark years not yet transcribed."
+    "method": "Direct visual transcription from complete Chevrolet model-year color tables. Original Chevrolet sales brochures and specification sheets carried by archival hosts remain manufacturer documents. Secondary code guides are cited only where they corroborate a printed model-specific table. Specialty paint remains a separate evidence class. No color is projected into an adjacent year.",
+    "code_policy": "Canonical codes are published only when printed in a controlling Chevrolet table or corroborated by a model-specific compatibility guide. Secondary code crosswalks remain research metadata and never fill a canonical code that the controlling table did not print."
   },
   "years": [
     {
       "year": 2001,
       "status": "verified",
       "source": {
+        "source_id": "gm-heritage-2001-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Tahoe.pdf",
         "title": "2001 Chevrolet Tahoe Vehicle Information Kit",
         "publisher": "General Motors",
-        "source_type": "official vehicle information kit",
+        "source_type": "official_vehicle_information_kit",
         "pdf_page": 12,
         "printed_page": 10,
         "section": "Vehicle Overview - Color and Trim - Exterior Colors",
         "publication_date": null,
-        "publication_note": "The kit identifies the 2001 model year on its cover. No separate publication date was found on the verified page."
+        "publication_note": "The kit identifies the 2001 model year. No separate publication date is printed on the verified page.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "official_live",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "sha256": "fd9ee45ef8bd1e465687e187877640f349d850f2c526c9d8d1477a9b7dbe9093",
+        "bytes": 17070627,
+        "pdf_page_count": 128,
+        "archive_asset_name": "2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
       "exterior_colors": [
-        { "name": "Onyx Black", "code": null, "finish": null },
-        { "name": "Indigo Blue Metallic", "code": null, "finish": "metallic" },
-        { "name": "Victory Red", "code": null, "finish": null },
-        { "name": "Sunset Gold Metallic", "code": null, "finish": "metallic" },
-        { "name": "Summit White", "code": null, "finish": null },
-        { "name": "Medium Charcoal Gray Metallic", "code": null, "finish": "metallic" },
-        { "name": "Forest Green Metallic", "code": null, "finish": "metallic" },
-        { "name": "Light Pewter Metallic", "code": null, "finish": "metallic" },
-        { "name": "Redfire Metallic", "code": null, "finish": "metallic" }
+        {
+          "name": "Onyx Black",
+          "code": null,
+          "finish": null,
+          "restriction": "Available on the regular Tahoe range and listed for Z71."
+        },
+        {
+          "name": "Indigo Blue Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on the regular Tahoe range; not listed for Z71."
+        },
+        {
+          "name": "Victory Red",
+          "code": null,
+          "finish": null,
+          "restriction": "Available on the regular Tahoe range; not listed for Z71."
+        },
+        {
+          "name": "Sunset Gold Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on the regular Tahoe range; not listed for Z71."
+        },
+        {
+          "name": "Summit White",
+          "code": null,
+          "finish": null,
+          "restriction": "Available on the regular Tahoe range and listed for Z71."
+        },
+        {
+          "name": "Medium Charcoal Gray Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on the regular Tahoe range; not listed for Z71."
+        },
+        {
+          "name": "Forest Green Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on the regular Tahoe range and listed for Z71."
+        },
+        {
+          "name": "Light Pewter Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on the regular Tahoe range and listed for Z71."
+        },
+        {
+          "name": "Redfire Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on the regular Tahoe range; not listed for Z71."
+        }
       ],
       "color_code_note": "The verified color list prints names but no paint or RPO codes. Codes remain null rather than being inferred from secondary sources.",
       "availability_notes": [
-        "The kit states that Z71 colors were limited to Onyx Black, Summit White, Forest Green Metallic, and Light Pewter Metallic."
+        "The kit limits Z71 to Onyx Black, Summit White, Forest Green Metallic, and Light Pewter Metallic."
       ],
       "two_tone_combinations": [],
-      "two_tone_status": "No two-tone combination list appears on the verified Color and Trim page. This is not a claim that no two-tone treatments were offered elsewhere."
+      "two_tone_status": "No two-tone combination list appears on the verified Color and Trim page. This is not a claim that no two-tone treatment was offered elsewhere."
     },
     {
       "year": 2002,
-      "status": "incomplete",
+      "status": "verified",
       "source": {
-        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Tahoe.pdf",
-        "title": "2002 Chevrolet Tahoe Vehicle Information Kit",
-        "publisher": "General Motors",
-        "source_type": "official vehicle information kit"
+        "source_id": "chevrolet-sales-brochure-2002-tahoe",
+        "url": "https://www.motorologist.com/wp-content/uploads/2002-Chevrolet-Tahoe-brochure.pdf",
+        "retrieval_url": "https://web.archive.org/web/20240609071421id_/https://www.motorologist.com/wp-content/uploads/2002-Chevrolet-Tahoe-brochure.pdf",
+        "title": "2002 Chevrolet Tahoe Sales Brochure",
+        "publisher": "Chevrolet / General Motors",
+        "carrier": "Motorologist",
+        "source_type": "original_manufacturer_sales_brochure",
+        "pdf_pages": [
+          18,
+          19
+        ],
+        "printed_pages": [
+          17,
+          18
+        ],
+        "section": "LT and LS feature availability; Z71 footnote; Exterior Colors",
+        "publication_date": "2001-09",
+        "publication_note": "Copyright 2001 General Motors Corporation; September 2001.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "sha256": "97ca38b885817e64e831d640b4167df2edf93838d29d407610df38efb797e522",
+        "bytes": 2777275,
+        "pdf_page_count": 20,
+        "supporting_sources": [
+          {
+            "source_id": "gm-heritage-2002-chevrolet-tahoe",
+            "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Tahoe.pdf",
+            "title": "2002 Chevrolet Tahoe Vehicle Information Kit",
+            "publisher": "General Motors",
+            "source_type": "official_vehicle_information_kit",
+            "pdf_page": 9,
+            "printed_page": 1,
+            "section": "Product Information - Tahoe Z71 exterior colors",
+            "publication_note": "The official kit independently prints the four-color Z71 subset.",
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "official_live",
+            "sha256": "eeedace0f77151da0ea4138c4464258daed8a180e8eeb4ee3dadddfa85b5560b",
+            "bytes": 10720527,
+            "pdf_page_count": 102,
+            "retrieved_at": "2026-07-21T06:35:35+00:00",
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+            "archive_asset_name": "2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
+          },
+          {
+            "source_id": "chevrolet-sales-brochure-2002-tahoe-independent-copy",
+            "url": "https://autocatalogarchive.com/wp-content/uploads/2016/05/Chevrolet-Tahoe-2002.pdf",
+            "title": "2002 Chevrolet Tahoe Sales Brochure, Independent Copy",
+            "publisher": "Chevrolet / General Motors",
+            "carrier": "Auto Catalog Archive",
+            "source_type": "original_manufacturer_sales_brochure_copy",
+            "pdf_pages": [
+              18,
+              19
+            ],
+            "section": "Independent carrier copy of the controlling brochure",
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "archival_mirror",
+            "publication_note": "Historical carrier reference only. A live retrieval attempt returned HTTP 403 on 2026-07-22, and no retained artifact is claimed for this independent copy."
+          }
+        ],
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-tahoe-brochure-motorologist.pdf",
+        "archive_asset_name": "2002-chevrolet-tahoe-brochure-motorologist.pdf"
       },
-      "exterior_colors": [],
+      "exterior_colors": [
+        {
+          "name": "Onyx Black",
+          "code": null,
+          "finish": null,
+          "restriction": "Available on LS and LT; also available on Z71."
+        },
+        {
+          "name": "Indigo Blue Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on LS and LT; not available on Z71."
+        },
+        {
+          "name": "Light Pewter Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on LS and LT; also available on Z71."
+        },
+        {
+          "name": "Forest Green Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on LS and LT; also available on Z71."
+        },
+        {
+          "name": "Medium Charcoal Gray Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on LS and LT; not available on Z71."
+        },
+        {
+          "name": "Victory Red",
+          "code": null,
+          "finish": null,
+          "restriction": "Available on LS and LT; not available on Z71."
+        },
+        {
+          "name": "Redfire Metallic",
+          "code": null,
+          "finish": "metallic",
+          "restriction": "Available on LS and LT; not available on Z71."
+        },
+        {
+          "name": "Summit White",
+          "code": null,
+          "finish": null,
+          "restriction": "Available on LS and LT; also available on Z71."
+        }
+      ],
+      "color_code_note": "The controlling Chevrolet brochure prints names and trim availability but no paint or RPO codes. Canonical codes remain null.",
+      "secondary_code_crosswalk": [
+        {
+          "name": "Onyx Black",
+          "rpo": "41U",
+          "wa_number": "WA8555",
+          "aliases": []
+        },
+        {
+          "name": "Indigo Blue Metallic",
+          "rpo": "39U",
+          "wa_number": "WA9792",
+          "aliases": []
+        },
+        {
+          "name": "Light Pewter Metallic",
+          "rpo": "11U",
+          "wa_number": "WA382E",
+          "aliases": []
+        },
+        {
+          "name": "Forest Green Metallic",
+          "rpo": "47U",
+          "wa_number": "WA9539",
+          "aliases": [
+            "Medium Green"
+          ]
+        },
+        {
+          "name": "Medium Charcoal Gray Metallic",
+          "rpo": "14U",
+          "wa_number": "WA391E",
+          "aliases": [
+            "Storm Gray"
+          ]
+        },
+        {
+          "name": "Victory Red",
+          "rpo": "74U",
+          "wa_number": "WA9260",
+          "aliases": []
+        },
+        {
+          "name": "Redfire Metallic",
+          "rpo": "72U",
+          "wa_number": "WA526F",
+          "aliases": []
+        },
+        {
+          "name": "Summit White",
+          "rpo": "50U",
+          "wa_number": "WA8624",
+          "aliases": []
+        }
+      ],
+      "secondary_code_sources": [
+        "https://www.gmpartsgiant.com/parts-list/2002-chevrolet-tahoe-4wd/front_end_sheet_metal_heater/paint_touch_up.html",
+        "https://www.automotivetouchup.com/touch-up-paint/chevrolet/2002/tahoe/"
+      ],
       "two_tone_combinations": [],
-      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+      "audit_note": "The brochure's complete LT and LS tables list the same eight colors. Its Z71 footnote limits Z71 to Onyx Black, Light Pewter Metallic, Forest Green Metallic, and Summit White."
     },
     {
       "year": 2003,
-      "status": "incomplete",
+      "status": "verified",
       "source": {
+        "source_id": "gm-heritage-2003-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
         "title": "2003 Chevrolet Tahoe Vehicle Information Kit",
         "publisher": "General Motors",
-        "source_type": "official vehicle information kit"
+        "source_type": "official_vehicle_information_kit",
+        "pdf_pages": [
+          138,
+          139,
+          140
+        ],
+        "section": "Interior and Exterior Color Compatibility; SEO Solid Color Paint; SEO Special Paint One Color",
+        "publication_date": "2004-03-30",
+        "publication_note": "Published March 30, 2004.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "official_live",
+        "sha256": "1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284",
+        "bytes": 49190468,
+        "pdf_page_count": 182,
+        "retrieved_at": "2026-07-21T06:37:31+00:00",
+        "supporting_sources": [
+          {
+            "source_id": "chevrolet-sales-brochure-2003-tahoe",
+            "url": "https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf",
+            "retrieval_url": "https://web.archive.org/web/20240216125333id_/https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf",
+            "title": "2003 Chevrolet Tahoe Sales Brochure",
+            "publisher": "Chevrolet / General Motors",
+            "carrier": "Auto-Brochures.com",
+            "source_type": "original_manufacturer_sales_brochure",
+            "pdf_page": 16,
+            "printed_page": 15,
+            "section": "Exterior colors and Z71 availability",
+            "publication_date": "2002-09",
+            "publication_note": "Copyright 2002 General Motors Corporation; September 2002.",
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "archival_mirror",
+            "sha256": "0d60ddd639614f5da8b85dcf3b438a5cd9d15c106cfa323d11467f82fe41b613",
+            "bytes": 1928530,
+            "pdf_page_count": 17,
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
+            "archive_asset_name": "2003-chevrolet-tahoe-brochure-auto-brochures.pdf"
+          }
+        ],
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+      "exterior_colors": [
+        {
+          "name": "Light Pewter Metallic",
+          "code": "11U",
+          "wa_number": "WA-382E",
+          "finish": "metallic",
+          "restriction": "Listed for the regular Tahoe range and for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Indigo Blue Metallic",
+          "code": "39U",
+          "wa_number": "WA-9792",
+          "finish": "metallic",
+          "restriction": "Listed for the regular Tahoe range; not listed for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Black",
+          "code": "41U",
+          "wa_number": "WA-8555",
+          "finish": null,
+          "restriction": "Listed for the regular Tahoe range and for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Dark Green Metallic",
+          "code": "47U",
+          "wa_number": "WA-9539",
+          "finish": "metallic",
+          "restriction": "Listed for the regular Tahoe range and for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Summit White",
+          "code": "50U",
+          "wa_number": "WA-8624",
+          "finish": null,
+          "restriction": "Listed for the regular Tahoe range and for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Sandalwood Metallic",
+          "code": "58U",
+          "wa_number": "WA-711J",
+          "finish": "metallic",
+          "restriction": "Tan or Neutral interiors only; not listed for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Dark Gray Metallic",
+          "code": "62U",
+          "wa_number": "WA-805K",
+          "finish": "metallic",
+          "aliases": [
+            "Dark Spiral Gray Metallic"
+          ],
+          "restriction": "Gray or Dark Charcoal interiors only; not listed for Z71 in the contemporaneous sales brochure."
+        },
+        {
+          "name": "Redfire Metallic",
+          "code": "72U",
+          "wa_number": "WA-526F",
+          "finish": "metallic",
+          "restriction": "The contemporaneous sales brochure excludes Redfire Metallic from its four-color Z71 list. The later official kit chart prints a superscript 3 on Redfire, which conflicts with that brochure and appears inconsistent with the chart's own four-color Z71 footnote."
+        }
+      ],
+      "source_conflicts": [
+        {
+          "topic": "Z71 color subset",
+          "resolution": "Use the contemporaneous September 2002 sales brochure for retail Z71 applicability.",
+          "detail": "The later kit chart on PDF page 138 visibly marks Redfire Metallic with superscript 3 even though footnote 3 states that it identifies the only Z71 colors. That would produce five colors. The contemporaneous brochure expressly lists only Black, Light Pewter Metallic, Dark Green Metallic, and Summit White."
+        }
+      ],
+      "seo_chart_entries": [
+        {
+          "name": "Blue",
+          "rpo": null,
+          "wa_number": "WA-7901",
+          "availability_status": "seo_chart_listed_not_proven_orderable"
+        },
+        {
+          "name": "Green",
+          "rpo": null,
+          "wa_number": "WA-7941",
+          "availability_status": "seo_chart_listed_not_proven_orderable"
+        },
+        {
+          "name": "Green, Woodland",
+          "rpo": "9V5",
+          "wa_number": "WA-9015",
+          "availability_status": "orderable_with_tgk"
+        },
+        {
+          "name": "Victory Red",
+          "rpo": null,
+          "wa_number": "WA-9260",
+          "availability_status": "seo_chart_listed_not_proven_orderable"
+        },
+        {
+          "name": "Doeskin Tan",
+          "rpo": "9V9",
+          "wa_number": "WA-9403",
+          "availability_status": "orderable_with_tgk"
+        },
+        {
+          "name": "Yellow",
+          "rpo": null,
+          "wa_number": "WA-9414",
+          "availability_status": "seo_chart_listed_not_proven_orderable"
+        },
+        {
+          "name": "Tangier Orange",
+          "rpo": "9W4",
+          "wa_number": "WA-9417",
+          "availability_status": "orderable_with_tgk"
+        },
+        {
+          "name": "Orange",
+          "rpo": null,
+          "wa_number": "WA-9419",
+          "availability_status": "seo_chart_listed_not_proven_orderable"
+        },
+        {
+          "name": "Wheatland Yellow",
+          "rpo": "9W3",
+          "wa_number": "WA-253A",
+          "availability_status": "orderable_with_tgk"
+        }
+      ],
+      "specialty_publication_note": "Only Woodland Green, Doeskin Tan, Tangier Orange, and Wheatland Yellow are expressly orderable through TGK on PDF page 140. The other five SEO chart rows remain research-only and are not published as Tahoe availability.",
+      "two_tone_combinations": []
     },
     {
       "year": 2004,
-      "status": "incomplete",
+      "status": "verified",
       "source": {
-        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Tahoe.pdf",
-        "title": "2004 Chevrolet Tahoe Vehicle Information Kit",
-        "publisher": "General Motors",
-        "source_type": "official vehicle information kit"
+        "source_id": "chevrolet-spec-sheet-us-2004-tahoe",
+        "url": "https://xr793.com/wp-content/uploads/2023/07/2004-Chevrolet-Tahoe-Spec-Sheet.pdf",
+        "retrieval_url": "https://web.archive.org/web/20240225052652id_/https://xr793.com/wp-content/uploads/2023/07/2004-Chevrolet-Tahoe-Spec-Sheet.pdf",
+        "title": "2004 Chevrolet Tahoe Specification Sheet",
+        "publisher": "Chevrolet / General Motors",
+        "carrier": "XR793",
+        "source_type": "original_manufacturer_specification_sheet",
+        "pdf_page": 2,
+        "section": "Exterior Colors and Z71 footnote 11",
+        "publication_date": "2003-09-10",
+        "publication_note": "Publication code 04CHETAHSPE01; dated September 10, 2003; copyright 2003 General Motors Corporation.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "sha256": "68b41b618bae2a61c93ee80d1f4655a68f3b177e380611ef8243babc6177b514",
+        "bytes": 252651,
+        "pdf_page_count": 2,
+        "supporting_sources": [
+          {
+            "source_id": "sherwin-williams-gm-2004-color-compatibility-guide",
+            "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2004_gm_ccg.pdf",
+            "title": "2004 GM Color Compatibility Guide",
+            "publisher": "Sherwin-Williams Automotive Finishes",
+            "source_type": "model_specific_color_compatibility_guide",
+            "pdf_pages": [
+              7,
+              8,
+              9,
+              15,
+              20,
+              22,
+              26,
+              30
+            ],
+            "section": "Chevrolet Tahoe model rows corroborating RPO and WA numbers",
+            "sha256": "3bd3709b52baae003adf94126fc63e49c64c7b9b46d817b4035910932b73bdd5",
+            "bytes": 93732,
+            "pdf_page_count": 35,
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-gm-color-compatibility-guide.pdf",
+            "archive_asset_name": "2004-sherwin-williams-gm-color-compatibility-guide.pdf"
+          }
+        ],
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-tahoe-spec-sheet.pdf",
+        "archive_asset_name": "2004-chevrolet-tahoe-spec-sheet.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+      "exterior_colors": [
+        {
+          "name": "Dark Blue Metallic",
+          "code": "25",
+          "wa_number": "WA-722J",
+          "finish": "metallic",
+          "restriction": "Not available on Z71.",
+          "aliases": [
+            "Dark Ming Blue"
+          ]
+        },
+        {
+          "name": "Black",
+          "code": "41",
+          "wa_number": "WA-8555",
+          "finish": null,
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Dark Green Metallic",
+          "code": "47",
+          "wa_number": "WA-9539",
+          "finish": "metallic",
+          "restriction": "Available on Z71.",
+          "aliases": [
+            "Medium Green"
+          ]
+        },
+        {
+          "name": "Summit White",
+          "code": "50",
+          "wa_number": "WA-8624",
+          "finish": null,
+          "restriction": "Available on Z71.",
+          "aliases": [
+            "Olympic White"
+          ]
+        },
+        {
+          "name": "Sandalwood Metallic",
+          "code": "58",
+          "wa_number": "WA-711J",
+          "finish": "metallic",
+          "restriction": "Not available on Z71."
+        },
+        {
+          "name": "Silver Birch Metallic",
+          "code": "59",
+          "wa_number": "WA-926L",
+          "finish": "metallic",
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Dark Gray Metallic",
+          "code": "62",
+          "wa_number": "WA-805K",
+          "finish": "metallic",
+          "restriction": "Not available on Z71.",
+          "aliases": [
+            "Dark Spiral Gray"
+          ]
+        },
+        {
+          "name": "Sport Red Metallic",
+          "code": "63",
+          "wa_number": "WA-817K",
+          "finish": "metallic",
+          "restriction": "Available on Z71."
+        }
+      ],
+      "alias_policy": "Sherwin-Williams refinish labels are retained as aliases only. The Chevrolet specification-sheet labels remain canonical.",
+      "two_tone_combinations": []
     },
     {
       "year": 2005,
-      "status": "incomplete",
+      "status": "verified",
       "source": {
-        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Tahoe.pdf",
-        "title": "2005 Chevrolet Tahoe Vehicle Information Kit",
-        "publisher": "General Motors",
-        "source_type": "official vehicle information kit"
+        "source_id": "chevrolet-spec-sheet-us-2005-tahoe",
+        "url": "https://xr793.com/wp-content/uploads/2023/07/2005-Chevrolet-Tahoe-Spec-Sheet.pdf",
+        "retrieval_url": "https://web.archive.org/web/20240421034221id_/https://xr793.com/wp-content/uploads/2023/07/2005-Chevrolet-Tahoe-Spec-Sheet.pdf",
+        "title": "2005 Chevrolet Tahoe Specification Sheet",
+        "publisher": "Chevrolet / General Motors",
+        "carrier": "XR793",
+        "source_type": "original_manufacturer_specification_sheet",
+        "pdf_page": 2,
+        "section": "Exterior Colors and Z71 footnotes 12-13",
+        "publication_date": "2004-09-29",
+        "publication_note": "Publication code 05CHETAHSPE01; dated September 29, 2004; copyright 2004 General Motors Corporation.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "sha256": "a7d04612d375b57aca0185e205461aff7cd3eeac96901f1c84152d2a632cc4aa",
+        "bytes": 630983,
+        "pdf_page_count": 2,
+        "supporting_sources": [
+          {
+            "source_id": "sherwin-williams-gm-2005-color-compatibility-guide",
+            "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2005_gm_ccg.pdf",
+            "title": "2005 GM Color Compatibility Guide",
+            "publisher": "Sherwin-Williams Automotive Finishes",
+            "source_type": "model_specific_color_compatibility_guide",
+            "pdf_pages": [
+              1,
+              9,
+              11,
+              16,
+              22,
+              24,
+              30,
+              33
+            ],
+            "section": "Chevrolet Tahoe model rows corroborating RPO and WA numbers",
+            "sha256": "bf617161ec0875b9dce9c9bc2be087541a5b95cf848fde59177255af7273afaa",
+            "bytes": 108739,
+            "pdf_page_count": 43,
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-sherwin-williams-gm-color-compatibility-guide.pdf",
+            "archive_asset_name": "2005-sherwin-williams-gm-color-compatibility-guide.pdf"
+          },
+          {
+            "source_id": "chevrolet-sales-brochure-canada-2005-tahoe-suburban",
+            "url": "https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf",
+            "retrieval_url": "https://web.archive.org/web/20240216130715id_/https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf",
+            "title": "2005 Chevrolet Tahoe and Suburban Canadian Sales Brochure",
+            "publisher": "Chevrolet / General Motors of Canada",
+            "carrier": "XR793",
+            "source_type": "original_manufacturer_sales_brochure_comparison",
+            "section": "Canadian palette and code comparison",
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "archival_mirror",
+            "sha256": "96e11797686f4c36e095d285c2a1608a0f7109769ea3a8f951ad756d20a7c966",
+            "bytes": 2430499,
+            "pdf_page_count": 28,
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-suburban-canada.pdf",
+            "archive_asset_name": "2005-chevrolet-tahoe-suburban-canada.pdf"
+          }
+        ],
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-spec-sheet.pdf",
+        "archive_asset_name": "2005-chevrolet-tahoe-spec-sheet.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+      "exterior_colors": [
+        {
+          "name": "Sandstone Metallic",
+          "code": "15",
+          "wa_number": "WA-929L",
+          "finish": "metallic",
+          "restriction": "Not available on Z71.",
+          "aliases": [
+            "Cashmere"
+          ]
+        },
+        {
+          "name": "Dark Blue Metallic",
+          "code": "25",
+          "wa_number": "WA-722J",
+          "finish": "metallic",
+          "restriction": "Not available on Z71."
+        },
+        {
+          "name": "Bermuda Blue Metallic",
+          "code": "26",
+          "wa_number": "WA-214M",
+          "finish": "metallic",
+          "restriction": "Available on Z71; extra-cost color."
+        },
+        {
+          "name": "Black",
+          "code": "41",
+          "wa_number": "WA-8555",
+          "finish": null,
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Summit White",
+          "code": "50",
+          "wa_number": "WA-8624",
+          "finish": null,
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Silver Birch Metallic",
+          "code": "59",
+          "wa_number": "WA-926L",
+          "finish": "metallic",
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Dark Gray Metallic",
+          "code": "62",
+          "wa_number": "WA-805K",
+          "finish": "metallic",
+          "restriction": "Not available on Z71."
+        },
+        {
+          "name": "Sport Red Metallic",
+          "code": "63",
+          "wa_number": "WA-817K",
+          "finish": "metallic",
+          "restriction": "Available on Z71."
+        }
+      ],
+      "specialty_publication_note": "The New Jersey Tahoe Police Vehicle contract establishes a separate five-color TGK specialty subset for model CC15706. It is not merged into this ordinary retail palette.",
+      "two_tone_combinations": []
     },
     {
       "year": 2006,
-      "status": "incomplete",
+      "status": "verified",
       "source": {
-        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Tahoe.pdf",
-        "title": "2006 Chevrolet Tahoe Vehicle Information Kit",
-        "publisher": "General Motors",
-        "source_type": "official vehicle information kit"
+        "source_id": "chevrolet-spec-sheet-us-2006-tahoe",
+        "url": "https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Tahoe-Spec-Sheet.pdf",
+        "retrieval_url": "https://web.archive.org/web/20240223151410id_/https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Tahoe-Spec-Sheet.pdf",
+        "title": "2006 Chevrolet Tahoe Specification Sheet",
+        "publisher": "Chevrolet / General Motors",
+        "carrier": "XR793",
+        "source_type": "original_manufacturer_specification_sheet",
+        "pdf_page": 2,
+        "section": "Exterior Colors and Z71 footnotes 4-5",
+        "publication_date": "2005-09-20",
+        "publication_note": "Publication code 06CHETAHSPE01; dated September 20, 2005; copyright 2005 General Motors Corporation.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "archival_mirror",
+        "sha256": "e805cef5d6e04f465c84df5cbad85997cde1d5797692cb02113cba25f6ee358f",
+        "bytes": 1171822,
+        "pdf_page_count": 2,
+        "supporting_sources": [
+          {
+            "source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+            "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/de/de-de/pdfs/marketing-uploads/swaf-2006_gm_ccg.pdf",
+            "title": "2006 GM Color Compatibility Guide",
+            "publisher": "Sherwin-Williams Automotive Finishes",
+            "source_type": "model_specific_color_compatibility_guide",
+            "pdf_pages": [
+              3,
+              12,
+              14,
+              17,
+              22,
+              25,
+              30,
+              33
+            ],
+            "section": "Chevrolet Tahoe model rows corroborating RPO and WA numbers",
+            "sha256": "e97ee68bca34867244a933db1bd6df11cf0e18781671207348db08bfb8cca31b",
+            "bytes": 148670,
+            "pdf_page_count": 40,
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-sherwin-williams-gm-color-compatibility-guide.pdf",
+            "archive_asset_name": "2006-sherwin-williams-gm-color-compatibility-guide.pdf"
+          },
+          {
+            "source_id": "chevrolet-sales-brochure-canada-2006-tahoe-suburban",
+            "url": "https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf",
+            "retrieval_url": "https://web.archive.org/web/20240216125819id_/https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf",
+            "title": "2006 Chevrolet Tahoe and Suburban Canadian Sales Brochure",
+            "publisher": "Chevrolet / General Motors of Canada",
+            "carrier": "XR793",
+            "source_type": "original_manufacturer_sales_brochure_comparison",
+            "section": "Canadian palette and code comparison",
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "archival_mirror",
+            "sha256": "6bb01616aa0ab6150ccdee2a8a4515d65e7dccc9bb26430c37ba0b74093562b3",
+            "bytes": 4129100,
+            "pdf_page_count": 28,
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-suburban-canada.pdf",
+            "archive_asset_name": "2006-chevrolet-tahoe-suburban-canada.pdf"
+          }
+        ],
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-spec-sheet.pdf",
+        "archive_asset_name": "2006-chevrolet-tahoe-spec-sheet.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+      "exterior_colors": [
+        {
+          "name": "Sandstone Metallic",
+          "code": "15",
+          "wa_number": "WA-929L",
+          "finish": "metallic",
+          "restriction": "Not available on Z71.",
+          "aliases": [
+            "Cashmere"
+          ]
+        },
+        {
+          "name": "Dark Blue Metallic",
+          "code": "25",
+          "wa_number": "WA-722J",
+          "finish": "metallic",
+          "restriction": "Not available on Z71."
+        },
+        {
+          "name": "Bermuda Blue Metallic",
+          "code": "26",
+          "wa_number": "WA-214M",
+          "finish": "metallic",
+          "restriction": "Available on Z71; extra-cost color."
+        },
+        {
+          "name": "Black",
+          "code": "41",
+          "wa_number": "WA-8555",
+          "finish": null,
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Summit White",
+          "code": "50",
+          "wa_number": "WA-8624",
+          "finish": null,
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Silver Birch Metallic",
+          "code": "59",
+          "wa_number": "WA-926L",
+          "finish": "metallic",
+          "restriction": "Available on Z71."
+        },
+        {
+          "name": "Dark Gray Metallic",
+          "code": "62",
+          "wa_number": "WA-805K",
+          "finish": "metallic",
+          "restriction": "Not available on Z71."
+        },
+        {
+          "name": "Sport Red Metallic",
+          "code": "63",
+          "wa_number": "WA-817K",
+          "finish": "metallic",
+          "restriction": "Available on Z71."
+        }
+      ],
+      "specialty_publication_note": "The New Jersey Tahoe Police Vehicle contract establishes a separate five-color TGK specialty subset for model CC15706. It is not merged into this ordinary retail palette.",
+      "two_tone_combinations": []
     },
     {
       "year": 2007,
-      "status": "incomplete",
+      "status": "verified",
       "source": {
+        "source_id": "gm-heritage-2007-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Tahoe.pdf",
         "title": "2007 Chevrolet Tahoe Vehicle Information Kit",
         "publisher": "General Motors",
-        "source_type": "official vehicle information kit"
+        "source_type": "official_vehicle_information_kit",
+        "pdf_page": 11,
+        "printed_page": 3,
+        "section": "Product Information - 2007 Chevrolet Tahoe - Full-Size Capability With Full-Size Comfort",
+        "publication_date": null,
+        "publication_note": "The kit identifies the 2007 model year. No separate publication date is printed on the verified page.",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "official_live",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "sha256": "65c3a1c9ef314d64c4f8ef99289be32974000fbe0453b04d57c99f3aee479a09",
+        "bytes": 30576454,
+        "pdf_page_count": 206,
+        "archive_asset_name": "2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
-      "exterior_colors": [],
+      "exterior_colors": [
+        {
+          "name": "Greystone Metallic",
+          "code": null,
+          "finish": "metallic"
+        },
+        {
+          "name": "Dark Blue Metallic",
+          "code": null,
+          "finish": "metallic"
+        },
+        {
+          "name": "Sport Red Metallic",
+          "code": null,
+          "finish": "metallic"
+        },
+        {
+          "name": "Bermuda Blue Metallic",
+          "code": null,
+          "finish": "metallic"
+        },
+        {
+          "name": "Black",
+          "code": null,
+          "finish": null
+        },
+        {
+          "name": "Summit White",
+          "code": null,
+          "finish": null
+        },
+        {
+          "name": "Gold Mist Metallic",
+          "code": null,
+          "finish": "metallic"
+        },
+        {
+          "name": "Amber Bronze Metallic",
+          "code": null,
+          "finish": "metallic"
+        },
+        {
+          "name": "Silver Birch Metallic",
+          "code": null,
+          "finish": "metallic"
+        }
+      ],
+      "color_code_note": "The verified complete color sentence prints names but no paint or RPO codes. Codes remain null rather than being inferred.",
       "two_tone_combinations": [],
-      "audit_note": "Official kit preserved locally, but its exterior-color page was not visually transcribed in this bounded pass."
+      "two_tone_status": "No exterior two-tone combination list appears in the verified complete color sentence. This is not a claim that no two-tone appearance treatment existed elsewhere.",
+      "audit_note": "The source explicitly states that Tahoe was offered in nine exterior colors and names all nine."
     }
   ]
 }

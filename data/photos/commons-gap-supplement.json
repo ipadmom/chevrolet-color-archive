@@ -1,0 +1,1529 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-22T16:25:35.270Z",
+  "source_manifest": "data/photos/commons-release-manifest.json",
+  "scope": "Exact-identity Wikimedia Commons follow-up for the 26 catalog models with no archived representative after the first quality audit.",
+  "policy": {
+    "provider": "Wikimedia Commons",
+    "identity_rule": "Select only a complete vehicle whose Commons title, description, or exact model category establishes the catalog identity. A reused name, sibling badge, generic generation photo, advertisement, detail view, or body style conflict is not enough.",
+    "year_rule": "Record an explicit year only when Commons metadata states a year inside the catalog range. Exact identity without a model year may still serve as a representative.",
+    "resolution_rule": "Keep the existing 640 by 400 minimum for raster originals.",
+    "maximum_representatives_per_model": 2,
+    "release_upload_authorized": false
+  },
+  "targets": [
+    {
+      "model_id": "classic-six",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1913 Chevrolet (6331885333).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Classic Six"
+          ],
+          "explicit_year": 1913,
+          "evidence_note": "Title and description identify a 1913 Chevrolet Classic Six."
+        },
+        {
+          "page_title": "File:Sloan Museum at Courtland Center December 2018 14 (1913 Chevrolet Classic 6).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Classic 6"
+          ],
+          "explicit_year": 1913,
+          "evidence_note": "Title and description identify a 1913 Chevrolet Classic 6."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:1912 Chevrolet Series C Classic Six (50820972282).jpg",
+          "reason": "The only stated year is 1912, outside the catalog's 1913 to 1914 model-year range."
+        }
+      ]
+    },
+    {
+      "model_id": "baby-grand",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:Sloan Museum at Courtland Center December 2018 17 (1915 Chevrolet Model H4 Baby Grand).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Model H4 Baby Grand",
+            "H4 Baby Grand"
+          ],
+          "explicit_year": 1915,
+          "evidence_note": "Title and description explicitly identify a complete 1915 Chevrolet Model H4 Baby Grand. Visual review confirms a clear three-quarter complete-vehicle photograph."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:1914-chevrolet.jpg",
+          "reason": "Exact 1914 H-4 Baby Grand, but the 600 by 400 original is below the archive's 640 pixel minimum width."
+        },
+        {
+          "page_title": "File:1918 Chevrolet Baby Grand FA5.jpg",
+          "reason": "The FA5 is outside the 1914 to 1916 H-4 identity. It is evaluated under Series FA instead."
+        }
+      ]
+    },
+    {
+      "model_id": "amesbury-special",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1915 Chevrolet H-3 Amesbury Special (5).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "H-3 Amesbury Special",
+            "Amesbury Special"
+          ],
+          "explicit_year": 1915,
+          "evidence_note": "Title and description explicitly identify a 1915 Chevrolet H-3 Amesbury Special roadster. Visual review confirms a clear three-quarter complete-vehicle photograph."
+        },
+        {
+          "page_title": "File:1915 Chevrolet H-3 Amesbury Special (6).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "H-3 Amesbury Special",
+            "Amesbury Special"
+          ],
+          "explicit_year": 1915,
+          "evidence_note": "Title and description explicitly identify a 1915 Chevrolet H-3 Amesbury Special roadster. Visual review confirms a second clear three-quarter complete-vehicle photograph."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "Commons Series H photographs",
+          "reason": "Series H photographs that identify H-2 Royal Mail vehicles remain rejected; the exact H-3 photographs are selected separately."
+        }
+      ]
+    },
+    {
+      "model_id": "series-f",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "File:1917 Chevrolet.jpg",
+          "reason": "Advertisement rather than a vehicle photograph, and the file does not establish Series F rather than the contemporary Series 490."
+        }
+      ]
+    },
+    {
+      "model_id": "series-fa",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1918 Chevrolet Baby Grand FA5.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "FA5"
+          ],
+          "explicit_year": 1918,
+          "evidence_note": "Title and description explicitly identify the 1918 FA5, a Series FA body designation. The prior Baby Grand association was rejected."
+        }
+      ],
+      "rejections": []
+    },
+    {
+      "model_id": "series-fb",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1920 Chevrolet FB-50 Touring.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "FB-50"
+          ],
+          "explicit_year": 1920,
+          "evidence_note": "The Commons title explicitly identifies a 1920 Chevrolet FB-50 Touring."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:Chevrolet series fb 1919.jpg",
+          "reason": "Exact identity, but it is a catalog illustration and its 688 by 379 raster is below the minimum height."
+        }
+      ]
+    },
+    {
+      "model_id": "copper-cooled",
+      "outcome": "no_publishable_exact_photo",
+      "candidates": [
+        {
+          "page_title": "File:Chevrolet cooper cooled car.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Series M Copper-Cooled",
+            "Copper Cooled"
+          ],
+          "explicit_year": 1923,
+          "evidence_note": "The exact Series M Copper-Cooled category and 1923 Commons metadata identify a real complete-vehicle photograph, but its 528 by 405 original is below the archive's 640 pixel minimum width."
+        },
+        {
+          "page_title": "File:Chevrolet cooper cooled 1923.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Series M Copper-Cooled",
+            "Copper Cooled"
+          ],
+          "explicit_year": 1923,
+          "evidence_note": "Exact Series M Copper-Cooled identity, but visual review shows a printed illustration rather than a vehicle photograph."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:Chevrolet cooper cooled car.jpg",
+          "reason": "Exact 1923 Series M Copper-Cooled complete-vehicle photograph, but the 528 by 405 original is below the archive's 640 pixel minimum width."
+        },
+        {
+          "page_title": "File:Chevrolet copper cooled chassis.jpg",
+          "reason": "Chassis-only view, not a complete vehicle."
+        },
+        {
+          "page_title": "File:Chevrolet copper-cooled.png",
+          "reason": "Advertisement rather than a vehicle photograph."
+        },
+        {
+          "page_title": "File:Chevrolet cooper cooled 1923.jpg",
+          "reason": "Printed illustration rather than a vehicle photograph."
+        }
+      ]
+    },
+    {
+      "model_id": "mercury",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1933 Chevrolet Standard CC Coach JWN397.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Standard Mercury",
+            "Series CC Mercury"
+          ],
+          "explicit_year": 1933,
+          "evidence_note": "Description explicitly identifies a 1933 Chevrolet Standard Mercury Series CC Coach."
+        },
+        {
+          "page_title": "File:1933 Chevrolet Coupe KHX103.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Standard Mercury",
+            "Series CC Mercury"
+          ],
+          "explicit_year": 1933,
+          "evidence_note": "Description explicitly identifies a 1933 Chevrolet Standard Mercury Series CC Coupe."
+        }
+      ],
+      "rejections": []
+    },
+    {
+      "model_id": "beauville-wagon",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:Chevrolet 210 Beauville Wagon (1957) (53486678032).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "210 Beauville",
+            "Two-Ten Beauville"
+          ],
+          "explicit_year": 1957,
+          "evidence_note": "Title and exact Commons category identify the 1957 Chevrolet 210 Beauville wagon."
+        },
+        {
+          "page_title": "File:1957 Chevrolet Beauville (23933207604).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Beauville"
+          ],
+          "explicit_year": 1957,
+          "evidence_note": "Title explicitly identifies a 1957 Chevrolet Beauville; the original is exactly 640 pixels wide."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:83 Chevrolet Beauville (8746376303).jpg",
+          "reason": "Later G-Series Beauville van, not the 1955 to 1957 wagon identity."
+        }
+      ]
+    },
+    {
+      "model_id": "malibu-limited",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "File:2016 Chevrolet Malibu 2.4 LTZ.jpg",
+          "reason": "The metadata does not establish the U.S. 2016 Malibu Limited identity."
+        }
+      ]
+    },
+    {
+      "model_id": "malibu-classic-2008",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "Files titled Chevrolet Malibu Classic",
+          "reason": "Located files depict earlier A/G-body Malibu Classics or the 2004 fleet Classic, not the 2008 identity."
+        }
+      ]
+    },
+    {
+      "model_id": "pre-ck-truck",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:Chevrolet Advance Design in Paris.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Advance Design"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Metadata identifies Chevrolet Advance Design, but visual review shows only a hood emblem detail."
+        },
+        {
+          "page_title": "File:Chevrolet Task Force (498 UYK) - 3 May 2026.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Task Force"
+          ],
+          "explicit_year": 1957,
+          "evidence_note": "Title and description identify Chevrolet Task Force; Commons categorizes it as a 1957 Chevrolet truck."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "Generic Chevrolet truck search results",
+          "reason": "C/K-era pickups and files without an Advance Design, Task Force, or other pre-C/K identity were rejected."
+        },
+        {
+          "page_title": "File:Chevrolet Advance Design in Paris.jpg",
+          "reason": "Detail-only hood emblem image, not a complete truck view."
+        }
+      ]
+    },
+    {
+      "model_id": "canopy-express",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1953 Chevrolet 3100 Canopy Express.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Canopy Express"
+          ],
+          "explicit_year": 1953,
+          "evidence_note": "Title and description explicitly identify a 1953 Chevrolet 3100 Canopy Express."
+        },
+        {
+          "page_title": "File:52nd Annual Antique & Classic Car Meet - Stowe, VT (3804426328).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Advance-Design Canopy Express"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Commons places the complete vehicle in the exact Chevrolet Advance-Design Canopy Express category."
+        }
+      ],
+      "rejections": []
+    },
+    {
+      "model_id": "corvan",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1961 Chevrolet Van (13667817345).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Corvan"
+          ],
+          "explicit_year": 1961,
+          "evidence_note": "Complete 1961 cargo van in the exact Chevrolet Corvan category."
+        },
+        {
+          "page_title": "File:1963 Corvair 95 (10767367525).jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Corvan"
+          ],
+          "explicit_year": 1963,
+          "evidence_note": "Commons places it in Chevrolet Corvan, but visual review shows a windowed passenger-body vehicle rather than the cargo Corvan identity."
+        },
+        {
+          "page_title": "File:Chevy Corvair van (14199467717).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Corvan"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Complete Corvair van in the exact Chevrolet Corvan category."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:1963 Corvair 95 (10767367525).jpg",
+          "reason": "Windowed passenger-body vehicle, not a clear Corvan cargo-body representative."
+        }
+      ]
+    },
+    {
+      "model_id": "loadside",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1961 Corvair 95 Loadside Pickup (53932079075).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Loadside"
+          ],
+          "explicit_year": 1961,
+          "evidence_note": "Title and description explicitly identify a 1961 Corvair 95 Loadside pickup."
+        }
+      ],
+      "rejections": []
+    },
+    {
+      "model_id": "p-series-step-van",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:1960+ Chevrolet Step-Van.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Step-Van"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title and description explicitly identify a Chevrolet Step-Van. The 1960+ label is a range, so no exact model year is recorded."
+        },
+        {
+          "page_title": "File:1997 Chevrolet P30 step van, left front (Crown Royal body?).jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "P30",
+            "step van"
+          ],
+          "explicit_year": 1997,
+          "evidence_note": "Title and description explicitly identify a 1997 Chevrolet P30-based step van."
+        }
+      ],
+      "rejections": []
+    },
+    {
+      "model_id": "b-series-bus-chassis",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:Bus Chevrolet B-60 en las montañas del Cauca.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "B-60",
+            "B60"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title and description identify a Chevrolet B-60 bus; Commons places it in the Chevrolet B-Series category."
+        },
+        {
+          "page_title": "File:Chiva Chevy B 70 Colombiana.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "B 70",
+            "B70"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title identifies a Chevy B70 bus; Commons places it in the Chevrolet B-Series category."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:2GMBBCV200schoolbuses.jpg",
+          "reason": "Mixed Chevrolet and GMC scene, with the GMC bus dominating the frame."
+        }
+      ]
+    },
+    {
+      "model_id": "chevy-90",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "Commons Chevrolet 90 search results",
+          "reason": "Results referred to years, Chevrolet Van 20, or unrelated model numbers, not the Chevy 90 heavy truck identity."
+        }
+      ]
+    },
+    {
+      "model_id": "bison",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "Category:GMC General",
+          "reason": "Commons maps the Chevrolet Bison Wikidata concept into this category, but the files themselves depict GMC General trucks."
+        }
+      ]
+    },
+    {
+      "model_id": "bruin",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "Category:GMC Brigadier",
+          "reason": "Commons maps the Chevrolet Bruin Wikidata concept into this category, but the files themselves depict GMC Brigadier trucks."
+        }
+      ]
+    },
+    {
+      "model_id": "tiltmaster-w-series",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:High Line td 46 - W 30th St & 11th Av.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Tiltmaster"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Exact Chevrolet Tiltmaster category, but the truck is too small and distant for a representative."
+        },
+        {
+          "page_title": "File:Kultige Polizeiautos auf Abschleppwagen Montreal Kanada.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Tiltmaster"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Complete tow truck in the exact Chevrolet Tiltmaster category."
+        },
+        {
+          "page_title": "File:Tap Tap in Haiti hauling freight.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Tiltmaster"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Exact Chevrolet Tiltmaster category, but the vehicle is substantially customized and only partially visible."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:High Line td 46 - W 30th St & 11th Av.jpg",
+          "reason": "Truck is too small and distant in a broad streetscape."
+        },
+        {
+          "page_title": "File:Tap Tap in Haiti hauling freight.jpg",
+          "reason": "Substantially customized tap tap body and partial vehicle view."
+        }
+      ]
+    },
+    {
+      "model_id": "t-series-medium-duty",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:Chevrolet T7500 cabover.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "T7500"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title explicitly identifies a Chevrolet T7500 and Commons places it in the Chevrolet T-Series category."
+        },
+        {
+          "page_title": "File:Chevrolet T7500 Street Sweeper.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "T7500"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title and description explicitly identify a Chevrolet T7500 converted to a street sweeper."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "Category:GMC T-series and Isuzu F-Series files",
+          "reason": "GMC- and Isuzu-badged siblings were rejected as near-neighbors."
+        }
+      ]
+    },
+    {
+      "model_id": "s10-ev",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:Electric Chevy S-10.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Electric S-10",
+            "S-10 EV"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Description identifies an electric Chevy S-10 and Commons places it in the exact Chevrolet S-10 EV category."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:S-10 engine compartment.jpg",
+          "reason": "Engine-compartment detail, not a complete vehicle view."
+        }
+      ]
+    },
+    {
+      "model_id": "traverse-limited",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "2024 Chevrolet Traverse files",
+          "reason": "Located photographs do not establish the carryover Traverse Limited identity rather than the redesigned 2024 Traverse."
+        }
+      ]
+    },
+    {
+      "model_id": "brightdrop-400",
+      "outcome": "no_exact_photo_found",
+      "candidates": [],
+      "rejections": [
+        {
+          "page_title": "Generic Chevrolet BrightDrop files",
+          "reason": "Commons metadata does not distinguish the shorter BrightDrop 400 from the BrightDrop 600."
+        }
+      ]
+    },
+    {
+      "model_id": "brightdrop-600",
+      "outcome": "candidate_found",
+      "candidates": [
+        {
+          "page_title": "File:BrightDrop Zevo 600.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Zevo 600",
+            "EV600"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title and description identify the pre-Chevrolet BrightDrop Zevo 600, but the metadata does not establish a Chevrolet-badged vehicle."
+        },
+        {
+          "page_title": "File:2024 Chevrolet BrightDrop Zevo 600.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Zevo 600"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title and description explicitly identify a Chevrolet BrightDrop Zevo 600. The stated 2024 model year precedes the catalog's 2025 Chevrolet rename, so no exact year is recorded."
+        }
+      ],
+      "rejections": [
+        {
+          "page_title": "File:BrightDrop Zevo 600.jpg",
+          "reason": "Pre-Chevrolet BrightDrop press image. The exact Chevrolet-badged identity is not explicit in the file metadata."
+        }
+      ]
+    }
+  ],
+  "results": {
+    "applied_at": "2026-07-22T16:25:35.270Z",
+    "candidates_staged": 26,
+    "candidates_selected": 26,
+    "unique_assets_added": 25,
+    "selected_model_ids": [
+      "classic-six",
+      "baby-grand",
+      "amesbury-special",
+      "series-fa",
+      "series-fb",
+      "mercury",
+      "beauville-wagon",
+      "pre-ck-truck",
+      "canopy-express",
+      "corvan",
+      "loadside",
+      "p-series-step-van",
+      "b-series-bus-chassis",
+      "tiltmaster-w-series",
+      "t-series-medium-duty",
+      "s10-ev",
+      "brightdrop-600"
+    ],
+    "models_still_without_exact_photo": [
+      "series-f",
+      "copper-cooled",
+      "malibu-limited",
+      "malibu-classic-2008",
+      "chevy-90",
+      "bison",
+      "bruin",
+      "traverse-limited",
+      "brightdrop-400"
+    ],
+    "full_raw_source_record_paths": [
+      "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+    ],
+    "release_upload_performed": true,
+    "candidates": [
+      {
+        "model_id": "classic-six",
+        "page_title": "File:1913 Chevrolet (6331885333).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-85fa5e2865508d896c55",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1913_Chevrolet_(6331885333).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/1913_Chevrolet_%286331885333%29.jpg",
+        "commons_sha1": "85fa5e2865508d896c5577377879819177c0c665",
+        "sha256": "f5842cdd85d2b985926ecce20434ffed5bb9ee654498ca5574185cf550a7568d",
+        "bytes": 1525411,
+        "width": 3072,
+        "height": 2304,
+        "author": "JOHN LLOYD from Concrete, Washington, United States",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/32109282@N00\">JOHN LLOYD</a> from Concrete, Washington, United States",
+        "credit": "1913 Chevrolet",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/hugo90/6331885333/\">1913 Chevrolet</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "JOHN LLOYD from Concrete, Washington, United States - 1913 Chevrolet (6331885333) - CC BY 2.0",
+        "description": "1913 Chevrolet Classic Six The oldest Chevrolet in the United States. Canada has one older, however. model series C Classic Six weight 3,500 lbs wheelbase 120 inches engine 299 cubic inches horsepower 40 units produced 2,999",
+        "original_filename": "1913 Chevrolet (6331885333).jpg",
+        "explicit_year": 1913,
+        "identity_term_matched": "Classic Six",
+        "evidence_note": "Title and description identify a 1913 Chevrolet Classic Six.",
+        "local_path": "tmp/commons-release-assets/commons-60433306-85fa5e286550-1913-chevrolet-6331885333.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "classic-six",
+        "page_title": "File:Sloan Museum at Courtland Center December 2018 14 (1913 Chevrolet Classic 6).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-c9f06a5f251e7f6332b5",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Sloan_Museum_at_Courtland_Center_December_2018_14_(1913_Chevrolet_Classic_6).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Sloan_Museum_at_Courtland_Center_December_2018_14_%281913_Chevrolet_Classic_6%29.jpg",
+        "commons_sha1": "c9f06a5f251e7f6332b5e3ebc20fbcfe29812c34",
+        "sha256": "032ec559c02b4c618140571d05907714ba6ea1d413ed20da78803b9877a028ad",
+        "bytes": 6356992,
+        "width": 6000,
+        "height": 4000,
+        "author": "Michael Barera",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Michael_Barera\" title=\"User:Michael Barera\">Michael Barera</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "Michael Barera - Sloan Museum at Courtland Center December 2018 14 (1913 Chevrolet Classic 6) - CC BY-SA 4.0",
+        "description": "A 1913 Chevrolet Classic 6 at the Sloan Museum at Courtland Center in Burton , Michigan ( United States ).",
+        "original_filename": "Sloan Museum at Courtland Center December 2018 14 (1913 Chevrolet Classic 6).jpg",
+        "explicit_year": 1913,
+        "identity_term_matched": "Classic 6",
+        "evidence_note": "Title and description identify a 1913 Chevrolet Classic 6.",
+        "local_path": "tmp/commons-release-assets/commons-76153550-c9f06a5f251e-sloan-museum-at-courtland-center-december-2018-14-1913-chevrolet-classic-6.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "baby-grand",
+        "page_title": "File:Sloan Museum at Courtland Center December 2018 17 (1915 Chevrolet Model H4 Baby Grand).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-494caff1f98ce72cbf24",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Sloan_Museum_at_Courtland_Center_December_2018_17_(1915_Chevrolet_Model_H4_Baby_Grand).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Sloan_Museum_at_Courtland_Center_December_2018_17_%281915_Chevrolet_Model_H4_Baby_Grand%29.jpg",
+        "commons_sha1": "494caff1f98ce72cbf243747f1673ecfb1a3c9b1",
+        "sha256": "af3edcd1f7c7a6dc4e56fdc5b59f629dd129dfa63ec54e330e21d032e99999d6",
+        "bytes": 6782976,
+        "width": 6000,
+        "height": 4000,
+        "author": "Michael Barera",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Michael_Barera\" title=\"User:Michael Barera\">Michael Barera</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "Michael Barera - Sloan Museum at Courtland Center December 2018 17 (1915 Chevrolet Model H4 Baby Grand) - CC BY-SA 4.0",
+        "description": "A 1915 Chevrolet Model H4 Baby Grand at the Sloan Museum at Courtland Center in Burton , Michigan ( United States ).",
+        "original_filename": "Sloan Museum at Courtland Center December 2018 17 (1915 Chevrolet Model H4 Baby Grand).jpg",
+        "explicit_year": 1915,
+        "identity_term_matched": "Model H4 Baby Grand",
+        "evidence_note": "Title and description explicitly identify a complete 1915 Chevrolet Model H4 Baby Grand. Visual review confirms a clear three-quarter complete-vehicle photograph.",
+        "local_path": "tmp/commons-release-assets/commons-76153554-494caff1f98c-sloan-museum-at-courtland-center-december-2018-17-1915-chevrolet-model-h4-baby-grand.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "amesbury-special",
+        "page_title": "File:1915 Chevrolet H-3 Amesbury Special (5).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-29981c89433851379024",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1915_Chevrolet_H-3_Amesbury_Special_(5).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/1915_Chevrolet_H-3_Amesbury_Special_%285%29.jpg",
+        "commons_sha1": "29981c894338513790245c6338ce425afcb4114d",
+        "sha256": "d6ddf2b79ef701a4a48896df29812c695328de44f1afc400440551c9e2e0450a",
+        "bytes": 2262830,
+        "width": 3963,
+        "height": 2972,
+        "author": "Damian B Oh",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Damian_B_Oh\" title=\"User:Damian B Oh\">Damian B Oh</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "Damian B Oh - 1915 Chevrolet H-3 Amesbury Special (5) - CC BY-SA 4.0",
+        "description": "1915 Chevrolet H-3 \"Amesbury Special\" roadster at Gyeongju World Automobile Museum.",
+        "original_filename": "1915 Chevrolet H-3 Amesbury Special (5).jpg",
+        "explicit_year": 1915,
+        "identity_term_matched": "H-3 Amesbury Special",
+        "evidence_note": "Title and description explicitly identify a 1915 Chevrolet H-3 Amesbury Special roadster. Visual review confirms a clear three-quarter complete-vehicle photograph.",
+        "local_path": "tmp/commons-release-assets/commons-177041355-29981c894338-1915-chevrolet-h-3-amesbury-special-5.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "amesbury-special",
+        "page_title": "File:1915 Chevrolet H-3 Amesbury Special (6).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-bc99dd5476f65c05499b",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1915_Chevrolet_H-3_Amesbury_Special_(6).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/1915_Chevrolet_H-3_Amesbury_Special_%286%29.jpg",
+        "commons_sha1": "bc99dd5476f65c05499bdbcc058f044355b7810c",
+        "sha256": "56df25706b667ddac7d12ad5387c1f0cc3b43b21341af1f966eac388cac29437",
+        "bytes": 2440369,
+        "width": 3959,
+        "height": 2969,
+        "author": "Damian B Oh",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Damian_B_Oh\" title=\"User:Damian B Oh\">Damian B Oh</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "Damian B Oh - 1915 Chevrolet H-3 Amesbury Special (6) - CC BY-SA 4.0",
+        "description": "1915 Chevrolet H-3 \"Amesbury Special\" roadster at Gyeongju World Automobile Museum.",
+        "original_filename": "1915 Chevrolet H-3 Amesbury Special (6).jpg",
+        "explicit_year": 1915,
+        "identity_term_matched": "H-3 Amesbury Special",
+        "evidence_note": "Title and description explicitly identify a 1915 Chevrolet H-3 Amesbury Special roadster. Visual review confirms a second clear three-quarter complete-vehicle photograph.",
+        "local_path": "tmp/commons-release-assets/commons-177041354-bc99dd5476f6-1915-chevrolet-h-3-amesbury-special-6.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "series-fa",
+        "page_title": "File:1918 Chevrolet Baby Grand FA5.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-de9ddece722ddb89dbb7",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1918_Chevrolet_Baby_Grand_FA5.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/1918_Chevrolet_Baby_Grand_FA5.jpg",
+        "commons_sha1": "de9ddece722ddb89dbb7ff2b8ceae4b1c81a6d0b",
+        "sha256": "61d89f4647989cc035201b9ff01c2d493d7f883cb5a843ed37589db0dccd8a08",
+        "bytes": 345052,
+        "width": 1600,
+        "height": 1200,
+        "author": "Ansolabehere",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Ansolabehere&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Ansolabehere (page does not exist)\">Ansolabehere</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "Ansolabehere - 1918 Chevrolet Baby Grand FA5 - CC BY-SA 4.0",
+        "description": "1918 Chevrolet Baby Grand (Model FA5)",
+        "original_filename": "1918 Chevrolet Baby Grand FA5.jpg",
+        "explicit_year": 1918,
+        "identity_term_matched": "FA5",
+        "evidence_note": "Title and description explicitly identify the 1918 FA5, a Series FA body designation. The prior Baby Grand association was rejected.",
+        "local_path": "tmp/commons-release-assets/commons-75323166-de9ddece722d-1918-chevrolet-baby-grand-fa5.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "series-fb",
+        "page_title": "File:1920 Chevrolet FB-50 Touring.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-66d10db040285a5b8076",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1920_Chevrolet_FB-50_Touring.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/1920_Chevrolet_FB-50_Touring.jpg",
+        "commons_sha1": "66d10db040285a5b8076d5d2b32af3cc892ec107",
+        "sha256": "703e9f6cc98801b23f1df2806190364a6900d7ee776fad372fb977e36a8aa935",
+        "bytes": 661002,
+        "width": 2990,
+        "height": 2553,
+        "author": "DestinationFearFan",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:DestinationFearFan\" title=\"User:DestinationFearFan\">DestinationFearFan</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "DestinationFearFan - 1920 Chevrolet FB-50 Touring - CC BY-SA 4.0",
+        "description": "California Automobile Museum",
+        "original_filename": "1920 Chevrolet FB-50 Touring.jpg",
+        "explicit_year": 1920,
+        "identity_term_matched": "FB-50",
+        "evidence_note": "The Commons title explicitly identifies a 1920 Chevrolet FB-50 Touring.",
+        "local_path": "tmp/commons-release-assets/commons-116712648-66d10db04028-1920-chevrolet-fb-50-touring.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "mercury",
+        "page_title": "File:1933 Chevrolet Standard CC Coach JWN397.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-b38e5b1bab15b4654e75",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1933_Chevrolet_Standard_CC_Coach_JWN397.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/1933_Chevrolet_Standard_CC_Coach_JWN397.jpg",
+        "commons_sha1": "b38e5b1bab15b4654e75ed12eb1f0cc12ac70261",
+        "sha256": "cd93f46ddb4cca22b101f7f6639f0a5b88c8037915fbfeea9589edf63daa6bb8",
+        "bytes": 32324,
+        "width": 800,
+        "height": 513,
+        "author": "Lars-Göran Lindgren Sweden",
+        "author_raw_html": "Lars-Göran Lindgren Sweden",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 3.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+        "attribution_required": true,
+        "attribution": "Lars-Göran Lindgren Sweden - 1933 Chevrolet Standard CC Coach JWN397 - CC BY-SA 3.0",
+        "description": "1933 Chevrolet Standard Mercury Series CC Coach",
+        "original_filename": "1933 Chevrolet Standard CC Coach JWN397.jpg",
+        "explicit_year": 1933,
+        "identity_term_matched": "Standard Mercury",
+        "evidence_note": "Description explicitly identifies a 1933 Chevrolet Standard Mercury Series CC Coach.",
+        "local_path": "tmp/commons-release-assets/commons-2120537-b38e5b1bab15-1933-chevrolet-standard-cc-coach-jwn397.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "mercury",
+        "page_title": "File:1933 Chevrolet Coupe KHX103.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-b81d9257030cc5875942",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1933_Chevrolet_Coupe_KHX103.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/1933_Chevrolet_Coupe_KHX103.jpg",
+        "commons_sha1": "b81d9257030cc58759429b20636006c97c5cdb2a",
+        "sha256": "6f9a7ebf147532f9291055b4551e678e8046d11f2d833353967fb3d0521658b9",
+        "bytes": 35084,
+        "width": 800,
+        "height": 491,
+        "author": "Lars-Göran Lindgren Sweden",
+        "author_raw_html": "Lars-Göran Lindgren Sweden",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 3.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+        "attribution_required": true,
+        "attribution": "Lars-Göran Lindgren Sweden - 1933 Chevrolet Coupe KHX103 - CC BY-SA 3.0",
+        "description": "1933 Chevrolet Standard Mercury Series CC Coupe",
+        "original_filename": "1933 Chevrolet Coupe KHX103.jpg",
+        "explicit_year": 1933,
+        "identity_term_matched": "Standard Mercury",
+        "evidence_note": "Description explicitly identifies a 1933 Chevrolet Standard Mercury Series CC Coupe.",
+        "local_path": "tmp/commons-release-assets/commons-2120532-b81d9257030c-1933-chevrolet-coupe-khx103.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "beauville-wagon",
+        "page_title": "File:Chevrolet 210 Beauville Wagon (1957) (53486678032).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-492554274bf9c480bfb0",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chevrolet_210_Beauville_Wagon_(1957)_(53486678032).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Chevrolet_210_Beauville_Wagon_%281957%29_%2853486678032%29.jpg",
+        "commons_sha1": "492554274bf9c480bfb0b072336316225a13c6d7",
+        "sha256": "3660802346b92b3f07f5c4874746b22e5102c3100af9f9a2fd4ddc9bfa2828b2",
+        "bytes": 7212770,
+        "width": 5307,
+        "height": 3170,
+        "author": "Charles from Port Chester, New York",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/43494963@N03\">Charles</a> from Port Chester, New York",
+        "credit": "Chevrolet 210 Beauville Wagon (1957)",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/charles79/53486678032/\">Chevrolet 210 Beauville Wagon (1957)</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Charles from Port Chester, New York - Chevrolet 210 Beauville Wagon (1957) (53486678032) - CC BY 2.0",
+        "description": "Production: 1953 - 1957 Generation: Second (1955 - 1957) Engine: 3,9 litre R6 (petrol) Power: 125 PS Gearbox: 3 speed manual Layout: front engine, rear drive",
+        "original_filename": "Chevrolet 210 Beauville Wagon (1957) (53486678032).jpg",
+        "explicit_year": 1957,
+        "identity_term_matched": "210 Beauville",
+        "evidence_note": "Title and exact Commons category identify the 1957 Chevrolet 210 Beauville wagon.",
+        "local_path": "tmp/commons-release-assets/commons-179239868-492554274bf9-chevrolet-210-beauville-wagon-1957-53486678032.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "beauville-wagon",
+        "page_title": "File:1957 Chevrolet Beauville (23933207604).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-1f0493f04de21241353e",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1957_Chevrolet_Beauville_(23933207604).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/1957_Chevrolet_Beauville_%2823933207604%29.jpg",
+        "commons_sha1": "1f0493f04de21241353e4515bae1079b85be27f6",
+        "sha256": "f10eb16c3807c02d6a221c719784c9e7924e6f21dfb55bd6d302626a3666a6b8",
+        "bytes": 53737,
+        "width": 640,
+        "height": 451,
+        "author": "Richmond AACA",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/139675595@N05\">Richmond AACA</a>",
+        "credit": "98",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/rr-aaca/23933207604/\">98</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Richmond AACA - 1957 Chevrolet Beauville (23933207604) - CC BY 2.0",
+        "description": "98",
+        "original_filename": "1957 Chevrolet Beauville (23933207604).jpg",
+        "explicit_year": 1957,
+        "identity_term_matched": "Beauville",
+        "evidence_note": "Title explicitly identifies a 1957 Chevrolet Beauville; the original is exactly 640 pixels wide.",
+        "local_path": "tmp/commons-release-assets/commons-74611015-1f0493f04de2-1957-chevrolet-beauville-23933207604.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "pre-ck-truck",
+        "page_title": "File:Chevrolet Task Force (498 UYK) - 3 May 2026.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-bd2e08f383ea4f495d08",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chevrolet_Task_Force_(498_UYK)_-_3_May_2026.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Chevrolet_Task_Force_%28498_UYK%29_-_3_May_2026.jpg",
+        "commons_sha1": "bd2e08f383ea4f495d086bff1f1777752adcef44",
+        "sha256": "6a3bdd479233a4a7f6b59e1463774755ddbec1bf415a485a748e4426b0c66215",
+        "bytes": 8617227,
+        "width": 4795,
+        "height": 3200,
+        "author": "Aethonatic",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Aethonatic\" title=\"User:Aethonatic\">Aethonatic</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC0",
+        "license_family": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+        "attribution_required": false,
+        "attribution": "Aethonatic - Chevrolet Task Force (498 UYK) - 3 May 2026 - CC0",
+        "description": "Chevrolet Task Force at Swadlincote.",
+        "original_filename": "Chevrolet Task Force (498 UYK) - 3 May 2026.jpg",
+        "explicit_year": 1957,
+        "identity_term_matched": "Task Force",
+        "evidence_note": "Title and description identify Chevrolet Task Force; Commons categorizes it as a 1957 Chevrolet truck.",
+        "local_path": "tmp/commons-release-assets/commons-191373322-bd2e08f383ea-chevrolet-task-force-498-uyk-3-may-2026.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "canopy-express",
+        "page_title": "File:1953 Chevrolet 3100 Canopy Express.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-a9ca5a00dc7031077dad",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1953_Chevrolet_3100_Canopy_Express.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/1953_Chevrolet_3100_Canopy_Express.jpg",
+        "commons_sha1": "a9ca5a00dc7031077dade31ec5f62a784914299e",
+        "sha256": "aad5c5410954432d7bff5a9dc95ce282d0b1da49181fb23c547895755f023066",
+        "bytes": 6772322,
+        "width": 5244,
+        "height": 3462,
+        "author": "Vetatur Fumare",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/10047629@N04\">Vetatur Fumare</a>",
+        "credit": "Chevy panel van",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/10047629@N04/12891752425/\">Chevy panel van</a>",
+        "license": "CC BY-SA 2.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 2.0",
+        "attribution_required": true,
+        "attribution": "Vetatur Fumare - 1953 Chevrolet 3100 Canopy Express - CC BY-SA 2.0",
+        "description": "1953 Chevrolet Advance-Design 3100 Canopy Express , loaded with fruits and veg - I assume it's heading for the farmer's market.",
+        "original_filename": "1953 Chevrolet 3100 Canopy Express.jpg",
+        "explicit_year": 1953,
+        "identity_term_matched": "Canopy Express",
+        "evidence_note": "Title and description explicitly identify a 1953 Chevrolet 3100 Canopy Express.",
+        "local_path": "tmp/commons-release-assets/commons-35603179-a9ca5a00dc70-1953-chevrolet-3100-canopy-express.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "canopy-express",
+        "page_title": "File:52nd Annual Antique & Classic Car Meet - Stowe, VT (3804426328).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-0f73aa63d0b3679453f0",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:52nd_Annual_Antique_%26_Classic_Car_Meet_-_Stowe,_VT_(3804426328).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/52nd_Annual_Antique_%26_Classic_Car_Meet_-_Stowe%2C_VT_%283804426328%29.jpg",
+        "commons_sha1": "0f73aa63d0b3679453f0b018d05ebc3197fb28c7",
+        "sha256": "b3edfe21396bd8bdf066defe5becef1afa4006745e2ee0ee3d409ac35420996c",
+        "bytes": 4776122,
+        "width": 5278,
+        "height": 3176,
+        "author": "Patrick from Merrimack, NH, United States",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/72559856@N00\">Patrick</a> from Merrimack, NH, United States",
+        "credit": "52nd Annual Antique & Classic Car Meet - Stowe, VT",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/pdbreen/3804426328/\">52nd Annual Antique &amp; Classic Car Meet - Stowe, VT</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Patrick from Merrimack, NH, United States - 52nd Annual Antique & Classic Car Meet - Stowe, VT (3804426328) - CC BY 2.0",
+        "description": "Stowe, VT August 2009 Copyright 2009 Patrick Breen Canon EOS 5D Mark II/EF24-70mm f/2.8L USM @ 24 mm 1/160 sec at f/6.3, ISO 100, 0 EV, Normal, no flash",
+        "original_filename": "52nd Annual Antique & Classic Car Meet - Stowe, VT (3804426328).jpg",
+        "explicit_year": null,
+        "identity_term_matched": "Advance-Design Canopy Express",
+        "evidence_note": "Commons places the complete vehicle in the exact Chevrolet Advance-Design Canopy Express category.",
+        "local_path": "tmp/commons-release-assets/commons-48248499-0f73aa63d0b3-52nd-annual-antique-classic-car-meet-stowe-vt-3804426328.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "corvan",
+        "page_title": "File:1961 Chevrolet Van (13667817345).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-54ac7471da51ef04e435",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1961_Chevrolet_Van_(13667817345).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/1961_Chevrolet_Van_%2813667817345%29.jpg",
+        "commons_sha1": "54ac7471da51ef04e4356c877888f30ee066b70c",
+        "sha256": "ff5696ddcdb80e4b3ee738fc30b0c6f7665d3902443677cc6841b5d38452e625",
+        "bytes": 2329993,
+        "width": 3072,
+        "height": 1728,
+        "author": "Kieran White from Manchester, England",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/117096107@N03\">Kieran White</a> from Manchester, England",
+        "credit": "1961 Chevrolet Van",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/117096107@N03/13667817345/\">1961 Chevrolet Van</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Kieran White from Manchester, England - 1961 Chevrolet Van (13667817345) - CC BY 2.0",
+        "description": "Wierd looking little van, only came to Britain last month",
+        "original_filename": "1961 Chevrolet Van (13667817345).jpg",
+        "explicit_year": 1961,
+        "identity_term_matched": "Corvan",
+        "evidence_note": "Complete 1961 cargo van in the exact Chevrolet Corvan category.",
+        "local_path": "tmp/commons-release-assets/commons-38605715-54ac7471da51-1961-chevrolet-van-13667817345.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "corvan",
+        "page_title": "File:Chevy Corvair van (14199467717).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-ef782d3992084488570b",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chevy_Corvair_van_(14199467717).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Chevy_Corvair_van_%2814199467717%29.jpg",
+        "commons_sha1": "ef782d3992084488570bd41cc317c6a7a4df20dd",
+        "sha256": "57caa2ff3376501b41f721786b4a68befa0cc40cf4c18488e3a00ad5e7cda6d8",
+        "bytes": 1622596,
+        "width": 2437,
+        "height": 1478,
+        "author": "Thomas's Pics",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/60900612@N08\">Thomas's Pics</a>",
+        "credit": "Chevy Corvair van",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/60900612@N08/14199467717/\">Chevy Corvair van</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Thomas's Pics - Chevy Corvair van (14199467717) - CC BY 2.0",
+        "description": "Chevy Corvair van",
+        "original_filename": "Chevy Corvair van (14199467717).jpg",
+        "explicit_year": null,
+        "identity_term_matched": "Corvan",
+        "evidence_note": "Complete Corvair van in the exact Chevrolet Corvan category.",
+        "local_path": "tmp/commons-release-assets/commons-50662572-ef782d399208-chevy-corvair-van-14199467717.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "loadside",
+        "page_title": "File:1961 Corvair 95 Loadside Pickup (53932079075).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-f2ec09da392f43cacb93",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1961_Corvair_95_Loadside_Pickup_(53932079075).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/1961_Corvair_95_Loadside_Pickup_%2853932079075%29.jpg",
+        "commons_sha1": "f2ec09da392f43cacb939690e2a527fdfe7634e7",
+        "sha256": "2aebc82c64c5d7da4b7b255dab66cacc1fddb626f67078cfab92ce396ef63f05",
+        "bytes": 1545354,
+        "width": 5591,
+        "height": 3145,
+        "author": "Mustang Joe",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/63234672@N04\">Mustang Joe</a>",
+        "credit": "1961 Corvair 95 Loadside Pickup",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/mustangjoe/53932079075/\">1961 Corvair 95 Loadside Pickup</a>",
+        "license": "CC0",
+        "license_family": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+        "attribution_required": false,
+        "attribution": "Mustang Joe - 1961 Corvair 95 Loadside Pickup (53932079075) - CC0",
+        "description": "1961 Corvair 95 Loadside Pickup",
+        "original_filename": "1961 Corvair 95 Loadside Pickup (53932079075).jpg",
+        "explicit_year": 1961,
+        "identity_term_matched": "Loadside",
+        "evidence_note": "Title and description explicitly identify a 1961 Corvair 95 Loadside pickup.",
+        "local_path": "tmp/commons-release-assets/commons-157559549-f2ec09da392f-1961-corvair-95-loadside-pickup-53932079075.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "p-series-step-van",
+        "page_title": "File:1960+ Chevrolet Step-Van.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-fba37769089ee718a1d6",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1960%2B_Chevrolet_Step-Van.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/1960%2B_Chevrolet_Step-Van.jpg",
+        "commons_sha1": "fba37769089ee718a1d6a8b03550384cf50aaa4d",
+        "sha256": "c5e642224bd481d9c0d738f2bf86ad62685080a4f11e9202ed0f06a9e552197c",
+        "bytes": 1779285,
+        "width": 3072,
+        "height": 2304,
+        "author": "JOHN LLOYD from Concrete, Washington, United States",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/32109282@N00\">JOHN LLOYD</a> from Concrete, Washington, United States",
+        "credit": "Chevy Step Van",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/hugo90/4268856835/\">Chevy Step Van</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "JOHN LLOYD from Concrete, Washington, United States - 1960+ Chevrolet Step-Van - CC BY 2.0",
+        "description": "Unveiled in 1958, the Chevrolet Step-Van could be purchased with tunneled signal lights from 1960 onwards.",
+        "original_filename": "1960+ Chevrolet Step-Van.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "Step-Van",
+        "evidence_note": "Title and description explicitly identify a Chevrolet Step-Van. The 1960+ label is a range, so no exact model year is recorded.",
+        "local_path": "tmp/commons-release-assets/commons-37249522-fba37769089e-1960-chevrolet-step-van.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "p-series-step-van",
+        "page_title": "File:1997 Chevrolet P30 step van, left front (Crown Royal body?).jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-3a66bfb3d88da32e37c4",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:1997_Chevrolet_P30_step_van,_left_front_(Crown_Royal_body%3F).jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/1997_Chevrolet_P30_step_van%2C_left_front_%28Crown_Royal_body%3F%29.jpg",
+        "commons_sha1": "3a66bfb3d88da32e37c43e14c6d3bf1e56b7128b",
+        "sha256": "7adb442c004d6c4904d470d9d94fc56f7ad0fba7507f9494d69f53a2fca559fe",
+        "bytes": 7462332,
+        "width": 5327,
+        "height": 3386,
+        "author": "Mr.choppers",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Mr.choppers\" title=\"User:Mr.choppers\">Mr.choppers</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 3.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+        "attribution_required": true,
+        "attribution": "Mr.choppers - 1997 Chevrolet P30 step van, left front (Crown Royal body?) - CC BY-SA 3.0",
+        "description": "A 1997 Chevrolet P30-based 10,000-14,000 lb step van. A forward control RWD van with a 5.7 liter CPI V8 (L31). Bodywork seems to be by Crown Royal, but I can't make out the logo and am not 100% sure.",
+        "original_filename": "1997 Chevrolet P30 step van, left front (Crown Royal body?).jpg",
+        "explicit_year": 1997,
+        "identity_term_matched": "P30",
+        "evidence_note": "Title and description explicitly identify a 1997 Chevrolet P30-based step van.",
+        "local_path": "tmp/commons-release-assets/commons-40278778-3a66bfb3d88d-1997-chevrolet-p30-step-van-left-front-crown-royal-body.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "b-series-bus-chassis",
+        "page_title": "File:Bus Chevrolet B-60 en las montañas del Cauca.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-fb33174ee58e7f44215f",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Bus_Chevrolet_B-60_en_las_monta%C3%B1as_del_Cauca.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bus_Chevrolet_B-60_en_las_monta%C3%B1as_del_Cauca.jpg",
+        "commons_sha1": "fb33174ee58e7f44215fc3c75daeba43f9fb302f",
+        "sha256": "1efe6a2f04a0275469ee1ffac6b26639f9b73ced56aaf748ccef65a510f52505",
+        "bytes": 4047279,
+        "width": 3487,
+        "height": 1995,
+        "author": "Fernando68 YCC from Popynco, de COLOMBIA",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/41979499@N03\">Fernando68 YCC</a> from Popynco, de COLOMBIA",
+        "credit": "Bus Chevrolet B- 60 en las montañas del Cauca",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/fernando680411/15549757289/\">Bus Chevrolet B- 60 en las montañas del Cauca</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Fernando68 YCC from Popynco, de COLOMBIA - Bus Chevrolet B-60 en las montañas del Cauca - CC BY 2.0",
+        "description": "Bus Chevrolet B-60 en las montañas del Cauca.",
+        "original_filename": "Bus Chevrolet B-60 en las montañas del Cauca.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "B-60",
+        "evidence_note": "Title and description identify a Chevrolet B-60 bus; Commons places it in the Chevrolet B-Series category.",
+        "local_path": "tmp/commons-release-assets/commons-37267288-fb33174ee58e-bus-chevrolet-b-60-en-las-montanas-del-cauca.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "b-series-bus-chassis",
+        "page_title": "File:Chiva Chevy B 70 Colombiana.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-6503834685c5d80fc9b9",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chiva_Chevy_B_70_Colombiana.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Chiva_Chevy_B_70_Colombiana.jpg",
+        "commons_sha1": "6503834685c5d80fc9b9510a58b1e53e9d35d527",
+        "sha256": "8121275be2129feae525ba4f312c367cc032610c963d7cbfbebf0cea5361296a",
+        "bytes": 530501,
+        "width": 1086,
+        "height": 673,
+        "author": "Fernando68 YCC from Popynco, de COLOMBIA",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/41979499@N03\">Fernando68 YCC</a> from Popynco,  de COLOMBIA",
+        "credit": "Chiva Chevy B 70 Colombiana",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/fernando680411/15800625739/\">Chiva Chevy B 70 Colombiana</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Fernando68 YCC from Popynco, de COLOMBIA - Chiva Chevy B 70 Colombiana - CC BY 2.0",
+        "description": "Chiva Chevy B 70 Colombiana",
+        "original_filename": "Chiva Chevy B 70 Colombiana.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "B 70",
+        "evidence_note": "Title identifies a Chevy B70 bus; Commons places it in the Chevrolet B-Series category.",
+        "local_path": "tmp/commons-release-assets/commons-37267232-6503834685c5-chiva-chevy-b-70-colombiana.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "tiltmaster-w-series",
+        "page_title": "File:Kultige Polizeiautos auf Abschleppwagen Montreal Kanada.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-9e7adcdd5cc396554266",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Kultige_Polizeiautos_auf_Abschleppwagen_Montreal_Kanada.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Kultige_Polizeiautos_auf_Abschleppwagen_Montreal_Kanada.jpg",
+        "commons_sha1": "9e7adcdd5cc3965542667320c52fedc9b0c1368e",
+        "sha256": "5f9b1139354cbe6c56078ff3b7047cd6f5b847c2e99dbb3672afdd2ff08758fd",
+        "bytes": 636037,
+        "width": 2562,
+        "height": 1922,
+        "author": "Grossbildjaeger",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:Grossbildjaeger\" title=\"User:Grossbildjaeger\">Grossbildjaeger</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 3.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+        "attribution_required": true,
+        "attribution": "Grossbildjaeger - Kultige Polizeiautos auf Abschleppwagen Montreal Kanada - CC BY-SA 3.0",
+        "description": "Kultige Polizeiautos auf Abschleppwagen Montreal Kanada",
+        "original_filename": "Kultige Polizeiautos auf Abschleppwagen Montreal Kanada.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "Tiltmaster",
+        "evidence_note": "Complete tow truck in the exact Chevrolet Tiltmaster category.",
+        "local_path": "tmp/commons-release-assets/commons-28847554-9e7adcdd5cc3-kultige-polizeiautos-auf-abschleppwagen-montreal-kanada.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "t-series-medium-duty",
+        "page_title": "File:Chevrolet T7500 cabover.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-77bf73b714048691cd97",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chevrolet_T7500_cabover.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Chevrolet_T7500_cabover.jpg",
+        "commons_sha1": "77bf73b714048691cd97beb74e225ac27077d935",
+        "sha256": "595305ff1e66f528cf74081612b98e3106539ad9639371624d5502cf2dabcb97",
+        "bytes": 3451483,
+        "width": 3264,
+        "height": 2448,
+        "author": "Jason Lawrence from New York",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/27665395@N05\">Jason Lawrence</a> from New York",
+        "credit": "Chevrolet T7500",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/27665395@N05/33724604295/\">Chevrolet T7500</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Jason Lawrence from New York - Chevrolet T7500 cabover - CC BY 2.0",
+        "description": "One of many Isuzu trucks rebadged by General Motors over time.",
+        "original_filename": "Chevrolet T7500 cabover.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "T7500",
+        "evidence_note": "Title explicitly identifies a Chevrolet T7500 and Commons places it in the Chevrolet T-Series category.",
+        "local_path": "tmp/commons-release-assets/commons-75350736-77bf73b71404-chevrolet-t7500-cabover.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "t-series-medium-duty",
+        "page_title": "File:Chevrolet T7500 Street Sweeper.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-2b6ed572b0414bef9007",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chevrolet_T7500_Street_Sweeper.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Chevrolet_T7500_Street_Sweeper.jpg",
+        "commons_sha1": "2b6ed572b0414bef900760e2627cc13bca5fdc1f",
+        "sha256": "fb9bd50fdc6fadc751d952208723deec2dd5d195f8b3107c530966fb179d836d",
+        "bytes": 2473309,
+        "width": 4000,
+        "height": 1848,
+        "author": "ZenziSaga",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:ZenziSaga&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:ZenziSaga (page does not exist)\">ZenziSaga</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC0",
+        "license_family": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+        "attribution_required": false,
+        "attribution": "ZenziSaga - Chevrolet T7500 Street Sweeper - CC0",
+        "description": "A Chevrolet T7500 converted into a street sweeper. This particular example is owned by Southern Illinois University Carbondale for sweeping around campus.",
+        "original_filename": "Chevrolet T7500 Street Sweeper.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "T7500",
+        "evidence_note": "Title and description explicitly identify a Chevrolet T7500 converted to a street sweeper.",
+        "local_path": "tmp/commons-release-assets/commons-176047265-2b6ed572b041-chevrolet-t7500-street-sweeper.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "s10-ev",
+        "page_title": "File:Electric Chevy S-10.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-377b078c1d851a59ab38",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Electric_Chevy_S-10.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Electric_Chevy_S-10.jpg",
+        "commons_sha1": "377b078c1d851a59ab38f1fabe99dc2e94d8445e",
+        "sha256": "5008dde30bbcd0b691f146f5686f6164357cf35ecef14025d9297403719b21dd",
+        "bytes": 1546419,
+        "width": 2048,
+        "height": 1300,
+        "author": "Mike Weston from La Honda, CA",
+        "author_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/35034363486@N01\">Mike Weston</a> from La Honda, CA",
+        "credit": "Electric Chevy S-10",
+        "credit_raw_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/35034363486@N01/1253395985/\">Electric Chevy S-10</a>",
+        "license": "CC BY 2.0",
+        "license_family": "CC-BY",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution 2.0",
+        "attribution_required": true,
+        "attribution": "Mike Weston from La Honda, CA - Electric Chevy S-10 - CC BY 2.0",
+        "description": "Electric Chevy S-10. Image cropped from original on Flickr.",
+        "original_filename": "Electric Chevy S-10.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "S-10 EV",
+        "evidence_note": "Description identifies an electric Chevy S-10 and Commons places it in the exact Chevrolet S-10 EV category.",
+        "local_path": "tmp/commons-release-assets/commons-9954784-377b078c1d85-electric-chevy-s-10.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "brightdrop-600",
+        "page_title": "File:2024 Chevrolet BrightDrop Zevo 600.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-78c8ddde75075c8115a5",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_BrightDrop_Zevo_600.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/2024_Chevrolet_BrightDrop_Zevo_600.jpg",
+        "commons_sha1": "78c8ddde75075c8115a5fcd9489f92b3758a67c0",
+        "sha256": "aa8450c43f2174bf8bea52fff20022f8f856bd4f9fc4fc09b5a5515a4921dafc",
+        "bytes": 13553979,
+        "width": 5712,
+        "height": 4284,
+        "author": "This picture has been taken by Oleg Yunakov . Contact e-mail: yunakov gmail.com . Image can be used in accordance with the terms of the СС-BY-SA license. Other photos can be seen here .",
+        "author_raw_html": "<table>\n\n<tbody><tr>\n<td>This picture has been taken by <a href=\"//commons.wikimedia.org/w/index.php?title=User:Oleg_Yunakov&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Oleg Yunakov (page does not exist)\">Oleg Yunakov</a>. Contact e-mail: <a rel=\"nofollow\" class=\"external text\" href=\"mailto:yunakov@gmail.com\">yunakov<span class=\"nowrap\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"@\"><img alt=\"@\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/At_sign.svg/20px-At_sign.svg.png\" decoding=\"async\" width=\"15\" height=\"15\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/At_sign.svg/40px-At_sign.svg.png 2x\" data-file-width=\"145\" data-file-height=\"145\"></span></span></span>gmail.com</a>. Image can be used in accordance with the terms of the СС-BY-SA license. Other photos can be <a href=\"//commons.wikimedia.org/wiki/Category:Photographs_by_Oleg_Yunakov\" title=\"Category:Photographs by Oleg Yunakov\">seen here</a>.\n</td></tr></tbody></table>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC BY-SA 4.0",
+        "license_family": "CC-BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+        "attribution_required": true,
+        "attribution": "This picture has been taken by Oleg Yunakov . Contact e-mail: yunakov gmail.com . Image can be used in accordance with the terms of the СС-BY-SA license. Other photos can be seen here . - 2024 Chevrolet BrightDrop Zevo 600 - CC BY-SA 4.0",
+        "description": "2024 Chevrolet BrightDrop Zevo 600",
+        "original_filename": "2024 Chevrolet BrightDrop Zevo 600.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "Zevo 600",
+        "evidence_note": "Title and description explicitly identify a Chevrolet BrightDrop Zevo 600. The stated 2024 model year precedes the catalog's 2025 Chevrolet rename, so no exact year is recorded.",
+        "local_path": "tmp/commons-release-assets/commons-164207072-78c8ddde7507-2024-chevrolet-brightdrop-zevo-600.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      }
+    ]
+  }
+}

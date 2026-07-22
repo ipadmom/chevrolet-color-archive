@@ -13,6 +13,20 @@ This directory records the official GM Heritage Archive Vehicle Information
 Kit index as a source-discovery layer. It does not claim that a listed kit
 contains a paint chart, and it does not infer model-year color availability.
 
+`source-registry.json` is the broader canonical URL ledger. It joins through
+`../parquet/source_links.parquet` to every catalog, platform, color, photo,
+license, archive, and research-document claim. Each published color listing
+also carries its direct source ID and exact chart locator in
+`../parquet/color_availability.parquet`.
+
+`gm-heritage-chevrolet-artifacts.json` records the complete-file SHA-256, byte
+length, retrieval metadata, and content-addressed crawler path for all 691
+official PDFs. The artifact snapshot totals 5,133,028,799 bytes and 59,193
+pages. The export rehashes every object, reconciles every byte count, and opens
+every PDF. It is the reproducible provenance input used to enrich
+`sources.parquet`; the ignored PDF
+object store is a working research cache, not the published source ledger.
+
 ## Snapshot method
 
 - Index: `https://www.gm.com/heritage/archive/vehicle-information-kits`
@@ -33,6 +47,22 @@ title text after its leading year or years. One official title, `2003 And 2004
 Chevrolet SSR`, represents two years and therefore has `year: 2003` plus
 `years: [2003, 2004]`.
 
+## Pinned brochure and source Release
+
+`brochure-source-release-manifest.json` records all 110 assets staged for the
+pinned `brochure-source-archive-v1` Release. The flat-filename checksum
+manifest covers all 109 other assets. The Release contains 86 PDFs totaling
+1,030,803,863 bytes and 6,844 pages. Eighty-one retained source assets include
+77 source PDFs totaling 975,606,620 bytes. Validation identifies 30 governing
+assets, 30 citations fed directly into the application, 79 application Release
+URLs, 61 modern palette tables, 483 modern color assertions, and 19 published
+specialty records.
+
+The retained set closes the audited Tahoe 1995–2007 sources, the Suburban
+governing sources, and the comparison record for the reviewed 1963 Suburban
+source gap. Comparison records never create color availability on their own;
+each published row still cites its governing model and year source.
+
 ## Known source boundaries
 
 The official index has no Chevrolet-directory entry for 1917 or 1943-1945.
@@ -45,9 +75,23 @@ Chevrolet model or every surviving GM document. GM can revise the index. The
 retrieval date, response hash, and response headers make this snapshot
 auditable.
 
-The manifest records links and endpoint metadata. It does not mirror the PDF
-bytes. Any later source-preservation job must save each selected PDF in full
-and record a file hash.
+The discovery manifest records links and endpoint metadata; it does not embed
+PDF bytes. The completed crawler pass preserved every PDF in full in the
+ignored content-addressed object store, and the tracked artifact ledger records
+each file hash and byte count. Any public mirror must publish those exact bytes
+or record a new, separately hashed revision.
+
+The older `crawler/manifests/gm-heritage-camaro-1967-1969.jsonl` file is a
+bounded crawler example, not a supplemental source inventory. Its three URLs
+are already among the 691 index records, under different canonical source IDs,
+and resolve to the same three PDF hashes. Corpus tooling treats those IDs as
+audited aliases and never double-counts them.
+
+`rockauto-paint-code-leads.json` is a separate, bounded secondary-source ledger
+for retailer touch-up-product fitments. It is not part of the official GM
+inventory and cannot create factory color availability. Its exact retrieval
+scope and non-promotion rules are documented in
+`../../docs/rockauto-paint-code-leads.md`.
 
 ## Rebuild and validate
 

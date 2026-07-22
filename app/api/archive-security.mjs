@@ -2,9 +2,9 @@ export const MAX_UPLOAD_BYTES = 8 * 1024 * 1024;
 export const MAX_MULTIPART_BYTES = MAX_UPLOAD_BYTES + 64 * 1024;
 export const MAX_CANDIDATES_PER_SELECTION = 20;
 export const UPLOAD_RECEIPT_TTL_SECONDS = 24 * 60 * 60;
-export const PUBLISHED_ASSET_ROOT = "public/vehicle-photos/assets";
-export const PUBLISHED_ASSET_RAW_BASE =
-  "https://raw.githubusercontent.com/ipadmom/chevrolet-color-archive/main";
+export const PUBLISHED_RELEASE_TAG = "community-photo-archive-v1";
+export const PUBLISHED_RELEASE_DOWNLOAD_BASE =
+  "https://github.com/ipadmom/chevrolet-color-archive/releases/download/community-photo-archive-v1";
 export const PUBLIC_PHOTO_STATUSES = Object.freeze(["published"]);
 export const QUEUE_STATUSES = Object.freeze([
   "queued",
@@ -20,6 +20,7 @@ export const QUEUE_ERROR_CODES = Object.freeze([
   "approval_metadata_invalid",
   "rights_review_rejected",
   "publication_pre_push_failed",
+  "publication_pre_release_failed",
   "candidate_state_update_failed",
   "publisher_retry",
 ]);
@@ -33,6 +34,8 @@ export const ALLOWED_RIGHTS = Object.freeze([
 
 const RECEIPT_PATTERN = /^[A-Za-z0-9_-]{43}$/;
 const CONTROL_CHARACTER_PATTERN = /[\u0000-\u001f\u007f]/;
+const MAX_PUBLISHED_ASSET_BYTES = 25 * 1024 * 1024;
+const MAX_ATTRIBUTION_ASSET_BYTES = 512 * 1024;
 
 export function resolveArchiveContext(models, rawModel, rawYear, rawColorId) {
   const modelId = cleanIdentifier(rawModel, 48);
@@ -41,13 +44,16 @@ export function resolveArchiveContext(models, rawModel, rawYear, rawColorId) {
   if (!modelId || !/^\d{4}$/.test(year) || !colorId) return null;
 
   const model = models.find((entry) => entry.id === modelId);
-  const generation = model?.generations.find((entry) =>
-    entry.years.includes(year),
-  );
-  const color = generation?.colors.find(
-    (entry) => entry.id === colorId && entry.availability[year],
-  );
-  if (!model || !generation || !color) return null;
+  if (!model) return null;
+  const matchingColors = model.generations
+    .filter((entry) => entry.years.includes(year))
+    .flatMap((entry) =>
+      entry.colors.filter(
+        (color) => color.id === colorId && color.availability[year],
+      ),
+    );
+  if (matchingColors.length !== 1) return null;
+  const [color] = matchingColors;
 
   return {
     model: model.id,
@@ -157,7 +163,9 @@ export function publishedAssetExtension(contentType) {
 
 export function publishedAssetUrl(
   publishedSha256,
-  publishedAssetPath,
+  releaseTag,
+  publishedAssetName,
+  storedAssetUrl,
   contentType,
 ) {
   const extension = publishedAssetExtension(contentType);
@@ -168,9 +176,41 @@ export function publishedAssetUrl(
   ) {
     return null;
   }
-  const expectedPath = `${PUBLISHED_ASSET_ROOT}/${publishedSha256}.${extension}`;
-  if (publishedAssetPath !== expectedPath) return null;
-  return `${PUBLISHED_ASSET_RAW_BASE}/${expectedPath}`;
+  const expectedName = `${publishedSha256}.${extension}`;
+  const expectedUrl = `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${expectedName}`;
+  if (
+    releaseTag !== PUBLISHED_RELEASE_TAG ||
+    publishedAssetName !== expectedName ||
+    storedAssetUrl !== expectedUrl
+  ) {
+    return null;
+  }
+  return expectedUrl;
+}
+
+export function publishedAttributionUrl(
+  candidateId,
+  publishedSha256,
+  releaseTag,
+  attributionAssetName,
+  storedAttributionUrl,
+) {
+  if (
+    !Number.isSafeInteger(candidateId) ||
+    candidateId < 1 ||
+    typeof publishedSha256 !== "string" ||
+    !/^[a-f0-9]{64}$/.test(publishedSha256) ||
+    releaseTag !== PUBLISHED_RELEASE_TAG ||
+    typeof attributionAssetName !== "string" ||
+    !new RegExp(
+      `^publication-[1-9][0-9]*-${candidateId}-${publishedSha256}\\.json$`,
+    ).test(attributionAssetName)
+  ) {
+    return null;
+  }
+  const expectedUrl =
+    `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${attributionAssetName}`;
+  return storedAttributionUrl === expectedUrl ? expectedUrl : null;
 }
 
 export function parsePublishedAssetMappings(value) {
@@ -194,11 +234,34 @@ export function parsePublishedAssetMappings(value) {
       Array.isArray(entry) ||
       (prototype !== Object.prototype && prototype !== null) ||
       Object.keys(entry).sort().join(",") !==
-        "candidateId,publishedAssetPath,publishedSha256"
+        [
+          "attributionAssetName",
+          "attributionAssetUrl",
+          "attributionBytes",
+          "attributionSha256",
+          "candidateId",
+          "publishedAssetName",
+          "publishedAssetUrl",
+          "publishedBytes",
+          "publishedSha256",
+          "releaseTag",
+        ].sort().join(",")
     ) {
       return null;
     }
-    const { candidateId, publishedSha256, publishedAssetPath } = entry;
+    const {
+      candidateId,
+      publishedSha256,
+      publishedBytes,
+      releaseTag,
+      publishedAssetName,
+      publishedAssetUrl,
+      attributionAssetName,
+      attributionAssetUrl,
+      attributionSha256,
+      attributionBytes,
+    } = entry;
+    const extension = publishedAssetName?.split(".").at(-1);
     if (
       typeof candidateId !== "number" ||
       !Number.isSafeInteger(candidateId) ||
@@ -206,10 +269,25 @@ export function parsePublishedAssetMappings(value) {
       candidateIds.has(candidateId) ||
       typeof publishedSha256 !== "string" ||
       !/^[a-f0-9]{64}$/.test(publishedSha256) ||
-      typeof publishedAssetPath !== "string" ||
+      !Number.isSafeInteger(publishedBytes) ||
+      publishedBytes < 1 ||
+      publishedBytes > MAX_PUBLISHED_ASSET_BYTES ||
+      releaseTag !== PUBLISHED_RELEASE_TAG ||
+      publishedAssetName !== `${publishedSha256}.${extension}` ||
+      !/^(?:jpg|png|gif|webp)$/.test(extension) ||
+      publishedAssetUrl !==
+        `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${publishedAssetName}` ||
+      typeof attributionAssetName !== "string" ||
       !new RegExp(
-        `^${PUBLISHED_ASSET_ROOT}/${publishedSha256}\\.(?:jpg|png|gif|webp)$`,
-      ).test(publishedAssetPath)
+        `^publication-[1-9][0-9]*-${candidateId}-${publishedSha256}\\.json$`,
+      ).test(attributionAssetName) ||
+      attributionAssetUrl !==
+        `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${attributionAssetName}` ||
+      typeof attributionSha256 !== "string" ||
+      !/^[a-f0-9]{64}$/.test(attributionSha256) ||
+      !Number.isSafeInteger(attributionBytes) ||
+      attributionBytes < 1 ||
+      attributionBytes > MAX_ATTRIBUTION_ASSET_BYTES
     ) {
       return null;
     }
@@ -217,7 +295,14 @@ export function parsePublishedAssetMappings(value) {
     mappings.push({
       candidateId,
       publishedSha256,
-      publishedAssetPath,
+      publishedBytes,
+      releaseTag,
+      publishedAssetName,
+      publishedAssetUrl,
+      attributionAssetName,
+      attributionAssetUrl,
+      attributionSha256,
+      attributionBytes,
     });
   }
   return mappings;

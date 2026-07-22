@@ -1,0 +1,3141 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-07-21",
+  "scope": "Every model and model year in data/catalog/chevrolet-us-nameplates.json, reconciled against sourced, nonoverlapping bands in data/catalog/chevrolet-platform-eras.json.",
+  "status_definitions": {
+    "complete": "Every catalog model year has a sourced platform or era band.",
+    "partial": "At least one sourced band exists, but one or more catalog model years remain unlabeled because evidence is incomplete or contradictory.",
+    "missing": "No platform or era band has yet been added; the catalog range remains visible without an invented label."
+  },
+  "summary": {
+    "catalog_model_count": 149,
+    "platform_model_count": 60,
+    "complete_model_count": 58,
+    "partial_model_count": 2,
+    "missing_model_count": 89,
+    "platform_band_count": 217,
+    "catalog_model_year_count": 1792,
+    "covered_model_year_count": 1332,
+    "uncovered_model_year_count": 460
+  },
+  "validation": {
+    "invalid_model_id_count": 0,
+    "invalid_band_count": 0,
+    "overlap_count": 0,
+    "out_of_catalog_year_count": 0
+  },
+  "records": [
+    {
+      "model_id": "classic-six",
+      "model_name": "Classic Six",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1913,
+          "end": 1914
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1913,
+          "end": 1914
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "baby-grand",
+      "model_name": "Baby Grand",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1914,
+          "end": 1916
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1914,
+          "end": 1916
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "royal-mail",
+      "model_name": "Royal Mail",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1914,
+          "end": 1916
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1914,
+          "end": 1916
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "amesbury-special",
+      "model_name": "Amesbury Special",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1915,
+          "end": 1915
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1915,
+          "end": 1915
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "light-six",
+      "model_name": "Light Six",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1914,
+          "end": 1915
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1914,
+          "end": 1915
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "four-ninety",
+      "model_name": "Four-Ninety",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1915,
+          "end": 1922
+        }
+      ],
+      "catalog_year_count": 8,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 8,
+      "uncovered_year_ranges": [
+        {
+          "start": 1915,
+          "end": 1922
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "series-d",
+      "model_name": "Series D",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1917,
+          "end": 1918
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1917,
+          "end": 1918
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "series-f",
+      "model_name": "Series F",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1917,
+          "end": 1917
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1917,
+          "end": 1917
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "series-fa",
+      "model_name": "Series FA",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1918,
+          "end": 1918
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1918,
+          "end": 1918
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "series-fb",
+      "model_name": "Series FB",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1919,
+          "end": 1922
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1919,
+          "end": 1922
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "superior",
+      "model_name": "Superior",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1923,
+          "end": 1926
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1923,
+          "end": 1926
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "copper-cooled",
+      "model_name": "Copper-Cooled",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1923,
+          "end": 1923
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1923,
+          "end": 1923
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "capitol",
+      "model_name": "Capitol",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1927,
+          "end": 1927
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1927,
+          "end": 1927
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "national",
+      "model_name": "National",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1928,
+          "end": 1928
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1928,
+          "end": 1928
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "international",
+      "model_name": "International",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1929,
+          "end": 1929
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1929,
+          "end": 1929
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "universal",
+      "model_name": "Universal",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1930,
+          "end": 1930
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1930,
+          "end": 1930
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "independence",
+      "model_name": "Independence",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1931,
+          "end": 1931
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1931,
+          "end": 1931
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "confederate",
+      "model_name": "Confederate",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1932,
+          "end": 1932
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1932,
+          "end": 1932
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "eagle",
+      "model_name": "Eagle",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1933
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1933
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "mercury",
+      "model_name": "Mercury",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1933
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1933
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "standard",
+      "model_name": "Standard",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1936
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1936
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "master",
+      "model_name": "Master",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1938
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 6,
+      "uncovered_year_ranges": [
+        {
+          "start": 1933,
+          "end": 1938
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "master-deluxe",
+      "model_name": "Master Deluxe",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1935,
+          "end": 1942
+        }
+      ],
+      "catalog_year_count": 8,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 8,
+      "uncovered_year_ranges": [
+        {
+          "start": 1935,
+          "end": 1942
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "master-85",
+      "model_name": "Master 85",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1939,
+          "end": 1940
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1939,
+          "end": 1940
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "special-deluxe",
+      "model_name": "Special Deluxe",
+      "vehicle_class": "prewar passenger car",
+      "catalog_year_ranges": [
+        {
+          "start": 1940,
+          "end": 1942
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1940,
+          "end": 1942
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "fleetline",
+      "model_name": "Fleetline",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1941,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1952
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 9,
+      "uncovered_year_ranges": [
+        {
+          "start": 1941,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1952
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "fleetmaster",
+      "model_name": "Fleetmaster",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1946,
+          "end": 1948
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1946,
+          "end": 1948
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "stylemaster",
+      "model_name": "Stylemaster",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1946,
+          "end": 1948
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1946,
+          "end": 1948
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "styleline",
+      "model_name": "Styleline",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1949,
+          "end": 1952
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1949,
+          "end": 1952
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "bel-air",
+      "model_name": "Bel Air",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1950,
+          "end": 1975
+        }
+      ],
+      "catalog_year_count": 26,
+      "platform_band_count": 7,
+      "platform_year_count": 26,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "one-fifty",
+      "model_name": "One-Fifty",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "two-ten",
+      "model_name": "Two-Ten",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "handyman",
+      "model_name": "Handyman",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "townsman",
+      "model_name": "Townsman",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 9,
+      "uncovered_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1957
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "beauville-wagon",
+      "model_name": "Beauville",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1955,
+          "end": 1957
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1955,
+          "end": 1957
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "nomad",
+      "model_name": "Nomad",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1955,
+          "end": 1961
+        },
+        {
+          "start": 1968,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 12,
+      "uncovered_year_ranges": [
+        {
+          "start": 1955,
+          "end": 1961
+        },
+        {
+          "start": 1968,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "corvette",
+      "model_name": "Corvette",
+      "vehicle_class": "sports car",
+      "catalog_year_ranges": [
+        {
+          "start": 1953,
+          "end": 1982
+        },
+        {
+          "start": 1984,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 73,
+      "platform_band_count": 8,
+      "platform_year_count": 73,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "delray",
+      "model_name": "Delray",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1954,
+          "end": 1958
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1954,
+          "end": 1958
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "biscayne",
+      "model_name": "Biscayne",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 15,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 15,
+      "uncovered_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "brookwood",
+      "model_name": "Brookwood",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 8,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 8,
+      "uncovered_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "impala",
+      "model_name": "Impala",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1985
+        },
+        {
+          "start": 1994,
+          "end": 1996
+        },
+        {
+          "start": 2000,
+          "end": 2020
+        }
+      ],
+      "catalog_year_count": 52,
+      "platform_band_count": 10,
+      "platform_year_count": 52,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "yeoman",
+      "model_name": "Yeoman",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1958
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1958
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "parkwood",
+      "model_name": "Parkwood",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1959,
+          "end": 1961
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1959,
+          "end": 1961
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "kingswood",
+      "model_name": "Kingswood",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1959,
+          "end": 1960
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 6,
+      "uncovered_year_ranges": [
+        {
+          "start": 1959,
+          "end": 1960
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "el-camino",
+      "model_name": "El Camino",
+      "vehicle_class": "coupe utility",
+      "catalog_year_ranges": [
+        {
+          "start": 1959,
+          "end": 1960
+        },
+        {
+          "start": 1964,
+          "end": 1987
+        }
+      ],
+      "catalog_year_count": 26,
+      "platform_band_count": 5,
+      "platform_year_count": 26,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "corvair",
+      "model_name": "Corvair",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1960,
+          "end": 1969
+        }
+      ],
+      "catalog_year_count": 10,
+      "platform_band_count": 2,
+      "platform_year_count": 10,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "lakewood",
+      "model_name": "Lakewood",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1962
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1962
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "chevy-ii",
+      "model_name": "Chevy II",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1962,
+          "end": 1968
+        }
+      ],
+      "catalog_year_count": 7,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 7,
+      "uncovered_year_ranges": [
+        {
+          "start": 1962,
+          "end": 1968
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "nova",
+      "model_name": "Nova",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1962,
+          "end": 1979
+        },
+        {
+          "start": 1985,
+          "end": 1988
+        }
+      ],
+      "catalog_year_count": 22,
+      "platform_band_count": 5,
+      "platform_year_count": 22,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "chevelle",
+      "model_name": "Chevelle",
+      "vehicle_class": "midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 1964,
+          "end": 1977
+        }
+      ],
+      "catalog_year_count": 14,
+      "platform_band_count": 3,
+      "platform_year_count": 14,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "concours",
+      "model_name": "Concours",
+      "vehicle_class": "midsize station wagon and sedan",
+      "catalog_year_ranges": [
+        {
+          "start": 1967,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 6,
+      "uncovered_year_ranges": [
+        {
+          "start": 1967,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "concours-estate",
+      "model_name": "Concours Estate",
+      "vehicle_class": "midsize station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1968,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1968,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "malibu",
+      "model_name": "Malibu",
+      "vehicle_class": "midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 1964,
+          "end": 1983
+        },
+        {
+          "start": 1997,
+          "end": 2025
+        }
+      ],
+      "catalog_year_count": 49,
+      "platform_band_count": 9,
+      "platform_year_count": 49,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "camaro",
+      "model_name": "Camaro",
+      "vehicle_class": "sports coupe",
+      "catalog_year_ranges": [
+        {
+          "start": 1967,
+          "end": 2002
+        },
+        {
+          "start": 2010,
+          "end": 2024
+        }
+      ],
+      "catalog_year_count": 51,
+      "platform_band_count": 6,
+      "platform_year_count": 51,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "caprice",
+      "model_name": "Caprice",
+      "vehicle_class": "full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 1965,
+          "end": 1996
+        }
+      ],
+      "catalog_year_count": 32,
+      "platform_band_count": 4,
+      "platform_year_count": 32,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "kingswood-estate",
+      "model_name": "Kingswood Estate",
+      "vehicle_class": "station wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "monte-carlo",
+      "model_name": "Monte Carlo",
+      "vehicle_class": "personal luxury coupe",
+      "catalog_year_ranges": [
+        {
+          "start": 1970,
+          "end": 1988
+        },
+        {
+          "start": 1995,
+          "end": 2007
+        }
+      ],
+      "catalog_year_count": 32,
+      "platform_band_count": 6,
+      "platform_year_count": 32,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "vega",
+      "model_name": "Vega",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1971,
+          "end": 1977
+        }
+      ],
+      "catalog_year_count": 7,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 7,
+      "uncovered_year_ranges": [
+        {
+          "start": 1971,
+          "end": 1977
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "laguna",
+      "model_name": "Laguna",
+      "vehicle_class": "midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 1973,
+          "end": 1976
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1973,
+          "end": 1976
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "monza",
+      "model_name": "Monza",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1975,
+          "end": 1980
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 6,
+      "uncovered_year_ranges": [
+        {
+          "start": 1975,
+          "end": 1980
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "chevette",
+      "model_name": "Chevette",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1976,
+          "end": 1987
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 12,
+      "uncovered_year_ranges": [
+        {
+          "start": 1976,
+          "end": 1987
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "citation",
+      "model_name": "Citation",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1980,
+          "end": 1985
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 6,
+      "uncovered_year_ranges": [
+        {
+          "start": 1980,
+          "end": 1985
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "cavalier",
+      "model_name": "Cavalier",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1982,
+          "end": 2005
+        }
+      ],
+      "catalog_year_count": 24,
+      "platform_band_count": 3,
+      "platform_year_count": 24,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "celebrity",
+      "model_name": "Celebrity",
+      "vehicle_class": "midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 1982,
+          "end": 1990
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 9,
+      "uncovered_year_ranges": [
+        {
+          "start": 1982,
+          "end": 1990
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "spectrum",
+      "model_name": "Spectrum",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1985,
+          "end": 1988
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1985,
+          "end": 1988
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "sprint",
+      "model_name": "Sprint",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1985,
+          "end": 1988
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1985,
+          "end": 1988
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "beretta",
+      "model_name": "Beretta",
+      "vehicle_class": "compact coupe",
+      "catalog_year_ranges": [
+        {
+          "start": 1987,
+          "end": 1996
+        }
+      ],
+      "catalog_year_count": 10,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 10,
+      "uncovered_year_ranges": [
+        {
+          "start": 1987,
+          "end": 1996
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "corsica",
+      "model_name": "Corsica",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1987,
+          "end": 1996
+        }
+      ],
+      "catalog_year_count": 10,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 10,
+      "uncovered_year_ranges": [
+        {
+          "start": 1987,
+          "end": 1996
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "lumina",
+      "model_name": "Lumina",
+      "vehicle_class": "midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 1990,
+          "end": 2001
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 2,
+      "platform_year_count": 12,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "metro",
+      "model_name": "Metro",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1998,
+          "end": 2001
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1998,
+          "end": 2001
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "prizm",
+      "model_name": "Prizm",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 1998,
+          "end": 2002
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1998,
+          "end": 2002
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "classic-fleet",
+      "model_name": "Classic",
+      "vehicle_class": "fleet midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2005
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2005
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "aveo",
+      "model_name": "Aveo",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2011
+        }
+      ],
+      "catalog_year_count": 8,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 8,
+      "uncovered_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2011
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "malibu-maxx",
+      "model_name": "Malibu Maxx",
+      "vehicle_class": "midsize hatchback",
+      "catalog_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2007
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2007
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "malibu-limited",
+      "model_name": "Malibu Limited",
+      "vehicle_class": "fleet midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 2016,
+          "end": 2016
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 2016,
+          "end": 2016
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "malibu-classic-2008",
+      "model_name": "Malibu Classic (2008)",
+      "vehicle_class": "fleet midsize car",
+      "catalog_year_ranges": [
+        {
+          "start": 2008,
+          "end": 2008
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 2008,
+          "end": 2008
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "cobalt",
+      "model_name": "Cobalt",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 2005,
+          "end": 2010
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 1,
+      "platform_year_count": 6,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "hhr",
+      "model_name": "HHR",
+      "vehicle_class": "compact wagon",
+      "catalog_year_ranges": [
+        {
+          "start": 2006,
+          "end": 2011
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 1,
+      "platform_year_count": 6,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "cruze",
+      "model_name": "Cruze",
+      "vehicle_class": "compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 2011,
+          "end": 2019
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 2,
+      "platform_year_count": 9,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "cruze-limited",
+      "model_name": "Cruze Limited",
+      "vehicle_class": "fleet compact car",
+      "catalog_year_ranges": [
+        {
+          "start": 2016,
+          "end": 2016
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 2016,
+          "end": 2016
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "volt",
+      "model_name": "Volt",
+      "vehicle_class": "plug-in hybrid hatchback",
+      "catalog_year_ranges": [
+        {
+          "start": 2011,
+          "end": 2019
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 2,
+      "platform_year_count": 9,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "caprice-ppv",
+      "model_name": "Caprice PPV",
+      "vehicle_class": "police fleet sedan",
+      "catalog_year_ranges": [
+        {
+          "start": 2011,
+          "end": 2017
+        }
+      ],
+      "catalog_year_count": 7,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 7,
+      "uncovered_year_ranges": [
+        {
+          "start": 2011,
+          "end": 2017
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "sonic",
+      "model_name": "Sonic",
+      "vehicle_class": "subcompact car",
+      "catalog_year_ranges": [
+        {
+          "start": 2012,
+          "end": 2020
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 1,
+      "platform_year_count": 9,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "spark",
+      "model_name": "Spark",
+      "vehicle_class": "city car",
+      "catalog_year_ranges": [
+        {
+          "start": 2013,
+          "end": 2022
+        }
+      ],
+      "catalog_year_count": 10,
+      "platform_band_count": 2,
+      "platform_year_count": 10,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "spark-ev",
+      "model_name": "Spark EV",
+      "vehicle_class": "electric city car",
+      "catalog_year_ranges": [
+        {
+          "start": 2014,
+          "end": 2016
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 2014,
+          "end": 2016
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "ss-sedan",
+      "model_name": "SS",
+      "vehicle_class": "performance sedan",
+      "catalog_year_ranges": [
+        {
+          "start": 2014,
+          "end": 2017
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 2014,
+          "end": 2017
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "impala-limited",
+      "model_name": "Impala Limited",
+      "vehicle_class": "fleet full-size car",
+      "catalog_year_ranges": [
+        {
+          "start": 2014,
+          "end": 2016
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 2014,
+          "end": 2016
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "bolt-ev",
+      "model_name": "Bolt EV",
+      "vehicle_class": "electric hatchback",
+      "catalog_year_ranges": [
+        {
+          "start": 2017,
+          "end": 2023
+        }
+      ],
+      "catalog_year_count": 7,
+      "platform_band_count": 2,
+      "platform_year_count": 7,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "bolt-euv",
+      "model_name": "Bolt EUV",
+      "vehicle_class": "electric crossover",
+      "catalog_year_ranges": [
+        {
+          "start": 2022,
+          "end": 2023
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 1,
+      "platform_year_count": 2,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "pre-ck-truck",
+      "model_name": "Chevrolet Truck (pre-C/K)",
+      "vehicle_class": "pickup and commercial truck family",
+      "catalog_year_ranges": [
+        {
+          "start": 1918,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1959
+        }
+      ],
+      "catalog_year_count": 39,
+      "platform_band_count": 7,
+      "platform_year_count": 39,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "canopy-express",
+      "model_name": "Canopy Express",
+      "vehicle_class": "commercial delivery vehicle",
+      "catalog_year_ranges": [
+        {
+          "start": 1931,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1955
+        }
+      ],
+      "catalog_year_count": 22,
+      "platform_band_count": 5,
+      "platform_year_count": 22,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "sedan-delivery",
+      "model_name": "Sedan Delivery",
+      "vehicle_class": "car-based commercial delivery vehicle",
+      "catalog_year_ranges": [
+        {
+          "start": 1928,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1960
+        }
+      ],
+      "catalog_year_count": 30,
+      "platform_band_count": 6,
+      "platform_year_count": 15,
+      "uncovered_year_count": 15,
+      "uncovered_year_ranges": [
+        {
+          "start": 1928,
+          "end": 1942
+        }
+      ],
+      "coverage_status": "partial"
+    },
+    {
+      "model_id": "panel-truck",
+      "model_name": "Panel Truck",
+      "vehicle_class": "truck-based commercial delivery vehicle",
+      "catalog_year_ranges": [
+        {
+          "start": 1929,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1970
+        }
+      ],
+      "catalog_year_count": 39,
+      "platform_band_count": 8,
+      "platform_year_count": 39,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "suburban",
+      "model_name": "Suburban",
+      "vehicle_class": "full-size SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 1935,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 89,
+      "platform_band_count": 16,
+      "platform_year_count": 89,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "3100",
+      "model_name": "3100",
+      "vehicle_class": "light-duty pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1947,
+          "end": 1959
+        }
+      ],
+      "catalog_year_count": 13,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 13,
+      "uncovered_year_ranges": [
+        {
+          "start": 1947,
+          "end": 1959
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "3600",
+      "model_name": "3600",
+      "vehicle_class": "three-quarter-ton truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1947,
+          "end": 1959
+        }
+      ],
+      "catalog_year_count": 13,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 13,
+      "uncovered_year_ranges": [
+        {
+          "start": 1947,
+          "end": 1959
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "3800",
+      "model_name": "3800",
+      "vehicle_class": "one-ton truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1947,
+          "end": 1959
+        }
+      ],
+      "catalog_year_count": 13,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 13,
+      "uncovered_year_ranges": [
+        {
+          "start": 1947,
+          "end": 1959
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "cameo-carrier",
+      "model_name": "Cameo Carrier",
+      "vehicle_class": "light-duty pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1955,
+          "end": 1958
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1955,
+          "end": 1958
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "apache",
+      "model_name": "Apache",
+      "vehicle_class": "light-duty truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "viking",
+      "model_name": "Viking",
+      "vehicle_class": "medium-duty truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "spartan",
+      "model_name": "Spartan",
+      "vehicle_class": "heavy-duty truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1958,
+          "end": 1961
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "ck-series",
+      "model_name": "C/K Series",
+      "vehicle_class": "full-size pickup and commercial truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1960,
+          "end": 2002
+        }
+      ],
+      "catalog_year_count": 43,
+      "platform_band_count": 5,
+      "platform_year_count": 43,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "greenbrier",
+      "model_name": "Greenbrier",
+      "vehicle_class": "passenger van",
+      "catalog_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1965
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 9,
+      "uncovered_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1965
+        },
+        {
+          "start": 1969,
+          "end": 1972
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "corvan",
+      "model_name": "Corvan",
+      "vehicle_class": "compact cargo van",
+      "catalog_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1964
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1964
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "rampside",
+      "model_name": "Rampside",
+      "vehicle_class": "compact pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1964
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1964
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "loadside",
+      "model_name": "Loadside",
+      "vehicle_class": "compact pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1962
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1961,
+          "end": 1962
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "g-series-van",
+      "model_name": "G-Series Van",
+      "vehicle_class": "full-size van",
+      "catalog_year_ranges": [
+        {
+          "start": 1964,
+          "end": 1996
+        }
+      ],
+      "catalog_year_count": 33,
+      "platform_band_count": 3,
+      "platform_year_count": 33,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "sportvan",
+      "model_name": "Sportvan",
+      "vehicle_class": "full-size passenger van",
+      "catalog_year_ranges": [
+        {
+          "start": 1965,
+          "end": 1996
+        }
+      ],
+      "catalog_year_count": 32,
+      "platform_band_count": 3,
+      "platform_year_count": 32,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "p-series-step-van",
+      "model_name": "P-Series / Step-Van",
+      "vehicle_class": "commercial walk-in van and stripped chassis",
+      "catalog_year_ranges": [
+        {
+          "start": 1940,
+          "end": 1942
+        },
+        {
+          "start": 1946,
+          "end": 1998
+        }
+      ],
+      "catalog_year_count": 56,
+      "platform_band_count": 11,
+      "platform_year_count": 56,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "l-series-tilt-cab",
+      "model_name": "Tilt Cab / Steel Tilt Cab",
+      "vehicle_class": "medium and heavy cab-over truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1960,
+          "end": 1981
+        }
+      ],
+      "catalog_year_count": 22,
+      "platform_band_count": 3,
+      "platform_year_count": 22,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "b-series-bus-chassis",
+      "model_name": "B-Series Bus Chassis",
+      "vehicle_class": "commercial bus chassis",
+      "catalog_year_ranges": [
+        {
+          "start": 1967,
+          "end": 2003
+        }
+      ],
+      "catalog_year_count": 37,
+      "platform_band_count": 4,
+      "platform_year_count": 36,
+      "uncovered_year_count": 1,
+      "uncovered_year_ranges": [
+        {
+          "start": 1992,
+          "end": 1992
+        }
+      ],
+      "coverage_status": "partial"
+    },
+    {
+      "model_id": "titan-90",
+      "model_name": "Titan 90",
+      "vehicle_class": "Class 8 cab-over truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1969,
+          "end": 1980
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 12,
+      "uncovered_year_ranges": [
+        {
+          "start": 1969,
+          "end": 1980
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "chevy-90",
+      "model_name": "Chevy 90",
+      "vehicle_class": "Class 7-8 conventional truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1966,
+          "end": 1977
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 12,
+      "uncovered_year_ranges": [
+        {
+          "start": 1966,
+          "end": 1977
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "blazer",
+      "model_name": "Blazer",
+      "vehicle_class": "SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 1969,
+          "end": 1994
+        },
+        {
+          "start": 1995,
+          "end": 2005
+        },
+        {
+          "start": 2019,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 45,
+      "platform_band_count": 6,
+      "platform_year_count": 45,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "luv",
+      "model_name": "LUV",
+      "vehicle_class": "compact pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1972,
+          "end": 1982
+        }
+      ],
+      "catalog_year_count": 11,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 11,
+      "uncovered_year_ranges": [
+        {
+          "start": 1972,
+          "end": 1982
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "vega-panel-express",
+      "model_name": "Vega Panel Express",
+      "vehicle_class": "car-based commercial delivery vehicle",
+      "catalog_year_ranges": [
+        {
+          "start": 1971,
+          "end": 1975
+        }
+      ],
+      "catalog_year_count": 5,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 5,
+      "uncovered_year_ranges": [
+        {
+          "start": 1971,
+          "end": 1975
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "bison",
+      "model_name": "Bison",
+      "vehicle_class": "Class 8 conventional truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1977,
+          "end": 1980
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 1977,
+          "end": 1980
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "bruin",
+      "model_name": "Bruin",
+      "vehicle_class": "Class 7-8 conventional truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1978,
+          "end": 1980
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 3,
+      "uncovered_year_ranges": [
+        {
+          "start": 1978,
+          "end": 1980
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "kodiak",
+      "model_name": "Kodiak",
+      "vehicle_class": "medium-duty truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1980,
+          "end": 2009
+        }
+      ],
+      "catalog_year_count": 30,
+      "platform_band_count": 3,
+      "platform_year_count": 30,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "s10",
+      "model_name": "S-10",
+      "vehicle_class": "compact pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1982,
+          "end": 2004
+        }
+      ],
+      "catalog_year_count": 23,
+      "platform_band_count": 2,
+      "platform_year_count": 23,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "s10-blazer",
+      "model_name": "S-10 Blazer",
+      "vehicle_class": "compact SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 1983,
+          "end": 1994
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 1,
+      "platform_year_count": 12,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "tiltmaster-w-series",
+      "model_name": "Tiltmaster / W-Series",
+      "vehicle_class": "low-cab-forward commercial truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1984,
+          "end": 2009
+        }
+      ],
+      "catalog_year_count": 26,
+      "platform_band_count": 1,
+      "platform_year_count": 26,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "t-series-medium-duty",
+      "model_name": "T-Series Medium Duty",
+      "vehicle_class": "medium-duty commercial truck",
+      "catalog_year_ranges": [
+        {
+          "start": 1997,
+          "end": 2009
+        }
+      ],
+      "catalog_year_count": 13,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 13,
+      "uncovered_year_ranges": [
+        {
+          "start": 1997,
+          "end": 2009
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "astro",
+      "model_name": "Astro",
+      "vehicle_class": "midsize van",
+      "catalog_year_ranges": [
+        {
+          "start": 1985,
+          "end": 2005
+        }
+      ],
+      "catalog_year_count": 21,
+      "platform_band_count": 2,
+      "platform_year_count": 21,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "lumina-apv",
+      "model_name": "Lumina APV",
+      "vehicle_class": "minivan",
+      "catalog_year_ranges": [
+        {
+          "start": 1990,
+          "end": 1996
+        }
+      ],
+      "catalog_year_count": 7,
+      "platform_band_count": 1,
+      "platform_year_count": 7,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "tahoe",
+      "model_name": "Tahoe",
+      "vehicle_class": "full-size SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 1995,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 32,
+      "platform_band_count": 7,
+      "platform_year_count": 32,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "express",
+      "model_name": "Express",
+      "vehicle_class": "full-size van and cutaway",
+      "catalog_year_ranges": [
+        {
+          "start": 1996,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 31,
+      "platform_band_count": 2,
+      "platform_year_count": 31,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "s10-ev",
+      "model_name": "S-10 EV",
+      "vehicle_class": "electric compact pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1997,
+          "end": 1998
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 2,
+      "uncovered_year_ranges": [
+        {
+          "start": 1997,
+          "end": 1998
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "venture",
+      "model_name": "Venture",
+      "vehicle_class": "minivan",
+      "catalog_year_ranges": [
+        {
+          "start": 1997,
+          "end": 2005
+        }
+      ],
+      "catalog_year_count": 9,
+      "platform_band_count": 2,
+      "platform_year_count": 9,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "tracker",
+      "model_name": "Tracker",
+      "vehicle_class": "compact SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 1999,
+          "end": 2004
+        }
+      ],
+      "catalog_year_count": 6,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 6,
+      "uncovered_year_ranges": [
+        {
+          "start": 1999,
+          "end": 2004
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "silverado",
+      "model_name": "Silverado",
+      "vehicle_class": "full-size pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 1999,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 28,
+      "platform_band_count": 5,
+      "platform_year_count": 28,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "silverado-hd",
+      "model_name": "Silverado HD",
+      "vehicle_class": "heavy-duty and medium-duty pickup/chassis cab",
+      "catalog_year_ranges": [
+        {
+          "start": 2001,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 26,
+      "platform_band_count": 5,
+      "platform_year_count": 26,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "trailblazer",
+      "model_name": "TrailBlazer",
+      "vehicle_class": "SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2002,
+          "end": 2009
+        },
+        {
+          "start": 2021,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 14,
+      "platform_band_count": 3,
+      "platform_year_count": 14,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "avalanche",
+      "model_name": "Avalanche",
+      "vehicle_class": "crew-cab sport utility pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 2002,
+          "end": 2013
+        }
+      ],
+      "catalog_year_count": 12,
+      "platform_band_count": 2,
+      "platform_year_count": 12,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "ssr",
+      "model_name": "SSR",
+      "vehicle_class": "retractable-hardtop sport pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 2003,
+          "end": 2006
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 1,
+      "platform_year_count": 4,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "colorado",
+      "model_name": "Colorado",
+      "vehicle_class": "midsize pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 2004,
+          "end": 2012
+        },
+        {
+          "start": 2015,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 21,
+      "platform_band_count": 3,
+      "platform_year_count": 21,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "uplander",
+      "model_name": "Uplander",
+      "vehicle_class": "minivan",
+      "catalog_year_ranges": [
+        {
+          "start": 2005,
+          "end": 2008
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 1,
+      "platform_year_count": 4,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "equinox",
+      "model_name": "Equinox",
+      "vehicle_class": "compact crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2005,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 22,
+      "platform_band_count": 4,
+      "platform_year_count": 22,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "traverse",
+      "model_name": "Traverse",
+      "vehicle_class": "midsize crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2009,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 18,
+      "platform_band_count": 3,
+      "platform_year_count": 18,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "traverse-limited",
+      "model_name": "Traverse Limited",
+      "vehicle_class": "midsize crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2024,
+          "end": 2024
+        }
+      ],
+      "catalog_year_count": 1,
+      "platform_band_count": 1,
+      "platform_year_count": 1,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "captiva-sport",
+      "model_name": "Captiva Sport",
+      "vehicle_class": "fleet compact crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2012,
+          "end": 2015
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 0,
+      "platform_year_count": 0,
+      "uncovered_year_count": 4,
+      "uncovered_year_ranges": [
+        {
+          "start": 2012,
+          "end": 2015
+        }
+      ],
+      "coverage_status": "missing"
+    },
+    {
+      "model_id": "trax",
+      "model_name": "Trax",
+      "vehicle_class": "subcompact crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2015,
+          "end": 2022
+        },
+        {
+          "start": 2024,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 11,
+      "platform_band_count": 2,
+      "platform_year_count": 11,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "city-express",
+      "model_name": "City Express",
+      "vehicle_class": "compact cargo van",
+      "catalog_year_ranges": [
+        {
+          "start": 2015,
+          "end": 2018
+        }
+      ],
+      "catalog_year_count": 4,
+      "platform_band_count": 1,
+      "platform_year_count": 4,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "low-cab-forward",
+      "model_name": "Low Cab Forward",
+      "vehicle_class": "commercial cab-over truck",
+      "catalog_year_ranges": [
+        {
+          "start": 2016,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 11,
+      "platform_band_count": 1,
+      "platform_year_count": 11,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "blazer-ev",
+      "model_name": "Blazer EV",
+      "vehicle_class": "electric midsize crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2024,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 1,
+      "platform_year_count": 3,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "equinox-ev",
+      "model_name": "Equinox EV",
+      "vehicle_class": "electric compact crossover SUV",
+      "catalog_year_ranges": [
+        {
+          "start": 2024,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 1,
+      "platform_year_count": 3,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "silverado-ev",
+      "model_name": "Silverado EV",
+      "vehicle_class": "electric full-size pickup",
+      "catalog_year_ranges": [
+        {
+          "start": 2024,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 3,
+      "platform_band_count": 1,
+      "platform_year_count": 3,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "brightdrop-400",
+      "model_name": "BrightDrop 400",
+      "vehicle_class": "electric commercial van",
+      "catalog_year_ranges": [
+        {
+          "start": 2025,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 1,
+      "platform_year_count": 2,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    },
+    {
+      "model_id": "brightdrop-600",
+      "model_name": "BrightDrop 600",
+      "vehicle_class": "electric commercial van",
+      "catalog_year_ranges": [
+        {
+          "start": 2025,
+          "end": 2026
+        }
+      ],
+      "catalog_year_count": 2,
+      "platform_band_count": 1,
+      "platform_year_count": 2,
+      "uncovered_year_count": 0,
+      "uncovered_year_ranges": [],
+      "coverage_status": "complete"
+    }
+  ]
+}

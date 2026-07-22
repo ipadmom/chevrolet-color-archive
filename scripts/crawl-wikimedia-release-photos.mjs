@@ -33,8 +33,8 @@ const VERIFIED_EXACT_YEARS = new Map([
   ["camaro", range(1967, 1992)],
   ["chevelle", range(1964, 1967)],
   ["corvette", range(1954, 1962)],
-  ["suburban", [1977]],
-  ["tahoe", [1995, 1996, 2001]],
+  ["suburban", [1969, ...range(1972, 2005), 2007]],
+  ["tahoe", range(1995, 2007)],
 ]);
 
 const LEGACY_STATIC_CANDIDATES = [
@@ -1199,7 +1199,24 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error(error?.stack ?? error);
-  process.exitCode = 1;
-});
+if (
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))
+) {
+  main().catch((error) => {
+    console.error(error?.stack ?? error);
+    process.exitCode = 1;
+  });
+}
+
+export {
+  buildTitlesUrl,
+  fetchWithRetry,
+  htmlToText,
+  makeCandidate,
+  metadataValue,
+  normalizedText,
+  safeAssetName,
+  stageCandidate,
+  writeJsonAtomic,
+};

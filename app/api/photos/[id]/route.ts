@@ -3,6 +3,7 @@ import { getDb } from "../../../../db";
 import { photoCandidates } from "../../../../db/schema";
 import {
   isPublicPhotoStatus,
+  publishedAttributionUrl,
   publishedAssetUrl,
 } from "../../archive-security.mjs";
 import {
@@ -46,11 +47,22 @@ export async function GET(
     const publicUrl = isPublicPhotoStatus(row.status)
       ? publishedAssetUrl(
           row.publishedSha256,
-          row.publishedAssetPath,
+          row.publishedReleaseTag,
+          row.publishedAssetName,
+          row.publishedAssetUrl,
           row.contentType,
         )
       : null;
-    if (!publicUrl || !row.publishedAt) {
+    const attributionUrl = isPublicPhotoStatus(row.status)
+      ? publishedAttributionUrl(
+          row.id,
+          row.publishedSha256,
+          row.publishedReleaseTag,
+          row.publishedAttributionName,
+          row.publishedAttributionUrl,
+        )
+      : null;
+    if (!publicUrl || !attributionUrl || !row.publishedAt) {
       return new Response("Not found", { status: 404 });
     }
     const headers = new Headers({

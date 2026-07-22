@@ -50,6 +50,20 @@
       "when": 1784551654771,
       "tag": "0006_mixed_owl",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1784655792220,
+      "tag": "0007_cuddly_nekra",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1784660914212,
+      "tag": "0008_warm_daredevil",
+      "breakpoints": true
     }
   ]
 }

@@ -1,0 +1,1078 @@
+{
+  "schema_version": 1,
+  "visibility": "public",
+  "classification": "archive-internal",
+  "captured_at": "2026-07-22",
+  "repository": "ipadmom/chevrolet-color-archive",
+  "release_tag": "brochure-source-archive-v1",
+  "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+  "scope": "Retained governing, reviewed-no-chart, supporting, carrier, and comparison sources for the 1963, 1969-1976, 1982, 1989, 1993, and 2000-2007 Chevrolet Suburban color audits and the 1995-2007 Chevrolet Tahoe audits, including retained Tahoe sales brochures, specification sheets, code guides, and police-configuration contracts, plus the complete 1963 comparison record: the GM truck kit, exact Service News extract, its complete parent issue, and the Corvair 95 paint-and-trim compilation. The archive also retains the 1980 Chevrolet truck color-and-trim kit, the 2011 Chevrolet municipal vehicles technical manual, all 19 audited 2008-2026 GM Fleet Guides, and four audited 2022-2023 Chevrolet eBrochures that govern qualified modern palette unions. Original, retrieval, and parent URLs are recorded separately where the live carrier is unavailable. No source or carrier states a reuse license.",
+  "entries": [
+    {
+      "asset_name": "1962-october-chevrolet-service-news-vol-34-no-9.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1962-october-chevrolet-service-news-vol-34-no-9.pdf",
+      "sha256": "a498ab3c02afd3186ade6e5edeabc3724346b8b3a2a1ef450f2a3901b65a896e",
+      "bytes": 25963347,
+      "role": "parent_service_news_issue",
+      "source_id": "chevrolet-service-news-volume-34-no-9",
+      "original_source_url": "https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
+      "pdf_page_count": 48,
+      "retrieval_url": "https://web.archive.org/web/20221017094958id_/https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf"
+    },
+    {
+      "asset_name": "1963-chevrolet-service-news-paint-refinish-codes.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-service-news-paint-refinish-codes.pdf",
+      "sha256": "f4b7ff7f16a25af1d60a6c657937b052d5add3998cbc3124bccd544c97efcce3",
+      "bytes": 66513,
+      "role": "comparison_refinish_extract",
+      "source_id": "chevrolet-service-news-1963-truck-refinish-extract",
+      "original_source_url": "http://www.corvair.org/chapters/corvanatics/files/resources/63-PntRefCodes.pdf",
+      "pdf_page_count": 2,
+      "retrieval_url": "https://web.archive.org/web/20171215004756id_/http://www.corvair.org/chapters/corvanatics/files/resources/63-PntRefCodes.pdf",
+      "parent_source_url": "https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf"
+    },
+    {
+      "asset_name": "1963-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "03054f329c1739f8d2aa20057a25bc933d8482f0139c4c07dec723ed025e94a0",
+      "bytes": 1700864,
+      "role": "reviewed_no_chart_vehicle_information_kit",
+      "source_id": "gm-heritage-1963-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1963-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 10
+    },
+    {
+      "asset_name": "1963-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "sha256": "a9388da4129296a00935a715fbf5e733b3cbdb2269b4a70a8a75827b0f49c08e",
+      "bytes": 4439704,
+      "role": "comparison_vehicle_information_kit",
+      "source_id": "gm-heritage-1963-chevrolet-truck",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1963-Chevrolet-Truck.pdf",
+      "pdf_page_count": 107
+    },
+    {
+      "asset_name": "1969-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "5fcf9bf85940cd3011990674d40cf7471dd7febe2158da10bc636c43d36db9f7",
+      "bytes": 4434116,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1969-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 34
+    },
+    {
+      "asset_name": "1970-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "034533fef5679a22f1ad8fa179fb27f0dd41a9c050cfd6560322c636a9db3abd",
+      "bytes": 1526015,
+      "role": "reviewed_no_chart_vehicle_information_kit",
+      "source_id": "gm-heritage-1970-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 10
+    },
+    {
+      "asset_name": "1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf",
+      "sha256": "c956707f017b002cbd26995d57f66bc3b9446ae229030f494fcbd32847f9f7f0",
+      "bytes": 9145014,
+      "role": "comparison_vehicle_information_kit",
+      "source_id": "gm-heritage-1971-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 64
+    },
+    {
+      "asset_name": "1971-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "54e322d01cc0f28b8b6245a390db29513370fa172aa32216f54594ce584260e3",
+      "bytes": 683978,
+      "role": "reviewed_no_chart_vehicle_information_kit",
+      "source_id": "gm-heritage-1971-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 17
+    },
+    {
+      "asset_name": "1972-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "5195f25899820e8985d01e1c23494ec45596069eaa780a3c0af4c94c92c85d1e",
+      "bytes": 664435,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1972-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 19
+    },
+    {
+      "asset_name": "1973-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "3085f54e1a286705859f0c2005cb108e9dcaba394704895274a6a86d1331b09c",
+      "bytes": 937353,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1973-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 29
+    },
+    {
+      "asset_name": "1974-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "85bf5bed41de4d41a3f3134f914e50984c154b2405f86fcd1be785515d7f180c",
+      "bytes": 997638,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1974-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 29
+    },
+    {
+      "asset_name": "1975-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "92f1cbcdc7f9da565b687673f2191d417fdea8cfc23fe97ab577fe6b34a19319",
+      "bytes": 924820,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1975-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1976-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "cf4df41f720baf898e4caff22fa29760621ccdd614ca5e69867c22cbc51868c1",
+      "bytes": 1044844,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1976-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "sha256": "b44e4e8af7bba172885d003d5f88d2dab55bcefb5a15d0ce124b9a181ed89008",
+      "bytes": 4390128,
+      "role": "controlling_specialty_vehicle_information_kit",
+      "source_id": "gm-1980-chevrolet-truck-color-trim",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1980-Chevrolet-Truck.pdf",
+      "pdf_page_count": 125
+    },
+    {
+      "asset_name": "1982-chevrolet-suburban-brochure-xr793.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-suburban-brochure-xr793.pdf",
+      "sha256": "826b132146d21a82a8748ba8781d46c766dd05546dee3f5ab9ffa7f10c50db64",
+      "bytes": 2393183,
+      "role": "controlling_brochure_scan",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2017/08/1982-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 10
+    },
+    {
+      "asset_name": "1982-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "b88186c835d7e9889c78e3cc35fe8ba79bb7a8c5c27de0f85b44ccad42000d5b",
+      "bytes": 240707,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-1982-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1982-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 9
+    },
+    {
+      "asset_name": "1982-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "sha256": "665d96d3115ef330fb232152c92d532a1f52ac63a6ec6b4e8e0387066c334b28",
+      "bytes": 4431496,
+      "role": "comparison_vehicle_information_kit",
+      "source_id": "gm-heritage-1982-chevrolet-truck",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1982-Chevrolet-Truck.pdf",
+      "pdf_page_count": 115
+    },
+    {
+      "asset_name": "1989-chevrolet-suburban-brochure-xr793.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-suburban-brochure-xr793.pdf",
+      "sha256": "52edcba93aee5538d36e55b574456c15210a04c72116a1bb97feaa9064fb4d9c",
+      "bytes": 1635000,
+      "role": "controlling_brochure_scan",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2017/07/1989-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 6
+    },
+    {
+      "asset_name": "1989-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "a908a97a41c32a429a1cf2eac9de9a7ec3383d4bdbbd1c3daa02cde8c3b9ed2d",
+      "bytes": 1042568,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-1989-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1989-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 21
+    },
+    {
+      "asset_name": "1989-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "sha256": "c224e4fb79f74f3906b771b268edc28848dfd55a1d5f1e28523d0092cf414996",
+      "bytes": 1683159,
+      "role": "comparison_vehicle_information_kit",
+      "source_id": "gm-heritage-1989-chevrolet-truck",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1989-Chevrolet-Truck.pdf",
+      "pdf_page_count": 35
+    },
+    {
+      "asset_name": "1989-chevrolet-trucks-full-line-xr793.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-trucks-full-line-xr793.pdf",
+      "sha256": "11b2ab5333c09645a2a0292372b4bf541577e8139973d5115a2fb0cd37af9604",
+      "bytes": 16733836,
+      "role": "comparison_source",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2025/03/1989-Chevrolet-Trucks-Full-Line.pdf",
+      "pdf_page_count": 38
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-01.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-01.jpg",
+      "sha256": "86295033652ab726d4409bcafd799cab2aa59b413788677530013eb85d6ddaab",
+      "bytes": 583864,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-02.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-02.jpg",
+      "sha256": "5a2c139371ce01d6da7c55533bf3b9d6647a93da4db45f4ea59e296c71395995",
+      "bytes": 395572,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-03.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-03.jpg",
+      "sha256": "d6f462843fb2f6fa418aa952fe71532c1cd78cd27a15c1710502a559b5d52a26",
+      "bytes": 660938,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-04.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-04.jpg",
+      "sha256": "246cc620914f5a9edf179e3eafdf38c35e6deb9204e1acd607a2ebff86422f48",
+      "bytes": 701153,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-05.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-05.jpg",
+      "sha256": "09b95e59011f98f28f7a1241dede776ccd4ed8623561c515728a96382def6153",
+      "bytes": 534913,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-06.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-06.jpg",
+      "sha256": "c75f8b11e210158344f09b68ddf98f1c5ae3901473460df7f4e143a61262bcbc",
+      "bytes": 599902,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-07.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-07.jpg",
+      "sha256": "8f8d3a3c7d2618b686ec48ba3517d1b1d8bda455e518167a2179be511e183345",
+      "bytes": 593815,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-08.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-08.jpg",
+      "sha256": "57030585841f7a78a66805df0ed819bbfd72964ce12dd12b49c76d54a57eb3bc",
+      "bytes": 709899,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-09.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-09.jpg",
+      "sha256": "b8798265965aee80ea39f85a49dd5c7a3f291b6cb9cba3570f5180d2717d1aed",
+      "bytes": 518003,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-10.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-10.jpg",
+      "sha256": "8105bdf427e03fe69c22d5fc1c9651194f8fb77c37ec7dc3814f73f6e8738707",
+      "bytes": 529218,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-11.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-11.jpg",
+      "sha256": "da1054092540be4393e6d359b6a670bcaea680cf68ee56a40e0933b40037bdff",
+      "bytes": 620388,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-12.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-12.jpg",
+      "sha256": "b6f224f4ca77029de05d8be8e83708741fdbf74709ae794ce9fc3959ecc11176",
+      "bytes": 606648,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-13.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-13.jpg",
+      "sha256": "12c29bfdb90691a4ab48bc244fd6fcc1fcb65d80709bcd70cadd251fe624a23c",
+      "bytes": 751577,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-14.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-14.jpg",
+      "sha256": "25621ccf9cf560bc6b110ae894d9bcca2be3c303c1ae33c8c5225cb88fc3f0cc",
+      "bytes": 508134,
+      "role": "controlling_brochure_page",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-15.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-15.jpg",
+      "sha256": "dacadffbdffafb3b4aee3c787c859a73f1822951469d874aba2455db5e8302fd",
+      "bytes": 243279,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-16.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-16.jpg",
+      "sha256": "c452cdc98442073e728878b032a3b5ff0d4c7cfa084f784d4dbf1873866b31c6",
+      "bytes": 234475,
+      "role": "complete_carrier_image_set",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-blazer-suburban-brochure-poshmark-listing.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-poshmark-listing.html",
+      "sha256": "c921b61aad83379e1612060fe0d17a7a1c3baee3ba1d55d02ae99bd6bdf0508b",
+      "bytes": 720767,
+      "role": "carrier_listing_capture",
+      "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
+    },
+    {
+      "asset_name": "1993-chevrolet-full-line-brochure-xr793.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-full-line-brochure-xr793.pdf",
+      "sha256": "c187be3f400eb8268ed302cc62bd902f5cdcff0710904a490019d4a3eef57d2d",
+      "bytes": 5308250,
+      "role": "comparison_source",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2019/04/1993-Chevrolet-Full-Line.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1993-chevrolet-light-duty-truck-graphic-information-booklet-gmt400-info.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-light-duty-truck-graphic-information-booklet-gmt400-info.pdf",
+      "sha256": "262eb4d3d0ef610ba98743782d95b1dad00806355175f6f3aec8a6b5e505c493",
+      "bytes": 13053271,
+      "role": "comparison_source",
+      "original_source_url": "https://gmt400.info/wp-content/uploads/2023/09/1993-Chevrolet-Truck.pdf",
+      "pdf_page_count": 94
+    },
+    {
+      "asset_name": "1993-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "607f0de7aa91612d9c406dd41df126b1959bd13d9d74c05c3137f01739b23341",
+      "bytes": 573990,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-1993-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 14
+    },
+    {
+      "asset_name": "1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "sha256": "5183176f4af0d61bd63cc7d6fb02117129c870c28c42bc9fe22abcc2eea52d3e",
+      "bytes": 13034550,
+      "role": "comparison_vehicle_information_kit",
+      "source_id": "gm-heritage-1993-chevrolet-truck",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1993-Chevrolet-Truck.pdf",
+      "pdf_page_count": 94
+    },
+    {
+      "asset_name": "1993-chevrolet-trucks-brochure-xr793.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-trucks-brochure-xr793.pdf",
+      "sha256": "87e55805c86777e8ffc2980431c46c03cd1be6b3927e3eaa8e39919d8b1e09eb",
+      "bytes": 9419981,
+      "role": "comparison_source",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2019/06/1993-Chevrolet-Trucks-R.pdf",
+      "pdf_page_count": 13
+    },
+    {
+      "asset_name": "1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "4049fe25311a8482f5c40db31eacda7946e0ac39aa44e750cad23c8dc5eb1ec7",
+      "bytes": 2885244,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1995-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "0a85633660b46b67c9c61f35e7c85ccb1a05611b27fadf83a566d7f25d73a48a",
+      "bytes": 995606,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1996-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 39
+    },
+    {
+      "asset_name": "1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "8e1612dd85ecaa7320cc4fd4c66f439a57a5f93a3bffc026a8c62ec55992e7bb",
+      "bytes": 1096844,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1997-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 41
+    },
+    {
+      "asset_name": "1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "911b0cf105a0cdce54ecf9c4a3ef863aafa31134ba6a9aea550724ef1e78d44a",
+      "bytes": 1828088,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1998-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 55
+    },
+    {
+      "asset_name": "1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "e1f9cd07d4c6a2b0e18b4c28900c9ba9c5834eeabc18d12d38239dae183f3735",
+      "bytes": 2128770,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-1999-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 71
+    },
+    {
+      "asset_name": "2000-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "4ecbb2793671cbbfbbc8ad7158e2555714950479aeaffeacaaad66b3a4d4189f",
+      "bytes": 15391647,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2000-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 124
+    },
+    {
+      "asset_name": "2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "e52e59031146ac0b1574f1ac41cfa7ac76599568987598bd6913baf516497dbc",
+      "bytes": 15232489,
+      "role": "controlling_variant_vehicle_information_kit",
+      "source_id": "gm-heritage-2000-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 124
+    },
+    {
+      "asset_name": "2000-chevrolet-tahoe-z71-brochure-colors.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-brochure-colors.jpg",
+      "sha256": "bc150ee6d2c813fdca40d85e092ef1da03b87c102619bae0f48594a9fb4e4c4b",
+      "bytes": 46014,
+      "role": "qualified_original_brochure_scan",
+      "source_id": "chevrolet-sales-brochure-2000-tahoe-z71-colors-scan",
+      "original_source_url": "https://www.gmt400.com/attachments/2000-z71-tahoe-brochure-colors-jpg.372777/",
+      "retrieval_url": "https://www.gmt400.com/data/attachments/357/357680-9100c496d554e77aafac98846d23a7f5.jpg",
+      "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/"
+    },
+    {
+      "asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-1.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-order-guide-page-1.jpg",
+      "sha256": "bd41f45e9cf3a5b2cc9eaef194a79cf14b1870948a0de754e3adcc28d9ca1bc9",
+      "bytes": 33965,
+      "role": "qualified_original_order_guide_scan",
+      "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-1-scan",
+      "original_source_url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-1-jpg.372780/",
+      "retrieval_url": "https://www.gmt400.com/data/attachments/357/357683-9c9e15526d8cf50107fcf239b3a19b05.jpg",
+      "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/"
+    },
+    {
+      "asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-2.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-order-guide-page-2.jpg",
+      "sha256": "2f79e8d60daeadea5048b8c2820871d451aaecdb4fca278bfb1ca6a022d6b2e1",
+      "bytes": 27615,
+      "role": "qualified_original_order_guide_scan",
+      "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-2-scan",
+      "original_source_url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-2-jpg.372781/",
+      "retrieval_url": "https://www.gmt400.com/data/attachments/357/357684-87675e51d982900ffa260fba4eed7cc1.jpg",
+      "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/"
+    },
+    {
+      "asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-3.jpg",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-order-guide-page-3.jpg",
+      "sha256": "3bf95389040eb7dcce18429f4a16caf22d64e9a51372fe177053b30de15ba390",
+      "bytes": 27121,
+      "role": "qualified_original_order_guide_scan",
+      "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-3-scan",
+      "original_source_url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-3-jpg.372782/",
+      "retrieval_url": "https://www.gmt400.com/data/attachments/357/357685-dad7ee20c9a933a0e2609c430ba8e7a8.jpg",
+      "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/"
+    },
+    {
+      "asset_name": "2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "fd24c0732861c15cb7754db8138c94fe6945fe76a4a90ee54400dc98bc98085a",
+      "bytes": 16572173,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2001-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 136
+    },
+    {
+      "asset_name": "2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "fd9ee45ef8bd1e465687e187877640f349d850f2c526c9d8d1477a9b7dbe9093",
+      "bytes": 17070627,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2001-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 128
+    },
+    {
+      "asset_name": "2002-chevrolet-suburban-brochure-auto-brochures.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-suburban-brochure-auto-brochures.pdf",
+      "sha256": "9d0774ee1ff03ed840436c035cb788eac038291d191d67c246db9788ae33dc00",
+      "bytes": 3440353,
+      "role": "controlling_brochure_scan",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Suburban/Chevrolet_US%20Suburban_2002.pdf",
+      "pdf_page_count": 19
+    },
+    {
+      "asset_name": "2002-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "f8d41c1578965be6e1f21df95dc83a44cde290b0411e154070319141e61395dc",
+      "bytes": 11556922,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-2002-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 116
+    },
+    {
+      "asset_name": "2002-chevrolet-tahoe-brochure-motorologist.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-tahoe-brochure-motorologist.pdf",
+      "sha256": "97ca38b885817e64e831d640b4167df2edf93838d29d407610df38efb797e522",
+      "bytes": 2777275,
+      "role": "controlling_sales_brochure",
+      "source_id": "chevrolet-sales-brochure-2002-tahoe",
+      "original_source_url": "https://www.motorologist.com/wp-content/uploads/2002-Chevrolet-Tahoe-brochure.pdf",
+      "pdf_page_count": 20,
+      "retrieval_url": "https://web.archive.org/web/20240609071421id_/https://www.motorologist.com/wp-content/uploads/2002-Chevrolet-Tahoe-brochure.pdf"
+    },
+    {
+      "asset_name": "2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "eeedace0f77151da0ea4138c4464258daed8a180e8eeb4ee3dadddfa85b5560b",
+      "bytes": 10720527,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-2002-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 102
+    },
+    {
+      "asset_name": "2003-chevrolet-suburban-brochure-auto-brochures.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-suburban-brochure-auto-brochures.pdf",
+      "sha256": "67569652d048c8aaf091a3534dbd1809d9d6c0efcbc0784f2cf54c6cceb6aab7",
+      "bytes": 1784718,
+      "role": "controlling_brochure_scan",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Suburban/Chevrolet_US%20Suburban_2003.pdf",
+      "pdf_page_count": 21
+    },
+    {
+      "asset_name": "2003-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "ec8bb580f2185fff8919aeb1124adb62d7023991ced343583fa7ec3f229e4a20",
+      "bytes": 28338734,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-2003-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 184
+    },
+    {
+      "asset_name": "2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-brochure-auto-brochures.pdf",
+      "sha256": "0d60ddd639614f5da8b85dcf3b438a5cd9d15c106cfa323d11467f82fe41b613",
+      "bytes": 1928530,
+      "role": "supporting_sales_brochure",
+      "source_id": "chevrolet-sales-brochure-2003-tahoe",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf",
+      "pdf_page_count": 17,
+      "retrieval_url": "https://web.archive.org/web/20240216125333id_/https://www.auto-brochures.com/makes/Chevrolet/Tahoe/Chevrolet_US%20Tahoe_2003.pdf"
+    },
+    {
+      "asset_name": "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284",
+      "bytes": 49190468,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2003-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 182
+    },
+    {
+      "asset_name": "2004-chevrolet-suburban-service-color-table.png",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-suburban-service-color-table.png",
+      "sha256": "84efa6eb1898c2420ac9bba9e75a144991c830e08dbb1784acc4a3a580284b3a",
+      "bytes": 22017,
+      "role": "controlling_service_table_mirror",
+      "original_source_url": "https://workshop-manuals.com/chevrolet/suburban_1/2_ton_2wd/v8-5.3l_vin_t/body_and_frame/paint_striping_and_decals/paint/system_information/application_and_id/color_compatibility_guide_%28paint_codes%29/page_13495/"
+    },
+    {
+      "asset_name": "2004-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "4830a4b87497e236ca5a35de983ec900fc332f28db4bc7bcb5369649a0a0b0dc",
+      "bytes": 14977618,
+      "role": "supporting_vehicle_information_kit",
+      "source_id": "gm-heritage-2004-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 146
+    },
+    {
+      "asset_name": "2004-chevrolet-tahoe-spec-sheet.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-tahoe-spec-sheet.pdf",
+      "sha256": "68b41b618bae2a61c93ee80d1f4655a68f3b177e380611ef8243babc6177b514",
+      "bytes": 252651,
+      "role": "controlling_us_specification_sheet",
+      "source_id": "chevrolet-spec-sheet-us-2004-tahoe",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2023/07/2004-Chevrolet-Tahoe-Spec-Sheet.pdf",
+      "pdf_page_count": 2,
+      "retrieval_url": "https://web.archive.org/web/20240225052652id_/https://xr793.com/wp-content/uploads/2023/07/2004-Chevrolet-Tahoe-Spec-Sheet.pdf"
+    },
+    {
+      "asset_name": "2004-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "6f1dbcca16989df53a70d85fc585156c07ef3beb11e12ce44bb7413d50360cd8",
+      "bytes": 12549342,
+      "role": "source_review_vehicle_information_kit",
+      "source_id": "gm-heritage-2004-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 120
+    },
+    {
+      "asset_name": "2004-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "sha256": "3bd3709b52baae003adf94126fc63e49c64c7b9b46d817b4035910932b73bdd5",
+      "bytes": 93732,
+      "role": "supporting_tahoe_code_compatibility_guide",
+      "source_id": "sherwin-williams-gm-2004-color-compatibility-guide",
+      "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2004_gm_ccg.pdf",
+      "pdf_page_count": 35
+    },
+    {
+      "asset_name": "2004-sherwin-williams-north-american-color-manual.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-north-american-color-manual.pdf",
+      "sha256": "8b94ebfd068e23cdc162d69a597d4c35d5bb5fc97b731d36048219373ea821c6",
+      "bytes": 1428651,
+      "role": "comparison_source",
+      "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2004_sw_domestic_colorboo.pdf",
+      "pdf_page_count": 132
+    },
+    {
+      "asset_name": "2005-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "0a4f9aece087719e81c7cd09cbab3fab4da9c61ee2378f5bfbcca775f278276b",
+      "bytes": 23300793,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 176
+    },
+    {
+      "asset_name": "2005-chevrolet-tahoe-spec-sheet.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-spec-sheet.pdf",
+      "sha256": "a7d04612d375b57aca0185e205461aff7cd3eeac96901f1c84152d2a632cc4aa",
+      "bytes": 630983,
+      "role": "controlling_us_specification_sheet",
+      "source_id": "chevrolet-spec-sheet-us-2005-tahoe",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2023/07/2005-Chevrolet-Tahoe-Spec-Sheet.pdf",
+      "pdf_page_count": 2,
+      "retrieval_url": "https://web.archive.org/web/20240421034221id_/https://xr793.com/wp-content/uploads/2023/07/2005-Chevrolet-Tahoe-Spec-Sheet.pdf"
+    },
+    {
+      "asset_name": "2005-chevrolet-tahoe-suburban-canada.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-suburban-canada.pdf",
+      "sha256": "96e11797686f4c36e095d285c2a1608a0f7109769ea3a8f951ad756d20a7c966",
+      "bytes": 2430499,
+      "role": "supporting_canadian_sales_brochure",
+      "source_id": "chevrolet-sales-brochure-canada-2005-tahoe-suburban",
+      "original_source_url": "https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf",
+      "pdf_page_count": 28,
+      "retrieval_url": "https://web.archive.org/web/20240216130715id_/https://www.xr793.com/wp-content/uploads/2020/05/2005-Chevrolet-Tahoe-Suburban-CN.pdf"
+    },
+    {
+      "asset_name": "2005-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "ca7cfbcc923ec7f6026ff44e054daabe6715f0263131729a2b0242f7b9d8de8b",
+      "bytes": 19705735,
+      "role": "source_review_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 148
+    },
+    {
+      "asset_name": "2005-new-jersey-tahoe-police-contract.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
+      "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
+      "bytes": 342819,
+      "role": "controlling_specialty_configuration_contract",
+      "source_id": "new-jersey-tahoe-police-contract-2005",
+      "original_source_url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
+      "pdf_page_count": 30
+    },
+    {
+      "asset_name": "2005-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "sha256": "bf617161ec0875b9dce9c9bc2be087541a5b95cf848fde59177255af7273afaa",
+      "bytes": 108739,
+      "role": "supporting_tahoe_code_compatibility_guide",
+      "source_id": "sherwin-williams-gm-2005-color-compatibility-guide",
+      "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2005_gm_ccg.pdf",
+      "pdf_page_count": 43
+    },
+    {
+      "asset_name": "2006-chevrolet-tahoe-spec-sheet.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-spec-sheet.pdf",
+      "sha256": "e805cef5d6e04f465c84df5cbad85997cde1d5797692cb02113cba25f6ee358f",
+      "bytes": 1171822,
+      "role": "controlling_us_specification_sheet",
+      "source_id": "chevrolet-spec-sheet-us-2006-tahoe",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Tahoe-Spec-Sheet.pdf",
+      "pdf_page_count": 2,
+      "retrieval_url": "https://web.archive.org/web/20240223151410id_/https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Tahoe-Spec-Sheet.pdf"
+    },
+    {
+      "asset_name": "2006-chevrolet-tahoe-suburban-canada.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-suburban-canada.pdf",
+      "sha256": "6bb01616aa0ab6150ccdee2a8a4515d65e7dccc9bb26430c37ba0b74093562b3",
+      "bytes": 4129100,
+      "role": "supporting_canadian_sales_brochure",
+      "source_id": "chevrolet-sales-brochure-canada-2006-tahoe-suburban",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf",
+      "pdf_page_count": 28,
+      "retrieval_url": "https://web.archive.org/web/20240216125819id_/https://xr793.com/wp-content/uploads/2017/07/2006-Chevrolet-Tahoe-CN.pdf"
+    },
+    {
+      "asset_name": "2006-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "aba15072806a8e98962453beba173c4848a5737f8d2cd47f16977dae78b4a0ab",
+      "bytes": 34324439,
+      "role": "source_review_vehicle_information_kit",
+      "source_id": "gm-heritage-2006-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 204
+    },
+    {
+      "asset_name": "2006-new-jersey-tahoe-police-contract.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
+      "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
+      "bytes": 265662,
+      "role": "controlling_specialty_configuration_contract",
+      "source_id": "new-jersey-tahoe-police-contract-2006",
+      "original_source_url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
+      "pdf_page_count": 30
+    },
+    {
+      "asset_name": "2006-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "sha256": "e97ee68bca34867244a933db1bd6df11cf0e18781671207348db08bfb8cca31b",
+      "bytes": 148670,
+      "role": "supporting_tahoe_code_compatibility_guide",
+      "source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+      "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/de/de-de/pdfs/marketing-uploads/swaf-2006_gm_ccg.pdf",
+      "pdf_page_count": 40
+    },
+    {
+      "asset_name": "2007-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "a0adfb3cb12d7ee058b2494b25837dd80ac31d0cd2fdde8818513448dae24efe",
+      "bytes": 45706014,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2007-chevrolet-suburban",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Suburban.pdf",
+      "pdf_page_count": 262
+    },
+    {
+      "asset_name": "2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+      "sha256": "65c3a1c9ef314d64c4f8ef99289be32974000fbe0453b04d57c99f3aee479a09",
+      "bytes": 30576454,
+      "role": "controlling_vehicle_information_kit",
+      "source_id": "gm-heritage-2007-chevrolet-tahoe",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Tahoe.pdf",
+      "pdf_page_count": 206
+    },
+    {
+      "asset_name": "2008-gm-fleet-guide-v2-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-gm-fleet-guide-v2-mirror.pdf",
+      "sha256": "d9bcb174998f30051e0da47f5cd4fe02eae1afa97af1d04b71f9c06689050ac7",
+      "bytes": 9543843,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2008-v2",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2008-GM-Fleet-Guide-V2.pdf",
+      "pdf_page_count": 121
+    },
+    {
+      "asset_name": "2009-gm-fleet-guide-v2-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-gm-fleet-guide-v2-mirror.pdf",
+      "sha256": "402f99dddb300b7862315a90ec94b8e69416e71aa043141af0e7c23c8e39ae79",
+      "bytes": 11533063,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2009-v2",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2009-GM-Fleet-Guide-V2.pdf",
+      "pdf_page_count": 139
+    },
+    {
+      "asset_name": "2010-gm-fleet-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2010-gm-fleet-guide-mirror.pdf",
+      "sha256": "a147136a27501ec69102030c0cbf3ef1ec90c59aa1caccd0e7c95510c86a3767",
+      "bytes": 10735575,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2010",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2010-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 116
+    },
+    {
+      "asset_name": "2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
+      "sha256": "6c0eef224d9c67c4a841bbaf1fb68383bc74cc5a0ecc3c0d1a412683b6474534",
+      "bytes": 8346299,
+      "role": "controlling_specialty_vehicle_manual",
+      "source_id": "gm-2011-police-manual",
+      "original_source_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+      "pdf_page_count": 182
+    },
+    {
+      "asset_name": "2011-gm-fleet-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-gm-fleet-guide-mirror.pdf",
+      "sha256": "543beec48e1c5428e583f260e7e64bc20f50836825ee32295c0eedcd7f017f5c",
+      "bytes": 9708021,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2011",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2011-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 102
+    },
+    {
+      "asset_name": "2012-gm-car-truck-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-gm-car-truck-guide-mirror.pdf",
+      "sha256": "7dc20723b7a6147ac8b26cb900241ac90585d8ed65504ecff3a6572077533f3b",
+      "bytes": 8940620,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2012",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2012-GM-Car-Truck-Guide.pdf",
+      "pdf_page_count": 114
+    },
+    {
+      "asset_name": "2013-gm-car-truck-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-gm-car-truck-guide-mirror.pdf",
+      "sha256": "a980b93a1458969b0368d4a512bf9c17dfbbdca0fa0883d1071a4bd6256b50f4",
+      "bytes": 25115496,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2013",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2013-GM-Car-Truck-Guide.pdf",
+      "pdf_page_count": 111
+    },
+    {
+      "asset_name": "2014-gm-fleet-car-truck-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-gm-fleet-car-truck-guide-mirror.pdf",
+      "sha256": "aafeff44fa9f5c71493ec45db02b74a56e5f160bd6e89d936806e4e53d04676d",
+      "bytes": 24251962,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2014",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2014-GM-Fleet-Car-Truck-Guide.pdf",
+      "pdf_page_count": 134
+    },
+    {
+      "asset_name": "2015-gm-fleet-car-truck-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-gm-fleet-car-truck-guide-mirror.pdf",
+      "sha256": "730619c14a83c809f8a786e020391f89f92040bb502889dc0d10e41206cac41e",
+      "bytes": 28790965,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2015",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2015-GM-Feet-Car-Truck-Guide.pdf",
+      "pdf_page_count": 142
+    },
+    {
+      "asset_name": "2016-gm-fleet-guide-november-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-gm-fleet-guide-november-mirror.pdf",
+      "sha256": "f53f4f05585edc0bf529ee408d52f18a0bb770a28d1c1d0fb7458f34351ef578",
+      "bytes": 24673080,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2016-november",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2016-GM-Fleet-Guide-November-Update.pdf",
+      "pdf_page_count": 148
+    },
+    {
+      "asset_name": "2017-gm-fleet-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-gm-fleet-guide-mirror.pdf",
+      "sha256": "0d4981b8fc8f20d087b76446c5a80fba9a5a798d6d7925fe41fb9e8c57de9e05",
+      "bytes": 20125688,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2017",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2017-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 152
+    },
+    {
+      "asset_name": "2018-gm-fleet-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-gm-fleet-guide-mirror.pdf",
+      "sha256": "be48bfde2180a4182c9c62191da24fbe2903197eeb961bf443ffb59567e1372b",
+      "bytes": 10853752,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2018",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2021/03/2018-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 126
+    },
+    {
+      "asset_name": "2019-gm-fleet-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-gm-fleet-guide-mirror.pdf",
+      "sha256": "4d5ae974de5331d48af54248f40abc7600c0c566d5f5d7f9be5a3f394f423d87",
+      "bytes": 10445916,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2019",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2019/11/2019-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 130
+    },
+    {
+      "asset_name": "2020-gm-fleet-guide-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-gm-fleet-guide-mirror.pdf",
+      "sha256": "975934dbfafef814d92ed452071abca8020e591cbb519f74aa492f64c64442d8",
+      "bytes": 28938841,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2020",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2019/11/2020-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 124
+    },
+    {
+      "asset_name": "2021-gm-fleet-guide-v3-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2021-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "92aaec592e01b0dbf5aca290a34ea2f96908a7324fcd475446af09df8fa7ee1c",
+      "bytes": 14541647,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2021-v3",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/11/2021-GM-Fleet-Guide-V3.pdf",
+      "pdf_page_count": 110
+    },
+    {
+      "asset_name": "2022-chevrolet-tahoe-ebrochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-chevrolet-tahoe-ebrochure.pdf",
+      "sha256": "e9ae0dcf9355564fbdf34dfc09aa07d57d80983dd4350d8ccacc36f43856a8e1",
+      "bytes": 6929934,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-ebrochure-us-2022-tahoe",
+      "original_source_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/08-pdf/2022-chevrolet-tahoe-ebrochure.pdf",
+      "pdf_page_count": 27
+    },
+    {
+      "asset_name": "2022-gm-fleet-guide-v6-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-gm-fleet-guide-v6-mirror.pdf",
+      "sha256": "265ab13a565ccb5c733ce27af2b03f0ffe3d38bb196fd222650e2fff2043375c",
+      "bytes": 20549478,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2022-v6",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2022/03/2022-GM-Fleet-Guide-V6.pdf",
+      "pdf_page_count": 119
+    },
+    {
+      "asset_name": "2023-chevrolet-colorado-ebrochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-colorado-ebrochure.pdf",
+      "sha256": "941d24b627ce7b660d3dec2d85c010abd91a3a1b3218ff7a3016b056c7497c59",
+      "bytes": 4426440,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-ebrochure-us-2023-colorado",
+      "original_source_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-colorado-ebrochure.pdf",
+      "pdf_page_count": 31
+    },
+    {
+      "asset_name": "2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "sha256": "ca1c88edd10c30151a5533e6da2f8f5cfc8b1b8a4fb25f7de9c0535d596bc836",
+      "bytes": 2603896,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
+      "original_source_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "pdf_page_count": 23
+    },
+    {
+      "asset_name": "2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "sha256": "add78758e31ea729e43593ad231eb4d3920548d89e1b03eff68f7650d4caf0b3",
+      "bytes": 5447116,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
+      "original_source_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "pdf_page_count": 32
+    },
+    {
+      "asset_name": "2023-gm-fleet-guide-v3-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "697423b1c274d8fe30f9e58fc5dc9ecf365d119f7f1155f54dc4c3fd9d8484ef",
+      "bytes": 17883996,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2023-v3",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2023/04/2023-GM-Fleet-Guide-v3.pdf",
+      "pdf_page_count": 121
+    },
+    {
+      "asset_name": "2024-gm-fleet-guide-v3-mirror.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+      "pdf_page_count": 114
+    },
+    {
+      "asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "original_source_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/25GMFG-DECEMBER.pdf",
+      "pdf_page_count": 179
+    },
+    {
+      "asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "role": "controlling_qualified_palette_fleet_guide",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "original_source_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+      "pdf_page_count": 184
+    },
+    {
+      "asset_name": "corvair95-paint-trim-refinish-codes.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/corvair95-paint-trim-refinish-codes.pdf",
+      "sha256": "083bbdc28cd5e2e494a4285fbd786487f081a48a62d8edeab49fb3d0df3fbca5",
+      "bytes": 315056,
+      "role": "comparison_refinish_compilation",
+      "source_id": "corvanatics-corvair95-paint-trim-refinish-codes",
+      "original_source_url": "https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf",
+      "pdf_page_count": 11,
+      "retrieval_url": "https://web.archive.org/web/20240519115026id_/https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf"
+    },
+    {
+      "asset_name": "suburban-1982-1989-1993-source-audit.md",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/suburban-1982-1989-1993-source-audit.md",
+      "sha256": "3cd55f7b33ca8d6c8ae355786c839435bb23c51a738bbfc998875bfa5579c6c0",
+      "bytes": 16523,
+      "role": "audit_report",
+      "original_source_url": null
+    },
+    {
+      "asset_name": "source-sha256-manifest.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest.txt",
+      "sha256": "2ac6c47a2b837de0abfbfbb5ab168072904b756ab0fc69018c4350e48f60f97c",
+      "bytes": 12464,
+      "role": "checksum_manifest",
+      "original_source_url": null
+    }
+  ]
+}

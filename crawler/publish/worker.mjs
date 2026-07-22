@@ -1,19 +1,23 @@
-import { createHash, randomUUID } from "node:crypto";
+import { createHash } from "node:crypto";
 import {
   mkdir,
   open,
   readFile,
-  rename,
-  stat,
-  unlink,
 } from "node:fs/promises";
 import path from "node:path";
 import { posix } from "node:path";
 
 import { sanitizeImageForPublication } from "./image-sanitizer.mjs";
+import {
+  COMMUNITY_PHOTO_DOWNLOAD_BASE,
+  COMMUNITY_PHOTO_RELEASE_NAME,
+  COMMUNITY_PHOTO_RELEASE_TAG,
+  COMMUNITY_PHOTO_RELEASE_URL,
+  EXPECTED_GITHUB_OWNER,
+  EXPECTED_GITHUB_REPOSITORY,
+} from "./release.mjs";
 
-export const PUBLICATION_SCHEMA_VERSION = 3;
-export const DEFAULT_ASSET_ROOT = "public/vehicle-photos";
+export const PUBLICATION_SCHEMA_VERSION = 4;
 export const DEFAULT_MAX_ASSET_BYTES = 25 * 1024 * 1024;
 export const DEFAULT_LEASE_SECONDS = 1800;
 export const QUEUE_ACK_ERROR_CODES = Object.freeze([
@@ -22,11 +26,12 @@ export const QUEUE_ACK_ERROR_CODES = Object.freeze([
   "approval_metadata_invalid",
   "rights_review_rejected",
   "publication_pre_push_failed",
+  "publication_pre_release_failed",
   "publisher_retry",
 ]);
 
-const ATTRIBUTION_SCHEMA_VERSION = 2;
 const QUEUE_ACK_ERROR_CODE_SET = new Set(QUEUE_ACK_ERROR_CODES);
+const MAX_ATTRIBUTION_BYTES = 512 * 1024;
 
 const MIME_EXTENSIONS = new Map([
   ["image/jpeg", "jpg"],
@@ -34,6 +39,55 @@ const MIME_EXTENSIONS = new Map([
   ["image/gif", "gif"],
   ["image/webp", "webp"],
 ]);
+
+const PUBLISHED_RELEASE_MAPPING_KEYS = [
+  "attributionAssetName",
+  "attributionAssetUrl",
+  "attributionBytes",
+  "attributionSha256",
+  "candidateId",
+  "publishedAssetName",
+  "publishedAssetUrl",
+  "publishedBytes",
+  "publishedSha256",
+  "releaseTag",
+].sort();
+
+function isPublishedReleaseMapping(asset) {
+  if (!asset || typeof asset !== "object" || Array.isArray(asset)) return false;
+  if (
+    Object.keys(asset).sort().join(",") !==
+    PUBLISHED_RELEASE_MAPPING_KEYS.join(",")
+  ) {
+    return false;
+  }
+  const extension = asset.publishedAssetName?.split(".").at(-1);
+  return (
+    Number.isSafeInteger(asset.candidateId) &&
+    asset.candidateId > 0 &&
+    typeof asset.publishedSha256 === "string" &&
+    /^[a-f0-9]{64}$/.test(asset.publishedSha256) &&
+    Number.isSafeInteger(asset.publishedBytes) &&
+    asset.publishedBytes > 0 &&
+    asset.publishedBytes <= DEFAULT_MAX_ASSET_BYTES &&
+    asset.releaseTag === COMMUNITY_PHOTO_RELEASE_TAG &&
+    asset.publishedAssetName === `${asset.publishedSha256}.${extension}` &&
+    /^(?:jpg|png|gif|webp)$/.test(extension) &&
+    asset.publishedAssetUrl ===
+      `${COMMUNITY_PHOTO_DOWNLOAD_BASE}/${asset.publishedAssetName}` &&
+    typeof asset.attributionSha256 === "string" &&
+    /^[a-f0-9]{64}$/.test(asset.attributionSha256) &&
+    Number.isSafeInteger(asset.attributionBytes) &&
+    asset.attributionBytes > 0 &&
+    asset.attributionBytes <= MAX_ATTRIBUTION_BYTES &&
+    typeof asset.attributionAssetName === "string" &&
+    new RegExp(
+      `^publication-[1-9][0-9]*-${asset.candidateId}-${asset.publishedSha256}\\.json$`,
+    ).test(asset.attributionAssetName) &&
+    asset.attributionAssetUrl ===
+      `${COMMUNITY_PHOTO_DOWNLOAD_BASE}/${asset.attributionAssetName}`
+  );
+}
 
 function assertPlainObject(value, label) {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
@@ -504,19 +558,7 @@ export async function acknowledgeSelection({
     !Array.isArray(publishedAssets) ||
     (outcome === "processed"
       ? publishedAssets.length < 1 ||
-        publishedAssets.some(
-          (asset) =>
-            !asset ||
-            typeof asset !== "object" ||
-            !Number.isSafeInteger(asset.candidateId) ||
-            asset.candidateId < 1 ||
-            typeof asset.publishedSha256 !== "string" ||
-            !/^[a-f0-9]{64}$/.test(asset.publishedSha256) ||
-            typeof asset.publishedAssetPath !== "string" ||
-            asset.publishedAssetPath !==
-              `public/vehicle-photos/assets/${asset.publishedSha256}.${asset.publishedAssetPath.split(".").at(-1)}` ||
-            !/\.(?:jpg|png|gif|webp)$/.test(asset.publishedAssetPath),
-        ) ||
+        publishedAssets.some((asset) => !isPublishedReleaseMapping(asset)) ||
         new Set(publishedAssets.map((asset) => asset.candidateId)).size !==
           publishedAssets.length
       : publishedAssets.length > 0)
@@ -747,6 +789,14 @@ function publicCandidateSnapshot(candidate) {
   delete snapshot.downloadUrl;
   delete snapshot.publishedSha256;
   delete snapshot.publishedAssetPath;
+  delete snapshot.publishedAssetBytes;
+  delete snapshot.publishedReleaseTag;
+  delete snapshot.publishedAssetName;
+  delete snapshot.publishedAssetUrl;
+  delete snapshot.publishedAttributionName;
+  delete snapshot.publishedAttributionUrl;
+  delete snapshot.publishedAttributionSha256;
+  delete snapshot.publishedAttributionBytes;
   delete snapshot.publishedAt;
   snapshot.originalUrl = publicOriginalUrl(snapshot.originalUrl);
   return snapshot;
@@ -764,19 +814,6 @@ function publicRightsReviewSnapshot(review) {
     rightsBasis: review.rightsBasis,
   };
   return cloneJson(snapshot);
-}
-
-function scrubManifestProvenance(manifest) {
-  for (const publication of manifest.publications) {
-    if (publication?.candidate) {
-      publication.candidate = publicCandidateSnapshot(publication.candidate);
-    }
-    if (publication?.rightsReview?.decision === "approve") {
-      publication.rightsReview = publicRightsReviewSnapshot(
-        publication.rightsReview,
-      );
-    }
-  }
 }
 
 function immutableSelectionSnapshot(selection) {
@@ -1065,89 +1102,52 @@ export function normalizeRelativeRepoPath(value, label = "Repository path") {
   return normalized;
 }
 
-function resolveRepoPath(repoRoot, relativePath) {
-  const root = path.resolve(repoRoot);
-  const resolved = path.resolve(root, ...relativePath.split("/"));
-  if (resolved !== root && !resolved.startsWith(`${root}${path.sep}`)) {
-    throw new Error("Resolved publication path escapes the repository.");
-  }
-  return resolved;
+function releaseAssetUrl(name) {
+  return `${COMMUNITY_PHOTO_DOWNLOAD_BASE}/${name}`;
 }
 
-async function sha256File(filePath) {
-  return createHash("sha256").update(await readFile(filePath)).digest("hex");
-}
-
-async function writeAssetWithoutReplacement(filePath, bytes, expectedSha256) {
-  await mkdir(path.dirname(filePath), { recursive: true });
-  try {
-    const handle = await open(filePath, "wx");
-    try {
-      await handle.writeFile(bytes);
-    } finally {
-      await handle.close();
-    }
-    return "written";
-  } catch (error) {
-    if (error?.code !== "EEXIST") throw error;
-    const existingSha256 = await sha256File(filePath);
-    if (existingSha256 !== expectedSha256) {
-      throw new Error(`Refusing to replace a different file at ${filePath}.`);
-    }
-    return "deduplicated";
-  }
-}
-
-function emptyManifest() {
+function releaseImageAsset(fetched) {
+  const name = `${fetched.sha256}.${fetched.extension}`;
   return {
-    schemaVersion: ATTRIBUTION_SCHEMA_VERSION,
-    archive: "Chevrolet Color Archive",
-    assets: [],
-    publications: [],
+    kind: "image",
+    name,
+    url: releaseAssetUrl(name),
+    mediaType: fetched.mediaType,
+    sha256: fetched.sha256,
+    sizeBytes: fetched.bytes.length,
+    bytes: fetched.bytes,
   };
 }
 
-async function readManifest(manifestPath) {
-  let payload;
-  try {
-    payload = JSON.parse(await readFile(manifestPath, "utf8"));
-  } catch (error) {
-    if (error?.code === "ENOENT") return emptyManifest();
-    if (error instanceof SyntaxError) {
-      throw new Error(`Existing attribution manifest is invalid JSON: ${manifestPath}`);
-    }
-    throw error;
-  }
-  assertPlainObject(payload, "Attribution manifest");
-  if (payload.schemaVersion !== ATTRIBUTION_SCHEMA_VERSION) {
-    throw new Error("Existing attribution manifest has an unsupported schema.");
-  }
-  if (!Array.isArray(payload.assets) || !Array.isArray(payload.publications)) {
-    throw new Error("Existing attribution manifest is missing required arrays.");
-  }
-  assertNoCredentialMaterial(payload);
-  return payload;
-}
-
-async function writeManifestAtomically(manifestPath, manifest) {
-  await mkdir(path.dirname(manifestPath), { recursive: true });
-  const temporaryPath = `${manifestPath}.${process.pid}.${randomUUID()}.tmp`;
-  try {
-    const handle = await open(temporaryPath, "wx");
-    try {
-      await handle.writeFile(stableStringify(manifest), "utf8");
-    } finally {
-      await handle.close();
-    }
-    await rename(temporaryPath, manifestPath);
-  } catch (error) {
-    try {
-      await unlink(temporaryPath);
-    } catch (cleanupError) {
-      if (cleanupError?.code !== "ENOENT") throw cleanupError;
-    }
-    throw error;
-  }
+function releaseAttributionReceipt({ decision, fetched, imageAsset, baseUrl }) {
+  return {
+    schemaVersion: 1,
+    archive: "Chevrolet Color Archive",
+    publicationKey: decision.key,
+    release: {
+      owner: EXPECTED_GITHUB_OWNER,
+      repository: EXPECTED_GITHUB_REPOSITORY,
+      tag: COMMUNITY_PHOTO_RELEASE_TAG,
+      url: COMMUNITY_PHOTO_RELEASE_URL,
+    },
+    asset: {
+      name: imageAsset.name,
+      url: imageAsset.url,
+      sha256: imageAsset.sha256,
+      bytes: imageAsset.sizeBytes,
+      mediaType: imageAsset.mediaType,
+      width: fetched.width,
+      height: fetched.height,
+    },
+    source: {
+      baseUrl,
+      downloadPath: `/api/photos/${decision.candidate.id}`,
+    },
+    selection: reviewableSelectionSnapshot(decision.reviewedSelection),
+    candidate: publicCandidateSnapshot(decision.candidate),
+    rightsReview: publicRightsReviewSnapshot(decision.review),
+    transform: cloneJson(fetched.transform),
+  };
 }
 
 export async function publishReviewedSelections({
@@ -1155,8 +1155,6 @@ export async function publishReviewedSelections({
   queueToken,
   records,
   approvalDocument,
-  repoRoot,
-  assetRoot = DEFAULT_ASSET_ROOT,
   fetchImpl = fetch,
   maxAssetBytes = DEFAULT_MAX_ASSET_BYTES,
   allowLeaseTransition = false,
@@ -1166,13 +1164,6 @@ export async function publishReviewedSelections({
   assertNoCredentialMaterial(approvalDocument, {
     knownSecrets: [token],
   });
-  const normalizedAssetRoot = normalizeRelativeRepoPath(assetRoot, "Asset root");
-  const normalizedManifestPath = `${normalizedAssetRoot}/attribution.json`;
-  const root = path.resolve(repoRoot);
-  const rootStats = await stat(root).catch(() => null);
-  if (!rootStats?.isDirectory()) {
-    throw new Error("Repository root must be an existing directory.");
-  }
 
   const decisions = validateApprovalDocument({
     approvalDocument,
@@ -1206,125 +1197,86 @@ export async function publishReviewedSelections({
     }
   }
 
-  const manifestPath = resolveRepoPath(root, normalizedManifestPath);
-  const priorManifest = await readManifest(manifestPath);
-  const nextManifest = cloneJson(priorManifest);
-  scrubManifestProvenance(nextManifest);
-  const assetsBySha = new Map(nextManifest.assets.map((asset) => [asset.sha256, asset]));
-  const publicationsByKey = new Map(
-    nextManifest.publications.map((publication) => [
-      publication.publicationKey,
-      publication,
-    ]),
-  );
-
-  const stagedAssets = new Map();
+  const releaseUploadAssetsByName = new Map();
+  const publishedAssets = [];
   for (const decision of approved) {
     const fetched = fetchedByCandidateId.get(decision.candidate.id);
-    const relativePath = `${normalizedAssetRoot}/assets/${fetched.sha256}.${fetched.extension}`;
-    const asset = {
-      sha256: fetched.sha256,
-      path: relativePath,
-      mediaType: fetched.mediaType,
-      bytes: fetched.bytes.length,
-      width: fetched.width,
-      height: fetched.height,
-      sanitizer: {
-        name: fetched.transform.name,
-        version: fetched.transform.version,
-      },
-    };
-    const existingAsset = assetsBySha.get(fetched.sha256);
-    if (existingAsset) {
-      if (stableStringify(existingAsset) !== stableStringify(asset)) {
-        throw new Error(`Asset metadata conflict for SHA-256 ${fetched.sha256}.`);
-      }
-    } else {
-      nextManifest.assets.push(asset);
-      assetsBySha.set(fetched.sha256, asset);
+    const imageAsset = releaseImageAsset(fetched);
+    const priorImage = releaseUploadAssetsByName.get(imageAsset.name);
+    if (priorImage && priorImage.sha256 !== imageAsset.sha256) {
+      throw new Error(`Release asset name collision for ${imageAsset.name}.`);
     }
+    releaseUploadAssetsByName.set(imageAsset.name, imageAsset);
 
-    const publication = {
-      publicationKey: decision.key,
-      assetSha256: fetched.sha256,
-      sourceBaseUrl: baseUrl,
-      sourceDownloadPath: `/api/photos/${decision.candidate.id}`,
-      selection: reviewableSelectionSnapshot(decision.reviewedSelection),
-      candidate: publicCandidateSnapshot(decision.candidate),
-      rightsReview: publicRightsReviewSnapshot(decision.review),
-      transform: cloneJson(fetched.transform),
+    const receipt = releaseAttributionReceipt({
+      decision,
+      fetched,
+      imageAsset,
+      baseUrl,
+    });
+    assertNoCredentialMaterial(receipt, { knownSecrets: [token] });
+    const receiptBytes = Buffer.from(stableStringify(receipt), "utf8");
+    const attributionSha256 = createHash("sha256")
+      .update(receiptBytes)
+      .digest("hex");
+    const attributionAssetName =
+      `publication-${decision.reviewedSelection.id}-${decision.candidate.id}-${fetched.sha256}.json`;
+    const attributionAsset = {
+      kind: "attribution",
+      candidateId: decision.candidate.id,
+      name: attributionAssetName,
+      url: releaseAssetUrl(attributionAssetName),
+      mediaType: "application/json",
+      sha256: attributionSha256,
+      sizeBytes: receiptBytes.length,
+      bytes: receiptBytes,
     };
-    const existingPublication = publicationsByKey.get(decision.key);
-    if (existingPublication) {
-      if (stableStringify(existingPublication) !== stableStringify(publication)) {
-        throw new Error(`Publication record ${decision.key} already exists with different data.`);
-      }
-    } else {
-      nextManifest.publications.push(publication);
-      publicationsByKey.set(decision.key, publication);
-    }
-    stagedAssets.set(fetched.sha256, {
-      relativePath,
-      bytes: fetched.bytes,
-      sha256: fetched.sha256,
+    releaseUploadAssetsByName.set(attributionAsset.name, attributionAsset);
+    publishedAssets.push({
+      candidateId: decision.candidate.id,
+      publishedSha256: fetched.sha256,
+      publishedBytes: fetched.bytes.length,
+      releaseTag: COMMUNITY_PHOTO_RELEASE_TAG,
+      publishedAssetName: imageAsset.name,
+      publishedAssetUrl: imageAsset.url,
+      attributionAssetName,
+      attributionAssetUrl: attributionAsset.url,
+      attributionSha256,
+      attributionBytes: receiptBytes.length,
     });
   }
 
-  nextManifest.assets.sort((left, right) => left.sha256.localeCompare(right.sha256));
-  nextManifest.publications.sort((left, right) =>
-    left.publicationKey.localeCompare(right.publicationKey),
+  const releaseUploadAssets = [...releaseUploadAssetsByName.values()].sort(
+    (left, right) => left.name.localeCompare(right.name),
   );
-
-  const changedPaths = [];
-  let writtenAssets = 0;
-  let deduplicatedAssets = 0;
-  for (const asset of stagedAssets.values()) {
-    const outcome = await writeAssetWithoutReplacement(
-      resolveRepoPath(root, asset.relativePath),
-      asset.bytes,
-      asset.sha256,
-    );
-    if (outcome === "written") {
-      writtenAssets += 1;
-      changedPaths.push(asset.relativePath);
-    } else {
-      deduplicatedAssets += 1;
-    }
-  }
-
-  const manifestChanged =
-    stableStringify(priorManifest) !== stableStringify(nextManifest);
-  if (manifestChanged) {
-    await writeManifestAtomically(manifestPath, nextManifest);
-    changedPaths.push(normalizedManifestPath);
-  }
 
   return {
     queuedSelections: records.length,
     reviewedCandidates: decisions.length,
     approvedCandidates: approved.length,
     rejectedCandidates: decisions.length - approved.length,
-    writtenAssets,
-    deduplicatedAssets,
-    manifestChanged,
-    manifestPath: normalizedManifestPath,
-    changedPaths: [...new Set(changedPaths)].sort(),
-    publicationPaths: [
-      ...new Set([
-        ...stagedAssets.values().map((asset) => asset.relativePath),
-        ...(approved.length ? [normalizedManifestPath] : []),
-      ]),
-    ].sort(),
-    publishedAssets: approved
-      .map((decision) => {
-        const fetched = fetchedByCandidateId.get(decision.candidate.id);
-        return {
-          candidateId: decision.candidate.id,
-          publishedSha256: fetched.sha256,
-          publishedAssetPath: `${normalizedAssetRoot}/assets/${fetched.sha256}.${fetched.extension}`,
-        };
-      })
-      .sort((left, right) => left.candidateId - right.candidateId),
+    preparedReleaseAssets: releaseUploadAssets.length,
+    preparedImageAssets: releaseUploadAssets.filter((asset) => asset.kind === "image")
+      .length,
+    preparedAttributionAssets: releaseUploadAssets.filter(
+      (asset) => asset.kind === "attribution",
+    ).length,
+    release: {
+      owner: EXPECTED_GITHUB_OWNER,
+      repository: EXPECTED_GITHUB_REPOSITORY,
+      tag: COMMUNITY_PHOTO_RELEASE_TAG,
+      name: COMMUNITY_PHOTO_RELEASE_NAME,
+      url: COMMUNITY_PHOTO_RELEASE_URL,
+    },
+    releaseAssets: releaseUploadAssets.map((asset) => {
+      const summary = { ...asset };
+      delete summary.bytes;
+      return summary;
+    }),
+    releaseUploadAssets,
+    publishedAssets: publishedAssets.sort(
+      (left, right) => left.candidateId - right.candidateId,
+    ),
   };
 }
 
@@ -1349,28 +1301,19 @@ export async function publishClaimedQueue({
   queueToken,
   queueSnapshotRecords,
   approvalDocument,
-  repoRoot,
-  assetRoot = DEFAULT_ASSET_ROOT,
   leaseSeconds = DEFAULT_LEASE_SECONDS,
   fetchImpl = fetch,
-  pushPublication,
+  publishRelease,
 }) {
   const baseUrl = normalizeSitesBaseUrl(sitesBaseUrl);
   requireQueueToken(queueToken);
-  if (
-    normalizeRelativeRepoPath(assetRoot, "Asset root") !== DEFAULT_ASSET_ROOT
-  ) {
-    throw new Error(
-      `Claimed publication must use the canonical asset root ${DEFAULT_ASSET_ROOT}.`,
-    );
-  }
   if (approvalDocument?.completeQueueSnapshot !== true) {
     throw new Error(
       "A complete queue review is required before claiming selections.",
     );
   }
-  if (typeof pushPublication !== "function") {
-    throw new Error("Claimed publication requires an explicit push function.");
+  if (typeof publishRelease !== "function") {
+    throw new Error("Claimed publication requires an explicit Release publisher.");
   }
 
   validateApprovalDocument({
@@ -1432,8 +1375,8 @@ export async function publishClaimedQueue({
 
     const selectionId = claim.record.selection.id;
     let publication;
-    let git;
-    let pushConfirmed = false;
+    let githubRelease;
+    let releaseConfirmed = false;
     let acknowledgmentCompleted = false;
     let failureOutcome = "retry";
     let failureCode = "claim_not_in_review";
@@ -1482,22 +1425,20 @@ export async function publishClaimedQueue({
         continue;
       }
 
-      failureCode = "publication_pre_push_failed";
+      failureCode = "publication_pre_release_failed";
       publication = await publishReviewedSelections({
         sitesBaseUrl: baseUrl,
         queueToken,
         records: [claim.record],
         approvalDocument: selectionApprovals,
-        repoRoot,
-        assetRoot,
         fetchImpl,
         allowLeaseTransition: true,
       });
-      git = await pushPublication(publication);
-      if (git?.pushed !== true) {
-        throw new Error("GitHub push was not confirmed.");
+      githubRelease = await publishRelease(publication);
+      if (githubRelease?.published !== true) {
+        throw new Error("GitHub Release publication was not confirmed.");
       }
-      pushConfirmed = true;
+      releaseConfirmed = true;
       await acknowledgeSelection({
         sitesBaseUrl: baseUrl,
         queueToken,
@@ -1509,7 +1450,7 @@ export async function publishClaimedQueue({
       });
       acknowledgmentCompleted = true;
     } catch (error) {
-      if (!pushConfirmed && !acknowledgmentCompleted) {
+      if (!releaseConfirmed && !acknowledgmentCompleted) {
         try {
           await acknowledgeSelection({
             sitesBaseUrl: baseUrl,
@@ -1532,11 +1473,13 @@ export async function publishClaimedQueue({
     }
 
     expected.delete(selectionId);
+    const publicationSummary = { ...publication };
+    delete publicationSummary.releaseUploadAssets;
     results.push({
       selectionId,
       outcome: "processed",
-      publication,
-      git,
+      publication: publicationSummary,
+      githubRelease,
     });
   }
 

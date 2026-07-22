@@ -1,0 +1,1858 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-21T09:30:02.7110770Z",
+  "visibility": "public",
+  "dataset_kind": "specialty_color_source_candidates",
+  "scope": "United States Chevrolet fleet, government, Special Equipment Option, and other specialty exterior colors. Forest Service Green is retained as a named USDA research lead without an invented Chevrolet model-year application.",
+  "publication_policy": {
+    "required_fields": [
+      "exact Chevrolet model or model variant",
+      "exact model year",
+      "manufacturer-printed color label",
+      "manufacturer-printed paint, option, or SEO code",
+      "all printed availability restrictions",
+      "primary source URL",
+      "exact source page"
+    ],
+    "mutable_source_rule": "A mutable API response is not permanent evidence unless the complete response bytes, retrieval timestamp, and SHA-256 digest are retained. Complete generated GM Order Guide PDFs satisfy this rule for the captured snapshot.",
+    "identity_rule": "Similar green labels and repeated SEO codes are not treated as the same paint identity without an explicit primary-source bridge."
+  },
+  "integrity_audit": {
+    "audited_on": "2026-07-21",
+    "unique_retained_files_rehashed": 62,
+    "file_groups": {
+      "1980_published_gm_truck_kit": 1,
+      "2003_published_gm_tahoe_kit": 1,
+      "2005_2006_new_jersey_tahoe_contracts": 2,
+      "historic_gm_upfitter_and_usda_sources": 30,
+      "modern_woodland_green_order_guide_snapshots": 24,
+      "comparison_sources": 2,
+      "reviewed_rejected_bridge_sources": 2
+    },
+    "byte_lengths_reconciled": true,
+    "sha256_digests_reconciled": true,
+    "promoted_pdf_pages_visually_rechecked": [
+      "gm-1980-chevrolet-truck-color-trim PDF page 51",
+      "gm-heritage-2003-chevrolet-tahoe PDF pages 138-140",
+      "new-jersey-tahoe-police-contract-2005 PDF pages 17-18",
+      "new-jersey-tahoe-police-contract-2006 PDF pages 17-18",
+      "gm-2011-police-manual PDF pages 84, 92, 136, 151, and 169"
+    ],
+    "publication_boundary": "Only the 19 app_publication_records, expanding to 21 exact model-year applications, were promoted. The five no-RPO rows on the 2003 SEO chart remain research-only because the adjacent TGK ordering table expressly identifies only four orderable specialty colors. Located or rendered candidate pages were not promoted without direct visual review."
+  },
+  "search_leads": [
+    {
+      "id": "forest-service-green-fs-595-14260",
+      "title": "Specialty research lead / Forest Service Green",
+      "subtitle": "USDA Forest Service, Federal Standard No. 595 color 14260; Chevrolet applicability unresolved",
+      "status": "research_only_unresolved_chevrolet_application",
+      "terms": [
+        "Forest Service Green",
+        "No. 14260 of Federal Standard No. 595",
+        "FS 595 14260",
+        "USDA Forest Service fleet paint",
+        "5032 Forest Service Green is a separate unresolved identifier",
+        "Chevrolet model and year not established"
+      ],
+      "source_urls": [
+        "https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m643_engine.pdf",
+        "https://www.fs.usda.gov/sites/default/files/2019-09/508_bodyspecification_model428u_model_448u_engine.pdf",
+        "https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecification_suptvehicle.pdf"
+      ]
+    }
+  ],
+  "identity_ledger": [
+    {
+      "identity_id": "usfs-forest-service-green-fs595-14260",
+      "label": "Forest Service Green",
+      "codes": [
+        "Federal Standard No. 595 No. 14260"
+      ],
+      "authority": "USDA Forest Service",
+      "status": "verified_agency_color_unresolved_chevrolet_application",
+      "not_equated_to": [
+        "Woodland Green",
+        "Forestry Green",
+        "Forest Green Metallic",
+        "Forest Green",
+        "Green WA-7927"
+      ]
+    },
+    {
+      "identity_id": "usfs-forest-service-green-5032",
+      "label": "Forest Service Green",
+      "codes": [
+        "5032"
+      ],
+      "authority": "USDA Forest Service specification",
+      "status": "verified_identifier_relationship_to_fs595_14260_unresolved",
+      "not_equated_to": [
+        "Forest Service Green FS 595 No. 14260",
+        "Woodland Green"
+      ]
+    },
+    {
+      "identity_id": "gm-woodland-green-1980",
+      "label": "Woodland Green",
+      "codes": [
+        "Chevrolet option 46",
+        "SEO 9V5",
+        "DuPont B8046LH",
+        "Rinshed-Mason A-11505D",
+        "Ditzler 3255"
+      ],
+      "authority": "General Motors",
+      "status": "verified_historical_specialty_color",
+      "not_equated_to": [
+        "Forest Service Green",
+        "Forestry Green",
+        "Forest Green Metallic"
+      ]
+    },
+    {
+      "identity_id": "gm-woodland-green-wa9015",
+      "label": "Woodland Green",
+      "codes": [
+        "WA-9015",
+        "SEO or RPO 9V5"
+      ],
+      "authority": "General Motors",
+      "status": "verified_modern_specialty_color_continuity_to_1980_not_asserted",
+      "not_equated_to": [
+        "Forest Service Green",
+        "Green WA-7927",
+        "Forest Green Metallic"
+      ]
+    },
+    {
+      "identity_id": "gm-forest-green-metallic-tahoe",
+      "label": "Forest Green Metallic",
+      "codes": [],
+      "authority": "General Motors",
+      "status": "verified_regular_tahoe_color_name_code_not_printed",
+      "not_equated_to": [
+        "Forest Service Green",
+        "Woodland Green",
+        "Forest Green"
+      ]
+    },
+    {
+      "identity_id": "forestry-green",
+      "label": "Forestry Green",
+      "codes": [],
+      "authority": null,
+      "status": "no_primary_chevrolet_or_usda_label_found",
+      "not_equated_to": [
+        "Forest Service Green",
+        "Woodland Green"
+      ]
+    }
+  ],
+  "app_publication_records": [
+    {
+      "record_id": "gm-1980-woodland-green-option-46-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 1980,
+      "catalog_model_ids": [
+        "ck-series",
+        "blazer",
+        "suburban"
+      ],
+      "source_model_scope": [
+        "Pickups",
+        "Chassis-Cabs",
+        "Blazer",
+        "Suburban"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "46",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Special Equipment Option paint was available as a solid color only.",
+        "Woodland Green could be ordered only on Pickups, Chassis-Cabs, Blazer, and Suburban models."
+      ],
+      "refinish_numbers": {
+        "dupont": "B8046LH",
+        "rinshed_mason": "A-11505D",
+        "ditzler": "3255"
+      },
+      "source": {
+        "source_id": "gm-1980-chevrolet-truck-color-trim",
+        "title": "1980 Chevrolet Truck Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1980-Chevrolet-Truck.pdf",
+        "pdf_page": 51,
+        "printed_page": "Color & Trim - Page 2",
+        "section": "Special Paints; Permanent Fleet Colors; 10-90 Series Models Only",
+        "revision": "January 14, 1980",
+        "retrieved_at": null,
+        "bytes": 4390128,
+        "sha256": "b44e4e8af7bba172885d003d5f88d2dab55bcefb5a15d0ce124b9a181ed89008",
+        "pdf_page_count": 125,
+        "visual_evidence_sha256": "733320bba867a0bbf0b95a0cc0920cea7cefa975b781b2f9dc00835e43c54186",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "1980-chevrolet-truck-vehicle-information-kit-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2003-tahoe-woodland-green-wa9015-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2003,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe LS 1SJ and 1SK",
+        "Tahoe LT 1SM"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color.",
+        "Available only on Tahoe LS equipment groups 1SJ and 1SK and Tahoe LT equipment group 1SM; not available on Z71 equipment group 1SL.",
+        "Wheel flares, moldings, bumper pads, outside mirror backs, and door handles were black."
+      ],
+      "source": {
+        "source_id": "gm-heritage-2003-chevrolet-tahoe",
+        "title": "2003 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
+        "pdf_pages": [
+          139,
+          140
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "SEO Solid Color Paint; SEO TGK Special Paint One Color",
+        "revision": "Published March 30, 2004",
+        "retrieved_at": "2026-07-21T06:37:31+00:00",
+        "bytes": 49190468,
+        "sha256": "1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2003-tahoe-doeskin-tan-wa9403-seo-9v9",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2003,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe LS 1SJ and 1SK",
+        "Tahoe LT 1SM"
+      ],
+      "label": "Doeskin Tan",
+      "finish": "solid",
+      "paint_code": "WA-9403",
+      "seo_code": "9V9",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color.",
+        "Available only on Tahoe LS equipment groups 1SJ and 1SK and Tahoe LT equipment group 1SM; not available on Z71 equipment group 1SL.",
+        "Wheel flares, moldings, bumper pads, outside mirror backs, and door handles were black."
+      ],
+      "source": {
+        "source_id": "gm-heritage-2003-chevrolet-tahoe",
+        "title": "2003 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
+        "pdf_pages": [
+          139,
+          140
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "SEO Solid Color Paint; SEO TGK Special Paint One Color",
+        "revision": "Published March 30, 2004",
+        "retrieved_at": "2026-07-21T06:37:31+00:00",
+        "bytes": 49190468,
+        "sha256": "1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2003-tahoe-tangier-orange-wa9417-seo-9w4",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2003,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe LS 1SJ and 1SK",
+        "Tahoe LT 1SM"
+      ],
+      "label": "Tangier Orange",
+      "finish": "solid",
+      "paint_code": "WA-9417",
+      "seo_code": "9W4",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color.",
+        "Available only on Tahoe LS equipment groups 1SJ and 1SK and Tahoe LT equipment group 1SM; not available on Z71 equipment group 1SL.",
+        "Wheel flares, moldings, bumper pads, outside mirror backs, and door handles were black."
+      ],
+      "source": {
+        "source_id": "gm-heritage-2003-chevrolet-tahoe",
+        "title": "2003 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
+        "pdf_pages": [
+          139,
+          140
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "SEO Solid Color Paint; SEO TGK Special Paint One Color",
+        "revision": "Published March 30, 2004",
+        "retrieved_at": "2026-07-21T06:37:31+00:00",
+        "bytes": 49190468,
+        "sha256": "1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2003-tahoe-wheatland-yellow-wa253a-seo-9w3",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2003,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe LS 1SJ and 1SK",
+        "Tahoe LT 1SM"
+      ],
+      "label": "Wheatland Yellow",
+      "finish": "solid",
+      "paint_code": "WA-253A",
+      "seo_code": "9W3",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color.",
+        "Available only on Tahoe LS equipment groups 1SJ and 1SK and Tahoe LT equipment group 1SM; not available on Z71 equipment group 1SL.",
+        "Wheel flares, moldings, bumper pads, outside mirror backs, and door handles were black."
+      ],
+      "source": {
+        "source_id": "gm-heritage-2003-chevrolet-tahoe",
+        "title": "2003 Chevrolet Tahoe Vehicle Information Kit",
+        "publisher": "General Motors",
+        "source_type": "official vehicle information kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
+        "pdf_pages": [
+          139,
+          140
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "SEO Solid Color Paint; SEO TGK Special Paint One Color",
+        "revision": "Published March 30, 2004",
+        "retrieved_at": "2026-07-21T06:37:31+00:00",
+        "bytes": 49190468,
+        "sha256": "1c54cd80361a4fb83942475f771ad15b90fdedc44d1da0a04b48a84d74206284",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "2003-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2005-tahoe-police-blue-wa5665-seo-9v2",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2005,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Blue",
+      "finish": "solid",
+      "paint_code": "WA-5665",
+      "seo_code": "9V2",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2005",
+        "title": "2005 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published August 4, 2004",
+        "retrieved_at": null,
+        "bytes": 342819,
+        "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2005-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2005-tahoe-police-doeskin-tan-seo-9v9",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2005,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Doeskin Tan",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9V9",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2005",
+        "title": "2005 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published August 4, 2004",
+        "retrieved_at": null,
+        "bytes": 342819,
+        "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2005-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2005-tahoe-police-woodland-green-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2005,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black.",
+        "Woodland Green is not equated to Forest Service Green."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2005",
+        "title": "2005 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published August 4, 2004",
+        "retrieved_at": null,
+        "bytes": 342819,
+        "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2005-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2005-tahoe-police-wheatland-yellow-seo-9w3",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2005,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Wheatland Yellow",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9W3",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2005",
+        "title": "2005 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published August 4, 2004",
+        "retrieved_at": null,
+        "bytes": 342819,
+        "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2005-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2005-tahoe-police-victory-red-wa9260-seo-tgk",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2005,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Victory Red",
+      "finish": "solid",
+      "paint_code": "WA-9260",
+      "seo_code": "TGK",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The chart prints no color-specific RPO for Victory Red; TGK is the special-paint ordering requirement.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2005",
+        "title": "2005 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-section1.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published August 4, 2004",
+        "retrieved_at": null,
+        "bytes": 342819,
+        "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2005-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2006-tahoe-police-tangier-orange-seo-9w4",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2006,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Tangier Orange",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9W4",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2006",
+        "title": "2006 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published July 8, 2005",
+        "retrieved_at": null,
+        "bytes": 265662,
+        "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2006-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2006-tahoe-police-doeskin-tan-seo-9v9",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2006,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Doeskin Tan",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9V9",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2006",
+        "title": "2006 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published July 8, 2005",
+        "retrieved_at": null,
+        "bytes": 265662,
+        "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2006-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2006-tahoe-police-woodland-green-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2006,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black.",
+        "Woodland Green is not equated to Forest Service Green."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2006",
+        "title": "2006 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published July 8, 2005",
+        "retrieved_at": null,
+        "bytes": 265662,
+        "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2006-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2006-tahoe-police-wheatland-yellow-seo-9w3",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2006,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Wheatland Yellow",
+      "finish": "solid",
+      "paint_code": "Not printed",
+      "seo_code": "9W3",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The contract prints no WA number for this row.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2006",
+        "title": "2006 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published July 8, 2005",
+        "retrieved_at": null,
+        "bytes": 265662,
+        "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2006-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "nj-2006-tahoe-police-victory-red-wa9260-seo-tgk",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2006,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Vehicle CC15706"
+      ],
+      "label": "Victory Red",
+      "finish": "solid",
+      "paint_code": "WA-9260",
+      "seo_code": "TGK",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "Requires SEO TGK Special Paint One Color on Tahoe Police Vehicle model CC15706.",
+        "The chart prints no color-specific RPO for Victory Red; TGK is the special-paint ordering requirement.",
+        "Outside rearview mirrors were black."
+      ],
+      "source": {
+        "source_id": "new-jersey-tahoe-police-contract-2006",
+        "title": "2006 Chevrolet Truck Tahoe Police Vehicle Contract Specification",
+        "publisher": "State of New Jersey Purchase Bureau",
+        "source_type": "state procurement contract with Chevrolet order-guide pages",
+        "url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2097-1a.pdf",
+        "pdf_pages": [
+          17,
+          18
+        ],
+        "printed_pages": [
+          1,
+          2
+        ],
+        "section": "Tahoe Police Exterior Colors and Special Paint",
+        "revision": "Published July 8, 2005",
+        "retrieved_at": null,
+        "bytes": 265662,
+        "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
+        "pdf_page_count": 30,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
+        "archive_asset_name": "2006-new-jersey-tahoe-police-contract.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2011-tahoe-woodland-green-wa9015-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2011,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe 2WD Police Package PPV",
+        "Tahoe 4WD Special Service 5W4"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "SEO paint scope is limited to the printed PPV and 5W4 Tahoe variants.",
+        "Normally body-colored non-sheet-metal parts were flat black, except Victory Red parts matched the body.",
+        "Orders containing fewer than five vehicles were delayed until the five-unit batch minimum was received.",
+        "The pages also offered special paint for PPV and 5W4 Tahoes through the Kerr Industries dealer direct program and stated that this program had no minimum order."
+      ],
+      "source": {
+        "source_id": "gm-2011-police-manual",
+        "title": "2011 Chevrolet Municipal Vehicles Technical Manual",
+        "publisher": "General Motors",
+        "source_type": "official municipal vehicle technical manual",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+        "pdf_pages": [
+          84,
+          92
+        ],
+        "printed_pages": [
+          5,
+          13
+        ],
+        "section": "SEO Paint Available",
+        "revision": "Revisions marked in blue January 24, 2011",
+        "retrieved_at": "2026-07-21T07:14:44.1730319Z",
+        "bytes": 8346299,
+        "sha256": "6c0eef224d9c67c4a841bbaf1fb68383bc74cc5a0ecc3c0d1a412683b6474534",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
+        "archive_asset_name": "2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2011-express-woodland-green-wa9015-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2011,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Transport Van 1LS and 2LS"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "SEO paint scope is limited to Express Transport Van 1LS and 2LS.",
+        "All normally body-colored non-sheet-metal parts were flat black.",
+        "Orders containing fewer than five vehicles were delayed until the five-unit batch minimum was received."
+      ],
+      "source": {
+        "source_id": "gm-2011-police-manual",
+        "title": "2011 Chevrolet Municipal Vehicles Technical Manual",
+        "publisher": "General Motors",
+        "source_type": "official municipal vehicle technical manual",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+        "pdf_pages": [
+          136
+        ],
+        "printed_pages": [
+          5
+        ],
+        "section": "SEO Paint Available",
+        "revision": "Revisions marked in blue January 24, 2011",
+        "retrieved_at": "2026-07-21T07:14:44.1730319Z",
+        "bytes": 8346299,
+        "sha256": "6c0eef224d9c67c4a841bbaf1fb68383bc74cc5a0ecc3c0d1a412683b6474534",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
+        "archive_asset_name": "2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2011-suburban-woodland-green-wa9015-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2011,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_scope": [
+        "Suburban Commercial Fleet 1FL"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "SEO paint scope is limited to Suburban Commercial Fleet 1FL.",
+        "Normally body-colored non-sheet-metal parts were flat black, except Victory Red parts matched the body.",
+        "Orders containing fewer than five vehicles were delayed until the five-unit batch minimum was received."
+      ],
+      "source": {
+        "source_id": "gm-2011-police-manual",
+        "title": "2011 Chevrolet Municipal Vehicles Technical Manual",
+        "publisher": "General Motors",
+        "source_type": "official municipal vehicle technical manual",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+        "pdf_pages": [
+          151
+        ],
+        "printed_pages": [
+          6
+        ],
+        "section": "SEO Paint Available",
+        "revision": "Revisions marked in blue January 24, 2011",
+        "retrieved_at": "2026-07-21T07:14:44.1730319Z",
+        "bytes": 8346299,
+        "sha256": "6c0eef224d9c67c4a841bbaf1fb68383bc74cc5a0ecc3c0d1a412683b6474534",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
+        "archive_asset_name": "2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf"
+      }
+    },
+    {
+      "record_id": "gm-2011-silverado-hd-woodland-green-wa9015-seo-9v5",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2011,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 2500HD Crew Cab 4WD Work Truck 1WT"
+      ],
+      "label": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "touch_up_paint_number": null,
+      "restrictions": [
+        "SEO paint scope is limited to Silverado 2500HD Crew Cab 4WD Work Truck 1WT.",
+        "Door handles and mirrors were flat black; standard or package body-side moldings were deleted.",
+        "All normally body-colored non-sheet-metal parts were flat black.",
+        "Orders containing fewer than five vehicles were delayed until the five-unit batch minimum was received."
+      ],
+      "source": {
+        "source_id": "gm-2011-police-manual",
+        "title": "2011 Chevrolet Municipal Vehicles Technical Manual",
+        "publisher": "General Motors",
+        "source_type": "official municipal vehicle technical manual",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+        "pdf_pages": [
+          169
+        ],
+        "printed_pages": [
+          6
+        ],
+        "section": "SEO Paint Available",
+        "revision": "Revisions marked in blue January 24, 2011",
+        "retrieved_at": "2026-07-21T07:14:44.1730319Z",
+        "bytes": 8346299,
+        "sha256": "6c0eef224d9c67c4a841bbaf1fb68383bc74cc5a0ecc3c0d1a412683b6474534",
+        "pdf_page_count": 182,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
+        "archive_asset_name": "2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf"
+      }
+    }
+  ],
+  "verified_not_published": [
+    {
+      "record_id": "gm-eog-2025-silverado-1500-woodland-green",
+      "reason": "The current archive already has a qualified 2025 palette generation with a different source. The one-source-per-model-year display contract cannot expose both sources without losing provenance.",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado"
+      ],
+      "source_model_scope": [
+        "Silverado 1500 Retail and Fleet"
+      ],
+      "label": "Woodland Green",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "restrictions": [
+        "GM required five orders before plant submission.",
+        "The color could require extended lead time."
+      ],
+      "source": {
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22917/all/en-us",
+        "pdf_page": 221,
+        "published_date": "May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:33.2756547Z",
+        "bytes": 1152797,
+        "sha256": "dc01ef087bf74e10512c458ee74092547c4ee9f4a35b6de79f31d2aadbddd71c",
+        "pdf_page_count": 297
+      }
+    },
+    {
+      "record_id": "gm-eog-2026-silverado-1500-woodland-green",
+      "reason": "The current archive already has a qualified 2026 palette generation with a different source. The one-source-per-model-year display contract cannot expose both sources without losing provenance.",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado"
+      ],
+      "source_model_scope": [
+        "Silverado 1500 Retail and Fleet"
+      ],
+      "label": "Woodland Green",
+      "paint_code": "WA-9015",
+      "seo_code": "9V5",
+      "restrictions": [
+        "GM required five orders before plant submission.",
+        "The color could require extended lead time."
+      ],
+      "source": {
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23168/all/en-us",
+        "pdf_page": 236,
+        "published_date": "June 26, 2026",
+        "retrieved_at": "2026-07-21T07:04:58.9565240Z",
+        "bytes": 1258227,
+        "sha256": "6b332a252eb691a5d080e216ffb69b4aa33bbf421ded402f4076818c146ef7fa",
+        "pdf_page_count": 340
+      }
+    }
+  ],
+  "usda_primary_sources": [
+    {
+      "source_id": "usfs-model-643-chassis",
+      "title": "USDA Forest Service Type 6 Fire Engine, Model 643, Chassis Specification",
+      "url": "https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m643_engine.pdf",
+      "pdf_page": 8,
+      "printed_page": 8,
+      "claim": "No. 14260 of Federal Standard No. 595 (Forest Service Green)",
+      "retrieved_at": "2026-07-21T07:16:33.5859259Z",
+      "bytes": 138745,
+      "sha256": "7cc0766da925cf3e968828008b1896254e7982d63186c59c9ab2ad3a0f6c3f7e",
+      "pdf_page_count": 8
+    },
+    {
+      "source_id": "usfs-model-428u-448u-body",
+      "title": "USDA Forest Service Models 428U and 448U Fire Engine Body Specification",
+      "url": "https://www.fs.usda.gov/sites/default/files/2019-09/508_bodyspecification_model428u_model_448u_engine.pdf",
+      "pdf_page": 52,
+      "printed_page": 52,
+      "claim": "Chassis cab and body No. 14260 of Federal Standard No. 595 (Forest Service Green); chassis finish supplied by chassis manufacturer",
+      "retrieved_at": "2026-07-21T07:16:34.5238467Z",
+      "bytes": 796184,
+      "sha256": "6622d0c3ddf3bee6eafdbbdf63e82e4533fe630da4ac6cb5ca2d8ce48e469fd3",
+      "pdf_page_count": 58
+    },
+    {
+      "source_id": "usfs-hotshot-superintendent",
+      "title": "USDA Forest Service Hotshot Superintendent Vehicle Body Specification",
+      "url": "https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecification_suptvehicle.pdf",
+      "pdf_page": 26,
+      "printed_page": 26,
+      "claim": "Chassis cab exterior and body No. 14260 of Federal Standard No. 595 (Forest Service Green)",
+      "retrieved_at": "2026-07-21T07:16:36.2827586Z",
+      "bytes": 410737,
+      "sha256": "12fb9c8f04e0be4b5428df9ada2b3b53dd79123a6323b36a316f9ec28f69dcf2",
+      "pdf_page_count": 29
+    },
+    {
+      "source_id": "usfs-model-346-chassis",
+      "title": "USDA Forest Service Type 3 Fire Engine, Model 346, Chassis Only Specification",
+      "url": "https://www.fs.usda.gov/sites/default/files/2019-09/508_chassisspecification_m346_engine.pdf",
+      "pdf_page": 10,
+      "printed_page": 10,
+      "claim": "5032 FOREST SERVICE GREEN",
+      "retrieved_at": "2026-07-21T07:16:31.0216662Z",
+      "bytes": 161065,
+      "sha256": "301ceffd330153c751b773d214844d164a87ddb70b465fa5db50ac4515cf28e9",
+      "pdf_page_count": 10
+    },
+    {
+      "source_id": "usfs-model-326-chassis",
+      "title": "USDA Forest Service Type 3 Fire Engine, Model 326, Chassis Only Specification",
+      "url": "https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m326_engine.pdf",
+      "pdf_page": 10,
+      "printed_page": 10,
+      "claim": "5032 FOREST SERVICE GREEN",
+      "retrieved_at": "2026-07-21T07:16:32.4767242Z",
+      "bytes": 272528,
+      "sha256": "253428a6540a9581903fe613640f45254388bb0bf16c24b2e4931ca58b0b0957",
+      "pdf_page_count": 10
+    },
+    {
+      "source_id": "usfs-crew-carrier-chassis",
+      "title": "USDA Forest Service Ten Person Crew Carrier Chassis Specification",
+      "url": "https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_crewcarrier.pdf",
+      "pdf_page": 9,
+      "printed_page": 9,
+      "claim": "5032 Forest Service Green",
+      "retrieved_at": "2026-07-21T07:16:37.4958813Z",
+      "bytes": 135806,
+      "sha256": "8df2b5006e1cd33b63b78dd583df3da9d10ddd52b166574767956b70a37511ad",
+      "pdf_page_count": 9
+    }
+  ],
+  "comparison_sources": [
+    {
+      "source_id": "gm-2001-tahoe",
+      "label": "Forest Green Metallic",
+      "relationship": "separate regular Tahoe color; no code printed",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Tahoe.pdf",
+      "pdf_page": 12,
+      "printed_page": 10,
+      "bytes": 17070627,
+      "sha256": "fd9ee45ef8bd1e465687e187877640f349d850f2c526c9d8d1477a9b7dbe9093",
+      "pdf_page_count": 128
+    },
+    {
+      "source_id": "gm-2002-tahoe",
+      "label": "Forest Green Metallic",
+      "relationship": "separate Z71 color; no code printed",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Tahoe.pdf",
+      "pdf_page": 9,
+      "printed_page": 1,
+      "bytes": 10720527,
+      "sha256": "eeedace0f77151da0ea4138c4464258daed8a180e8eeb4ee3dadddfa85b5560b",
+      "pdf_page_count": 102
+    }
+  ],
+  "historic_gm_upfitter_candidates": [
+    {
+      "source_id": "gm-2012-municipal-manual",
+      "year": 2012,
+      "model": "Tahoe, Express, Suburban, Silverado",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2012-Police-Specifications-Manual-9-29-11.pdf",
+      "candidate_pages": [
+        84,
+        92,
+        136,
+        151,
+        169
+      ],
+      "bytes": 8600436,
+      "sha256": "2bf54f148d063b69a2b114166163b7225641daf1fba62bc41ca20a4a7dd4473d",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2013-municipal-guide",
+      "year": 2013,
+      "model": "Tahoe, Express, Suburban",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2013-Municipal-Guide.pdf",
+      "candidate_pages": [
+        80,
+        92,
+        136,
+        151
+      ],
+      "bytes": 10595751,
+      "sha256": "1753082e7bcea94e29737e8d09470ee9e87059bd5fb8a560ffe463b850abc18c",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2014-police-guide",
+      "year": 2014,
+      "model": "Tahoe, Express, Suburban, Silverado",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/06/2014_Police_Technical_Guide_FINAL.pdf",
+      "candidate_pages": [
+        71,
+        83,
+        113,
+        121,
+        140
+      ],
+      "bytes": 9610503,
+      "sha256": "d21cdc63dc71d20295d94075573f083560be5c73204bba13b939c8699dd77fdc",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2015-silverado-ssv",
+      "year": 2015,
+      "model": "Silverado 1500 SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2015_silverado_5w4_specification_guide_4_10.pdf",
+      "candidate_pages": [
+        7,
+        10
+      ],
+      "bytes": 7073141,
+      "sha256": "d465d8e9c7f4d8240ea1578c52029338121803a8b993a37b1d9095b9dd9700ed",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2016-tahoe-9c1",
+      "year": 2016,
+      "model": "Tahoe Police Package",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2016-Tahoe-9C1-2WD-Specification-Guide.pdf",
+      "candidate_pages": [
+        8
+      ],
+      "bytes": 11491154,
+      "sha256": "557d7f6e460d12ff257d563848f2c0aa905729495d8a99fb8bc8df68bef8ce4c",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2017-express-passenger",
+      "year": 2017,
+      "model": "Express Passenger",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/Express-Passenger-Specification-Guide-2017.pdf",
+      "candidate_pages": [
+        8,
+        11
+      ],
+      "bytes": 25375800,
+      "sha256": "e191f4ac9d6dbff262a3a2d0caa23e6927d3400339743fc63aca7bb40d041863",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2017-silverado-ssv",
+      "year": 2017,
+      "model": "Silverado 1500 SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/Silverado-5W4-Specification-Guide-2017.pdf",
+      "candidate_pages": [
+        9,
+        13
+      ],
+      "bytes": 23973080,
+      "sha256": "2ef4099bb4c0d7b32c3182d18e88777c43e6f9b1d3078abd54b15e95f94e3623",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2018-silverado-ssv",
+      "year": 2018,
+      "model": "Silverado 1500 SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2018-gmf-silverado-special-service-police-spec-guide.pdf",
+      "candidate_pages": [
+        9,
+        12
+      ],
+      "bytes": 9999877,
+      "sha256": "dee7bb91175a922386fdb3cb4c6136de79b16de9a77132ba315d8aa0a76cbec5",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2019-silverado-ssv",
+      "year": 2019,
+      "model": "Silverado 1500 SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2019-Silverado-Special-Service-5W4.pdf",
+      "candidate_pages": [
+        9,
+        12
+      ],
+      "bytes": 18762179,
+      "sha256": "07ec12a8c7acc51135d01fad8438ec7bb2dff5724d43f487e3668b4928f9c74a",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2020-silverado-ssv",
+      "year": 2020,
+      "model": "Silverado 1500 SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2020-Silverado-Special-Service-5W4-1.pdf",
+      "candidate_pages": [
+        9,
+        11
+      ],
+      "bytes": 12889656,
+      "sha256": "3c6bd4e53ffb5ee22e16ac9fd87f085b637c078f4dae2f616998200ba3f100ca",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2021-tahoe-9c1",
+      "year": 2021,
+      "model": "Tahoe Police Package",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2021-Police-Tahoe-9C1-Municipal-Specification-Guide_v01272021.pdf",
+      "candidate_pages": [
+        27,
+        31
+      ],
+      "bytes": 21387479,
+      "sha256": "fb0954b711d83878b7da3c1d7755bebd3371567a4b1b68e747895fb5c6e13401",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2021-suburban-1fl",
+      "year": 2021,
+      "model": "Suburban Commercial Fleet",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2021-Suburban-1FL-Municipal-Specification-Guide-52421.pdf",
+      "candidate_pages": [
+        24,
+        26
+      ],
+      "bytes": 11305597,
+      "sha256": "899950e1981cbc03bca5a543004bab362d866b4e3d71d61d536800c9bd4e0ed2",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2022-express-cargo",
+      "year": 2022,
+      "model": "Express Cargo",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/10/2022-Express-Van-Cargo-081721.pdf",
+      "candidate_pages": [
+        8,
+        12
+      ],
+      "bytes": 4847819,
+      "sha256": "40c9e07d4a744b34e19dedf26baf163779204b45edc022cd0f6cdd5aa2369e89",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2022-tahoe-5w4",
+      "year": 2022,
+      "model": "Tahoe Special Service",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/10/2022-Tahoe-4x4-Special-Service-5W4-092921.pdf",
+      "candidate_pages": [
+        29,
+        32
+      ],
+      "bytes": 18963598,
+      "sha256": "a5839db3f34049ee209a94b0702133113bfe610cf44bda45b95ca90d9661d89f",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2022-silverado-ltd-5w4",
+      "year": 2022,
+      "model": "Silverado LTD SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2021/10/2022-Silverado-LTD-Special-Service-5W4-0821.pdf",
+      "candidate_pages": [
+        8,
+        10
+      ],
+      "bytes": 13430733,
+      "sha256": "adf4225ced4a97b4dacfb649f28da3ff1850058604e353b385c3aaa2427397f8",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2023-silverado-9c1",
+      "year": 2023,
+      "model": "Silverado 1500 Police Package",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2022/11/2023-Silverado-9C1-Specification-Guide_4_24_2023.pdf",
+      "candidate_pages": [
+        9,
+        10
+      ],
+      "bytes": 15780985,
+      "sha256": "9b96156a5bd97d09888ac26e5ff24977d2e4594814c525af7e899379ac0b7736",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2023-tahoe-5w4",
+      "year": 2023,
+      "model": "Tahoe Special Service",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2022/10/2023-Tahoe-4x4-5W4-SSV-Specification-Guide-fr-JC-061522.pdf",
+      "candidate_pages": [
+        30,
+        33
+      ],
+      "bytes": 17230735,
+      "sha256": "d095b5387cf1357b2dd06b77e2258997799de98dde1ad301c3cb24ab15929e8c",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2024-silverado-9c1",
+      "year": 2024,
+      "model": "Silverado 1500 Police Package",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2023/10/2024-Silverado-9C1-Specification-Guide-V2-1.pdf",
+      "candidate_pages": [
+        9,
+        10
+      ],
+      "bytes": 13314734,
+      "sha256": "8fc465cd4cf789c7b9a5cf58ed5256fdfd8ca9fc9d163ae529f89267d9ada8f8",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2024-tahoe-5w4",
+      "year": 2024,
+      "model": "Tahoe Special Service",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2023/12/2024-Special-Service-Tahoe-5W4-Specification-Guide.pdf",
+      "candidate_pages": [
+        30,
+        33
+      ],
+      "bytes": 19822699,
+      "sha256": "760577e433ef176a0258dbda55e3c646a80a0a3a1ed315dde53dcc63143c5a42",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2025-silverado-9c1",
+      "year": 2025,
+      "model": "Silverado 1500 Police Package",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2024/12/2025-Silverado-9C1-Specification-Guide-012275.pdf",
+      "candidate_pages": [
+        10
+      ],
+      "bytes": 16418796,
+      "sha256": "40184bf858b3790e9d7bf7110620c52bc726cbf74331f8af5d87c5c58029e1ed",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2025-silverado-5w4",
+      "year": 2025,
+      "model": "Silverado 1500 SSV",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2024/12/2025-Silverado-SSV-Specification-Guide-V112525.pdf",
+      "candidate_pages": [
+        10
+      ],
+      "bytes": 15771274,
+      "sha256": "5cf42271ab5e70ac4dbb81bd87dd58335cc715eb0fab56b5effe450620d8823b",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2025-tahoe-5w4",
+      "year": 2025,
+      "model": "Tahoe Special Service",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2024/12/2025-Tahoe-Special-Service-5W4-Specification-Guide-121324-3.pdf",
+      "candidate_pages": [
+        32,
+        34
+      ],
+      "bytes": 17949347,
+      "sha256": "807922ea8bb0fa8260c60f126495b2e045ea39a32db0c2f8b638f5e17dffead4",
+      "status": "page_rendered_needs_visual_qc"
+    },
+    {
+      "source_id": "gm-2026-silverado-9c1",
+      "year": 2026,
+      "model": "Silverado 1500 Police Package",
+      "url": "https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-9C1-Specification-Guide-041026.pdf",
+      "candidate_pages": [
+        3,
+        11
+      ],
+      "bytes": 21296380,
+      "sha256": "d440d18aaa0e06814e8901688ee9df6390bf844109d9880ccacb4966a80e6ead",
+      "status": "page_rendered_needs_visual_qc"
+    }
+  ],
+  "modern_order_guide_snapshot_candidates": [
+    {
+      "year": 2025,
+      "vehicle_id": 23079,
+      "vehicle": "Colorado",
+      "page": 54,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23079/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:18.5326406Z",
+      "bytes": 416165,
+      "sha256": "193f70ba66ff98ddedaf8e0f479e838b7e77a14f504af812a8a4d1155da28466",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 23014,
+      "vehicle": "Express Cargo",
+      "page": 35,
+      "label": "Green, Woodland",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; extraneous body components flat black.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23014/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:20.5880242Z",
+      "bytes": 241257,
+      "sha256": "8bf5e908fd167e1859d91b4635245b2c57f31365449c331c08cda9b872b0ada2",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 23015,
+      "vehicle": "Express Cutaway",
+      "page": 49,
+      "label": "Green, Woodland",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; extraneous body components flat black.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23015/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:22.4511000Z",
+      "bytes": 281995,
+      "sha256": "bc50749b114d9b7d01bdf0ea392481ccac7c925f381e4f2f63cd8a30049219e1",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 23016,
+      "vehicle": "Express Passenger",
+      "page": 28,
+      "label": "Green, Woodland",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; extraneous body components flat black.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23016/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:24.8270867Z",
+      "bytes": 226284,
+      "sha256": "a5ebec5ba2bc54fcbccdcadc57226fc4ee8032a803c8e03e0d249248415a3270",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 23035,
+      "vehicle": "New Suburban",
+      "page": 64,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23035/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:27.1555386Z",
+      "bytes": 538333,
+      "sha256": "30021a67d869b31b2a0b117645765d37c0738a13c6167e69d64404da2d5f3ad9",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 22974,
+      "vehicle": "New Tahoe Police Package and Special Service",
+      "page": 29,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+      "bytes": 220774,
+      "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 22944,
+      "vehicle": "New Tahoe Retail and Fleet",
+      "page": 83,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22944/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:31.1686862Z",
+      "bytes": 606304,
+      "sha256": "a5c24b31f587363abbec3630e4c9e57efadceae0e14b04cde8f193e88419a0e4",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 22917,
+      "vehicle": "Silverado 1500 Retail and Fleet",
+      "page": 221,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22917/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:33.2756547Z",
+      "bytes": 1152797,
+      "sha256": "dc01ef087bf74e10512c458ee74092547c4ee9f4a35b6de79f31d2aadbddd71c",
+      "status": "visually_verified_exact_snapshot"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 22903,
+      "vehicle": "Silverado 2500 HD Retail and Fleet",
+      "page": 106,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22903/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:35.6678875Z",
+      "bytes": 680709,
+      "sha256": "fe57e6e491357aca2c570a6a154dc4d11f3684e2f0c026904a844877d5158b78",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 22905,
+      "vehicle": "Silverado 3500 HD CC",
+      "page": 31,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22905/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:38.2812509Z",
+      "bytes": 253025,
+      "sha256": "5e619bc5e358d8948e628e4d216f4644c767903d36c3eb659ce242a5aae3f09b",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 22904,
+      "vehicle": "Silverado 3500 HD Retail and Fleet",
+      "page": 85,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22904/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:40.5309506Z",
+      "bytes": 588543,
+      "sha256": "41aa8b902dccd96b002f6eee944ffc68ade475e20f8f007725ede36b06666939",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2025,
+      "vehicle_id": 23022,
+      "vehicle": "Silverado 4500 HD, 5500 HD and 6500 HD",
+      "page": 122,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "No additional row-specific restriction printed in captured table.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23022/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:45.8745287Z",
+      "bytes": 516754,
+      "sha256": "06a7d567d30c102eb7edbe262c2ca89872de111387f9775b6b030c8379131a70",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23215,
+      "vehicle": "Colorado",
+      "page": 61,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23215/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:49.9543398Z",
+      "bytes": 490356,
+      "sha256": "f85bb8685bc7ddcd0989f62256eed7bba9efb7e5eb09f0fd427d9a144e4c4bf0",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23276,
+      "vehicle": "Express Cargo",
+      "page": 37,
+      "label": "Green, Woodland",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; extraneous body components flat black.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23276/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:52.6650932Z",
+      "bytes": 259881,
+      "sha256": "9596de3e96b0c5004c1b05ccce19e3d98381bfeddea9acf714379299e72a5190",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23277,
+      "vehicle": "Express Cutaway",
+      "page": 51,
+      "label": "Green, Woodland",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; extraneous body components flat black.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23277/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:54.8688248Z",
+      "bytes": 313731,
+      "sha256": "6669f35a79305104d08e81dd4ae6f5ead67a9ffbe96fd74b652a3f32509b4e7f",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23278,
+      "vehicle": "Express Passenger",
+      "page": 30,
+      "label": "Green, Woodland",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; extraneous body components flat black.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23278/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:56.6296954Z",
+      "bytes": 248584,
+      "sha256": "532a058d066035594d653bfe3dabaa6d95a0c898ac399a0fc548a906eb7cb48a",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23168,
+      "vehicle": "Silverado 1500 Retail and Fleet",
+      "page": 236,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23168/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:58.9565240Z",
+      "bytes": 1258227,
+      "sha256": "6b332a252eb691a5d080e216ffb69b4aa33bbf421ded402f4076818c146ef7fa",
+      "status": "visually_verified_exact_snapshot"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23195,
+      "vehicle": "Silverado 2500 HD Retail and Fleet",
+      "page": 102,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23195/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:00.7619335Z",
+      "bytes": 694761,
+      "sha256": "6284b3ff29dc52e827ac845a5ede479e30d604959b27716a769adaa4f0ec32f9",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23197,
+      "vehicle": "Silverado 3500 HD CC",
+      "page": 30,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23197/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:02.9845214Z",
+      "bytes": 265669,
+      "sha256": "2a352b4fefd8b199d589021f7e9a6c7e3d7c35bc70a2f0274d1bfb9f36c77b70",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23196,
+      "vehicle": "Silverado 3500 HD Retail and Fleet",
+      "page": 84,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "Five-order minimum; may require extended lead time.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23196/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:04.7685056Z",
+      "bytes": 594169,
+      "sha256": "5a14aca04ae0c16ed0d7145aad59e14579c89c5e4898a3c3a9092501f8592c6f",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23260,
+      "vehicle": "Silverado 4500 HD, 5500 HD and 6500 HD",
+      "page": 119,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "No additional row-specific restriction printed in captured table.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23260/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:06.6536568Z",
+      "bytes": 508914,
+      "sha256": "7865540f282c603eef17bc6a6e4cc6bfac7b16ebe356c83dc9b7b0b06a28dab6",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23233,
+      "vehicle": "Suburban",
+      "page": 68,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23233/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:08.3242912Z",
+      "bytes": 554002,
+      "sha256": "7b8316a857af059c18f4839c4232633cf87dc97c1ebb365e1321199b2902da9d",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23213,
+      "vehicle": "Tahoe Police Package and Special Service",
+      "page": 29,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+      "bytes": 233532,
+      "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+      "status": "exact_snapshot_page_located"
+    },
+    {
+      "year": 2026,
+      "vehicle_id": 23232,
+      "vehicle": "Tahoe Retail and Fleet",
+      "page": 90,
+      "label": "Woodland Green",
+      "rpo": "9V5",
+      "paint": "WA-9015",
+      "restriction": "GM requires five orders before plant submission.",
+      "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23232/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:12.7668206Z",
+      "bytes": 639318,
+      "sha256": "669d24954fd47259d0f0b71ed3857bf72546fae7fa93c2968f9cb52dff9dcbf2",
+      "status": "exact_snapshot_page_located"
+    }
+  ],
+  "rejected_or_unresolved_leads": [
+    {
+      "lead": "A Wikimedia Commons image caption identifies a 2002 Chevrolet Silverado K2500HD as Forest Service Green.",
+      "disposition": "rejected_as_factory_evidence",
+      "reason": "An uploader caption and photograph do not establish factory paint, original finish, exact GM code, restriction, or orderability."
+    },
+    {
+      "lead": "2002 Chevrolet Silverado and Silverado HD official vehicle information kits",
+      "disposition": "reviewed_no_color_bridge_found",
+      "reason": "The complete scanned kits were reviewed as source candidates, but no page located in this pass tied Forest Service Green to a Chevrolet model, year, or GM code.",
+      "sources": [
+        {
+          "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Silverado.pdf",
+          "bytes": 20442659,
+          "sha256": "e6e054e554cba7e20d532a0edab0e2d4d1ebf332915360ed19de7148f88ae168",
+          "pdf_page_count": 160
+        },
+        {
+          "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Silverado-HD.pdf",
+          "bytes": 17718053,
+          "sha256": "947458c5c984f45579fa478c509503f687d67ad01d827c92531712e1e6afed05",
+          "pdf_page_count": 136
+        }
+      ]
+    },
+    {
+      "lead": "Forestry Green",
+      "disposition": "no_primary_label_found",
+      "reason": "Searches of the official GM, GM Upfitter, and USDA source sets found no manufacturer or agency paint label exactly named Forestry Green."
+    },
+    {
+      "lead": "Equating historical Woodland Green option 46 / SEO 9V5 with modern Woodland Green WA-9015 / 9V5",
+      "disposition": "not_asserted",
+      "reason": "The repeated label and SEO code are leads, not an explicit primary-source identity bridge."
+    },
+    {
+      "lead": "Equating USDA identifier 5032 with Federal Standard No. 595 color 14260",
+      "disposition": "not_asserted",
+      "reason": "Separate official USDA specifications print each identifier, but no reviewed primary source explicitly states that they are the same standard color."
+    }
+  ]
+}

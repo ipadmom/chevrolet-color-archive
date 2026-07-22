@@ -26,7 +26,8 @@ import {
   MAX_CANDIDATES_PER_SELECTION,
   parseBoundedInteger,
   parsePublishedAssetMappings,
-  PUBLISHED_ASSET_ROOT,
+  PUBLISHED_RELEASE_DOWNLOAD_BASE,
+  PUBLISHED_RELEASE_TAG,
   publishedAssetExtension,
   resolveArchiveContext,
   sha256Hex,
@@ -41,6 +42,11 @@ import {
   jsonResponse,
   requireQueueAuthorization,
 } from "../server-controls";
+import {
+  buildArchivedSelectionReceipt,
+  parseArchivedCandidateIds,
+  parseStoredArchivedSelectionReceipt,
+} from "../archived-photo-selection.mjs";
 
 export const runtime = "edge";
 
@@ -53,8 +59,8 @@ type SelectionRequest = {
   model?: unknown;
   year?: unknown;
   colorId?: unknown;
-  // Published choices are browser-local preferences. Anonymous queue
-  // submissions may contain only one-use staged upload receipts.
+  // Candidate IDs identify immutable assets in the pinned archive Release.
+  // Receipts identify private staged uploads in the review queue.
   candidateIds?: unknown;
   receipts?: unknown;
 };
@@ -172,28 +178,19 @@ export async function POST(request: Request) {
     payload.year,
     payload.colorId,
   );
-  const candidateIds = parseCandidateIds(payload.candidateIds);
+  const archivedCandidateIds = parseArchivedCandidateIds(payload.candidateIds);
   const receipts = parseReceipts(payload.receipts);
-  if (!context || candidateIds === null || receipts === null) {
+  if (!context || archivedCandidateIds === null || receipts === null) {
     return jsonResponse(
       request,
       { error: "The selection contains invalid archive identifiers." },
       { status: 400 },
     );
   }
-  if (candidateIds.length) {
-    return jsonResponse(
-      request,
-      {
-        error:
-          "Published choices stay in this browser. Only staged upload receipts can enter the publication queue.",
-      },
-      { status: 400 },
-    );
-  }
   if (
-    receipts.length < 1 ||
-    receipts.length > MAX_CANDIDATES_PER_SELECTION
+    archivedCandidateIds.length + receipts.length < 1 ||
+    archivedCandidateIds.length + receipts.length >
+      MAX_CANDIDATES_PER_SELECTION
   ) {
     return jsonResponse(
       request,
@@ -201,6 +198,27 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
+
+  const archivedSelectionReceipt = archivedCandidateIds.length
+    ? buildArchivedSelectionReceipt(context, archivedCandidateIds)
+    : null;
+  if (archivedCandidateIds.length && !archivedSelectionReceipt) {
+    return jsonResponse(
+      request,
+      {
+        error:
+          "An archived photo candidate is not available for this model, year, and color.",
+      },
+      { status: 409 },
+    );
+  }
+  const archivedSelectionReceiptJson = archivedSelectionReceipt
+    ? JSON.stringify(archivedSelectionReceipt)
+    : null;
+  const archivedSelectionReceiptSha256 = archivedSelectionReceiptJson
+    ? await sha256Hex(archivedSelectionReceiptJson)
+    : null;
+  const archivedCandidateIdsJson = JSON.stringify(archivedCandidateIds);
 
   const db = getDb();
   await cleanupExpiredUploadReceipts().catch(() => undefined);
@@ -243,10 +261,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const allCandidateIds = [
+  const uploadedCandidateIds = [
     ...new Set(receiptCandidates.map((entry) => entry.candidateId)),
   ].sort((left, right) => left - right);
-  if (!allCandidateIds.length) {
+  if (!uploadedCandidateIds.length && !archivedCandidateIds.length) {
     return jsonResponse(
       request,
       { error: "No eligible candidates were selected." },
@@ -254,13 +272,20 @@ export async function POST(request: Request) {
     );
   }
 
-  const candidateIdsJson = JSON.stringify(allCandidateIds);
-  const existing = await findActiveSelection(context, candidateIdsJson);
+  const candidateIdsJson = JSON.stringify(uploadedCandidateIds);
+  const existing = await findActiveSelection(
+    context,
+    candidateIdsJson,
+    archivedCandidateIdsJson,
+  );
   if (existing) {
     return jsonResponse(request, {
-      queued: true,
+      recorded: true,
+      queued: receiptHashes.length > 0,
       selectionId: existing.id,
       created: false,
+      archivedCandidateCount: archivedCandidateIds.length,
+      uploadCandidateCount: uploadedCandidateIds.length,
     });
   }
   if (receiptCandidates.some((entry) => Number(entry.eligible) !== 1)) {
@@ -279,6 +304,9 @@ export async function POST(request: Request) {
     const result = await enqueueSelectionAtomically({
       context,
       candidateIdsJson,
+      archivedCandidateIdsJson,
+      archivedSelectionReceiptJson,
+      archivedSelectionReceiptSha256,
       receiptHashes,
       receiptCutoff,
     });
@@ -286,8 +314,9 @@ export async function POST(request: Request) {
       return jsonResponse(
         request,
         {
-          error:
-            "A staged upload receipt expired, was already used, or the candidate is no longer eligible.",
+          error: receiptHashes.length
+            ? "A staged upload receipt expired, was already used, or the candidate is no longer eligible."
+            : "The archived photo choices could not be recorded.",
         },
         { status: 409 },
       );
@@ -296,7 +325,7 @@ export async function POST(request: Request) {
   } catch {
     return jsonResponse(
       request,
-      { error: "The selection could not be queued." },
+      { error: "The selection could not be recorded." },
       { status: 503 },
     );
   }
@@ -304,9 +333,12 @@ export async function POST(request: Request) {
   return jsonResponse(
     request,
     {
-      queued: true,
+      recorded: true,
+      queued: receiptHashes.length > 0,
       selectionId: queued.id,
       created: queued.created,
+      archivedCandidateCount: archivedCandidateIds.length,
+      uploadCandidateCount: uploadedCandidateIds.length,
     },
     { status: queued.created ? 201 : 200 },
   );
@@ -315,6 +347,9 @@ export async function POST(request: Request) {
 async function enqueueSelectionAtomically({
   context,
   candidateIdsJson,
+  archivedCandidateIdsJson,
+  archivedSelectionReceiptJson,
+  archivedSelectionReceiptSha256,
   receiptHashes,
   receiptCutoff,
 }: {
@@ -324,12 +359,53 @@ async function enqueueSelectionAtomically({
     colorId: string;
   };
   candidateIdsJson: string;
+  archivedCandidateIdsJson: string;
+  archivedSelectionReceiptJson: string | null;
+  archivedSelectionReceiptSha256: string | null;
   receiptHashes: string[];
   receiptCutoff: string;
 }): Promise<{ id: number; created: boolean } | null> {
-  if (!receiptHashes.length) return null;
-
   const d1 = getD1Database();
+  if (!receiptHashes.length) {
+    const insertResult = await d1
+      .prepare(`
+        INSERT OR IGNORE INTO photo_review_selections (
+          model,
+          year,
+          color_id,
+          candidate_ids_json,
+          archived_candidate_ids_json,
+          archived_selection_receipt_json,
+          archived_selection_receipt_sha256,
+          status,
+          attempt_count,
+          created_at,
+          processed_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, 'processed', 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+      `)
+      .bind(
+        context.model,
+        context.year,
+        context.colorId,
+        candidateIdsJson,
+        archivedCandidateIdsJson,
+        archivedSelectionReceiptJson,
+        archivedSelectionReceiptSha256,
+      )
+      .run();
+    const recorded = await findActiveSelection(
+      context,
+      candidateIdsJson,
+      archivedCandidateIdsJson,
+    );
+    return recorded
+      ? {
+          id: recorded.id,
+          created: Number(insertResult.meta?.changes ?? 0) > 0,
+        }
+      : null;
+  }
+
   const receiptPlaceholders = receiptHashes.map(() => "?").join(", ");
   const insertSelection = d1
     .prepare(`
@@ -338,11 +414,14 @@ async function enqueueSelectionAtomically({
         year,
         color_id,
         candidate_ids_json,
+        archived_candidate_ids_json,
+        archived_selection_receipt_json,
+        archived_selection_receipt_sha256,
         status,
         attempt_count,
         created_at
       )
-      SELECT ?, ?, ?, ?, 'queued', 0, CURRENT_TIMESTAMP
+      SELECT ?, ?, ?, ?, ?, ?, ?, 'queued', 0, CURRENT_TIMESTAMP
       WHERE (
         SELECT COUNT(DISTINCT upload_receipt.receipt_hash)
         FROM photo_upload_receipts AS upload_receipt
@@ -373,6 +452,9 @@ async function enqueueSelectionAtomically({
       context.year,
       context.colorId,
       candidateIdsJson,
+      archivedCandidateIdsJson,
+      archivedSelectionReceiptJson,
+      archivedSelectionReceiptSha256,
       ...receiptHashes,
       receiptCutoff,
       context.model,
@@ -396,6 +478,7 @@ async function enqueueSelectionAtomically({
             AND year = ?
             AND color_id = ?
             AND candidate_ids_json = ?
+            AND archived_candidate_ids_json = ?
             AND status != 'failed'
         )
     `)
@@ -407,6 +490,7 @@ async function enqueueSelectionAtomically({
       context.year,
       context.colorId,
       candidateIdsJson,
+      archivedCandidateIdsJson,
     );
 
   let created = false;
@@ -423,7 +507,11 @@ async function enqueueSelectionAtomically({
     batchError = error;
   }
 
-  const active = await findActiveSelection(context, candidateIdsJson);
+  const active = await findActiveSelection(
+    context,
+    candidateIdsJson,
+    archivedCandidateIdsJson,
+  );
   if (active) return { id: active.id, created };
   if (batchError) throw batchError;
   return null;
@@ -436,6 +524,7 @@ async function findActiveSelection(
     colorId: string;
   },
   candidateIdsJson: string,
+  archivedCandidateIdsJson: string,
 ): Promise<{ id: number } | undefined> {
   const active = await getDb()
     .select({ id: photoReviewSelections.id })
@@ -446,6 +535,10 @@ async function findActiveSelection(
         eq(photoReviewSelections.year, context.year),
         eq(photoReviewSelections.colorId, context.colorId),
         eq(photoReviewSelections.candidateIdsJson, candidateIdsJson),
+        eq(
+          photoReviewSelections.archivedCandidateIdsJson,
+          archivedCandidateIdsJson,
+        ),
         sql`${photoReviewSelections.status} != 'failed'`,
       ),
     )
@@ -741,8 +834,15 @@ async function acknowledgeSelection(
         );
         return (
           !extension ||
-          asset.publishedAssetPath !==
-            `${PUBLISHED_ASSET_ROOT}/${asset.publishedSha256}.${extension}`
+          asset.releaseTag !== PUBLISHED_RELEASE_TAG ||
+          asset.publishedAssetName !==
+            `${asset.publishedSha256}.${extension}` ||
+          asset.publishedAssetUrl !==
+            `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${asset.publishedAssetName}` ||
+          asset.attributionAssetName !==
+            `publication-${selectionId}-${asset.candidateId}-${asset.publishedSha256}.json` ||
+          asset.attributionAssetUrl !==
+            `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${asset.attributionAssetName}`
         );
       })
     ) {
@@ -750,7 +850,7 @@ async function acknowledgeSelection(
         request,
         {
           error:
-            "Published asset paths must match each candidate's reviewed image type.",
+            "Published Release assets must match each candidate's reviewed image type.",
         },
         { status: 400 },
       );
@@ -771,10 +871,6 @@ async function acknowledgeSelection(
     eq(photoReviewSelections.leaseTokenHash, leaseTokenHash),
     gt(photoReviewSelections.leaseExpiresAt, nowIso),
   );
-  const candidateIdList = sql.join(
-    candidateIds.map((id) => sql`${id}`),
-    sql`, `,
-  );
   const updateSelection = db
     .update(photoReviewSelections)
     .set({
@@ -790,89 +886,163 @@ async function acknowledgeSelection(
   let updated: { id: number }[] = [];
   if (nextStatus === "processed") {
     const publishedAssetsJson = JSON.stringify(publishedAssets);
-    const publicationMappingRows = sql`
+    const publicationMappingRows = `
       SELECT
         CAST(json_extract(value, '$.candidateId') AS INTEGER) AS candidate_id,
         json_extract(value, '$.publishedSha256') AS published_sha256,
-        json_extract(value, '$.publishedAssetPath') AS published_asset_path
-      FROM json_each(${publishedAssetsJson})
+        CAST(json_extract(value, '$.publishedBytes') AS INTEGER) AS published_asset_bytes,
+        json_extract(value, '$.releaseTag') AS published_release_tag,
+        json_extract(value, '$.publishedAssetName') AS published_asset_name,
+        json_extract(value, '$.publishedAssetUrl') AS published_asset_url,
+        json_extract(value, '$.attributionAssetName') AS published_attribution_name,
+        json_extract(value, '$.attributionAssetUrl') AS published_attribution_url,
+        json_extract(value, '$.attributionSha256') AS published_attribution_sha256,
+        CAST(json_extract(value, '$.attributionBytes') AS INTEGER) AS published_attribution_bytes
+      FROM json_each(?)
     `;
-    const publicationEligibility = sql`(
-      SELECT COUNT(*)
-      FROM ${photoCandidates} AS candidate
-      INNER JOIN (${publicationMappingRows}) AS mapping
-        ON candidate.id = mapping.candidate_id
-      WHERE candidate.model = ${current.model}
-        AND candidate.year = ${current.year}
-        AND candidate.color_id = ${current.colorId}
-        AND (
-          candidate.status IN ('staged', 'approved')
-          OR (
-            candidate.status = 'published'
-            AND candidate.published_sha256 = mapping.published_sha256
-            AND candidate.published_asset_path = mapping.published_asset_path
+    const d1 = getD1Database();
+    const publishCandidates = d1.prepare(`
+      WITH mapping AS (${publicationMappingRows}),
+      eligible AS (
+        SELECT COUNT(*) AS candidate_count
+        FROM photo_candidates AS candidate
+        INNER JOIN mapping ON candidate.id = mapping.candidate_id
+        WHERE candidate.model = ?
+          AND candidate.year = ?
+          AND candidate.color_id = ?
+          AND (
+            candidate.status IN ('staged', 'approved')
+            OR (
+              candidate.status = 'published'
+              AND candidate.published_sha256 = mapping.published_sha256
+              AND candidate.published_asset_bytes = mapping.published_asset_bytes
+              AND candidate.published_release_tag = mapping.published_release_tag
+              AND candidate.published_asset_name = mapping.published_asset_name
+              AND candidate.published_asset_url = mapping.published_asset_url
+              AND candidate.published_attribution_name = mapping.published_attribution_name
+              AND candidate.published_attribution_url = mapping.published_attribution_url
+              AND candidate.published_attribution_sha256 = mapping.published_attribution_sha256
+              AND candidate.published_attribution_bytes = mapping.published_attribution_bytes
+            )
           )
-        )
-    ) = ${candidateIds.length}`;
-    const publishCandidates = db.run(sql`
-      UPDATE ${photoCandidates}
+      )
+      UPDATE photo_candidates
       SET
         status = 'published',
         rejected_at = NULL,
         published_sha256 = (
           SELECT mapping.published_sha256
-          FROM (${publicationMappingRows}) AS mapping
-          WHERE mapping.candidate_id = ${photoCandidates.id}
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
         ),
-        published_asset_path = (
-          SELECT mapping.published_asset_path
-          FROM (${publicationMappingRows}) AS mapping
-          WHERE mapping.candidate_id = ${photoCandidates.id}
+        published_asset_bytes = (
+          SELECT mapping.published_asset_bytes
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
         ),
-        published_at = ${nowIso}
-      WHERE ${photoCandidates.id} IN (${candidateIdList})
-        AND ${photoCandidates.model} = ${current.model}
-        AND ${photoCandidates.year} = ${current.year}
-        AND ${photoCandidates.colorId} = ${current.colorId}
+        published_release_tag = (
+          SELECT mapping.published_release_tag
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_asset_name = (
+          SELECT mapping.published_asset_name
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_asset_url = (
+          SELECT mapping.published_asset_url
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_attribution_name = (
+          SELECT mapping.published_attribution_name
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_attribution_url = (
+          SELECT mapping.published_attribution_url
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_attribution_sha256 = (
+          SELECT mapping.published_attribution_sha256
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_attribution_bytes = (
+          SELECT mapping.published_attribution_bytes
+          FROM mapping WHERE mapping.candidate_id = photo_candidates.id
+        ),
+        published_asset_path = NULL,
+        published_at = ?
+      WHERE id IN (SELECT candidate_id FROM mapping)
+        AND model = ?
+        AND year = ?
+        AND color_id = ?
         AND EXISTS (
           SELECT 1
-          FROM ${photoReviewSelections}
-          WHERE ${validLease}
+          FROM photo_review_selections
+          WHERE id = ?
+            AND status = 'leased'
+            AND lease_token_hash = ?
+            AND lease_expires_at > ?
         )
-        AND ${publicationEligibility}
-    `);
-    const guardedSelectionUpdate = db
-      .update(photoReviewSelections)
-      .set({
-        status: "processed",
-        leaseTokenHash: null,
-        leaseExpiresAt: null,
-        lastErrorCode: null,
-        processedAt: nowIso,
-      })
-      .where(
-        and(
-          validLease,
-          sql`(
-            SELECT COUNT(*)
-            FROM ${photoCandidates} AS candidate
-            INNER JOIN (${publicationMappingRows}) AS mapping
-              ON candidate.id = mapping.candidate_id
-            WHERE candidate.status = 'published'
-              AND candidate.model = ${current.model}
-              AND candidate.year = ${current.year}
-              AND candidate.color_id = ${current.colorId}
-              AND candidate.published_sha256 = mapping.published_sha256
-              AND candidate.published_asset_path = mapping.published_asset_path
-              AND candidate.published_at IS NOT NULL
-          ) = ${candidateIds.length}`,
-        ),
-      )
-      .returning({ id: photoReviewSelections.id });
-    [, updated] = await db.batch([
+        AND (SELECT candidate_count FROM eligible) = ?
+    `).bind(
+      publishedAssetsJson,
+      current.model,
+      current.year,
+      current.colorId,
+      nowIso,
+      current.model,
+      current.year,
+      current.colorId,
+      selectionId,
+      leaseTokenHash,
+      nowIso,
+      candidateIds.length,
+    );
+    const guardedSelectionUpdate = d1.prepare(`
+      WITH mapping AS (${publicationMappingRows})
+      UPDATE photo_review_selections
+      SET status = 'processed',
+          lease_token_hash = NULL,
+          lease_expires_at = NULL,
+          last_error_code = NULL,
+          processed_at = ?
+      WHERE id = ?
+        AND status = 'leased'
+        AND lease_token_hash = ?
+        AND lease_expires_at > ?
+        AND (
+          SELECT COUNT(*)
+          FROM photo_candidates AS candidate
+          INNER JOIN mapping ON candidate.id = mapping.candidate_id
+          WHERE candidate.status = 'published'
+            AND candidate.model = ?
+            AND candidate.year = ?
+            AND candidate.color_id = ?
+            AND candidate.published_sha256 = mapping.published_sha256
+            AND candidate.published_asset_bytes = mapping.published_asset_bytes
+            AND candidate.published_release_tag = mapping.published_release_tag
+            AND candidate.published_asset_name = mapping.published_asset_name
+            AND candidate.published_asset_url = mapping.published_asset_url
+            AND candidate.published_attribution_name = mapping.published_attribution_name
+            AND candidate.published_attribution_url = mapping.published_attribution_url
+            AND candidate.published_attribution_sha256 = mapping.published_attribution_sha256
+            AND candidate.published_attribution_bytes = mapping.published_attribution_bytes
+            AND candidate.published_at IS NOT NULL
+        ) = ?
+      RETURNING id
+    `).bind(
+      publishedAssetsJson,
+      nowIso,
+      selectionId,
+      leaseTokenHash,
+      nowIso,
+      current.model,
+      current.year,
+      current.colorId,
+      candidateIds.length,
+    );
+    const [, selectionResult] = await d1.batch([
       publishCandidates,
       guardedSelectionUpdate,
     ]);
+    updated = (selectionResult.results ?? []) as { id: number }[];
   } else if (errorCode === "rights_review_rejected") {
     const rejectedCandidateIdList = sql.join(
       rejectedCandidateIds.map((id) => sql`${id}`),
@@ -1061,6 +1231,9 @@ async function hydrateSelections(
   const parsed = rows.map((row) => ({
     row,
     candidateIds: parseStoredCandidateIds(row.candidateIdsJson),
+    archivedCandidateIds: parseStoredArchivedCandidateIds(
+      row.archivedCandidateIdsJson,
+    ),
   }));
   const allIds = [...new Set(parsed.flatMap((entry) => entry.candidateIds))];
   const candidates = allIds.length
@@ -1071,43 +1244,75 @@ async function hydrateSelections(
     : [];
   const candidatesById = new Map(candidates.map((entry) => [entry.id, entry]));
 
-  return parsed.map(({ row, candidateIds }) => ({
-    id: row.id,
-    model: row.model,
-    year: row.year,
-    colorId: row.colorId,
-    status: row.status,
-    attemptCount: row.attemptCount,
-    leaseExpiresAt: row.leaseExpiresAt,
-    lastErrorCode: row.lastErrorCode,
-    createdAt: row.createdAt,
-    processedAt: row.processedAt,
-    candidates: candidateIds
-      .map((id) => candidatesById.get(id))
-      .filter((entry): entry is typeof photoCandidates.$inferSelect =>
-        Boolean(entry),
-      )
-      .map((entry) => ({
-        id: entry.id,
-        model: entry.model,
-        year: entry.year,
-        colorId: entry.colorId,
-        colorName: entry.colorName,
-        sourceKind: entry.sourceKind,
-        originalUrl: entry.originalUrl,
-        fileName: entry.fileName,
-        contentType: entry.contentType,
-        sizeBytes: entry.sizeBytes,
-        credit: entry.credit,
-        license: entry.license,
-        status: entry.status,
-        sha256: entry.sha256,
-        publishedSha256: entry.publishedSha256,
-        publishedAssetPath: entry.publishedAssetPath,
-        publishedAt: entry.publishedAt,
-        downloadUrl: new URL(`/api/photos/${entry.id}`, request.url).toString(),
-      })),
-  }));
+  return Promise.all(
+    parsed.map(async ({ row, candidateIds, archivedCandidateIds }) => {
+      const archiveReceipt = archivedCandidateIds.length
+        ? await parseStoredArchivedSelectionReceipt(
+            row.archivedSelectionReceiptJson,
+            row.archivedSelectionReceiptSha256,
+            { model: row.model, year: row.year, colorId: row.colorId },
+            archivedCandidateIds,
+          )
+        : null;
+      if (
+        (archivedCandidateIds.length && !archiveReceipt) ||
+        (!archivedCandidateIds.length &&
+          (row.archivedSelectionReceiptJson !== null ||
+            row.archivedSelectionReceiptSha256 !== null))
+      ) {
+        throw new Error(`Selection ${row.id} has an invalid archive receipt.`);
+      }
+
+      return {
+        id: row.id,
+        model: row.model,
+        year: row.year,
+        colorId: row.colorId,
+        status: row.status,
+        attemptCount: row.attemptCount,
+        leaseExpiresAt: row.leaseExpiresAt,
+        lastErrorCode: row.lastErrorCode,
+        createdAt: row.createdAt,
+        processedAt: row.processedAt,
+        archivedCandidateIds,
+        archivedSelectionReceiptSha256: row.archivedSelectionReceiptSha256,
+        archivedCandidates: archiveReceipt?.candidates ?? [],
+        candidates: candidateIds
+          .map((id) => candidatesById.get(id))
+          .filter((entry): entry is typeof photoCandidates.$inferSelect =>
+            Boolean(entry),
+          )
+          .map((entry) => ({
+            id: entry.id,
+            model: entry.model,
+            year: entry.year,
+            colorId: entry.colorId,
+            colorName: entry.colorName,
+            sourceKind: entry.sourceKind,
+            originalUrl: entry.originalUrl,
+            fileName: entry.fileName,
+            contentType: entry.contentType,
+            sizeBytes: entry.sizeBytes,
+            credit: entry.credit,
+            license: entry.license,
+            status: entry.status,
+            sha256: entry.sha256,
+            publishedSha256: entry.publishedSha256,
+            publishedAssetBytes: entry.publishedAssetBytes,
+            publishedReleaseTag: entry.publishedReleaseTag,
+            publishedAssetName: entry.publishedAssetName,
+            publishedAssetUrl: entry.publishedAssetUrl,
+            publishedAttributionName: entry.publishedAttributionName,
+            publishedAttributionUrl: entry.publishedAttributionUrl,
+            publishedAttributionSha256: entry.publishedAttributionSha256,
+            publishedAttributionBytes: entry.publishedAttributionBytes,
+            publishedAssetPath: entry.publishedAssetPath,
+            publishedAt: entry.publishedAt,
+            downloadUrl: new URL(`/api/photos/${entry.id}`, request.url).toString(),
+          })),
+      };
+    }),
+  );
 }
 
 function parseCandidateIds(value: unknown): number[] | null {
@@ -1149,6 +1354,19 @@ function parseStoredCandidateIds(value: string): number[] {
     ];
   } catch {
     return [];
+  }
+}
+
+function parseStoredArchivedCandidateIds(value: string): string[] {
+  try {
+    const parsed = JSON.parse(value);
+    const normalized = parseArchivedCandidateIds(parsed);
+    if (!normalized || JSON.stringify(normalized) !== value) {
+      throw new Error("Archived candidate IDs are not canonical.");
+    }
+    return normalized;
+  } catch {
+    throw new Error("Stored archived candidate IDs are invalid.");
   }
 }
 

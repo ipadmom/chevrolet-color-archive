@@ -262,10 +262,7 @@ export function archivedModelYearPhotos(
   const exactIds = archivedPhotos
     .filter((photo) => isExactYearPhoto(photo, modelId, year))
     .map((photo) => photo.id);
-  return uniquePhotos([
-    ...exactIds,
-    ...model.representative_asset_ids,
-  ]).slice(0, maximum);
+  return uniquePhotos(exactIds).slice(0, maximum);
 }
 
 export function archivedColorPhotos(

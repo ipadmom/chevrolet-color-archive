@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "visibility": "public",
+  "classification": "archive-internal",
+  "scope": "Complete regular Chevrolet Suburban palettes recovered from exact-year GM-authored sales brochures for model years 1982, 1989, and 1993.",
+  "source_audit": "docs/source-audit-suburban-1982-1989-1993.md",
+  "archive_release": {
+    "repository": "ipadmom/chevrolet-color-archive",
+    "tag": "brochure-source-archive-v1",
+    "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1"
+  },
+  "years": [
+    {
+      "year": 1982,
+      "audit_status": "verified_complete_brochure_palette",
+      "source": {
+        "source_id": "gm-brochure-1982-chevrolet-suburban-xr793",
+        "title": "1982 Chevrolet Suburban sales brochure",
+        "publisher": "Chevrolet Motor Division, General Motors Corporation",
+        "source_type": "official_sales_brochure_archival_scan",
+        "retrieval_url": "https://xr793.com/wp-content/uploads/2017/08/1982-Chevrolet-Suburban.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-suburban-brochure-xr793.pdf",
+        "pdf_pages": [10],
+        "page_locator": "PDF page 10, Specifications-Suburban, Colors strip.",
+        "revision": "Brochure footer: LITHO IN U.S.A. AUG., 1981 409-4.",
+        "artifact_sha256": "826b132146d21a82a8748ba8781d46c766dd05546dee3f5ab9ffa7f10c50db64",
+        "artifact_bytes": 2393183,
+        "pdf_page_count": 10,
+        "reuse_license": "No reuse license stated."
+      },
+      "colors": [
+        {"order": 1, "name": "FROST WHITE", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 2, "name": "SILVER METALLIC", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 3, "name": "MIDNIGHT BLACK", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 4, "name": "LIGHT BLUE METALLIC", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 5, "name": "MIDNIGHT BLUE", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 6, "name": "COLONIAL YELLOW", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 7, "name": "ALMOND", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 8, "name": "LIGHT BRONZE METALLIC", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 9, "name": "MAHOGANY METALLIC", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 10, "name": "CARMINE RED", "factory_code": null, "factory_code_status": "not printed"}
+      ],
+      "limitations": ["The model-specific brochure prints no numeric paint codes or configuration restrictions.", "Special-order, fleet, and SEO colors require separate direct evidence."]
+    },
+    {
+      "year": 1989,
+      "audit_status": "verified_complete_brochure_palette",
+      "source": {
+        "source_id": "gm-brochure-1989-chevrolet-suburban-xr793",
+        "title": "1989 Chevy Trucks Suburban sales brochure",
+        "publisher": "Chevrolet Motor Division, General Motors Corporation",
+        "source_type": "official_sales_brochure_archival_scan",
+        "retrieval_url": "https://xr793.com/wp-content/uploads/2017/07/1989-Chevrolet-Suburban.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-suburban-brochure-xr793.pdf",
+        "pdf_pages": [6],
+        "page_locator": "PDF page 6, Exterior Colors swatches and Interior & Exterior Color Availability matrix.",
+        "revision": "Brochure footer: LITHO IN U.S.A. 4837 7/88.",
+        "artifact_sha256": "52edcba93aee5538d36e55b574456c15210a04c72116a1bb97feaa9064fb4d9c",
+        "artifact_bytes": 1635000,
+        "pdf_page_count": 6,
+        "reuse_license": "No reuse license stated."
+      },
+      "colors": [
+        {"order": 1, "name": "Mojave Beige", "matrix_name": "BEIGE, MOJAVE", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 2, "name": "Onyx Black", "matrix_name": "BLACK, ONYX", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 3, "name": "Midnight Blue Metallic", "matrix_name": "BLUE, MIDNIGHT (Metallic)", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 4, "name": "Smoke Blue Metallic", "matrix_name": "BLUE, SMOKE (Metallic)", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 5, "name": "Sunset Gold Metallic", "matrix_name": "GOLD, SUNSET (Metallic)", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 6, "name": "Gray Metallic", "matrix_name": "GRAY (Metallic)", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 7, "name": "Quicksilver Metallic", "matrix_name": "QUICKSILVER (Metallic)", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 8, "name": "Fire Red", "matrix_name": "RED, FIRE", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 9, "name": "Summit White", "matrix_name": "WHITE, SUMMIT", "factory_code": null, "factory_code_status": "not printed"},
+        {"order": 10, "name": "Wintergreen", "matrix_name": "WINTERGREEN", "factory_code": null, "factory_code_status": "not printed"}
+      ],
+      "limitations": ["The model-specific brochure prints no numeric paint codes.", "Secondary matrix entries are two-tone components and are not additional standalone colors.", "Special-order, fleet, and SEO colors require separate direct evidence."]
+    },
+    {
+      "year": 1993,
+      "audit_status": "verified_complete_with_carrier_qualification",
+      "source": {
+        "source_id": "gm-brochure-1993-chevrolet-blazer-suburban-poshmark-image-14",
+        "title": "1993 Chevy Blazers/Suburban sales brochure, Exterior Colors foldout",
+        "publisher": "Chevrolet Motor Division, General Motors Corporation",
+        "carrier": "Poshmark public marketplace listing photograph set",
+        "source_type": "official_sales_brochure_marketplace_carrier",
+        "retrieval_url": "https://di2ponv0v5otw.cloudfront.net/posts/2025/04/22/68080685b14a060a76921027/l_680807c72fa054d4df7729ca.jpg",
+        "landing_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-14.jpg",
+        "image_locator": "Preserved listing image 14 of 16, right-hand Exterior Colors foldout, Suburban column.",
+        "revision": "1993 model-year brochure; printing month not legible and not inferred.",
+        "artifact_sha256": "25621ccf9cf560bc6b110ae894d9bcca2be3c303c1ae33c8c5225cb88fc3f0cc",
+        "artifact_bytes": 508134,
+        "image_width": 1000,
+        "image_height": 1000,
+        "reuse_license": "No reuse license stated."
+      },
+      "colors": [
+        {"order": 1, "name": "Sand Beige Met.", "factory_code": "#57", "factory_code_status": "printed"},
+        {"order": 2, "name": "Onyx Black", "factory_code": "#41", "factory_code_status": "printed"},
+        {"order": 3, "name": "Indigo Blue Met.", "factory_code": "#39", "factory_code_status": "printed"},
+        {"order": 4, "name": "Smoke Blue Met.", "factory_code": "#27", "factory_code_status": "printed"},
+        {"order": 5, "name": "Teal Blue Met.", "factory_code": "#36", "factory_code_status": "printed"},
+        {"order": 6, "name": "Quicksilver Met.", "factory_code": "#96", "factory_code_status": "printed"},
+        {"order": 7, "name": "Burnt Red Met.", "factory_code": "#76", "factory_code_status": "printed"},
+        {"order": 8, "name": "Victory Red", "factory_code": "#74", "factory_code_status": "printed"},
+        {"order": 9, "name": "Slate Met.", "factory_code": "#97", "factory_code_status": "printed"},
+        {"order": 10, "name": "Summit White", "factory_code": "#50", "factory_code_status": "printed"}
+      ],
+      "limitations": ["The complete public carrier is a marketplace listing's 16-image photograph set, not an official GM PDF or page-perfect archival scan.", "The underlying page is unambiguously Chevrolet-authored and model-specific.", "No S-Blazer-only color is imported.", "Special-order, fleet, and SEO colors require separate direct evidence."]
+    }
+  ]
+}

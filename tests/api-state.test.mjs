@@ -12,6 +12,8 @@ const migrations = [
   "0004_right_omega_flight.sql",
   "0005_skinny_deadpool.sql",
   "0006_mixed_owl.sql",
+  "0007_cuddly_nekra.sql",
+  "0008_warm_daredevil.sql",
 ];
 
 async function migration(name) {
@@ -86,13 +88,77 @@ test("fresh D1-compatible migrations enforce active queue deduplication", async 
       .map((column) => column.name);
     assert.equal(selectionColumns.includes("last_error"), false);
     assert.equal(selectionColumns.includes("last_error_code"), true);
+    assert.equal(selectionColumns.includes("archived_candidate_ids_json"), true);
+    assert.equal(
+      selectionColumns.includes("archived_selection_receipt_json"),
+      true,
+    );
+    assert.equal(
+      selectionColumns.includes("archived_selection_receipt_sha256"),
+      true,
+    );
     const candidateColumns = db
       .prepare("PRAGMA table_info(photo_candidates)")
       .all()
       .map((column) => column.name);
     assert.equal(candidateColumns.includes("published_sha256"), true);
     assert.equal(candidateColumns.includes("published_asset_path"), true);
+    assert.equal(candidateColumns.includes("published_asset_bytes"), true);
+    assert.equal(candidateColumns.includes("published_release_tag"), true);
+    assert.equal(candidateColumns.includes("published_asset_name"), true);
+    assert.equal(candidateColumns.includes("published_asset_url"), true);
+    assert.equal(candidateColumns.includes("published_attribution_name"), true);
+    assert.equal(candidateColumns.includes("published_attribution_url"), true);
+    assert.equal(candidateColumns.includes("published_attribution_sha256"), true);
+    assert.equal(candidateColumns.includes("published_attribution_bytes"), true);
     assert.equal(candidateColumns.includes("published_at"), true);
+  } finally {
+    db.close();
+  }
+});
+
+test("curatorial receipts have independent canonical selection state", async () => {
+  const db = new DatabaseSync(":memory:");
+  try {
+    db.exec("PRAGMA foreign_keys=ON");
+    for (const name of migrations) applySql(db, await migration(name));
+    const insert = db.prepare(`
+      INSERT INTO photo_review_selections (
+        model,
+        year,
+        color_id,
+        candidate_ids_json,
+        archived_candidate_ids_json,
+        archived_selection_receipt_json,
+        archived_selection_receipt_sha256,
+        status,
+        processed_at
+      ) VALUES ('camaro', '1969', 'hugger-orange', '[]', ?, ?, ?, 'processed', CURRENT_TIMESTAMP)
+    `);
+    const sha = "a".repeat(64);
+    insert.run('["commons-sha1-a"]', '{"receipt":1}', sha);
+    insert.run('["commons-sha1-b"]', '{"receipt":2}', sha);
+    assert.throws(
+      () => insert.run('["commons-sha1-a"]', '{"receipt":1}', sha),
+      /UNIQUE constraint failed/,
+    );
+    const rows = db
+      .prepare(`
+        SELECT archived_candidate_ids_json AS candidateIds,
+               archived_selection_receipt_json AS receipt,
+               archived_selection_receipt_sha256 AS receiptSha256,
+               status,
+               processed_at AS processedAt
+        FROM photo_review_selections
+        ORDER BY id
+      `)
+      .all();
+    assert.equal(rows.length, 2);
+    assert.equal(rows[0].receipt, '{"receipt":1}');
+    assert.equal(rows[0].receiptSha256, sha);
+    assert.equal(rows[0].status, "processed");
+    assert.equal(typeof rows[0].processedAt, "string");
+    assert.deepEqual(db.prepare("PRAGMA foreign_key_check").all(), []);
   } finally {
     db.close();
   }
@@ -273,10 +339,18 @@ test("route sources use D1 batches and published-only public visibility", async 
   assert.match(selections, /published_sha256 = mapping\.published_sha256/);
   assert.match(
     selections,
-    /candidate\.published_asset_path = mapping\.published_asset_path/,
+    /candidate\.published_asset_url = mapping\.published_asset_url/,
+  );
+  assert.match(
+    selections,
+    /candidate\.published_attribution_sha256 = mapping\.published_attribution_sha256/,
+  );
+  assert.doesNotMatch(
+    selections,
+    /mapping\.published_asset_path/,
   );
   assert.match(selections, /rejectedCandidateIds/);
-  assert.match(selections, /await db\.batch\(\[\s*publishCandidates,\s*guardedSelectionUpdate/s);
+  assert.match(selections, /await d1\.batch\(\[\s*publishCandidates,\s*guardedSelectionUpdate/s);
   assert.match(
     selections,
     /await db\.batch\(\[\s*rejectCandidates,\s*guardedRejectionUpdate/s,

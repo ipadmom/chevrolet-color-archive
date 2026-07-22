@@ -2,8 +2,8 @@ export const MAX_UPLOAD_BYTES: number;
 export const MAX_MULTIPART_BYTES: number;
 export const MAX_CANDIDATES_PER_SELECTION: number;
 export const UPLOAD_RECEIPT_TTL_SECONDS: number;
-export const PUBLISHED_ASSET_ROOT: "public/vehicle-photos/assets";
-export const PUBLISHED_ASSET_RAW_BASE: "https://raw.githubusercontent.com/ipadmom/chevrolet-color-archive/main";
+export const PUBLISHED_RELEASE_TAG: "community-photo-archive-v1";
+export const PUBLISHED_RELEASE_DOWNLOAD_BASE: "https://github.com/ipadmom/chevrolet-color-archive/releases/download/community-photo-archive-v1";
 export const PUBLIC_PHOTO_STATUSES: readonly ["published"];
 export const QUEUE_STATUSES: readonly [
   "queued",
@@ -19,6 +19,7 @@ export const QUEUE_ERROR_CODES: readonly [
   "approval_metadata_invalid",
   "rights_review_rejected",
   "publication_pre_push_failed",
+  "publication_pre_release_failed",
   "candidate_state_update_failed",
   "publisher_retry",
 ];
@@ -55,7 +56,14 @@ export type ArchiveContext = {
 export type PublishedAssetMapping = {
   candidateId: number;
   publishedSha256: string;
-  publishedAssetPath: string;
+  publishedBytes: number;
+  releaseTag: string;
+  publishedAssetName: string;
+  publishedAssetUrl: string;
+  attributionAssetName: string;
+  attributionAssetUrl: string;
+  attributionSha256: string;
+  attributionBytes: number;
 };
 
 export function resolveArchiveContext(
@@ -79,8 +87,17 @@ export function publishedAssetExtension(
 ): "jpg" | "png" | "gif" | "webp" | null;
 export function publishedAssetUrl(
   publishedSha256: unknown,
-  publishedAssetPath: unknown,
+  releaseTag: unknown,
+  publishedAssetName: unknown,
+  storedAssetUrl: unknown,
   contentType: unknown,
+): string | null;
+export function publishedAttributionUrl(
+  candidateId: unknown,
+  publishedSha256: unknown,
+  releaseTag: unknown,
+  attributionAssetName: unknown,
+  storedAttributionUrl: unknown,
 ): string | null;
 export function parsePublishedAssetMappings(
   value: unknown,
@@ -98,6 +115,7 @@ export function isQueueErrorCode(
   | "approval_metadata_invalid"
   | "rights_review_rejected"
   | "publication_pre_push_failed"
+  | "publication_pre_release_failed"
   | "candidate_state_update_failed"
   | "publisher_retry";
 export function parseBoundedInteger(

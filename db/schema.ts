@@ -28,6 +28,15 @@ export const photoCandidates = sqliteTable(
     status: text("status").notNull().default("staged"),
     sha256: text("sha256").notNull(),
     publishedSha256: text("published_sha256"),
+    publishedAssetBytes: integer("published_asset_bytes"),
+    publishedReleaseTag: text("published_release_tag"),
+    publishedAssetName: text("published_asset_name"),
+    publishedAssetUrl: text("published_asset_url"),
+    publishedAttributionName: text("published_attribution_name"),
+    publishedAttributionUrl: text("published_attribution_url"),
+    publishedAttributionSha256: text("published_attribution_sha256"),
+    publishedAttributionBytes: integer("published_attribution_bytes"),
+    // Retained for pre-Release migration audit only. New publications leave it null.
     publishedAssetPath: text("published_asset_path"),
     publishedAt: text("published_at"),
     createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
@@ -94,6 +103,13 @@ export const photoReviewSelections = sqliteTable(
     year: text("year").notNull(),
     colorId: text("color_id").notNull(),
     candidateIdsJson: text("candidate_ids_json").notNull(),
+    archivedCandidateIdsJson: text("archived_candidate_ids_json")
+      .notNull()
+      .default("[]"),
+    archivedSelectionReceiptJson: text("archived_selection_receipt_json"),
+    archivedSelectionReceiptSha256: text(
+      "archived_selection_receipt_sha256",
+    ),
     status: text("status").notNull().default("queued"),
     attemptCount: integer("attempt_count").notNull().default(0),
     leaseTokenHash: text("lease_token_hash"),
@@ -110,7 +126,13 @@ export const photoReviewSelections = sqliteTable(
     ),
     index("photo_review_selections_status_page").on(table.status, table.id),
     uniqueIndex("photo_review_selections_active_unique")
-      .on(table.model, table.year, table.colorId, table.candidateIdsJson)
+      .on(
+        table.model,
+        table.year,
+        table.colorId,
+        table.candidateIdsJson,
+        table.archivedCandidateIdsJson,
+      )
       .where(sql`${table.status} != 'failed'`),
     check(
       "photo_review_selections_status_check",

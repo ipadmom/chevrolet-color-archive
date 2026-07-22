@@ -1,0 +1,918 @@
+{
+  "schema_version": 1,
+  "visibility": "public",
+  "classification": "archive-internal",
+  "scope": "Exact Chevrolet Suburban exterior-color charts located in official General Motors vehicle information kits for 1969 and 1972 through 1976. The reviewed missing-chart years 1963, 1970, and 1971 are intentionally excluded from color availability.",
+  "source_audit": "docs/source-audit-suburban-1969-1976.md",
+  "years": [
+    {
+      "year": 1969,
+      "audit_status": "verified_complete_solid_palette",
+      "source": {
+        "source_id": "gm-heritage-1969-chevrolet-suburban",
+        "title": "1969 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          10,
+          30
+        ],
+        "page_locator": "PDF page 10, exterior color chart; PDF page 30 directs Suburban paint orders to that chart.",
+        "revision": "Model-year vehicle information kit; governing chart revision is not printed.",
+        "artifact_sha256": "5fcf9bf85940cd3011990674d40cf7471dd7febe2158da10bc636c43d36db9f7",
+        "artifact_bytes": 4434116,
+        "pdf_page_count": 34,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "5fcf9bf85940cd3011990674d40cf7471dd7febe2158da10bc636c43d36db9f7",
+        "bytes": 4434116,
+        "archive_asset_name": "1969-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "colors": [
+        {
+          "order": 1,
+          "name": "Black",
+          "factory_code": "500",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 2,
+          "name": "Blue Dark",
+          "factory_code": "508",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 3,
+          "name": "Blue Light",
+          "factory_code": "507",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 4,
+          "name": "Green Dark",
+          "factory_code": "505",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 5,
+          "name": "Green Light",
+          "factory_code": "503",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 6,
+          "name": "Maroon",
+          "factory_code": "517",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 7,
+          "name": "Olive Green",
+          "factory_code": "504",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 8,
+          "name": "Orange",
+          "factory_code": "516",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 9,
+          "name": "Red",
+          "factory_code": "514",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 10,
+          "name": "Saddle",
+          "factory_code": "525",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 11,
+          "name": "Silver",
+          "factory_code": "523",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 12,
+          "name": "Turquoise",
+          "factory_code": "511",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 13,
+          "name": "White",
+          "factory_code": "521",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 14,
+          "name": "Yellow Dark",
+          "factory_code": "519",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 15,
+          "name": "Yellow",
+          "factory_code": "520",
+          "factory_code_status": "printed"
+        }
+      ],
+      "limitations": [
+        "The chart establishes the complete solid-color list. It does not enumerate exact two-tone combinations."
+      ]
+    },
+    {
+      "year": 1972,
+      "audit_status": "verified_complete_solid_palette",
+      "source": {
+        "source_id": "gm-heritage-1972-chevrolet-suburban",
+        "title": "1972 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          18,
+          19
+        ],
+        "page_locator": "PDF page 18, printed page 17, solid and two-tone exterior color chart; PDF page 19, paint diagrams.",
+        "revision": "Model-year vehicle information kit; governing chart revision is not printed.",
+        "artifact_sha256": "5195f25899820e8985d01e1c23494ec45596069eaa780a3c0af4c94c92c85d1e",
+        "artifact_bytes": 664435,
+        "pdf_page_count": 19,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "5195f25899820e8985d01e1c23494ec45596069eaa780a3c0af4c94c92c85d1e",
+        "bytes": 664435,
+        "archive_asset_name": "1972-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "colors": [
+        {
+          "order": 1,
+          "name": "Midnight Black",
+          "factory_code": "500",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 2,
+          "name": "Hawaiian Blue",
+          "factory_code": "510",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 3,
+          "name": "Mariner Blue",
+          "factory_code": "523",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 4,
+          "name": "Classic Bronze",
+          "factory_code": "522",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 5,
+          "name": "Spanish Gold",
+          "factory_code": "511",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 6,
+          "name": "Glenwood Green",
+          "factory_code": "505",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 7,
+          "name": "Meadow Green",
+          "factory_code": "518",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 8,
+          "name": "Spruce Green",
+          "factory_code": "506",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 9,
+          "name": "Willow Green",
+          "factory_code": "504",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 10,
+          "name": "Firebolt Orange",
+          "factory_code": "524",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 11,
+          "name": "Tangier Orange",
+          "factory_code": "516",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 12,
+          "name": "Crimson Red",
+          "factory_code": "514",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 13,
+          "name": "Frost White",
+          "factory_code": "521",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 14,
+          "name": "Grapefruit Yellow",
+          "factory_code": "525",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 15,
+          "name": "Wheatland Yellow",
+          "factory_code": "519",
+          "factory_code_status": "printed"
+        }
+      ],
+      "limitations": [
+        "The matrix publishes conventional and special two-tone applicability separately. This availability list uses the source's solid-color codes; two-tone structure is retained as source context and is not flattened into additional colors."
+      ]
+    },
+    {
+      "year": 1973,
+      "audit_status": "verified_complete_solid_palette",
+      "source": {
+        "source_id": "gm-heritage-1973-chevrolet-suburban",
+        "title": "1973 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          27,
+          28
+        ],
+        "page_locator": "PDF page 27, printed page 26, color chart; PDF page 28 contains the two-tone diagrams.",
+        "revision": "Model-year vehicle information kit; governing chart revision is not printed.",
+        "artifact_sha256": "3085f54e1a286705859f0c2005cb108e9dcaba394704895274a6a86d1331b09c",
+        "artifact_bytes": 937353,
+        "pdf_page_count": 29,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "3085f54e1a286705859f0c2005cb108e9dcaba394704895274a6a86d1331b09c",
+        "bytes": 937353,
+        "archive_asset_name": "1973-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "colors": [
+        {
+          "order": 1,
+          "name": "Skyline Blue (Light)",
+          "factory_code": "503",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 2,
+          "name": "Hawaiian Blue (Medium)",
+          "factory_code": "510",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 3,
+          "name": "Catalina Blue (Dark)",
+          "factory_code": "508",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 4,
+          "name": "Lime Green",
+          "factory_code": "517",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 5,
+          "name": "Moss Olive",
+          "factory_code": "562",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 6,
+          "name": "Glenwood Green (Dark)",
+          "factory_code": "505",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 7,
+          "name": "Spanish Gold",
+          "factory_code": "511",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 8,
+          "name": "Sunset Gold",
+          "factory_code": "527",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 9,
+          "name": "Burnt Orange",
+          "factory_code": "515",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 10,
+          "name": "Crimson Red",
+          "factory_code": "514",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 11,
+          "name": "Desert Sand",
+          "factory_code": "528",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 12,
+          "name": "Sport Silver",
+          "factory_code": "507",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 13,
+          "name": "Mojave Tan",
+          "factory_code": "555",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 14,
+          "name": "Marine Turquoise",
+          "factory_code": "568",
+          "factory_code_status": "printed"
+        },
+        {
+          "order": 15,
+          "name": "Frost White",
+          "factory_code": "521",
+          "factory_code_status": "printed"
+        }
+      ],
+      "limitations": [
+        "The solid-color list is complete. The source's two-tone diagrams remain scheme evidence and are not flattened into additional standalone color rows."
+      ]
+    },
+    {
+      "year": 1974,
+      "audit_status": "verified_complete_solid_palette_with_scheme_codes",
+      "source": {
+        "source_id": "gm-heritage-1974-chevrolet-suburban",
+        "title": "1974 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          11,
+          12
+        ],
+        "page_locator": "PDF page 11, printed page 10, solid, conventional two-tone, and special two-tone color chart; PDF page 12, paint diagrams.",
+        "revision": "Model-year vehicle information kit; governing chart revision is not printed.",
+        "artifact_sha256": "85bf5bed41de4d41a3f3134f914e50984c154b2405f86fcd1be785515d7f180c",
+        "artifact_bytes": 997638,
+        "pdf_page_count": 29,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "85bf5bed41de4d41a3f3134f914e50984c154b2405f86fcd1be785515d7f180c",
+        "bytes": 997638,
+        "archive_asset_name": "1974-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "colors": [
+        {
+          "order": 1,
+          "name": "Granada Beige",
+          "factory_code": "555",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "560",
+          "special_two_tone_code": "561"
+        },
+        {
+          "order": 2,
+          "name": "Skyline Blue Light",
+          "factory_code": "503",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "539",
+          "special_two_tone_code": "591"
+        },
+        {
+          "order": 3,
+          "name": "Hawaiian Blue Medium",
+          "factory_code": "510",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "542",
+          "special_two_tone_code": "586"
+        },
+        {
+          "order": 4,
+          "name": "Catalina Blue Dark",
+          "factory_code": "508",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "578",
+          "special_two_tone_code": "592"
+        },
+        {
+          "order": 5,
+          "name": "Grecian Bronze",
+          "factory_code": "506",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "556",
+          "special_two_tone_code": "594"
+        },
+        {
+          "order": 6,
+          "name": "Spanish Gold",
+          "factory_code": "511",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "536",
+          "special_two_tone_code": "567"
+        },
+        {
+          "order": 7,
+          "name": "Sunset Gold",
+          "factory_code": "527",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "537",
+          "special_two_tone_code": "587"
+        },
+        {
+          "order": 8,
+          "name": "Killarney Green",
+          "factory_code": "568",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "569",
+          "special_two_tone_code": "570"
+        },
+        {
+          "order": 9,
+          "name": "Lime Green",
+          "factory_code": "517",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "547",
+          "special_two_tone_code": "590"
+        },
+        {
+          "order": 10,
+          "name": "Glenwood Green Dark",
+          "factory_code": "505",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "535",
+          "special_two_tone_code": "585"
+        },
+        {
+          "order": 11,
+          "name": "Moss Olive",
+          "factory_code": "562",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "563",
+          "special_two_tone_code": "566"
+        },
+        {
+          "order": 12,
+          "name": "Crimson Red",
+          "factory_code": "514",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "544",
+          "special_two_tone_code": "582"
+        },
+        {
+          "order": 13,
+          "name": "Rosedale Red Dark",
+          "factory_code": "515",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "541",
+          "special_two_tone_code": "593"
+        },
+        {
+          "order": 14,
+          "name": "Desert Sand",
+          "factory_code": "528",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": "538",
+          "special_two_tone_code": "588"
+        },
+        {
+          "order": 15,
+          "name": "Frost White",
+          "factory_code": "521",
+          "factory_code_status": "printed",
+          "conventional_two_tone_code": null,
+          "special_two_tone_code": null
+        }
+      ],
+      "limitations": [
+        "The availability matrix uses only the first, solid-paint code. Conventional and special two-tone codes remain attached to their source color as scheme metadata."
+      ]
+    },
+    {
+      "year": 1975,
+      "audit_status": "verified_complete_solid_palette_with_two_tone_context",
+      "source": {
+        "source_id": "gm-heritage-1975-chevrolet-suburban",
+        "title": "1975 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          6,
+          7
+        ],
+        "page_locator": "PDF pages 6-7, solid and two-tone exterior color chart and diagrams.",
+        "revision": "Model-year vehicle information kit; governing chart revision is not printed.",
+        "artifact_sha256": "92f1cbcdc7f9da565b687673f2191d417fdea8cfc23fe97ab577fe6b34a19319",
+        "artifact_bytes": 924820,
+        "pdf_page_count": 28,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "92f1cbcdc7f9da565b687673f2191d417fdea8cfc23fe97ab577fe6b34a19319",
+        "bytes": 924820,
+        "archive_asset_name": "1975-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "colors": [
+        {
+          "order": 1,
+          "name": "Skyline Blue Light",
+          "factory_code": "20",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 2,
+          "name": "Hawaiian Blue Medium",
+          "factory_code": "23",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 3,
+          "name": "Catalina Blue Dark Metallic",
+          "factory_code": "25",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 4,
+          "name": "Grecian Bronze",
+          "factory_code": "61",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 5,
+          "name": "Buckskin",
+          "factory_code": "62",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 6,
+          "name": "Yuba Gold Medium Metallic",
+          "factory_code": "53",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 7,
+          "name": "Moss Gold Dark Metallic",
+          "factory_code": "81",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 8,
+          "name": "Willoway Green Light",
+          "factory_code": "43",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 9,
+          "name": "Spring Green Medium Metallic",
+          "factory_code": "41",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 10,
+          "name": "Glenwood Green Dark",
+          "factory_code": "46",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 11,
+          "name": "Crimson Red Medium",
+          "factory_code": "73",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 12,
+          "name": "Rosedale Red Dark",
+          "factory_code": "71",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 13,
+          "name": "Saratoga Silver Metallic",
+          "factory_code": "17",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 14,
+          "name": "Santa Fe Tan",
+          "factory_code": "60",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 15,
+          "name": "Frost White",
+          "factory_code": "12",
+          "factory_code_status": "printed",
+          "two_tone_secondary": null
+        }
+      ],
+      "limitations": [
+        "The availability matrix records the complete solid-color palette. The source pairs each nonwhite color with Frost White 12 in the two-tone column; that relationship remains scheme metadata."
+      ]
+    },
+    {
+      "year": 1976,
+      "audit_status": "verified_complete_solid_palette_with_two_tone_context",
+      "source": {
+        "source_id": "gm-heritage-1976-chevrolet-suburban",
+        "title": "1976 Chevrolet Suburban Vehicle Information Kit",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Suburban.pdf",
+        "pdf_pages": [
+          6,
+          7
+        ],
+        "page_locator": "PDF pages 6-7, solid and two-tone exterior color chart and diagrams dated January 16, 1976.",
+        "revision": "Color chart dated January 16, 1976.",
+        "artifact_sha256": "cf4df41f720baf898e4caff22fa29760621ccdd614ca5e69867c22cbc51868c1",
+        "artifact_bytes": 1044844,
+        "pdf_page_count": 28,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+        "sha256": "cf4df41f720baf898e4caff22fa29760621ccdd614ca5e69867c22cbc51868c1",
+        "bytes": 1044844,
+        "archive_asset_name": "1976-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+      },
+      "colors": [
+        {
+          "order": 1,
+          "name": "Skyline Blue Light",
+          "factory_code": "20",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 2,
+          "name": "Hawaiian Blue Medium",
+          "factory_code": "23",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 3,
+          "name": "Catalina Blue Dark Metallic",
+          "factory_code": "25",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 4,
+          "name": "Grecian Bronze",
+          "factory_code": "61",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 5,
+          "name": "Buckskin",
+          "factory_code": "62",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 6,
+          "name": "Yuba Gold Medium Metallic",
+          "factory_code": "53",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 7,
+          "name": "Moss Gold Dark Metallic",
+          "factory_code": "81",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 8,
+          "name": "Willoway Green Light",
+          "factory_code": "43",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 9,
+          "name": "Spring Green Medium Metallic",
+          "factory_code": "41",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 10,
+          "name": "Glenwood Green Dark",
+          "factory_code": "46",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 11,
+          "name": "Crimson Red Medium",
+          "factory_code": "73",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 12,
+          "name": "Rosedale Red Dark",
+          "factory_code": "71",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 13,
+          "name": "Saratoga Silver Metallic",
+          "factory_code": "17",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 14,
+          "name": "Santa Fe Tan",
+          "factory_code": "60",
+          "factory_code_status": "printed",
+          "two_tone_secondary": "Frost White 12"
+        },
+        {
+          "order": 15,
+          "name": "Frost White",
+          "factory_code": "12",
+          "factory_code_status": "printed",
+          "two_tone_secondary": null
+        }
+      ],
+      "limitations": [
+        "The availability matrix records the complete solid-color palette. The source pairs each nonwhite color with Frost White 12 in the two-tone column; that relationship remains scheme metadata."
+      ]
+    }
+  ],
+  "explicit_no_chart_years": [
+    {
+      "year": 1963,
+      "source_id": "gm-heritage-1963-chevrolet-suburban",
+      "title": "1963 Chevrolet Suburban Vehicle Information Kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1963-Chevrolet-Suburban.pdf",
+      "finding": "The kit identifies the C1406 Carryall and directs the reader to a Colors section, but the section is absent. A general truck refinish sheet is not model-specific availability proof.",
+      "artifact_sha256": "03054f329c1739f8d2aa20057a25bc933d8482f0139c4c07dec723ed025e94a0",
+      "artifact_bytes": 1700864,
+      "pdf_page_count": 10,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "03054f329c1739f8d2aa20057a25bc933d8482f0139c4c07dec723ed025e94a0",
+      "bytes": 1700864,
+      "archive_asset_name": "1963-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "year": 1970,
+      "source_id": "gm-heritage-1970-chevrolet-suburban",
+      "title": "1970 Chevrolet Suburban Vehicle Information Kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Suburban.pdf",
+      "finding": "The kit cross-references an exterior Color and Trim chart that is absent. General truck paint charts are not promoted to Suburban availability.",
+      "artifact_sha256": "034533fef5679a22f1ad8fa179fb27f0dd41a9c050cfd6560322c636a9db3abd",
+      "artifact_bytes": 1526015,
+      "pdf_page_count": 10,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "034533fef5679a22f1ad8fa179fb27f0dd41a9c050cfd6560322c636a9db3abd",
+      "bytes": 1526015,
+      "archive_asset_name": "1970-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "year": 1971,
+      "source_id": "gm-heritage-1971-chevrolet-suburban",
+      "title": "1971 Chevrolet Suburban Vehicle Information Kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Suburban.pdf",
+      "finding": "The kit cross-references a color chart that is absent. Blazer and general truck palettes are not promoted to Suburban availability.",
+      "artifact_sha256": "54e322d01cc0f28b8b6245a390db29513370fa172aa32216f54594ce584260e3",
+      "artifact_bytes": 683978,
+      "pdf_page_count": 17,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-suburban-vehicle-information-kit-gm.pdf",
+      "sha256": "54e322d01cc0f28b8b6245a390db29513370fa172aa32216f54594ce584260e3",
+      "bytes": 683978,
+      "archive_asset_name": "1971-chevrolet-suburban-vehicle-information-kit-gm.pdf"
+    }
+  ],
+  "supplemental_sources": [
+    {
+      "year": 1963,
+      "source_id": "gm-heritage-1963-chevrolet-truck",
+      "title": "1963 Chevrolet Truck Vehicle Information Kit",
+      "source_type": "vehicle_information_kit",
+      "publisher": "General Motors",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1963-Chevrolet-Truck.pdf",
+      "artifact_sha256": "a9388da4129296a00935a715fbf5e733b3cbdb2269b4a70a8a75827b0f49c08e",
+      "artifact_bytes": 4439704,
+      "pdf_page_count": 107,
+      "evidence_limit": "All 107 pages were reviewed. Pickup model sheets refer to a Colors section, but the retained kit contains no color chart, chips, names, or codes and does not establish Suburban availability.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "sha256": "a9388da4129296a00935a715fbf5e733b3cbdb2269b4a70a8a75827b0f49c08e",
+      "bytes": 4439704,
+      "archive_asset_name": "1963-chevrolet-truck-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "year": 1963,
+      "source_id": "chevrolet-service-news-1963-truck-refinish-extract",
+      "title": "1963 Chevrolet Service News truck refinish palette",
+      "source_type": "service_news_pdf",
+      "publisher": "General Motors",
+      "carrier": "Corvanatics and the Internet Archive",
+      "url": "http://www.corvair.org/chapters/corvanatics/files/resources/63-PntRefCodes.pdf",
+      "retrieval_url": "https://web.archive.org/web/20171215004756id_/http://www.corvair.org/chapters/corvanatics/files/resources/63-PntRefCodes.pdf",
+      "parent_source_id": "chevrolet-service-news-volume-34-no-9",
+      "artifact_sha256": "f4b7ff7f16a25af1d60a6c657937b052d5add3998cbc3124bccd544c97efcce3",
+      "artifact_bytes": 66513,
+      "pdf_page_count": 2,
+      "evidence_limit": "General Chevrolet truck refinish reference only; no Suburban-specific applicability proof.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-service-news-paint-refinish-codes.pdf",
+      "sha256": "f4b7ff7f16a25af1d60a6c657937b052d5add3998cbc3124bccd544c97efcce3",
+      "bytes": 66513,
+      "archive_asset_name": "1963-chevrolet-service-news-paint-refinish-codes.pdf"
+    },
+    {
+      "year": 1963,
+      "source_id": "chevrolet-service-news-volume-34-no-9",
+      "title": "Chevrolet Service News, volume 34, number 9, October 1962",
+      "source_type": "service_news_pdf",
+      "publisher": "General Motors",
+      "carrier": "Corvanatics and the Internet Archive",
+      "url": "https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
+      "retrieval_url": "https://web.archive.org/web/20221017094958id_/https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
+      "artifact_sha256": "a498ab3c02afd3186ade6e5edeabc3724346b8b3a2a1ef450f2a3901b65a896e",
+      "artifact_bytes": 25963347,
+      "pdf_page_count": 48,
+      "evidence_limit": "Complete 48-page parent issue for the two-page 1963 refinish extract. Its general Chevrolet Truck and Corvair 95 chart does not prove Suburban-specific availability.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1962-october-chevrolet-service-news-vol-34-no-9.pdf",
+      "sha256": "a498ab3c02afd3186ade6e5edeabc3724346b8b3a2a1ef450f2a3901b65a896e",
+      "bytes": 25963347,
+      "archive_asset_name": "1962-october-chevrolet-service-news-vol-34-no-9.pdf"
+    },
+    {
+      "year": 1963,
+      "source_id": "corvanatics-corvair95-paint-trim-refinish-codes",
+      "title": "Corvair 95 Paint and Trim and Chevrolet Service News refinish-code compilation",
+      "source_type": "reference_compilation",
+      "publisher": "Corvanatics",
+      "carrier": "Corvanatics and the Internet Archive",
+      "url": "https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf",
+      "retrieval_url": "https://web.archive.org/web/20240519115026id_/https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf",
+      "artifact_sha256": "083bbdc28cd5e2e494a4285fbd786487f081a48a62d8edeab49fb3d0df3fbca5",
+      "artifact_bytes": 315056,
+      "pdf_page_count": 11,
+      "evidence_limit": "Eleven-page 1961-1965 compilation. The 1963 pages corroborate the general Truck and Corvair 95 refinish list but do not establish Suburban-specific availability.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/corvair95-paint-trim-refinish-codes.pdf",
+      "sha256": "083bbdc28cd5e2e494a4285fbd786487f081a48a62d8edeab49fb3d0df3fbca5",
+      "bytes": 315056,
+      "archive_asset_name": "corvair95-paint-trim-refinish-codes.pdf"
+    },
+    {
+      "year": 1970,
+      "source_id": "autocolorlibrary-1970-chevrolet-truck",
+      "title": "1970 Chevrolet Truck Ditzler color scans",
+      "source_type": "paint_chip_scan",
+      "publisher": "PPG Industries",
+      "carrier": "Auto Color Library",
+      "url": "https://www.autocolorlibrary.com/pages/1970-chevrolet-truck",
+      "image_urls": [
+        "https://cdn.shopify.com/s/files/1/0271/7931/9375/files/1970-chevrolettruck-pg01.jpg?9362",
+        "https://cdn.shopify.com/s/files/1/0271/7931/9375/files/1970-chevrolettruck-pg02.jpg?9362"
+      ],
+      "evidence_limit": "General Chevrolet truck exterior chart. The Suburban body codes appear only in an interior-color section, so exterior applicability is not established."
+    },
+    {
+      "year": 1971,
+      "source_id": "gm-heritage-1971-chevrolet-blazer",
+      "title": "1971 Chevrolet Blazer and full-size recreational-vehicle information kit",
+      "source_type": "vehicle_information_kit",
+      "publisher": "General Motors",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "artifact_sha256": "c956707f017b002cbd26995d57f66bc3b9446ae229030f494fcbd32847f9f7f0",
+      "artifact_bytes": 9145014,
+      "pdf_page_count": 64,
+      "evidence_limit": "The related full-size Blazer palette is comparison evidence only and is not promoted to 1971 Suburban availability.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf",
+      "sha256": "c956707f017b002cbd26995d57f66bc3b9446ae229030f494fcbd32847f9f7f0",
+      "bytes": 9145014,
+      "archive_asset_name": "1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf"
+    }
+  ]
+}

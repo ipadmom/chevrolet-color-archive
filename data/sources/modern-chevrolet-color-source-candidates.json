@@ -1,0 +1,3976 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-21T06:50:39Z",
+  "visibility": "public",
+  "dataset_kind": "source_provenance_candidates",
+  "scope": "United States Chevrolet exterior-color sources for model years 2008-2026, with directly verified palette rows for the strongest current sources.",
+  "summary": {
+    "source_count": 31,
+    "fleet_guide_document_count": 19,
+    "fleet_guide_model_years": {
+      "first": 2008,
+      "last": 2026,
+      "missing": []
+    },
+    "downloaded_complete_pdf_count": 19,
+    "downloaded_complete_pdf_bytes": 501183624,
+    "live_direct_official_fleet_guides": [
+      2025,
+      2026
+    ],
+    "official_document_archival_mirror_years": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "verified_palette_table_count": 44,
+    "verified_order_guide_sample_count": 1,
+    "highest_confidence_ingestion_ready_years": [
+      2025,
+      2026
+    ],
+    "document_complete_table_extraction_queue_years": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gm-fleet-guide-us-2008-v2",
+      "title": "2008 GM Fleet Guide V2",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2008-GM-Fleet-Guide-V2.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2008
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2007-09-28",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 121,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        25,
+        26,
+        54,
+        62,
+        63,
+        64,
+        69,
+        70,
+        77,
+        78,
+        83,
+        85,
+        86,
+        90,
+        91,
+        92,
+        96,
+        101,
+        102,
+        104,
+        106,
+        107,
+        108,
+        112,
+        113,
+        114,
+        115,
+        117,
+        118
+      ],
+      "local_file_path": "tmp/modern-color-sources/2008-gm-fleet-guide-v2-mirror.pdf",
+      "sha256": "d9bcb174998f30051e0da47f5cd4fe02eae1afa97af1d04b71f9c06689050ac7",
+      "bytes": 9543843,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-gm-fleet-guide-v2-mirror.pdf",
+      "pdf_page_count": 121,
+      "archive_asset_name": "2008-gm-fleet-guide-v2-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2009-v2",
+      "title": "2009 GM Fleet Guide V2",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2009-GM-Fleet-Guide-V2.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2009
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2008-11-04",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 139,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        32,
+        34,
+        35,
+        60,
+        70,
+        73,
+        74,
+        81,
+        82,
+        90,
+        95,
+        99,
+        103,
+        104,
+        105,
+        109,
+        110,
+        111,
+        115,
+        117,
+        119,
+        123,
+        124,
+        125,
+        131,
+        132,
+        133,
+        134,
+        136
+      ],
+      "local_file_path": "tmp/modern-color-sources/2009-gm-fleet-guide-v2-mirror.pdf",
+      "sha256": "402f99dddb300b7862315a90ec94b8e69416e71aa043141af0e7c23c8e39ae79",
+      "bytes": 11533063,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-gm-fleet-guide-v2-mirror.pdf",
+      "pdf_page_count": 139,
+      "archive_asset_name": "2009-gm-fleet-guide-v2-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2010",
+      "title": "2010 GM Fleet Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2010-GM-Fleet-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2010
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2009-06-22",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 116,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        31,
+        32,
+        54,
+        63,
+        64,
+        65,
+        71,
+        76,
+        77,
+        78,
+        79,
+        80,
+        84,
+        85,
+        86,
+        90,
+        91,
+        92,
+        96,
+        98,
+        100,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114
+      ],
+      "local_file_path": "tmp/modern-color-sources/2010-gm-fleet-guide-mirror.pdf",
+      "sha256": "a147136a27501ec69102030c0cbf3ef1ec90c59aa1caccd0e7c95510c86a3767",
+      "bytes": 10735575,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2010-gm-fleet-guide-mirror.pdf",
+      "pdf_page_count": 116,
+      "archive_asset_name": "2010-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2011",
+      "title": "2011 GM Fleet Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2011-GM-Fleet-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2011
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2010-05-17",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 102,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        31,
+        47,
+        51,
+        52,
+        53,
+        54,
+        61,
+        62,
+        63,
+        64,
+        65,
+        68,
+        69,
+        76,
+        82,
+        84,
+        86,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "local_file_path": "tmp/modern-color-sources/2011-gm-fleet-guide-mirror.pdf",
+      "sha256": "543beec48e1c5428e583f260e7e64bc20f50836825ee32295c0eedcd7f017f5c",
+      "bytes": 9708021,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-gm-fleet-guide-mirror.pdf",
+      "pdf_page_count": 102,
+      "archive_asset_name": "2011-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2012",
+      "title": "2012 GM Car & Truck Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2012-GM-Car-Truck-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2012
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2011-06-17",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 114,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        26,
+        28,
+        32,
+        42,
+        46,
+        48,
+        50,
+        52,
+        56,
+        59,
+        64,
+        67,
+        68,
+        77,
+        80,
+        84,
+        88,
+        92,
+        94,
+        96,
+        98,
+        99,
+        100
+      ],
+      "local_file_path": "tmp/modern-color-sources/2012-gm-car-truck-guide-mirror.pdf",
+      "sha256": "7dc20723b7a6147ac8b26cb900241ac90585d8ed65504ecff3a6572077533f3b",
+      "bytes": 8940620,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-gm-car-truck-guide-mirror.pdf",
+      "pdf_page_count": 114,
+      "archive_asset_name": "2012-gm-car-truck-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2013",
+      "title": "2013 GM Car & Truck Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2013-GM-Car-Truck-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2013
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2012-05-14",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 111,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        14,
+        18,
+        20,
+        30,
+        39,
+        40,
+        50,
+        52,
+        58
+      ],
+      "local_file_path": "tmp/modern-color-sources/2013-gm-car-truck-guide-mirror.pdf",
+      "sha256": "a980b93a1458969b0368d4a512bf9c17dfbbdca0fa0883d1071a4bd6256b50f4",
+      "bytes": 25115496,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-gm-car-truck-guide-mirror.pdf",
+      "pdf_page_count": 111,
+      "archive_asset_name": "2013-gm-car-truck-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2014",
+      "title": "2014 GM Fleet Car & Truck Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2014-GM-Fleet-Car-Truck-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2014
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2013-09-09",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 134,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        27,
+        29,
+        31,
+        35,
+        39,
+        52,
+        53,
+        55,
+        60,
+        61,
+        67,
+        75
+      ],
+      "local_file_path": "tmp/modern-color-sources/2014-gm-fleet-car-truck-guide-mirror.pdf",
+      "sha256": "aafeff44fa9f5c71493ec45db02b74a56e5f160bd6e89d936806e4e53d04676d",
+      "bytes": 24251962,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-gm-fleet-car-truck-guide-mirror.pdf",
+      "pdf_page_count": 134,
+      "archive_asset_name": "2014-gm-fleet-car-truck-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2015",
+      "title": "2015 GM Fleet Car & Truck Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2015-GM-Feet-Car-Truck-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2015
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2014-06-12",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 142,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        27,
+        29,
+        31,
+        35,
+        37,
+        48,
+        49,
+        50,
+        54,
+        55,
+        63,
+        65,
+        73,
+        75,
+        79,
+        85,
+        87,
+        94
+      ],
+      "local_file_path": "tmp/modern-color-sources/2015-gm-fleet-car-truck-guide-mirror.pdf",
+      "sha256": "730619c14a83c809f8a786e020391f89f92040bb502889dc0d10e41206cac41e",
+      "bytes": 28790965,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "The mirror filename preserves the host's 'Feet' typo; the PDF title is the GM Fleet guide."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-gm-fleet-car-truck-guide-mirror.pdf",
+      "pdf_page_count": 142,
+      "archive_asset_name": "2015-gm-fleet-car-truck-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2016-november",
+      "title": "2016 GM Fleet Guide, November Update",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2016-GM-Fleet-Guide-November-Update.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2016
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2015-11-25",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 148,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        26,
+        28,
+        30,
+        34,
+        36,
+        38,
+        40,
+        41,
+        52,
+        53,
+        54,
+        57,
+        60,
+        66,
+        68,
+        76,
+        78,
+        80,
+        84,
+        88,
+        90,
+        92,
+        100,
+        104,
+        106,
+        108,
+        112,
+        113,
+        114,
+        116,
+        120,
+        121,
+        123,
+        124,
+        125,
+        126
+      ],
+      "local_file_path": "tmp/modern-color-sources/2016-gm-fleet-guide-november-mirror.pdf",
+      "sha256": "f53f4f05585edc0bf529ee408d52f18a0bb770a28d1c1d0fb7458f34351ef578",
+      "bytes": 24673080,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-gm-fleet-guide-november-mirror.pdf",
+      "pdf_page_count": 148,
+      "archive_asset_name": "2016-gm-fleet-guide-november-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2017",
+      "title": "2017 GM Fleet Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/03/2017-GM-Fleet-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2017
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2016-12-22",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 152,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        31,
+        35,
+        37,
+        50,
+        59,
+        69,
+        71,
+        79,
+        81,
+        87,
+        91,
+        93,
+        95,
+        105,
+        111,
+        113
+      ],
+      "local_file_path": "tmp/modern-color-sources/2017-gm-fleet-guide-mirror.pdf",
+      "sha256": "0d4981b8fc8f20d087b76446c5a80fba9a5a798d6d7925fe41fb9e8c57de9e05",
+      "bytes": 20125688,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-gm-fleet-guide-mirror.pdf",
+      "pdf_page_count": 152,
+      "archive_asset_name": "2017-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2018",
+      "title": "2018 GM Fleet Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2021/03/2018-GM-Fleet-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2018
+      ],
+      "model_scope": "All Chevrolet cars, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2018-01-29",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 126,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        29,
+        32,
+        60,
+        65,
+        70,
+        75,
+        95,
+        97
+      ],
+      "local_file_path": "tmp/modern-color-sources/2018-gm-fleet-guide-mirror.pdf",
+      "sha256": "be48bfde2180a4182c9c62191da24fbe2903197eeb961bf443ffb59567e1372b",
+      "bytes": 10853752,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "The guide uses layouts that reduce text-extraction recall; candidate pages are a floor, not an exhaustive list."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-gm-fleet-guide-mirror.pdf",
+      "pdf_page_count": 126,
+      "archive_asset_name": "2018-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2019",
+      "title": "2019 GM Fleet Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2019/11/2019-GM-Fleet-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2019
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2019-02-07",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 130,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        25,
+        26,
+        27,
+        30,
+        32,
+        43,
+        44,
+        46,
+        48,
+        52,
+        55,
+        56,
+        64,
+        70,
+        71,
+        72,
+        77,
+        81,
+        83,
+        87,
+        93,
+        94,
+        97,
+        98,
+        101,
+        103,
+        105,
+        107,
+        108,
+        110,
+        111,
+        112,
+        113,
+        115
+      ],
+      "local_file_path": "tmp/modern-color-sources/2019-gm-fleet-guide-mirror.pdf",
+      "sha256": "4d5ae974de5331d48af54248f40abc7600c0c566d5f5d7f9be5a3f394f423d87",
+      "bytes": 10445916,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-gm-fleet-guide-mirror.pdf",
+      "pdf_page_count": 130,
+      "archive_asset_name": "2019-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2020",
+      "title": "2020 GM Fleet Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2019/11/2020-GM-Fleet-Guide.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2020
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2019-10-17",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 124,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        27,
+        28,
+        32,
+        34,
+        40,
+        41,
+        42,
+        47,
+        52,
+        58,
+        60,
+        68,
+        69,
+        74,
+        78,
+        82,
+        89,
+        90,
+        92,
+        93,
+        96,
+        98,
+        100,
+        103,
+        105,
+        107,
+        109,
+        111,
+        112,
+        113
+      ],
+      "local_file_path": "tmp/modern-color-sources/2020-gm-fleet-guide-mirror.pdf",
+      "sha256": "975934dbfafef814d92ed452071abca8020e591cbb519f74aa492f64c64442d8",
+      "bytes": 28938841,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; the original direct GM download URL was not recovered in this pass.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-gm-fleet-guide-mirror.pdf",
+      "pdf_page_count": 124,
+      "archive_asset_name": "2020-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2021-v3",
+      "title": "2021 GM Fleet Guide V3",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2021MY_GMFleetGuide_US_IPDF_FINAL_UPDATED_1006201.pdf",
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2020/11/2021-GM-Fleet-Guide-V3.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2021
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2020-10-07",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 110,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        27,
+        28,
+        32,
+        33,
+        34,
+        38,
+        40,
+        44,
+        50,
+        52,
+        57,
+        58,
+        65,
+        69,
+        73,
+        75,
+        80,
+        81,
+        83,
+        84,
+        87,
+        89,
+        91,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "local_file_path": "tmp/modern-color-sources/2021-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "92aaec592e01b0dbf5aca290a34ea2f96908a7324fcd475446af09df8fa7ee1c",
+      "bytes": 14541647,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The complete bytes were retrieved from an archival mirror because the historical GM URL is no longer a reliable live download.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2021-gm-fleet-guide-v3-mirror.pdf",
+      "pdf_page_count": 110,
+      "archive_asset_name": "2021-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2022-v6",
+      "title": "2022 GM Fleet Guide V6",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/03-04-22/2022MY-GM-Fleet-Guide-US-iPDF-Updated-022822.pdf",
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2022/03/2022-GM-Fleet-Guide-V6.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2022
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide.",
+      "revision_or_document_date": "2022-02-28",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 119,
+      "page_locator": "Machine-detected Chevrolet exterior-color candidate pages in the complete PDF.",
+      "color_table_candidate_pdf_pages": [
+        16,
+        17,
+        21,
+        22,
+        26,
+        27,
+        30,
+        32,
+        35,
+        43,
+        45,
+        50,
+        51,
+        57,
+        62,
+        64,
+        70,
+        71,
+        75,
+        76,
+        79,
+        81,
+        83,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "local_file_path": "tmp/modern-color-sources/2022-gm-fleet-guide-v6-mirror.pdf",
+      "sha256": "265ab13a565ccb5c733ce27af2b03f0ffe3d38bb196fd222650e2fff2043375c",
+      "bytes": 20549478,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The complete bytes were retrieved from an archival mirror because the historical GM URL is no longer a reliable live download.",
+        "Candidate page detection is not yet a table-level completeness assertion."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-gm-fleet-guide-v6-mirror.pdf",
+      "pdf_page_count": 119,
+      "archive_asset_name": "2022-gm-fleet-guide-v6-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2023-v3",
+      "title": "2023 GM Fleet Guide V3",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2023/04/2023-GM-Fleet-Guide-v3.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2023,
+        2024
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide, plus explicitly labeled early 2024 entries.",
+      "revision_or_document_date": "2022-12-20",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 121,
+      "page_locator": "Chevrolet exterior-color pages are enumerated below; page labels, not the cover year, control model year.",
+      "color_table_candidate_pdf_pages": [
+        15,
+        16,
+        19,
+        24,
+        28,
+        29,
+        32,
+        35,
+        43,
+        45,
+        50,
+        51,
+        57,
+        62,
+        66,
+        72,
+        73,
+        77,
+        78,
+        81,
+        83,
+        85,
+        88,
+        89,
+        90,
+        91,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "local_file_path": "tmp/modern-color-sources/2023-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "697423b1c274d8fe30f9e58fc5dc9ecf365d119f7f1155f54dc4c3fd9d8484ef",
+      "bytes": 17883996,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The GM-authored document is hosted by an archival mirror; a stable direct GM URL for this exact V3 byte revision was not recovered.",
+        "PDF page 19 is labeled 2024 Silverado EV; pages 77-78 are labeled 2024 Low Cab Forward."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror.pdf",
+      "pdf_page_count": 121,
+      "archive_asset_name": "2023-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "title": "2024 GM Envolve Fleet Guide V3",
+      "publisher": "General Motors / GM Envolve",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": null,
+      "historical_official_url": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+      "retrieval_url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2023,
+        2024,
+        2025
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide, with carryover and advance-model-year pages labeled in the document.",
+      "revision_or_document_date": "2023-11-20",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 114,
+      "page_locator": "Chevrolet exterior-color pages are enumerated below; page labels, not the cover year, control model year.",
+      "color_table_candidate_pdf_pages": [
+        17,
+        20,
+        27,
+        31,
+        32,
+        36,
+        37,
+        40,
+        47,
+        49,
+        53,
+        54,
+        61,
+        66,
+        70,
+        76,
+        77,
+        82,
+        83,
+        84,
+        87,
+        89,
+        91,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "local_file_path": "tmp/modern-color-sources/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The current historical GM URL redirects instead of serving this complete byte revision; the complete GM-authored PDF was retrieved from an archival mirror.",
+        "A Wayback replay of the historical GM URL returned only a malformed 1 MiB partial and is not used as evidence.",
+        "PDF page 49 is labeled 2023 Traverse; pages 82-84 are labeled 2025 Low Cab Forward."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "title": "2025 GM Fleet Guide",
+      "publisher": "General Motors / GM Envolve",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/25GMFG-DECEMBER.pdf",
+      "retrieval_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/25GMFG-DECEMBER.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2025,
+        2026
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide, plus explicitly labeled 2026 Low Cab Forward pages.",
+      "revision_or_document_date": "2024-12-11",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 179,
+      "page_locator": "Chevrolet exterior-color pages are enumerated below; verified palette rows use exact page locators.",
+      "color_table_candidate_pdf_pages": [
+        25,
+        26,
+        32,
+        35,
+        36,
+        42,
+        45,
+        68,
+        69,
+        71,
+        76,
+        78,
+        81,
+        82,
+        108,
+        112,
+        116,
+        118,
+        122,
+        124,
+        125,
+        126,
+        127,
+        135,
+        137,
+        139,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157
+      ],
+      "local_file_path": "tmp/modern-color-sources/2025-gm-fleet-guide.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Printed palettes are guide-listed unions and vary by trim; the Online Order Guide controls detailed restrictions.",
+        "Pages 125-127 are explicitly labeled 2026 Low Cab Forward and must not be assigned to model year 2025.",
+        "Some SEO special-order colors are not enumerated in the printed palette."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "title": "2026 GM Fleet Guide",
+      "publisher": "General Motors / GM Envolve",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "fleet_guide_pdf",
+      "direct_official_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+      "retrieval_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2026,
+        2027
+      ],
+      "model_scope": "All Chevrolet cars, electric vehicles, SUVs, trucks, vans, and specialty vehicles included in the guide, plus explicitly labeled 2027 Low Cab Forward pages.",
+      "revision_or_document_date": "2026-04-01",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 184,
+      "page_locator": "Chevrolet exterior-color pages are enumerated below; verified palette rows use exact page locators.",
+      "color_table_candidate_pdf_pages": [
+        37,
+        38,
+        39,
+        45,
+        48,
+        56,
+        57,
+        80,
+        81,
+        83,
+        88,
+        90,
+        93,
+        94,
+        120,
+        124,
+        128,
+        136,
+        138,
+        139,
+        140,
+        141,
+        149,
+        151,
+        153,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171
+      ],
+      "local_file_path": "tmp/modern-color-sources/2026-gm-fleet-guide.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Printed palettes are guide-listed unions and vary by trim; the Online Order Guide controls detailed restrictions.",
+        "Pages 139-141 are explicitly labeled 2027 Low Cab Forward and must not be assigned to model year 2026.",
+        "Some SEO special-order colors are not enumerated in the printed palette."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "source_id": "gm-online-order-guide-us-current",
+      "title": "GM Online Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "interactive_order_guide_api",
+      "direct_official_url": "https://www.gmfleetorderguide.com/",
+      "retrieval_url": "https://www.gmfleetorderguide.com/",
+      "landing_url": "https://www.gmfleet.com/resources/guides-and-manuals",
+      "market": "United States",
+      "model_year_scope": [
+        2025,
+        2026,
+        2027
+      ],
+      "model_scope": "Current Chevrolet Car, Chevrolet Truck, and Chevrolet Electric order-guide entries.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": null,
+      "page_locator": "PublicLogin, then api/Vehicles/ByBrand/{brand_id}/1/en-us and api/PullDown/GetColorAndTrim/{vehicle_id}/en-us.",
+      "api_base_url": "https://eog-api.musea2.azure.ext.gm.com",
+      "api_brand_ids": {
+        "chevrolet_car": "3188c7ab-0fc9-41e9-9b07-12499ce42d87",
+        "chevrolet_truck": "77450ee3-dba7-431a-ad58-098f1ebd9f35",
+        "chevrolet_electric": "d6ecd3ac-84a9-41ac-a58e-0363710b23f4"
+      },
+      "verified_vehicle_examples": [
+        {
+          "model_year": 2025,
+          "model": "Tahoe Retail and Fleet",
+          "vehicle_id": 22944
+        },
+        {
+          "model_year": 2026,
+          "model": "Tahoe Retail and Fleet",
+          "vehicle_id": 23232
+        },
+        {
+          "model_year": 2025,
+          "model": "Equinox EV",
+          "vehicle_id": 23098
+        },
+        {
+          "model_year": 2026,
+          "model": "Equinox EV",
+          "vehicle_id": 23159
+        }
+      ],
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "application/json and text/html",
+      "limitations": [
+        "The public API is mutable and requires a short-lived bearer token from api/sso/PublicLogin/.",
+        "The current public catalog returned model years 2025-2027 only; it did not expose 2008-2024.",
+        "This is an observed application API, not a published stability contract."
+      ]
+    },
+    {
+      "source_id": "chevrolet-ebrochure-us-2022-tahoe",
+      "title": "2022 Chevrolet Tahoe eBrochure",
+      "publisher": "Chevrolet",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "consumer_brochure_pdf",
+      "direct_official_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/08-pdf/2022-chevrolet-tahoe-ebrochure.pdf",
+      "retrieval_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/08-pdf/2022-chevrolet-tahoe-ebrochure.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2022
+      ],
+      "model_scope": "Chevrolet Tahoe, by trim.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T18:22:52Z",
+      "page_count": 27,
+      "page_locator": "PDF pages 8, 10, 12, 14, 16, and 18 for LS, LT, RST, Z71, Premier, and High Country palettes.",
+      "local_file_path": "tmp/modern-color-sources/2022-chevrolet-tahoe-ebrochure.pdf",
+      "sha256": "e9ae0dcf9355564fbdf34dfc09aa07d57d80983dd4350d8ccacc36f43856a8e1",
+      "bytes": 6929934,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; trim-level restrictions remain recorded in the qualified palette table."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-chevrolet-tahoe-ebrochure.pdf",
+      "pdf_page_count": 27,
+      "archive_asset_name": "2022-chevrolet-tahoe-ebrochure.pdf"
+    },
+    {
+      "source_id": "chevrolet-ebrochure-us-2023-colorado",
+      "title": "2023 Chevrolet Colorado eBrochure",
+      "publisher": "Chevrolet",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "consumer_brochure_pdf",
+      "direct_official_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-colorado-ebrochure.pdf",
+      "retrieval_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-colorado-ebrochure.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2023
+      ],
+      "model_scope": "Chevrolet Colorado, by trim.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T18:22:54Z",
+      "page_count": 31,
+      "page_locator": "PDF pages 13, 15, 17, 19, and 21 for WT, LT, Trail Boss, Z71, and ZR2 palettes.",
+      "local_file_path": "tmp/modern-color-sources/2023-chevrolet-colorado-ebrochure.pdf",
+      "sha256": "941d24b627ce7b660d3dec2d85c010abd91a3a1b3218ff7a3016b056c7497c59",
+      "bytes": 4426440,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; trim-level restrictions remain recorded in the qualified palette table."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-colorado-ebrochure.pdf",
+      "pdf_page_count": 31,
+      "archive_asset_name": "2023-chevrolet-colorado-ebrochure.pdf"
+    },
+    {
+      "source_id": "chevrolet-ebrochure-us-2023-trailblazer",
+      "title": "2023 Chevrolet Trailblazer eBrochure",
+      "publisher": "Chevrolet",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "consumer_brochure_pdf",
+      "direct_official_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/10-pdf/2023-chevrolet-trailblazer-ebrochure.pdf",
+      "retrieval_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/10-pdf/2023-chevrolet-trailblazer-ebrochure.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2023
+      ],
+      "model_scope": "Chevrolet Trailblazer, by trim.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": null,
+      "page_locator": "Colors/Features section; exact page offsets require a fresh successful PDF fetch.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Search extraction confirmed an official brochure and a partial palette, but the endpoint failed on the final open; do not ingest as a complete table yet."
+      ]
+    },
+    {
+      "source_id": "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
+      "title": "2023 Chevrolet Silverado HD Commercial eBrochure",
+      "publisher": "Chevrolet",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "commercial_brochure_pdf",
+      "direct_official_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "retrieval_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2023
+      ],
+      "model_scope": "Chevrolet Silverado 2500 HD and 3500 HD commercial configurations.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T18:22:56Z",
+      "page_count": 32,
+      "page_locator": "PDF page 10, exterior colors.",
+      "local_file_path": "tmp/modern-color-sources/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "sha256": "add78758e31ea729e43593ad231eb4d3920548d89e1b03eff68f7650d4caf0b3",
+      "bytes": 5447116,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; model and trim restrictions remain recorded in the qualified palette table."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "pdf_page_count": 32,
+      "archive_asset_name": "2023-chevrolet-silverado-hd-commercial-ebrochure.pdf"
+    },
+    {
+      "source_id": "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
+      "title": "2023 Chevrolet Commercial Silverado 4500 HD, 5500 HD and 6500 HD eBrochure",
+      "publisher": "Chevrolet",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "commercial_brochure_pdf",
+      "direct_official_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "retrieval_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/11-pdf/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2023
+      ],
+      "model_scope": "Chevrolet Silverado 4500 HD, 5500 HD, and 6500 HD chassis cabs.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T18:22:57Z",
+      "page_count": 23,
+      "page_locator": "PDF page 7, exterior colors.",
+      "local_file_path": "tmp/modern-color-sources/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "sha256": "ca1c88edd10c30151a5533e6da2f8f5cfc8b1b8a4fb25f7de9c0535d596bc836",
+      "bytes": 2603896,
+      "content_type": "application/pdf",
+      "limitations": [
+        "The retained complete PDF was fetched from the recorded Chevrolet endpoint and rehashed locally; chassis-cab applicability remains recorded in the qualified palette table."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "pdf_page_count": 23,
+      "archive_asset_name": "2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf"
+    },
+    {
+      "source_id": "chevrolet-media-us-2024-equinox-fact-sheet",
+      "title": "2024 Chevrolet Equinox Fact Sheet",
+      "publisher": "Chevrolet Media",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "media_fact_sheet_pdf",
+      "direct_official_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Equinox/2024/2024-Chevrolet-Equinox-110723.pdf",
+      "retrieval_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Equinox/2024/2024-Chevrolet-Equinox-110723.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2024
+      ],
+      "model_scope": "Chevrolet Equinox.",
+      "revision_or_document_date": "2023-11-07",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 1,
+      "page_locator": "PDF page 1, new-for-2024 exterior colors.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Delta source only; it names Riptide Blue Metallic and Lakeshore Blue Metallic as new, not the full palette."
+      ]
+    },
+    {
+      "source_id": "chevrolet-media-us-2024-corvette-stingray-fact-sheet",
+      "title": "2024 Chevrolet Corvette Stingray Fact Sheet",
+      "publisher": "Chevrolet Media",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "media_fact_sheet_pdf",
+      "direct_official_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Cars/Corvette/2024/2024-Chevrolet-Corvette-Stingray.pdf",
+      "retrieval_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Cars/Corvette/2024/2024-Chevrolet-Corvette-Stingray.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2024
+      ],
+      "model_scope": "Chevrolet Corvette Stingray.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 1,
+      "page_locator": "PDF page 1, new exterior colors.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Delta source only; it names Riptide Blue Metallic, Cacti Green, and Sea Wolf Gray Tricoat as new, not the full palette."
+      ]
+    },
+    {
+      "source_id": "chevrolet-media-us-2024-silverado-zr2-fact-sheet",
+      "title": "2024 Chevrolet Silverado ZR2 Fact Sheet",
+      "publisher": "Chevrolet Media",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "media_fact_sheet_pdf",
+      "direct_official_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Silverado/2024/2024-Chevrolet-Silverado-ZR2.pdf",
+      "retrieval_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Silverado/2024/2024-Chevrolet-Silverado-ZR2.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2024
+      ],
+      "model_scope": "Chevrolet Silverado ZR2.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 1,
+      "page_locator": "PDF page 1, new exterior colors.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Delta source only; it names Lakeshore Blue Metallic and Slate Gray Metallic as new, not the full palette."
+      ]
+    },
+    {
+      "source_id": "chevrolet-media-us-2023-traverse-fact-sheet",
+      "title": "2023 Chevrolet Traverse Fact Sheet",
+      "publisher": "Chevrolet Media",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "media_fact_sheet_pdf",
+      "direct_official_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Traverse/2023/2023-Chevrolet-Traverse.pdf",
+      "retrieval_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Traverse/2023/2023-Chevrolet-Traverse.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2023
+      ],
+      "model_scope": "Chevrolet Traverse.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": 1,
+      "page_locator": "PDF page 1, new exterior colors.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "application/pdf",
+      "limitations": [
+        "Delta source only; it names Radiant Red Tintcoat and Sterling Gray Metallic as new, not the full palette."
+      ]
+    },
+    {
+      "source_id": "chevrolet-news-us-2022-tahoe-suburban-technology",
+      "title": "More Technology Coming to 2022 Chevy Tahoe and Suburban",
+      "publisher": "Chevrolet Newsroom",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "official_news_page",
+      "direct_official_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/sep/0927-technology.html",
+      "retrieval_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2021/sep/0927-technology.html",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2022
+      ],
+      "model_scope": "Chevrolet Tahoe and Suburban.",
+      "revision_or_document_date": "2021-09-27",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": null,
+      "page_locator": "Body paragraph listing three new exterior colors.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "text/html",
+      "limitations": [
+        "Delta source only; it names Evergreen Gray Metallic, Auburn Metallic, and Dark Ash Metallic as new, not the full palette."
+      ]
+    },
+    {
+      "source_id": "chevrolet-news-us-2025-tahoe-suburban",
+      "title": "New 2025 Chevrolet Tahoe and Suburban",
+      "publisher": "Chevrolet Newsroom",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "official_news_page",
+      "direct_official_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/nov/1129-tahoe-suburban.html",
+      "retrieval_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/nov/1129-tahoe-suburban.html",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [
+        2025
+      ],
+      "model_scope": "Chevrolet Tahoe and Suburban.",
+      "revision_or_document_date": "2023-11-29",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "page_count": null,
+      "page_locator": "Body paragraph listing two new exterior colors.",
+      "local_file_path": null,
+      "sha256": null,
+      "bytes": null,
+      "content_type": "text/html",
+      "limitations": [
+        "Delta source only; it names Cypress Gray and Lakeshore Blue Metallic as new, not the full palette."
+      ]
+    }
+  ],
+  "verified_palette_tables": [
+    {
+      "table_id": "gm-fleet-guide-us-2008-v2:2008:suburban",
+      "source_id": "gm-fleet-guide-us-2008-v2",
+      "market": "United States",
+      "model_year": 2008,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        69
+      ],
+      "page_locator": "PDF page 69, printed page 68, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Graystone Metallic",
+        "Dark Blue Metallic",
+        "Black",
+        "Blue Granite Metallic",
+        "Summit White",
+        "Gold Mist Metallic",
+        "Silver Birch Metallic",
+        "Deep Ruby Metallic"
+      ],
+      "factory_codes": {
+        "Graystone Metallic": "16U",
+        "Dark Blue Metallic": "25U",
+        "Black": "41U",
+        "Blue Granite Metallic": "46U",
+        "Summit White": "50U",
+        "Gold Mist Metallic": "51U",
+        "Silver Birch Metallic": "59U",
+        "Deep Ruby Metallic": "66U"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD in both 1/2-ton and 3/4-ton applications, but exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "The adjacent Tahoe Hybrid palette is excluded."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-gm-fleet-guide-v2-mirror.pdf",
+      "sha256": "d9bcb174998f30051e0da47f5cd4fe02eae1afa97af1d04b71f9c06689050ac7",
+      "bytes": 9543843,
+      "pdf_page_count": 121,
+      "archive_asset_name": "2008-gm-fleet-guide-v2-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2009-v2:2009:suburban",
+      "source_id": "gm-fleet-guide-us-2009-v2",
+      "market": "United States",
+      "model_year": 2009,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        73
+      ],
+      "page_locator": "PDF page 73, printed page 72, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Graystone Metallic",
+        "Dark Blue Metallic",
+        "Black",
+        "Blue Granite Metallic",
+        "Summit White",
+        "Gold Mist Metallic",
+        "Silver Birch Metallic",
+        "Deep Ruby Metallic",
+        "Red Jewel Tintcoat"
+      ],
+      "factory_codes": {
+        "Graystone Metallic": "16U",
+        "Dark Blue Metallic": "25U",
+        "Black": "41U",
+        "Blue Granite Metallic": "46U",
+        "Summit White": "50U",
+        "Gold Mist Metallic": "51U",
+        "Silver Birch Metallic": "59U",
+        "Deep Ruby Metallic": "66U",
+        "Red Jewel Tintcoat": "80U"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD in both 1/2-ton and 3/4-ton applications, but exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "The Tahoe Hybrid palette is excluded."
+      ],
+      "color_restrictions": {
+        "Red Jewel Tintcoat": [
+          "Premium paint; available at extra cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-gm-fleet-guide-v2-mirror.pdf",
+      "sha256": "402f99dddb300b7862315a90ec94b8e69416e71aa043141af0e7c23c8e39ae79",
+      "bytes": 11533063,
+      "pdf_page_count": 139,
+      "archive_asset_name": "2009-gm-fleet-guide-v2-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2010:2010:suburban",
+      "source_id": "gm-fleet-guide-us-2010",
+      "market": "United States",
+      "model_year": 2010,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        64
+      ],
+      "page_locator": "PDF page 64, printed page 64, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Laser Blue Metallic",
+        "Black",
+        "Blue Granite Metallic",
+        "Summit White",
+        "Gold Mist Metallic",
+        "Black Granite Metallic",
+        "Red Jewel Tintcoat",
+        "White Diamond Tricoat",
+        "Taupe Gray Metallic",
+        "Sheer Silver Metallic"
+      ],
+      "factory_codes": {
+        "Laser Blue Metallic": "21U",
+        "Black": "41U",
+        "Blue Granite Metallic": "46U",
+        "Summit White": "50U",
+        "Gold Mist Metallic": "51U",
+        "Black Granite Metallic": "58U",
+        "Red Jewel Tintcoat": "80U",
+        "White Diamond Tricoat": "98U",
+        "Taupe Gray Metallic": "GGW",
+        "Sheer Silver Metallic": "GGZ"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD in both 1/2-ton and 3/4-ton applications, but exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "The Tahoe Hybrid palette is excluded."
+      ],
+      "color_restrictions": {
+        "Black Granite Metallic": [
+          "Premium paint; available at extra cost."
+        ],
+        "Red Jewel Tintcoat": [
+          "Premium paint; available at extra cost."
+        ],
+        "White Diamond Tricoat": [
+          "Premium paint; available at extra cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2010-gm-fleet-guide-mirror.pdf",
+      "sha256": "a147136a27501ec69102030c0cbf3ef1ec90c59aa1caccd0e7c95510c86a3767",
+      "bytes": 10735575,
+      "pdf_page_count": 116,
+      "archive_asset_name": "2010-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2011:2011:suburban",
+      "source_id": "gm-fleet-guide-us-2011",
+      "market": "United States",
+      "model_year": 2011,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        53
+      ],
+      "page_locator": "PDF page 53, printed page 52, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Black",
+        "Summit White",
+        "Gold Mist Metallic",
+        "Red Jewel Tintcoat",
+        "White Diamond Tricoat",
+        "Steel Green Metallic",
+        "Taupe Gray Metallic",
+        "Sheer Silver Metallic",
+        "Mocha Steel Metallic",
+        "Ice Blue Metallic"
+      ],
+      "factory_codes": {
+        "Black": "41U",
+        "Summit White": "50U",
+        "Gold Mist Metallic": "51U",
+        "Red Jewel Tintcoat": "80U",
+        "White Diamond Tricoat": "98U",
+        "Steel Green Metallic": "GGU",
+        "Taupe Gray Metallic": "GGW",
+        "Sheer Silver Metallic": "GGZ",
+        "Mocha Steel Metallic": "GHA",
+        "Ice Blue Metallic": "GLF"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD in both 1/2-ton and 3/4-ton applications, but exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "The Tahoe Hybrid palette is excluded."
+      ],
+      "color_restrictions": {
+        "Red Jewel Tintcoat": [
+          "Premium paint; available at extra cost."
+        ],
+        "White Diamond Tricoat": [
+          "Premium paint; available at extra cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-gm-fleet-guide-mirror.pdf",
+      "sha256": "543beec48e1c5428e583f260e7e64bc20f50836825ee32295c0eedcd7f017f5c",
+      "bytes": 9708021,
+      "pdf_page_count": 102,
+      "archive_asset_name": "2011-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2012:2012:suburban",
+      "source_id": "gm-fleet-guide-us-2012",
+      "market": "United States",
+      "model_year": 2012,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        52
+      ],
+      "page_locator": "PDF page 52, printed page 52, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Black",
+        "Summit White",
+        "Gold Mist Metallic",
+        "Black Granite Metallic",
+        "Crystal Red Tintcoat",
+        "White Diamond Tricoat",
+        "Silver Ice Metallic",
+        "Mocha Steel Metallic"
+      ],
+      "factory_codes": {
+        "Black": "41U",
+        "Summit White": "50U",
+        "Gold Mist Metallic": "51U",
+        "Black Granite Metallic": "58U",
+        "Crystal Red Tintcoat": "89U",
+        "White Diamond Tricoat": "98U",
+        "Silver Ice Metallic": "GAN",
+        "Mocha Steel Metallic": "GHA"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD in both 1/2-ton and 3/4-ton applications, but exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "The Tahoe Hybrid palette is excluded."
+      ],
+      "color_restrictions": {
+        "Crystal Red Tintcoat": [
+          "Premium paint; available at extra cost."
+        ],
+        "White Diamond Tricoat": [
+          "Premium paint; available at extra cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-gm-car-truck-guide-mirror.pdf",
+      "sha256": "7dc20723b7a6147ac8b26cb900241ac90585d8ed65504ecff3a6572077533f3b",
+      "bytes": 8940620,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2012-gm-car-truck-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2013:2013:suburban",
+      "source_id": "gm-fleet-guide-us-2013",
+      "market": "United States",
+      "model_year": 2013,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        53
+      ],
+      "page_locator": "PDF page 53, printed page 53, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Black",
+        "Summit White",
+        "Black Granite Metallic",
+        "Crystal Red Tintcoat",
+        "White Diamond Tricoat",
+        "Silver Ice Metallic",
+        "Mocha Steel Metallic",
+        "Champagne Silver Metallic",
+        "Concord Metallic",
+        "Blue Ray Metallic"
+      ],
+      "factory_codes": {
+        "Black": "41U",
+        "Summit White": "50U",
+        "Black Granite Metallic": "58U",
+        "Crystal Red Tintcoat": "89U",
+        "White Diamond Tricoat": "98U",
+        "Silver Ice Metallic": "GAN",
+        "Mocha Steel Metallic": "GHA",
+        "Champagne Silver Metallic": "GWT",
+        "Concord Metallic": "GWU",
+        "Blue Ray Metallic": "GXH"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD in both 1/2-ton and 3/4-ton applications, but exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "The Tahoe Hybrid palette is excluded."
+      ],
+      "color_restrictions": {
+        "Black Granite Metallic": [
+          "Premium paint; available at extra cost."
+        ],
+        "Crystal Red Tintcoat": [
+          "Premium paint; available at extra cost."
+        ],
+        "White Diamond Tricoat": [
+          "Premium paint; available at extra cost."
+        ],
+        "Concord Metallic": [
+          "Premium paint; available at extra cost.",
+          "Available Spring 2013."
+        ],
+        "Blue Ray Metallic": [
+          "Premium paint; available at extra cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-gm-car-truck-guide-mirror.pdf",
+      "sha256": "a980b93a1458969b0368d4a512bf9c17dfbbdca0fa0883d1071a4bd6256b50f4",
+      "bytes": 25115496,
+      "pdf_page_count": 111,
+      "archive_asset_name": "2013-gm-car-truck-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2014:2014:suburban",
+      "source_id": "gm-fleet-guide-us-2014",
+      "market": "United States",
+      "model_year": 2014,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Tahoe/Suburban",
+      "pdf_pages": [
+        81
+      ],
+      "page_locator": "PDF page 81, printed page 81, AVAILABLE EXTERIOR COLORS and MODEL AVAILABILITY.",
+      "colors": [
+        "Black",
+        "Summit White",
+        "Crystal Red Tintcoat",
+        "White Diamond Tricoat",
+        "Silver Ice Metallic",
+        "Mocha Steel Metallic",
+        "Champagne Silver Metallic",
+        "Concord Metallic"
+      ],
+      "factory_codes": {
+        "Black": "41U",
+        "Summit White": "50U",
+        "Crystal Red Tintcoat": "89U",
+        "White Diamond Tricoat": "98U",
+        "Silver Ice Metallic": "GAN",
+        "Mocha Steel Metallic": "GHA",
+        "Champagne Silver Metallic": "GWT",
+        "Concord Metallic": "GWU"
+      },
+      "availability_scope": "Visually verified shared Tahoe/Suburban Fleet Guide palette union; the page lists regular Suburban 2WD and 4WD but no 3/4-ton application, and exact color-to-configuration applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The shared overview panel is not a complete color-by-trim or Special Equipment Option chart.",
+        "No 3/4-ton Suburban application is inferred from earlier years."
+      ],
+      "color_restrictions": {
+        "Crystal Red Tintcoat": [
+          "Premium paint; available at extra cost."
+        ],
+        "White Diamond Tricoat": [
+          "Premium paint; available at extra cost.",
+          "LTZ only."
+        ],
+        "Concord Metallic": [
+          "Premium paint; available at extra cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-gm-fleet-car-truck-guide-mirror.pdf",
+      "sha256": "aafeff44fa9f5c71493ec45db02b74a56e5f160bd6e89d936806e4e53d04676d",
+      "bytes": 24251962,
+      "pdf_page_count": 134,
+      "archive_asset_name": "2014-gm-fleet-car-truck-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2015:2015:suburban",
+      "source_id": "gm-fleet-guide-us-2015",
+      "market": "United States",
+      "model_year": 2015,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        75
+      ],
+      "page_locator": "PDF page 75, AVAILABLE EXTERIOR COLORS.",
+      "colors": [
+        "Sable Metallic",
+        "Summit White",
+        "White Diamond Tricoat",
+        "Tungsten Metallic",
+        "Black",
+        "Champagne Silver Metallic",
+        "Silver Ice Metallic",
+        "Crystal Red Tintcoat"
+      ],
+      "factory_codes": {
+        "Sable Metallic": "G7U",
+        "Summit White": "GAZ",
+        "White Diamond Tricoat": "GBN",
+        "Tungsten Metallic": "GXG",
+        "Black": "GBA",
+        "Champagne Silver Metallic": "GWT",
+        "Silver Ice Metallic": "GAN",
+        "Crystal Red Tintcoat": "GBE"
+      },
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; exact trim applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The palette-heading footnote states: Actual colors may vary. Not all colors available on all models.",
+        "No separate Suburban HD palette appears in this guide."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-gm-fleet-car-truck-guide-mirror.pdf",
+      "sha256": "730619c14a83c809f8a786e020391f89f92040bb502889dc0d10e41206cac41e",
+      "bytes": 28790965,
+      "pdf_page_count": 142,
+      "archive_asset_name": "2015-gm-fleet-car-truck-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2016-november:2016:suburban",
+      "source_id": "gm-fleet-guide-us-2016-november",
+      "market": "United States",
+      "model_year": 2016,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        78
+      ],
+      "page_locator": "PDF page 78, AVAILABLE EXTERIOR COLORS.",
+      "colors": [
+        "Siren Red Tintcoat",
+        "Iridescent Pearl Tricoat",
+        "Sable Metallic",
+        "Slate Grey Metallic",
+        "Summit White",
+        "Black",
+        "Silver Ice Metallic",
+        "Brownstone Metallic",
+        "Tungsten Metallic",
+        "Champagne Silver Metallic"
+      ],
+      "factory_codes": {
+        "Siren Red Tintcoat": "G1E",
+        "Iridescent Pearl Tricoat": "G1W",
+        "Sable Metallic": "G7U",
+        "Slate Grey Metallic": "G1C",
+        "Summit White": "GAZ",
+        "Black": "GBA",
+        "Silver Ice Metallic": "GAN",
+        "Brownstone Metallic": "GWX",
+        "Tungsten Metallic": "GXG",
+        "Champagne Silver Metallic": "GWT"
+      },
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; exact trim applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Suburban HD has a separate palette on PDF page 80 and is not merged into this regular-Suburban table."
+      ],
+      "color_restrictions": {
+        "Siren Red Tintcoat": [
+          "Additional charge."
+        ],
+        "Sable Metallic": [
+          "Additional charge."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Additional charge.",
+          "Not available on LS models."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-gm-fleet-guide-november-mirror.pdf",
+      "sha256": "f53f4f05585edc0bf529ee408d52f18a0bb770a28d1c1d0fb7458f34351ef578",
+      "bytes": 24673080,
+      "pdf_page_count": 148,
+      "archive_asset_name": "2016-gm-fleet-guide-november-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2017:2017:suburban",
+      "source_id": "gm-fleet-guide-us-2017",
+      "market": "United States",
+      "model_year": 2017,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        81
+      ],
+      "page_locator": "PDF page 81, EXTERIOR COLORS.",
+      "colors": [
+        "Blue Velvet Metallic",
+        "Pepperdust Metallic",
+        "Siren Red Tintcoat",
+        "Iridescent Pearl Tricoat",
+        "Silver Ice Metallic",
+        "Summit White",
+        "Black",
+        "Champagne Silver Metallic",
+        "Tungsten Metallic"
+      ],
+      "factory_codes": {
+        "Blue Velvet Metallic": "G1M",
+        "Pepperdust Metallic": "GMU",
+        "Siren Red Tintcoat": "G1E",
+        "Iridescent Pearl Tricoat": "G1W",
+        "Silver Ice Metallic": "GAN",
+        "Summit White": "GAZ",
+        "Black": "GBA",
+        "Champagne Silver Metallic": "GWT",
+        "Tungsten Metallic": "GXG"
+      },
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; exact trim applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Suburban HD has a separate palette on PDF page 82 and is not merged into this regular-Suburban table."
+      ],
+      "color_restrictions": {
+        "Blue Velvet Metallic": [
+          "Not available on Commercial models."
+        ],
+        "Pepperdust Metallic": [
+          "Not available on Commercial models."
+        ],
+        "Siren Red Tintcoat": [
+          "Additional charge."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Additional charge.",
+          "Not available on Commercial or LS models."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-gm-fleet-guide-mirror.pdf",
+      "sha256": "0d4981b8fc8f20d087b76446c5a80fba9a5a798d6d7925fe41fb9e8c57de9e05",
+      "bytes": 20125688,
+      "pdf_page_count": 152,
+      "archive_asset_name": "2017-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2018:2018:suburban",
+      "source_id": "gm-fleet-guide-us-2018",
+      "market": "United States",
+      "model_year": 2018,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        65
+      ],
+      "page_locator": "PDF page 65, printed page 60, EXTERIOR COLORS.",
+      "colors": [
+        "Satin Steel Metallic",
+        "Havana Metallic",
+        "Siren Red Tintcoat",
+        "Blue Velvet Metallic",
+        "Iridescent Pearl Tricoat",
+        "Silver Ice Metallic",
+        "Summit White",
+        "Black",
+        "Pepperdust Metallic",
+        "Tungsten Metallic"
+      ],
+      "factory_codes": {
+        "Satin Steel Metallic": "G9K",
+        "Havana Metallic": "G2X",
+        "Siren Red Tintcoat": "G1E",
+        "Blue Velvet Metallic": "G1M",
+        "Iridescent Pearl Tricoat": "G1W",
+        "Silver Ice Metallic": "GAN",
+        "Summit White": "GAZ",
+        "Black": "GBA",
+        "Pepperdust Metallic": "GMU",
+        "Tungsten Metallic": "GXG"
+      },
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; exact trim applicability requires the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Suburban HD has a separate palette on PDF page 66 and is not merged into this regular-Suburban table."
+      ],
+      "color_restrictions": {
+        "Siren Red Tintcoat": [
+          "Additional charge."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Additional charge.",
+          "Not available on Commercial or LS models."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-gm-fleet-guide-mirror.pdf",
+      "sha256": "be48bfde2180a4182c9c62191da24fbe2903197eeb961bf443ffb59567e1372b",
+      "bytes": 10853752,
+      "pdf_page_count": 126,
+      "archive_asset_name": "2018-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2019:2019:suburban",
+      "source_id": "gm-fleet-guide-us-2019",
+      "market": "United States",
+      "model_year": 2019,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        71
+      ],
+      "page_locator": "PDF page 71, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Blue Velvet Metallic",
+        "Iridescent Pearl Tricoat",
+        "Pepperdust Metallic",
+        "Satin Steel Metallic",
+        "Shadow Gray Metallic",
+        "Silver Ice Metallic",
+        "Siren Red Tintcoat",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; factory codes and exact trim applicability require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes.",
+        "Suburban HD has a separate palette on PDF page 72 and is not merged into this regular-Suburban table."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional charge."
+        ],
+        "Siren Red Tintcoat": [
+          "Premium paint; additional charge."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-gm-fleet-guide-mirror.pdf",
+      "sha256": "4d5ae974de5331d48af54248f40abc7600c0c566d5f5d7f9be5a3f394f423d87",
+      "bytes": 10445916,
+      "pdf_page_count": 130,
+      "archive_asset_name": "2019-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2020:2020:suburban",
+      "source_id": "gm-fleet-guide-us-2020",
+      "market": "United States",
+      "model_year": 2020,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        69
+      ],
+      "page_locator": "PDF page 69, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Blue Velvet Metallic",
+        "Iridescent Pearl Tricoat",
+        "Satin Steel Metallic",
+        "Shadow Gray Metallic",
+        "Silver Ice Metallic",
+        "Siren Red Tintcoat",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; factory codes and exact trim applicability require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional charge."
+        ],
+        "Siren Red Tintcoat": [
+          "Premium paint; additional charge."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-gm-fleet-guide-mirror.pdf",
+      "sha256": "975934dbfafef814d92ed452071abca8020e591cbb519f74aa492f64c64442d8",
+      "bytes": 28938841,
+      "pdf_page_count": 124,
+      "archive_asset_name": "2020-gm-fleet-guide-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2021-v3:2021:suburban",
+      "source_id": "gm-fleet-guide-us-2021-v3",
+      "market": "United States",
+      "model_year": 2021,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        58
+      ],
+      "page_locator": "PDF page 58, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cherry Red Tintcoat",
+        "Empire Beige Metallic",
+        "Graywood Metallic",
+        "Iridescent Pearl Tricoat",
+        "Midnight Blue Metallic",
+        "Satin Steel Metallic",
+        "Shadow Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; factory codes and exact trim applicability require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Cherry Red Tintcoat": [
+          "Premium paint; additional cost."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2021-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "92aaec592e01b0dbf5aca290a34ea2f96908a7324fcd475446af09df8fa7ee1c",
+      "bytes": 14541647,
+      "pdf_page_count": 110,
+      "archive_asset_name": "2021-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2022-v6:2022:suburban",
+      "source_id": "gm-fleet-guide-us-2022-v6",
+      "market": "United States",
+      "model_year": 2022,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        51
+      ],
+      "page_locator": "PDF page 51, EXTERIOR COLORS.",
+      "colors": [
+        "Auburn Metallic",
+        "Black",
+        "Cherry Red Tintcoat",
+        "Dark Ash Metallic",
+        "Empire Beige Metallic",
+        "Evergreen Gray Metallic",
+        "Iridescent Pearl Tricoat",
+        "Midnight Blue Metallic",
+        "Satin Steel Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; factory codes and exact trim applicability require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Cherry Red Tintcoat": [
+          "Premium paint; additional cost."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-gm-fleet-guide-v6-mirror.pdf",
+      "sha256": "265ab13a565ccb5c733ce27af2b03f0ffe3d38bb196fd222650e2fff2043375c",
+      "bytes": 20549478,
+      "pdf_page_count": 119,
+      "archive_asset_name": "2022-gm-fleet-guide-v6-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2023-v3:2023:suburban",
+      "source_id": "gm-fleet-guide-us-2023-v3",
+      "market": "United States",
+      "model_year": 2023,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        51
+      ],
+      "page_locator": "PDF page 51, EXTERIOR COLORS.",
+      "colors": [
+        "Auburn Metallic",
+        "Black",
+        "Dark Ash Metallic",
+        "Empire Beige Metallic",
+        "Iridescent Pearl Tricoat",
+        "Midnight Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Silver Sage Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; exterior colors vary by trim level and factory codes require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "697423b1c274d8fe30f9e58fc5dc9ecf365d119f7f1155f54dc4c3fd9d8484ef",
+      "bytes": 17883996,
+      "pdf_page_count": 121,
+      "archive_asset_name": "2023-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:suburban",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        54
+      ],
+      "page_locator": "PDF page 54, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Dark Ash Metallic",
+        "Empire Beige Metallic",
+        "Iridescent Pearl Tricoat",
+        "Midnight Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Silver Sage Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Suburban; exterior colors vary by trim level and factory codes require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:equinox-ev",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "equinox-ev"
+      ],
+      "source_model_label": "Chevrolet Equinox EV",
+      "pdf_pages": [
+        25
+      ],
+      "page_locator": "PDF page 25, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Galaxy Gray Metallic",
+        "Habanero Orange",
+        "Iridescent Pearl Tricoat",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:blazer-ev",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "blazer-ev"
+      ],
+      "source_model_label": "Chevrolet Blazer EV",
+      "pdf_pages": [
+        26
+      ],
+      "page_locator": "PDF page 26, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Galaxy Gray Metallic",
+        "Iridescent Pearl Tricoat",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:silverado-ev",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-ev"
+      ],
+      "source_model_label": "Chevrolet Silverado EV",
+      "pdf_pages": [
+        32
+      ],
+      "page_locator": "PDF page 32, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Blue Smoke Metallic",
+        "Habanero Orange",
+        "Riptide Blue Metallic",
+        "Slate Gray Metallic",
+        "Summit White",
+        "Zephyr Blue Matte Metallic"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:brightdrop",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "brightdrop-400",
+        "brightdrop-600"
+      ],
+      "source_model_label": "Chevrolet BrightDrop 400 and BrightDrop 600",
+      "pdf_pages": [
+        35
+      ],
+      "page_locator": "PDF page 35, EXTERIOR COLORS.",
+      "colors": [
+        "Oyster White"
+      ],
+      "availability_scope": "Guide-listed palette union for both listed variants.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:corvette",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "corvette"
+      ],
+      "source_model_label": "Chevrolet Corvette Stingray, E-Ray, and Z06",
+      "pdf_pages": [
+        36,
+        45
+      ],
+      "page_locator": "PDF pages 36 and 45, EXTERIOR COLORS.",
+      "colors": [
+        "Arctic White",
+        "Black",
+        "Competition Yellow Tintcoat Metallic",
+        "Hysteria Purple Metallic",
+        "Rapid Blue",
+        "Red Mist Metallic Tintcoat",
+        "Riptide Blue Metallic",
+        "Sea Wolf Gray Tricoat",
+        "Sebring Orange Tintcoat",
+        "Torch Red"
+      ],
+      "availability_scope": "Guide-listed palette union shared by the listed Corvette models.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:malibu",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "malibu"
+      ],
+      "source_model_label": "Chevrolet Malibu",
+      "pdf_pages": [
+        42
+      ],
+      "page_locator": "PDF page 42, EXTERIOR COLORS.",
+      "colors": [
+        "Lakeshore Blue Metallic",
+        "Mineral Gray Metallic",
+        "Mosaic Black Metallic",
+        "Night Shade Metallic",
+        "Radiant Red Tintcoat",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:trax",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "trax"
+      ],
+      "source_model_label": "Chevrolet Trax",
+      "pdf_pages": [
+        68
+      ],
+      "page_locator": "PDF page 68, EXTERIOR COLORS.",
+      "colors": [
+        "Cacti Green",
+        "Crimson Metallic",
+        "Cypress Gray",
+        "Marina Blue Metallic",
+        "Mosaic Black Metallic",
+        "Nitro Yellow Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:trailblazer",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "trailblazer"
+      ],
+      "source_model_label": "Chevrolet Trailblazer",
+      "pdf_pages": [
+        69
+      ],
+      "page_locator": "PDF page 69, EXTERIOR COLORS.",
+      "colors": [
+        "Cacti Green",
+        "Crimson Metallic",
+        "Iridescent Pearl Tricoat",
+        "Marina Blue Metallic",
+        "Mosaic Black Metallic",
+        "Nitro Yellow Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:equinox",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "equinox"
+      ],
+      "source_model_label": "Chevrolet Equinox",
+      "pdf_pages": [
+        71
+      ],
+      "page_locator": "PDF page 71, EXTERIOR COLORS.",
+      "colors": [
+        "Cacti Green",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Mosaic Black Metallic",
+        "Radiant Red Tintcoat",
+        "Reef Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:blazer",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "blazer"
+      ],
+      "source_model_label": "Chevrolet Blazer",
+      "pdf_pages": [
+        76
+      ],
+      "page_locator": "PDF page 76, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Habanero Orange",
+        "Iridescent Pearl Tricoat",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:traverse",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "traverse"
+      ],
+      "source_model_label": "Chevrolet Traverse",
+      "pdf_pages": [
+        78
+      ],
+      "page_locator": "PDF page 78, EXTERIOR COLORS.",
+      "colors": [
+        "Harvest Bronze Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Mosaic Black Metallic",
+        "Radiant Red Tintcoat",
+        "Stardust Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:tahoe",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_label": "Chevrolet Tahoe",
+      "pdf_pages": [
+        81
+      ],
+      "page_locator": "PDF page 81, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Dark Ash Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted; the Online Order Guide exposes additional fleet-only colors."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:suburban",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        82
+      ],
+      "page_locator": "PDF page 82, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Dark Ash Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:colorado",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "colorado"
+      ],
+      "source_model_label": "Chevrolet Colorado",
+      "pdf_pages": [
+        108
+      ],
+      "page_locator": "PDF page 108, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Harvest Bronze Metallic",
+        "Radiant Red Tintcoat",
+        "Reef Blue Metallic",
+        "Snowdrift Metallic",
+        "Sterling Grey Metallic",
+        "Summit White",
+        "Sunrise Orange"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The source spells Sterling Grey Metallic with Grey; normalize only in a separate alias field."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:silverado-1500",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado"
+      ],
+      "source_model_label": "Chevrolet Silverado 1500",
+      "pdf_pages": [
+        112
+      ],
+      "page_locator": "PDF page 112, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Iridescent Pearl Tricoat",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Riptide Blue Metallic",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:silverado-hd",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 2500 HD and 3500 HD",
+      "pdf_pages": [
+        116
+      ],
+      "page_locator": "PDF page 116, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim and body restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:silverado-3500-chassis-cab",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 3500 HD Chassis Cab",
+      "pdf_pages": [
+        122
+      ],
+      "page_locator": "PDF page 122, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Lakeshore Blue Metallic",
+        "Red Hot",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; body restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:silverado-4500-6500-hd",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 4500 HD, 5500 HD, and 6500 HD",
+      "pdf_pages": [
+        124
+      ],
+      "page_locator": "PDF page 124, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Auburn Metallic",
+        "Dark Ash Metallic",
+        "Glacier Blue Metallic",
+        "Greenstone Metallic",
+        "Lakeshore Blue Metallic",
+        "Northsky Blue Metallic",
+        "Red Hot",
+        "Silver Ice Metallic",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; body restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2025:express",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_label": "Chevrolet Express Passenger, Cargo, and Cutaway",
+      "pdf_pages": [
+        135,
+        137,
+        139
+      ],
+      "page_locator": "PDF pages 135, 137, and 139, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Red Hot",
+        "Silver Ice Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union shared by the listed Express configurations.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:brightdrop",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "brightdrop-400",
+        "brightdrop-600"
+      ],
+      "source_model_label": "Chevrolet BrightDrop 400 and BrightDrop 600",
+      "pdf_pages": [
+        48
+      ],
+      "page_locator": "PDF page 48, EXTERIOR COLORS.",
+      "colors": [
+        "Oyster White"
+      ],
+      "availability_scope": "Guide-listed palette union for both listed variants.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:equinox-ev",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "equinox-ev"
+      ],
+      "source_model_label": "Chevrolet Equinox EV",
+      "pdf_pages": [
+        38
+      ],
+      "page_locator": "PDF page 38, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Galaxy Gray Metallic",
+        "Habanero Orange",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:blazer-ev",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "blazer-ev"
+      ],
+      "source_model_label": "Chevrolet Blazer EV",
+      "pdf_pages": [
+        39
+      ],
+      "page_locator": "PDF page 39, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Galaxy Gray Metallic",
+        "Habanero Orange",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:silverado-ev",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-ev"
+      ],
+      "source_model_label": "Chevrolet Silverado EV",
+      "pdf_pages": [
+        45
+      ],
+      "page_locator": "PDF page 45, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Blue Smoke Metallic",
+        "Habanero Orange",
+        "Magnus Gray Matte Metallic",
+        "Polar White Tricoat",
+        "Riptide Blue Metallic",
+        "Slate Gray Metallic",
+        "Summit White",
+        "White Sands"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:corvette",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "corvette"
+      ],
+      "source_model_label": "Chevrolet Corvette Stingray, E-Ray, Z06, and ZR1",
+      "pdf_pages": [
+        56,
+        57
+      ],
+      "page_locator": "PDF pages 56 and 57, EXTERIOR COLORS.",
+      "colors": [
+        "Arctic White",
+        "Black",
+        "Blade Silver Metallic",
+        "Competition Yellow Tintcoat Metallic",
+        "Hysteria Purple Metallic",
+        "Red Mist Metallic Tintcoat",
+        "Riptide Blue Metallic",
+        "Roswell Green Metallic",
+        "Sebring Orange Tintcoat",
+        "Torch Red"
+      ],
+      "availability_scope": "Guide-listed palette union shared by the listed Corvette models.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:trax",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "trax"
+      ],
+      "source_model_label": "Chevrolet Trax",
+      "pdf_pages": [
+        80
+      ],
+      "page_locator": "PDF page 80, EXTERIOR COLORS.",
+      "colors": [
+        "Apex Red",
+        "Cacti Green",
+        "Cypress Gray",
+        "Marina Blue Metallic",
+        "Mosaic Black Metallic",
+        "Sterling Gray Metallic",
+        "Summit White",
+        "White Sands"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:trailblazer",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "trailblazer"
+      ],
+      "source_model_label": "Chevrolet Trailblazer",
+      "pdf_pages": [
+        81
+      ],
+      "page_locator": "PDF page 81, EXTERIOR COLORS.",
+      "colors": [
+        "Apex Red",
+        "Cacti Green",
+        "Iridescent Pearl Tricoat",
+        "Marina Blue Metallic",
+        "Mosaic Black Metallic",
+        "Sterling Gray Metallic",
+        "Summit White",
+        "White Sands"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:equinox",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "equinox"
+      ],
+      "source_model_label": "Chevrolet Equinox",
+      "pdf_pages": [
+        83
+      ],
+      "page_locator": "PDF page 83, EXTERIOR COLORS.",
+      "colors": [
+        "Cacti Green",
+        "Lakeshore Blue Metallic",
+        "Mosaic Black Metallic",
+        "Polar White",
+        "Radiant Red Tintcoat",
+        "Reef Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:blazer",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "blazer"
+      ],
+      "source_model_label": "Chevrolet Blazer",
+      "pdf_pages": [
+        88
+      ],
+      "page_locator": "PDF page 88, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Habanero Orange",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:traverse",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "traverse"
+      ],
+      "source_model_label": "Chevrolet Traverse",
+      "pdf_pages": [
+        90
+      ],
+      "page_locator": "PDF page 90, EXTERIOR COLORS.",
+      "colors": [
+        "Lakeshore Blue Metallic",
+        "Mosaic Black Metallic",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Sandstone Gray",
+        "Stardust Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:tahoe",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_label": "Chevrolet Tahoe",
+      "pdf_pages": [
+        93
+      ],
+      "page_locator": "PDF page 93, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Dark Ash Metallic",
+        "Lakeshore Blue Metallic",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors are omitted from the printed palette; the Online Order Guide returned three additional fleet colors in the verified sample."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:suburban",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_label": "Chevrolet Suburban",
+      "pdf_pages": [
+        94
+      ],
+      "page_locator": "PDF page 94, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Dark Ash Metallic",
+        "Lakeshore Blue Metallic",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:colorado",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "colorado"
+      ],
+      "source_model_label": "Chevrolet Colorado",
+      "pdf_pages": [
+        120
+      ],
+      "page_locator": "PDF page 120, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Radiant Red Tintcoat",
+        "Reef Blue Metallic",
+        "Snowdrift Metallic",
+        "Sterling Gray Metallic",
+        "Summit White",
+        "Sunrise Orange",
+        "White Sands"
+      ],
+      "availability_scope": "Guide-listed palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:silverado-1500",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado"
+      ],
+      "source_model_label": "Chevrolet Silverado 1500",
+      "pdf_pages": [
+        124
+      ],
+      "page_locator": "PDF page 124, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White",
+        "White Sands"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:silverado-hd",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 2500 HD and 3500 HD",
+      "pdf_pages": [
+        128
+      ],
+      "page_locator": "PDF page 128, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Lakeshore Blue Metallic",
+        "Polar White Tricoat",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Sterling Gray Metallic",
+        "Summit White",
+        "White Sands"
+      ],
+      "availability_scope": "Guide-listed retail palette union; trim and body restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:silverado-3500-chassis-cab",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 3500 HD Chassis Cab",
+      "pdf_pages": [
+        136
+      ],
+      "page_locator": "PDF page 136, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Cypress Gray",
+        "Lakeshore Blue Metallic",
+        "Red Hot",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; body restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:silverado-4500-6500-hd",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 4500 HD, 5500 HD, and 6500 HD",
+      "pdf_pages": [
+        138
+      ],
+      "page_locator": "PDF page 138, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Auburn Metallic",
+        "Dark Ash Metallic",
+        "Glacier Blue Metallic",
+        "Greenstone Metallic",
+        "Lakeshore Blue Metallic",
+        "Northsky Blue Metallic",
+        "Red Hot",
+        "Silver Ice Metallic",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union; body restrictions require the Online Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2026:low-cab-forward-gas",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "low-cab-forward"
+      ],
+      "source_model_label": "2026 Chevrolet Low Cab Forward Gas",
+      "pdf_pages": [
+        125
+      ],
+      "page_locator": "PDF page 125, 2026 MODEL YEAR EXTERIOR COLORS.",
+      "colors": [
+        "Arc White"
+      ],
+      "availability_scope": "Guide-listed palette for the gasoline Low Cab Forward range.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The 2026 palette appears in the December 2024 2025 GM Fleet Guide; the April 2026 guide labels its Low Cab Forward pages as model year 2027."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2026:low-cab-forward-diesel",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "low-cab-forward"
+      ],
+      "source_model_label": "2026 Chevrolet Low Cab Forward Diesel",
+      "pdf_pages": [
+        126
+      ],
+      "page_locator": "PDF page 126, 2026 MODEL YEAR EXTERIOR COLORS.",
+      "colors": [
+        "Arc White",
+        "Cardinal Red",
+        "Dark Blue",
+        "Ebony Black",
+        "Wheatland Yellow",
+        "Woodland Green"
+      ],
+      "availability_scope": "Guide-listed palette for the diesel Low Cab Forward range.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The 2026 palette appears in the December 2024 2025 GM Fleet Guide; the April 2026 guide labels its Low Cab Forward pages as model year 2027."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2025-r2024-12-11:2026:low-cab-forward-6500-7500",
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "low-cab-forward"
+      ],
+      "source_model_label": "2026 Chevrolet Low Cab Forward 6500XD and 7500XD",
+      "pdf_pages": [
+        127
+      ],
+      "page_locator": "PDF page 127, 2026 MODEL YEAR EXTERIOR COLORS.",
+      "colors": [
+        "Arc White"
+      ],
+      "availability_scope": "Guide-listed palette for the 6500XD and 7500XD Low Cab Forward range.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The 2026 palette appears in the December 2024 2025 GM Fleet Guide; the April 2026 guide labels its Low Cab Forward pages as model year 2027."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179,
+      "archive_asset_name": "2025-gm-fleet-guide-r2024-12-11.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2026-r2026-04-01:2026:express",
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_label": "Chevrolet Express Passenger, Cargo, and Cutaway",
+      "pdf_pages": [
+        149,
+        151,
+        153
+      ],
+      "page_locator": "PDF pages 149, 151, and 153, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Red Hot",
+        "Silver Ice Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Guide-listed palette union shared by the listed Express configurations.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Special Equipment Option colors may be omitted."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184,
+      "archive_asset_name": "2026-gm-fleet-guide-r2026-04-01.pdf"
+    },
+    {
+      "table_id": "chevrolet-ebrochure-us-2022-tahoe:2022:tahoe",
+      "source_id": "chevrolet-ebrochure-us-2022-tahoe",
+      "market": "United States",
+      "model_year": 2022,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_label": "Chevrolet Tahoe",
+      "pdf_pages": [
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "page_locator": "PDF pages 8, 10, 12, 14, 16, and 18, trim color strips.",
+      "colors": [
+        "Summit White",
+        "Auburn Metallic",
+        "Evergreen Gray Metallic",
+        "Satin Steel Metallic",
+        "Empire Beige Metallic",
+        "Midnight Blue Metallic",
+        "Dark Ash Metallic",
+        "Cherry Red Tintcoat",
+        "Black",
+        "Iridescent Pearl Tricoat"
+      ],
+      "availability_scope": "Union of the official per-trim exterior-color strips.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "LS omits Iridescent Pearl Tricoat; LT, RST, Z71, Premier, and High Country list all ten colors.",
+        "Cherry Red Tintcoat and Iridescent Pearl Tricoat are extra-cost colors where offered."
+      ],
+      "color_restrictions": {
+        "Cherry Red Tintcoat": [
+          "Extra-cost color."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Unavailable on LS.",
+          "Extra-cost color where offered."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2022-chevrolet-tahoe-ebrochure.pdf",
+      "sha256": "e9ae0dcf9355564fbdf34dfc09aa07d57d80983dd4350d8ccacc36f43856a8e1",
+      "bytes": 6929934,
+      "pdf_page_count": 27,
+      "archive_asset_name": "2022-chevrolet-tahoe-ebrochure.pdf"
+    },
+    {
+      "table_id": "chevrolet-ebrochure-us-2023-colorado:2023:colorado",
+      "source_id": "chevrolet-ebrochure-us-2023-colorado",
+      "market": "United States",
+      "model_year": 2023,
+      "catalog_model_ids": [
+        "colorado"
+      ],
+      "source_model_label": "Chevrolet Colorado",
+      "pdf_pages": [
+        13,
+        15,
+        17,
+        19,
+        21
+      ],
+      "page_locator": "PDF pages 13, 15, 17, 19, and 21, trim color strips.",
+      "colors": [
+        "Summit White",
+        "Sterling Gray Metallic",
+        "Sand Dune Metallic",
+        "Harvest Bronze Metallic",
+        "Nitro Yellow Metallic",
+        "Radiant Red Tintcoat",
+        "Glacier Blue Metallic",
+        "Black"
+      ],
+      "availability_scope": "Union of the official per-trim exterior-color strips.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "WT omits Nitro Yellow Metallic; LT omits Sand Dune Metallic and Nitro Yellow Metallic; Trail Boss, Z71, and ZR2 list all eight colors.",
+        "Radiant Red Tintcoat and Glacier Blue Metallic are extra-cost colors; Nitro Yellow Metallic is an extra-cost color where offered."
+      ],
+      "color_restrictions": {
+        "Sand Dune Metallic": [
+          "Unavailable on LT."
+        ],
+        "Nitro Yellow Metallic": [
+          "Unavailable on WT and LT.",
+          "Extra-cost color where offered."
+        ],
+        "Radiant Red Tintcoat": [
+          "Extra-cost color."
+        ],
+        "Glacier Blue Metallic": [
+          "Extra-cost color."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-colorado-ebrochure.pdf",
+      "sha256": "941d24b627ce7b660d3dec2d85c010abd91a3a1b3218ff7a3016b056c7497c59",
+      "bytes": 4426440,
+      "pdf_page_count": 31,
+      "archive_asset_name": "2023-chevrolet-colorado-ebrochure.pdf"
+    },
+    {
+      "table_id": "chevrolet-ebrochure-us-2023-silverado-hd-commercial:2023:silverado-hd",
+      "source_id": "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
+      "market": "United States",
+      "model_year": 2023,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 2500 HD and 3500 HD",
+      "pdf_pages": [
+        10
+      ],
+      "page_locator": "PDF page 10, EXTERIOR COLORS.",
+      "colors": [
+        "Summit White",
+        "Red Hot",
+        "Northsky Blue Metallic",
+        "Iridescent Pearl Tricoat",
+        "Cherry Red Tintcoat",
+        "Mosaic Black Metallic",
+        "Silver Ice Metallic",
+        "Greenstone Metallic",
+        "Black"
+      ],
+      "availability_scope": "Official brochure palette union.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Red Hot is unavailable on High Country; Iridescent Pearl Tricoat and Cherry Red Tintcoat are extra-cost and unavailable on WT and Custom; Mosaic Black Metallic is unavailable on WT."
+      ],
+      "color_restrictions": {
+        "Red Hot": [
+          "2500 HD and 3500 HD: unavailable on High Country."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "2500 HD and 3500 HD: unavailable on WT and Custom; extra-cost color where offered."
+        ],
+        "Cherry Red Tintcoat": [
+          "2500 HD and 3500 HD: unavailable on WT and Custom; extra-cost color where offered."
+        ],
+        "Mosaic Black Metallic": [
+          "2500 HD and 3500 HD: unavailable on WT."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-silverado-hd-commercial-ebrochure.pdf",
+      "sha256": "add78758e31ea729e43593ad231eb4d3920548d89e1b03eff68f7650d4caf0b3",
+      "bytes": 5447116,
+      "pdf_page_count": 32,
+      "archive_asset_name": "2023-chevrolet-silverado-hd-commercial-ebrochure.pdf"
+    },
+    {
+      "table_id": "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd:2023:silverado-4500-6500-hd",
+      "source_id": "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
+      "market": "United States",
+      "model_year": 2023,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 4500 HD, 5500 HD, and 6500 HD",
+      "pdf_pages": [
+        7
+      ],
+      "page_locator": "PDF page 7, EXTERIOR COLORS.",
+      "colors": [
+        "Summit White",
+        "Silver Ice Metallic",
+        "Sterling Gray Metallic",
+        "Dark Ash Metallic",
+        "Shadow Gray Metallic",
+        "Oxford Brown Metallic",
+        "Red Hot",
+        "Greenstone Metallic",
+        "Deep Ocean Blue Metallic",
+        "Northsky Blue Metallic",
+        "Glacier Blue Metallic",
+        "Black"
+      ],
+      "availability_scope": "Official brochure palette union.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "Deep Ocean Blue Metallic is an extra-cost color."
+      ],
+      "color_restrictions": {
+        "Deep Ocean Blue Metallic": [
+          "4500 HD, 5500 HD, and 6500 HD: extra-cost color."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf",
+      "sha256": "ca1c88edd10c30151a5533e6da2f8f5cfc8b1b8a4fb25f7de9c0535d596bc836",
+      "bytes": 2603896,
+      "pdf_page_count": 23,
+      "archive_asset_name": "2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf"
+    }
+  ],
+  "verified_order_guide_samples": [
+    {
+      "sample_id": "gm-online-order-guide-us-current:2026:tahoe:23232",
+      "source_id": "gm-online-order-guide-us-current",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_label": "Chevrolet Tahoe",
+      "vehicle_id": 23232,
+      "api_endpoint": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23232/en-us",
+      "retrieved_at": "2026-07-21T06:50:39Z",
+      "colors": [
+        {
+          "name": "Polar White Tricoat",
+          "order_code": "G4J",
+          "touch_up_code": "WA-241L"
+        },
+        {
+          "name": "Dark Ash Metallic",
+          "order_code": "G6M",
+          "touch_up_code": "WA-618G"
+        },
+        {
+          "name": "Summit White",
+          "order_code": "GAZ",
+          "touch_up_code": "WA-8624"
+        },
+        {
+          "name": "Black",
+          "order_code": "GBA",
+          "touch_up_code": "WA-8555"
+        },
+        {
+          "name": "Cypress Gray",
+          "order_code": "GBD",
+          "touch_up_code": "WA-229K"
+        },
+        {
+          "name": "Radiant Red Tintcoat",
+          "order_code": "GNT",
+          "touch_up_code": "WA-170H"
+        },
+        {
+          "name": "Sterling Gray Metallic",
+          "order_code": "GXD",
+          "touch_up_code": "WA-130H"
+        },
+        {
+          "name": "Lakeshore Blue Metallic",
+          "order_code": "GXP",
+          "touch_up_code": "WA-136H"
+        },
+        {
+          "name": "SEO Victory Red",
+          "order_code": "5T4",
+          "touch_up_code": "WA-9260"
+        },
+        {
+          "name": "Woodland Green",
+          "order_code": "9V5",
+          "touch_up_code": "WA-9015"
+        },
+        {
+          "name": "Wheatland Yellow",
+          "order_code": "9W3",
+          "touch_up_code": "WA-253A"
+        }
+      ],
+      "raw_response_archived": false,
+      "limitations": [
+        "The endpoint requires a short-lived public bearer token.",
+        "The API is mutable; this record is a timestamped observation, not a permanent response archive.",
+        "Trim and equipment restrictions still require detailed normalization."
+      ]
+    }
+  ]
+}

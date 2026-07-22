@@ -3,8 +3,8 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "market": "United States",
-  "audit_as_of": "2026-07-20",
-  "scope": "Model years 1995-2000. Only colors read directly from official GM Heritage vehicle-information-kit charts are included.",
+  "audit_as_of": "2026-07-21",
+  "scope": "Model years 1995-2000. Canonical exterior_colors are populated only from complete official model-year charts. Scoped official variant and change claims are retained separately and are never inferred across variants or adjacent years.",
   "years": [
     {
       "year": 1995,
@@ -13,54 +13,304 @@
         "title": "1995 Chevrolet Tahoe Vehicle Information Kit",
         "publisher": "Chevrolet / General Motors",
         "source_type": "official_vehicle_information_kit",
+        "source_id": "gm-heritage-1995-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Tahoe.pdf",
         "pages": [
           "PDF p. 18: 2-door solid and conventional two-tone availability chart",
           "PDF p. 19: 4-door gray-gunmetal two-tone availability chart"
         ],
-        "publication_date": null
+        "publication_date": null,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "sha256": "4049fe25311a8482f5c40db31eacda7946e0ac39aa44e750cad23c8dc5eb1ec7",
+        "bytes": 2885244,
+        "pdf_page_count": 20,
+        "archive_asset_name": "1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
       "exterior_colors": [
-        {"name": "Autumnwood, Light", "code": "55U", "finish": "metallic"},
-        {"name": "Black, Onyx", "code": "41U", "finish": "solid"},
-        {"name": "Blue, Atlantic", "code": "30U", "finish": "metallic"},
-        {"name": "Blue, Indigo", "code": "39U", "finish": "metallic"},
-        {"name": "Blue, Teal", "code": "36U", "finish": "metallic"},
-        {"name": "Green, Emerald", "code": "43U", "finish": "metallic"},
-        {"name": "Quicksilver", "code": "96U", "finish": "metallic"},
-        {"name": "Red, Burnt", "code": "76U", "finish": "metallic"},
-        {"name": "Red, Victory", "code": "74U", "finish": "solid"},
-        {"name": "White, Summit", "code": "50U", "finish": "solid"}
+        {
+          "name": "Autumnwood, Light",
+          "code": "55U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Black, Onyx",
+          "code": "41U",
+          "finish": "solid"
+        },
+        {
+          "name": "Blue, Atlantic",
+          "code": "30U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Blue, Indigo",
+          "code": "39U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Blue, Teal",
+          "code": "36U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Green, Emerald",
+          "code": "43U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Quicksilver",
+          "code": "96U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Burnt",
+          "code": "76U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Victory",
+          "code": "74U",
+          "finish": "solid"
+        },
+        {
+          "name": "White, Summit",
+          "code": "50U",
+          "finish": "solid"
+        }
       ],
       "two_tone_combinations": [
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Blue, Indigo", "code_2": "39L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Teal", "code_1": "36U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Teal", "code_1": "36U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Blue, Atlantic", "code_2": "30L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Black, Onyx", "code_2": "41L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Atlantic", "code_2": "30L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Indigo", "code_2": "39L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Red, Burnt", "code_2": "76L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Burnt", "code_1": "76U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Burnt", "code_1": "76U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Black, Onyx", "code_2": "41L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Blue, Indigo", "code_2": "39L"},
-        {"body_style": "2-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Red, Burnt", "code_2": "76L"},
-        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
-        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
-        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
-        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Red, Burnt", "code_1": "76U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
-        {"body_style": "4-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Gray, Gunmetal", "code_2": "91L"},
-        {"body_style": "4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Gray, Gunmetal", "code_2": "91L"}
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Atlantic",
+          "code_1": "30U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Atlantic",
+          "code_1": "30U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Teal",
+          "code_1": "36U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Teal",
+          "code_1": "36U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Blue, Atlantic",
+          "code_2": "30L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Blue, Atlantic",
+          "code_2": "30L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Red, Burnt",
+          "code_2": "76L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Burnt",
+          "code_1": "76U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Burnt",
+          "code_1": "76U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Red, Burnt",
+          "code_2": "76L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Autumnwood, Light",
+          "code_1": "55U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Burnt",
+          "code_1": "76U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        }
       ],
       "notes": "The chart uses U and L suffixes for Color Code 1 and Color Code 2. Gray, Gunmetal (91L) is listed only as the 4-door secondary color, not as a standalone ZY1 paint."
     },
@@ -71,113 +321,2027 @@
         "title": "1996 Chevrolet Tahoe Vehicle Information Kit / 1996 Order Guide",
         "publisher": "Chevrolet / General Motors",
         "source_type": "official_vehicle_information_kit",
+        "source_id": "gm-heritage-1996-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Tahoe.pdf",
         "pages": [
           "PDF p. 29 / order-guide p. 8: 2-door chart",
           "PDF p. 38 / order-guide p. 17: 4-door chart"
         ],
         "publication_date": "1996-01-29",
-        "publication_date_note": "Both chart pages are marked REVISED: 1-29-96."
+        "publication_date_note": "Both chart pages are marked REVISED: 1-29-96.",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "sha256": "0a85633660b46b67c9c61f35e7c85ccb1a05611b27fadf83a566d7f25d73a48a",
+        "bytes": 995606,
+        "pdf_page_count": 39,
+        "archive_asset_name": "1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
       "exterior_colors": [
-        {"name": "Autumnwood, Light", "code": "55U", "finish": "metallic"},
-        {"name": "Black, Onyx", "code": "41U", "finish": "solid"},
-        {"name": "Blue, Atlantic", "code": "30U", "finish": "metallic"},
-        {"name": "Blue, Indigo", "code": "39U", "finish": "metallic"},
-        {"name": "Green, Emerald", "code": "43U", "finish": "metallic"},
-        {"name": "Quicksilver", "code": "96U", "finish": "metallic"},
-        {"name": "Red, Cherry", "code": "77U", "finish": "metallic"},
-        {"name": "Cherry Ice", "code": "59U", "finish": "metallic"},
-        {"name": "Red, Victory", "code": "74U", "finish": "solid"},
-        {"name": "White, Summit", "code": "50U", "finish": "solid"}
+        {
+          "name": "Autumnwood, Light",
+          "code": "55U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Black, Onyx",
+          "code": "41U",
+          "finish": "solid"
+        },
+        {
+          "name": "Blue, Atlantic",
+          "code": "30U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Blue, Indigo",
+          "code": "39U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Green, Emerald",
+          "code": "43U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Quicksilver",
+          "code": "96U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Cherry",
+          "code": "77U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Cherry Ice",
+          "code": "59U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Victory",
+          "code": "74U",
+          "finish": "solid"
+        },
+        {
+          "name": "White, Summit",
+          "code": "50U",
+          "finish": "solid"
+        }
       ],
       "two_tone_combinations": [
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Black, Onyx", "code_1": "41U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Blue, Indigo", "code_2": "39L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Atlantic", "code_1": "30U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Blue, Atlantic", "code_2": "30L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Blue, Indigo", "code_1": "39U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Green, Emerald", "code_1": "43U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Black, Onyx", "code_2": "41L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Atlantic", "code_2": "30L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Blue, Indigo", "code_2": "39L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Quicksilver", "code_1": "96U", "color_2": "Red, Cherry", "code_2": "77L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Cherry", "code_1": "77U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Cherry", "code_1": "77U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Cherry", "code_1": "77U", "color_2": "Cherry Ice", "code_2": "59L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Cherry Ice", "code_1": "59U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Cherry Ice", "code_1": "59U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Cherry Ice", "code_1": "59U", "color_2": "Red, Cherry", "code_2": "77L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Black, Onyx", "code_2": "41L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "Red, Victory", "code_1": "74U", "color_2": "Quicksilver", "code_2": "96L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Autumnwood, Light", "code_2": "55L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Blue, Indigo", "code_2": "39L"},
-        {"body_style": "2-door and 4-door", "scheme": "ZY2", "color_1": "White, Summit", "code_1": "50U", "color_2": "Red, Cherry", "code_2": "77L"}
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Atlantic",
+          "code_1": "30U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Atlantic",
+          "code_1": "30U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Blue, Atlantic",
+          "code_2": "30L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Blue, Atlantic",
+          "code_2": "30L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Cherry Ice",
+          "code_2": "59L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        }
       ],
       "notes": "The 2-door and 4-door charts print the same ten ZY1 colors and the same 24 ZY2 pairings. Wheel-flare molding restrictions are outside this color-inventory scope."
     },
     {
       "year": 1997,
-      "coverage_status": "incomplete",
+      "coverage_status": "verified_complete",
       "publication": {
-        "title": "1997 Chevrolet Tahoe Vehicle Information Kit",
+        "title": "1997 Chevrolet Tahoe Vehicle Information Kit / 1997 Order Guide",
         "publisher": "Chevrolet / General Motors",
         "source_type": "official_vehicle_information_kit",
+        "source_id": "gm-heritage-1997-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Tahoe.pdf",
-        "pages": [],
-        "publication_date": null
+        "sha256": "8e1612dd85ecaa7320cc4fd4c66f439a57a5f93a3bffc026a8c62ec55992e7bb",
+        "pages": [
+          "PDF p. 17 / order-guide p. 8: Tahoe 2-door ZY1 and conventional ZY2 charts",
+          "PDF p. 18 / order-guide p. 9: BYP Sport Tahoe 2-door ZY2 chart",
+          "PDF p. 26 / order-guide p. 17: Tahoe 4-door ZY1 and conventional ZY2 charts"
+        ],
+        "publication_date": "1996-12-16",
+        "publication_date_note": "All three controlling chart pages are marked REVISED: 12-16-96. PDF p. 28 is an older 8-19-96 version and was not used.",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "bytes": 1096844,
+        "pdf_page_count": 41,
+        "archive_asset_name": "1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "incomplete_reason": "Official kit located and preserved, but its complete color chart was not page-verified in this bounded audit."
+      "exterior_colors": [
+        {
+          "name": "Beige, Mystique Medium",
+          "code": "65U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Black, Onyx",
+          "code": "41U",
+          "finish": "solid"
+        },
+        {
+          "name": "Blue, Indigo",
+          "code": "39U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Cherry Ice",
+          "code": "59U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Green, Emerald",
+          "code": "43U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Quicksilver",
+          "code": "96U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Cherry",
+          "code": "77U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Victory",
+          "code": "74U",
+          "finish": "solid"
+        },
+        {
+          "name": "White, Summit",
+          "code": "50U",
+          "finish": "solid"
+        }
+      ],
+      "two_tone_scheme_sources": [
+        {
+          "scheme": "ZY2",
+          "body_styles": [
+            "2-door",
+            "4-door"
+          ],
+          "pdf_pages": [
+            17,
+            26
+          ],
+          "printed_pages": [
+            8,
+            17
+          ],
+          "chart_title": "Interior and Exterior Color Availability Chart - ZY2 Paint (Reqs LS/LT Decor)",
+          "ordering_note": "Color Code 2 must be ordered as a (+) Plus Option."
+        },
+        {
+          "scheme": "ZY2 BYP Sport",
+          "body_styles": [
+            "2-door"
+          ],
+          "pdf_pages": [
+            18
+          ],
+          "printed_pages": [
+            9
+          ],
+          "chart_title": "BYP Sport Tahoe 2-Door Interior and Exterior Color Availability Chart - ZY2 Two-Tone Paint with BYP Sport Equipment Package",
+          "ordering_note": "Color Code 2 must be ordered as a (+) Plus Option.",
+          "wheel_flare_note": "With B71, wheel-flare color matches Color Code 2."
+        }
+      ],
+      "two_tone_combinations": [
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Beige, Mystique Medium",
+          "code_1": "65U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Beige, Mystique Medium",
+          "code_1": "65U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Red, Victory",
+          "code_2": "74L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Cherry Ice",
+          "code_2": "59L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Cherry Ice",
+          "code_2": "59L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Quicksilver",
+          "code_2": "96L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Cherry Ice",
+          "code_2": "59L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10906 w/L65 engine or on K20906"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Red, Cherry",
+          "code_2": "77L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Beige, Mystique Medium",
+          "code_1": "65U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Cherry Ice",
+          "code_1": "59U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Quicksilver",
+          "code_1": "96U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Red, Cherry",
+          "code_1": "77U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        }
+      ],
+      "notes": "The latest 12-16-96 charts independently print the same nine ZY1 colors and the same 27 conventional ZY2 combinations for 2-door and 4-door Tahoe. The older PDF p. 28 chart, revised 8-19-96, includes Blue Opal 24U; it is superseded by PDF p. 26 and is intentionally excluded. Gray, Gunmetal 91L appears only as BYP Sport Color Code 2."
     },
     {
       "year": 1998,
-      "coverage_status": "incomplete",
+      "coverage_status": "verified_complete",
       "publication": {
-        "title": "1998 Chevrolet Tahoe Vehicle Information Kit",
+        "title": "1998 Chevrolet Tahoe Vehicle Information Kit / 1998 Order Guide",
         "publisher": "Chevrolet / General Motors",
         "source_type": "official_vehicle_information_kit",
+        "source_id": "gm-heritage-1998-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Tahoe.pdf",
-        "pages": [],
-        "publication_date": null
+        "sha256": "911b0cf105a0cdce54ecf9c4a3ef863aafa31134ba6a9aea550724ef1e78d44a",
+        "pages": [
+          "PDF p. 44 / order-guide p. 7: Tahoe 2-door ZY1 chart",
+          "PDF p. 45 / order-guide p. 8: Tahoe 2-door conventional ZY2 chart",
+          "PDF p. 46 / order-guide p. 9: BYP Sport Tahoe 2-door ZY2 chart",
+          "PDF p. 54 / order-guide p. 17: Tahoe 4-door ZY1 chart",
+          "PDF p. 55 / order-guide p. 18: Tahoe 4-door ZY2 chart"
+        ],
+        "publication_date": "1997-04-14",
+        "publication_date_note": "All five chart pages are marked PUBLISHED: 4-14-97.",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "bytes": 1828088,
+        "pdf_page_count": 55,
+        "archive_asset_name": "1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "incomplete_reason": "Official kit located and preserved, but its complete color chart was not page-verified in this bounded audit."
+      "exterior_colors": [
+        {
+          "name": "Beige, Mystique Medium",
+          "code": "65U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Black, Onyx",
+          "code": "41U",
+          "finish": "solid"
+        },
+        {
+          "name": "Copper, Dark",
+          "code": "69U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Green, Emerald",
+          "code": "43U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Indigo, Blue",
+          "code": "39U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Pewter, Light",
+          "code": "11U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Carmine Dark",
+          "code": "51U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Victory",
+          "code": "74U",
+          "finish": "solid"
+        },
+        {
+          "name": "White, Summit",
+          "code": "50U",
+          "finish": "solid"
+        }
+      ],
+      "two_tone_scheme_sources": [
+        {
+          "scheme": "ZY2",
+          "body_styles": [
+            "2-door"
+          ],
+          "pdf_pages": [
+            45
+          ],
+          "printed_pages": [
+            8
+          ],
+          "chart_title": "Tahoe 2-Door ZY2 Paint (N/A Base Decor) Interior and Exterior Color Availability Chart"
+        },
+        {
+          "scheme": "ZY2 BYP Sport",
+          "body_styles": [
+            "2-door"
+          ],
+          "pdf_pages": [
+            46
+          ],
+          "printed_pages": [
+            9
+          ],
+          "chart_title": "BYP Sport Tahoe 2-Door Interior and Exterior Color Availability Chart - ZY2 Two-Tone Paint with BYP Sport Equipment Package"
+        },
+        {
+          "scheme": "ZY2",
+          "body_styles": [
+            "4-door"
+          ],
+          "pdf_pages": [
+            55
+          ],
+          "printed_pages": [
+            18
+          ],
+          "chart_title": "Tahoe 4-Door ZY2 Paint Interior and Exterior Color Availability Chart"
+        }
+      ],
+      "two_tone_combinations": [
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Beige, Mystique Medium",
+          "code_1": "65U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10516"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10516"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Quicksilver",
+          "code_2": "74L",
+          "source_anomaly": "The chart prints secondary label Quicksilver with code 74L."
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Indigo, Blue",
+          "code_1": "39U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Indigo, Blue",
+          "code_1": "39U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10516"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Indigo, Blue",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L",
+          "restriction_marker": "+",
+          "restriction": "N/A B71 Molding or K10516"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Beige, Mystique Medium",
+          "code_1": "65U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Quicksilver",
+          "code_2": "74L",
+          "source_anomaly": "The chart prints secondary label Quicksilver with code 74L."
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Indigo, Blue",
+          "code_1": "39U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Indigo, Blue",
+          "code_1": "39U",
+          "color_2": "Quicksilver",
+          "code_2": "55L",
+          "source_anomaly": "The chart prints secondary label Quicksilver with code 55L."
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Indigo, Blue",
+          "code_2": "39L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Copper, Dark",
+          "code_2": "69L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Red, Carmine Dark",
+          "code_2": "51L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Autumnwood, Light",
+          "code_2": "55L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Beige, Mystique Medium",
+          "code_2": "65L"
+        },
+        {
+          "body_style": "4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Beige, Mystique Medium",
+          "code_1": "65U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Green, Emerald",
+          "code_1": "43U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        }
+      ],
+      "notes": "The ZY1 charts independently print the same nine standalone colors for 2-door and 4-door Tahoe. The conventional ZY2 tables differ by body style and are preserved separately. The source itself prints Black/Quicksilver with code 74L on both conventional charts and prints 4-door Indigo Blue/Quicksilver with code 55L; these source anomalies are retained rather than silently corrected. Gray, Gunmetal 91L appears only as BYP Sport Color Code 2, and Indigo Blue is not listed in that BYP table."
     },
     {
       "year": 1999,
-      "coverage_status": "incomplete",
+      "coverage_status": "verified_complete",
       "publication": {
-        "title": "1999 Chevrolet Tahoe Vehicle Information Kit",
+        "title": "1999 Chevrolet Tahoe Vehicle Information Kit / 1999 Order Guide",
         "publisher": "Chevrolet / General Motors",
         "source_type": "official_vehicle_information_kit",
+        "source_id": "gm-heritage-1999-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Tahoe.pdf",
-        "pages": [],
-        "publication_date": null
+        "sha256": "e1f9cd07d4c6a2b0e18b4c28900c9ba9c5834eeabc18d12d38239dae183f3735",
+        "pages": [
+          "PDF p. 17 / order-guide p. 8: Tahoe 2-door ZY1 chart",
+          "PDF p. 18 / order-guide p. 9: Tahoe 2-door conventional ZY2 chart",
+          "PDF p. 19 / order-guide p. 10: BYP Sport Tahoe 2-door ZY2 chart",
+          "PDF p. 26 / order-guide p. 17: Tahoe 4-door ZY1 chart",
+          "PDF p. 27 / order-guide p. 18: Tahoe 4-door ZY2 chart"
+        ],
+        "publication_date": "1998-04-01",
+        "publication_date_note": "All five chart pages are marked PUBLISHED: 4-1-98.",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "bytes": 2128770,
+        "pdf_page_count": 71,
+        "archive_asset_name": "1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
-      "exterior_colors": [],
-      "two_tone_combinations": [],
-      "incomplete_reason": "Official kit located and preserved, but its complete color chart was not page-verified in this bounded audit."
+      "exterior_colors": [
+        {
+          "name": "Black, Onyx",
+          "code": "41U",
+          "finish": "solid"
+        },
+        {
+          "name": "Blue, Indigo",
+          "code": "39U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Copper, Dark",
+          "code": "69U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Gold, Sunset",
+          "code": "60U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Gray, Charcoal Medium",
+          "code": "14U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Green, Meadow",
+          "code": "68U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Pewter, Light",
+          "code": "11U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Carmine Dark",
+          "code": "51U",
+          "finish": "metallic"
+        },
+        {
+          "name": "Red, Victory",
+          "code": "74U",
+          "finish": "solid"
+        },
+        {
+          "name": "White, Summit",
+          "code": "50U",
+          "finish": "solid"
+        }
+      ],
+      "two_tone_scheme_sources": [
+        {
+          "scheme": "ZY2",
+          "body_styles": [
+            "2-door",
+            "4-door"
+          ],
+          "pdf_pages": [
+            18,
+            27
+          ],
+          "printed_pages": [
+            9,
+            18
+          ],
+          "chart_titles": [
+            "Tahoe 2-Door ZY2 Paint (N/A w/BYP Sport Pkg. or w/Base Decor) Interior and Exterior Color Availability Chart",
+            "Tahoe 4-Door ZY2 Paint Interior and Exterior Color Availability Chart"
+          ]
+        },
+        {
+          "scheme": "ZY2 BYP Sport",
+          "body_styles": [
+            "2-door"
+          ],
+          "pdf_pages": [
+            19
+          ],
+          "printed_pages": [
+            10
+          ],
+          "chart_title": "BYP Sport Tahoe 2-Door Interior and Exterior Color Availability Chart - ZY2 Two-Tone Paint with BYP Sport Equipment Package"
+        }
+      ],
+      "two_tone_combinations": [
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Red, Victory",
+          "code_2": "74L",
+          "restriction_marker": "(a)",
+          "restriction": "N/A B71 or K10516",
+          "restriction_scope": "2-door chart only"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Gold, Sunset",
+          "code_1": "60U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Gold, Sunset",
+          "code_1": "60U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Gray, Charcoal Medium",
+          "code_1": "14U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Gray, Charcoal Medium",
+          "code_1": "14U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Gray, Charcoal Medium",
+          "code_1": "14U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Gray, Charcoal Medium",
+          "code_1": "14U",
+          "color_2": "Red, Carmine Dark",
+          "code_2": "51L",
+          "restriction_marker": "(a)",
+          "restriction": "N/A B71 or K10516",
+          "restriction_scope": "2-door chart only"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Meadow",
+          "code_1": "68U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Meadow",
+          "code_1": "68U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Green, Meadow",
+          "code_1": "68U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L",
+          "restriction_marker": "(a)",
+          "restriction": "N/A B71 or K10516",
+          "restriction_scope": "2-door chart only"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Copper, Dark",
+          "code_2": "69L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Red, Carmine Dark",
+          "code_2": "51L",
+          "restriction_marker": "(a)",
+          "restriction": "N/A B71 or K10516",
+          "restriction_scope": "2-door chart only"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Black, Onyx",
+          "code_2": "41L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Blue, Indigo",
+          "code_2": "39L",
+          "restriction_marker": "(a)",
+          "restriction": "N/A B71 or K10516",
+          "restriction_scope": "2-door chart only"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Gray, Charcoal Medium",
+          "code_2": "14L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Gold, Sunset",
+          "code_2": "60L"
+        },
+        {
+          "body_style": "2-door and 4-door",
+          "scheme": "ZY2",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Pewter, Light",
+          "code_2": "11L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Black, Onyx",
+          "code_1": "41U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Blue, Indigo",
+          "code_1": "39U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Copper, Dark",
+          "code_1": "69U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Gold, Sunset",
+          "code_1": "60U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Gray, Charcoal Medium",
+          "code_1": "14U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Green, Meadow",
+          "code_1": "68U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Pewter, Light",
+          "code_1": "11U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Red, Carmine Dark",
+          "code_1": "51U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "Red, Victory",
+          "code_1": "74U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        },
+        {
+          "body_style": "2-door",
+          "scheme": "ZY2 BYP Sport",
+          "color_1": "White, Summit",
+          "code_1": "50U",
+          "color_2": "Gray, Gunmetal",
+          "code_2": "91L"
+        }
+      ],
+      "notes": "The 2-door and 4-door ZY1 charts independently print the same ten standalone colors, and their conventional ZY2 charts independently print the same 34 pairings. Five (a) restrictions appear only on the 2-door chart and are scoped accordingly. Gray, Gunmetal 91L appears only as BYP Sport Color Code 2. The BYP table prints '(Met)' after Red, Victory and White, Summit, but the controlling ZY1 charts list those standalone colors without the metallic label; the canonical finish follows ZY1."
     },
     {
       "year": 2000,
-      "coverage_status": "incomplete",
+      "coverage_status": "verified_program_specific",
       "publication": {
-        "title": "2000 Chevrolet Tahoe Vehicle Information Kit",
+        "title": "2000 Chevrolet Tahoe Restoration Kit / Vehicle Information Kit",
         "publisher": "Chevrolet / General Motors",
         "source_type": "official_vehicle_information_kit",
+        "source_id": "gm-heritage-2000-chevrolet-tahoe",
         "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Tahoe.pdf",
-        "pages": [],
-        "publication_date": null
+        "sha256": "e52e59031146ac0b1574f1ac41cfa7ac76599568987598bd6913baf516497dbc",
+        "bytes": 15232489,
+        "pdf_page_count": 124,
+        "retrieved_at": "2026-07-21T06:33:45+00:00",
+        "document_authority": "official_manufacturer_document",
+        "retrieval_host_type": "official_live",
+        "pages": [
+          "PDF p. 12 / Product Information p. 3: carryover Tahoe Limited Onyx Black claim and four-color Z71 count",
+          "PDF p. 13 / Brand Identity p. 4: Tahoe Limited Onyx Black exterior claim",
+          "PDF p. 18 / Product Information p. 9: redesigned Tahoe Exterior Paint lists for Base/LS and LT"
+        ],
+        "publication_date": null,
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+        "archive_asset_name": "2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
       },
       "exterior_colors": [],
       "two_tone_combinations": [],
-      "incomplete_reason": "Official kit located and preserved. The redesigned Tahoe and carryover Tahoe Limited/Z71 palettes require variant-specific page verification."
+      "program_palettes": [
+        {
+          "program_id": "gmt800-base-ls",
+          "program_label": "Redesigned GMT800 Tahoe Base and LS",
+          "platform_family": "GMT800 family / GMT820 Tahoe",
+          "claim_scope": "complete_program_palette",
+          "evidence_class": "qualified_exact_program_palette",
+          "pdf_page": 18,
+          "printed_page": 9,
+          "section": "Exterior Paint - Base and LS Paint Colors",
+          "colors": [
+            {
+              "name": "Onyx Black",
+              "code": null,
+              "finish": null
+            },
+            {
+              "name": "Indigo Blue Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Medium Charcoal Gray Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Light Pewter Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Sunset Gold Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Dark Copper Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Dark Carmine Red Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Victory Red",
+              "code": null,
+              "finish": null
+            },
+            {
+              "name": "Summit White",
+              "code": null,
+              "finish": null
+            }
+          ]
+        },
+        {
+          "program_id": "gmt800-lt",
+          "program_label": "Redesigned GMT800 Tahoe LT",
+          "platform_family": "GMT800 family / GMT820 Tahoe",
+          "claim_scope": "complete_program_palette",
+          "evidence_class": "qualified_exact_program_palette",
+          "pdf_page": 18,
+          "printed_page": 9,
+          "section": "Exterior Paint - LT Paint Colors",
+          "colors": [
+            {
+              "name": "Onyx Black",
+              "code": null,
+              "finish": null
+            },
+            {
+              "name": "Medium Charcoal Gray Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Light Pewter Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Sunset Gold Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Dark Copper Metallic",
+              "code": null,
+              "finish": "metallic"
+            }
+          ]
+        },
+        {
+          "program_id": "gmt400-limited",
+          "program_label": "Carryover GMT400 Tahoe Limited",
+          "platform_family": "GMT400 family / GMT420 Tahoe",
+          "claim_scope": "complete_program_palette",
+          "evidence_class": "qualified_exact_program_palette",
+          "pdf_pages": [
+            12,
+            13
+          ],
+          "printed_pages": [
+            3,
+            4
+          ],
+          "colors": [
+            {
+              "name": "Onyx Black",
+              "code": null,
+              "finish": null
+            }
+          ],
+          "claim": "The source describes an Onyx Black monochrome exterior appearance and a sophisticated Onyx Black exterior."
+        },
+        {
+          "program_id": "gmt400-z71",
+          "program_label": "Carryover GMT400 Tahoe Z71",
+          "platform_family": "GMT400 family / GMT420 Tahoe",
+          "claim_scope": "complete_program_palette",
+          "evidence_class": "qualified_exact_program_palette",
+          "section": "Tahoe Z71 Colors",
+          "colors": [
+            {
+              "name": "Light Pewter Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Indigo Blue Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Emerald Green Metallic",
+              "code": null,
+              "finish": "metallic"
+            },
+            {
+              "name": "Victory Red",
+              "code": null,
+              "finish": null
+            }
+          ],
+          "source": {
+            "source_id": "chevrolet-sales-brochure-2000-tahoe-z71-colors-scan",
+            "title": "2000 Chevrolet Tahoe Z71 Sales Brochure Color Scan",
+            "publisher": "Chevrolet / General Motors",
+            "carrier": "GMT400.com",
+            "source_type": "original_manufacturer_sales_brochure_scan",
+            "url": "https://www.gmt400.com/attachments/2000-z71-tahoe-brochure-colors-jpg.372777/",
+            "retrieval_url": "https://www.gmt400.com/data/attachments/357/357680-9100c496d554e77aafac98846d23a7f5.jpg",
+            "landing_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
+            "section": "Tahoe Z71 Colors",
+            "publication_note": "Original Chevrolet brochure scan carried by GMT400.com; no publication date is visible in the retained color scan.",
+            "document_authority": "official_manufacturer_document",
+            "retrieval_host_type": "archival_mirror",
+            "content_type": "image/jpeg",
+            "sha256": "bc150ee6d2c813fdca40d85e092ef1da03b87c102619bae0f48594a9fb4e4c4b",
+            "bytes": 46014,
+            "supporting_sources": [
+              {
+                "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-1-scan",
+                "title": "2000 Chevrolet Tahoe Z71 Order Guide, Page 1 Scan",
+                "publisher": "Chevrolet / General Motors",
+                "carrier": "GMT400.com",
+                "source_type": "original_manufacturer_order_guide_scan",
+                "url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-1-jpg.372780/",
+                "retrieval_url": "https://www.gmt400.com/data/attachments/357/357683-9c9e15526d8cf50107fcf239b3a19b05.jpg",
+                "landing_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
+                "section": "Tahoe Z71 order guide page 1",
+                "document_authority": "official_manufacturer_document",
+                "retrieval_host_type": "archival_mirror",
+                "content_type": "image/jpeg",
+                "sha256": "bd41f45e9cf3a5b2cc9eaef194a79cf14b1870948a0de754e3adcc28d9ca1bc9",
+                "bytes": 33965,
+                "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-order-guide-page-1.jpg",
+                "archive_asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-1.jpg"
+              },
+              {
+                "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-2-scan",
+                "title": "2000 Chevrolet Tahoe Z71 Order Guide, Page 2 Scan",
+                "publisher": "Chevrolet / General Motors",
+                "carrier": "GMT400.com",
+                "source_type": "original_manufacturer_order_guide_scan",
+                "url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-2-jpg.372781/",
+                "retrieval_url": "https://www.gmt400.com/data/attachments/357/357684-87675e51d982900ffa260fba4eed7cc1.jpg",
+                "landing_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
+                "section": "Tahoe Z71 order guide page 2",
+                "document_authority": "official_manufacturer_document",
+                "retrieval_host_type": "archival_mirror",
+                "content_type": "image/jpeg",
+                "sha256": "2f79e8d60daeadea5048b8c2820871d451aaecdb4fca278bfb1ca6a022d6b2e1",
+                "bytes": 27615,
+                "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-order-guide-page-2.jpg",
+                "archive_asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-2.jpg"
+              },
+              {
+                "source_id": "chevrolet-order-guide-2000-tahoe-z71-page-3-scan",
+                "title": "2000 Chevrolet Tahoe Z71 Order Guide, Page 3 Scan",
+                "publisher": "Chevrolet / General Motors",
+                "carrier": "GMT400.com",
+                "source_type": "original_manufacturer_order_guide_scan",
+                "url": "https://www.gmt400.com/attachments/truck-order-guide-z71-page-3-jpg.372782/",
+                "retrieval_url": "https://www.gmt400.com/data/attachments/357/357685-dad7ee20c9a933a0e2609c430ba8e7a8.jpg",
+                "landing_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/",
+                "section": "Tahoe Z71 order guide page 3",
+                "document_authority": "official_manufacturer_document",
+                "retrieval_host_type": "archival_mirror",
+                "content_type": "image/jpeg",
+                "sha256": "3bf95389040eb7dcce18429f4a16caf22d64e9a51372fe177053b30de15ba390",
+                "bytes": 27121,
+                "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-order-guide-page-3.jpg",
+                "archive_asset_name": "2000-chevrolet-tahoe-z71-order-guide-page-3.jpg"
+              },
+              {
+                "source_id": "gm-heritage-2000-chevrolet-tahoe",
+                "title": "2000 Chevrolet Tahoe Restoration Kit / Vehicle Information Kit",
+                "publisher": "Chevrolet / General Motors",
+                "source_type": "official_vehicle_information_kit",
+                "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Tahoe.pdf",
+                "pdf_page": 12,
+                "printed_page": 3,
+                "section": "Product Information - four-color Z71 count",
+                "publication_note": "The official kit corroborates that the carryover Z71 program had four exterior colors but does not name them.",
+                "document_authority": "official_manufacturer_document",
+                "retrieval_host_type": "official_live",
+                "sha256": "e52e59031146ac0b1574f1ac41cfa7ac76599568987598bd6913baf516497dbc",
+                "bytes": 15232489,
+                "pdf_page_count": 124,
+                "retrieved_at": "2026-07-21T06:33:45+00:00",
+                "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
+                "archive_asset_name": "2000-chevrolet-tahoe-vehicle-information-kit-gm.pdf"
+              }
+            ],
+            "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-tahoe-z71-brochure-colors.jpg",
+            "archive_asset_name": "2000-chevrolet-tahoe-z71-brochure-colors.jpg"
+          }
+        }
+      ],
+      "verified_two_tone_claims": [
+        {
+          "variant": "Redesigned Tahoe LS",
+          "pdf_page": 18,
+          "printed_page": 9,
+          "claim": "Custom Two-Tone paint is also available on LS models in a variety of combinations.",
+          "combinations_enumerated": false
+        }
+      ],
+      "color_code_note": "None of the controlling 2000 program pages prints paint or RPO codes. Codes remain null rather than being inferred.",
+      "secondary_code_crosswalk": [
+        {
+          "name": "Onyx Black",
+          "rpo": "41U",
+          "wa_number": "WA8555"
+        },
+        {
+          "name": "Indigo Blue Metallic",
+          "rpo": "39U",
+          "wa_number": "WA9792"
+        },
+        {
+          "name": "Medium Charcoal Gray Metallic",
+          "rpo": "14U",
+          "wa_number": "WA391E"
+        },
+        {
+          "name": "Light Pewter Metallic",
+          "rpo": "11U",
+          "wa_number": "WA382E"
+        },
+        {
+          "name": "Sunset Gold Metallic",
+          "rpo": "60U",
+          "wa_number": "WA398E"
+        },
+        {
+          "name": "Dark Copper Metallic",
+          "rpo": "69U",
+          "wa_number": "WA381E"
+        },
+        {
+          "name": "Dark Carmine Red Metallic",
+          "rpo": "51U",
+          "wa_number": "WA334D"
+        },
+        {
+          "name": "Victory Red",
+          "rpo": "74U",
+          "wa_number": "WA9260"
+        },
+        {
+          "name": "Summit White",
+          "rpo": "50U",
+          "wa_number": "WA8624"
+        },
+        {
+          "name": "Emerald Green Metallic",
+          "rpo": "43U",
+          "wa_number": "WA177B"
+        }
+      ],
+      "audit_note": "Model year 2000 contained simultaneous redesigned GMT800 and carryover GMT400 programs. The four complete program palettes remain separate and are never flattened into one undifferentiated Tahoe palette. The unenumerated redesigned LS two-tone combinations remain unresolved."
     }
   ]
 }

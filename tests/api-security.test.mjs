@@ -12,11 +12,20 @@ import {
   normalizeRights,
   parseBoundedInteger,
   parsePublishedAssetMappings,
+  PUBLISHED_RELEASE_DOWNLOAD_BASE,
+  PUBLISHED_RELEASE_TAG,
+  publishedAttributionUrl,
   publishedAssetUrl,
   resolveArchiveContext,
   sanitizeFileName,
   sha256Hex,
 } from "../app/api/archive-security.mjs";
+import {
+  ARCHIVE_RELEASE_DOWNLOAD_BASE,
+  buildArchivedSelectionReceipt,
+  parseArchivedCandidateIds,
+  parseStoredArchivedSelectionReceipt,
+} from "../app/api/archived-photo-selection.mjs";
 
 const fixtureModels = [
   {
@@ -59,6 +68,122 @@ test("archive context is derived from canonical published records", () => {
   );
   assert.equal(
     resolveArchiveContext(fixtureModels, "../camaro", "1969", "hugger-orange"),
+    null,
+  );
+});
+
+test("archive context resolves exact program and specialty overlay colors", () => {
+  const overlappingModel = {
+    id: "tahoe",
+    name: "Tahoe",
+    generations: [
+      {
+        years: ["2000", "2003"],
+        colors: [
+          {
+            id: "regular-black",
+            name: "Black",
+            availability: { "2000": { code: "41" } },
+          },
+        ],
+      },
+      {
+        years: ["2000"],
+        colors: [
+          {
+            id: "z71-victory-red",
+            name: "Victory Red",
+            availability: { "2000": { code: "Not printed" } },
+          },
+        ],
+      },
+      {
+        years: ["2003"],
+        colors: [
+          {
+            id: "specialty-woodland-green",
+            name: "Woodland Green",
+            availability: { "2003": { code: "9V5 / WA-9015" } },
+          },
+        ],
+      },
+    ],
+  };
+
+  assert.equal(
+    resolveArchiveContext(
+      [overlappingModel],
+      "tahoe",
+      "2000",
+      "z71-victory-red",
+    )?.colorName,
+    "Victory Red",
+  );
+  assert.equal(
+    resolveArchiveContext(
+      [overlappingModel],
+      "tahoe",
+      "2003",
+      "specialty-woodland-green",
+    )?.colorName,
+    "Woodland Green",
+  );
+});
+
+test("archived curatorial candidates resolve only through the pinned Release", async () => {
+  const candidateId = "commons-sha1-c6820f56141d77a6d22b";
+  assert.deepEqual(
+    parseArchivedCandidateIds([candidateId, candidateId]),
+    [candidateId],
+  );
+  assert.equal(parseArchivedCandidateIds([7]), null);
+  assert.equal(parseArchivedCandidateIds(["../candidate"]), null);
+
+  const context = {
+    model: "camaro",
+    year: "1969",
+    colorId: "hugger-orange",
+  };
+  const receipt = buildArchivedSelectionReceipt(context, [candidateId]);
+  assert.ok(receipt);
+  assert.equal(receipt.candidates.length, 1);
+  assert.equal(
+    receipt.candidates[0].releaseAssetUrl.startsWith(
+      ARCHIVE_RELEASE_DOWNLOAD_BASE,
+    ),
+    true,
+  );
+  assert.equal(
+    JSON.stringify(receipt).includes("upload.wikimedia.org"),
+    false,
+  );
+  assert.equal("sourceOriginalUrl" in receipt.candidates[0], false);
+  assert.equal(
+    buildArchivedSelectionReceipt(
+      { ...context, year: "1968" },
+      [candidateId],
+    ),
+    null,
+  );
+
+  const receiptJson = JSON.stringify(receipt);
+  const receiptSha256 = await sha256Hex(receiptJson);
+  assert.deepEqual(
+    await parseStoredArchivedSelectionReceipt(
+      receiptJson,
+      receiptSha256,
+      context,
+      [candidateId],
+    ),
+    receipt,
+  );
+  assert.equal(
+    await parseStoredArchivedSelectionReceipt(
+      `${receiptJson} `,
+      receiptSha256,
+      context,
+      [candidateId],
+    ),
     null,
   );
 });
@@ -126,20 +251,26 @@ test("public statuses and pagination bounds fail closed", () => {
   assert.equal(parseBoundedInteger(null, 25, 1, 100), 25);
 });
 
-test("public asset URLs are pinned to sanitized ipadmom GitHub paths", () => {
+test("public asset URLs are pinned to the versioned ipadmom GitHub Release", () => {
   const sha = "a".repeat(64);
+  const name = `${sha}.jpg`;
+  const url = `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${name}`;
   assert.equal(
     publishedAssetUrl(
       sha,
-      `public/vehicle-photos/assets/${sha}.jpg`,
+      PUBLISHED_RELEASE_TAG,
+      name,
+      url,
       "image/jpeg",
     ),
-    `https://raw.githubusercontent.com/ipadmom/chevrolet-color-archive/main/public/vehicle-photos/assets/${sha}.jpg`,
+    url,
   );
   assert.equal(
     publishedAssetUrl(
       sha,
-      `public/vehicle-photos/assets/${sha}.png`,
+      PUBLISHED_RELEASE_TAG,
+      `${sha}.png`,
+      url,
       "image/jpeg",
     ),
     null,
@@ -147,7 +278,9 @@ test("public asset URLs are pinned to sanitized ipadmom GitHub paths", () => {
   assert.equal(
     publishedAssetUrl(
       sha.toUpperCase(),
-      `public/vehicle-photos/assets/${sha}.jpg`,
+      PUBLISHED_RELEASE_TAG,
+      name,
+      url,
       "image/jpeg",
     ),
     null,
@@ -155,10 +288,24 @@ test("public asset URLs are pinned to sanitized ipadmom GitHub paths", () => {
   assert.equal(
     publishedAssetUrl(
       sha,
-      `public/vehicle-photos/assets/../${sha}.jpg`,
+      "community-photo-archive-v2",
+      name,
+      url,
       "image/jpeg",
     ),
     null,
+  );
+  const attributionName = `publication-3-7-${sha}.json`;
+  const attributionUrl = `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${attributionName}`;
+  assert.equal(
+    publishedAttributionUrl(
+      7,
+      sha,
+      PUBLISHED_RELEASE_TAG,
+      attributionName,
+      attributionUrl,
+    ),
+    attributionUrl,
   );
 });
 
@@ -167,7 +314,15 @@ test("processed publication mappings are exact, bounded, and content addressed",
   const mapping = {
     candidateId: 7,
     publishedSha256: sha,
-    publishedAssetPath: `public/vehicle-photos/assets/${sha}.webp`,
+    publishedBytes: 1234,
+    releaseTag: PUBLISHED_RELEASE_TAG,
+    publishedAssetName: `${sha}.webp`,
+    publishedAssetUrl: `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/${sha}.webp`,
+    attributionAssetName: `publication-3-7-${sha}.json`,
+    attributionAssetUrl:
+      `${PUBLISHED_RELEASE_DOWNLOAD_BASE}/publication-3-7-${sha}.json`,
+    attributionSha256: "c".repeat(64),
+    attributionBytes: 987,
   };
   assert.deepEqual(parsePublishedAssetMappings([mapping]), [mapping]);
   assert.equal(
@@ -183,7 +338,7 @@ test("processed publication mappings are exact, bounded, and content addressed",
   );
   assert.equal(
     parsePublishedAssetMappings([
-      { ...mapping, publishedAssetPath: `public/vehicle-photos/${sha}.webp` },
+      { ...mapping, releaseTag: "community-photo-archive-v2" },
     ]),
     null,
   );
@@ -214,7 +369,12 @@ test("route wiring preserves staged privacy and queue authentication", async () 
   assert.match(selections, /requireQueueAuthorization/);
   assert.match(selections, /leaseTokenHash/);
   assert.match(selections, /photoUploadReceipts\.receiptHash/);
+  assert.match(selections, /buildArchivedSelectionReceipt/);
+  assert.match(selections, /archivedSelectionReceiptSha256/);
   assert.match(explorer, /URL\.createObjectURL\(photo\)/);
+  assert.match(explorer, /candidateIds,/);
+  assert.match(explorer, /SAVE PHOTO CHOICES/);
+  assert.doesNotMatch(explorer, /Published photo choice.*kept in this browser/);
   assert.doesNotMatch(explorer, /setApiPhotos\(\(current\) => \[payload/);
 });
 
