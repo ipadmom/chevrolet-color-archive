@@ -1,0 +1,2203 @@
+{
+  "schema_version": 1,
+  "catalog_source": "data/catalog/chevrolet-us-nameplates.json",
+  "generated_on": "2026-07-22",
+  "scope": "One intended latest-year Chevrolet profile record for every model slug in chevrolet-us-nameplates.json. This catalog records representative-selection decisions and uncertainty; it does not claim that SVG artwork has been completed.",
+  "current_profile_reference_catalog": "data/catalog/chevrolet-current-profile-references.json",
+  "status_definitions": {
+    "current-model-reviewed": "A representative configuration has been selected for a current model from the existing latest-year catalog and platform evidence.",
+    "era-mapped": "The latest platform or era is sourced and a single representative body architecture is sufficiently identified for profile work.",
+    "representative-variant-research-needed": "The latest year is catalogued, but a body-specific representative remains unresolved or still needs a body-specific visual reference before exact SVG work."
+  },
+  "record_count": 149,
+  "status_counts": {
+    "current-model-reviewed": 18,
+    "era-mapped": 26,
+    "representative-variant-research-needed": 105
+  },
+  "records": [
+    {
+      "model_id": "classic-six",
+      "profile_id": "chevrolet-classic-six-1914-profile-v1",
+      "representative_year": 1914,
+      "representative_variant": "1914 Classic Six, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://media.gm.com/content/dam/Media/images/Shared/Banner/Chevrolet/2011/110930_CH_CENT_Newspaper_Schweiz_RZ_low.pdf",
+        "https://www.gm.com/heritage/durant"
+      ]
+    },
+    {
+      "model_id": "baby-grand",
+      "profile_id": "chevrolet-baby-grand-1916-profile-v1",
+      "representative_year": 1916,
+      "representative_variant": "1916 Baby Grand touring car",
+      "variant_selection_reason": "The catalog note identifies a touring-car body, but a body-specific 1916 visual reference is still required.",
+      "body_style": "open touring car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://media.gm.com/content/dam/Media/images/INTL/chevrolet/company-tab/2014/history/chevrolet_history_en_2014.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "royal-mail",
+      "profile_id": "chevrolet-royal-mail-1916-profile-v1",
+      "representative_year": 1916,
+      "representative_variant": "1916 Royal Mail roadster",
+      "variant_selection_reason": "The catalog note identifies the Series H roadster, but a body-specific 1916 visual reference is still required.",
+      "body_style": "open roadster",
+      "doors": 2,
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://media.gm.com/content/dam/Media/images/INTL/chevrolet/company-tab/2014/history/chevrolet_history_en_2014.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "amesbury-special",
+      "profile_id": "chevrolet-amesbury-special-1915-profile-v1",
+      "representative_year": 1915,
+      "representative_variant": "1915 Amesbury Special roadster",
+      "variant_selection_reason": "The catalog note identifies a one-year roadster, but a body-specific visual reference is still required.",
+      "body_style": "open roadster",
+      "doors": 2,
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Series_H"
+      ]
+    },
+    {
+      "model_id": "light-six",
+      "profile_id": "chevrolet-light-six-1915-profile-v1",
+      "representative_year": 1915,
+      "representative_variant": "1915 Light Six, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://media.gm.com/content/dam/Media/images/INTL/chevrolet/company-tab/2014/history/chevrolet_history_en_2014.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "four-ninety",
+      "profile_id": "chevrolet-four-ninety-1922-profile-v1",
+      "representative_year": 1922,
+      "representative_variant": "1922 Four-Ninety, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://media.gm.com/content/dam/Media/images/Shared/Banner/Chevrolet/2011/110930_CH_CENT_Newspaper_Schweiz_RZ_low.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "series-d",
+      "profile_id": "chevrolet-series-d-1918-profile-v1",
+      "representative_year": 1918,
+      "representative_variant": "1918 Series D, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "series-f",
+      "profile_id": "chevrolet-series-f-1917-profile-v1",
+      "representative_year": 1917,
+      "representative_variant": "1917 Series F, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "series-fa",
+      "profile_id": "chevrolet-series-fa-1918-profile-v1",
+      "representative_year": 1918,
+      "representative_variant": "1918 Series FA, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "series-fb",
+      "profile_id": "chevrolet-series-fb-1922-profile-v1",
+      "representative_year": 1922,
+      "representative_variant": "1922 Series FB, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Series_FB"
+      ]
+    },
+    {
+      "model_id": "superior",
+      "profile_id": "chevrolet-superior-1926-profile-v1",
+      "representative_year": 1926,
+      "representative_variant": "1926 Superior, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/collection/chevrolet/1926-chevrolet-superior-series-v",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "copper-cooled",
+      "profile_id": "chevrolet-copper-cooled-1923-profile-v1",
+      "representative_year": 1923,
+      "representative_variant": "1923 Copper-Cooled, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Series_M_Copper-Cooled"
+      ]
+    },
+    {
+      "model_id": "capitol",
+      "profile_id": "chevrolet-capitol-1927-profile-v1",
+      "representative_year": 1927,
+      "representative_variant": "1927 Capitol, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://media.gm.com/content/dam/Media/images/Shared/Banner/Chevrolet/2011/110930_CH_CENT_Newspaper_Schweiz_RZ_low.pdf"
+      ]
+    },
+    {
+      "model_id": "national",
+      "profile_id": "chevrolet-national-1928-profile-v1",
+      "representative_year": 1928,
+      "representative_variant": "1928 National, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "international",
+      "profile_id": "chevrolet-international-1929-profile-v1",
+      "representative_year": 1929,
+      "representative_variant": "1929 International, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "universal",
+      "profile_id": "chevrolet-universal-1930-profile-v1",
+      "representative_year": 1930,
+      "representative_variant": "1930 Universal, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "independence",
+      "profile_id": "chevrolet-independence-1931-profile-v1",
+      "representative_year": 1931,
+      "representative_variant": "1931 Independence, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "confederate",
+      "profile_id": "chevrolet-confederate-1932-profile-v1",
+      "representative_year": 1932,
+      "representative_variant": "1932 Confederate, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/collection/chevrolet/1932-chevrolet-deluxe",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "eagle",
+      "profile_id": "chevrolet-eagle-1933-profile-v1",
+      "representative_year": 1933,
+      "representative_variant": "1933 Eagle, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/collection/chevrolet",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "mercury",
+      "profile_id": "chevrolet-mercury-1933-profile-v1",
+      "representative_year": 1933,
+      "representative_variant": "1933 Mercury, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "standard",
+      "profile_id": "chevrolet-standard-1936-profile-v1",
+      "representative_year": 1936,
+      "representative_variant": "1936 Standard, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "master",
+      "profile_id": "chevrolet-master-1938-profile-v1",
+      "representative_year": 1938,
+      "representative_variant": "1938 Master, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "master-deluxe",
+      "profile_id": "chevrolet-master-deluxe-1942-profile-v1",
+      "representative_year": 1942,
+      "representative_variant": "1942 Master Deluxe, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Deluxe"
+      ]
+    },
+    {
+      "model_id": "master-85",
+      "profile_id": "chevrolet-master-85-1940-profile-v1",
+      "representative_year": 1940,
+      "representative_variant": "1940 Master 85, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "special-deluxe",
+      "profile_id": "chevrolet-special-deluxe-1942-profile-v1",
+      "representative_year": 1942,
+      "representative_variant": "1942 Special Deluxe, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "prewar passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Deluxe"
+      ]
+    },
+    {
+      "model_id": "fleetline",
+      "profile_id": "chevrolet-fleetline-1952-profile-v1",
+      "representative_year": 1952,
+      "representative_variant": "1952 Fleetline fastback, exact door configuration unresolved",
+      "variant_selection_reason": "The catalog identifies the fastback-oriented family, but a body-specific final-year reference must select Aerosedan or Sportmaster geometry.",
+      "body_style": "full-size fastback passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "fleetmaster",
+      "profile_id": "chevrolet-fleetmaster-1948-profile-v1",
+      "representative_year": 1948,
+      "representative_variant": "1948 Fleetmaster, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "stylemaster",
+      "profile_id": "chevrolet-stylemaster-1948-profile-v1",
+      "representative_year": 1948,
+      "representative_variant": "1948 Stylemaster, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "styleline",
+      "profile_id": "chevrolet-styleline-1952-profile-v1",
+      "representative_year": 1952,
+      "representative_variant": "1952 Styleline, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1950-Chevrolet.pdf"
+      ]
+    },
+    {
+      "model_id": "bel-air",
+      "profile_id": "chevrolet-bel-air-1975-profile-v1",
+      "representative_year": 1975,
+      "representative_variant": "1975 Bel Air, exact sedan or coupe configuration unresolved",
+      "variant_selection_reason": "The final B-body era is sourced, but the catalog does not select one body configuration for exact profile artwork.",
+      "body_style": "full-size car",
+      "latest_era_label": "Seventh generation, B-body",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Bel_Air",
+        "https://www.gm.com/heritage/collection/chevrolet"
+      ]
+    },
+    {
+      "model_id": "one-fifty",
+      "profile_id": "chevrolet-one-fifty-1957-profile-v1",
+      "representative_year": 1957,
+      "representative_variant": "1957 One-Fifty, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "two-ten",
+      "profile_id": "chevrolet-two-ten-1957-profile-v1",
+      "representative_year": 1957,
+      "representative_variant": "1957 Two-Ten, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "handyman",
+      "profile_id": "chevrolet-handyman-1957-profile-v1",
+      "representative_year": 1957,
+      "representative_variant": "1957 Handyman, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "townsman",
+      "profile_id": "chevrolet-townsman-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Townsman, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Townsman"
+      ]
+    },
+    {
+      "model_id": "beauville-wagon",
+      "profile_id": "chevrolet-beauville-wagon-1957-profile-v1",
+      "representative_year": 1957,
+      "representative_variant": "1957 Beauville, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "nomad",
+      "profile_id": "chevrolet-nomad-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Chevelle Nomad station wagon",
+      "variant_selection_reason": "The catalog note establishes that the latest Nomad use was a Chevelle wagon, but a body-specific 1972 reference is still required.",
+      "body_style": "midsize station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Nomad"
+      ]
+    },
+    {
+      "model_id": "corvette",
+      "profile_id": "corvette-c8-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Corvette Stingray coupe",
+      "variant_selection_reason": "The base C8 coupe is the stable current-nameplate representative; performance derivatives retain the same mid-engine architecture.",
+      "body_style": "mid-engine two-seat sports coupe",
+      "doors": 2,
+      "rear_body": "rear engine compartment",
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "C8",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)",
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "delray",
+      "profile_id": "chevrolet-delray-1958-profile-v1",
+      "representative_year": 1958,
+      "representative_variant": "1958 Delray, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "biscayne",
+      "profile_id": "chevrolet-biscayne-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Biscayne, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "brookwood",
+      "profile_id": "chevrolet-brookwood-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Brookwood, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Brookwood"
+      ]
+    },
+    {
+      "model_id": "impala",
+      "profile_id": "chevrolet-impala-2020-profile-v1",
+      "representative_year": 2020,
+      "representative_variant": "2020 Impala four-door sedan",
+      "variant_selection_reason": "The final tenth-generation U.S. Impala is a four-door Epsilon II sedan.",
+      "body_style": "full-size four-door sedan",
+      "doors": 4,
+      "latest_era_label": "Tenth generation, Epsilon II",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Impala",
+        "https://www.chevrolet.com/discontinued-vehicles",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "yeoman",
+      "profile_id": "chevrolet-yeoman-1958-profile-v1",
+      "representative_year": 1958,
+      "representative_variant": "1958 Yeoman, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Yeoman"
+      ]
+    },
+    {
+      "model_id": "parkwood",
+      "profile_id": "chevrolet-parkwood-1961-profile-v1",
+      "representative_year": 1961,
+      "representative_variant": "1961 Parkwood, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "kingswood",
+      "profile_id": "chevrolet-kingswood-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Kingswood, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Kingswood"
+      ]
+    },
+    {
+      "model_id": "el-camino",
+      "profile_id": "chevrolet-el-camino-1987-profile-v1",
+      "representative_year": 1987,
+      "representative_variant": "1987 El Camino coupe utility",
+      "variant_selection_reason": "The final fifth-generation El Camino retains the two-door passenger cab and integrated open cargo bed.",
+      "body_style": "coupe utility",
+      "doors": 2,
+      "cab_style": "regular",
+      "rear_body": "integrated pickup bed",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Fifth generation, A/G-body",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_El_Camino"
+      ]
+    },
+    {
+      "model_id": "corvair",
+      "profile_id": "chevrolet-corvair-1969-profile-v1",
+      "representative_year": 1969,
+      "representative_variant": "1969 Corvair, exact coupe or convertible representative unresolved",
+      "variant_selection_reason": "The final Z-body era is sourced, but a body-specific latest-year reference must select the profile configuration.",
+      "body_style": "compact car",
+      "latest_era_label": "Second generation, Z-body",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Corvair",
+        "https://www.gm.com/heritage/collection/chevrolet"
+      ]
+    },
+    {
+      "model_id": "lakewood",
+      "profile_id": "chevrolet-lakewood-1962-profile-v1",
+      "representative_year": 1962,
+      "representative_variant": "1962 Lakewood, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "chevy-ii",
+      "profile_id": "chevrolet-chevy-ii-1968-profile-v1",
+      "representative_year": 1968,
+      "representative_variant": "1968 Chevy II, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.gm.com/heritage/collection/chevrolet/1963-chevrolet-nova"
+      ]
+    },
+    {
+      "model_id": "nova",
+      "profile_id": "chevrolet-nova-1988-profile-v1",
+      "representative_year": 1988,
+      "representative_variant": "1988 Nova, exact sedan or hatchback representative unresolved",
+      "variant_selection_reason": "The final NUMMI E80 era is sourced, but the catalog does not select one body configuration.",
+      "body_style": "compact car",
+      "latest_era_label": "Fifth generation, NUMMI E80",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Chevy_II_/_Nova"
+      ]
+    },
+    {
+      "model_id": "chevelle",
+      "profile_id": "chevrolet-chevelle-1977-profile-v1",
+      "representative_year": 1977,
+      "representative_variant": "1977 Chevelle, exact coupe, sedan, or wagon representative unresolved",
+      "variant_selection_reason": "The final Colonnade A-body era is sourced, but a body-specific reference must select the profile configuration.",
+      "body_style": "midsize car",
+      "latest_era_label": "Third generation, Colonnade A-body",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Chevelle",
+        "https://www.gm.com/heritage/collection/chevrolet"
+      ]
+    },
+    {
+      "model_id": "concours",
+      "profile_id": "chevrolet-concours-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Concours, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "midsize station wagon and sedan",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://over-drive-magazine.com/wp-content/uploads/2023/12/1968-Chevrolet-Station-Wagons-Brochure-1-16C.pdf",
+        "https://xr793.com/wp-content/uploads/2017/07/1972-Chevrolet-Wagons.pdf"
+      ]
+    },
+    {
+      "model_id": "concours-estate",
+      "profile_id": "chevrolet-concours-estate-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Concours Estate, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "midsize station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://over-drive-magazine.com/wp-content/uploads/2023/12/1968-Chevrolet-Station-Wagons-Brochure-1-16C.pdf",
+        "https://xr793.com/wp-content/uploads/2017/07/1972-Chevrolet-Wagons.pdf"
+      ]
+    },
+    {
+      "model_id": "malibu",
+      "profile_id": "chevrolet-malibu-2025-profile-v1",
+      "representative_year": 2025,
+      "representative_variant": "2025 Malibu four-door sedan",
+      "variant_selection_reason": "The final ninth-generation U.S. Malibu uses one four-door E2XX sedan architecture.",
+      "body_style": "midsize four-door sedan",
+      "doors": 4,
+      "latest_era_label": "Ninth generation, E2XX / E2SC",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.chevrolet.com/discontinued-vehicles",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://news.gm.com/home.detail.html/Pages/news/us/en/2024/may/0508-malibu.html"
+      ]
+    },
+    {
+      "model_id": "camaro",
+      "profile_id": "chevrolet-camaro-2024-profile-v1",
+      "representative_year": 2024,
+      "representative_variant": "2024 Camaro two-door coupe",
+      "variant_selection_reason": "The final sixth-generation Alpha Camaro is represented by its fixed-roof production coupe.",
+      "body_style": "sports coupe",
+      "doors": 2,
+      "latest_era_label": "Sixth generation, Alpha",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)",
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/mar/0322-camaro.html"
+      ]
+    },
+    {
+      "model_id": "caprice",
+      "profile_id": "chevrolet-caprice-1996-profile-v1",
+      "representative_year": 1996,
+      "representative_variant": "1996 Caprice four-door sedan",
+      "variant_selection_reason": "The final fourth-generation U.S. Caprice is represented by the production B-body sedan.",
+      "body_style": "full-size four-door sedan",
+      "doors": 4,
+      "latest_era_label": "Fourth generation, B-body",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Caprice"
+      ]
+    },
+    {
+      "model_id": "kingswood-estate",
+      "profile_id": "chevrolet-kingswood-estate-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Kingswood Estate, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Kingswood"
+      ]
+    },
+    {
+      "model_id": "monte-carlo",
+      "profile_id": "chevrolet-monte-carlo-2007-profile-v1",
+      "representative_year": 2007,
+      "representative_variant": "2007 Monte Carlo two-door coupe",
+      "variant_selection_reason": "The final sixth-generation W-body Monte Carlo has one two-door personal-luxury coupe architecture.",
+      "body_style": "personal luxury coupe",
+      "doors": 2,
+      "latest_era_label": "Sixth generation, W-body",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Monte_Carlo"
+      ]
+    },
+    {
+      "model_id": "vega",
+      "profile_id": "chevrolet-vega-1977-profile-v1",
+      "representative_year": 1977,
+      "representative_variant": "1977 Vega, exact hatchback, notchback, or wagon representative unresolved",
+      "variant_selection_reason": "The catalog establishes the final year but does not select one of the nameplate's distinct bodies.",
+      "body_style": "subcompact passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.gm.com/heritage/collection/chevrolet"
+      ]
+    },
+    {
+      "model_id": "laguna",
+      "profile_id": "chevrolet-laguna-1976-profile-v1",
+      "representative_year": 1976,
+      "representative_variant": "1976 Laguna S-3, exact profile reference pending",
+      "variant_selection_reason": "The catalog alias identifies Laguna S-3, but a body-specific final-year visual reference is still required.",
+      "body_style": "midsize coupe",
+      "doors": 2,
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "monza",
+      "profile_id": "chevrolet-monza-1980-profile-v1",
+      "representative_year": 1980,
+      "representative_variant": "1980 Monza, exact 2+2 hatchback or Towne Coupe representative unresolved",
+      "variant_selection_reason": "The catalog aliases identify multiple distinct bodies and do not select one.",
+      "body_style": "subcompact passenger car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "chevette",
+      "profile_id": "chevrolet-chevette-1987-profile-v1",
+      "representative_year": 1987,
+      "representative_variant": "1987 Chevette hatchback, exact three-door or five-door representative unresolved",
+      "variant_selection_reason": "The catalog note identifies a T-body hatchback, but does not select the door configuration.",
+      "body_style": "subcompact hatchback",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.gm.com/heritage/collection/chevrolet"
+      ]
+    },
+    {
+      "model_id": "citation",
+      "profile_id": "chevrolet-citation-1985-profile-v1",
+      "representative_year": 1985,
+      "representative_variant": "1985 Citation, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "cavalier",
+      "profile_id": "chevrolet-cavalier-2005-profile-v1",
+      "representative_year": 2005,
+      "representative_variant": "2005 Cavalier, exact sedan or coupe representative unresolved",
+      "variant_selection_reason": "The final J-body era is sourced, but the nameplate retained more than one body configuration.",
+      "body_style": "compact car",
+      "latest_era_label": "Third generation, J-body",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Cavalier"
+      ]
+    },
+    {
+      "model_id": "celebrity",
+      "profile_id": "chevrolet-celebrity-1990-profile-v1",
+      "representative_year": 1990,
+      "representative_variant": "1990 Celebrity, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "midsize car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "spectrum",
+      "profile_id": "chevrolet-spectrum-1988-profile-v1",
+      "representative_year": 1988,
+      "representative_variant": "1988 Spectrum, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "subcompact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "sprint",
+      "profile_id": "chevrolet-sprint-1988-profile-v1",
+      "representative_year": 1988,
+      "representative_variant": "1988 Sprint, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "subcompact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "beretta",
+      "profile_id": "chevrolet-beretta-1996-profile-v1",
+      "representative_year": 1996,
+      "representative_variant": "1996 Beretta, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact coupe",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "corsica",
+      "profile_id": "chevrolet-corsica-1996-profile-v1",
+      "representative_year": 1996,
+      "representative_variant": "1996 Corsica, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "lumina",
+      "profile_id": "chevrolet-lumina-2001-profile-v1",
+      "representative_year": 2001,
+      "representative_variant": "2001 Lumina four-door sedan",
+      "variant_selection_reason": "The final second-generation U.S. Lumina model year is represented by its four-door W-body sedan.",
+      "body_style": "midsize four-door sedan",
+      "doors": 4,
+      "latest_era_label": "Second generation, W-body",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Lumina"
+      ]
+    },
+    {
+      "model_id": "metro",
+      "profile_id": "chevrolet-metro-2001-profile-v1",
+      "representative_year": 2001,
+      "representative_variant": "2001 Metro, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "subcompact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "prizm",
+      "profile_id": "chevrolet-prizm-2002-profile-v1",
+      "representative_year": 2002,
+      "representative_variant": "2002 Prizm, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "classic-fleet",
+      "profile_id": "chevrolet-classic-fleet-2005-profile-v1",
+      "representative_year": 2005,
+      "representative_variant": "2005 Classic, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "fleet midsize car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "aveo",
+      "profile_id": "chevrolet-aveo-2011-profile-v1",
+      "representative_year": 2011,
+      "representative_variant": "2011 Aveo, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "subcompact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "malibu-maxx",
+      "profile_id": "chevrolet-malibu-maxx-2007-profile-v1",
+      "representative_year": 2007,
+      "representative_variant": "2007 Malibu Maxx, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "midsize hatchback",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "malibu-limited",
+      "profile_id": "chevrolet-malibu-limited-2016-profile-v1",
+      "representative_year": 2016,
+      "representative_variant": "2016 Malibu Limited, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "fleet midsize car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.chevrolet.com/discontinued-vehicles",
+        "https://en.wikipedia.org/wiki/Chevrolet_Malibu"
+      ]
+    },
+    {
+      "model_id": "malibu-classic-2008",
+      "profile_id": "chevrolet-malibu-classic-2008-2008-profile-v1",
+      "representative_year": 2008,
+      "representative_variant": "2008 Malibu Classic (2008), representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "fleet midsize car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2k08malibu_classic.pdf"
+      ]
+    },
+    {
+      "model_id": "cobalt",
+      "profile_id": "chevrolet-cobalt-2010-profile-v1",
+      "representative_year": 2010,
+      "representative_variant": "2010 Cobalt, exact sedan or coupe representative unresolved",
+      "variant_selection_reason": "The final Delta era is sourced, but the nameplate retained more than one body configuration.",
+      "body_style": "compact car",
+      "latest_era_label": "Delta / GMX001",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Cobalt"
+      ]
+    },
+    {
+      "model_id": "hhr",
+      "profile_id": "chevrolet-hhr-2011-profile-v1",
+      "representative_year": 2011,
+      "representative_variant": "2011 HHR, exact passenger or panel representative unresolved",
+      "variant_selection_reason": "The final Delta/GMT001 era is sourced, but passenger and panel configurations must not be conflated.",
+      "body_style": "compact wagon",
+      "latest_era_label": "Delta / GMT001",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_HHR",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "cruze",
+      "profile_id": "chevrolet-cruze-2019-profile-v1",
+      "representative_year": 2019,
+      "representative_variant": "2019 Cruze, exact sedan or hatchback representative unresolved",
+      "variant_selection_reason": "The final D2XX era is sourced, but the latest model year included multiple body configurations.",
+      "body_style": "compact car",
+      "latest_era_label": "Second generation, D2XX",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Cruze",
+        "https://en.wikipedia.org/wiki/GM_D2XX_platform",
+        "https://media.gm.com/content/dam/Media/gmcom/investor/2011/DeliveriesDecember2010.pdf",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "cruze-limited",
+      "profile_id": "chevrolet-cruze-limited-2016-profile-v1",
+      "representative_year": 2016,
+      "representative_variant": "2016 Cruze Limited, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "fleet compact car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.chevrolet.com/discontinued-vehicles",
+        "https://en.wikipedia.org/wiki/Chevrolet_Cruze"
+      ]
+    },
+    {
+      "model_id": "volt",
+      "profile_id": "chevrolet-volt-2019-profile-v1",
+      "representative_year": 2019,
+      "representative_variant": "2019 Volt five-door liftback",
+      "variant_selection_reason": "The final second-generation Volt uses the D2UX five-door liftback architecture.",
+      "body_style": "plug-in hybrid five-door liftback",
+      "doors": 5,
+      "latest_era_label": "Second generation, D2UX / Voltec",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Volt",
+        "https://en.wikipedia.org/wiki/Voltec_(propulsion_system)",
+        "https://media.gm.com/content/dam/Media/gmcom/investor/2011/DeliveriesDecember2010.pdf",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "caprice-ppv",
+      "profile_id": "chevrolet-caprice-ppv-2017-profile-v1",
+      "representative_year": 2017,
+      "representative_variant": "2017 Caprice PPV police sedan",
+      "variant_selection_reason": "The final U.S. Caprice PPV is the Holden WM/WN-derived four-door police sedan.",
+      "body_style": "full-size police fleet sedan",
+      "doors": 4,
+      "latest_era_label": "GM Zeta, Holden WM/WN Caprice PPV era",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
+        "https://www.gmupfitter.com/wp-content/uploads/2021/05/Caprice-9C1-Specification-Guide-2017.pdf",
+        "https://en.wikipedia.org/wiki/Holden_Caprice_(WM)",
+        "https://en.wikipedia.org/wiki/Chevrolet_Caprice",
+        "https://www.nhtsa.gov/vehicle"
+      ]
+    },
+    {
+      "model_id": "sonic",
+      "profile_id": "chevrolet-sonic-2020-profile-v1",
+      "representative_year": 2020,
+      "representative_variant": "2020 Sonic, exact sedan or hatchback representative unresolved",
+      "variant_selection_reason": "The final Gamma II era is sourced, but the latest model year included multiple body configurations.",
+      "body_style": "subcompact car",
+      "latest_era_label": "Gamma II / T300",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Aveo_(T300)",
+        "https://en.wikipedia.org/wiki/General_Motors_Gamma_platform",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles",
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/sonic/2020.html"
+      ]
+    },
+    {
+      "model_id": "spark",
+      "profile_id": "chevrolet-spark-2022-profile-v1",
+      "representative_year": 2022,
+      "representative_variant": "2022 Spark five-door hatchback",
+      "variant_selection_reason": "The final M400 U.S. Spark uses a five-door city-hatchback body.",
+      "body_style": "five-door city hatchback",
+      "doors": 5,
+      "latest_era_label": "M400 / G2XX",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Spark",
+        "https://en.wikipedia.org/wiki/List_of_General_Motors_platforms",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles",
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/spark/2022.html"
+      ]
+    },
+    {
+      "model_id": "spark-ev",
+      "profile_id": "chevrolet-spark-ev-2016-profile-v1",
+      "representative_year": 2016,
+      "representative_variant": "2016 Spark EV five-door hatchback, exact trim reference pending",
+      "variant_selection_reason": "The model class and evidence identify the Spark EV hatchback, but a body-specific final-year reference is still required.",
+      "body_style": "electric city hatchback",
+      "doors": 5,
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Spark",
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/spark-ev/2016.html"
+      ]
+    },
+    {
+      "model_id": "ss-sedan",
+      "profile_id": "chevrolet-ss-sedan-2017-profile-v1",
+      "representative_year": 2017,
+      "representative_variant": "2017 SS, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "performance sedan",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/ss/2017.html",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "impala-limited",
+      "profile_id": "chevrolet-impala-limited-2016-profile-v1",
+      "representative_year": 2016,
+      "representative_variant": "2016 Impala Limited, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "fleet full-size car",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Impala",
+        "https://www.nhtsa.gov/vehicle"
+      ]
+    },
+    {
+      "model_id": "bolt-ev",
+      "profile_id": "chevrolet-bolt-ev-2023-profile-v1",
+      "representative_year": 2023,
+      "representative_variant": "2023 Bolt EV five-door hatchback",
+      "variant_selection_reason": "The final refreshed BEV2 Bolt EV uses its tall five-door hatchback body.",
+      "body_style": "electric five-door hatchback",
+      "doors": 5,
+      "latest_era_label": "BEV2 / G2KCZ refresh",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://en.wikipedia.org/wiki/Chevrolet_Bolt",
+        "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Cars/BoltEV/2023/2023-Chevrolet-Bolt-EV-062422.pdf",
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/apr/0425-bolt.html"
+      ]
+    },
+    {
+      "model_id": "bolt-euv",
+      "profile_id": "chevrolet-bolt-euv-2023-profile-v1",
+      "representative_year": 2023,
+      "representative_variant": "2023 Bolt EUV five-door crossover",
+      "variant_selection_reason": "The final C121 Bolt EUV uses its distinct longer five-door crossover body.",
+      "body_style": "electric compact crossover",
+      "doors": 5,
+      "latest_era_label": "BEV2 / C121",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://en.wikipedia.org/wiki/Chevrolet_Bolt",
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/bolt-euv/2023.html",
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/apr/0425-bolt.html"
+      ]
+    },
+    {
+      "model_id": "pre-ck-truck",
+      "profile_id": "chevrolet-pre-ck-truck-1959-profile-v1",
+      "representative_year": 1959,
+      "representative_variant": "1959 Chevrolet Task Force truck, exact pickup or commercial representative unresolved",
+      "variant_selection_reason": "This is an umbrella truck-family entry, so a body-specific Task Force source must select the representative.",
+      "body_style": "pickup and commercial truck family",
+      "latest_era_label": "Task Force",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Task_Force",
+        "https://www.gm.com/heritage/collection/chevrolet-trucks"
+      ]
+    },
+    {
+      "model_id": "canopy-express",
+      "profile_id": "chevrolet-canopy-express-1955-profile-v1",
+      "representative_year": 1955,
+      "representative_variant": "1955 Canopy Express open-sided delivery body",
+      "variant_selection_reason": "The final Advance Design First Series Canopy Express is defined by its open-sided rear commercial body.",
+      "body_style": "open-sided commercial delivery vehicle",
+      "doors": 2,
+      "cab_style": "regular",
+      "rear_body": "open-sided canopy delivery body",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Advance Design First Series / final Canopy Express year",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1955-Chevrolet-Truck-1st-Series.pdf",
+        "https://en.wikipedia.org/wiki/Chevrolet_Advance_Design",
+        "https://www.gm.com/heritage/collection/chevrolet-trucks",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "sedan-delivery",
+      "profile_id": "chevrolet-sedan-delivery-1960-profile-v1",
+      "representative_year": 1960,
+      "representative_variant": "1960 Biscayne-based Sedan Delivery",
+      "variant_selection_reason": "The sourced latest era identifies the final car-based, windowless two-door Biscayne delivery body.",
+      "body_style": "car-based sedan delivery",
+      "doors": 2,
+      "rear_body": "enclosed windowless cargo body",
+      "latest_era_label": "Biscayne-based sedan delivery",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Sedan_delivery"
+      ]
+    },
+    {
+      "model_id": "panel-truck",
+      "profile_id": "chevrolet-panel-truck-1970-profile-v1",
+      "representative_year": 1970,
+      "representative_variant": "1970 Action Line C10 Panel",
+      "variant_selection_reason": "The sourced final model year identifies the truck-chassis Action Line panel body rather than a car-based delivery wagon.",
+      "body_style": "truck-based panel delivery",
+      "doors": 2,
+      "cab_style": "regular",
+      "rear_body": "enclosed panel body",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Action Line panel truck",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1970-Chevrolet-Truck.pdf",
+        "https://en.wikipedia.org/wiki/Chevrolet_C/K_(second_generation)"
+      ]
+    },
+    {
+      "model_id": "suburban",
+      "profile_id": "suburban-gmtt1yc-refresh-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Suburban four-door full-size SUV",
+      "variant_selection_reason": "The extended-wheelbase production SUV is the sole current Suburban body architecture and must retain its long third-row body.",
+      "body_style": "extended-wheelbase full-size SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "T1XX / GMTT1YC refresh",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://www.chevrolet.com/suvs/suburban",
+        "https://www.gmupfitter.com/wp-content/uploads/2025/09/Suburban-Tahoe-Electrical-Body-Builder-Manual-Service-Manual-2026_en_US.pdf",
+        "https://www.gm.com/heritage/collection/chevrolet-trucks",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "3100",
+      "profile_id": "chevrolet-3100-1959-profile-v1",
+      "representative_year": 1959,
+      "representative_variant": "1959 3100, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "light-duty pickup",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/collection/chevrolet-trucks/1948-chevrolet-pickup",
+        "https://www.gm.com/heritage/collection/chevrolet-trucks"
+      ]
+    },
+    {
+      "model_id": "3600",
+      "profile_id": "chevrolet-3600-1959-profile-v1",
+      "representative_year": 1959,
+      "representative_variant": "1959 3600, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "three-quarter-ton truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://news.classicindustries.com/1947-1959-chevy-truck-model-years-guide"
+      ]
+    },
+    {
+      "model_id": "3800",
+      "profile_id": "chevrolet-3800-1959-profile-v1",
+      "representative_year": 1959,
+      "representative_variant": "1959 3800, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "one-ton truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/collection/chevrolet-trucks",
+        "https://news.classicindustries.com/1947-1959-chevy-truck-model-years-guide"
+      ]
+    },
+    {
+      "model_id": "cameo-carrier",
+      "profile_id": "chevrolet-cameo-carrier-1958-profile-v1",
+      "representative_year": 1958,
+      "representative_variant": "1958 Cameo Carrier, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "light-duty pickup",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "apache",
+      "profile_id": "chevrolet-apache-1961-profile-v1",
+      "representative_year": 1961,
+      "representative_variant": "1961 Apache, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "light-duty truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf"
+      ]
+    },
+    {
+      "model_id": "viking",
+      "profile_id": "chevrolet-viking-1961-profile-v1",
+      "representative_year": 1961,
+      "representative_variant": "1961 Viking, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "medium-duty truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf"
+      ]
+    },
+    {
+      "model_id": "spartan",
+      "profile_id": "chevrolet-spartan-1961-profile-v1",
+      "representative_year": 1961,
+      "representative_variant": "1961 Spartan, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "heavy-duty truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf"
+      ]
+    },
+    {
+      "model_id": "ck-series",
+      "profile_id": "chevrolet-ck-series-2002-profile-v1",
+      "representative_year": 2002,
+      "representative_variant": "2002 C/K carryover, exact C3500HD or chassis-cab representative unresolved",
+      "variant_selection_reason": "Pickup production ended earlier while limited heavy derivatives continued, so a 2002 body-specific source is required.",
+      "body_style": "full-size pickup and commercial truck",
+      "latest_era_label": "GMT400 Classic and C3500HD carryover",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/GMT400",
+        "https://en.wikipedia.org/wiki/Chevrolet_C/K_(fourth_generation)",
+        "https://www.chevrolet.com/legacy/trucks",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_C/K"
+      ]
+    },
+    {
+      "model_id": "greenbrier",
+      "profile_id": "chevrolet-greenbrier-1972-profile-v1",
+      "representative_year": 1972,
+      "representative_variant": "1972 Chevelle Greenbrier station wagon",
+      "variant_selection_reason": "The catalog note establishes that the latest Greenbrier use was a Chevelle wagon rather than the earlier Corvair van.",
+      "body_style": "midsize station wagon",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "corvan",
+      "profile_id": "chevrolet-corvan-1964-profile-v1",
+      "representative_year": 1964,
+      "representative_variant": "1964 Corvan forward-control cargo van",
+      "variant_selection_reason": "The catalog identifies the Corvair 95 cargo-van family, but a final-year visual reference is still required.",
+      "body_style": "compact forward-control cargo van",
+      "rear_body": "enclosed cargo body",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Greenbrier"
+      ]
+    },
+    {
+      "model_id": "rampside",
+      "profile_id": "chevrolet-rampside-1964-profile-v1",
+      "representative_year": 1964,
+      "representative_variant": "1964 Rampside side-ramp pickup",
+      "variant_selection_reason": "The catalog explicitly identifies the Corvair 95 side-ramp pickup, but final artwork still needs a body-specific reference.",
+      "body_style": "compact forward-control pickup",
+      "doors": 2,
+      "cab_style": "forward-control",
+      "rear_body": "pickup bed with side ramp",
+      "wheel_layout": "single rear",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "loadside",
+      "profile_id": "chevrolet-loadside-1962-profile-v1",
+      "representative_year": 1962,
+      "representative_variant": "1962 Loadside conventional-bed pickup",
+      "variant_selection_reason": "The catalog explicitly distinguishes the conventional-bed Corvair 95 pickup, but final artwork still needs a body-specific reference.",
+      "body_style": "compact forward-control pickup",
+      "doors": 2,
+      "cab_style": "forward-control",
+      "rear_body": "conventional pickup bed",
+      "wheel_layout": "single rear",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "g-series-van",
+      "profile_id": "chevrolet-g-series-van-1996-profile-v1",
+      "representative_year": 1996,
+      "representative_variant": "1996 G-Series Van, exact cargo, passenger, cutaway, or Hi-Cube representative unresolved",
+      "variant_selection_reason": "The final sourced era spans multiple complete and incomplete body configurations.",
+      "body_style": "full-size van",
+      "latest_era_label": "Third-generation Chevrolet van",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_van"
+      ]
+    },
+    {
+      "model_id": "sportvan",
+      "profile_id": "chevrolet-sportvan-1996-profile-v1",
+      "representative_year": 1996,
+      "representative_variant": "1996 G-Series Sportvan passenger van",
+      "variant_selection_reason": "The final sourced Sportvan era identifies the integrated-window passenger configuration.",
+      "body_style": "full-size passenger van",
+      "doors": 4,
+      "rear_body": "windowed passenger body",
+      "latest_era_label": "Third-generation G-Series Sportvan",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-G-Van.pdf",
+        "https://en.wikipedia.org/wiki/Chevrolet_van",
+        "https://www.oldcarbrochures.com/static/NA/GM%20Trucks%20and%20Vans/1965_Trucks_And_Vans/dirindex.html"
+      ]
+    },
+    {
+      "model_id": "p-series-step-van",
+      "profile_id": "chevrolet-p-series-step-van-1998-profile-v1",
+      "representative_year": 1998,
+      "representative_variant": "1998 P-Series / Step-Van, exact walk-in body or stripped-chassis representative unresolved",
+      "variant_selection_reason": "The catalog intentionally combines commercial walk-in bodies and stripped chassis, so no complete body may be invented.",
+      "body_style": "commercial walk-in van and stripped chassis",
+      "latest_era_label": "Step-Van King / P-Series commercial chassis",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Step-Van"
+      ]
+    },
+    {
+      "model_id": "l-series-tilt-cab",
+      "profile_id": "chevrolet-l-series-tilt-cab-1981-profile-v1",
+      "representative_year": 1981,
+      "representative_variant": "1981 Chevrolet Steel Tilt Cab cab-and-chassis",
+      "variant_selection_reason": "Cab-and-chassis preserves the defining W60/W70 steel tilt-cab architecture without inventing a second-stage body.",
+      "body_style": "medium or heavy cab-over truck",
+      "doors": 2,
+      "cab_style": "cab-over",
+      "rear_body": "exposed chassis",
+      "wheel_layout": "dual rear",
+      "latest_era_label": "Chevrolet Steel Tilt Cab, W60 / W70",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1980-Chevrolet-Truck.pdf",
+        "https://www.oldcarbrochures.com/static/NA/GM%20Trucks%20and%20Vans/1979_Trucks_and_Vans/1979_Chevrolet_Trucks_Brochure/dirindex.html",
+        "https://imcdb.opencommunity.be/forum_topic-7960-60340-Chevrolet_Tilt_Cab_and_Steel_Tilt_Cab__GMC_Steel_Tilt_Cab.html",
+        "https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1962-Chevrolet-Truck.pdf"
+      ]
+    },
+    {
+      "model_id": "b-series-bus-chassis",
+      "profile_id": "chevrolet-b-series-bus-chassis-2003-profile-v1",
+      "representative_year": 2003,
+      "representative_variant": "2003 B7 / GMT530 cowled bus chassis",
+      "variant_selection_reason": "The catalog defines an incomplete commercial bus chassis, so no completed third-party bus body is invented.",
+      "body_style": "cowled commercial bus chassis",
+      "doors": 2,
+      "cab_style": "cowl chassis",
+      "rear_body": "incomplete bus chassis",
+      "wheel_layout": "dual rear",
+      "latest_era_label": "Third-generation B7 / GMT530 bus chassis",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet/GMC_B_series",
+        "https://xr793.com/wp-content/uploads/2017/07/1981-Chevrolet-Bus-Chassis.pdf"
+      ]
+    },
+    {
+      "model_id": "titan-90",
+      "profile_id": "chevrolet-titan-90-1980-profile-v1",
+      "representative_year": 1980,
+      "representative_variant": "1980 Titan 90, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "Class 8 cab-over truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf"
+      ]
+    },
+    {
+      "model_id": "chevy-90",
+      "profile_id": "chevrolet-chevy-90-1977-profile-v1",
+      "representative_year": 1977,
+      "representative_variant": "1977 Chevy 90, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "Class 7-8 conventional truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "blazer",
+      "profile_id": "blazer-c1uc-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Blazer five-door crossover",
+      "variant_selection_reason": "The latest U.S. Blazer is the refreshed C1XX crossover, not a K5 or body-on-frame Blazer.",
+      "body_style": "midsize crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "C1XX crossover refresh, C1UC",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Blazer_(crossover)",
+        "https://www.chevrolet.com/suvs/previous-year/blazer",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "luv",
+      "profile_id": "chevrolet-luv-1982-profile-v1",
+      "representative_year": 1982,
+      "representative_variant": "1982 LUV, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact pickup",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.motortrend.com/features/chevy-truck-history"
+      ]
+    },
+    {
+      "model_id": "vega-panel-express",
+      "profile_id": "chevrolet-vega-panel-express-1975-profile-v1",
+      "representative_year": 1975,
+      "representative_variant": "1975 Vega Panel Express windowless wagon",
+      "variant_selection_reason": "The catalog identifies the windowless Vega wagon derivative, but a final-year body-specific reference is still required.",
+      "body_style": "car-based panel delivery",
+      "doors": 2,
+      "rear_body": "enclosed windowless cargo body",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Vega"
+      ]
+    },
+    {
+      "model_id": "bison",
+      "profile_id": "chevrolet-bison-1980-profile-v1",
+      "representative_year": 1980,
+      "representative_variant": "1980 Bison, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "Class 8 conventional truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf",
+        "https://www.trucksplanet.com/catalog/model.php?id=1309"
+      ]
+    },
+    {
+      "model_id": "bruin",
+      "profile_id": "chevrolet-bruin-1980-profile-v1",
+      "representative_year": 1980,
+      "representative_variant": "1980 Bruin, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "Class 7-8 conventional truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.motorologist.com/wp-content/uploads/GMC_Truck_History-century.pdf",
+        "https://de.wikipedia.org/wiki/Chevrolet_Bruin"
+      ]
+    },
+    {
+      "model_id": "kodiak",
+      "profile_id": "chevrolet-kodiak-2009-profile-v1",
+      "representative_year": 2009,
+      "representative_variant": "2009 Kodiak, exact cab and chassis configuration unresolved",
+      "variant_selection_reason": "The final GMT560 era is sourced, but a body-specific reference must select cab style, axle layout, and rear body.",
+      "body_style": "medium-duty truck",
+      "latest_era_label": "Third generation, GMT560",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Kodiak",
+        "https://static.nhtsa.gov/odi/rcl/2007/RCMN-07V469-1939.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "s10",
+      "profile_id": "chevrolet-s10-2004-profile-v1",
+      "representative_year": 2004,
+      "representative_variant": "2004 S-10, exact cab and bed configuration unresolved",
+      "variant_selection_reason": "The final S/T pickup era is sourced, but the current catalog does not select one latest-year cab and bed.",
+      "body_style": "compact pickup",
+      "latest_era_label": "Second-generation S/T pickup",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_S-10",
+        "https://www.cars.com/research/chevrolet-s_10/"
+      ]
+    },
+    {
+      "model_id": "s10-blazer",
+      "profile_id": "chevrolet-s10-blazer-1994-profile-v1",
+      "representative_year": 1994,
+      "representative_variant": "1994 S-10 Blazer, exact two-door or four-door representative unresolved",
+      "variant_selection_reason": "The final first-generation S/T Blazer era is sourced, but the body configuration must be selected from a year-specific reference.",
+      "body_style": "compact SUV",
+      "latest_era_label": "First-generation S/T Blazer",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_S-10_Blazer"
+      ]
+    },
+    {
+      "model_id": "tiltmaster-w-series",
+      "profile_id": "chevrolet-tiltmaster-w-series-2009-profile-v1",
+      "representative_year": 2009,
+      "representative_variant": "2009 Tiltmaster / W-Series cab-and-chassis",
+      "variant_selection_reason": "Cab-and-chassis preserves the Isuzu N-Series-derived low-cab-forward architecture without choosing an undocumented second-stage body.",
+      "body_style": "low-cab-forward commercial truck",
+      "doors": 2,
+      "cab_style": "cab-over",
+      "rear_body": "exposed chassis",
+      "wheel_layout": "dual rear",
+      "latest_era_label": "Isuzu N-Series-derived Tiltmaster / W-Series",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://static.nhtsa.gov/nhtsa/downloads/MfrMail/01-022-N11B-8753.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "t-series-medium-duty",
+      "profile_id": "chevrolet-t-series-medium-duty-2009-profile-v1",
+      "representative_year": 2009,
+      "representative_variant": "2009 T-Series Medium Duty, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "medium-duty commercial truck",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://static.nhtsa.gov/nhtsa/downloads/MfrMail/01-022-N11B-8753.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "astro",
+      "profile_id": "chevrolet-astro-2005-profile-v1",
+      "representative_year": 2005,
+      "representative_variant": "2005 Astro, exact passenger or cargo representative unresolved",
+      "variant_selection_reason": "The final M-body era is sourced, but passenger and cargo bodies must not be conflated.",
+      "body_style": "midsize van",
+      "latest_era_label": "Second generation, M-body van",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Astro"
+      ]
+    },
+    {
+      "model_id": "lumina-apv",
+      "profile_id": "chevrolet-lumina-apv-1996-profile-v1",
+      "representative_year": 1996,
+      "representative_variant": "1996 Lumina APV minivan",
+      "variant_selection_reason": "The final sourced U-body era identifies the production passenger minivan architecture.",
+      "body_style": "passenger minivan",
+      "doors": 4,
+      "latest_era_label": "Second-generation U-body minivan",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Lumina_APV"
+      ]
+    },
+    {
+      "model_id": "tahoe",
+      "profile_id": "tahoe-gmtt1uc-refresh-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Tahoe four-door full-size SUV",
+      "variant_selection_reason": "The standard-length T1XX SUV is the current Tahoe architecture and must remain visibly shorter than Suburban.",
+      "body_style": "standard-length full-size SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "T1XX / GMTT1UC refresh",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://www.chevrolet.com/suvs/tahoe",
+        "https://www.gmupfitter.com/wp-content/uploads/2025/09/Suburban-Tahoe-Electrical-Body-Builder-Manual-Service-Manual-2026_en_US.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "express",
+      "profile_id": "express-gmt610-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Express cargo van",
+      "variant_selection_reason": "Cargo van is the representative complete-body configuration for a nameplate that also includes passenger and cutaway derivatives.",
+      "body_style": "full-size short-hood cargo van",
+      "doors": 4,
+      "rear_body": "enclosed cargo body",
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "GMT610",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://www.gmupfitter.com/wp-content/uploads/2021/05/Express_Savana_Electrical_Body_Builders_Manual_Service_Manual_2016_en_US.pdf",
+        "https://en.wikipedia.org/wiki/Chevrolet_Express",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/commercial/express/vans/specs-models",
+        "https://www.chevrolet.com/commercial/express/cutaway"
+      ]
+    },
+    {
+      "model_id": "s10-ev",
+      "profile_id": "chevrolet-s10-ev-1998-profile-v1",
+      "representative_year": 1998,
+      "representative_variant": "1998 S-10 EV, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "electric compact pickup",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_S-10_EV",
+        "https://www.energy.gov/eere/vehicles/articles/alternative-fuels-data-center"
+      ]
+    },
+    {
+      "model_id": "venture",
+      "profile_id": "chevrolet-venture-2005-profile-v1",
+      "representative_year": 2005,
+      "representative_variant": "2005 Venture passenger minivan",
+      "variant_selection_reason": "The final U-body refresh is represented by the complete passenger minivan body.",
+      "body_style": "passenger minivan",
+      "doors": 5,
+      "latest_era_label": "Third-generation U-body refresh",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Venture"
+      ]
+    },
+    {
+      "model_id": "tracker",
+      "profile_id": "chevrolet-tracker-2004-profile-v1",
+      "representative_year": 2004,
+      "representative_variant": "2004 Tracker, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "compact SUV",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/Chevrolet_Tracker_(Americas)"
+      ]
+    },
+    {
+      "model_id": "silverado",
+      "profile_id": "silverado-t1xx-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Silverado 1500 crew cab short bed",
+      "variant_selection_reason": "The crew-cab short-bed 1500 is the representative complete light-duty pickup configuration for the current T1XX nameplate.",
+      "body_style": "full-size pickup",
+      "doors": 4,
+      "cab_style": "crew",
+      "rear_body": "short pickup bed",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Fourth generation, T1XX",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://news.gm.com/home.detail.html/Pages/topic/us/en/2024/dec/1216-silverado.html",
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "silverado-hd",
+      "profile_id": "silverado-hd-t1xx-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Silverado 2500HD crew cab standard bed",
+      "variant_selection_reason": "A complete-body 2500HD pickup is used instead of conflating the nameplate with 3500HD dual-rear-wheel and 4500HD-6500HD chassis-cab derivatives.",
+      "body_style": "heavy-duty full-size pickup",
+      "doors": 4,
+      "cab_style": "crew",
+      "rear_body": "standard pickup bed",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Fourth generation HD, T1XX",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.chevrolet.com/trucks/previous-year/silverado/2500hd-3500hd",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/commercial/silverado/4500hd-5500hd-6500hd-chassis-cab",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "trailblazer",
+      "profile_id": "trailblazer-vssf-refresh-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Trailblazer five-door crossover",
+      "variant_selection_reason": "The latest U.S. Trailblazer is the refreshed VSS-F crossover, not the earlier GMT360 body-on-frame SUV.",
+      "body_style": "subcompact crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "VSS-F crossover refresh",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://media.gm.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Trailblazer/2024/2024-Chevrolet-Trailblazer-110123.pdf",
+        "https://www.chevrolet.com/suvs/trailblazer",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "avalanche",
+      "profile_id": "chevrolet-avalanche-2013-profile-v1",
+      "representative_year": 2013,
+      "representative_variant": "2013 Avalanche crew-cab sport utility pickup",
+      "variant_selection_reason": "The final GMT941 Avalanche retains the four-door crew cab, midgate, short cargo box, and sail-panel architecture.",
+      "body_style": "crew-cab sport utility pickup",
+      "doors": 4,
+      "cab_style": "crew",
+      "rear_body": "short integrated pickup bed with sail panels",
+      "wheel_layout": "single rear",
+      "latest_era_label": "GMT900 family, GMT941",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/GMT900",
+        "https://en.wikipedia.org/wiki/Chevrolet_Avalanche",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_pickup_trucks"
+      ]
+    },
+    {
+      "model_id": "ssr",
+      "profile_id": "chevrolet-ssr-2006-profile-v1",
+      "representative_year": 2006,
+      "representative_variant": "2006 SSR retractable-hardtop sport pickup",
+      "variant_selection_reason": "The final GMT368 SSR has one distinctive two-seat roadster-pickup architecture.",
+      "body_style": "retractable-hardtop sport pickup",
+      "doors": 2,
+      "cab_style": "regular",
+      "rear_body": "short integrated pickup bed",
+      "wheel_layout": "single rear",
+      "latest_era_label": "GMT368",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/GMT360",
+        "https://en.wikipedia.org/wiki/Chevrolet_SSR",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "colorado",
+      "profile_id": "colorado-31xx2-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Colorado crew cab short bed",
+      "variant_selection_reason": "The current U.S. third-generation Colorado uses the crew-cab short-bed architecture.",
+      "body_style": "midsize pickup",
+      "doors": 4,
+      "cab_style": "crew",
+      "rear_body": "short pickup bed",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Third generation, 31XX-2",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/jul/0728-colorado.html",
+        "https://gmauthority.com/blog/2022/11/heres-whats-new-about-the-2023-chevy-colorado-platform/",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "uplander",
+      "profile_id": "chevrolet-uplander-2008-profile-v1",
+      "representative_year": 2008,
+      "representative_variant": "2008 Uplander passenger minivan",
+      "variant_selection_reason": "The final U-body Uplander is represented by its complete crossover-styled passenger minivan body.",
+      "body_style": "crossover-styled passenger minivan",
+      "doors": 5,
+      "latest_era_label": "U-body crossover-styled minivan",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://news.chevrolet.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Uplander.pdf",
+        "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2k08uplander.pdf",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits"
+      ]
+    },
+    {
+      "model_id": "equinox",
+      "profile_id": "equinox-d2uc2-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Equinox five-door crossover",
+      "variant_selection_reason": "The fourth-generation gasoline Equinox is the current compact-crossover representative and must remain distinct from Equinox EV.",
+      "body_style": "compact crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "Fourth generation, VSS-F / D2UC-2",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.chevrolet.com/suvs/equinox",
+        "https://www.gm.com/heritage/archive/vehicle-information-kits",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "traverse",
+      "profile_id": "traverse-c1yc2-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Traverse three-row crossover",
+      "variant_selection_reason": "The third-generation C1XX-2 model is the current long, upright three-row Traverse architecture.",
+      "body_style": "midsize three-row crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "Third generation, C1XX-2 / C1YC2",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.chevrolet.com/suvs/traverse",
+        "https://www.chevrolet.com/vehicles",
+        "https://en.wikipedia.org/wiki/List_of_Chevrolet_vehicles"
+      ]
+    },
+    {
+      "model_id": "traverse-limited",
+      "profile_id": "chevrolet-traverse-limited-2024-profile-v1",
+      "representative_year": 2024,
+      "representative_variant": "2024 Traverse Limited five-door crossover",
+      "variant_selection_reason": "The one-year C1YC carryover is the prior-generation complete three-row crossover body.",
+      "body_style": "midsize three-row crossover SUV",
+      "doors": 5,
+      "latest_era_label": "C1XX / C1YC carryover",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Chevrolet_Traverse",
+        "https://www.chevrolet.com/discontinued-vehicles"
+      ]
+    },
+    {
+      "model_id": "captiva-sport",
+      "profile_id": "chevrolet-captiva-sport-2015-profile-v1",
+      "representative_year": 2015,
+      "representative_variant": "2015 Captiva Sport, representative body configuration unresolved",
+      "variant_selection_reason": "The catalog establishes the nameplate, high-level vehicle class, and latest model year, but does not identify one body-specific representative strongly enough for exact profile artwork.",
+      "body_style": "fleet compact crossover SUV",
+      "profile_status": "representative-variant-research-needed",
+      "source_urls": [
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/captiva-sport/2015.html",
+        "https://en.wikipedia.org/wiki/Chevrolet_Captiva_Sport"
+      ]
+    },
+    {
+      "model_id": "trax",
+      "profile_id": "trax-vssf-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Trax five-door crossover",
+      "variant_selection_reason": "The second U.S. generation is the current low, wide VSS-F Trax architecture.",
+      "body_style": "subcompact crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "Second U.S. generation, VSS-F",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://www.chevrolet.com/suvs/trax",
+        "https://en.wikipedia.org/wiki/Chevrolet_Trax",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "city-express",
+      "profile_id": "chevrolet-city-express-2018-profile-v1",
+      "representative_year": 2018,
+      "representative_variant": "2018 City Express cargo van",
+      "variant_selection_reason": "The final M20-derived nameplate has one compact enclosed cargo-van body.",
+      "body_style": "compact cargo van",
+      "doors": 4,
+      "cab_style": "cab-forward",
+      "rear_body": "enclosed cargo body",
+      "wheel_layout": "single rear",
+      "latest_era_label": "Nissan M20-derived compact van",
+      "profile_status": "era-mapped",
+      "source_urls": [
+        "https://media.chevrolet.com/media/us/en/chevrolet/vehicles/city-express/2018.html",
+        "https://en.wikipedia.org/wiki/Chevrolet_City_Express"
+      ]
+    },
+    {
+      "model_id": "low-cab-forward",
+      "profile_id": "low-cab-forward-isuzu-n-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Low Cab Forward cab-and-chassis",
+      "variant_selection_reason": "Cab-and-chassis preserves the defining Isuzu-derived cab-over architecture without inventing a second-stage body.",
+      "body_style": "commercial low-cab-forward truck",
+      "doors": 2,
+      "cab_style": "cab-over",
+      "rear_body": "exposed chassis",
+      "wheel_layout": "dual rear",
+      "latest_era_label": "Isuzu N-Series-derived LCF",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://www.chevrolet.com/commercial/low-cab-forward-cab-over-truck",
+        "https://en.wikipedia.org/wiki/Isuzu_Elf",
+        "https://www.chevrolet.com/commercial"
+      ]
+    },
+    {
+      "model_id": "blazer-ev",
+      "profile_id": "blazer-ev-bev3-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Blazer EV five-door crossover",
+      "variant_selection_reason": "The BEV3 Blazer EV is a distinct low-roof electric crossover and cannot reuse gasoline Blazer geometry.",
+      "body_style": "electric midsize crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "BEV3 / Ultium",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/jul/0718-blazerev.html",
+        "https://www.chevrolet.com/electric/blazer-ev"
+      ]
+    },
+    {
+      "model_id": "equinox-ev",
+      "profile_id": "equinox-ev-bev3-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Equinox EV five-door crossover",
+      "variant_selection_reason": "The BEV3 Equinox EV is a distinct electric crossover and cannot reuse gasoline Equinox geometry.",
+      "body_style": "electric compact crossover SUV",
+      "doors": 5,
+      "wheel_layout": "single front and rear",
+      "latest_era_label": "BEV3 / Ultium",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/sep/0908-equinoxev-reveal.html",
+        "https://www.chevrolet.com/electric/equinox-ev",
+        "https://www.chevrolet.com/electric/ev-range-battery"
+      ]
+    },
+    {
+      "model_id": "silverado-ev",
+      "profile_id": "silverado-ev-bt1xx-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Silverado EV crew cab short bed",
+      "variant_selection_reason": "The BT1XX electric pickup uses an integrated cab-and-bed sail-panel architecture distinct from combustion Silverado.",
+      "body_style": "electric full-size pickup",
+      "doors": 4,
+      "cab_style": "crew",
+      "rear_body": "short pickup bed with sail panels",
+      "wheel_layout": "single rear",
+      "latest_era_label": "BT1XX / Ultium",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/GM_BT1_platform",
+        "https://www.chevrolet.com/electric/silverado-ev",
+        "https://www.chevrolet.com/electric/ev-range-battery",
+        "https://www.chevrolet.com/vehicles"
+      ]
+    },
+    {
+      "model_id": "brightdrop-400",
+      "profile_id": "brightdrop-400-bv1-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Chevrolet BrightDrop 400 delivery van",
+      "variant_selection_reason": "The shorter BV1 cargo body is the defining current 400 configuration and must remain visibly shorter than BrightDrop 600.",
+      "body_style": "electric high-roof commercial delivery van",
+      "doors": 4,
+      "cab_style": "cab-forward",
+      "rear_body": "short-wheelbase enclosed cargo body",
+      "wheel_layout": "single rear",
+      "latest_era_label": "BV1 / Ultium commercial van",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html",
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+        "https://www.chevrolet.com/commercial/brightdrop"
+      ]
+    },
+    {
+      "model_id": "brightdrop-600",
+      "profile_id": "brightdrop-600-bv1-2026",
+      "representative_year": 2026,
+      "representative_variant": "2026 Chevrolet BrightDrop 600 delivery van",
+      "variant_selection_reason": "The longer BV1 cargo body is the defining current 600 configuration and must remain visibly longer than BrightDrop 400.",
+      "body_style": "electric high-roof commercial delivery van",
+      "doors": 4,
+      "cab_style": "cab-forward",
+      "rear_body": "long-wheelbase enclosed cargo body",
+      "wheel_layout": "single rear",
+      "latest_era_label": "BV1 / Ultium commercial van",
+      "profile_status": "current-model-reviewed",
+      "source_urls": [
+        "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/aug/0829-brightdrop.html",
+        "https://cdn.motor1.com/pdf-files/programdirnam.pdf",
+        "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+        "https://www.chevrolet.com/commercial/brightdrop"
+      ]
+    }
+  ]
+}

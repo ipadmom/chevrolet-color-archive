@@ -13,6 +13,10 @@ const REPOSITORY = "ipadmom/chevrolet-color-archive";
 const RELEASE_URL = `https://github.com/${REPOSITORY}/releases/tag/${RELEASE_TAG}`;
 const RELEASE_DOWNLOAD_BASE =
   `https://github.com/${REPOSITORY}/releases/download/${RELEASE_TAG}/`;
+const CURRENT_ORDER_GUIDE_RELEASE_TAG = "current-order-guide-source-archive-v1";
+const CURRENT_ORDER_GUIDE_RELEASE_DOWNLOAD_BASE =
+  `https://github.com/${REPOSITORY}/releases/download/` +
+  `${CURRENT_ORDER_GUIDE_RELEASE_TAG}/`;
 const EXPECTED_ASSET_COUNT = 140;
 const EXPECTED_PDF_COUNT = 116;
 const EXPECTED_PDF_BYTES = 1_408_805_873;
@@ -20,12 +24,19 @@ const EXPECTED_PDF_PAGE_COUNT = 8_635;
 const EXPECTED_MODERN_SOURCE_COUNT = 23;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 19;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
-const EXPECTED_MODERN_TABLE_COUNT = 61;
-const EXPECTED_MODERN_ASSERTION_COUNT = 483;
-const EXPECTED_PUBLISHED_RECORD_COUNT = 533;
-const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 529;
+const EXPECTED_MODERN_TABLE_COUNT = 66;
+const EXPECTED_MODERN_ASSERTION_COUNT = 493;
+const PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = new Set([
+  "gm-online-order-guide-pdf-22745",
+  "gm-online-order-guide-pdf-22775",
+  "gm-online-order-guide-pdf-22821",
+  "gm-online-order-guide-pdf-22878",
+  "gm-online-order-guide-pdf-23208",
+]);
+const EXPECTED_PUBLISHED_RECORD_COUNT = 535;
+const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 531;
 const EXPECTED_QUALIFIED_HISTORICAL_RECORD_COUNT = 4;
-const EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT = 10;
+const EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT = 8;
 const EARLY_SUBURBAN_AUDIT_RELATIVE_PATH =
   "data/audits/suburban-1969-1976.json";
 const BROCHURE_PALETTE_AUDIT_RELATIVE_PATH =
@@ -40,6 +51,8 @@ const SPECIALTY_COLOR_SOURCE_RELATIVE_PATH =
   "data/sources/specialty-color-source-candidates.json";
 const MODERN_COLOR_SOURCE_RELATIVE_PATH =
   "data/sources/modern-chevrolet-color-source-candidates.json";
+const CURRENT_ORDER_GUIDE_MANIFEST_RELATIVE_PATH =
+  "data/sources/current-order-guide-source-release-manifest.json";
 const DEFAULT_MANIFEST_RELATIVE_PATH =
   "data/sources/brochure-source-release-manifest.json";
 const DEFAULT_STAGING_RELATIVE_PATH =
@@ -851,6 +864,10 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     repositoryRoot,
     MODERN_COLOR_SOURCE_RELATIVE_PATH,
   );
+  const currentOrderGuideManifestPath = path.join(
+    repositoryRoot,
+    CURRENT_ORDER_GUIDE_MANIFEST_RELATIVE_PATH,
+  );
   const [
     archiveDataSource,
     earlyAuditText,
@@ -860,6 +877,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     tahoe2001To2007AuditText,
     specialtyColorSourceText,
     modernColorSourceText,
+    currentOrderGuideManifestText,
     importedAppUrls,
   ] =
     await Promise.all([
@@ -871,6 +889,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
       readFile(tahoe2001To2007AuditPath, "utf8"),
       readFile(specialtyColorSourcePath, "utf8"),
       readFile(modernColorSourcePath, "utf8"),
+      readFile(currentOrderGuideManifestPath, "utf8"),
       collectAppReleaseUrls(path.join(repositoryRoot, "app"), repositoryRoot),
     ]);
 
@@ -1096,6 +1115,27 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   const manifestEntriesByUrl = new Map(
     [...manifestEntriesByName.values()].map((entry) => [entry.archive_url, entry]),
   );
+  const currentOrderGuideManifest = JSON.parse(currentOrderGuideManifestText);
+  invariant(
+    currentOrderGuideManifest.release_tag === CURRENT_ORDER_GUIDE_RELEASE_TAG,
+    "current Order Guide source manifest has the wrong release tag",
+  );
+  invariant(
+    Array.isArray(currentOrderGuideManifest.entries) &&
+      currentOrderGuideManifest.entries.length ===
+        currentOrderGuideManifest.entry_count,
+    "current Order Guide source manifest entry count is stale",
+  );
+  const currentOrderGuideEntriesByUrl = new Map(
+    currentOrderGuideManifest.entries.map((entry) => [
+      entry.archive_url,
+      entry,
+    ]),
+  );
+  const allReleaseEntriesByUrl = new Map([
+    ...manifestEntriesByUrl,
+    ...currentOrderGuideEntriesByUrl,
+  ]);
 
   const modernColorSource = JSON.parse(modernColorSourceText);
   invariant(
@@ -1183,6 +1223,41 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     allAppReleaseUrls.add(source.archive_url);
   }
 
+  const currentOrderGuideEntriesBySourceId = new Map(
+    currentOrderGuideManifest.entries.map((entry) => [entry.source_id, entry]),
+  );
+  const retainedOrderGuidePaletteSources = modernColorSource.sources.filter(
+    ({ source_id: sourceId }) =>
+      PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS.has(sourceId),
+  );
+  invariant(
+    retainedOrderGuidePaletteSources.length ===
+      PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS.size,
+    "modern source ledger must retain all five published Order Guide palettes",
+  );
+  for (const source of retainedOrderGuidePaletteSources) {
+    const entry = currentOrderGuideEntriesBySourceId.get(source.source_id);
+    invariant(
+      entry,
+      `missing current Order Guide manifest entry: ${source.source_id}`,
+    );
+    invariant(
+      source.archive_asset_name === entry.asset_name &&
+        source.archive_url === entry.archive_url &&
+        source.sha256 === entry.sha256 &&
+        source.bytes === entry.bytes &&
+        source.page_count === entry.pdf_page_count,
+      `${source.source_id} does not match its retained Order Guide artifact`,
+    );
+    invariant(
+      entry.artifact_status === "retained_exact_snapshot" &&
+        entry.review_status === "cited_pages_visually_reviewed",
+      `${source.source_id} is not retained and visually reviewed`,
+    );
+    modernSourcesById.set(source.source_id, source);
+    allAppReleaseUrls.add(source.archive_url);
+  }
+
   const modernPaletteTables = modernColorSource.verified_palette_tables;
   invariant(
     modernPaletteTables.length === EXPECTED_MODERN_TABLE_COUNT,
@@ -1237,8 +1312,13 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   );
   invariant(
     JSON.stringify([...tableSourceIds].sort()) ===
-      JSON.stringify(expectedModernSourceIds),
-    "modern palette tables must use all 23 retained modern sources",
+      JSON.stringify(
+        [
+          ...expectedModernSourceIds,
+          ...PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS,
+        ].sort(),
+      ),
+    "modern palette tables must use all retained palette sources across both Releases",
   );
 
   const specialtyColorSource = JSON.parse(specialtyColorSourceText);
@@ -1305,6 +1385,8 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "gm-2026-blazer-ev-9c1-9c3-5w4",
     "gm-2026-silverado-9c1-041426",
     "gm-2026-silverado-5w4-041426",
+    "gm-online-order-guide-pdf-22917",
+    "gm-online-order-guide-pdf-23168",
   ].sort();
   const actualPublishedSpecialtySourceIds = [
     ...new Set(
@@ -1314,7 +1396,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualPublishedSpecialtySourceIds) ===
       JSON.stringify(expectedPublishedSpecialtySourceIds),
-    "published rows must resolve to the 32 audited governing sources",
+    "published rows must resolve to the 34 audited governing sources",
   );
   const verifiedNotPublishedSpecialtyRecords =
     specialtyColorSource.verified_not_published;
@@ -1389,10 +1471,13 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     const { source } = record;
     invariant(
       typeof source.archive_url === "string" &&
-        source.archive_url.startsWith(RELEASE_DOWNLOAD_BASE),
-      `${record.record_id} is not pinned to ${RELEASE_TAG}`,
+        (source.archive_url.startsWith(RELEASE_DOWNLOAD_BASE) ||
+          source.archive_url.startsWith(
+            CURRENT_ORDER_GUIDE_RELEASE_DOWNLOAD_BASE,
+          )),
+      `${record.record_id} is not pinned to an audited source Release`,
     );
-    const entry = manifestEntriesByUrl.get(source.archive_url);
+    const entry = allReleaseEntriesByUrl.get(source.archive_url);
     invariant(entry, `missing manifest entry for ${record.record_id}`);
     invariant(
       source.source_id === entry.source_id,
@@ -1442,12 +1527,14 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
 
   for (const url of allAppReleaseUrls) {
     invariant(
-      typeof url === "string" && url.startsWith(RELEASE_DOWNLOAD_BASE),
-      `app-fed brochure citation is not pinned to ${RELEASE_TAG}: ${url}`,
+      typeof url === "string" &&
+        (url.startsWith(RELEASE_DOWNLOAD_BASE) ||
+          url.startsWith(CURRENT_ORDER_GUIDE_RELEASE_DOWNLOAD_BASE)),
+      `app-fed citation is not pinned to an audited source Release: ${url}`,
     );
     invariant(
-      manifestEntriesByUrl.has(url),
-      `app brochure citation is absent from the Release manifest: ${url}`,
+      allReleaseEntriesByUrl.has(url),
+      `app citation is absent from the source Release manifests: ${url}`,
     );
   }
 

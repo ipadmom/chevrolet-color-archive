@@ -34,11 +34,11 @@ test("brochure source Release manifest closes every app-fed citation", async () 
       assetCount: 140,
       controllingAssetCount: 30,
       appFedCitationCount: 30,
-      appReleaseUrlCount: 108,
-      publishedRecordCount: 533,
-      publishedSpecialtyRecordCount: 529,
+    appReleaseUrlCount: 115,
+      publishedRecordCount: 535,
+      publishedSpecialtyRecordCount: 531,
       publishedQualifiedHistoricalRecordCount: 4,
-      verifiedNotPublishedSpecialtyRecordCount: 10,
+      verifiedNotPublishedSpecialtyRecordCount: 8,
     },
   );
   assert.ok(["verified", "not-present"].includes(report.local_staging));

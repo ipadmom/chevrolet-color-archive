@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-07-23T06:41:58Z",
+  "catalog_year_ceiling": 2026,
+  "scope": "Official Chevrolet owner-manual and Vehicle Reference Information documents for every current 2026 nameplate in the Chevrolet Color Archive.",
+  "source_role": "Manuals support exact vehicle identity, configuration, controls, dimensions, loading, and line-art/body-detail review. They do not establish a complete exterior-color palette unless an exact paint chart is present and separately reviewed.",
+  "retention_note": "These direct official manual URLs are provenance references and are not served as application imagery. The common 2026 GM Fleet Guide used for profile artwork is separately retained, hashed, and archived in brochure-source-archive-v1.",
+  "official_manual_portal": {
+    "canonical_landing_url": "https://experience.gm.com/support/vehicle/manuals-guides",
+    "chevrolet_brand_entry_url": "https://www.chevrolet.com/support/vehicle/manuals-guides",
+    "model_index_api": "https://contentdelivery.ext.gm.com/bypass/gma-search-api/searchapi/solr/make-model-year/select",
+    "document_index_api": "https://contentdelivery.ext.gm.com/bypass/gma-search-api/searchapi/solr/gma-public/select",
+    "make": "Chevrolet",
+    "model_year": 2026,
+    "region": "GMNA",
+    "country": "US",
+    "locale": "en_US",
+    "returned_model_count": 18,
+    "authority": "official_manufacturer_live",
+    "mutable": true
+  },
+  "current_color_authority": {
+    "title": "GM Electronic Order Guide",
+    "landing_url": "https://www.gmfleetorderguide.com/",
+    "active_2026_chevrolet_guide_count": 26,
+    "current_profile_guide_id_count": 17,
+    "shared_profile_guide": "BrightDrop 400 and BrightDrop 600 share vehicle ID 23108.",
+    "generated_pdf_endpoint_template": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/{vehicle_id}/all/en-us",
+    "color_trim_endpoint_template": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/{vehicle_id}/en-us",
+    "vehicle_metadata_endpoint_template": "https://eog-api.musea2.azure.ext.gm.com/api/Vehicles/{vehicle_id}/en-us",
+    "profile_reconciliation_path": "../audits/current-model-order-guide-reconciliation.json",
+    "authority_note": "The Electronic Order Guide, not the owner manual, is the stronger current exterior-color source because it publishes RPOs, WA touch-up identities, compatibility, SEO rows, restrictions, and official swatch filenames."
+  },
+  "record_count": 18,
+  "owner_manual_reference_count": 18,
+  "unique_owner_manual_count": 16,
+  "vehicle_reference_information_model_count": 11,
+  "unique_vehicle_reference_information_count": 10,
+  "records": [
+    {
+      "model_id": "blazer",
+      "portal_model": "Blazer",
+      "portal_record_id": "US40150",
+      "owner_manual": {
+        "title": "2026 Chevrolet Blazer Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/blazer/26_CHEV_Blazer_OM_en_US_U_86333000A_2025AUG05.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 17525769
+      }
+    },
+    {
+      "model_id": "blazer-ev",
+      "portal_model": "Blazer EV",
+      "portal_record_id": "US40095",
+      "owner_manual": {
+        "title": "2026 Chevrolet Blazer EV Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/blazer_ev/26_CHEV_Blazer_EV_OM_en_US_U_19187829B_2025OCT01_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 16319818
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Blazer EV - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/blazer_ev/26_CHEV_Blazer_EV_VRI_en_US_fr_CA_U_85031092A_2025APR25.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19349400
+      }
+    },
+    {
+      "model_id": "brightdrop-400",
+      "portal_model": "BrightDrop 400",
+      "portal_record_id": "US40089",
+      "owner_manual": {
+        "title": "2026 Chevrolet BrightDrop 400/600 Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/brightdrop/26_CHEV_BrightDrop_400_600_OM_en_US_fr_CA_U_85052777B_2025AUG08_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 25441176
+      }
+    },
+    {
+      "model_id": "brightdrop-600",
+      "portal_model": "BrightDrop 600",
+      "portal_record_id": "US40087",
+      "owner_manual": {
+        "title": "2026 Chevrolet BrightDrop 400/600 Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/brightdrop/26_CHEV_BrightDrop_400_600_OM_en_US_fr_CA_U_85052777B_2025AUG08_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 25441176
+      }
+    },
+    {
+      "model_id": "colorado",
+      "portal_model": "Colorado",
+      "portal_record_id": "US40111",
+      "owner_manual": {
+        "title": "2026 Chevrolet Colorado Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/colorado/26_CHEV_Colorado_OM_en_US_U_19451149A_2025JUN06.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 17388890
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Colorado - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/colorado/26_CHEV_Colorado_VRI_en_US_fr_CA_U_86568230B_2025OCT02_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19521622
+      }
+    },
+    {
+      "model_id": "corvette",
+      "portal_model": "Corvette",
+      "portal_record_id": "US40132",
+      "owner_manual": {
+        "title": "2026 Chevrolet Corvette Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/corvette/26_CHEV_Corvette_OM_en_US_U_18519895B_2025%20OCT31_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 7758460
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Corvette Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/corvette/26_CHEV_Corvette_VRI_en_US_fr_CA_U_86518594B_2025OCT24_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 1716582
+      }
+    },
+    {
+      "model_id": "equinox",
+      "portal_model": "Equinox",
+      "portal_record_id": "US40066",
+      "owner_manual": {
+        "title": "2026 Chevrolet Equinox Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/equinox/26_CHEV_Equinox_OM_en_US_U_18951079B_2025JUN20_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 16573658
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Equinox Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/equinox/26_CHEV_Equinox_VRI_en_US_fr_CA_U_86583019B_2025JUN05_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19273338
+      }
+    },
+    {
+      "model_id": "equinox-ev",
+      "portal_model": "Equinox EV",
+      "portal_record_id": "US40138",
+      "owner_manual": {
+        "title": "2026 Chevrolet Equinox Electric Vehicle (EV) Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/equinox_ev/26_CHEV_Equinox_EV_OM_en_US_U_19301060C_2026JUN10_3P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 16424938
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Equinox EV - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/equinox_ev/26_CHEV_Equinox_EV_VRI_en_US_fr_CA_U_85059890B_2025NOV05_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19360507
+      }
+    },
+    {
+      "model_id": "express",
+      "portal_model": "Express",
+      "portal_record_id": "US40151",
+      "owner_manual": {
+        "title": "2026 Chevrolet Express Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/express/26_CHEV_Express_OM_en_US_U_85010582A_2025AUG08.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 16163146
+      }
+    },
+    {
+      "model_id": "low-cab-forward",
+      "portal_model": "Low Cab Forward",
+      "portal_record_id": "US40154",
+      "owner_manual": {
+        "title": "2026 Chevrolet Low Cab Forward 6.7L Diesel Engine 6500XD/7500XD Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/26_CHEV_Low_Cab_Forward_6.7L_Diesel_en_US_U_85828058A_2024DEC11.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 18467162
+      },
+      "selection_note": "The profile represents the 6500XD, so the 6.7L 6500XD/7500XD manual is the configuration-matched document. Separate 5.2L and 6.6L manuals exist for other Low Cab Forward series."
+    },
+    {
+      "model_id": "silverado",
+      "portal_model": "Silverado LD",
+      "portal_record_id": "US40103",
+      "owner_manual": {
+        "title": "2026 Chevrolet Silverado 1500 Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/silverado_1500/26_CHEV_Silverado_1500_OM_en_US_U_86595939C_2026JUN15_3P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19114851
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Silverado 1500 - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/silverado_1500/26_CHEV_Silverado_1500_VRI_en_US_fr_CA_U_86595953B_2025SEP23_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19563723
+      }
+    },
+    {
+      "model_id": "silverado-ev",
+      "portal_model": "Silverado EV",
+      "portal_record_id": "US40097",
+      "owner_manual": {
+        "title": "2026 Chevrolet Silverado EV Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/silverado_ev/26_CHEV_Silverado_EV_OM_en_US_U_19040924B_2025AUG19_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 17593737
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Silverado EV Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/silverado_ev/26_CHEV_Silverado_EV_VRI_en_US_fr_CA_U_86558159B_2025AUG08_2P0.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19795472
+      }
+    },
+    {
+      "model_id": "silverado-hd",
+      "portal_model": "Silverado HD",
+      "portal_record_id": "US40101",
+      "owner_manual": {
+        "title": "2026 Chevrolet Silverado 2500HD/3500HD Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/silverado_2500_3500_hd/26_CHEV_Silverado_2500_3500_HD_OM_en_US_U_86595931C_2026JUN15_3P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 18766917
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Silverado 2500HD 3500HD Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/26_CHEV_Silverado_2500_3500_HD_VRI_en_US_fr_CA_U_86595954B_2025OCT29_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19841626
+      }
+    },
+    {
+      "model_id": "suburban",
+      "portal_model": "Suburban",
+      "portal_record_id": "US40139",
+      "owner_manual": {
+        "title": "2026 Chevrolet Tahoe/Suburban Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/26_CHEV_Tahoe_Suburban_OM_en_US_U_19431973C_2026JUN08_3P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 18412436
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Tahoe/Suburban - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/26_CHEV_Tahoe_Suburban_VRI_en_US_fr_CA_U_86595957A_2025JUN27.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19621266
+      }
+    },
+    {
+      "model_id": "tahoe",
+      "portal_model": "Tahoe",
+      "portal_record_id": "US40141",
+      "owner_manual": {
+        "title": "2026 Chevrolet Tahoe/Suburban Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/26_CHEV_Tahoe_Suburban_OM_en_US_U_19431973C_2026JUN08_3P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 18412436
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Tahoe/Suburban - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/26_CHEV_Tahoe_Suburban_VRI_en_US_fr_CA_U_86595957A_2025JUN27.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19621266
+      }
+    },
+    {
+      "model_id": "trailblazer",
+      "portal_model": "Trailblazer",
+      "portal_record_id": "US40081",
+      "owner_manual": {
+        "title": "2026 Chevrolet Trailblazer Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/trailblazer/26_CHEV_Trailblazer_OM_en_US_U_86539123B_2025JUN03_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 17095187
+      }
+    },
+    {
+      "model_id": "traverse",
+      "portal_model": "Traverse",
+      "portal_record_id": "US40119",
+      "owner_manual": {
+        "title": "2026 Chevrolet Traverse Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/traverse/26_CHEV_Traverse_OM_en_US_U_19356103A_2025JUN13.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 22466668
+      },
+      "vehicle_reference_information": {
+        "title": "2026 Chevrolet Traverse - Vehicle Reference Information",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/user_manuals_browse/2026/chevrolet/traverse/26_CHEV_Traverse_VRI_en_US_fr_CA_U_85008603B_2025OCT02_2P.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 19307688
+      }
+    },
+    {
+      "model_id": "trax",
+      "portal_model": "Trax",
+      "portal_record_id": "US40113",
+      "owner_manual": {
+        "title": "2026 Chevrolet TRAX Owner Manual",
+        "url": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2026/chevrolet/trax/26_CHEV_TRAX_OM_en_US_U_86527833A_2025MAY13.pdf",
+        "live_http_status": 200,
+        "live_content_type": "application/pdf",
+        "live_content_length_bytes": 16739980
+      }
+    }
+  ]
+}

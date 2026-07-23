@@ -67,14 +67,14 @@ The exact URLs, candidate page lists, local paths, SHA-256 hashes, byte lengths,
 | 2022 | 2 | 20 | Suburban Fleet Guide palette and Tahoe per-trim eBrochure union |
 | 2023 | 4 | 39 | Suburban Fleet Guide palette plus Colorado and two Silverado HD brochure tables |
 | 2024 | 1 | 9 | Suburban Fleet Guide palette |
-| 2025 | 19 | 143 | Main Chevrolet car, EV, SUV, truck, van, and BrightDrop palettes in the Fleet Guide |
-| 2026 | 21 | 146 | Main Chevrolet EV, SUV, truck, van, BrightDrop, and Low Cab Forward palettes |
+| 2025 | 23 | 152 | Main Chevrolet car, EV, SUV, truck, van, and BrightDrop Fleet Guide palettes, plus four retained Order Guide completion tables |
+| 2026 | 22 | 147 | Main Chevrolet EV, SUV, truck, van, BrightDrop, and Low Cab Forward Fleet Guide palettes, plus the retained Corvette completion table |
 
-The tables contain 483 source color-name assertions. After overlapping body
-series are reconciled without discarding their citations, they publish 454
-qualified palette-union rows across 56 model-year records.
+The tables contain 493 source color-name assertions. After overlapping body
+series are reconciled without discarding their citations, they publish 462
+qualified palette-union rows across 57 model-year records.
 
-All 61 verified tables are now represented in the application. The four earlier
+All 66 verified tables are now represented in the application. The four earlier
 brochure tables add three distinct model-year records and 33 unique app rows:
 ten for the 2022 Tahoe, eight for the 2023 Colorado, and 15 across the two
 separately cited 2023 Silverado HD body-series sources. The corrected
@@ -82,6 +82,13 @@ controlling locators are Tahoe PDF pp. 8, 10, 12, 14, 16, and 18; Silverado
 2500/3500 HD PDF p. 10; and Silverado 4500/5500/6500 HD PDF p. 7. Colorado
 remains PDF pp. 13, 15, 17, 19, and 21. Printed extra-cost and trim or body
 restrictions are retained at the color claim.
+
+Five retained and visually reviewed Online Order Guide tables add eight unique
+application rows. They publish 2025 Blazer EV Habanero Orange, 2026 Corvette
+Blade Silver Matte, and the 2025 Low Cab Forward six-color union across three
+body-family guides. The LCF tables preserve Isuzu manufacturer codes without
+inventing WA identities or merging Woodland Green `46U` into GM Woodland Green
+`9V5 / WA-9015`.
 
 The 2025 and 2026 rows retain source spelling. One example is the 2025 Colorado guide's `Sterling Grey Metallic`; normalization to `Sterling Gray Metallic` must occur through an alias, not by overwriting the source text.
 
@@ -161,16 +168,19 @@ Run `npm run sources:validate-modern` from the repository root. The validator:
 - verifies one GM-authored Fleet Guide for every model year from 2008 through
   2026;
 - confirms that every published catalog model ID exists;
-- checks all 61 published palette tables against 76 exact PDF page references;
+- checks all 66 published palette tables against 81 exact PDF page references;
   and
-- finds every one of the 483 published color-name assertions in the cited page
+- finds every one of the 493 published color-name assertions in the cited page
   text.
 
 Those immutable-artifact checks cover the 57 Fleet Guide tables and four
-Chevrolet eBrochure tables. Application tests separately enforce the 454 unique
-qualified app rows, per-color restrictions, and both Silverado source links.
-The complete PDFs currently remain under ignored local storage and still must
-be copied to the designated GitHub Release for durable publication.
+Chevrolet eBrochure tables retained locally, plus five exact generated Order
+Guide PDFs retained in
+[`current-order-guide-source-archive-v1`](https://github.com/ipadmom/chevrolet-color-archive/releases/tag/current-order-guide-source-archive-v1).
+The validator joins each Order Guide source and table to the tracked Release
+manifest, exact artifact digest, byte count, page count, archive URL, and cited
+visual-review finding. Application tests separately enforce the 462 unique
+qualified app rows, per-color restrictions, and multi-source joins.
 
 The validator also keeps the mutable Online Order Guide observation distinct
 from immutable PDF evidence. Its current API response remains a timestamped

@@ -868,10 +868,48 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
         generation.years.includes("2026") &&
         generation.sources["2026"]?.evidenceClass === "specialty_palette_subset",
     );
-  assert.equal(silverado2026.length, 50);
+  assert.equal(silverado2026.length, 51);
   assert.deepEqual(
     [...new Set(silverado2026.map((generation) => generation.programLabel))].sort(),
-    ["2026 Silverado 5W4 SSV", "2026 Silverado 9C1 PPV"],
+    [
+      "2026 Silverado 5W4 SSV",
+      "2026 Silverado 9C1 PPV",
+      "Silverado 1500 Retail and Fleet SEO paint",
+    ],
+  );
+  const retailFleetWoodland = silverado2026.find(
+    (generation) =>
+      generation.programId ===
+      "gm-silverado-1500-retail-fleet-seo-paint-2025-2026",
+  );
+  assert.ok(retailFleetWoodland);
+  assert.deepEqual(retailFleetWoodland.years, ["2026"]);
+  assert.equal(
+    retailFleetWoodland.colors[0].availability["2026"].code,
+    "WA-9015 / SEO 9V5",
+  );
+  assert.equal(
+    retailFleetWoodland.colors[0].availability["2026"].state,
+    "available_with_minimum_batch",
+  );
+  assert.equal(
+    retailFleetWoodland.colors[0].availability["2026"].factoryCode,
+    null,
+  );
+  assert.equal(
+    retailFleetWoodland.colors[0].availability["2026"].touchUpCode,
+    "WA-9015",
+  );
+  const retailFleetTimelineRow = buildArchiveMatrix(
+    byId.get("silverado"),
+    "2026",
+  ).colors.find((color) =>
+    color.matrixKey.includes("Silverado 1500 Retail and Fleet SEO paint"),
+  );
+  assert.ok(retailFleetTimelineRow);
+  assert.deepEqual(
+    Object.keys(retailFleetTimelineRow.availability).sort(),
+    ["2025", "2026"],
   );
   assert.ok(
     models.every((model) =>

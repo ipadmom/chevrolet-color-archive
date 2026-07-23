@@ -345,6 +345,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "s10:1993",
                 "silverado:2012",
                 "silverado:2014",
+                "silverado:2025",
                 "silverado:2026",
                 "sportvan:1979",
                 "sportvan:1980",
@@ -373,7 +374,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
             },
             {row["model_year_id"] for row in overlays},
         )
-        self.assertEqual(509, len(overlays))
+        self.assertEqual(511, len(overlays))
         self.assertEqual(
             {"specialty_palette_subset"},
             {row["evidence_class"] for row in overlays},

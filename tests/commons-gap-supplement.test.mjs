@@ -126,3 +126,40 @@ test("Commons crawler helpers can be imported without starting a crawl", async (
   assert.equal(result.stdout, "");
   assert.equal(result.stderr, "");
 });
+
+test("BrightDrop photos fail closed on exact 400 identity and Chevrolet branding", async () => {
+  const plan = await loadJson("data/photos/commons-gap-supplement.json");
+  const byModel = new Map(
+    plan.targets.map((target) => [target.model_id, target]),
+  );
+  const brightdrop400 = byModel.get("brightdrop-400");
+  const brightdrop600 = byModel.get("brightdrop-600");
+
+  assert.equal(brightdrop400.outcome, "no_exact_photo_found");
+  assert.deepEqual(brightdrop400.candidates, []);
+  assert.equal(brightdrop400.rejections.length, 4);
+  assert.ok(
+    brightdrop400.rejections.every((rejection) =>
+      /distinguish|identif|model-identity/i.test(rejection.reason),
+    ),
+  );
+
+  assert.deepEqual(
+    brightdrop600.candidates
+      .filter((candidate) => candidate.decision === "selected")
+      .map((candidate) => candidate.page_title),
+    ["File:2024 Chevrolet BrightDrop Zevo 600.jpg"],
+  );
+  const fedex = brightdrop600.candidates.find((candidate) =>
+    candidate.page_title.startsWith("File:FedEx Brightdrop Zevo 600"),
+  );
+  assert.equal(fedex.decision, "rejected");
+  assert.match(fedex.evidence_note, /does not explicitly identify Chevrolet/i);
+  assert.ok(
+    brightdrop600.rejections.some(
+      (rejection) =>
+        rejection.page_title === fedex.page_title &&
+        rejection.license === "CC BY-SA 4.0",
+    ),
+  );
+});

@@ -1,0 +1,781 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-07-23T05:44:29Z",
+  "catalog_year_ceiling": 2026,
+  "scope": "Independent reconciliation of every stored 2025 and 2026 regular exterior-color union for the 18 current Chevrolet nameplates against exact GM Online Order Guide vehicle records.",
+  "publication_rule": "A matching color-name union is not verified complete until exact order codes, WA or manufacturer paint identities, trim restrictions, extra-cost states, build-out or late-availability states, and applicable SEO programs have been normalized from a retained and reviewed source artifact.",
+  "sources": [
+    {
+      "source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "title": "2025 GM Fleet Guide",
+      "original_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/25GMFG-DECEMBER.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "sha256": "00db87ab9b417911a00c4241a9a3a47c38cc22d54c3c6f79fa7032d7770a3b39",
+      "bytes": 26347856,
+      "pdf_page_count": 179
+    },
+    {
+      "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+      "title": "2026 GM Fleet Guide",
+      "original_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+      "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+      "bytes": 183423642,
+      "pdf_page_count": 184
+    },
+    {
+      "source_id": "gm-online-order-guide-us-current",
+      "title": "GM Online Order Guide",
+      "landing_url": "https://www.gmfleetorderguide.com/",
+      "api_base_url": "https://eog-api.musea2.azure.ext.gm.com",
+      "color_trim_endpoint_path_template": "/api/PullDown/GetColorAndTrim/{vehicle_id}/en-us",
+      "generated_pdf_endpoint_path_template": "/api/Pdf/GeneratePdf/{vehicle_id}/all/en-us",
+      "authority": "official_manufacturer_live",
+      "mutable": true,
+      "limitation": "The application API is mutable. An observed response documents a research result but is not permanent evidence unless the exact response or generated PDF is retained, hashed, and reviewed."
+    }
+  ],
+  "retained_snapshot_release": {
+    "manifest_path": "../sources/current-order-guide-source-release-manifest.json",
+    "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/current-order-guide-source-archive-v1",
+    "release_manifest_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/current-order-guide-source-release-manifest.json",
+    "entry_count": 31,
+    "pdf_page_count": 3457,
+    "total_pdf_bytes": 14302332,
+    "scope": "Exact retained 2025 and 2026 generated-PDF snapshots for the specialty, Woodland Green, and exact palette-completion page-review queues. This release is a subset of the 50 live vehicle IDs in the complete reconciliation.",
+    "publication_limit": "Retention and page location do not by themselves establish a complete model-year palette or authorize a normalized color row."
+  },
+  "vehicle_source_index": {
+    "22745": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22745/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22745/all/en-us"
+    },
+    "22775": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22775/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22775/all/en-us"
+    },
+    "22821": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22821/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22821/all/en-us"
+    },
+    "22839": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22839/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22839/all/en-us"
+    },
+    "22849": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22849/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22849/all/en-us"
+    },
+    "22850": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22850/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22850/all/en-us"
+    },
+    "22878": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22878/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22878/all/en-us"
+    },
+    "22903": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22903/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22903/all/en-us"
+    },
+    "22904": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22904/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22904/all/en-us"
+    },
+    "22905": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22905/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22905/all/en-us"
+    },
+    "22917": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22917/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22917/all/en-us"
+    },
+    "22934": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22934/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22934/all/en-us"
+    },
+    "22944": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22944/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22944/all/en-us"
+    },
+    "22954": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22954/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22954/all/en-us"
+    },
+    "22973": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22973/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22973/all/en-us"
+    },
+    "22974": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22974/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us"
+    },
+    "22975": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22975/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22975/all/en-us"
+    },
+    "22982": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/22982/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22982/all/en-us"
+    },
+    "23014": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23014/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23014/all/en-us"
+    },
+    "23015": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23015/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23015/all/en-us"
+    },
+    "23016": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23016/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23016/all/en-us"
+    },
+    "23022": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23022/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23022/all/en-us"
+    },
+    "23023": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23023/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23023/all/en-us"
+    },
+    "23025": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23025/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23025/all/en-us"
+    },
+    "23035": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23035/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23035/all/en-us"
+    },
+    "23075": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23075/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23075/all/en-us"
+    },
+    "23079": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23079/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23079/all/en-us"
+    },
+    "23091": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23091/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23091/all/en-us"
+    },
+    "23094": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23094/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23094/all/en-us"
+    },
+    "23098": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23098/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23098/all/en-us"
+    },
+    "23108": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23108/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23108/all/en-us"
+    },
+    "23136": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23136/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23136/all/en-us"
+    },
+    "23139": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23139/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23139/all/en-us"
+    },
+    "23144": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23144/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23144/all/en-us"
+    },
+    "23159": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23159/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23159/all/en-us"
+    },
+    "23168": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23168/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23168/all/en-us"
+    },
+    "23195": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23195/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23195/all/en-us"
+    },
+    "23196": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23196/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23196/all/en-us"
+    },
+    "23197": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23197/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23197/all/en-us"
+    },
+    "23208": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23208/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23208/all/en-us"
+    },
+    "23213": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23213/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us"
+    },
+    "23215": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23215/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23215/all/en-us"
+    },
+    "23232": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23232/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23232/all/en-us"
+    },
+    "23233": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23233/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23233/all/en-us"
+    },
+    "23260": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23260/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23260/all/en-us"
+    },
+    "23265": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23265/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23265/all/en-us"
+    },
+    "23276": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23276/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23276/all/en-us"
+    },
+    "23277": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23277/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23277/all/en-us"
+    },
+    "23278": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23278/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23278/all/en-us"
+    },
+    "23290": {
+      "color_trim_url": "https://eog-api.musea2.azure.ext.gm.com/api/PullDown/GetColorAndTrim/23290/en-us",
+      "generated_pdf_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23290/all/en-us"
+    }
+  },
+  "summary": {
+    "current_model_count": 18,
+    "model_year_records_checked": 36,
+    "safe_to_upgrade_to_verified_complete": 0,
+    "substantive_regular_palette_omissions": 0,
+    "source_literal_conflicts": 2,
+    "regular_palette_results_mostly_matching": 36
+  },
+  "records": [
+    {
+      "model_id": "blazer",
+      "model_name": "Blazer",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 7,
+          "fleet_guide_pages": [76],
+          "order_guide_vehicle_ids": [22934]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 6,
+          "fleet_guide_pages": [88],
+          "order_guide_vehicle_ids": [23265]
+        }
+      ],
+      "result": "The color-name unions match. Exact LT, Premier, RS, order-code, and cost restrictions remain to be normalized."
+    },
+    {
+      "model_id": "blazer-ev",
+      "model_name": "Blazer EV",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [26],
+          "order_guide_vehicle_ids": [22878],
+          "retained_completion_source_id": "gm-online-order-guide-pdf-22878",
+          "retained_completion_pdf_page": 35,
+          "completion_note": "Habanero Orange GAG / WA-221K is published with the exact SS-only restriction."
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [39],
+          "order_guide_vehicle_ids": [23136],
+          "availability_notes": [
+            "Galaxy Gray Metallic is no longer orderable in the audited Order Guide state."
+          ]
+        }
+      ],
+      "result": "The 2025 identity omission is closed with the retained and visually reviewed Habanero Orange row. The 2026 names match, but other availability states remain incomplete."
+    },
+    {
+      "model_id": "brightdrop-400",
+      "model_name": "BrightDrop 400",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 1,
+          "fleet_guide_pages": [35],
+          "order_guide_vehicle_ids": [23075]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 1,
+          "fleet_guide_pages": [48],
+          "order_guide_vehicle_ids": [23108]
+        }
+      ],
+      "result": "Oyster White GRO / WA-673G is the only body color in both records. The door-color rule remains to be normalized."
+    },
+    {
+      "model_id": "brightdrop-600",
+      "model_name": "BrightDrop 600",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 1,
+          "fleet_guide_pages": [35],
+          "order_guide_vehicle_ids": [23075]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 1,
+          "fleet_guide_pages": [48],
+          "order_guide_vehicle_ids": [23108]
+        }
+      ],
+      "result": "The 400 and 600 share the audited Order Guide record. Oyster White GRO / WA-673G is the only body color; the door-color rule remains to be normalized."
+    },
+    {
+      "model_id": "colorado",
+      "model_name": "Colorado",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [108],
+          "order_guide_vehicle_ids": [23079],
+          "source_literal_conflicts": [
+            {
+              "fleet_guide_literal": "Sterling Grey Metallic",
+              "order_guide_literal": "Sterling Gray Metallic",
+              "order_code": "GXD",
+              "paint_code": "WA-130H"
+            }
+          ]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [120],
+          "order_guide_vehicle_ids": [23215]
+        }
+      ],
+      "result": "The identity unions match. The 2025 spelling conflict and unnormalized SEO sets prevent a complete claim."
+    },
+    {
+      "model_id": "corvette",
+      "model_name": "Corvette",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 10,
+          "fleet_guide_pages": [36, 45],
+          "order_guide_vehicle_ids": [22973]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 11,
+          "fleet_guide_pages": [56, 57],
+          "order_guide_vehicle_ids": [23208],
+          "retained_completion_source_id": "gm-online-order-guide-pdf-23208",
+          "retained_completion_pdf_page": 174,
+          "completion_note": "Blade Silver Matte GRF / WA-730S is published only with ZRA Quail Silver Limited Edition and remains unavailable with D30."
+        }
+      ],
+      "result": "The 2026 identity omission is closed with the retained and visually reviewed Blade Silver Matte limited-edition row. Other trim and availability states still prevent a complete-chart claim."
+    },
+    {
+      "model_id": "equinox",
+      "model_name": "Equinox",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [71],
+          "order_guide_vehicle_ids": [22850]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [83],
+          "order_guide_vehicle_ids": [23091],
+          "source_literal_conflicts": [
+            {
+              "fleet_guide_literal": "Polar White",
+              "order_guide_literal": "Polar White Tricoat",
+              "order_code": "G4J",
+              "paint_code": "WA-241L"
+            }
+          ]
+        }
+      ],
+      "result": "The identity unions match. Build-out, cost, and the 2026 source-literal conflict remain unresolved."
+    },
+    {
+      "model_id": "equinox-ev",
+      "model_name": "Equinox EV",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [25],
+          "order_guide_vehicle_ids": [23098]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [38],
+          "order_guide_vehicle_ids": [23159],
+          "availability_notes": [
+            "Galaxy Gray Metallic is no longer orderable in the audited Order Guide state."
+          ]
+        }
+      ],
+      "result": "The names match. Availability and premium-paint restrictions remain to be normalized."
+    },
+    {
+      "model_id": "express",
+      "model_name": "Express",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 4,
+          "fleet_guide_pages": [135, 137, 139],
+          "order_guide_vehicle_ids": [23014, 23015, 23016],
+          "missing_specialty_identity_count": 18
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 4,
+          "fleet_guide_pages": [149, 151, 153],
+          "order_guide_vehicle_ids": [23276, 23277, 23278],
+          "missing_specialty_identity_count": 18
+        }
+      ],
+      "result": "Four regular names match. Eighteen SEO colors per year, including Woodland Green, remain outside the normalized regular layer."
+    },
+    {
+      "model_id": "low-cab-forward",
+      "model_name": "Low Cab Forward",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 6,
+          "fleet_guide_pages": [],
+          "order_guide_vehicle_ids": [22745, 22775, 22821],
+          "retained_completion_source_ids": [
+            "gm-online-order-guide-pdf-22745",
+            "gm-online-order-guide-pdf-22775",
+            "gm-online-order-guide-pdf-22821"
+          ],
+          "retained_completion_pdf_pages": [21, 20, 13],
+          "completion_note": "The three exact body-family tables publish a six-color model-year union. The five nonwhite colors are limited to 4500 HD/XD and 5500 XD LCF Diesel and are extra cost."
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 6,
+          "fleet_guide_document_year": 2025,
+          "fleet_guide_pages": [125, 126, 127],
+          "order_guide_vehicle_ids": [22954, 22975, 23023]
+        }
+      ],
+      "result": "The 2025 six-color union is now published from three retained and visually reviewed body-family tables. Nonwhite diesel colors are extra cost. Isuzu code 46U has no WA number and remains distinct from GM Woodland Green 9V5 / WA-9015."
+    },
+    {
+      "model_id": "silverado",
+      "model_name": "Silverado",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 9,
+          "fleet_guide_pages": [112],
+          "order_guide_vehicle_ids": [22917],
+          "published_retail_fleet_seo_identity_count": 1,
+          "missing_retail_fleet_seo_identity_count": 20
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 9,
+          "fleet_guide_pages": [124],
+          "order_guide_vehicle_ids": [23168],
+          "published_retail_fleet_seo_identity_count": 1,
+          "missing_retail_fleet_seo_identity_count": 20
+        }
+      ],
+      "result": "The regular names match. Woodland Green 9V5 / WA-9015 is published as an exact 2025 and 2026 Retail and Fleet specialty subset after retained-page visual review. The other 20 retail/fleet SEO identities per year remain research-only and stay separate from the regular layer and from the exact PPV and SSV programs."
+    },
+    {
+      "model_id": "silverado-ev",
+      "model_name": "Silverado EV",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 7,
+          "fleet_guide_pages": [32],
+          "order_guide_vehicle_ids": [22982]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 9,
+          "fleet_guide_pages": [45],
+          "order_guide_vehicle_ids": [23290]
+        }
+      ],
+      "result": "The names match. Several 2026 colors are late, built out, extra cost, or trim limited."
+    },
+    {
+      "model_id": "silverado-hd",
+      "model_name": "Silverado HD",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 15,
+          "fleet_guide_pages": [116, 122, 124],
+          "order_guide_vehicle_ids": [22903, 22904, 22905, 23022],
+          "missing_body_series_seo_identity_count": 48
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 16,
+          "fleet_guide_pages": [128, 136, 138],
+          "order_guide_vehicle_ids": [23195, 23196, 23197, 23260],
+          "missing_body_series_seo_identity_count": 48
+        }
+      ],
+      "result": "The regular body-series unions match. Forty-eight distinct SEO name/code identities across HD and medium-duty entries remain unnormalized for each year."
+    },
+    {
+      "model_id": "suburban",
+      "model_name": "Suburban",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [82],
+          "order_guide_vehicle_ids": [23035],
+          "omitted_specialty_colors": ["Victory Red", "Woodland Green", "Wheatland Yellow"]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [94],
+          "order_guide_vehicle_ids": [23233],
+          "omitted_specialty_colors": ["Victory Red", "Woodland Green", "Wheatland Yellow"]
+        }
+      ],
+      "result": "The regular names match. Three exact SEO identities remain absent for both years."
+    },
+    {
+      "model_id": "tahoe",
+      "model_name": "Tahoe",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [81],
+          "order_guide_vehicle_ids": [22944],
+          "police_ssv_order_guide_vehicle_ids": [22974],
+          "omitted_retail_fleet_seo_identity_count": 3,
+          "omitted_police_ssv_standard_identity_count": 6,
+          "omitted_police_ssv_seo_identity_count": 6
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [93],
+          "order_guide_vehicle_ids": [23232],
+          "police_ssv_order_guide_vehicle_ids": [23213],
+          "omitted_retail_fleet_seo_identity_count": 3,
+          "omitted_police_ssv_standard_identity_count": 6,
+          "omitted_police_ssv_seo_identity_count": 6
+        }
+      ],
+      "result": "The regular names match. Three retail/fleet SEO identities and the current combined police/SSV palette remain absent."
+    },
+    {
+      "model_id": "trailblazer",
+      "model_name": "TrailBlazer",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [69],
+          "order_guide_vehicle_ids": [22849]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [81],
+          "order_guide_vehicle_ids": [23094]
+        }
+      ],
+      "result": "The names match. Trim, roof-option, premium-cost, and build-out restrictions remain to be normalized."
+    },
+    {
+      "model_id": "traverse",
+      "model_name": "Traverse",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [78],
+          "order_guide_vehicle_ids": [23025]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [90],
+          "order_guide_vehicle_ids": [23144],
+          "availability_notes": [
+            "Stardust Metallic is built out in the audited Order Guide state."
+          ]
+        }
+      ],
+      "result": "The names match. Premium-paint and 2026 build-out states remain to be normalized."
+    },
+    {
+      "model_id": "trax",
+      "model_name": "Trax",
+      "safe_to_upgrade_to_verified_complete": false,
+      "years": [
+        {
+          "model_year": 2025,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [68],
+          "order_guide_vehicle_ids": [22839]
+        },
+        {
+          "model_year": 2026,
+          "tracked_state": "reviewed_qualified_palette_union",
+          "tracked_color_count": 8,
+          "fleet_guide_pages": [80],
+          "order_guide_vehicle_ids": [23139]
+        }
+      ],
+      "result": "The names match. Trim, premium-cost, and build-out restrictions remain to be normalized."
+    }
+  ],
+  "specialty_findings": [
+    {
+      "model_id": "tahoe",
+      "model_years": [2025, 2026],
+      "program_scope": "Combined Tahoe Police Package and Special Service Order Guide entry",
+      "vehicle_ids": [22974, 23213],
+      "generated_pdf_page": 29,
+      "standard_color_count_per_year": 6,
+      "seo_colors": [
+        {"name": "Victory Red", "order_code": "5T4", "paint_code": "WA-9260"},
+        {"name": "MSP Blue", "order_code": "9V2", "paint_code": "WA-5665"},
+        {"name": "Woodland Green", "order_code": "9V5", "paint_code": "WA-9015"},
+        {"name": "Dark Blue Metallic", "order_code": "9V7", "paint_code": "WA-722J"},
+        {"name": "Wheatland Yellow", "order_code": "9W3", "paint_code": "WA-253A"},
+        {"name": "Silver Ice Metallic", "order_code": "9W5", "paint_code": "WA-636R"}
+      ],
+      "publication_status": "exact_snapshot_page_located",
+      "qualification": "Do not infer separate PPV-versus-SSV applicability until the combined program page has been visually reviewed."
+    },
+    {
+      "model_id": "blazer-ev",
+      "model_years": [2025, 2026],
+      "finding": "The police Order Guide entries contain six standard colors plus four SEO colors. The normalized archive currently publishes only the four 2026 SEO memberships, not the standard police-program memberships."
+    },
+    {
+      "model_id": "silverado",
+      "model_years": [2026],
+      "program_scope": "Separate 9C1 PPV and 5W4 SSV programs",
+      "finding": "The archive has four standard and 21 SEO rows for each program, but two official-source literal conflicts require page-level re-review.",
+      "retail_fleet_woodland_green_publication": {
+        "model_years": [2025, 2026],
+        "label": "Woodland Green",
+        "order_code": "9V5",
+        "paint_code": "WA-9015",
+        "application_type": "special_equipment_option_paint",
+        "minimum_batch_units": 5,
+        "review_status": "retained_pages_visually_verified_and_published",
+        "source_pages": [
+          {
+            "vehicle_id": 22917,
+            "pdf_page": 221,
+            "printed_page": 221
+          },
+          {
+            "vehicle_id": 23168,
+            "pdf_page": 236,
+            "printed_page": 236
+          }
+        ]
+      },
+      "conflicts": [
+        {
+          "stored_upfitter_literal": "Silver Ice Metallic 5IS / WA-363R",
+          "live_order_guide_literal": "Silver Ice Metallic 5IS / WA-636R"
+        },
+        {
+          "stored_upfitter_literal": "Sterling Gray Metallic GNO / WA-130H",
+          "live_order_guide_literal": "Sterling Gray Metallic GXD / WA-130H"
+        }
+      ]
+    }
+  ],
+  "identity_guards": [
+    "Current GM Order Guide records directly support Woodland Green for exact 2025 and 2026 Chevrolet applications, usually as 9V5 / WA-9015.",
+    "Low Cab Forward Woodland Green uses Isuzu code 46U with no WA number and must remain a separate identity.",
+    "Forest Service Green, Federal Standard 595 No. 14260, and USDA identifier 5032 remain unresolved research leads with no established Chevrolet model-year or GM paint code.",
+    "Forest Service Green must not be merged with Woodland Green, Green WA-7927, Forest Green Metallic, or another similarly named Chevrolet color."
+  ]
+}

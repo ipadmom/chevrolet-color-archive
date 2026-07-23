@@ -1,3 +1,11 @@
+import { useId } from "react";
+
+import {
+  detailedProfileFor,
+  type DetailedVehicleProfileSpec,
+  type DetailedWheelStyle,
+} from "./latest-vehicle-profile-specs";
+
 type VehicleProfileSvgProps = {
   accent?: string;
   label: string;
@@ -45,6 +53,7 @@ type ProfileSpec = {
 const dark = "#3d3931";
 const glass = "#efe8d7";
 const chrome = "#aaa294";
+const paper = "#fbf7ef";
 
 function numericYear(year?: string) {
   const parsed = Number(year);
@@ -330,6 +339,290 @@ function wheel(cx: number, key: string) {
   );
 }
 
+function detailedWheel(
+  cx: number,
+  cy: number,
+  radius: number,
+  style: DetailedWheelStyle,
+  key: string,
+) {
+  const spokeCount =
+    style === "commercial" || style === "steel"
+      ? 4
+      : style === "sport"
+        ? 5
+        : 6;
+  const rimRadius = radius * 0.57;
+  const hubRadius = style === "commercial" ? radius * 0.2 : radius * 0.14;
+
+  return (
+    <g data-wheel-style={style} key={key}>
+      <circle cx={cx} cy={cy} fill="#282927" r={radius} stroke={dark} strokeWidth="1.5" />
+      <circle cx={cx} cy={cy} fill="#d6d2c9" r={rimRadius} stroke="#68655f" strokeWidth="1" />
+      {Array.from({ length: spokeCount }, (_, index) => {
+        const angle = (Math.PI * 2 * index) / spokeCount - Math.PI / 2;
+        const inner = rimRadius * 0.23;
+        const outer = rimRadius * 0.83;
+        return (
+          <path
+            d={`M ${cx + Math.cos(angle) * inner} ${cy + Math.sin(angle) * inner} L ${cx + Math.cos(angle) * outer} ${cy + Math.sin(angle) * outer}`}
+            key={`${key}-spoke-${index}`}
+            stroke={style === "ev" ? "#6f746f" : "#85827b"}
+            strokeLinecap="round"
+            strokeWidth={style === "truck" ? 1.6 : 1.25}
+          />
+        );
+      })}
+      <circle cx={cx} cy={cy} fill={style === "ev" ? "#57564f" : chrome} r={hubRadius} stroke={dark} strokeWidth="0.8" />
+      {style === "commercial" || style === "steel" ? (
+        <circle cx={cx} cy={cy} fill="none" r={rimRadius * 0.72} stroke="#74716b" strokeDasharray="2 2" strokeWidth="1" />
+      ) : null}
+    </g>
+  );
+}
+
+function detailedWheelArch(cx: number, cy: number, radius: number) {
+  const outer = radius + 2.4;
+  return [
+    `M ${cx - outer} ${cy + 1}`,
+    `L ${cx - outer} ${cy - 1}`,
+    `Q ${cx - outer} ${cy - outer} ${cx} ${cy - outer}`,
+    `Q ${cx + outer} ${cy - outer} ${cx + outer} ${cy - 1}`,
+    `L ${cx + outer} ${cy + 1}`,
+    "Z",
+  ].join(" ");
+}
+
+function DetailedVehicleProfileSvg({
+  accent,
+  label,
+  modelId,
+  spec,
+}: {
+  accent: string;
+  label: string;
+  modelId: string;
+  spec: DetailedVehicleProfileSpec;
+}) {
+  const instanceId = useId().replaceAll(":", "");
+  const paintId = `profile-paint-${instanceId}`;
+  const glassId = `profile-glass-${instanceId}`;
+  const rearWheelRadius = spec.rearWheelRadius ?? spec.wheelRadius ?? 11;
+  const frontWheelRadius = spec.frontWheelRadius ?? spec.wheelRadius ?? 11;
+  const wheelCenters = [
+    ["rear", spec.rearWheelX, rearWheelRadius] as const,
+    ...(spec.rearTandemWheelX
+      ? [["rear-tandem", spec.rearTandemWheelX, rearWheelRadius] as const]
+      : []),
+    ["front", spec.frontWheelX, frontWheelRadius] as const,
+  ];
+
+  return (
+    <svg
+      aria-label={`${label}, ${spec.representativeYear} ${spec.representativeVariant} side profile`}
+      className="vehicle-profile vehicle-profile-svg vehicle-profile-detailed"
+      data-body-kind={spec.kind}
+      data-cab-style={spec.kind === "pickup" ? "crew" : undefined}
+      data-profile-fidelity="model-specific"
+      data-profile-id={spec.profileId}
+      data-profile-model={modelId}
+      data-profile-variant={spec.representativeVariant}
+      data-profile-year={spec.representativeYear}
+      data-wheelbase-ratio={spec.targetWheelbaseRatio}
+      role="img"
+      viewBox="0 0 240 96"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>{`${label}, ${spec.representativeYear} ${spec.representativeVariant} side profile`}</title>
+      <defs>
+        <linearGradient id={paintId} x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0.42" />
+          <stop offset="0.16" stopColor={accent} />
+          <stop offset="0.7" stopColor={accent} />
+          <stop offset="1" stopColor="#171511" stopOpacity="0.35" />
+        </linearGradient>
+        <linearGradient id={glassId} x1="0" x2="0.8" y1="0" y2="1">
+          <stop offset="0" stopColor="#dedbd2" />
+          <stop offset="0.55" stopColor="#979994" />
+          <stop offset="1" stopColor="#5d605c" />
+        </linearGradient>
+      </defs>
+
+      <rect fill={paper} height="96" width="240" />
+      <ellipse cx="120" cy="79" fill="#8e8779" opacity="0.19" rx="108" ry="4" />
+      <path
+        d={spec.bodyPath}
+        fill={`url(#${paintId})`}
+        stroke={dark}
+        strokeLinejoin="round"
+        strokeWidth="1.55"
+      />
+      <path
+        d={spec.bodyPath}
+        fill="none"
+        opacity="0.32"
+        stroke="#ffffff"
+        strokeLinejoin="round"
+        strokeWidth="0.65"
+        transform="translate(0 0.8)"
+      />
+
+      {spec.glassPaths.map((path, index) => (
+        <path
+          d={path}
+          fill={`url(#${glassId})`}
+          key={`${spec.profileId}-glass-${index}`}
+          stroke={dark}
+          strokeLinejoin="round"
+          strokeWidth="1.15"
+        />
+      ))}
+
+      {spec.roofRailPaths?.map((path, index) => (
+        <path
+          d={path}
+          key={`${spec.profileId}-rail-${index}`}
+          stroke={dark}
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+      ))}
+
+      {spec.doorLines?.map((x, index) => (
+        <path
+          d={`M ${x} ${spec.bodyStyle === "one-box-van" ? 27 : 41} Q ${x - 1} 52 ${x} 64`}
+          fill="none"
+          key={`${spec.profileId}-door-${index}`}
+          opacity="0.78"
+          stroke={dark}
+          strokeWidth="0.9"
+        />
+      ))}
+
+      {spec.handlePoints?.map(([x, y], index) => (
+        <rect
+          fill="#ded8cc"
+          height="1.7"
+          key={`${spec.profileId}-handle-${index}`}
+          rx="0.8"
+          stroke={dark}
+          strokeWidth="0.45"
+          width="6"
+          x={x}
+          y={y}
+        />
+      ))}
+
+      {spec.mirror ? (
+        spec.mirrorStyle === "tow" ? (
+          <g>
+            <path
+              d={`M ${spec.mirror[0] - 4} ${spec.mirror[1] + 2} H ${spec.mirror[0] + 2}`}
+              stroke={dark}
+              strokeWidth="1.7"
+            />
+            <path
+              d={`M ${spec.mirror[0] + 1} ${spec.mirror[1] - 2} L ${spec.mirror[0] + 11} ${spec.mirror[1] - 1} L ${spec.mirror[0] + 11} ${spec.mirror[1] + 7} L ${spec.mirror[0] + 1} ${spec.mirror[1] + 6} Z`}
+              fill={dark}
+              stroke="#171511"
+              strokeWidth="0.8"
+            />
+          </g>
+        ) : (
+          <path
+            d={`M ${spec.mirror[0] - 3} ${spec.mirror[1]} L ${spec.mirror[0] + 4} ${spec.mirror[1] + 1} L ${spec.mirror[0] + 3} ${spec.mirror[1] + 5} L ${spec.mirror[0] - 4} ${spec.mirror[1] + 4} Z`}
+            fill={dark}
+            stroke="#171511"
+            strokeWidth="0.8"
+          />
+        )
+      ) : null}
+
+      {spec.darkFillPaths?.map((path, index) => (
+        <path
+          d={path}
+          fill={dark}
+          key={`${spec.profileId}-dark-fill-${index}`}
+          stroke="#171511"
+          strokeLinejoin="round"
+          strokeWidth="0.85"
+        />
+      ))}
+      {spec.lightFillPaths?.map((path, index) => (
+        <path
+          d={path}
+          fill="#fff1ad"
+          key={`${spec.profileId}-light-fill-${index}`}
+          stroke={dark}
+          strokeLinejoin="round"
+          strokeWidth="0.75"
+        />
+      ))}
+      {spec.signaturePaths?.map((path, index) => (
+        <path
+          d={path}
+          fill="none"
+          key={`${spec.profileId}-signature-${index}`}
+          opacity="0.84"
+          stroke={dark}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={index === 0 ? 1.35 : 1.15}
+        />
+      ))}
+      {spec.detailPaths?.map((path, index) => (
+        <path
+          d={path}
+          fill="none"
+          key={`${spec.profileId}-detail-${index}`}
+          stroke={dark}
+          strokeWidth="1.1"
+        />
+      ))}
+      {spec.grillePaths?.map((path, index) => (
+        <path
+          d={path}
+          fill="none"
+          key={`${spec.profileId}-grille-${index}`}
+          stroke={dark}
+          strokeWidth="1.2"
+        />
+      ))}
+
+      <path d={spec.frontLampPath} fill="#fff1ad" stroke={dark} strokeWidth="0.7" />
+      <path d={spec.rearLampPath} fill="#b7332f" stroke={dark} strokeWidth="0.7" />
+      {spec.rockerPath ? (
+        <path d={spec.rockerPath} fill="none" opacity="0.75" stroke={dark} strokeWidth="1.15" />
+      ) : null}
+
+      {wheelCenters.map(([key, cx, radius]) => (
+        <path
+          d={detailedWheelArch(cx, 70, radius)}
+          fill={paper}
+          key={`${key}-arch`}
+          stroke={dark}
+          strokeLinejoin="round"
+          strokeWidth="1.25"
+        />
+      ))}
+      {spec.rearDualWheel ? (
+        <circle
+          cx={spec.rearWheelX - 2.8}
+          cy="70"
+          fill="#20211f"
+          r={rearWheelRadius}
+          stroke={dark}
+          strokeWidth="1.4"
+        />
+      ) : null}
+      {wheelCenters.map(([key, cx, radius]) =>
+        detailedWheel(cx, 70, radius, spec.wheelStyle, key),
+      )}
+      <path d="M 8 82 H 232" stroke="#ded3bd" strokeWidth="1" />
+    </svg>
+  );
+}
+
 export function VehicleProfileSvg({
   accent = "var(--ia-gold)",
   label,
@@ -338,6 +631,17 @@ export function VehicleProfileSvg({
   year,
 }: VehicleProfileSvgProps) {
   const modelYear = numericYear(year);
+  const detailedProfile = detailedProfileFor(modelId, modelYear);
+  if (detailedProfile) {
+    return (
+      <DetailedVehicleProfileSvg
+        accent={accent}
+        label={label}
+        modelId={modelId}
+        spec={detailedProfile}
+      />
+    );
+  }
   const kind = inferBodyKind(modelId, vehicleClass);
   const era = designEra(modelId, modelYear);
   const spec = profileSpec(kind, modelId, modelYear);

@@ -590,7 +590,29 @@
       "rejections": [
         {
           "page_title": "Generic Chevrolet BrightDrop files",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Category:Chevrolet_BrightDrop",
           "reason": "Commons metadata does not distinguish the shorter BrightDrop 400 from the BrightDrop 600."
+        },
+        {
+          "page_title": "File:2025 Chevrolet Brightdrop au SIAM 2025.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+          "author": "Bull-Doser",
+          "license": "Public domain",
+          "reason": "Rights pass, but the title and description do not distinguish BrightDrop 400 from BrightDrop 600. The stated 2025 year cannot cure the model-identity gap."
+        },
+        {
+          "page_title": "File:Chevrolet Brightdrop EV charging at Framingham June 2026.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Chevrolet_Brightdrop_EV_charging_at_Framingham_June_2026.jpg",
+          "author": "4300streetcar",
+          "license": "CC BY 4.0",
+          "reason": "Rights pass, but the metadata identifies neither 400 nor 600. June 2026 is a capture date, not a model-year statement."
+        },
+        {
+          "page_title": "File:Hertz BrightDrop van in Ann Arbor, Michigan.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Hertz_BrightDrop_van_in_Ann_Arbor,_Michigan.jpg",
+          "author": "DontCallMeLateForDinner",
+          "license": "CC BY-SA 4.0",
+          "reason": "Rights pass, but the metadata identifies neither BrightDrop 400 nor a model year."
         }
       ]
     },
@@ -616,12 +638,36 @@
           ],
           "explicit_year": null,
           "evidence_note": "Title and description explicitly identify a Chevrolet BrightDrop Zevo 600. The stated 2024 model year precedes the catalog's 2025 Chevrolet rename, so no exact year is recorded."
+        },
+        {
+          "page_title": "File:FedEx Brightdrop Zevo 600 in downtown San Mateo, California, front qtr.jpg",
+          "decision": "rejected",
+          "identity_terms": [
+            "Brightdrop Zevo 600",
+            "Zevo 600"
+          ],
+          "explicit_year": null,
+          "evidence_note": "Title and Commons category identify a BrightDrop Zevo 600, but the metadata does not explicitly identify Chevrolet. The archive's Chevrolet-brand gate rejects it."
         }
       ],
       "rejections": [
         {
           "page_title": "File:BrightDrop Zevo 600.jpg",
           "reason": "Pre-Chevrolet BrightDrop press image. The exact Chevrolet-badged identity is not explicit in the file metadata."
+        },
+        {
+          "page_title": "File:FedEx Brightdrop Zevo 600 in downtown San Mateo, California, front qtr.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:FedEx_Brightdrop_Zevo_600_in_downtown_San_Mateo,_California,_front_qtr.jpg",
+          "author": "Mliu92",
+          "license": "CC BY-SA 4.0",
+          "reason": "The title and category establish Zevo 600, but Commons metadata does not explicitly identify Chevrolet. The conservative brand gate rejects it."
+        },
+        {
+          "page_title": "File:Brampton ON Purolator BrightDrop-Zevo-600-All-Electric-Delivery-Van 2025-07-30.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Brampton_ON_Purolator_BrightDrop-Zevo-600-All-Electric-Delivery-Van_2025-07-30.jpg",
+          "author": "Milan Suvajac",
+          "license": "CC BY-SA 4.0",
+          "reason": "Exact representative 600 identity and reusable rights pass, but the two-representative archive slot is filled. The 2025-07-30 date is a capture date, not model-year evidence."
         }
       ]
     }

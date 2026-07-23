@@ -1,4 +1,5 @@
 ---
+---
 title: Chevrolet specialty exterior color source audit
 visibility: public
 classification: archive-internal
@@ -10,14 +11,14 @@ sources: General Motors Heritage Archive, GM Upfitter, GM Vehicle Order Guide, U
 
 ## Result
 
-The source ledger now publishes 533 directly reviewed records: 529 specialty,
+The source ledger now publishes 535 directly reviewed records: 531 specialty,
 police, or special-service records and four ordinary qualified-historical
-table records. Multi-model records expand those totals to 549 exact specialty
-model applications and four qualified-historical applications, 553 in all.
-The normalized Parquet archive contains 569 specialty availability rows across
-57 application model-years and four qualified-historical rows. Specialty
+table records. Multi-model records expand those totals to 551 exact specialty
+model applications and four qualified-historical applications, 555 in all.
+The normalized Parquet archive contains 571 specialty availability rows across
+58 application model-years and four qualified-historical rows. Specialty
 evidence is the strongest research status for 42 model-years; six model-years
-have a qualified-historical research status. Schema version 11 preserves 509
+have a qualified-historical research status. Schema version 11 preserves 511
 `specialty_overlay` memberships and one `qualified_historical_overlay`
 membership.
 
@@ -39,9 +40,10 @@ membership.
 | 2023 Bolt EUV 5W4 SSV palette | 7 | 7 | Bolt EUV 5W4 SSV only |
 | 2026 Blazer EV 9C1/9C3/5W4 SEO paint | 4 | 4 | Police and Special Service guide only |
 | 2026 Silverado 9C1 PPV and 5W4 SSV | 50 | 50 | 25 separately sourced rows per program |
-| **Specialty subtotal** | **529** | **549** | No adjacent-model or adjacent-year inference |
+| 2025–2026 Silverado 1500 retail/fleet Woodland Green | 2 | 2 | Exact 9V5 row on each retained Order Guide page only |
+| **Specialty subtotal** | **531** | **551** | No adjacent-model or adjacent-year inference |
 | **Qualified-historical subtotal** | **4** | **4** | Ordinary 1981 chart evidence, kept outside the specialty class |
-| **All published records** | **533** | **553** | Publication classes remain separate |
+| **All published records** | **535** | **555** | Publication classes remain separate |
 
 Each specialty ledger record uses `publication_status` value
 `published_specialty_subset`; the four 1981 records use
@@ -50,11 +52,10 @@ availability state, source page, restrictions, artifact byte length, SHA-256
 digest, official URL, and archived GitHub Release copy. These rows do not turn
 an otherwise incomplete model year into a complete regular palette.
 
-Ten additional records are deliberately nonrouting snapshot evidence. Four
+Eight additional records are deliberately nonrouting snapshot evidence. Four
 2024 Blazer EV colors were marked unavailable. In the reviewed 2025 Blazer EV
 snapshot, Victory Red was planned for Q1 2025 and three other colors were
-marked unavailable. Two current Silverado Woodland Green Order Guide rows are
-retained for source comparison. None creates a model-year color route.
+marked unavailable. None creates a model-year color route.
 
 Forest Service Green appears only as a disabled research lead. The search
 result states: “USDA Forest Service, Federal Standard No. 595 color 14260;
@@ -74,7 +75,7 @@ Suburban guides.
 
 Every recorded byte length and SHA-256 digest reconciled. Every promoted PDF
 page was rendered and visually reviewed. The ledger records all 87 unique
-retained artifacts and their source URLs. Every source used by the 533
+retained artifacts and their source URLs. Every source used by the 535
 published records also carries its exact GitHub Release URL.
 
 ## Governing Chevrolet sources
@@ -116,6 +117,8 @@ goes to the complete official file, followed by the retained Release copy.
 - 2026 Blazer EV: [9C1/9C3/5W4 guide](https://www.gmupfitter.com/wp-content/uploads/2025/12/2026-BLAZER-EV-9C1-9C3-5W4-Specification-Guide-V041026.pdf), PDF page 15; [archived copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf).
 - 2026 Silverado PPV: [9C1 Specification Guide](https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-9C1-Specification-Guide-041426.pdf), PDF pages 3 and 11; [archived copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-9c1-specification-guide-gm.pdf).
 - 2026 Silverado SSV: [5W4 Specification Guide](https://www.gmupfitter.com/wp-content/uploads/2026/04/2026-Silverado-SSV-Specification-Guide-041426.pdf), PDF pages 3 and 11; [archived copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf).
+- 2025 Silverado 1500 retail and fleet: [GM Online Order Guide generated PDF](https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22917/all/en-us), PDF page 221; [archived copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-1500-retail-and-fleet-22917.pdf).
+- 2026 Silverado 1500 retail and fleet: [GM Online Order Guide generated PDF](https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23168/all/en-us), PDF page 236; [archived copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-1500-retail-and-fleet-23168.pdf).
 
 ## Historic factory and fleet colors
 
@@ -357,17 +360,22 @@ anomalies remain explicit in the records.
 
 ## Current GM Order Guide snapshots
 
-The ledger retains 24 complete generated Order Guide PDFs for 2025 and 2026
-Woodland Green tables. They cover Colorado, Express Cargo, Express Cutaway,
-Express Passenger, Suburban, Tahoe retail and fleet, Tahoe police and special
-service, Silverado 1500, Silverado 2500HD, Silverado 3500HD, and Silverado
-4500HD through 6500HD.
+The source Release retains 31 complete generated Order Guide PDFs for 2025 and
+2026. Twenty-six comprise the Woodland Green and specialty review queue. They
+cover Colorado, Express Cargo, Express Cutaway, Express Passenger, Suburban,
+Tahoe retail and fleet, Tahoe police and special service, Silverado 1500,
+Silverado 2500HD, Silverado 3500HD, and Silverado 4500HD through 6500HD, plus
+Blazer EV police-package records. Five additional PDFs retain the exact Blazer
+EV, Corvette, and Low Cab Forward tables used to close regular-palette identity
+omissions.
 
 The 2025 Silverado 1500 snapshot, vehicle ID 22917, PDF page 221, and the 2026
-snapshot, vehicle ID 23168, PDF page 236, were visually reviewed. They remain
-verified comparison rows rather than duplicate routes. The newly reviewed 2026
-9C1 and 5W4 specification guides independently govern the published PPV and SSV
-program rows. The remaining 22 Order Guide snapshots have complete bytes,
+snapshot, vehicle ID 23168, PDF page 236, were visually reviewed. Each publishes
+one exact retail-and-fleet Woodland Green row with SEO 9V5, touch-up number
+WA-9015, a five-order minimum, and the possible extended lead-time warning.
+Those records are separate from the 2026 9C1 and 5W4 program rows. The other 20
+SEO-paint entries on each reviewed page remain unpublished. The remaining 24
+Order Guide snapshots have complete bytes,
 retrieval timestamps, SHA-256 digests, and exact candidate pages, but remain
 `exact_snapshot_page_located` pending direct visual review.
 
@@ -428,5 +436,5 @@ a Chevrolet application.
   Impala/Impala Limited Kerr, 2011-2017 Caprice PPV, 2012-2014 municipal, and
   exact 2015-2020 Tahoe/Suburban pages documented above are complete and no
   longer part of this queue.
-- Visually review the 22 remaining current Order Guide snapshot pages and publish only exact, nonduplicate program scopes.
+- Visually review the 24 remaining current Order Guide snapshot records and publish only exact, nonduplicate program scopes.
 - Human-review the consolidated OCR corpus: 2,774 candidate pages and 11,733 automated color-row candidates across 691 source documents. Automated extraction is complete; no candidate is promoted without page-level review.

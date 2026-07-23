@@ -65,9 +65,11 @@
       "gm-2015-impala-limited-9c1-9c3 PDF pages 8 and 9",
       "gm-2016-impala-limited-9c1-9c3 PDF pages 8 and 9",
       "gm-2019-suburban-1fl-3500hd PDF page 10",
-      "gm-2020-suburban-1fl PDF page 10"
+      "gm-2020-suburban-1fl PDF page 10",
+      "gm-online-order-guide-pdf-22917 PDF page 221",
+      "gm-online-order-guide-pdf-23168 PDF page 236"
     ],
-    "publication_boundary": "The 533 app_publication_records are limited to directly reviewed model, year, and program scopes. The 1981 Woodland Green records are limited to four separately reviewed Sportvan, Chevy Van, Cutaway/Hi-Cube, and Step-Van/Step-Van King charts, preserve ZY1, ZY2, code 02, and bare-aluminum distinctions, and assert no factory-installation claim or continuity with SEO 9V5. The 1983 permanent fleet rows are limited to the C/K Pickup, preserve the Cardinal Red S-10/15 and El Camino/Caballero exclusion, print no inferred factory paint code or finish, and assert no assembly-plant installation. The 1993 C/K Pickup tranche is limited to the four zero-lead-day solid paints on PDF page 12 and does not assert assembly-plant installation or extend them to another model. The Caprice PPV tranche contains one row per exact 2011-2017 program, color, and model year, applies the revised model-specific guide over conflicting Fleet Guide summaries, and publishes no inferred WA, SEO, or factory paint code. The 2024 Blazer EV SEO rows marked not available and the 2025 rows marked planned or not available remain nonrouting snapshot evidence. The five no-RPO rows on the 2003 SEO chart remain research-only because the adjacent TGK ordering table expressly identifies only four orderable specialty colors. Forest Service Green remains a research lead without Chevrolet model-year availability. The 2012-2014 municipal SEO tranche publishes 132 exact program-color rows, preserves blank versus literal TBD code cells, records the 2014 Tahoe and Suburban deletions, and does not infer a 2013 Silverado specialty palette. The 2015-2020 later-fleet specialty tranche publishes 112 exact program-color rows from eleven separately retained and visually reviewed GM Upfitter guides, keeps Tahoe 9C1 and 5W4 separate, preserves Impala Kerr post-build application semantics, and does not infer adjacent years or route Forest Service Green.",
+    "publication_boundary": "The 535 app_publication_records are limited to directly reviewed model, year, and program scopes. The 1981 Woodland Green records are limited to four separately reviewed Sportvan, Chevy Van, Cutaway/Hi-Cube, and Step-Van/Step-Van King charts, preserve ZY1, ZY2, code 02, and bare-aluminum distinctions, and assert no factory-installation claim or continuity with SEO 9V5. The 1983 permanent fleet rows are limited to the C/K Pickup, preserve the Cardinal Red S-10/15 and El Camino/Caballero exclusion, print no inferred factory paint code or finish, and assert no assembly-plant installation. The 1993 C/K Pickup tranche is limited to the four zero-lead-day solid paints on PDF page 12 and does not assert assembly-plant installation or extend them to another model. The Caprice PPV tranche contains one row per exact 2011-2017 program, color, and model year, applies the revised model-specific guide over conflicting Fleet Guide summaries, and publishes no inferred WA, SEO, or factory paint code. The 2024 Blazer EV SEO rows marked not available and the 2025 rows marked planned or not available remain nonrouting snapshot evidence. The five no-RPO rows on the 2003 SEO chart remain research-only because the adjacent TGK ordering table expressly identifies only four orderable specialty colors. Forest Service Green remains a research lead without Chevrolet model-year availability. The 2012-2014 municipal SEO tranche publishes 132 exact program-color rows, preserves blank versus literal TBD code cells, records the 2014 Tahoe and Suburban deletions, and does not infer a 2013 Silverado specialty palette. The 2015-2020 later-fleet specialty tranche publishes 112 exact program-color rows from eleven separately retained and visually reviewed GM Upfitter guides, keeps Tahoe 9C1 and 5W4 separate, preserves Impala Kerr post-build application semantics, and does not infer adjacent years or route Forest Service Green. The 2025 and 2026 Silverado 1500 Retail and Fleet Order Guides each publish only the visually reviewed Woodland Green SEO row, preserve 9V5, WA-9015, the five-order minimum, and the extended lead-time warning, and do not promote the other twenty SEO Paint rows on either page.",
     "unique_retained_artifacts_reconciled": 87,
     "last_updater_rehash": {
       "script": "scripts/update-2015-2020-specialty-fleet-tranche.mjs",
@@ -87,10 +89,10 @@
       "file_count": 11
     },
     "artifact_reference_groups": {
-      "published_record_sources": 32,
-      "published_specialty_sources": 30,
+      "published_record_sources": 34,
+      "published_specialty_sources": 32,
       "published_qualified_historical_sources": 2,
-      "verified_not_published_sources": 4,
+      "verified_not_published_sources": 2,
       "historic_gm_upfitter_candidates": 36,
       "usda_primary_sources": 6,
       "modern_order_guide_snapshot_candidates": 24,
@@ -718,6 +720,23 @@
         "The 2019 source heading covers Suburban 1FL and 3500HD; the scope is not narrowed to 1FL alone.",
         "The 2020 source covers Suburban 1FL.",
         "Neither exact table prints a five-order minimum, and no adjacent year is inferred."
+      ]
+    },
+    {
+      "program_id": "gm-silverado-1500-retail-fleet-seo-paint-2025-2026",
+      "model_year_scopes": [
+        "2025 Silverado 1500 Retail and Fleet",
+        "2026 Silverado 1500 Retail and Fleet"
+      ],
+      "application_type": "special_equipment_option_paint",
+      "catalog_model_ids": [
+        "silverado"
+      ],
+      "factory_installation_claim": null,
+      "restrictions": [
+        "Each retained Electronic Order Guide independently prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "Each exact table requires five orders before plant submission and warns that extended lead time may be required.",
+        "Only the visually reviewed Woodland Green row is published; the other SEO Paint rows remain research-only."
       ]
     }
   ],
@@ -32004,12 +32023,10 @@
         "pdf_page": 10,
         "printed_page": 6
       }
-    }
-  ],
-  "verified_not_published": [
+    },
     {
       "record_id": "gm-eog-2025-silverado-1500-woodland-green",
-      "reason": "The current archive already has a qualified 2025 palette generation with a different source. The one-source-per-model-year display contract cannot expose both sources without losing provenance.",
+      "publication_status": "published_specialty_subset",
       "model_year": 2025,
       "catalog_model_ids": [
         "silverado"
@@ -32017,26 +32034,55 @@
       "source_model_scope": [
         "Silverado 1500 Retail and Fleet"
       ],
+      "program_id": "gm-silverado-1500-retail-fleet-seo-paint-2025-2026",
+      "program_label": "Silverado 1500 Retail and Fleet SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
       "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "not printed",
       "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
       "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
       "restrictions": [
-        "GM required five orders before plant submission.",
-        "The color could require extended lead time."
+        "This row is limited to 2025 Chevrolet Truck Silverado 1500 Retail and Fleet.",
+        "The SEO Paint table prints color code 9V5 and touch-up paint number WA-9015.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "No other SEO Paint row on the page is promoted by this record."
       ],
       "source": {
+        "source_id": "gm-online-order-guide-pdf-22917",
+        "title": "2025 Chevrolet Truck Silverado 1500 Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
         "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22917/all/en-us",
-        "pdf_page": 221,
-        "published_date": "May 22, 2026",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published May 22, 2026",
         "retrieved_at": "2026-07-21T07:04:33.2756547Z",
         "bytes": 1152797,
         "sha256": "dc01ef087bf74e10512c458ee74092547c4ee9f4a35b6de79f31d2aadbddd71c",
-        "pdf_page_count": 297
+        "pdf_page_count": 297,
+        "archive_asset_name": "2025-silverado-1500-retail-and-fleet-22917.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-1500-retail-and-fleet-22917.pdf",
+        "pdf_page": 221,
+        "printed_page": 221
       }
     },
     {
       "record_id": "gm-eog-2026-silverado-1500-woodland-green",
-      "reason": "The current archive already has a qualified 2026 palette generation with a different source. The one-source-per-model-year display contract cannot expose both sources without losing provenance.",
+      "publication_status": "published_specialty_subset",
       "model_year": 2026,
       "catalog_model_ids": [
         "silverado"
@@ -32044,23 +32090,54 @@
       "source_model_scope": [
         "Silverado 1500 Retail and Fleet"
       ],
+      "program_id": "gm-silverado-1500-retail-fleet-seo-paint-2025-2026",
+      "program_label": "Silverado 1500 Retail and Fleet SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
       "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "not printed",
       "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
       "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
       "restrictions": [
-        "GM required five orders before plant submission.",
-        "The color could require extended lead time."
+        "This row is limited to 2026 Chevrolet Truck Silverado 1500 Retail and Fleet.",
+        "The SEO Paint table prints color code 9V5 and touch-up paint number WA-9015.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "No other SEO Paint row on the page is promoted by this record."
       ],
       "source": {
+        "source_id": "gm-online-order-guide-pdf-23168",
+        "title": "2026 Chevrolet Truck Silverado 1500 Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
         "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23168/all/en-us",
-        "pdf_page": 236,
-        "published_date": "June 26, 2026",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 26, 2026",
         "retrieved_at": "2026-07-21T07:04:58.9565240Z",
         "bytes": 1258227,
         "sha256": "6b332a252eb691a5d080e216ffb69b4aa33bbf421ded402f4076818c146ef7fa",
-        "pdf_page_count": 340
+        "pdf_page_count": 340,
+        "archive_asset_name": "2026-silverado-1500-retail-and-fleet-23168.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-1500-retail-and-fleet-23168.pdf",
+        "pdf_page": 236,
+        "printed_page": 236
       }
-    },
+    }
+  ],
+  "verified_not_published": [
     {
       "record_id": "gm-2024-blazer-ev-5t4-wa9260-not-available",
       "publication_status": "verified_not_available_snapshot",

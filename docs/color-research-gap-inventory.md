@@ -12,20 +12,20 @@ sources:
 
 # Chevrolet color research gap inventory
 
-Generated from the tracked catalog, resolved application data, platform bands, detailed source-candidate ledger, GM Heritage kit inventory, and crawler source manifest on 2026-07-22. The JSON companion contains all 1,792 model-year records, direct published-source citations, and every matched discovery-source URL.
+Generated from the tracked catalog, resolved application data, platform bands, detailed source-candidate ledger, GM Heritage kit inventory, and crawler source manifest on 2026-07-23. The JSON companion contains all 1,792 model-year records, direct published-source citations, and every matched discovery-source URL.
 
 ## Bottom line
 
 - Catalog: 149 models, 1,792 model-years, 174 discontinuous model ranges.
 - Complete governing color charts: 85 model-years (4.74%).
 - Reviewed, qualified historical tables: 6 model-years.
-- Reviewed, qualified official palette unions: 56 model-years and 454 listing rows.
-- Reviewed specialty-paint subsets: 42 specialty-only model-years, 57 model-year applications, and 569 restricted listing rows. Overlays do not make an otherwise incomplete year complete.
+- Reviewed, qualified official palette unions: 57 model-years and 462 listing rows.
+- Reviewed specialty-paint subsets: 42 specialty-only model-years, 58 model-year applications, and 571 restricted listing rows. Overlays do not make an otherwise incomplete year complete.
 - Official source reviewed with no color chart found: 4 model-year.
 - Located dedicated sources awaiting chart transcription: 0 model-years.
-- Wholly unreviewed: 1,599 model-years.
-- Published color applications: 2,000 rows, reconciled exactly to the resolved application data.
-- App source-linked listing years: 192, using 136 unique direct source URLs.
+- Wholly unreviewed: 1,598 model-years.
+- Published color applications: 2,010 rows, reconciled exactly to the resolved application data.
+- App source-linked listing years: 193, using 137 unique direct source URLs.
 - Official GM Heritage discovery inventory: 691 records and 691 unique URLs; the crawler manifest reconciles exactly.
 - Consolidated official-PDF OCR queue: 691 source documents, 2,774 candidate pages, and 11,733 automated color candidates; 0 candidate pages have been visually promoted through this queue.
 
@@ -56,7 +56,7 @@ A missing row is never negative availability evidence. It means only that the go
 | 1990s | 211 | 18 | 0 | 0 | 2 | 0 | 0 | 191 | 176 | 147 | 6 | 0 | 56 | 2 | 0 |
 | 2000s | 226 | 15 | 0 | 2 | 0 | 0 | 0 | 209 | 187 | 124 | 0 | 39 | 63 | 0 | 0 |
 | 2010s | 200 | 0 | 0 | 10 | 29 | 0 | 0 | 161 | 517 | 0 | 0 | 200 | 0 | 0 | 0 |
-| 2020s | 125 | 0 | 0 | 44 | 2 | 0 | 0 | 79 | 416 | 0 | 0 | 125 | 0 | 0 | 0 |
+| 2020s | 125 | 0 | 0 | 45 | 2 | 0 | 0 | 78 | 426 | 0 | 0 | 125 | 0 | 0 | 0 |
 
 ## By likely source availability
 
@@ -64,7 +64,7 @@ A missing row is never negative availability evidence. It means only that the go
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | dedicated_official_kit | 611 | 85 | 5 | 0 | 5 | 4 | 0 | 512 | 1030 |
 | related_line_official_kit | 71 | 0 | 1 | 0 | 2 | 0 | 0 | 68 | 7 |
-| generic_full_line_official_kit | 927 | 0 | 0 | 56 | 32 | 0 | 0 | 839 | 952 |
+| generic_full_line_official_kit | 927 | 0 | 0 | 57 | 32 | 0 | 0 | 838 | 962 |
 | catalog_official_evidence_only | 179 | 0 | 0 | 0 | 3 | 0 | 0 | 176 | 11 |
 | catalog_nonofficial_evidence_only | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 0 |
 | none_identified | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -162,7 +162,7 @@ Source columns are mutually exclusive per model-year. `Unreviewed dedicated rang
 | townsman | Townsman | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | - |
 | beauville-wagon | Beauville | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | - |
 | nomad | Nomad | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 | 5 | 7 | 0 | 0 | 0 | - |
-| corvette | Corvette | 73 | 6 | 3 | 2 | 0 | 1 | 0 | 61 | 78 | 53 | 0 | 19 | 1 | 0 | 0 | 1963-1982, 1984-2006 |
+| corvette | Corvette | 73 | 6 | 3 | 2 | 0 | 1 | 0 | 61 | 79 | 53 | 0 | 19 | 1 | 0 | 0 | 1963-1982, 1984-2006 |
 | delray | Delray | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | - |
 | biscayne | Biscayne | 15 | 0 | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 | 0 | 15 | 0 | 0 | 0 | - |
 | brookwood | Brookwood | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | - |
@@ -256,7 +256,7 @@ Source columns are mutually exclusive per model-year. `Unreviewed dedicated rang
 | s10-ev | S-10 EV | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | - |
 | venture | Venture | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | 1997-2005 |
 | tracker | Tracker | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | - |
-| silverado | Silverado | 28 | 0 | 0 | 2 | 2 | 0 | 0 | 24 | 104 | 7 | 0 | 19 | 2 | 0 | 0 | 2001-2007 |
+| silverado | Silverado | 28 | 0 | 0 | 2 | 2 | 0 | 0 | 24 | 106 | 7 | 0 | 19 | 2 | 0 | 0 | 2001-2007 |
 | silverado-hd | Silverado HD | 26 | 0 | 0 | 3 | 1 | 0 | 0 | 22 | 47 | 4 | 0 | 19 | 3 | 0 | 0 | 2001-2003, 2005 |
 | trailblazer | TrailBlazer | 14 | 0 | 0 | 2 | 0 | 0 | 0 | 12 | 16 | 6 | 0 | 8 | 0 | 0 | 0 | 2002-2007 |
 | avalanche | Avalanche | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 5 | 0 | 6 | 1 | 0 | 0 | 2002-2005, 2007 |
@@ -269,8 +269,8 @@ Source columns are mutually exclusive per model-year. `Unreviewed dedicated rang
 | captiva-sport | Captiva Sport | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | - |
 | trax | Trax | 11 | 0 | 0 | 2 | 0 | 0 | 0 | 9 | 16 | 0 | 0 | 11 | 0 | 0 | 0 | - |
 | city-express | City Express | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | - |
-| low-cab-forward | Low Cab Forward | 11 | 0 | 0 | 1 | 0 | 0 | 0 | 10 | 6 | 0 | 0 | 11 | 0 | 0 | 0 | - |
-| blazer-ev | Blazer EV | 3 | 0 | 0 | 2 | 0 | 0 | 0 | 1 | 19 | 0 | 0 | 3 | 0 | 0 | 0 | - |
+| low-cab-forward | Low Cab Forward | 11 | 0 | 0 | 2 | 0 | 0 | 0 | 9 | 12 | 0 | 0 | 11 | 0 | 0 | 0 | - |
+| blazer-ev | Blazer EV | 3 | 0 | 0 | 2 | 0 | 0 | 0 | 1 | 20 | 0 | 0 | 3 | 0 | 0 | 0 | - |
 | equinox-ev | Equinox EV | 3 | 0 | 0 | 2 | 0 | 0 | 0 | 1 | 16 | 0 | 0 | 3 | 0 | 0 | 0 | - |
 | silverado-ev | Silverado EV | 3 | 0 | 0 | 2 | 0 | 0 | 0 | 1 | 16 | 0 | 0 | 3 | 0 | 0 | 0 | - |
 | brightdrop-400 | BrightDrop 400 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | - |
@@ -292,12 +292,12 @@ The live schema is versioned by the canonical tracked Parquet manifest. These ro
 | Table | Tracked rows | Primary key |
 | --- | ---: | --- |
 | models.parquet | 149 | model_id |
-| generations.parquet | 968 | generation_id |
+| generations.parquet | 971 | generation_id |
 | model_years.parquet | 1792 | model_year_id |
-| model_year_generation_memberships.parquet | 2305 | model_year_generation_membership_id |
+| model_year_generation_memberships.parquet | 2307 | model_year_generation_membership_id |
 | platform_eras.parquet | 218 | platform_era_id |
-| color_identities.parquet | 1686 | color_identity_id |
-| color_availability.parquet | 2000 | availability_id |
+| color_identities.parquet | 1696 | color_identity_id |
+| color_availability.parquet | 2010 | availability_id |
 | paint_schemes.parquet | 1369 | paint_scheme_id |
 | paint_scheme_components.parquet | 2738 | paint_scheme_component_id |
 | model_year_research.parquet | 1792 | model_year_id |
@@ -307,10 +307,10 @@ The live schema is versioned by the canonical tracked Parquet manifest. These ro
 | secondary_paint_fitments.parquet | 111 | fitment_id |
 | color_code_crosswalk_candidates.parquet | 96 | candidate_id |
 | supplemental_color_mentions.parquet | 0 | supplemental_mention_id |
-| sources.parquet | 2718 | source_id |
-| source_revisions.parquet | 1856 | source_revision_id |
-| evidence_claims.parquet | 2000 | evidence_claim_id |
-| source_links.parquet | 27631 | source_link_id |
+| sources.parquet | 2877 | source_id |
+| source_revisions.parquet | 1866 | source_revision_id |
+| evidence_claims.parquet | 2010 | evidence_claim_id |
+| source_links.parquet | 28490 | source_link_id |
 | photo_assets.parquet | 302 | photo_id |
 | model_photo_links.parquet | 304 | model_photo_link_id |
 | photo_color_links.parquet | 5 | photo_color_link_id |
@@ -323,12 +323,12 @@ Audit-state enum: `verified_complete`, `reviewed_qualified_historical_table`, `r
 | --- | ---: | ---: | --- |
 | catalog_models | 149 | 149 | yes |
 | catalog_model_years | 1792 | 1792 | yes |
-| source_linked_reviewed_years | 192 | 192 | yes |
-| reviewed_qualified_palette_union_years | 56 | 56 | yes |
+| source_linked_reviewed_years | 193 | 193 | yes |
+| reviewed_qualified_palette_union_years | 57 | 57 | yes |
 | reviewed_specialty_palette_subset_years | 42 | 42 | yes |
-| specialty_palette_subset_application_years | 57 | 57 | yes |
-| current_color_listing_applications | 2000 | 2000 | yes |
-| model_year_listing_sum | 2000 | 2000 | yes |
+| specialty_palette_subset_application_years | 58 | 58 | yes |
+| current_color_listing_applications | 2010 | 2010 | yes |
+| model_year_listing_sum | 2010 | 2010 | yes |
 | audit_state_partition | 1792 | 1792 | yes |
 | gm_source_inventory_vs_crawler_manifest | 691 | 691 | yes |
 | gm_source_urls_vs_crawler_urls | 691 | 691 | yes |

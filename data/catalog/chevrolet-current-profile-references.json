@@ -1,0 +1,633 @@
+{
+  "schema_version": 2,
+  "generated_on": "2026-07-22",
+  "scope": "Official visual and dimensional references for every current-model SVG profile in the Chevrolet Color Archive.",
+  "catalog_year_ceiling": 2026,
+  "manual_reference_map": "chevrolet-current-manual-references.json",
+  "method": [
+    "Each SVG is an original, simplified side-profile drawing. It is calibrated from published dimensions and multiple official Chevrolet references, not traced from third-party artwork.",
+    "The Chevrolet product page is the primary current-trim reference. The retained GM Fleet Guide supplies an official vehicle illustration, configuration labels, and published dimensions.",
+    "PDF page numbers are one-based file page numbers in the retained 184-page guide.",
+    "When the guide's displayed illustration is a carryover model year or a different trim, that difference is recorded explicitly. It is used only for shared body geometry."
+  ],
+  "fleet_guide": {
+    "source_id": "gm-fleet-guide-us-2026-r2026-04-01",
+    "title": "2026 GM Fleet Guide, Full Unbranded, revision 2026-04-01",
+    "original_url": "https://www.gmfleet.com/content/dam/gmfleet/na/us/en/index/pdfs/guides-and-manuals/02-pdfs/2026-Fleet-Guide-Full-Unbranded.pdf",
+    "retained_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-gm-fleet-guide-r2026-04-01.pdf",
+    "sha256": "5240a4fdfeca53f14aee0a0d7b7923cab2fb848076ede515b80888a16502ca62",
+    "bytes": 183423642,
+    "pdf_page_count": 184
+  },
+  "record_count": 18,
+  "records": [
+    {
+      "model_id": "blazer",
+      "profile_id": "blazer-c1uc-2026",
+      "representative_year": 2026,
+      "representative_variant": "RS five-door crossover",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/blazer",
+      "fleet_guide_page": {
+        "pdf_page": 68,
+        "heading": "2026 Chevrolet Blazer",
+        "illustration_caption": "2025 Chevrolet Blazer LT FWD shown.",
+        "reference_use": "Shared body geometry and 2026 published dimensions; RS trim details come from the product page.",
+        "published_measurements": {
+          "overall_length_in": 191.8,
+          "overall_width_without_mirrors_in": 76.7,
+          "overall_height_in": 67.0
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-ebrochure-us-2022-blazer",
+        "title": "2022 Chevrolet Blazer eBrochure",
+        "source_url": "https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2022-blazer.pdf",
+        "source_year": 2022,
+        "pdf_page": 20,
+        "section": "Specifications (continued), Dimensions",
+        "representative_variant": "C1UC five-door crossover",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 112.7,
+          "overall_length_in": 191.4
+        },
+        "notes": "Chevrolet-authored eBrochure retained by a dealer-document carrier. The wheelbase applies to the same C1UC architecture. The 2026 Fleet Guide separately supplies the current 191.8-inch overall length."
+      }
+    },
+    {
+      "model_id": "blazer-ev",
+      "profile_id": "blazer-ev-bev3-2026",
+      "representative_year": 2026,
+      "representative_variant": "RS five-door EV crossover",
+      "official_product_page_url": "https://www.chevrolet.com/electric/blazer-ev",
+      "fleet_guide_page": {
+        "pdf_page": 26,
+        "heading": "2026 Chevrolet Blazer EV",
+        "reference_use": "Official body illustration and trim-qualified dimensions.",
+        "published_measurements": {
+          "overall_length_in": 192.2,
+          "overall_width_without_mirrors_in": 78.0,
+          "overall_height_in": {
+            "lt_rs": 65.0,
+            "ss": 64.7
+          }
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-media-us-2024-blazer-ev-specifications",
+        "title": "2024 Chevrolet Blazer EV specifications",
+        "source_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Trucks/Blazer_EV/2024/2024-Chevrolet-Blazer-EV-041624.pdf",
+        "source_year": 2024,
+        "pdf_page": 1,
+        "section": "Exterior Dimensions",
+        "representative_variant": "Blazer EV",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 121.8,
+          "overall_length_in": 192.2
+        }
+      }
+    },
+    {
+      "model_id": "brightdrop-400",
+      "profile_id": "brightdrop-400-bv1-2026",
+      "representative_year": 2026,
+      "representative_variant": "400 short-wheelbase delivery van",
+      "official_product_page_url": "https://www.chevrolet.com/commercial/brightdrop",
+      "fleet_guide_page": {
+        "pdf_page": 35,
+        "heading": "BrightDrop 400",
+        "illustration_caption": "2026 Chevrolet BrightDrop 400 shown.",
+        "reference_use": "Official illustration and the dimensional basis for the short-body profile.",
+        "published_measurements": {
+          "wheelbase_in": 153,
+          "overall_length_in": 238.6,
+          "overall_width_without_mirrors_in": 89.4,
+          "overall_height_in": 109.2
+        }
+      }
+    },
+    {
+      "model_id": "brightdrop-600",
+      "profile_id": "brightdrop-600-bv1-2026",
+      "representative_year": 2026,
+      "representative_variant": "600 long-wheelbase delivery van",
+      "official_product_page_url": "https://www.chevrolet.com/commercial/brightdrop",
+      "fleet_guide_page": {
+        "pdf_page": 36,
+        "heading": "BrightDrop 600",
+        "illustration_caption": "2026 Chevrolet BrightDrop 600 shown.",
+        "reference_use": "Official illustration and the dimensional basis for the long-body profile.",
+        "published_measurements": {
+          "wheelbase_in": 183,
+          "overall_length_in": 290,
+          "overall_width_without_mirrors_in": 86.5,
+          "overall_height_in": 108.8
+        }
+      }
+    },
+    {
+      "model_id": "colorado",
+      "profile_id": "colorado-31xx2-2026",
+      "representative_year": 2026,
+      "representative_variant": "Crew Cab short bed",
+      "official_product_page_url": "https://www.chevrolet.com/trucks/colorado",
+      "fleet_guide_page": {
+        "pdf_page": 100,
+        "heading": "2026 Chevrolet Colorado",
+        "illustration_caption": "2026 Chevrolet Colorado Trail Boss shown.",
+        "reference_use": "Official Crew Cab illustration, wheelbase, box length, and trim-qualified overall length.",
+        "published_measurements": {
+          "cab": "Crew",
+          "box_length_ft": 5,
+          "wheelbase_in": 131.3,
+          "overall_length_in": {
+            "work_truck": 213.0,
+            "lt_trail_boss_z71": 213.2,
+            "zr2": 212.6
+          }
+        }
+      }
+    },
+    {
+      "model_id": "corvette",
+      "profile_id": "corvette-c8-2026",
+      "representative_year": 2026,
+      "representative_variant": "C8 Stingray coupe",
+      "official_product_page_url": "https://www.chevrolet.com/performance/corvette",
+      "fleet_guide_page": {
+        "pdf_page": 52,
+        "heading": "2026 Chevrolet Corvette",
+        "reference_use": "Official C8 illustration and trim-qualified exterior dimensions.",
+        "published_measurements": {
+          "overall_length_in": {
+            "stingray": 182.3,
+            "z06": 184.5,
+            "zr1": 186.7
+          },
+          "overall_width_without_mirrors_in": {
+            "stingray": 76.1,
+            "z06_zr1": 79.7
+          },
+          "overall_height_in": 48.6
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-media-us-2024-corvette-stingray-fact-sheet",
+        "title": "2024 Chevrolet Corvette Stingray specifications",
+        "source_url": "https://media.chevrolet.com/content/dam/Media/images/US/Vehicles/Chevrolet/Cars/Corvette/2024/2024-Chevrolet-Corvette-Stingray.pdf",
+        "source_year": 2024,
+        "pdf_page": 1,
+        "section": "Exterior Dimensions",
+        "representative_variant": "C8 Stingray",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 107.2,
+          "overall_length_in": 182.3
+        }
+      }
+    },
+    {
+      "model_id": "equinox",
+      "profile_id": "equinox-d2uc2-2026",
+      "representative_year": 2026,
+      "representative_variant": "ACTIV five-door crossover",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/equinox",
+      "fleet_guide_page": {
+        "pdf_page": 63,
+        "heading": "2026 Chevrolet Equinox",
+        "illustration_caption": "2026 Chevrolet Equinox LT shown.",
+        "reference_use": "Shared body geometry and published dimensions; ACTIV trim details come from the product page.",
+        "published_measurements": {
+          "overall_length_in": 183.2,
+          "overall_width_without_mirrors_in": 74.9,
+          "overall_height_in": 65.6
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-news-us-2025-equinox-specifications",
+        "title": "2025 Chevrolet Equinox stands apart with fresh looks, more tech and capability",
+        "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/jan/0123-equinox.html",
+        "source_year": 2025,
+        "section": "Specifications, Exterior Dimensions",
+        "representative_variant": "D2UC2 five-door crossover",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 107.5,
+          "overall_length_in": 183.2
+        }
+      }
+    },
+    {
+      "model_id": "equinox-ev",
+      "profile_id": "equinox-ev-bev3-2026",
+      "representative_year": 2026,
+      "representative_variant": "LT five-door EV crossover",
+      "official_product_page_url": "https://www.chevrolet.com/electric/equinox-ev",
+      "fleet_guide_page": {
+        "pdf_page": 25,
+        "heading": "2026 Chevrolet Equinox EV",
+        "illustration_caption": "2026 Chevrolet Equinox EV RS shown.",
+        "reference_use": "Shared EV body geometry and published dimensions; LT trim details come from the product page.",
+        "published_measurements": {
+          "overall_length_in": 190.5,
+          "overall_width_with_mirrors_folded_in": 76.9,
+          "overall_height_in": 64.8
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-news-us-2024-equinox-ev-specifications",
+        "title": "2024 Chevrolet Equinox EV specifications",
+        "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2024/may/0514-equinoxev.html",
+        "source_year": 2024,
+        "section": "Exterior Dimensions",
+        "representative_variant": "Equinox EV",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 116.3,
+          "overall_length_in": 190.55
+        },
+        "notes": "The 2026 Fleet Guide rounds the carryover body's overall length to 190.5 inches."
+      }
+    },
+    {
+      "model_id": "express",
+      "profile_id": "express-gmt610-2026",
+      "representative_year": 2026,
+      "representative_variant": "Cargo 2500 regular-wheelbase van",
+      "official_product_page_url": "https://www.chevrolet.com/commercial/express/vans",
+      "fleet_guide_page": {
+        "pdf_page": 145,
+        "heading": "2026 Chevrolet Express Cargo Van",
+        "illustration_caption": "2025 Chevrolet Express 1WT Cargo Van 3500 shown.",
+        "reference_use": "Shared regular-wheelbase cargo-body geometry and 2026 configuration dimensions.",
+        "published_measurements": {
+          "wheelbase_in": {
+            "regular": 135,
+            "extended": 155
+          },
+          "overall_length_in": {
+            "regular": 224,
+            "extended": 244
+          },
+          "overall_width_in": 79.2
+        }
+      }
+    },
+    {
+      "model_id": "low-cab-forward",
+      "profile_id": "low-cab-forward-isuzu-n-2026",
+      "representative_year": 2026,
+      "representative_variant": "6500XD regular cab chassis",
+      "official_product_page_url": "https://www.chevrolet.com/commercial/low-cab-forward-cab-over-truck",
+      "fleet_guide_page": {
+        "pdf_page": 118,
+        "heading": "2027 Chevrolet Low Cab Forward 6500 XD",
+        "reference_use": "Supplemental current-architecture reference for the 2026-bounded catalog. The product page controls current 6500 XD identity; the guide supplies exact chassis proportions.",
+        "published_measurements": {
+          "overall_width_in": 93.5,
+          "overall_height_in": 110.2,
+          "wheelbase_in": [
+            152,
+            170,
+            188,
+            200,
+            212,
+            224,
+            236,
+            248
+          ],
+          "overall_length_in": [
+            274.4,
+            301.5,
+            328.5,
+            346.4,
+            364.6,
+            382.5,
+            400.6,
+            418.5
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "silverado",
+      "profile_id": "silverado-t1xx-2026",
+      "representative_year": 2026,
+      "representative_variant": "1500 Crew Cab short bed",
+      "official_product_page_url": "https://www.chevrolet.com/trucks/silverado/1500",
+      "fleet_guide_page": {
+        "pdf_page": 102,
+        "heading": "2026 Chevrolet Silverado 1500",
+        "illustration_caption": "2026 Chevrolet Silverado 1500 RST shown.",
+        "reference_use": "Official RST illustration and configuration dimensions.",
+        "published_measurements": {
+          "cabs": [
+            "Regular",
+            "Double",
+            "Crew"
+          ],
+          "box_lengths_ft": [
+            "5 ft 8 in",
+            "6 ft 6 in",
+            "8 ft"
+          ],
+          "wheelbase_in": [
+            126,
+            140,
+            147,
+            157
+          ],
+          "overall_length_in": [
+            210.9,
+            229.6,
+            231.8,
+            232.7,
+            241.4
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "silverado-ev",
+      "profile_id": "silverado-ev-bt1xx-2026",
+      "representative_year": 2026,
+      "representative_variant": "RST Crew Cab",
+      "official_product_page_url": "https://www.chevrolet.com/electric/silverado-ev",
+      "fleet_guide_page": {
+        "pdf_page": 32,
+        "heading": "2026 Chevrolet Silverado EV",
+        "reference_use": "Official Crew Cab illustration and trim-qualified dimensions.",
+        "published_measurements": {
+          "cab": "Crew",
+          "box_length_ft": "5 ft 11 in",
+          "wheelbase_in": 145.6,
+          "overall_length_in": 233.0,
+          "overall_width_with_mirrors_folded_in": {
+            "work_truck_lt": 85.2,
+            "trail_boss": 85.7
+          },
+          "overall_height_in": {
+            "work_truck": 78.0,
+            "lt": 78.1,
+            "trail_boss": 79.9
+          }
+        }
+      }
+    },
+    {
+      "model_id": "silverado-hd",
+      "profile_id": "silverado-hd-t1xx-2026",
+      "representative_year": 2026,
+      "representative_variant": "2500HD Crew Cab standard bed",
+      "official_product_page_url": "https://www.chevrolet.com/trucks/silverado/2500hd-3500hd",
+      "fleet_guide_page": {
+        "pdf_page": 104,
+        "heading": "2026 Chevrolet Silverado 2500 HD / 3500 HD",
+        "illustration_caption": "2026 Chevrolet Silverado 2500 HD LT shown.",
+        "reference_use": "Official 2500 HD illustration and cab/bed dimensional families.",
+        "published_measurements": {
+          "cabs": [
+            "Regular",
+            "Double",
+            "Crew"
+          ],
+          "box_lengths_ft": [
+            "6 ft 9 in",
+            "8 ft"
+          ],
+          "wheelbase_in": [
+            142,
+            149,
+            159,
+            162,
+            172
+          ],
+          "overall_length_in": [
+            235.5,
+            240.5,
+            250.0,
+            252.0,
+            256.5,
+            266.0
+          ]
+        }
+      }
+    },
+    {
+      "model_id": "suburban",
+      "profile_id": "suburban-gmtt1yc-refresh-2026",
+      "representative_year": 2026,
+      "representative_variant": "High Country four-door SUV",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/suburban",
+      "fleet_guide_page": {
+        "pdf_page": 74,
+        "heading": "2026 Chevrolet Suburban",
+        "reference_use": "Official long-wheelbase body illustration and trim-qualified dimensions.",
+        "published_measurements": {
+          "overall_length_in": 226.3,
+          "overall_width_without_mirrors_in": 81.0,
+          "overall_height_in": {
+            "high_country_2wd": 76.3,
+            "high_country_4wd": 76.2
+          }
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "gm-online-order-guide-pdf-23233",
+        "title": "2026 Chevrolet Suburban Online Order Guide",
+        "source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23233/all/en-us",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-suburban-23233.pdf",
+        "source_year": 2026,
+        "pdf_page": 90,
+        "section": "Dimensions, CC10906 and CK10906",
+        "representative_variant": "Long-wheelbase four-door SUV",
+        "same_generation_carryover": false,
+        "published_measurements": {
+          "wheelbase_in": 134.1,
+          "overall_length_in": 226.3
+        }
+      }
+    },
+    {
+      "model_id": "tahoe",
+      "profile_id": "tahoe-gmtt1uc-refresh-2026",
+      "representative_year": 2026,
+      "representative_variant": "High Country four-door SUV",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/tahoe",
+      "fleet_guide_page": {
+        "pdf_page": 73,
+        "heading": "2026 Chevrolet Tahoe",
+        "reference_use": "Official standard-wheelbase body illustration and trim-qualified dimensions.",
+        "published_measurements": {
+          "overall_length_in": 211.3,
+          "overall_width_without_mirrors_in": 81.0,
+          "overall_height_in": {
+            "high_country_2wd": 76.4,
+            "high_country_4wd": 76.4
+          }
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "gm-online-order-guide-pdf-23232",
+        "title": "2026 Chevrolet Tahoe Retail and Fleet Online Order Guide",
+        "source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23232/all/en-us",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-retail-and-fleet-23232.pdf",
+        "source_year": 2026,
+        "pdf_page": 120,
+        "section": "Dimensions, CC10706 and CK10706",
+        "representative_variant": "Standard-wheelbase four-door SUV",
+        "same_generation_carryover": false,
+        "published_measurements": {
+          "wheelbase_in": 120.9,
+          "overall_length_in": 211.3
+        }
+      }
+    },
+    {
+      "model_id": "trailblazer",
+      "profile_id": "trailblazer-vssf-refresh-2026",
+      "representative_year": 2026,
+      "representative_variant": "ACTIV five-door crossover",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/trailblazer",
+      "fleet_guide_page": {
+        "pdf_page": 61,
+        "heading": "2026 Chevrolet Trailblazer",
+        "reference_use": "Official body illustration and trim/drivetrain-qualified dimensions.",
+        "published_measurements": {
+          "overall_length_in": 174,
+          "overall_width_in": 71.2,
+          "overall_height_in": {
+            "activ_fwd": 65.2,
+            "activ_awd": 65.6
+          }
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-ebrochure-us-2023-trailblazer",
+        "title": "2023 Chevrolet Trailblazer eBrochure",
+        "source_url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/10-pdf/2023-chevrolet-trailblazer-ebrochure.pdf",
+        "source_year": 2023,
+        "pdf_page": 17,
+        "section": "Dimensions",
+        "representative_variant": "ACTIV five-door crossover",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 103.9,
+          "overall_length_in": 173.7
+        },
+        "notes": "The 2026 Fleet Guide separately supplies the refreshed carryover body's 174.0-inch overall length."
+      }
+    },
+    {
+      "model_id": "traverse",
+      "profile_id": "traverse-c1yc2-2026",
+      "representative_year": 2026,
+      "representative_variant": "Z71 three-row crossover",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/traverse",
+      "fleet_guide_page": {
+        "pdf_page": 70,
+        "heading": "2026 Chevrolet Traverse",
+        "reference_use": "Official three-row body illustration and Z71-qualified dimensions.",
+        "published_measurements": {
+          "overall_length_in": {
+            "standard": 204.4,
+            "z71": 204.7
+          },
+          "overall_width_without_mirrors_in": {
+            "standard": 79.5,
+            "z71": 79.9
+          },
+          "overall_height_in": {
+            "standard": 69.5,
+            "z71": 70.6
+          }
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-product-us-2026-traverse-dimensions",
+        "title": "2026 Chevrolet Traverse product specifications",
+        "source_url": "https://www.chevrolet.com/suvs/traverse",
+        "source_year": 2026,
+        "section": "Traverse by the numbers",
+        "representative_variant": "Current standard-body three-row crossover",
+        "same_generation_carryover": false,
+        "published_measurements": {
+          "wheelbase_in": 121.0,
+          "overall_length_in": 204.5
+        },
+        "notes": "This is the current standard Traverse body, not the separately catalogued Acadia-derived Traverse Limited."
+      }
+    },
+    {
+      "model_id": "trax",
+      "profile_id": "trax-vssf-2026",
+      "representative_year": 2026,
+      "representative_variant": "2RS five-door crossover",
+      "official_product_page_url": "https://www.chevrolet.com/suvs/trax",
+      "fleet_guide_page": {
+        "pdf_page": 60,
+        "heading": "2026 Chevrolet Trax",
+        "reference_use": "Official body illustration and trim-qualified dimensions.",
+        "published_measurements": {
+          "overall_length_in": 178.6,
+          "overall_width_without_mirrors_in": 71.8,
+          "overall_height_in": {
+            "ls_1rs": 61.4,
+            "lt_2rs_activ": 61.7
+          }
+        }
+      },
+      "geometry_dimension_source": {
+        "source_id": "chevrolet-news-us-2024-trax-specifications",
+        "title": "2024 Chevrolet Trax specifications",
+        "source_url": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2022/oct/1012-trax.html",
+        "source_year": 2024,
+        "section": "Exterior Dimensions",
+        "representative_variant": "VSSF five-door crossover",
+        "same_generation_carryover": true,
+        "published_measurements": {
+          "wheelbase_in": 106.3,
+          "overall_length_in": 178.6
+        }
+      }
+    }
+  ],
+  "specialty_supplement": [
+    {
+      "model_id": "silverado",
+      "pdf_page": 156,
+      "heading": "2026 Chevrolet Silverado 1500 Police Pursuit Vehicle",
+      "illustration_caption": "2026 Chevrolet Silverado 1500 PPV shown.",
+      "reason": "Documents the factory PPV Crew Cab short-bed configuration."
+    },
+    {
+      "model_id": "tahoe",
+      "pdf_page": 157,
+      "heading": "2026 Chevrolet Tahoe Police Pursuit Vehicle",
+      "illustration_caption": "2025 Chevrolet Tahoe PPV shown.",
+      "reason": "Documents the factory PPV configuration and distinguishes it from SSV."
+    },
+    {
+      "model_id": "blazer-ev",
+      "pdf_page": 158,
+      "heading": "2026 Chevrolet Blazer EV Police Pursuit Vehicle",
+      "illustration_caption": "Preproduction 2026 Chevrolet Blazer EV PPV shown.",
+      "reason": "Documents the factory police package as a specialty configuration."
+    },
+    {
+      "model_id": "silverado",
+      "pdf_page": 159,
+      "heading": "2026 Chevrolet Silverado 1500 Special Service Vehicle",
+      "illustration_caption": "2025 Chevrolet Silverado 1500 SSV shown.",
+      "reason": "Documents the factory SSV Crew Cab and its short- and standard-bed configurations."
+    },
+    {
+      "model_id": "tahoe",
+      "pdf_page": 160,
+      "heading": "2026 Chevrolet Tahoe Special Service Vehicle",
+      "illustration_caption": "2026 Chevrolet Tahoe SSV shown.",
+      "reason": "Documents the factory SSV configuration."
+    }
+  ]
+}

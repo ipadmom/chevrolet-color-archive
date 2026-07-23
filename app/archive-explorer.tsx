@@ -1079,7 +1079,7 @@ export function ArchiveExplorer() {
           CHEVROLET COLOR ARCHIVE
         </button>
         <span className="ia-top-count">
-          {models.length} MODELS · {archiveModelYearCount.toLocaleString("en-US")} MODEL YEARS · {archiveListingCount} LISTINGS
+          {models.length} MODELS · {archiveModelYearCount.toLocaleString("en-US")} MODEL YEARS · {archiveListingCount.toLocaleString("en-US")} LISTINGS
         </span>
       </header>
 
@@ -1131,7 +1131,7 @@ export function ArchiveExplorer() {
         <div className="ia-sidebar-summary">
           <strong>{archiveModelYearCount.toLocaleString("en-US")}</strong> model-year records
           <br />
-          <strong>{archiveListingCount}</strong> source-linked color listings
+          <strong>{archiveListingCount.toLocaleString("en-US")}</strong> source-linked color listings
           <br />
           <strong>{archivedPhotoStats.assetCount}</strong> Release-archived originals across{" "}
           <strong>{archivedPhotoStats.modelCount}</strong> models
@@ -1416,7 +1416,7 @@ export function ArchiveExplorer() {
                             <strong>{itemYear}</strong>
                             <small>
                               {count
-                                ? `${count} COLORS`
+                                ? `${count} ${count === 1 ? "COLOR" : "COLORS"}`
                                 : reviewedNoChart
                                   ? "REVIEWED · NO CHART"
                                   : "UNVERIFIED"}

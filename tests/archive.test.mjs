@@ -960,13 +960,13 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     allGenerations
       .filter(isQualifiedPalette)
       .reduce((total, item) => total + item.listingCount, 0),
-    454,
+    462,
   );
   assert.equal(
     allGenerations
       .filter(isSpecialtySubset)
       .reduce((total, item) => total + item.listingCount, 0),
-    569,
+    571,
   );
   assert.equal(
     allGenerations
@@ -976,7 +976,81 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    2000,
+    2010,
+  );
+});
+
+test("retained Order Guide pages publish the closed current-model palette rows", async () => {
+  const { models } = await loadArchiveData();
+  const generationFor = (modelId, year) =>
+    models
+      .find((model) => model.id === modelId)
+      .generations.find(
+        (generation) =>
+          generation.years.length === 1 &&
+          generation.years[0] === year &&
+          Object.values(generation.sources).some(
+            (source) => source.evidenceClass === "qualified_palette_union",
+          ),
+      );
+  const sourceCitations = (generation, year) => {
+    const primary = generation.sources[year];
+    return [primary, ...(primary.supportingSources ?? [])];
+  };
+
+  const blazerEv = generationFor("blazer-ev", "2025");
+  assert.equal(blazerEv.listingCount, 8);
+  const habanero = blazerEv.colors.find(
+    (color) => color.name === "Habanero Orange",
+  );
+  assert.equal(habanero.rowCode, "GAG / WA-221K");
+  assert.equal(habanero.availability["2025"].rpoCode, "GAG");
+  assert.equal(habanero.availability["2025"].waCode, "WA-221K");
+  assert.match(habanero.availability["2025"].restriction, /SS only/);
+  assert.deepEqual(habanero.availability["2025"].sourceIds, [
+    "gm-online-order-guide-pdf-22878",
+  ]);
+  assert.match(
+    sourceCitations(blazerEv, "2025").find(
+      (source) => source.sourceId === "gm-online-order-guide-pdf-22878",
+    ).archiveUrl,
+    /current-order-guide-source-archive-v1\/2025-blazer-ev-22878\.pdf$/,
+  );
+
+  const corvette = generationFor("corvette", "2026");
+  assert.equal(corvette.listingCount, 11);
+  const bladeSilver = corvette.colors.find(
+    (color) => color.name === "Blade Silver Matte",
+  );
+  assert.equal(bladeSilver.rowCode, "GRF / WA-730S");
+  assert.equal(bladeSilver.availability["2026"].rpoCode, "GRF");
+  assert.equal(bladeSilver.availability["2026"].waCode, "WA-730S");
+  assert.match(bladeSilver.availability["2026"].restriction, /ZRA/);
+  assert.match(bladeSilver.availability["2026"].restriction, /D30/);
+  assert.deepEqual(bladeSilver.availability["2026"].sourceIds, [
+    "gm-online-order-guide-pdf-23208",
+  ]);
+
+  const lowCabForward = generationFor("low-cab-forward", "2025");
+  assert.equal(lowCabForward.listingCount, 6);
+  const woodland = lowCabForward.colors.find(
+    (color) => color.name === "Woodland Green",
+  );
+  assert.equal(woodland.rowCode, "46U");
+  assert.equal(woodland.availability["2025"].rpoCode, "46U");
+  assert.equal(woodland.availability["2025"].waCode, undefined);
+  assert.match(woodland.availability["2025"].restriction, /extra-cost/);
+  assert.match(woodland.availability["2025"].restriction, /no WA number/);
+  assert.doesNotMatch(woodland.availability["2025"].restriction, /WA-9015/);
+  assert.deepEqual(
+    sourceCitations(lowCabForward, "2025")
+      .map((source) => source.sourceId)
+      .sort(),
+    [
+      "gm-online-order-guide-pdf-22745",
+      "gm-online-order-guide-pdf-22775",
+      "gm-online-order-guide-pdf-22821",
+    ],
   );
 });
 
@@ -2586,6 +2660,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "s10:1993",
     "silverado:2012",
     "silverado:2014",
+    "silverado:2025",
     "silverado:2026",
     "sportvan:1979",
     "sportvan:1980",
@@ -2634,16 +2709,16 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
 
   assert.equal(specialty.visibility, "public");
   assert.equal(specialty.dataset_kind, "chevrolet_color_source_candidates");
-  assert.equal(specialty.app_publication_records.length, 533);
-  assert.equal(publishedSpecialty.length, 529);
+  assert.equal(specialty.app_publication_records.length, 535);
+  assert.equal(publishedSpecialty.length, 531);
   assert.equal(publishedQualifiedHistorical.length, 4);
   assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 87);
   assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 11);
   assert.deepEqual(specialty.integrity_audit.artifact_reference_groups, {
-    published_record_sources: 32,
-    published_specialty_sources: 30,
+    published_record_sources: 34,
+    published_specialty_sources: 32,
     published_qualified_historical_sources: 2,
-    verified_not_published_sources: 4,
+    verified_not_published_sources: 2,
     historic_gm_upfitter_candidates: 36,
     usda_primary_sources: 6,
     modern_order_guide_snapshot_candidates: 24,
@@ -2654,8 +2729,8 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
     specialty.app_publication_records.every(
       (record) =>
         record.source.url.startsWith("https://") &&
-        record.source.archive_url?.startsWith(
-          "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/",
+        /^https:\/\/github\.com\/ipadmom\/chevrolet-color-archive\/releases\/download\/(?:brochure-source-archive-v1|current-order-guide-source-archive-v1)\//.test(
+          record.source.archive_url ?? "",
         ) &&
         /^[0-9a-f]{64}$/.test(record.source.sha256) &&
         record.source.bytes > 0 &&
@@ -2703,12 +2778,25 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
     ["express", "2011", "WA-9015 / SEO 9V5"],
     ["suburban", "2011", "WA-9015 / SEO 9V5"],
     ["silverado-hd", "2011", "WA-9015 / SEO 9V5"],
+    [
+      "silverado",
+      "2025",
+      "WA-9015 / SEO 9V5",
+      "gm-silverado-1500-retail-fleet-seo-paint-2025-2026",
+    ],
+    [
+      "silverado",
+      "2026",
+      "WA-9015 / SEO 9V5",
+      "gm-silverado-1500-retail-fleet-seo-paint-2025-2026",
+    ],
   ];
-  for (const [modelId, year, code] of expected) {
+  for (const [modelId, year, code, programId] of expected) {
     const model = models.find((candidate) => candidate.id === modelId);
     const generation = model?.generations.find(
       (candidate) =>
         candidate.years.includes(year) &&
+        (!programId || candidate.programId === programId) &&
         candidate.sources[year]?.evidenceClass ===
           "specialty_palette_subset" &&
         candidate.colors.some(
@@ -2726,7 +2814,7 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
     );
     assert.match(
       generation.sources[year].archiveUrl,
-      /releases\/download\/brochure-source-archive-v1\//,
+      /releases\/download\/(?:brochure-source-archive-v1|current-order-guide-source-archive-v1)\//,
     );
     assert.match(generation.sources[year].originalUrl, /^https:\/\//);
     assert.match(generation.revisionNote, /not a complete model-year exterior-color palette/);
@@ -2889,6 +2977,8 @@ test("production shell follows the Import Archive research flow", async () => {
   assert.match(explorer, /sourceColorIdsByYear/);
   assert.match(explorer, /generationForRecord\(model, year, colorId\)/);
   assert.match(explorer, /archiveListingCount/);
+  assert.match(explorer, /archiveListingCount\.toLocaleString\("en-US"\)/);
+  assert.match(explorer, /count === 1 \? "COLOR" : "COLORS"/);
   assert.match(explorer, /archiveModelYearCount/);
   assert.match(styles, /\.ia-topbar[\s\S]*height:\s*50px/);
   assert.match(styles, /\.ia-sidebar[\s\S]*width:\s*350px/);

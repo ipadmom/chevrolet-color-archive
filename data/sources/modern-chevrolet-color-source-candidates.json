@@ -5,7 +5,7 @@
   "dataset_kind": "source_provenance_candidates",
   "scope": "United States Chevrolet exterior-color sources for model years 2008-2026, with directly verified palette rows for the strongest current sources.",
   "summary": {
-    "source_count": 31,
+    "source_count": 36,
     "fleet_guide_document_count": 19,
     "fleet_guide_model_years": {
       "first": 2008,
@@ -37,7 +37,7 @@
       2023,
       2024
     ],
-    "verified_palette_table_count": 44,
+    "verified_palette_table_count": 66,
     "verified_order_guide_sample_count": 1,
     "highest_confidence_ingestion_ready_years": [
       2025,
@@ -1526,6 +1526,151 @@
       "content_type": "text/html",
       "limitations": [
         "Delta source only; it names Cypress Gray and Lakeshore Blue Metallic as new, not the full palette."
+      ]
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22745",
+      "title": "2025 Chevrolet Truck 6500 XD and 7500 XD LCF Diesel Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document",
+      "source_type": "official_order_guide_pdf",
+      "direct_official_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22745/all/en-us",
+      "retrieval_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22745/all/en-us",
+      "archive_asset_name": "2025-low-cab-forward-6500xd-7500xd-diesel-22745.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-6500xd-7500xd-diesel-22745.pdf",
+      "landing_url": "https://www.gmfleetorderguide.com/",
+      "market": "United States",
+      "model_year_scope": [
+        2025
+      ],
+      "model_scope": "Chevrolet Truck 6500 XD and 7500 XD LCF Diesel.",
+      "revision_or_document_date": "Published March 31, 2026",
+      "retrieved_at": "2026-07-23T17:26:42.858Z",
+      "page_count": 31,
+      "page_locator": "PDF page 21, COLOR AND TRIM.",
+      "local_file_path": null,
+      "sha256": "02d53e0bf3177695f11ab728d6b06d387030f232de30fc45980d0331fa4c30fc",
+      "bytes": 166368,
+      "content_type": "application/pdf",
+      "limitations": [
+        "This source covers only the named 6500 XD and 7500 XD LCF Diesel range.",
+        "The visually reviewed table prints WA-none; the archive does not invent a WA touch-up identity."
+      ]
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22775",
+      "title": "2025 Chevrolet Truck 4500 HD/XD and 5500 XD LCF Diesel Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document",
+      "source_type": "official_order_guide_pdf",
+      "direct_official_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22775/all/en-us",
+      "retrieval_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22775/all/en-us",
+      "archive_asset_name": "2025-low-cab-forward-4500-hd-xd-5500-xd-diesel-22775.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-4500-hd-xd-5500-xd-diesel-22775.pdf",
+      "landing_url": "https://www.gmfleetorderguide.com/",
+      "market": "United States",
+      "model_year_scope": [
+        2025
+      ],
+      "model_scope": "Chevrolet Truck 4500 HD/XD and 5500 XD LCF Diesel.",
+      "revision_or_document_date": "Published October 24, 2025",
+      "retrieved_at": "2026-07-23T17:26:43.456Z",
+      "page_count": 33,
+      "page_locator": "PDF page 20, COLOR AND TRIM.",
+      "local_file_path": null,
+      "sha256": "9e9af955682ba8335f9ab69096e937273c8d040860604e52fd5751a375a888fa",
+      "bytes": 239388,
+      "content_type": "application/pdf",
+      "limitations": [
+        "This source covers only the named 4500 HD/XD and 5500 XD LCF Diesel range.",
+        "The visually reviewed table prints WA-none for every color; the archive does not equate Isuzu Woodland Green 46U with GM Woodland Green 9V5 / WA-9015."
+      ]
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22821",
+      "title": "2025 Chevrolet Truck 3500 HG, 4500 HG and 5500 HG/XG LCF Gas Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document",
+      "source_type": "official_order_guide_pdf",
+      "direct_official_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22821/all/en-us",
+      "retrieval_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22821/all/en-us",
+      "archive_asset_name": "2025-low-cab-forward-3500-5500-gas-22821.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-3500-5500-gas-22821.pdf",
+      "landing_url": "https://www.gmfleetorderguide.com/",
+      "market": "United States",
+      "model_year_scope": [
+        2025
+      ],
+      "model_scope": "Chevrolet Truck 3500 HG, 4500 HG and 5500 HG/XG LCF Gas.",
+      "revision_or_document_date": "Published May 22, 2026",
+      "retrieved_at": "2026-07-23T17:26:43.738Z",
+      "page_count": 25,
+      "page_locator": "PDF page 13, COLOR AND TRIM.",
+      "local_file_path": null,
+      "sha256": "a1ce1771b44982d00c5380df59d5763e446a4fa47cc99222e9ff6ddea1891c28",
+      "bytes": 146895,
+      "content_type": "application/pdf",
+      "limitations": [
+        "This source covers only the named 3500 HG, 4500 HG and 5500 HG/XG LCF Gas range.",
+        "The visually reviewed table prints WA-none; the archive does not invent a WA touch-up identity."
+      ]
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22878",
+      "title": "2025 Chevrolet Truck Blazer EV Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document",
+      "source_type": "official_order_guide_pdf",
+      "direct_official_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22878/all/en-us",
+      "retrieval_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22878/all/en-us",
+      "archive_asset_name": "2025-blazer-ev-22878.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-blazer-ev-22878.pdf",
+      "landing_url": "https://www.gmfleetorderguide.com/",
+      "market": "United States",
+      "model_year_scope": [
+        2025
+      ],
+      "model_scope": "Chevrolet Truck Blazer EV.",
+      "revision_or_document_date": "Published November 14, 2025",
+      "retrieved_at": "2026-07-23T17:26:41.391Z",
+      "page_count": 70,
+      "page_locator": "PDF page 35, COLOR AND TRIM.",
+      "local_file_path": null,
+      "sha256": "c49df5803644d18661f9b57309712bad6dee711018186cd62ad49d1ba6424e8a",
+      "bytes": 334347,
+      "content_type": "application/pdf",
+      "limitations": [
+        "This retained source supplements the existing Fleet Guide palette and does not by itself establish a complete 2025 Blazer EV chart.",
+        "Habanero Orange is limited to SS by footnote 2."
+      ]
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23208",
+      "title": "2026 Chevrolet Car Corvette Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document",
+      "source_type": "official_order_guide_pdf",
+      "direct_official_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23208/all/en-us",
+      "retrieval_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23208/all/en-us",
+      "archive_asset_name": "2026-corvette-23208.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-corvette-23208.pdf",
+      "landing_url": "https://www.gmfleetorderguide.com/",
+      "market": "United States",
+      "model_year_scope": [
+        2026
+      ],
+      "model_scope": "Chevrolet Car Corvette.",
+      "revision_or_document_date": "Published June 05, 2026",
+      "retrieved_at": "2026-07-23T17:26:42.524Z",
+      "page_count": 300,
+      "page_locator": "PDF page 174, COLOR AND TRIM - Recommended.",
+      "local_file_path": null,
+      "sha256": "9dd51940c0ec86dd2e06a6f748f1fa5b1c2dfeb23b87b9f54a2a94a34f69cb74",
+      "bytes": 1236728,
+      "content_type": "application/pdf",
+      "limitations": [
+        "This retained source supplements the existing Fleet Guide palette and does not by itself establish a complete 2026 Corvette chart.",
+        "Blade Silver Matte is included and only available with ZRA Quail Silver Limited Edition and is unavailable with D30 Color Combination Override."
       ]
     }
   ],
@@ -3893,6 +4038,207 @@
       "bytes": 2603896,
       "pdf_page_count": 23,
       "archive_asset_name": "2023-chevrolet-commercial-silverado-4500hd-5500hd-6500hd-ebrochure.pdf"
+    },
+    {
+      "table_id": "gm-online-order-guide-pdf-22745:2025:low-cab-forward-6500-7500-diesel",
+      "source_id": "gm-online-order-guide-pdf-22745",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "low-cab-forward"
+      ],
+      "source_model_label": "Chevrolet Truck 6500 XD and 7500 XD LCF Diesel",
+      "pdf_pages": [
+        21
+      ],
+      "page_locator": "PDF page 21, COLOR AND TRIM.",
+      "colors": [
+        "Arc White"
+      ],
+      "factory_codes": {
+        "Arc White": "16U"
+      },
+      "availability_scope": "Exact 2025 6500 XD and 7500 XD LCF Diesel Color and Trim table.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The table prints Arc White as the sole standard exterior color for this body family.",
+        "The touch-up paint number is printed as WA-none; no WA identity is inferred."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-6500xd-7500xd-diesel-22745.pdf",
+      "sha256": "02d53e0bf3177695f11ab728d6b06d387030f232de30fc45980d0331fa4c30fc",
+      "bytes": 166368,
+      "pdf_page_count": 31,
+      "archive_asset_name": "2025-low-cab-forward-6500xd-7500xd-diesel-22745.pdf"
+    },
+    {
+      "table_id": "gm-online-order-guide-pdf-22775:2025:low-cab-forward-4500-5500-diesel",
+      "source_id": "gm-online-order-guide-pdf-22775",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "low-cab-forward"
+      ],
+      "source_model_label": "Chevrolet Truck 4500 HD/XD and 5500 XD LCF Diesel",
+      "pdf_pages": [
+        20
+      ],
+      "page_locator": "PDF page 20, COLOR AND TRIM.",
+      "colors": [
+        "Arc White",
+        "Ebony Black",
+        "Woodland Green",
+        "Dark Blue",
+        "Cardinal Red",
+        "Wheatland Yellow"
+      ],
+      "factory_codes": {
+        "Arc White": "16U",
+        "Ebony Black": "41U",
+        "Woodland Green": "46U",
+        "Dark Blue": "47U",
+        "Cardinal Red": "74U",
+        "Wheatland Yellow": "86U"
+      },
+      "availability_scope": "Exact 2025 4500 HD/XD and 5500 XD LCF Diesel Color and Trim table.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The five nonwhite colors apply only to this diesel body family and are extra-cost colors.",
+        "Every touch-up paint number is printed as WA-none; no WA identity is inferred.",
+        "Woodland Green 46U is an Isuzu color identity and is not equated with GM Woodland Green 9V5 / WA-9015."
+      ],
+      "color_restrictions": {
+        "Ebony Black": [
+          "4500 HD/XD and 5500 XD LCF Diesel only; extra-cost color."
+        ],
+        "Woodland Green": [
+          "4500 HD/XD and 5500 XD LCF Diesel only; extra-cost color.",
+          "Isuzu color code 46U; no WA number is printed."
+        ],
+        "Dark Blue": [
+          "4500 HD/XD and 5500 XD LCF Diesel only; extra-cost color."
+        ],
+        "Cardinal Red": [
+          "4500 HD/XD and 5500 XD LCF Diesel only; extra-cost color."
+        ],
+        "Wheatland Yellow": [
+          "4500 HD/XD and 5500 XD LCF Diesel only; extra-cost color."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-4500-hd-xd-5500-xd-diesel-22775.pdf",
+      "sha256": "9e9af955682ba8335f9ab69096e937273c8d040860604e52fd5751a375a888fa",
+      "bytes": 239388,
+      "pdf_page_count": 33,
+      "archive_asset_name": "2025-low-cab-forward-4500-hd-xd-5500-xd-diesel-22775.pdf"
+    },
+    {
+      "table_id": "gm-online-order-guide-pdf-22821:2025:low-cab-forward-gas",
+      "source_id": "gm-online-order-guide-pdf-22821",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "low-cab-forward"
+      ],
+      "source_model_label": "Chevrolet Truck 3500 HG, 4500 HG and 5500 HG/XG LCF Gas",
+      "pdf_pages": [
+        13
+      ],
+      "page_locator": "PDF page 13, COLOR AND TRIM.",
+      "colors": [
+        "Arc White"
+      ],
+      "factory_codes": {
+        "Arc White": "16U"
+      },
+      "availability_scope": "Exact 2025 3500 HG, 4500 HG and 5500 HG/XG LCF Gas Color and Trim table.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The table prints Arc White as the sole standard exterior color for this body family.",
+        "The touch-up paint number is printed as WA-none; no WA identity is inferred."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-3500-5500-gas-22821.pdf",
+      "sha256": "a1ce1771b44982d00c5380df59d5763e446a4fa47cc99222e9ff6ddea1891c28",
+      "bytes": 146895,
+      "pdf_page_count": 25,
+      "archive_asset_name": "2025-low-cab-forward-3500-5500-gas-22821.pdf"
+    },
+    {
+      "table_id": "gm-online-order-guide-pdf-22878:2025:blazer-ev-habanero-orange",
+      "source_id": "gm-online-order-guide-pdf-22878",
+      "market": "United States",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "blazer-ev"
+      ],
+      "source_model_label": "Chevrolet Truck Blazer EV",
+      "pdf_pages": [
+        35
+      ],
+      "page_locator": "PDF page 35, COLOR AND TRIM.",
+      "colors": [
+        "Habanero Orange"
+      ],
+      "factory_codes": {
+        "Habanero Orange": "GAG"
+      },
+      "touch_up_codes": {
+        "Habanero Orange": "WA-221K"
+      },
+      "availability_scope": "Exact 2025 Blazer EV Color and Trim supplement.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "This exact Order Guide row supplements rather than replaces the visually reviewed Fleet Guide union.",
+        "Habanero Orange is available on SS only."
+      ],
+      "color_restrictions": {
+        "Habanero Orange": [
+          "Available on SS only."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-blazer-ev-22878.pdf",
+      "sha256": "c49df5803644d18661f9b57309712bad6dee711018186cd62ad49d1ba6424e8a",
+      "bytes": 334347,
+      "pdf_page_count": 70,
+      "archive_asset_name": "2025-blazer-ev-22878.pdf"
+    },
+    {
+      "table_id": "gm-online-order-guide-pdf-23208:2026:corvette-blade-silver-matte",
+      "source_id": "gm-online-order-guide-pdf-23208",
+      "market": "United States",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "corvette"
+      ],
+      "source_model_label": "Chevrolet Car Corvette",
+      "pdf_pages": [
+        174
+      ],
+      "page_locator": "PDF page 174, COLOR AND TRIM - Recommended.",
+      "colors": [
+        "Blade Silver Matte"
+      ],
+      "factory_codes": {
+        "Blade Silver Matte": "GRF"
+      },
+      "touch_up_codes": {
+        "Blade Silver Matte": "WA-730S"
+      },
+      "availability_scope": "Exact 2026 Corvette recommended Color and Trim supplement.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "This exact Order Guide row supplements rather than replaces the visually reviewed Fleet Guide union.",
+        "Blade Silver Matte is included and only available with ZRA Quail Silver Limited Edition and is unavailable with D30 Color Combination Override."
+      ],
+      "color_restrictions": {
+        "Blade Silver Matte": [
+          "Included and only available with ZRA Quail Silver Limited Edition.",
+          "Not available with D30 Color Combination Override."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-corvette-23208.pdf",
+      "sha256": "9dd51940c0ec86dd2e06a6f748f1fa5b1c2dfeb23b87b9f54a2a94a34f69cb74",
+      "bytes": 1236728,
+      "pdf_page_count": 300,
+      "archive_asset_name": "2026-corvette-23208.pdf"
     }
   ],
   "verified_order_guide_samples": [

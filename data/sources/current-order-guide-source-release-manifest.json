@@ -1,0 +1,824 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-23T17:36:53.807Z",
+  "repository": "ipadmom/chevrolet-color-archive",
+  "release_tag": "current-order-guide-source-archive-v1",
+  "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/current-order-guide-source-archive-v1",
+  "scope": "Complete retained GM Online Order Guide PDF snapshots for the current-model 2025 and 2026 specialty, Woodland Green, and exact palette-completion review queues. Retention does not itself promote a color or complete a model-year chart.",
+  "release_upload_performed": true,
+  "uploaded_at": "2026-07-23T17:39:14Z",
+  "remote_asset_count": 33,
+  "remote_total_bytes": 14344603,
+  "entry_count": 31,
+  "total_pdf_bytes": 14302332,
+  "total_pdf_pages": 3457,
+  "checksum_asset": {
+    "asset_name": "source-sha256-manifest.txt",
+    "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/source-sha256-manifest.txt",
+    "sha256": "deacd5085d6ad2bf9b48a702f0b101c6d9c5436365818a287626398c7fc6a2b9",
+    "bytes": 3283,
+    "role": "flat_filename_sha256_manifest"
+  },
+  "entries": [
+    {
+      "source_id": "gm-online-order-guide-pdf-22878",
+      "vehicle_id": 22878,
+      "model_year": 2025,
+      "vehicle_name": "Blazer EV",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22878/all/en-us",
+      "retrieved_at": "2026-07-23T17:26:41.391Z",
+      "asset_name": "2025-blazer-ev-22878.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-blazer-ev-22878.pdf",
+      "sha256": "c49df5803644d18661f9b57309712bad6dee711018186cd62ad49d1ba6424e8a",
+      "bytes": 334347,
+      "pdf_page_count": 70,
+      "cited_pages": [
+        {
+          "pdf_page": 35,
+          "printed_page": 35,
+          "published_date": "November 14, 2025",
+          "text_sha256": "d0dae854473aeab6bd72e1eec1985e09fc72dea99360c15c095b7c4ef6eb621e",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T17:35:26.712Z",
+          "visual_review_finding": "Color and Trim table confirms Habanero Orange, code GAG, touch-up paint number WA-221K, as available on SS only."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22887",
+      "vehicle_id": 22887,
+      "model_year": 2025,
+      "vehicle_name": "Blazer EV Police Package",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22887/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:15.5528245Z",
+      "asset_name": "2025-blazer-ev-police-package-22887.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-blazer-ev-police-package-22887.pdf",
+      "sha256": "feb62128b5b002901f83d51d4ba69e85630d13baa301f13a26e7b7246bb26c5f",
+      "bytes": 193610,
+      "pdf_page_count": 41,
+      "cited_pages": [
+        {
+          "pdf_page": 23,
+          "printed_page": 23,
+          "published_date": "November 14, 2025",
+          "text_sha256": "1c395c9e71411e2344c4e7ccc892c9a2fc192a7f887f0a68da52e625ca6d5f6b"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23079",
+      "vehicle_id": 23079,
+      "model_year": 2025,
+      "vehicle_name": "Colorado",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23079/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:18.5326406Z",
+      "asset_name": "2025-colorado-23079.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-colorado-23079.pdf",
+      "sha256": "193f70ba66ff98ddedaf8e0f479e838b7e77a14f504af812a8a4d1155da28466",
+      "bytes": 416165,
+      "pdf_page_count": 89,
+      "cited_pages": [
+        {
+          "pdf_page": 54,
+          "printed_page": 54,
+          "published_date": "December 19, 2025",
+          "text_sha256": "b64a947ae79e61c47e04ee7ce84521ad757bb7b7c2bc8997cf162fc45b12b0d8"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23014",
+      "vehicle_id": 23014,
+      "model_year": 2025,
+      "vehicle_name": "Express Cargo",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23014/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:20.5880242Z",
+      "asset_name": "2025-express-cargo-23014.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-express-cargo-23014.pdf",
+      "sha256": "8bf5e908fd167e1859d91b4635245b2c57f31365449c331c08cda9b872b0ada2",
+      "bytes": 241257,
+      "pdf_page_count": 60,
+      "cited_pages": [
+        {
+          "pdf_page": 35,
+          "printed_page": 35,
+          "published_date": "November 07, 2025",
+          "text_sha256": "68eda5d9bf34505e96373ddedad20b8591fa3b0e1c81f3f52fbabb7ff3906ca8"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23015",
+      "vehicle_id": 23015,
+      "model_year": 2025,
+      "vehicle_name": "Express Cutaway",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23015/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:22.4511000Z",
+      "asset_name": "2025-express-cutaway-23015.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-express-cutaway-23015.pdf",
+      "sha256": "bc50749b114d9b7d01bdf0ea392481ccac7c925f381e4f2f63cd8a30049219e1",
+      "bytes": 281995,
+      "pdf_page_count": 78,
+      "cited_pages": [
+        {
+          "pdf_page": 49,
+          "printed_page": 49,
+          "published_date": "March 06, 2026",
+          "text_sha256": "b6791245dc5dbae17e2b52ccf35265b7cfe1568dee430166aababb4968ca4880"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23016",
+      "vehicle_id": 23016,
+      "model_year": 2025,
+      "vehicle_name": "Express Passenger",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23016/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:24.8270867Z",
+      "asset_name": "2025-express-passenger-23016.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-express-passenger-23016.pdf",
+      "sha256": "a5ebec5ba2bc54fcbccdcadc57226fc4ee8032a803c8e03e0d249248415a3270",
+      "bytes": 226284,
+      "pdf_page_count": 53,
+      "cited_pages": [
+        {
+          "pdf_page": 28,
+          "printed_page": 28,
+          "published_date": "November 07, 2025",
+          "text_sha256": "92cf52768f7c3e149adf0974db5c5a2bc0fc861b512f7bc5786a62fcae309723"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22821",
+      "vehicle_id": 22821,
+      "model_year": 2025,
+      "vehicle_name": "3500 HG, 4500 HG and 5500 HG/XG LCF Gas",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22821/all/en-us",
+      "retrieved_at": "2026-07-23T17:26:43.738Z",
+      "asset_name": "2025-low-cab-forward-3500-5500-gas-22821.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-3500-5500-gas-22821.pdf",
+      "sha256": "a1ce1771b44982d00c5380df59d5763e446a4fa47cc99222e9ff6ddea1891c28",
+      "bytes": 146895,
+      "pdf_page_count": 25,
+      "cited_pages": [
+        {
+          "pdf_page": 13,
+          "printed_page": 13,
+          "published_date": "May 22, 2026",
+          "text_sha256": "09142598798a09b0681dc50c11b70fde024c6552fcd856a655be3502d242d8b5",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T17:35:26.712Z",
+          "visual_review_finding": "Color and Trim table confirms Arc White, code 16U, no WA touch-up number, as the sole standard exterior color for the 2025 LCF Gas range."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22775",
+      "vehicle_id": 22775,
+      "model_year": 2025,
+      "vehicle_name": "4500 HD/XD and 5500 XD LCF Diesel",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22775/all/en-us",
+      "retrieved_at": "2026-07-23T17:26:43.456Z",
+      "asset_name": "2025-low-cab-forward-4500-hd-xd-5500-xd-diesel-22775.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-4500-hd-xd-5500-xd-diesel-22775.pdf",
+      "sha256": "9e9af955682ba8335f9ab69096e937273c8d040860604e52fd5751a375a888fa",
+      "bytes": 239388,
+      "pdf_page_count": 33,
+      "cited_pages": [
+        {
+          "pdf_page": 20,
+          "printed_page": 20,
+          "published_date": "October 24, 2025",
+          "text_sha256": "cbbb9dceee37ccb0e7e7cb6a156f736d1fecf0522a21499a8f329960a01829a6",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T17:35:26.712Z",
+          "visual_review_finding": "Color and Trim table confirms Arc White 16U plus Ebony Black 41U, Woodland Green 46U, Dark Blue 47U, Cardinal Red 74U, and Wheatland Yellow 86U; every nonwhite color is marked extra cost and no WA touch-up number is printed."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22745",
+      "vehicle_id": 22745,
+      "model_year": 2025,
+      "vehicle_name": "6500 XD and 7500 XD LCF Diesel",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22745/all/en-us",
+      "retrieved_at": "2026-07-23T17:26:42.858Z",
+      "asset_name": "2025-low-cab-forward-6500xd-7500xd-diesel-22745.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-low-cab-forward-6500xd-7500xd-diesel-22745.pdf",
+      "sha256": "02d53e0bf3177695f11ab728d6b06d387030f232de30fc45980d0331fa4c30fc",
+      "bytes": 166368,
+      "pdf_page_count": 31,
+      "cited_pages": [
+        {
+          "pdf_page": 21,
+          "printed_page": 21,
+          "published_date": "March 31, 2026",
+          "text_sha256": "52accb63978fceaa55ceef742f1aefdc15c1dc7b13e3a8ce2e2fb0d5785707be",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T17:35:26.712Z",
+          "visual_review_finding": "Color and Trim table confirms Arc White, code 16U, no WA touch-up number, as the sole standard exterior color for 2025 6500 XD and 7500 XD LCF Diesel."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23035",
+      "vehicle_id": 23035,
+      "model_year": 2025,
+      "vehicle_name": "New Suburban",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23035/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:27.1555386Z",
+      "asset_name": "2025-new-suburban-23035.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-suburban-23035.pdf",
+      "sha256": "30021a67d869b31b2a0b117645765d37c0738a13c6167e69d64404da2d5f3ad9",
+      "bytes": 538333,
+      "pdf_page_count": 106,
+      "cited_pages": [
+        {
+          "pdf_page": 64,
+          "printed_page": 64,
+          "published_date": "May 22, 2026",
+          "text_sha256": "39203e08e6fcbd3dc648800ef091cf0029555c3aadc7682d2fe429706294c984"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22974",
+      "vehicle_id": 22974,
+      "model_year": 2025,
+      "vehicle_name": "New Tahoe Police Package and Special Service",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+      "asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+      "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+      "bytes": 220774,
+      "pdf_page_count": 47,
+      "cited_pages": [
+        {
+          "pdf_page": 29,
+          "printed_page": 29,
+          "published_date": "May 22, 2026",
+          "text_sha256": "b38208a8ce6f20f4106507262c55616b1688ea0b08cc4506110fd66da1d7fd4b"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22944",
+      "vehicle_id": 22944,
+      "model_year": 2025,
+      "vehicle_name": "New Tahoe Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22944/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:31.1686862Z",
+      "asset_name": "2025-new-tahoe-retail-and-fleet-22944.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-retail-and-fleet-22944.pdf",
+      "sha256": "a5c24b31f587363abbec3630e4c9e57efadceae0e14b04cde8f193e88419a0e4",
+      "bytes": 606304,
+      "pdf_page_count": 129,
+      "cited_pages": [
+        {
+          "pdf_page": 83,
+          "printed_page": 83,
+          "published_date": "May 22, 2026",
+          "text_sha256": "cdcd6acb92a330fbc467d92c8d83163fd247abc6b469529b0836c6aa16fe5f98"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22917",
+      "vehicle_id": 22917,
+      "model_year": 2025,
+      "vehicle_name": "Silverado 1500 Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22917/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:33.2756547Z",
+      "asset_name": "2025-silverado-1500-retail-and-fleet-22917.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-1500-retail-and-fleet-22917.pdf",
+      "sha256": "dc01ef087bf74e10512c458ee74092547c4ee9f4a35b6de79f31d2aadbddd71c",
+      "bytes": 1152797,
+      "pdf_page_count": 297,
+      "cited_pages": [
+        {
+          "pdf_page": 220,
+          "printed_page": 220,
+          "published_date": "May 22, 2026",
+          "text_sha256": "ff3006a369930db9db52327088b6f5c69f413c75505c7acd194029d3f0b01bf7",
+          "visual_review_status": "visually_reviewed_no_exterior_color_evidence",
+          "visual_reviewed_at": "2026-07-23T09:39:37Z",
+          "visual_review_finding": "Seat-trim table only; this page does not support a public exterior-color row."
+        },
+        {
+          "pdf_page": 221,
+          "printed_page": 221,
+          "published_date": "May 22, 2026",
+          "text_sha256": "0833ee479069474196273f49f5d340755e554e73bbf688ab7ed8cf0f9d3bb4e9",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T09:39:37Z",
+          "visual_review_finding": "SEO Paint table confirms Woodland Green, color code 9V5, touch-up paint number WA-9015, availability for both listed interiors, a five-order minimum, and possible extended lead time."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22903",
+      "vehicle_id": 22903,
+      "model_year": 2025,
+      "vehicle_name": "Silverado 2500 HD Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22903/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:35.6678875Z",
+      "asset_name": "2025-silverado-2500-hd-retail-and-fleet-22903.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-2500-hd-retail-and-fleet-22903.pdf",
+      "sha256": "fe57e6e491357aca2c570a6a154dc4d11f3684e2f0c026904a844877d5158b78",
+      "bytes": 680709,
+      "pdf_page_count": 160,
+      "cited_pages": [
+        {
+          "pdf_page": 105,
+          "printed_page": 105,
+          "published_date": "June 19, 2026",
+          "text_sha256": "a509a8a9b3ea2ff75da006926eff50a5992ebce34894dd45f229d6f866dc395f"
+        },
+        {
+          "pdf_page": 106,
+          "printed_page": 106,
+          "published_date": "June 19, 2026",
+          "text_sha256": "cd1632f424f5a43ad86fa74889655103477a76c06d268145f14c0137200ed481"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22905",
+      "vehicle_id": 22905,
+      "model_year": 2025,
+      "vehicle_name": "Silverado 3500 HD CC",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22905/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:38.2812509Z",
+      "asset_name": "2025-silverado-3500-hd-cc-22905.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-3500-hd-cc-22905.pdf",
+      "sha256": "5e619bc5e358d8948e628e4d216f4644c767903d36c3eb659ce242a5aae3f09b",
+      "bytes": 253025,
+      "pdf_page_count": 55,
+      "cited_pages": [
+        {
+          "pdf_page": 30,
+          "printed_page": 30,
+          "published_date": "June 19, 2026",
+          "text_sha256": "c6f4f3d2aee784150439de3aca3f5998db2930d27eb781165f44941b157b8a6e"
+        },
+        {
+          "pdf_page": 31,
+          "printed_page": 31,
+          "published_date": "June 19, 2026",
+          "text_sha256": "dc47aed83dccf802ed36c31d050feb39170697e23ad8e545f89dc8638dfd5cab"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-22904",
+      "vehicle_id": 22904,
+      "model_year": 2025,
+      "vehicle_name": "Silverado 3500 HD Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22904/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:40.5309506Z",
+      "asset_name": "2025-silverado-3500-hd-retail-and-fleet-22904.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-3500-hd-retail-and-fleet-22904.pdf",
+      "sha256": "41aa8b902dccd96b002f6eee944ffc68ade475e20f8f007725ede36b06666939",
+      "bytes": 588543,
+      "pdf_page_count": 136,
+      "cited_pages": [
+        {
+          "pdf_page": 84,
+          "printed_page": 84,
+          "published_date": "June 19, 2026",
+          "text_sha256": "8e15ddd43566f7bb9443a2537420558c2c4a2b2a6650ad13456002a65b21f716"
+        },
+        {
+          "pdf_page": 85,
+          "printed_page": 85,
+          "published_date": "June 19, 2026",
+          "text_sha256": "d8126ac44ea991dcaae9fcb680c7b80b3ef30ea02f741a12fd88a60d65619a7f"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23022",
+      "vehicle_id": 23022,
+      "model_year": 2025,
+      "vehicle_name": "Silverado 4500 HD, 5500 HD and 6500 HD",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23022/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:45.8745287Z",
+      "asset_name": "2025-silverado-4500-hd-5500-hd-and-6500-hd-23022.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-4500-hd-5500-hd-and-6500-hd-23022.pdf",
+      "sha256": "06a7d567d30c102eb7edbe262c2ca89872de111387f9775b6b030c8379131a70",
+      "bytes": 516754,
+      "pdf_page_count": 171,
+      "cited_pages": [
+        {
+          "pdf_page": 121,
+          "printed_page": 121,
+          "published_date": "July 17, 2026",
+          "text_sha256": "d1f524331a95ea8011d1640b1c9ee6ac304ec942c43f4898d1e00cd2808c18b5"
+        },
+        {
+          "pdf_page": 122,
+          "printed_page": 122,
+          "published_date": "July 17, 2026",
+          "text_sha256": "d99f99c7dc690f07cb7896eed7acf99ce4688d978e27db012c568fe10b29ee43"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23158",
+      "vehicle_id": 23158,
+      "model_year": 2026,
+      "vehicle_name": "Blazer EV Police Package",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23158/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:47.9876323Z",
+      "asset_name": "2026-blazer-ev-police-package-23158.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-blazer-ev-police-package-23158.pdf",
+      "sha256": "923db29e3afb311fc812f2059c5196333c9dad0d4d119fbf3961316d57002753",
+      "bytes": 200912,
+      "pdf_page_count": 45,
+      "cited_pages": [
+        {
+          "pdf_page": 20,
+          "printed_page": 20,
+          "published_date": "June 05, 2026",
+          "text_sha256": "07dbd282df5896e8848da1a191680ddc1b00efcfed4b440ced7d85dd1d49ae59"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23215",
+      "vehicle_id": 23215,
+      "model_year": 2026,
+      "vehicle_name": "Colorado",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23215/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:49.9543398Z",
+      "asset_name": "2026-colorado-23215.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-colorado-23215.pdf",
+      "sha256": "f85bb8685bc7ddcd0989f62256eed7bba9efb7e5eb09f0fd427d9a144e4c4bf0",
+      "bytes": 490356,
+      "pdf_page_count": 116,
+      "cited_pages": [
+        {
+          "pdf_page": 61,
+          "printed_page": 61,
+          "published_date": "July 10, 2026",
+          "text_sha256": "e1cb75baa8d5f780e749f3c441294b968eb98245db8dd670940887e0ae8bd598"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23208",
+      "vehicle_id": 23208,
+      "model_year": 2026,
+      "vehicle_name": "Corvette",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23208/all/en-us",
+      "retrieved_at": "2026-07-23T17:26:42.524Z",
+      "asset_name": "2026-corvette-23208.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-corvette-23208.pdf",
+      "sha256": "9dd51940c0ec86dd2e06a6f748f1fa5b1c2dfeb23b87b9f54a2a94a34f69cb74",
+      "bytes": 1236728,
+      "pdf_page_count": 300,
+      "cited_pages": [
+        {
+          "pdf_page": 174,
+          "printed_page": 174,
+          "published_date": "June 05, 2026",
+          "text_sha256": "635d93dc4ca6070edbbc51de7e6317eef6dea50cbf02dddb4946c89a7ec69a51",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T17:35:26.712Z",
+          "visual_review_finding": "Recommended Color and Trim table confirms Blade Silver Matte, code GRF, touch-up paint number WA-730S, included and only available with ZRA Quail Silver Limited Edition and unavailable with D30 Color Combination Override."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23276",
+      "vehicle_id": 23276,
+      "model_year": 2026,
+      "vehicle_name": "Express Cargo",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23276/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:52.6650932Z",
+      "asset_name": "2026-express-cargo-23276.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-express-cargo-23276.pdf",
+      "sha256": "9596de3e96b0c5004c1b05ccce19e3d98381bfeddea9acf714379299e72a5190",
+      "bytes": 259881,
+      "pdf_page_count": 69,
+      "cited_pages": [
+        {
+          "pdf_page": 37,
+          "printed_page": 37,
+          "published_date": "June 12, 2026",
+          "text_sha256": "8b0fd24a175aa72774032fffab4257203d72a202c33e4e01aabce7fbc3c15a3a"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23277",
+      "vehicle_id": 23277,
+      "model_year": 2026,
+      "vehicle_name": "Express Cutaway",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23277/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:54.8688248Z",
+      "asset_name": "2026-express-cutaway-23277.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-express-cutaway-23277.pdf",
+      "sha256": "6669f35a79305104d08e81dd4ae6f5ead67a9ffbe96fd74b652a3f32509b4e7f",
+      "bytes": 313731,
+      "pdf_page_count": 94,
+      "cited_pages": [
+        {
+          "pdf_page": 51,
+          "printed_page": 51,
+          "published_date": "May 22, 2026",
+          "text_sha256": "bc3063b29e0ebce9f336dae7e5cbe24aaaeebd69fc673a2f7f9e7828d2a90d29"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23278",
+      "vehicle_id": 23278,
+      "model_year": 2026,
+      "vehicle_name": "Express Passenger",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23278/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:56.6296954Z",
+      "asset_name": "2026-express-passenger-23278.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-express-passenger-23278.pdf",
+      "sha256": "532a058d066035594d653bfe3dabaa6d95a0c898ac399a0fc548a906eb7cb48a",
+      "bytes": 248584,
+      "pdf_page_count": 63,
+      "cited_pages": [
+        {
+          "pdf_page": 30,
+          "printed_page": 30,
+          "published_date": "May 01, 2026",
+          "text_sha256": "63ab2ddc3a8d9eee9b971b1c8e84ad6d53ec49f2e58d55325d5a0e571e36d041"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23168",
+      "vehicle_id": 23168,
+      "model_year": 2026,
+      "vehicle_name": "Silverado 1500 Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23168/all/en-us",
+      "retrieved_at": "2026-07-21T07:04:58.9565240Z",
+      "asset_name": "2026-silverado-1500-retail-and-fleet-23168.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-1500-retail-and-fleet-23168.pdf",
+      "sha256": "6b332a252eb691a5d080e216ffb69b4aa33bbf421ded402f4076818c146ef7fa",
+      "bytes": 1258227,
+      "pdf_page_count": 340,
+      "cited_pages": [
+        {
+          "pdf_page": 235,
+          "printed_page": 235,
+          "published_date": "June 26, 2026",
+          "text_sha256": "f6be6f67a6dea241c1a5ab80d59119e3bfdc7d5d8209af582904b177aad6dd6d",
+          "visual_review_status": "visually_reviewed_no_exterior_color_evidence",
+          "visual_reviewed_at": "2026-07-23T09:39:37Z",
+          "visual_review_finding": "Seat-trim table only; this page does not support a public exterior-color row."
+        },
+        {
+          "pdf_page": 236,
+          "printed_page": 236,
+          "published_date": "June 26, 2026",
+          "text_sha256": "2d42a08c84c29b9540d82432ed9036e56616eafa2da70aa415cbb6c8fefd0cdf",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-07-23T09:39:37Z",
+          "visual_review_finding": "SEO Paint table confirms Woodland Green, color code 9V5, touch-up paint number WA-9015, availability for both listed interiors, a five-order minimum, and possible extended lead time."
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "cited_pages_visually_reviewed"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23195",
+      "vehicle_id": 23195,
+      "model_year": 2026,
+      "vehicle_name": "Silverado 2500 HD Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23195/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:00.7619335Z",
+      "asset_name": "2026-silverado-2500-hd-retail-and-fleet-23195.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-2500-hd-retail-and-fleet-23195.pdf",
+      "sha256": "6284b3ff29dc52e827ac845a5ede479e30d604959b27716a769adaa4f0ec32f9",
+      "bytes": 694761,
+      "pdf_page_count": 161,
+      "cited_pages": [
+        {
+          "pdf_page": 101,
+          "printed_page": 101,
+          "published_date": "June 19, 2026",
+          "text_sha256": "0b0759177413a8571a9d8c64b4e76d9575c4517f3c424422abbe8809bbf2f097"
+        },
+        {
+          "pdf_page": 102,
+          "printed_page": 102,
+          "published_date": "June 19, 2026",
+          "text_sha256": "3bef850e847cd06da88eb7ace8bf74310fc2748efb30e47dd4cb0e46eb40a5c1"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23197",
+      "vehicle_id": 23197,
+      "model_year": 2026,
+      "vehicle_name": "Silverado 3500 HD CC",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23197/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:02.9845214Z",
+      "asset_name": "2026-silverado-3500-hd-cc-23197.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-3500-hd-cc-23197.pdf",
+      "sha256": "2a352b4fefd8b199d589021f7e9a6c7e3d7c35bc70a2f0274d1bfb9f36c77b70",
+      "bytes": 265669,
+      "pdf_page_count": 60,
+      "cited_pages": [
+        {
+          "pdf_page": 29,
+          "printed_page": 29,
+          "published_date": "June 19, 2026",
+          "text_sha256": "58281eee5fc5aa2335c2c1d0316a1d0a72bf2cdcbc094ce8e646a5de7e7ac5c8"
+        },
+        {
+          "pdf_page": 30,
+          "printed_page": 30,
+          "published_date": "June 19, 2026",
+          "text_sha256": "e32128c6e15249a6fef6cc6517940ce6fbf526cb4e5835be12679e912e6755dd"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23196",
+      "vehicle_id": 23196,
+      "model_year": 2026,
+      "vehicle_name": "Silverado 3500 HD Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23196/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:04.7685056Z",
+      "asset_name": "2026-silverado-3500-hd-retail-and-fleet-23196.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-3500-hd-retail-and-fleet-23196.pdf",
+      "sha256": "5a14aca04ae0c16ed0d7145aad59e14579c89c5e4898a3c3a9092501f8592c6f",
+      "bytes": 594169,
+      "pdf_page_count": 143,
+      "cited_pages": [
+        {
+          "pdf_page": 83,
+          "printed_page": 83,
+          "published_date": "June 19, 2026",
+          "text_sha256": "3187929df7f8d5fa7671ded3ef062cd81d1f16677302558c1e826f098137c726"
+        },
+        {
+          "pdf_page": 84,
+          "printed_page": 84,
+          "published_date": "June 19, 2026",
+          "text_sha256": "efee0e3c312075294f7df3ac63bdaee0a60833180c7cbe8917e0460ae294f231"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23260",
+      "vehicle_id": 23260,
+      "model_year": 2026,
+      "vehicle_name": "Silverado 4500 HD, 5500 HD and 6500 HD",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23260/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:06.6536568Z",
+      "asset_name": "2026-silverado-4500-hd-5500-hd-and-6500-hd-23260.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-4500-hd-5500-hd-and-6500-hd-23260.pdf",
+      "sha256": "7865540f282c603eef17bc6a6e4cc6bfac7b16ebe356c83dc9b7b0b06a28dab6",
+      "bytes": 508914,
+      "pdf_page_count": 167,
+      "cited_pages": [
+        {
+          "pdf_page": 118,
+          "printed_page": 118,
+          "published_date": "July 17, 2026",
+          "text_sha256": "2ecf2fff406192196a38c391be1561e0056f001c916d9254d9fdfdc8f09ace61"
+        },
+        {
+          "pdf_page": 119,
+          "printed_page": 119,
+          "published_date": "July 17, 2026",
+          "text_sha256": "48706a8bd33169af1a231ba8991a85f70a468b95df8ba3e46c5ff2ade4ddad74"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23233",
+      "vehicle_id": 23233,
+      "model_year": 2026,
+      "vehicle_name": "Suburban",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23233/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:08.3242912Z",
+      "asset_name": "2026-suburban-23233.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-suburban-23233.pdf",
+      "sha256": "7b8316a857af059c18f4839c4232633cf87dc97c1ebb365e1321199b2902da9d",
+      "bytes": 554002,
+      "pdf_page_count": 117,
+      "cited_pages": [
+        {
+          "pdf_page": 68,
+          "printed_page": 68,
+          "published_date": "June 19, 2026",
+          "text_sha256": "226b3a1bd0b5d385922df26367ce5a1bfd035a10d206a925bd4b17dd835b0889"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23213",
+      "vehicle_id": 23213,
+      "model_year": 2026,
+      "vehicle_name": "Tahoe Police Package and Special Service",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+      "asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+      "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+      "bytes": 233532,
+      "pdf_page_count": 52,
+      "cited_pages": [
+        {
+          "pdf_page": 29,
+          "printed_page": 29,
+          "published_date": "June 05, 2026",
+          "text_sha256": "334cf24a85d3bcb7c2fc8ba2450814d17fe34979d05f53525a9240ed68015a1a"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    },
+    {
+      "source_id": "gm-online-order-guide-pdf-23232",
+      "vehicle_id": 23232,
+      "model_year": 2026,
+      "vehicle_name": "Tahoe Retail and Fleet",
+      "original_source_url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23232/all/en-us",
+      "retrieved_at": "2026-07-21T07:05:12.7668206Z",
+      "asset_name": "2026-tahoe-retail-and-fleet-23232.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-retail-and-fleet-23232.pdf",
+      "sha256": "669d24954fd47259d0f0b71ed3857bf72546fae7fa93c2968f9cb52dff9dcbf2",
+      "bytes": 639318,
+      "pdf_page_count": 149,
+      "cited_pages": [
+        {
+          "pdf_page": 90,
+          "printed_page": 90,
+          "published_date": "June 19, 2026",
+          "text_sha256": "4b695581758aac29d6341a9030f510946e789b12e72498bc8c44d5c706e40b1c"
+        }
+      ],
+      "artifact_status": "retained_exact_snapshot",
+      "review_status": "page_located_pending_visual_review"
+    }
+  ]
+}

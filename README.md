@@ -38,12 +38,12 @@ each matrix spans only the selected sourced platform, base, or era band. An
 unreviewed year remains as an explicit blank column instead of borrowing colors
 from an adjacent year.
 
-The reviewed public matrices currently contain 2,000 source-linked listings.
-They divide into 973 direct source transcriptions, 454 qualified official
-palette-union rows across 56 model-years, 569 reviewed specialty-paint subset
-rows across 57 application model-years, and four ordinary qualified-historical
+The reviewed public matrices currently contain 2,010 source-linked listings.
+They divide into 973 direct source transcriptions, 462 qualified official
+palette-union rows across 57 model-years, 571 reviewed specialty-paint subset
+rows across 58 application model-years, and four ordinary qualified-historical
 table rows. Specialty evidence is the strongest research status for 42
-model-years; the other 15 specialty model-years coexist with a separately
+model-years; the other 16 specialty model-years coexist with a separately
 complete or qualified regular palette. Six model-years have a
 reviewed-qualified-historical research status. The four 1981 Woodland Green
 rows are ordinary chart evidence in that class, not specialty-paint records.
@@ -258,9 +258,44 @@ coverage across their audited GMT, K2, and T1 families, including the distinct
 GMT820 and GMT830 applications. Avalanche carries the separate GMT805 code; its
 audit note records that GMT806 belongs to the Cadillac Escalade EXT, not a
 Chevrolet nameplate. Every model and year tile uses an inline SVG vehicle
-profile selected by body class and design era. The platform audit covers 1,339
+profile. All 18 current nameplates use dedicated 2026 model-specific geometry,
+representative configurations, and official Chevrolet references. Earlier
+years retain year-aware body and design-era rendering instead of receiving a
+current-model silhouette. The platform audit covers 1,339
 of 1,792 catalog model-years; all 453 unresolved years stay explicit rather
 than inheriting adjacent bands.
+
+The normalized [latest-profile catalog](data/catalog/chevrolet-latest-profile-catalog.json)
+records one latest-year profile decision for all 149 model slugs. It keeps 105
+multi-body or under-sourced nameplates explicitly unresolved instead of
+inventing a representative body. The separate [current-profile source map](data/catalog/chevrolet-current-profile-references.json)
+ties all 18 rendered current profiles to exact official Chevrolet pages, GM
+Fleet Guide pages, configurations, published dimensions, and the retained
+source checksum. The companion
+[current-manual source map](data/catalog/chevrolet-current-manual-references.json)
+reconciles those same 18 models to the official
+[GM Manuals and Guides portal](https://experience.gm.com/support/vehicle/manuals-guides),
+16 unique owner manuals, and 10 unique Vehicle Reference Information
+documents. Manuals support configuration and body-detail review; they do not
+replace a governing paint chart. The source map separately records the public
+[GM Electronic Order Guide](https://www.gmfleetorderguide.com/) as the stronger
+current paint authority, with its exact PDF, color/trim, and vehicle-metadata
+endpoint templates.
+
+The independent [current-model Order Guide reconciliation](data/audits/current-model-order-guide-reconciliation.json)
+records the exact 2025 and 2026 GM vehicle IDs, API and PDF endpoint templates,
+Fleet Guide page locators, the retained closure of three exact palette
+omissions, remaining source-literal conflicts, specialty gaps, and the
+publication gate for every current nameplate. None of those qualified unions
+is mislabeled as a complete model-year chart. The separate
+[`current-order-guide-source-archive-v1`](https://github.com/ipadmom/chevrolet-color-archive/releases/tag/current-order-guide-source-archive-v1)
+Release retains 31 exact 2025–2026 generated Order Guide PDFs from the specialty,
+Woodland Green, and palette-completion review queues: 3,457 pages and
+14,302,332 PDF bytes. Its
+[tracked manifest](data/sources/current-order-guide-source-release-manifest.json)
+records every original GM URL, retrieval time, byte count, SHA-256, cited page,
+and immutable Release URL. Retention is not treated as color verification until
+the cited page has been visually reviewed.
 
 The Wikimedia Commons archive contains 302 audited originals across 140 models,
 plus 302 web previews. Both forms are stored under the pinned GitHub Release tag
@@ -275,10 +310,10 @@ bytes. The archive closes the Tahoe 1995–2007 evidence set, all 19 audited
 2008–2026 GM Fleet Guides, the retained eBrochure set, and every currently
 published specialty citation. The
 flat-filename checksum manifest covers all 139 other assets. Release validation
-identifies 30 governing audit assets, 30 app-fed audit citations, 108
+identifies 30 governing audit assets, 30 app-fed audit citations, 110
 application Release URLs, 61 modern palette tables, 483 modern color
-assertions, 529 published specialty records, four published ordinary
-qualified-history records, and 10 verified nonpublished, nonrouting specialty
+assertions, 531 published specialty records, four published ordinary
+qualified-history records, and eight verified nonpublished, nonrouting specialty
 snapshots.
 
 ## Evidence rules
@@ -465,6 +500,8 @@ The modern-source, specialty-source, platform-era, and OCR-corpus methods are
 documented in [docs/modern-color-source-audit.md](docs/modern-color-source-audit.md),
 [docs/specialty-color-source-audit.md](docs/specialty-color-source-audit.md),
 [docs/platform-era-audit.md](docs/platform-era-audit.md),
+[docs/current-vehicle-profile-artwork.md](docs/current-vehicle-profile-artwork.md),
+[docs/current-model-color-photo-audit.md](docs/current-model-color-photo-audit.md),
 [docs/gm-color-table-extraction.md](docs/gm-color-table-extraction.md), and
 [docs/gm-color-table-consolidation.md](docs/gm-color-table-consolidation.md).
 

@@ -785,6 +785,7 @@ def main() -> int:
         "s10:1993",
         "silverado:2012",
         "silverado:2014",
+        "silverado:2025",
         "silverado:2026",
         "sportvan:1979",
         "sportvan:1980",
@@ -812,7 +813,7 @@ def main() -> int:
         "tahoe:2020",
     }
     if (
-        len(specialty_memberships) != 509
+        len(specialty_memberships) != 511
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -1216,6 +1217,30 @@ def main() -> int:
             ROOT / "data" / "sources" / "modern-chevrolet-color-source-candidates.json"
         ).read_text(encoding="utf-8")
     )
+    current_order_release = json.loads(
+        (
+            ROOT
+            / "data"
+            / "sources"
+            / "current-order-guide-source-release-manifest.json"
+        ).read_text(encoding="utf-8")
+    )
+    published_order_guide_source_ids = {
+        "gm-online-order-guide-pdf-22745",
+        "gm-online-order-guide-pdf-22775",
+        "gm-online-order-guide-pdf-22821",
+        "gm-online-order-guide-pdf-22878",
+        "gm-online-order-guide-pdf-23208",
+    }
+    current_order_entries = {
+        entry["source_id"]: entry
+        for entry in current_order_release["entries"]
+        if entry["source_id"] in published_order_guide_source_ids
+    }
+    if set(current_order_entries) != published_order_guide_source_ids:
+        raise AssertionError(
+            "published Order Guide palette sources are absent from the release"
+        )
     retained_modern_sources = [
         item for item in modern_ledger["sources"] if item.get("local_file_path")
     ]
@@ -1231,11 +1256,13 @@ def main() -> int:
         "chevrolet-ebrochure-us-2023-colorado",
         "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
         "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
-    }
+    } | published_order_guide_source_ids
     retained_modern_source_ids = {item["source_id"] for item in retained_modern_sources}
     if len(retained_modern_sources) != 23:
         raise AssertionError("modern source ledger no longer retains 23 complete PDFs")
-    if not qualified_palette_source_ids <= retained_modern_source_ids:
+    if not qualified_palette_source_ids <= (
+        retained_modern_source_ids | set(current_order_entries)
+    ):
         raise AssertionError("published modern palettes lack retained source PDFs")
     current_revisions_by_source: dict[str, list[dict]] = {}
     for revision in rows["source_revisions"]:
@@ -1352,6 +1379,67 @@ def main() -> int:
                     f"modern source {claim_type} points to the wrong URL: {source_id}"
                 )
 
+    modern_sources_by_id = {
+        item["source_id"]: item for item in modern_ledger["sources"]
+    }
+    for source_id, release_entry in current_order_entries.items():
+        item = modern_sources_by_id[source_id]
+        source = source_lookup.get(source_id)
+        if source is None:
+            raise AssertionError(
+                f"retained Order Guide source is absent: {source_id}"
+            )
+        if source["canonical_url"] != canonical_url(item["retrieval_url"]):
+            raise AssertionError(
+                f"Order Guide source is not bound to its retrieval URL: {source_id}"
+            )
+        if source["archive_url"] != canonical_url(release_entry["archive_url"]):
+            raise AssertionError(
+                f"Order Guide source is not bound to its Release URL: {source_id}"
+            )
+        for source_key, release_key in (
+            ("content_sha256", "sha256"),
+            ("content_length_bytes", "bytes"),
+        ):
+            if source[source_key] != release_entry[release_key]:
+                raise AssertionError(
+                    f"Order Guide source metadata is stale: {source_id}.{source_key}"
+                )
+
+        revisions = current_revisions_by_source.get(source_id, [])
+        if len(revisions) != 1:
+            raise AssertionError(
+                f"Order Guide source lacks one current revision: {source_id}"
+            )
+        revision = revisions[0]
+        if (
+            revision["artifact_sha256"] != release_entry["sha256"]
+            or revision["byte_length"] != release_entry["bytes"]
+            or revision["pdf_page_count"] != release_entry["pdf_page_count"]
+            or revision["archive_url"] != canonical_url(release_entry["archive_url"])
+            or revision["integrity_status"] != "release_manifest_hash_recorded"
+        ):
+            raise AssertionError(
+                f"Order Guide source revision is not release-bound: {source_id}"
+            )
+
+        for claim_type, expected_url in (
+            ("source_retrieval_url", item["retrieval_url"]),
+            ("source_landing_url", item["landing_url"]),
+            ("direct_official_url", item["direct_official_url"]),
+            ("retained_release_asset_url", release_entry["archive_url"]),
+        ):
+            links = modern_links.get((source_id, claim_type), [])
+            if len(links) != 1:
+                raise AssertionError(
+                    f"Order Guide source lacks {claim_type}: {source_id}"
+                )
+            linked_source = source_lookup[links[0]["source_id"]]
+            if linked_source["canonical_url"] != canonical_url(expected_url):
+                raise AssertionError(
+                    f"Order Guide {claim_type} points to the wrong URL: {source_id}"
+                )
+
     for artifact in artifact_entries:
         source = source_lookup.get(artifact["source_id"])
         if source is None:
@@ -1420,6 +1508,141 @@ def main() -> int:
                 f"unsupported evidence locator type: {claim['evidence_claim_id']} "
                 f"({locator_type})"
             )
+
+    availability_by_key = {
+        (row["model_id"], row["model_year"], row["source_color_name"]): row
+        for row in rows["color_availability"]
+    }
+    claims_by_availability = {
+        row["availability_id"]: row for row in rows["evidence_claims"]
+    }
+    completion_expectations = {
+        ("blazer-ev", 2025, "Habanero Orange"): {
+            "source_id": "gm-online-order-guide-pdf-22878",
+            "factory_code": "GAG",
+            "touch_up_code": "WA-221K",
+            "rpo_code": "GAG",
+            "wa_code": "WA-221K",
+            "source_wa_code_raw": "WA-221K",
+            "source_wa_code_cell_state": "printed_with_prefix",
+            "pdf_pages": [35],
+        },
+        ("corvette", 2026, "Blade Silver Matte"): {
+            "source_id": "gm-online-order-guide-pdf-23208",
+            "factory_code": "GRF",
+            "touch_up_code": "WA-730S",
+            "rpo_code": "GRF",
+            "wa_code": "WA-730S",
+            "source_wa_code_raw": "WA-730S",
+            "source_wa_code_cell_state": "printed_with_prefix",
+            "pdf_pages": [174],
+        },
+        ("low-cab-forward", 2025, "Arc White"): {
+            "source_id": "gm-online-order-guide-pdf-22745",
+            "factory_code": "16U",
+            "touch_up_code": None,
+            "rpo_code": "16U",
+            "wa_code": None,
+            "source_wa_code_raw": None,
+            "source_wa_code_cell_state": None,
+            "pdf_pages": [21],
+        },
+        ("low-cab-forward", 2025, "Ebony Black"): {
+            "source_id": "gm-online-order-guide-pdf-22775",
+            "factory_code": "41U",
+            "touch_up_code": None,
+            "rpo_code": "41U",
+            "wa_code": None,
+            "source_wa_code_raw": None,
+            "source_wa_code_cell_state": None,
+            "pdf_pages": [20],
+        },
+        ("low-cab-forward", 2025, "Woodland Green"): {
+            "source_id": "gm-online-order-guide-pdf-22775",
+            "factory_code": "46U",
+            "touch_up_code": None,
+            "rpo_code": "46U",
+            "wa_code": None,
+            "source_wa_code_raw": None,
+            "source_wa_code_cell_state": None,
+            "pdf_pages": [20],
+        },
+        ("low-cab-forward", 2025, "Dark Blue"): {
+            "source_id": "gm-online-order-guide-pdf-22775",
+            "factory_code": "47U",
+            "touch_up_code": None,
+            "rpo_code": "47U",
+            "wa_code": None,
+            "source_wa_code_raw": None,
+            "source_wa_code_cell_state": None,
+            "pdf_pages": [20],
+        },
+        ("low-cab-forward", 2025, "Cardinal Red"): {
+            "source_id": "gm-online-order-guide-pdf-22775",
+            "factory_code": "74U",
+            "touch_up_code": None,
+            "rpo_code": "74U",
+            "wa_code": None,
+            "source_wa_code_raw": None,
+            "source_wa_code_cell_state": None,
+            "pdf_pages": [20],
+        },
+        ("low-cab-forward", 2025, "Wheatland Yellow"): {
+            "source_id": "gm-online-order-guide-pdf-22775",
+            "factory_code": "86U",
+            "touch_up_code": None,
+            "rpo_code": "86U",
+            "wa_code": None,
+            "source_wa_code_raw": None,
+            "source_wa_code_cell_state": None,
+            "pdf_pages": [20],
+        },
+    }
+    for key, expected in completion_expectations.items():
+        availability = availability_by_key.get(key)
+        if availability is None:
+            raise AssertionError(f"current palette completion row is absent: {key}")
+        for field in (
+            "evidence_source_id",
+            "factory_code",
+            "touch_up_code",
+            "rpo_code",
+            "wa_code",
+            "source_wa_code_raw",
+            "source_wa_code_cell_state",
+        ):
+            expected_field = (
+                "source_id" if field == "evidence_source_id" else field
+            )
+            if availability[field] != expected[expected_field]:
+                raise AssertionError(
+                    f"current palette completion field is stale: {key} {field}"
+                )
+        claim = claims_by_availability[availability["availability_id"]]
+        if (
+            claim["source_id"] != expected["source_id"]
+            or claim["pdf_pages"] != expected["pdf_pages"]
+        ):
+            raise AssertionError(
+                f"current palette completion claim points to the wrong page: {key}"
+            )
+
+    lcf_arc_white = availability_by_key[
+        ("low-cab-forward", 2025, "Arc White")
+    ]
+    lcf_arc_white_supporting_sources = {
+        row["source_id"]
+        for row in rows["source_links"]
+        if row["entity_id"] == lcf_arc_white["availability_id"]
+        and row["claim_type"] == "color_availability_supporting_evidence"
+    }
+    if lcf_arc_white_supporting_sources != {
+        "gm-online-order-guide-pdf-22775",
+        "gm-online-order-guide-pdf-22821",
+    }:
+        raise AssertionError(
+            "LCF Arc White does not preserve all three body-family sources"
+        )
 
     verified_counts = Counter(
         row["model_year_id"] for row in rows["color_availability"]
@@ -1574,6 +1797,7 @@ def main() -> int:
         "s10:1993",
         "silverado:2012",
         "silverado:2014",
+        "silverado:2025",
         "silverado:2026",
         "silverado-hd:2011",
         "sportvan:1979",
@@ -1603,7 +1827,7 @@ def main() -> int:
         "tahoe:2020",
     }
     if (
-        len(specialty_rows) != 569
+        len(specialty_rows) != 571
         or {row["model_year_id"] for row in specialty_rows}
         != expected_specialty_model_years
     ):
@@ -1612,9 +1836,9 @@ def main() -> int:
         )
     expected_application_type_counts = Counter(
         {
-            "manufacturer_listed": 1_427,
+            "manufacturer_listed": 1_435,
             "authorized_upfitter_post_build": 180,
-            "special_equipment_option_paint": 230,
+            "special_equipment_option_paint": 232,
             "specialty_program_unspecified": 41,
             "manufacturer_special_equipment_option": 32,
             "standard_program_palette": 86,
@@ -1632,7 +1856,7 @@ def main() -> int:
         {
             "available": 152,
             "available_through_authorized_upfitter": 180,
-            "available_with_minimum_batch": 150,
+            "available_with_minimum_batch": 152,
             "available_with_possible_extended_lead": 4,
             "closed_after_2026-02-02": 42,
             "restricted": 41,
@@ -1642,6 +1866,41 @@ def main() -> int:
         expected_specialty_state_counts
     ):
         raise AssertionError("specialty availability states are incomplete or stale")
+
+    generation_program_ids = {
+        row["generation_id"]: row["program_id"] for row in rows["generations"]
+    }
+    silverado_retail_fleet_woodland = [
+        row
+        for row in specialty_rows
+        if generation_program_ids[row["generation_id"]]
+        == "gm-silverado-1500-retail-fleet-seo-paint-2025-2026"
+    ]
+    if (
+        len(silverado_retail_fleet_woodland) != 2
+        or {row["model_year_id"] for row in silverado_retail_fleet_woodland}
+        != {"silverado:2025", "silverado:2026"}
+        or {row["source_color_name"] for row in silverado_retail_fleet_woodland}
+        != {"Woodland Green"}
+        or {row["seo_code"] for row in silverado_retail_fleet_woodland}
+        != {"9V5"}
+        or {row["wa_code"] for row in silverado_retail_fleet_woodland}
+        != {"WA-9015"}
+        or {row["factory_code"] for row in silverado_retail_fleet_woodland}
+        != {None}
+        or {row["touch_up_code"] for row in silverado_retail_fleet_woodland}
+        != {"WA-9015"}
+        or {row["minimum_batch_units"] for row in silverado_retail_fleet_woodland}
+        != {5}
+        or {
+            row["availability_state"]
+            for row in silverado_retail_fleet_woodland
+        }
+        != {"available_with_minimum_batch"}
+    ):
+        raise AssertionError(
+            "Silverado Retail and Fleet Woodland Green rows are incomplete"
+        )
 
     kerr_rows = [
         row
@@ -1746,7 +2005,11 @@ def main() -> int:
         raise AssertionError("2016 Tahoe simultaneous 9C1 and 5W4 programs were merged")
 
     silverado_2026 = [
-        row for row in specialty_rows if row["model_year_id"] == "silverado:2026"
+        row
+        for row in specialty_rows
+        if row["model_year_id"] == "silverado:2026"
+        and generation_program_ids[row["generation_id"]]
+        != "gm-silverado-1500-retail-fleet-seo-paint-2025-2026"
     ]
     if (
         len(silverado_2026) != 50
@@ -2005,21 +2268,21 @@ def main() -> int:
         if row["source_color_name"] in {"Woodland Green", "Green, Woodland"}
     ]
     if (
-        len(woodland_rows) != 37
+        len(woodland_rows) != 39
         or Counter(row["availability_state"] for row in woodland_rows)
         != Counter(
             {
                 "restricted": 12,
                 "closed_after_2026-02-02": 2,
                 "available": 9,
-                "available_with_minimum_batch": 14,
+                "available_with_minimum_batch": 16,
             }
         )
         or Counter(row["application_type"] for row in woodland_rows)
         != Counter(
             {
                 "specialty_program_unspecified": 12,
-                "special_equipment_option_paint": 22,
+                "special_equipment_option_paint": 24,
                 "factory_installed_special_equipment_option": 1,
                 "manufacturer_special_equipment_option": 2,
             }

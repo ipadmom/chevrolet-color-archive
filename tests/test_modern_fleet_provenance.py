@@ -84,15 +84,15 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         return [row for row in cls.records if row.get("program_id") == program_id]
 
     def test_specialty_publication_boundary_is_exact(self) -> None:
-        self.assertEqual(533, len(self.records))
-        self.assertEqual(533, len(self.records_by_id))
+        self.assertEqual(535, len(self.records))
+        self.assertEqual(535, len(self.records_by_id))
         self.assertEqual(
-            553,
+            555,
             sum(len(row["catalog_model_ids"]) for row in self.records),
         )
         self.assertEqual(
             {
-                "published_specialty_subset": 529,
+                "published_specialty_subset": 531,
                 "published_qualified_historical_subset": 4,
             },
             dict(Counter(row["publication_status"] for row in self.records)),
@@ -132,8 +132,8 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         )
 
         nonpublished = self.specialty["verified_not_published"]
-        self.assertEqual(10, len(nonpublished))
-        self.assertEqual(10, len({row["record_id"] for row in nonpublished}))
+        self.assertEqual(8, len(nonpublished))
+        self.assertEqual(8, len({row["record_id"] for row in nonpublished}))
         self.assertFalse(
             set(self.records_by_id) & {row["record_id"] for row in nonpublished}
         )
@@ -457,7 +457,7 @@ class SpecialtyProgramDataTest(unittest.TestCase):
                     )
                 )
 
-        self.assertEqual(18, len(self.specialty["program_definitions"]))
+        self.assertEqual(19, len(self.specialty["program_definitions"]))
         program = next(
             row
             for row in self.specialty["program_definitions"]
@@ -827,6 +827,9 @@ class ModernFleetProvenanceTest(unittest.TestCase):
         builder.brochure_source_release_manifest = BUILD.json_load(
             BUILD.BROCHURE_SOURCE_RELEASE_MANIFEST_PATH
         )
+        builder.current_order_guide_source_release_manifest = BUILD.json_load(
+            BUILD.CURRENT_ORDER_GUIDE_SOURCE_RELEASE_MANIFEST_PATH
+        )
         builder.rows = {name: [] for name in BUILD.SCHEMAS}
         builder.sources_by_url = {}
         builder.source_id_to_url = {}
@@ -848,6 +851,18 @@ class ModernFleetProvenanceTest(unittest.TestCase):
         }
         cls.brochure_manifest = builder.brochure_source_release_manifest
         cls.brochure_release_source_ids = builder.brochure_release_source_ids_by_asset
+        cls.current_order_manifest = (
+            builder.current_order_guide_source_release_manifest
+        )
+        cls.current_order_entries = {
+            entry["source_id"]: entry
+            for entry in cls.current_order_manifest["entries"]
+            if entry["source_id"] in BUILD.PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS
+        }
+        cls.current_order_archive_source_ids = {
+            BUILD.stable_id("src", BUILD.canonical_url(entry["archive_url"]))
+            for entry in cls.current_order_entries.values()
+        }
 
     def test_gap_inventory_binds_artifacts_to_retrieval_urls(self) -> None:
         records_by_year = REFRESH.modern_fleet_source_records()
@@ -894,13 +909,40 @@ class ModernFleetProvenanceTest(unittest.TestCase):
     def test_all_retained_modern_pdfs_have_immutable_revisions(self) -> None:
         self.assertEqual(23, len(self.retained_manifest))
         self.assertEqual(
-            set(self.retained_manifest),
+            set(self.retained_manifest)
+            | set(self.current_order_entries)
+            | self.current_order_archive_source_ids,
             set(self.revisions) - set(self.brochure_release_source_ids.values()),
         )
         self.assertEqual(
-            set(QUALIFIED_PALETTE_ARTIFACTS),
+            set(QUALIFIED_PALETTE_ARTIFACTS) | set(self.current_order_entries),
             set(BUILD.QUALIFIED_MODERN_PALETTE_SOURCE_IDS),
         )
+
+    def test_retained_order_guide_palettes_have_release_bound_revisions(self) -> None:
+        self.assertEqual(5, len(self.current_order_entries))
+        for source_id, entry in self.current_order_entries.items():
+            source = self.sources[source_id]
+            revision = self.revisions[source_id]
+            archive_source_id = BUILD.stable_id(
+                "src", BUILD.canonical_url(entry["archive_url"])
+            )
+            archive_source = self.sources[archive_source_id]
+            archive_revision = self.revisions[archive_source_id]
+
+            self.assertEqual(entry["archive_url"], source["archive_url"])
+            self.assertEqual(entry["sha256"], revision["artifact_sha256"])
+            self.assertEqual(entry["bytes"], revision["byte_length"])
+            self.assertEqual(entry["pdf_page_count"], revision["pdf_page_count"])
+            self.assertEqual(
+                "release_manifest_hash_recorded", revision["integrity_status"]
+            )
+            self.assertEqual(
+                BUILD.canonical_url(entry["archive_url"]),
+                archive_source["canonical_url"],
+            )
+            self.assertEqual(entry["sha256"], archive_revision["artifact_sha256"])
+            self.assertEqual(entry["bytes"], archive_revision["byte_length"])
 
     def test_all_brochure_release_assets_have_immutable_revisions(self) -> None:
         entries = self.brochure_manifest["entries"]

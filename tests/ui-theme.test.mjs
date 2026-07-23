@@ -4,12 +4,28 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
-async function source(path) {
+async function text(path) {
   return readFile(new URL(path, root), "utf8");
 }
 
-test("the interface uses the Chevrolet gold and warm-neutral token set", async () => {
-  const styles = await source("app/globals.css");
+test("the archive UI keeps the Chevrolet gold, cream, and charcoal palette", async () => {
+  const [css, explorer, vehicleProfile, docsIndex, docs404, favicon] =
+    await Promise.all([
+      text("app/globals.css"),
+      text("app/archive-explorer.tsx"),
+      text("app/vehicle-profile-svg.tsx"),
+      text("docs/index.html"),
+      text("docs/404.html"),
+      text("public/favicon.svg"),
+    ]);
+  const uiSources = [
+    css,
+    explorer,
+    vehicleProfile,
+    docsIndex,
+    docs404,
+    favicon,
+  ].join("\n");
   const expectedCore = {
     "--ia-charcoal": "#262626",
     "--ia-gold": "#cd9834",
@@ -20,60 +36,47 @@ test("the interface uses the Chevrolet gold and warm-neutral token set", async (
   };
 
   for (const [token, value] of Object.entries(expectedCore)) {
-    assert.match(styles, new RegExp(`${token}:\\s*${value}`, "i"));
+    assert.match(
+      css,
+      new RegExp(`${token}:\\s*${value}\\b`, "i"),
+      `${token} must retain its warm archive value`,
+    );
   }
 
-  assert.match(
-    styles,
-    /\.ia-topbar[\s\S]*?background:\s*var\(--ia-charcoal\)[\s\S]*?border-bottom:\s*3px solid var\(--ia-gold\)/,
-  );
-  assert.match(
-    styles,
-    /\.pageheader[\s\S]*?background:\s*linear-gradient\([^;]+var\(--ia-gold\)\)[\s\S]*?color:\s*var\(--ia-charcoal\)/,
-  );
-});
-
-test("theme-owned surfaces do not reintroduce a cool blue shell", async () => {
-  const paths = [
-    "app/globals.css",
-    "app/archive-explorer.tsx",
-    "app/vehicle-profile-svg.tsx",
-    "docs/index.html",
-    "docs/404.html",
-    "public/favicon.svg",
-  ];
-  const sources = await Promise.all(paths.map(source));
-  const joined = sources.join("\n");
-
   assert.doesNotMatch(
-    joined,
+    uiSources,
     /#(?:596270|737f95|535c6e|444d5e|444b5c|98a3b9|e4e7ec|1d5f99)\b/i,
   );
 
-  for (const [index, text] of sources.entries()) {
-    for (const match of text.matchAll(/#([0-9a-f]{6})\b/gi)) {
-      const value = match[1];
-      const red = Number.parseInt(value.slice(0, 2), 16);
-      const blue = Number.parseInt(value.slice(4, 6), 16);
-      assert.ok(
-        red >= blue,
-        `${paths[index]} contains a cool UI literal #${value}`,
-      );
-    }
+  for (const match of uiSources.matchAll(/#([0-9a-f]{6})\b/gi)) {
+    const [red, , blue] = match[1]
+      .match(/.{2}/g)
+      .map((component) => Number.parseInt(component, 16));
+    assert.ok(red >= blue, `${match[0]} reintroduces a cool UI literal`);
   }
-});
 
-test("vehicle profiles keep real paint accents and use the archive palette for model thumbnails", async () => {
-  const [explorer, helper, profile] = await Promise.all([
-    source("app/archive-explorer.tsx"),
-    source("app/model-thumbnail-color.ts"),
-    source("app/vehicle-profile-svg.tsx"),
-  ]);
+  for (const match of uiSources.matchAll(
+    /rgb\(\s*(\d+)\s+(\d+)\s+(\d+)(?:\s*\/[^)]*)?\)/gi,
+  )) {
+    assert.ok(
+      Number(match[1]) >= Number(match[3]),
+      `${match[0]} reintroduces a cool UI literal`,
+    );
+  }
 
-  assert.match(profile, /accent\s*=\s*"var\(--ia-gold\)"/);
-  assert.match(helper, /swatch:\s*"var\(--ia-gold\)"/);
-  assert.match(explorer, /latestThumbnailPalette\(models\)/);
-  assert.match(explorer, /modelThumbnailPaint\(model,\s*archiveThumbnailPalette\)\.swatch/);
+  assert.match(
+    css,
+    /\.ia-topbar\s*\{[^}]*background:\s*var\(--ia-charcoal\);[^}]*border-bottom:\s*3px solid var\(--ia-gold\);/s,
+  );
+  assert.match(
+    css,
+    /\.pageheader\s*\{[^}]*background:[^;]*var\(--ia-gold\)[^;]*;[^}]*color:\s*var\(--ia-charcoal\);/s,
+  );
+  assert.match(
+    css,
+    /\.archive-structured-search\s*>\s*button\s*\{[^}]*background:[^;]*var\(--ia-gold\)[^;]*;[^}]*color:\s*var\(--ia-charcoal\);/s,
+  );
+  assert.match(vehicleProfile, /accent = "var\(--ia-gold\)"/);
   assert.match(explorer, /accent=\{selectedColor\?\.swatch\}/);
-  assert.match(explorer, /background:\s*selectedColor\.swatch/);
+  assert.match(explorer, /:\s*"var\(--ia-gold\)"/);
 });

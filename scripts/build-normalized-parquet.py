@@ -24,8 +24,17 @@ SOURCE_REGISTRY_PATH = ROOT / "data" / "sources" / "source-registry.json"
 BROCHURE_SOURCE_RELEASE_MANIFEST_PATH = (
     ROOT / "data" / "sources" / "brochure-source-release-manifest.json"
 )
+CURRENT_ORDER_GUIDE_SOURCE_RELEASE_MANIFEST_PATH = (
+    ROOT / "data" / "sources" / "current-order-guide-source-release-manifest.json"
+)
 ROCKAUTO_LEADS_PATH = ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
 SUBURBAN_2000_2007_AUDIT_PATH = ROOT / "data" / "audits" / "suburban-2000-2007.json"
+CURRENT_MANUAL_REFERENCES_PATH = (
+    ROOT / "data" / "catalog" / "chevrolet-current-manual-references.json"
+)
+CURRENT_PROFILE_REFERENCES_PATH = (
+    ROOT / "data" / "catalog" / "chevrolet-current-profile-references.json"
+)
 SCHEMA_VERSION = 11
 URL_PATTERN = re.compile(r"https?://[^\s<>\"`]+")
 PLACEHOLDER_SOURCE_HOSTS = frozenset(
@@ -81,7 +90,21 @@ MODERN_SOURCE_CLASSIFICATIONS = {
         "official_manufacturer_document",
         "official_live",
     ),
+    "official_manufacturer_document": (
+        "official",
+        "official_manufacturer_document",
+        "official_live",
+    ),
 }
+PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = frozenset(
+    {
+        "gm-online-order-guide-pdf-22745",
+        "gm-online-order-guide-pdf-22775",
+        "gm-online-order-guide-pdf-22821",
+        "gm-online-order-guide-pdf-22878",
+        "gm-online-order-guide-pdf-23208",
+    }
+)
 QUALIFIED_MODERN_PALETTE_SOURCE_IDS = frozenset(
     {
         "chevrolet-ebrochure-us-2022-tahoe",
@@ -89,7 +112,7 @@ QUALIFIED_MODERN_PALETTE_SOURCE_IDS = frozenset(
         "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
         "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
     }
-)
+) | PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS
 RELEASE_ASSET_MEDIA_TYPES = {
     ".html": "text/html",
     ".htm": "text/html",
@@ -1354,6 +1377,8 @@ class NormalizedArchiveBuilder:
         self.platform_catalog = json_load(
             ROOT / "data" / "catalog" / "chevrolet-platform-eras.json"
         )
+        self.current_manual_references = json_load(CURRENT_MANUAL_REFERENCES_PATH)
+        self.current_profile_references = json_load(CURRENT_PROFILE_REFERENCES_PATH)
         self.gm_inventory = json_load(
             ROOT / "data" / "sources" / "gm-heritage-chevrolet-kits.json"
         )
@@ -1374,6 +1399,9 @@ class NormalizedArchiveBuilder:
         }
         self.brochure_source_release_manifest = json_load(
             BROCHURE_SOURCE_RELEASE_MANIFEST_PATH
+        )
+        self.current_order_guide_source_release_manifest = json_load(
+            CURRENT_ORDER_GUIDE_SOURCE_RELEASE_MANIFEST_PATH
         )
         self.specialty_color_sources = json_load(
             ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
@@ -1887,6 +1915,14 @@ class NormalizedArchiveBuilder:
                 "modern source inventory must retain exactly 19 Fleet Guide PDFs"
             )
         retained_source_ids = {item["source_id"] for item in retained_modern_sources}
+        current_order_release_entries = {
+            item["source_id"]: item
+            for item in self.current_order_guide_source_release_manifest["entries"]
+        }
+        retained_source_ids.update(
+            set(current_order_release_entries)
+            & PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS
+        )
         missing_qualified_palettes = sorted(
             QUALIFIED_MODERN_PALETTE_SOURCE_IDS - retained_source_ids
         )
@@ -1928,10 +1964,42 @@ class NormalizedArchiveBuilder:
                     raise ValueError(
                         f"modern source page count changed: {item['source_id']}"
                     )
+            release_entry = current_order_release_entries.get(item["source_id"])
+            if item["source_id"] in PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS:
+                if release_entry is None:
+                    raise ValueError(
+                        f"published Order Guide source is absent from the retained "
+                        f"release manifest: {item['source_id']}"
+                    )
+                for source_key, release_key in (
+                    ("sha256", "sha256"),
+                    ("bytes", "bytes"),
+                    ("page_count", "pdf_page_count"),
+                    ("archive_url", "archive_url"),
+                ):
+                    if item.get(source_key) != release_entry.get(release_key):
+                        raise ValueError(
+                            f"published Order Guide release metadata changed: "
+                            f"{item['source_id']}.{source_key}"
+                        )
+                if release_entry.get("artifact_status") != "retained_exact_snapshot":
+                    raise ValueError(
+                        f"published Order Guide source is not retained exactly: "
+                        f"{item['source_id']}"
+                    )
+                if (
+                    release_entry.get("review_status")
+                    != "cited_pages_visually_reviewed"
+                ):
+                    raise ValueError(
+                        f"published Order Guide source lacks cited-page review: "
+                        f"{item['source_id']}"
+                    )
             retrieval_url = item["retrieval_url"]
             direct_official_url = item.get("direct_official_url")
             historical_official_url = item.get("historical_official_url")
             landing_url = item.get("landing_url")
+            archive_url = item.get("archive_url")
             observed_http_status = item.get("http_status")
             source_id = self.ensure_source(
                 retrieval_url,
@@ -1950,9 +2018,12 @@ class NormalizedArchiveBuilder:
                     int(item["bytes"]) if item.get("bytes") is not None else None
                 ),
                 content_sha256=item.get("sha256"),
+                archive_url=archive_url,
                 archive_relpath=local_relpath,
                 notes="; ".join(item.get("limitations") or []),
             )
+            if item.get("page_count") is not None:
+                self.source_pdf_page_counts[source_id] = int(item["page_count"])
             self.add_source_link(
                 source_id,
                 claim_type="source_retrieval_url",
@@ -1969,6 +2040,34 @@ class NormalizedArchiveBuilder:
                 review_state="verified_snapshot" if local_relpath else "documented",
                 revision=item.get("revision_or_document_date"),
             )
+            if archive_url:
+                archive_source_id = self.ensure_source(
+                    archive_url,
+                    title=f"{item['title']} archived Release copy",
+                    publisher=item["publisher"],
+                    officiality="official",
+                    document_authority=document_authority,
+                    retrieval_host_type="archival_mirror",
+                    source_type="official_document_archival_copy",
+                    retrieved_on=item["retrieved_at"],
+                    content_type=item["content_type"],
+                    content_length_bytes=(
+                        int(item["bytes"]) if item.get("bytes") is not None else None
+                    ),
+                    content_sha256=item.get("sha256"),
+                    archive_url=archive_url,
+                    notes="Immutable GitHub Release copy of the exact retained source artifact.",
+                )
+                self.add_source_link(
+                    archive_source_id,
+                    claim_type="retained_release_asset_url",
+                    entity_type="modern_color_source",
+                    entity_id=item["source_id"],
+                    claim_summary="Immutable Release URL for the retained source bytes",
+                    confidence="artifact_hash_recorded",
+                    review_state="verified_snapshot",
+                    revision=item.get("revision_or_document_date"),
+                )
             if direct_official_url:
                 direct_source_id = self.ensure_source(
                     direct_official_url,
@@ -2513,6 +2612,7 @@ class NormalizedArchiveBuilder:
                 source_ids_by_year: dict[int, set[str]] = {}
                 evidence_classes_by_year: dict[int, set[str]] = {}
                 year_sources: dict[int, dict[str, Any]] = {}
+                year_source_records: dict[int, dict[str, dict[str, Any]]] = {}
                 for raw_year, year_source in generation["sources"].items():
                     year = int(raw_year)
                     evidence_class = year_source.get("evidenceClass")
@@ -2565,7 +2665,14 @@ class NormalizedArchiveBuilder:
                                 f"({prior_page_count} != {pdf_page_count})"
                             )
                         self.source_pdf_page_counts[source_id] = pdf_page_count
-                    year_sources[year] = {**year_source, "source_id": source_id}
+                    normalized_year_source = {
+                        **year_source,
+                        "source_id": source_id,
+                    }
+                    year_sources[year] = normalized_year_source
+                    year_source_records.setdefault(year, {})[source_id] = (
+                        normalized_year_source
+                    )
                     source_ids_by_year.setdefault(year, set()).add(source_id)
                     evidence_classes_by_year.setdefault(year, set()).add(
                         evidence_class or "governing_color_chart"
@@ -2679,6 +2786,16 @@ class NormalizedArchiveBuilder:
                             confidence="corroborating_source",
                             review_state="supporting_only",
                         )
+                        normalized_supporting_source = {
+                            **supporting_source,
+                            "source_id": supporting_source_id,
+                        }
+                        year_source_records.setdefault(year, {})[
+                            supporting_source_id
+                        ] = normalized_supporting_source
+                        source_ids_by_year.setdefault(year, set()).add(
+                            supporting_source_id
+                        )
 
                 for color in generation["colors"]:
                     color_identity_id = f"{generation_id}:{color['id']}"
@@ -2710,6 +2827,27 @@ class NormalizedArchiveBuilder:
                                 f"availability has no source: {model_id} {year} {color['id']}"
                             )
                         year_source = year_sources[year]
+                        availability_source_ids = list(
+                            dict.fromkeys(availability.get("sourceIds") or [])
+                        )
+                        availability_sources = []
+                        if availability_source_ids:
+                            available_sources = year_source_records.get(year, {})
+                            missing_availability_sources = [
+                                source_id
+                                for source_id in availability_source_ids
+                                if source_id not in available_sources
+                            ]
+                            if missing_availability_sources:
+                                raise ValueError(
+                                    f"availability cites sources outside its year record: "
+                                    f"{availability_id} {missing_availability_sources}"
+                                )
+                            availability_sources = [
+                                available_sources[source_id]
+                                for source_id in availability_source_ids
+                            ]
+                            year_source = availability_sources[0]
                         availability_id = (
                             f"{model_id}:{year}:{generation['id']}:{color['id']}"
                         )
@@ -2874,6 +3012,30 @@ class NormalizedArchiveBuilder:
                                 else "verified"
                             ),
                         )
+                        for supporting_availability_source in availability_sources[1:]:
+                            self.add_source_link(
+                                supporting_availability_source["source_id"],
+                                claim_type="color_availability_supporting_evidence",
+                                entity_type="color_availability",
+                                entity_id=availability_id,
+                                model_id=model_id,
+                                model_year=year,
+                                year_start=year,
+                                year_end=year,
+                                locator=supporting_availability_source["locator"],
+                                revision=supporting_availability_source["revision"],
+                                claim_summary=(
+                                    f"Additional exact source for "
+                                    f"{availability['label']} on "
+                                    f"{resolved_model['name']} {year}."
+                                ),
+                                confidence=(
+                                    "human_checked_palette_union"
+                                    if is_palette_union
+                                    else "corroborating_source"
+                                ),
+                                review_state="supporting_only",
+                            )
 
                 for year in years:
                     model_year_id = f"{model_id}:{year}"
@@ -3733,6 +3895,260 @@ class NormalizedArchiveBuilder:
                         review_state="documented",
                     )
 
+    def apply_current_manual_references(self) -> None:
+        references = self.current_manual_references
+        model_year = int(references["catalog_year_ceiling"])
+        verified_at = str(references["verified_at"])
+        records = references.get("records")
+        if not isinstance(records, list) or len(records) != int(
+            references["record_count"]
+        ):
+            raise ValueError("current manual reference count does not match its records")
+
+        current_model_ids = {
+            model["id"] for model in self.catalog["models"] if model.get("current")
+        }
+        record_model_ids = {str(record["model_id"]) for record in records}
+        if record_model_ids != current_model_ids:
+            raise ValueError(
+                "current manual references do not exactly cover current models"
+            )
+
+        portal = references["official_manual_portal"]
+        portal_sources = (
+            (
+                "canonical_landing_url",
+                "GM Manuals and Guides",
+                "official_manual_portal",
+            ),
+            (
+                "chevrolet_brand_entry_url",
+                "Chevrolet Manuals and Guides",
+                "official_manual_brand_entry",
+            ),
+            (
+                "model_index_api",
+                "GM Manuals and Guides model index API",
+                "official_api_endpoint",
+            ),
+            (
+                "document_index_api",
+                "GM Manuals and Guides document index API",
+                "official_api_endpoint",
+            ),
+        )
+        for field, title, source_type in portal_sources:
+            source_id = self.ensure_source(
+                portal[field],
+                title=title,
+                publisher="General Motors",
+                source_type=source_type,
+                officiality="official",
+                document_authority="official_manufacturer_document",
+                retrieval_host_type="official_live",
+                retrieved_on=verified_at,
+            )
+            self.add_source_link(
+                source_id,
+                claim_type="current_manual_portal_reference",
+                entity_type="current_model_document_index",
+                entity_id=f"chevrolet:{model_year}",
+                year_start=model_year,
+                year_end=model_year,
+                locator=f"$.official_manual_portal.{field}",
+                claim_summary=(
+                    f"Official GM manual-index source for current {model_year} "
+                    "Chevrolet models."
+                ),
+                confidence="live_official_index_verified",
+                review_state="documented",
+            )
+
+        for record_index, record in enumerate(records):
+            model_id = str(record["model_id"])
+            model_year_id = f"{model_id}:{model_year}"
+            documents = (
+                (
+                    "owner_manual",
+                    record["owner_manual"],
+                    "official_owner_manual_pdf",
+                    "official_owner_manual_reference",
+                    "Owner manual",
+                ),
+                (
+                    "vehicle_reference_information",
+                    record.get("vehicle_reference_information"),
+                    "official_vehicle_reference_information_pdf",
+                    "official_vehicle_reference_information_reference",
+                    "Vehicle Reference Information",
+                ),
+            )
+            for (
+                field,
+                document,
+                source_type,
+                claim_type,
+                role_label,
+            ) in documents:
+                if document is None:
+                    continue
+                source_id = self.ensure_source(
+                    document["url"],
+                    title=document["title"],
+                    publisher="Chevrolet",
+                    source_type=source_type,
+                    officiality="official",
+                    document_authority="official_manufacturer_document",
+                    retrieval_host_type="official_live",
+                    retrieved_on=verified_at,
+                    http_status=int(document["live_http_status"]),
+                    content_type=document["live_content_type"],
+                    content_length_bytes=int(
+                        document["live_content_length_bytes"]
+                    ),
+                    notes=record.get("selection_note"),
+                )
+                self.add_source_link(
+                    source_id,
+                    claim_type=claim_type,
+                    entity_type="model_year",
+                    entity_id=model_year_id,
+                    model_id=model_id,
+                    model_year=model_year,
+                    locator=f"$.records[{record_index}].{field}",
+                    claim_summary=(
+                        f"{role_label} supporting exact {model_year} "
+                        f"{model_id} identity and configuration."
+                    ),
+                    confidence="live_official_document_verified",
+                    review_state="documented",
+                )
+
+        authority = references["current_color_authority"]
+        authority_entity_id = f"gm-electronic-order-guide:chevrolet:{model_year}"
+        landing_source_id = self.ensure_source(
+            authority["landing_url"],
+            title=authority["title"],
+            publisher="General Motors",
+            source_type="official_electronic_order_guide",
+            officiality="official",
+            document_authority="official_manufacturer_document",
+            retrieval_host_type="official_live",
+            retrieved_on=verified_at,
+            notes=authority["authority_note"],
+        )
+        reconciliation_path = (
+            CURRENT_MANUAL_REFERENCES_PATH.parent
+            / authority["profile_reconciliation_path"]
+        ).resolve()
+        try:
+            reconciliation_relative = reconciliation_path.relative_to(
+                ROOT.resolve()
+            ).as_posix()
+        except ValueError as exc:
+            raise ValueError(
+                "current color authority reconciliation escapes the repository"
+            ) from exc
+        if not reconciliation_path.is_file():
+            raise ValueError(
+                "current color authority reconciliation path does not exist: "
+                f"{reconciliation_relative}"
+            )
+        self.add_source_link(
+            landing_source_id,
+            claim_type="current_color_authority_reconciliation",
+            entity_type="research_audit",
+            entity_id=reconciliation_relative,
+            year_start=model_year,
+            year_end=model_year,
+            locator=authority["profile_reconciliation_path"],
+            claim_summary=(
+                f"GM Electronic Order Guide is reconciled to all current "
+                f"{model_year} Chevrolet profiles in this audit."
+            ),
+            confidence="live_official_source_reconciled",
+            review_state="documented",
+        )
+
+        endpoint_fields = (
+            ("generated_pdf_endpoint_template", "generated PDF"),
+            ("color_trim_endpoint_template", "color and trim"),
+            ("vehicle_metadata_endpoint_template", "vehicle metadata"),
+        )
+        for field, endpoint_role in endpoint_fields:
+            source_id = self.ensure_source(
+                authority[field],
+                title=f"GM Electronic Order Guide {endpoint_role} endpoint template",
+                publisher="General Motors",
+                source_type="official_api_endpoint_template",
+                officiality="official",
+                document_authority="official_manufacturer_document",
+                retrieval_host_type="official_live",
+                retrieved_on=verified_at,
+            )
+            self.add_source_link(
+                source_id,
+                claim_type="current_color_authority_endpoint_template",
+                entity_type="current_color_authority",
+                entity_id=authority_entity_id,
+                year_start=model_year,
+                year_end=model_year,
+                locator=f"$.current_color_authority.{field}",
+                claim_summary=(
+                    f"Official GM Electronic Order Guide {endpoint_role} "
+                    "endpoint template."
+                ),
+                confidence="live_official_endpoint_documented",
+                review_state="documented",
+            )
+
+    def apply_current_profile_references(self) -> None:
+        references = self.current_profile_references
+        records = references.get("records")
+        if not isinstance(records, list) or len(records) != int(
+            references["record_count"]
+        ):
+            raise ValueError("current profile reference count does not match its records")
+
+        geometry_records = [
+            record for record in records if record.get("geometry_dimension_source")
+        ]
+        if len(geometry_records) != 10:
+            raise ValueError(
+                "current profile references must retain exactly ten geometry "
+                "dimension authorities"
+            )
+
+        for record in geometry_records:
+            geometry = record["geometry_dimension_source"]
+            source_url = str(geometry["source_url"])
+            retrieval_host_type = (
+                "official_live"
+                if is_official_manufacturer_url(source_url)
+                else "archival_mirror"
+            )
+            resolved_source_id = self.ensure_source(
+                source_url,
+                source_id=str(geometry["source_id"]),
+                title=str(geometry["title"]),
+                publisher="General Motors",
+                source_type="official_profile_geometry_reference",
+                officiality="official",
+                document_authority="official_manufacturer_document",
+                retrieval_host_type=retrieval_host_type,
+                archive_url=geometry.get("archive_url"),
+                notes=(
+                    f"Model-specific geometry and dimensions for "
+                    f"{record['model_id']}; locator: "
+                    f"{geometry.get('section') or 'published dimensions'}."
+                ),
+            )
+            if resolved_source_id != geometry["source_id"]:
+                raise ValueError(
+                    f"current profile geometry source ID did not normalize: "
+                    f"{record['model_id']}"
+                )
+
     def build_data_file_references(self) -> None:
         def walk(value: Any, pointer: str = "$"):
             if isinstance(value, dict):
@@ -3899,6 +4315,11 @@ class NormalizedArchiveBuilder:
             for item in self.modern_color_sources["sources"]
             if item.get("local_file_path")
         }
+        current_order_artifacts = {
+            item["source_id"]: item
+            for item in self.current_order_guide_source_release_manifest["entries"]
+            if item["source_id"] in PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS
+        }
         retained_fleet_guides = {
             source_id
             for source_id, item in modern_artifacts.items()
@@ -3909,7 +4330,8 @@ class NormalizedArchiveBuilder:
                 "source revisions require all 19 retained Fleet Guide artifacts"
             )
         missing_qualified_palettes = sorted(
-            QUALIFIED_MODERN_PALETTE_SOURCE_IDS - set(modern_artifacts)
+            QUALIFIED_MODERN_PALETTE_SOURCE_IDS
+            - (set(modern_artifacts) | set(current_order_artifacts))
         )
         if missing_qualified_palettes:
             raise ValueError(
@@ -3927,6 +4349,7 @@ class NormalizedArchiveBuilder:
             revision_ids[source_id] = source_revision_id
             gm_artifact = gm_artifacts.get(source_id)
             modern_artifact = modern_artifacts.get(source_id)
+            current_order_artifact = current_order_artifacts.get(source_id)
             specialty_artifact = self.specialty_artifacts_by_url.get(
                 source["canonical_url"]
             )
@@ -3950,6 +4373,8 @@ class NormalizedArchiveBuilder:
                         if gm_artifact
                         else modern_artifact.get("retrieved_at")
                         if modern_artifact
+                        else current_order_artifact.get("retrieved_at")
+                        if current_order_artifact
                         else specialty_artifact.get("retrieved_at")
                         if specialty_artifact
                         else self.brochure_source_release_manifest.get("captured_at")
@@ -3964,6 +4389,8 @@ class NormalizedArchiveBuilder:
                         if gm_artifact and gm_artifact.get("pdf_page_count") is not None
                         else int(modern_artifact["page_count"])
                         if modern_artifact
+                        else int(current_order_artifact["pdf_page_count"])
+                        if current_order_artifact
                         else int(specialty_artifact["pdf_page_count"])
                         if specialty_artifact
                         and specialty_artifact.get("pdf_page_count") is not None
@@ -3982,6 +4409,8 @@ class NormalizedArchiveBuilder:
                         "complete_file_rehashed"
                         if gm_artifact or modern_artifact or specialty_artifact
                         else "release_manifest_hash_recorded"
+                        if current_order_artifact
+                        else "release_manifest_hash_recorded"
                         if release_artifact
                         else "published_manifest_hash_recorded"
                     ),
@@ -3994,6 +4423,14 @@ class NormalizedArchiveBuilder:
             raise ValueError(
                 "retained modern sources lack immutable source revisions: "
                 f"{missing_modern_revisions}"
+            )
+        missing_order_guide_revisions = sorted(
+            set(current_order_artifacts) - set(revision_ids)
+        )
+        if missing_order_guide_revisions:
+            raise ValueError(
+                "retained Order Guide sources lack immutable source revisions: "
+                f"{missing_order_guide_revisions}"
             )
         self.validate_brochure_release_revisions()
 
@@ -4295,6 +4732,8 @@ class NormalizedArchiveBuilder:
         self.apply_brochure_release_artifacts()
         self.build_document_references()
         self.build_data_file_references()
+        self.apply_current_profile_references()
+        self.apply_current_manual_references()
         self.build_secondary_paint_leads()
         self.build_supplemental_color_mentions()
         self.finalize_sources()

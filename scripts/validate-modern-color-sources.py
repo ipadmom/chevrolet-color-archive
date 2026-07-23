@@ -16,6 +16,9 @@ DATA_PATH = (
     ROOT / "data" / "sources" / "modern-chevrolet-color-source-candidates.json"
 )
 CATALOG_PATH = ROOT / "data" / "catalog" / "chevrolet-us-nameplates.json"
+ORDER_GUIDE_RELEASE_PATH = (
+    ROOT / "data" / "sources" / "current-order-guide-source-release-manifest.json"
+)
 PUBLISHED_FLEET_SOURCE_IDS = {
     "gm-fleet-guide-us-2008-v2",
     "gm-fleet-guide-us-2009-v2",
@@ -37,7 +40,14 @@ PUBLISHED_FLEET_SOURCE_IDS = {
     "gm-fleet-guide-us-2025-r2024-12-11",
     "gm-fleet-guide-us-2026-r2026-04-01",
 }
-PUBLISHED_PALETTE_SOURCE_IDS = PUBLISHED_FLEET_SOURCE_IDS | {
+PUBLISHED_ORDER_GUIDE_SOURCE_IDS = {
+    "gm-online-order-guide-pdf-22745",
+    "gm-online-order-guide-pdf-22775",
+    "gm-online-order-guide-pdf-22821",
+    "gm-online-order-guide-pdf-22878",
+    "gm-online-order-guide-pdf-23208",
+}
+PUBLISHED_PALETTE_SOURCE_IDS = PUBLISHED_FLEET_SOURCE_IDS | PUBLISHED_ORDER_GUIDE_SOURCE_IDS | {
     "chevrolet-ebrochure-us-2022-tahoe",
     "chevrolet-ebrochure-us-2023-colorado",
     "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
@@ -45,16 +55,35 @@ PUBLISHED_PALETTE_SOURCE_IDS = PUBLISHED_FLEET_SOURCE_IDS | {
 }
 EXPECTED_LOCAL_PDF_BYTES = 520_591_010
 EXPECTED_LOCAL_PDF_PAGES = 2_599
-EXPECTED_PUBLISHED_TABLES = 61
-EXPECTED_PUBLISHED_PAGE_REFERENCES = 76
-EXPECTED_PUBLISHED_COLOR_ASSERTIONS = 483
+EXPECTED_PUBLISHED_TABLES = 66
+EXPECTED_PUBLISHED_PAGE_REFERENCES = 81
+EXPECTED_PUBLISHED_COLOR_ASSERTIONS = 493
 ALLOWED_APPLICATION_SOURCE_SETS = {
     ("silverado-hd", 2023): frozenset(
         {
             "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
             "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
         }
-    )
+    ),
+    ("blazer-ev", 2025): frozenset(
+        {
+            "gm-fleet-guide-us-2025-r2024-12-11",
+            "gm-online-order-guide-pdf-22878",
+        }
+    ),
+    ("corvette", 2026): frozenset(
+        {
+            "gm-fleet-guide-us-2026-r2026-04-01",
+            "gm-online-order-guide-pdf-23208",
+        }
+    ),
+    ("low-cab-forward", 2025): frozenset(
+        {
+            "gm-online-order-guide-pdf-22745",
+            "gm-online-order-guide-pdf-22775",
+            "gm-online-order-guide-pdf-22821",
+        }
+    ),
 }
 
 
@@ -89,6 +118,9 @@ def require_https_url(value: str, label: str) -> None:
 def main() -> int:
     data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+    order_guide_release = json.loads(
+        ORDER_GUIDE_RELEASE_PATH.read_text(encoding="utf-8")
+    )
     model_ids = {model["id"] for model in catalog["models"]}
     sources = data["sources"]
     tables = data["verified_palette_tables"]
@@ -96,13 +128,16 @@ def main() -> int:
 
     if data["schema_version"] != 1:
         raise AssertionError("unexpected modern-source schema version")
-    if len(sources) != 31:
-        raise AssertionError("modern-source inventory no longer contains 31 sources")
+    if len(sources) != 36:
+        raise AssertionError("modern-source inventory no longer contains 36 sources")
     require_unique([source["source_id"] for source in sources], "source_id")
     require_unique([table["table_id"] for table in tables], "table_id")
     require_unique([sample["sample_id"] for sample in samples], "sample_id")
 
     sources_by_id = {source["source_id"]: source for source in sources}
+    release_entries_by_source = {
+        entry["source_id"]: entry for entry in order_guide_release["entries"]
+    }
     for year in range(2008, 2027):
         matches = [
             source
@@ -179,7 +214,31 @@ def main() -> int:
                 raise AssertionError(
                     f"published Fleet Guide has an unexpected authority: {source_id}"
                 )
-        if source_id not in readers:
+        if source_id in PUBLISHED_ORDER_GUIDE_SOURCE_IDS:
+            release_entry = release_entries_by_source.get(source_id)
+            if release_entry is None:
+                raise AssertionError(
+                    f"published Order Guide source is absent from release manifest: {source_id}"
+                )
+            for key, release_key in (
+                ("sha256", "sha256"),
+                ("bytes", "bytes"),
+                ("page_count", "pdf_page_count"),
+                ("archive_url", "archive_url"),
+            ):
+                if source.get(key) != release_entry.get(release_key):
+                    raise AssertionError(
+                        f"published Order Guide release metadata drifted: {source_id}.{key}"
+                    )
+            if release_entry.get("artifact_status") != "retained_exact_snapshot":
+                raise AssertionError(
+                    f"published Order Guide artifact is not retained: {source_id}"
+                )
+            if release_entry.get("review_status") != "cited_pages_visually_reviewed":
+                raise AssertionError(
+                    f"published Order Guide pages are not visually reviewed: {source_id}"
+                )
+        elif source_id not in readers:
             raise AssertionError(
                 f"published palette source is not retained locally: {source_id}"
             )
@@ -215,8 +274,12 @@ def main() -> int:
         if len(table["colors"]) != len(set(table["colors"])):
             raise AssertionError(f"palette table repeats a color: {table['table_id']}")
         factory_codes = table.get("factory_codes") or {}
+        touch_up_codes = table.get("touch_up_codes") or {}
         color_restrictions = table.get("color_restrictions") or {}
         unknown_code_colors = sorted(set(factory_codes) - set(table["colors"]))
+        unknown_touch_up_colors = sorted(
+            set(touch_up_codes) - set(table["colors"])
+        )
         unknown_restriction_colors = sorted(
             set(color_restrictions) - set(table["colors"])
         )
@@ -224,6 +287,11 @@ def main() -> int:
             raise AssertionError(
                 f"palette factory codes reference absent colors: "
                 f"{table['table_id']} {unknown_code_colors}"
+            )
+        if unknown_touch_up_colors:
+            raise AssertionError(
+                f"palette touch-up codes reference absent colors: "
+                f"{table['table_id']} {unknown_touch_up_colors}"
             )
         if unknown_restriction_colors:
             raise AssertionError(
@@ -244,7 +312,35 @@ def main() -> int:
             published_page_references.add((table["source_id"], page))
             cache_key = (table["source_id"], page)
             if cache_key not in text_cache:
-                raw_text = readers[table["source_id"]].pages[page - 1].extract_text() or ""
+                if table["source_id"] in readers:
+                    raw_text = (
+                        readers[table["source_id"]].pages[page - 1].extract_text()
+                        or ""
+                    )
+                else:
+                    release_entry = release_entries_by_source[table["source_id"]]
+                    cited_page = next(
+                        (
+                            item
+                            for item in release_entry["cited_pages"]
+                            if item["pdf_page"] == page
+                        ),
+                        None,
+                    )
+                    if cited_page is None:
+                        raise AssertionError(
+                            f"published Order Guide page is absent from release review: "
+                            f"{table['table_id']} p. {page}"
+                        )
+                    if (
+                        cited_page.get("visual_review_status")
+                        != "visually_verified_exact_snapshot"
+                    ):
+                        raise AssertionError(
+                            f"published Order Guide page lacks exact visual review: "
+                            f"{table['table_id']} p. {page}"
+                        )
+                    raw_text = cited_page["visual_review_finding"]
                 text_cache[cache_key] = normalized_pdf_text(raw_text)
             combined_text.append(text_cache[cache_key])
         page_text = " ".join(combined_text)
@@ -259,6 +355,12 @@ def main() -> int:
                 raise AssertionError(
                     f"factory code is absent from cited page text: "
                     f"{table['table_id']} / {color} / {factory_code}"
+                )
+            touch_up_code = touch_up_codes.get(color)
+            if touch_up_code and normalized_pdf_text(touch_up_code) not in page_text:
+                raise AssertionError(
+                    f"touch-up code is absent from cited page review: "
+                    f"{table['table_id']} / {color} / {touch_up_code}"
                 )
 
     if len(published_page_references) != EXPECTED_PUBLISHED_PAGE_REFERENCES:

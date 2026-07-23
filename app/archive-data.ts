@@ -3883,6 +3883,7 @@ type ModernPaletteTable = {
   limitations: string[];
   color_restrictions?: Record<string, string[]>;
   factory_codes?: Record<string, string>;
+  touch_up_codes?: Record<string, string>;
 };
 
 const publishedModernPaletteSourceIds = new Set([
@@ -3909,6 +3910,11 @@ const publishedModernPaletteSourceIds = new Set([
   "chevrolet-ebrochure-us-2023-colorado",
   "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
   "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
+  "gm-online-order-guide-pdf-22745",
+  "gm-online-order-guide-pdf-22775",
+  "gm-online-order-guide-pdf-22821",
+  "gm-online-order-guide-pdf-22878",
+  "gm-online-order-guide-pdf-23208",
 ]);
 
 const modernPaletteSources = new Map(
@@ -3931,6 +3937,7 @@ function buildModernPaletteGenerations() {
     availabilityScopes: Set<string>;
     restrictions: Set<string>;
     factoryCodes: Set<string>;
+    touchUpCodes: Set<string>;
   };
 
   type PaletteAggregate = {
@@ -3979,6 +3986,7 @@ function buildModernPaletteGenerations() {
           availabilityScopes: new Set<string>(),
           restrictions: new Set<string>(),
           factoryCodes: new Set<string>(),
+          touchUpCodes: new Set<string>(),
         };
         colorEntry.sourceIds.add(source.source_id);
         colorEntry.availabilityScopes.add(table.availability_scope);
@@ -3987,6 +3995,8 @@ function buildModernPaletteGenerations() {
         );
         const factoryCode = table.factory_codes?.[color];
         if (factoryCode) colorEntry.factoryCodes.add(factoryCode);
+        const touchUpCode = table.touch_up_codes?.[color];
+        if (touchUpCode) colorEntry.touchUpCodes.add(touchUpCode);
         aggregate.colors.set(color, colorEntry);
       }
       aggregates.set(key, aggregate);
@@ -4037,8 +4047,19 @@ function buildModernPaletteGenerations() {
     const fleetGuideOnly = [...aggregate.citations.values()].every(
       ({ source }) => source.source_type === "fleet_guide_pdf",
     );
-    const sourceKind = fleetGuideOnly ? "GM Fleet Guide" : "official Chevrolet brochure";
-    const idSuffix = fleetGuideOnly ? "gm-fleet-guide" : "official-brochure";
+    const orderGuideOnly = [...aggregate.citations.values()].every(
+      ({ source }) => source.source_type === "official_order_guide_pdf",
+    );
+    const sourceKind = fleetGuideOnly
+      ? "GM Fleet Guide"
+      : orderGuideOnly
+        ? "GM Online Order Guide"
+        : "official Chevrolet sources";
+    const idSuffix = fleetGuideOnly
+      ? "gm-fleet-guide"
+      : orderGuideOnly
+        ? "gm-online-order-guide"
+        : "official-chevrolet-sources";
     const generation: Generation = {
       id: `${idSuffix}-qualified-${year}`,
       label: `${year} ${sourceKind} palette`,
@@ -4061,18 +4082,44 @@ function buildModernPaletteGenerations() {
             ].join(", ")}`,
           );
         }
+        if (colorEntry.touchUpCodes.size > 1) {
+          throw new Error(
+            `Conflicting touch-up codes for ${aggregate.modelId} ${year} ${color}: ${[
+              ...colorEntry.touchUpCodes,
+            ].join(", ")}`,
+          );
+        }
         const factoryCode = [...colorEntry.factoryCodes][0] ?? "not printed";
+        const touchUpCode = [...colorEntry.touchUpCodes][0];
+        const codeDisplay = touchUpCode
+          ? `${factoryCode} / ${touchUpCode}`
+          : factoryCode;
         return {
           id: `${aggregate.modelId}-${archiveColorId(color)}-${year}-${idSuffix}`,
           name: color,
           swatch: interpretiveArchiveSwatch(color),
-          rowCode: factoryCode,
+          rowCode: codeDisplay,
           note: "Interpretive screen swatch only; it is not sampled factory paint evidence.",
           availability: {
             [year]: {
               state: "restricted" as const,
               label: color,
-              code: factoryCode,
+              code: codeDisplay,
+              ...(factoryCode !== "not printed"
+                ? {
+                    factoryCode,
+                    factoryCodeStatus: "printed" as const,
+                    rpoCode: factoryCode,
+                  }
+                : {}),
+              ...(touchUpCode
+                ? {
+                    touchUpCode,
+                    waCode: touchUpCode,
+                    sourceWaCodeRaw: touchUpCode,
+                    sourceWaCodeCellState: "printed_with_prefix" as const,
+                  }
+                : {}),
               restriction: [
                 ...colorEntry.availabilityScopes,
                 ...colorEntry.restrictions,
@@ -4321,6 +4368,7 @@ function buildSpecialtyColorGenerations() {
                 sourceSeoCodeCellState:
                   record.source_seo_code_cell_state ?? null,
                 waCode: record.wa_code ?? null,
+                touchUpCode: record.touch_up_paint_number ?? undefined,
                 sourceWaCodeRaw: record.source_wa_code_raw ?? null,
                 sourceWaCodeCellState:
                   record.source_wa_code_cell_state ?? null,
