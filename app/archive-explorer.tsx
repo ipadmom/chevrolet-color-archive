@@ -33,6 +33,10 @@ import type {
   ArchiveTimelineSegment,
 } from "./archive-search";
 import {
+  latestThumbnailPalette,
+  modelThumbnailPaint,
+} from "./model-thumbnail-color";
+import {
   archivedColorPhotos,
   archivedModelYearPhotos,
   archivedPhotoStats,
@@ -261,9 +265,10 @@ function rangeLabel(segment: ArchiveTimelineSegment) {
   return first === last ? first : `${first}-${last}`;
 }
 
+const archiveThumbnailPalette = latestThumbnailPalette(models);
+
 function modelAccent(model: ArchiveModel) {
-  const firstColor = model.generations[0]?.colors[0];
-  return firstColor?.swatch ?? "var(--ia-gold)";
+  return modelThumbnailPaint(model, archiveThumbnailPalette).swatch;
 }
 
 function modelProfileYear(model: ArchiveModel) {
@@ -502,7 +507,23 @@ export function ArchiveExplorer() {
           ? generationForRecord(requestedModel, requestedYear, requestedColorId)
           : undefined;
         if (!requestedYear || !requestedGeneration) {
-          setStructuredColor("");
+          const landingGeneration = requestedModel.generations[0];
+          const landingYear = landingGeneration?.years.at(-1) ?? "";
+          const landingColor = landingGeneration?.colors.find(
+            (color) => color.availability[landingYear],
+          );
+          setYear(landingYear);
+          setStructuredYear(landingYear);
+          setColorId(landingColor?.id ?? "");
+          setStructuredColor(
+            landingColor
+              ? structuredColorValue(
+                  requestedModel.id,
+                  landingYear,
+                  landingColor.id,
+                )
+              : "",
+          );
           setView("years");
           return;
         }
@@ -1066,9 +1087,6 @@ export function ArchiveExplorer() {
         aria-label="Archive navigation"
         className={`ia-sidebar ${sidebarOpen ? "open" : ""}`}
       >
-        <button className="ia-sidebar-home" onClick={showModelIndex} type="button">
-          Chevrolet Models
-        </button>
         {modelSections.map((section) => (
           <div className="ia-sidebar-model-section" key={section.id}>
             <div className="ia-sidebar-label">{section.label}</div>
@@ -1293,7 +1311,6 @@ export function ArchiveExplorer() {
 
           {view === "models" ? (
             <>
-              <h1 className="pageheader">Chevrolet Models (USA, all model years)</h1>
               {modelSections.map((section) => (
                 <section
                   aria-labelledby={`model-section-${section.id}`}

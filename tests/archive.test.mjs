@@ -2864,7 +2864,9 @@ test("production shell follows the Import Archive research flow", async () => {
   assert.match(layout, /Chevrolet Color Archive/);
   assert.match(explorer, /Choose a model/);
   assert.match(explorer, /Choose a year/);
-  assert.match(explorer, /all model years/);
+  assert.match(explorer, /CURRENT MODELS/);
+  assert.match(explorer, /DISCONTINUED BEFORE 1970/);
+  assert.doesNotMatch(explorer, /Chevrolet Models \(USA, all model years\)/);
   assert.match(explorer, /UNVERIFIED/);
   assert.match(explorer, /color timeline/);
   assert.match(explorer, /CLAIM-LEVEL EVIDENCE/);

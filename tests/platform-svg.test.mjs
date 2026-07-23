@@ -414,6 +414,68 @@ test("vehicle profiles are accessible SVGs with model, body, and era metadata", 
   assert.ok(attributes.has("aria-label"), "SVG must keep its accessible label");
 });
 
+test("truck profiles use separate pickup, heavy-truck, cab-over, and forward-control geometry", async () => {
+  const source = await readFile(new URL("app/vehicle-profile-svg.tsx", root), "utf8");
+  const sourceFile = parseTsx(source, "vehicle-profile-svg.tsx");
+  const functionNames = new Set();
+
+  visit(sourceFile, (node) => {
+    if (ts.isFunctionDeclaration(node) && node.name) {
+      functionNames.add(node.name.text);
+    }
+  });
+
+  for (const functionName of [
+    "passengerBodyPath",
+    "pickupBodyPath",
+    "heavyTruckBodyPath",
+    "caboverBodyPath",
+    "forwardControlBodyPath",
+  ]) {
+    assert.ok(functionNames.has(functionName), `${functionName} must remain distinct`);
+  }
+
+  assert.match(source, /spec\.kind === "pickup"\) return pickupBodyPath/);
+  assert.match(source, /spec\.kind === "heavy-truck"\) return heavyTruckBodyPath/);
+  assert.match(source, /spec\.kind === "cabover"\) return caboverBodyPath/);
+  assert.match(source, /spec\.kind === "forward-control"\) return forwardControlBodyPath/);
+  assert.match(source, /data-cab-style=/);
+  assert.match(source, /rear-tandem/);
+});
+
+test("truck classification keeps conventional, utility, and forward-control models distinct", async () => {
+  const source = await readFile(new URL("app/vehicle-profile-svg.tsx", root), "utf8");
+
+  for (const modelId of ["3600", "3800", "apache"]) {
+    assert.match(
+      source,
+      new RegExp(`modelId === "${modelId}"`),
+      `${modelId} must be classified as a pickup`,
+    );
+  }
+  for (const modelId of ["el-camino", "avalanche", "ssr"]) {
+    assert.match(
+      source,
+      new RegExp(`modelId === "${modelId}"`),
+      `${modelId} must retain a utility body`,
+    );
+  }
+  for (const modelId of ["rampside", "loadside"]) {
+    assert.match(
+      source,
+      new RegExp(`modelId === "${modelId}"`),
+      `${modelId} must retain forward-control architecture`,
+    );
+  }
+  for (const modelId of ["silverado", "silverado-hd", "colorado", "silverado-ev", "s10", "ck-series"]) {
+    assert.match(
+      source,
+      new RegExp(`"${modelId}"|modelId === "${modelId}"`),
+      `${modelId} must participate in cab-layout rules`,
+    );
+  }
+});
+
 test("signature Chevrolet models participate in executable SVG design overrides", async () => {
   const source = await readFile(new URL("app/vehicle-profile-svg.tsx", root), "utf8");
   const sourceFile = parseTsx(source, "vehicle-profile-svg.tsx");

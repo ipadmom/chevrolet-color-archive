@@ -63,14 +63,17 @@ test("theme-owned surfaces do not reintroduce a cool blue shell", async () => {
   }
 });
 
-test("vehicle profiles keep real paint accents and use gold only as fallback", async () => {
-  const [explorer, profile] = await Promise.all([
+test("vehicle profiles keep real paint accents and use the archive palette for model thumbnails", async () => {
+  const [explorer, helper, profile] = await Promise.all([
     source("app/archive-explorer.tsx"),
+    source("app/model-thumbnail-color.ts"),
     source("app/vehicle-profile-svg.tsx"),
   ]);
 
   assert.match(profile, /accent\s*=\s*"var\(--ia-gold\)"/);
-  assert.match(explorer, /firstColor\?\.swatch\s*\?\?\s*"var\(--ia-gold\)"/);
+  assert.match(helper, /swatch:\s*"var\(--ia-gold\)"/);
+  assert.match(explorer, /latestThumbnailPalette\(models\)/);
+  assert.match(explorer, /modelThumbnailPaint\(model,\s*archiveThumbnailPalette\)\.swatch/);
   assert.match(explorer, /accent=\{selectedColor\?\.swatch\}/);
   assert.match(explorer, /background:\s*selectedColor\.swatch/);
 });

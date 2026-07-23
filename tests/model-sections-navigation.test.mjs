@@ -69,6 +69,16 @@ test("the model index and left rail render the same five sections", async () => 
   }
   assert.equal(explorer.match(/modelSections\.map/g)?.length, 2);
   assert.doesNotMatch(explorer, />ALL MODELS</);
+  assert.doesNotMatch(
+    explorer,
+    /Chevrolet Models \(USA, all model years\)/,
+    "the model index must not repeat the archive header as a large page title",
+  );
+  assert.doesNotMatch(
+    explorer,
+    /ia-sidebar-home/,
+    "the left rail must not repeat the clickable archive header as a large home button",
+  );
 });
 
 test("archive navigation creates history entries and restores them on Back", async () => {
@@ -82,4 +92,9 @@ test("archive navigation creates history entries and restores them on Back", asy
   assert.match(explorer, /addEventListener\("popstate",\s*syncRouteFromLocation\)/);
   assert.match(explorer, /addEventListener\("hashchange",\s*syncRouteFromLocation\)/);
   assert.match(explorer, /if \(!requestedModel\) \{[\s\S]*?setView\("models"\)/);
+  assert.match(
+    explorer,
+    /if \(!requestedYear \|\| !requestedGeneration\) \{[\s\S]*?setStructuredYear\(landingYear\)/,
+    "model-only routes must reset the structured year instead of retaining another model's year",
+  );
 });
