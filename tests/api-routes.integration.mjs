@@ -243,6 +243,30 @@ test(
         assert.deepEqual(await response.json(), { items: [], nextCursor: null });
       }
 
+      for (const [model, year, colorId] of [
+        [
+          "impala-limited",
+          "2015",
+          "impala-limited-adriatic-blue-2015-gm-2015-impala-limited-kerr-authorized-upfitter-paint-121a-bea-bfe",
+        ],
+        [
+          "caprice-ppv",
+          "2014",
+          "caprice-ppv-hugo-blue-dark-blue-metallic-2014-gm-2014-caprice-9c1-gyw-hugo-blue-dark-blue-metallic",
+        ],
+        [
+          "silverado",
+          "2012",
+          "silverado-light-autumnwood-metallic-2012-gm-2012-silverado-1wt-tgk-seo-paint-228a-light-autumnwood-metallic",
+        ],
+      ]) {
+        const response = await miniflare.dispatchFetch(
+          `http://archive.test/api/photos?model=${model}&year=${year}&color_id=${colorId}`,
+        );
+        assert.equal(response.status, 200, `${model} ${year} ${colorId}`);
+        assert.deepEqual(await response.json(), { items: [], nextCursor: null });
+      }
+
       const publisherQueueResponse = await miniflare.dispatchFetch(
         "http://archive.test/api/selections",
       );

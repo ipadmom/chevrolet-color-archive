@@ -1,6 +1,7 @@
 export const MAX_UPLOAD_BYTES: number;
 export const MAX_MULTIPART_BYTES: number;
 export const MAX_CANDIDATES_PER_SELECTION: number;
+export const MAX_ARCHIVE_COLOR_ID_LENGTH: number;
 export const UPLOAD_RECEIPT_TTL_SECONDS: number;
 export const PUBLISHED_RELEASE_TAG: "community-photo-archive-v1";
 export const PUBLISHED_RELEASE_DOWNLOAD_BASE: "https://github.com/ipadmom/chevrolet-color-archive/releases/download/community-photo-archive-v1";

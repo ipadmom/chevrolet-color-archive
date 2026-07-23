@@ -1,6 +1,7 @@
 export const MAX_UPLOAD_BYTES = 8 * 1024 * 1024;
 export const MAX_MULTIPART_BYTES = MAX_UPLOAD_BYTES + 64 * 1024;
 export const MAX_CANDIDATES_PER_SELECTION = 20;
+export const MAX_ARCHIVE_COLOR_ID_LENGTH = 160;
 export const UPLOAD_RECEIPT_TTL_SECONDS = 24 * 60 * 60;
 export const PUBLISHED_RELEASE_TAG = "community-photo-archive-v1";
 export const PUBLISHED_RELEASE_DOWNLOAD_BASE =
@@ -40,7 +41,7 @@ const MAX_ATTRIBUTION_ASSET_BYTES = 512 * 1024;
 export function resolveArchiveContext(models, rawModel, rawYear, rawColorId) {
   const modelId = cleanIdentifier(rawModel, 48);
   const year = cleanIdentifier(rawYear, 4);
-  const colorId = cleanIdentifier(rawColorId, 96);
+  const colorId = cleanIdentifier(rawColorId, MAX_ARCHIVE_COLOR_ID_LENGTH);
   if (!modelId || !/^\d{4}$/.test(year) || !colorId) return null;
 
   const model = models.find((entry) => entry.id === modelId);

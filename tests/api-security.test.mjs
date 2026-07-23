@@ -8,6 +8,7 @@ import {
   detectImageMime,
   isPublicPhotoStatus,
   isReceiptToken,
+  MAX_ARCHIVE_COLOR_ID_LENGTH,
   normalizeCredit,
   normalizeRights,
   parseBoundedInteger,
@@ -127,6 +128,42 @@ test("archive context resolves exact program and specialty overlay colors", () =
       "specialty-woodland-green",
     )?.colorName,
     "Woodland Green",
+  );
+});
+
+test("archive context accepts canonical source-qualified color IDs within the explicit bound", () => {
+  const colorId =
+    "silverado-light-autumnwood-metallic-2012-gm-2012-silverado-1wt-tgk-seo-paint-228a-light-autumnwood-metallic";
+  assert.equal(colorId.length, 107);
+  assert.ok(colorId.length <= MAX_ARCHIVE_COLOR_ID_LENGTH);
+  const model = {
+    id: "silverado",
+    name: "Silverado",
+    generations: [
+      {
+        years: ["2012"],
+        colors: [
+          {
+            id: colorId,
+            name: "Light Autumnwood Metallic",
+            availability: { "2012": { code: "WA-228A" } },
+          },
+        ],
+      },
+    ],
+  };
+  assert.equal(
+    resolveArchiveContext([model], "silverado", "2012", colorId)?.colorId,
+    colorId,
+  );
+  assert.equal(
+    resolveArchiveContext(
+      [model],
+      "silverado",
+      "2012",
+      "x".repeat(MAX_ARCHIVE_COLOR_ID_LENGTH + 1),
+    ),
+    null,
   );
 });
 
