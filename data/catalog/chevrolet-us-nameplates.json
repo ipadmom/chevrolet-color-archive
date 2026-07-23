@@ -1017,9 +1017,9 @@
       "name": "G-Series Van",
       "vehicle_class": "full-size van",
       "model_year_ranges": [{"start": 1964, "end": 1996, "confidence": "high", "evidence_urls": ["https://www.gm.com/heritage/archive/vehicle-information-kits"]}],
-      "aliases": ["Chevy Van", "Sportvan", "Beauville Van", "G10", "G20", "G30", "Vandura"],
+      "aliases": ["Chevy Van", "Sportvan", "Beauville Van", "Cutaway Van", "Hi-Cube Van", "G10", "G20", "G30", "Vandura"],
       "current": false,
-      "notes": "Chevrolet literature alternated among G Van, Chevy Van, Sportvan, and model-number badges; Express replaced the line."
+      "notes": "Chevrolet literature alternated among G Van, Chevy Van, Sportvan, Cutaway Van, Hi-Cube Van, and model-number badges; Express replaced the line."
     },
     {
       "id": "sportvan",

@@ -572,6 +572,13 @@ function flattenSearchValues(value: unknown) {
   return values;
 }
 
+function isIncompleteSubsetEvidenceClass(evidenceClass: string | undefined) {
+  return (
+    evidenceClass === "specialty_palette_subset" ||
+    evidenceClass === "qualified_historical_table"
+  );
+}
+
 function generationBandKey(generation: Generation) {
   if (
     generation.platformAliases?.length ||
@@ -589,6 +596,7 @@ function generationBandKey(generation: Generation) {
     const evidenceClass = generation.sources[year]?.evidenceClass;
     return (
       evidenceClass === "specialty_palette_subset" ||
+      evidenceClass === "qualified_historical_table" ||
       evidenceClass === "qualified_exact_program_palette"
     );
   });
@@ -604,19 +612,20 @@ function isYearIndexGeneration(
   model: ArchiveModel,
   itemGeneration: Generation,
 ) {
-  const specialtyOnly = itemGeneration.years.every(
-    (itemYear) =>
-      itemGeneration.sources[itemYear]?.evidenceClass ===
-      "specialty_palette_subset",
+  const incompleteSubsetOnly = itemGeneration.years.every((itemYear) =>
+    isIncompleteSubsetEvidenceClass(
+      itemGeneration.sources[itemYear]?.evidenceClass,
+    ),
   );
-  if (!specialtyOnly) return true;
+  if (!incompleteSubsetOnly) return true;
   return !itemGeneration.years.every((itemYear) =>
     model.generations.some(
       (candidate) =>
         candidate !== itemGeneration &&
         candidate.years.includes(itemYear) &&
-        candidate.sources[itemYear]?.evidenceClass !==
-          "specialty_palette_subset",
+        !isIncompleteSubsetEvidenceClass(
+          candidate.sources[itemYear]?.evidenceClass,
+        ),
     ),
   );
 }
@@ -715,7 +724,7 @@ function exactColorIdentity(
 ) {
   const programQualified =
     source.evidenceClass === "qualified_exact_program_palette" ||
-    source.evidenceClass === "specialty_palette_subset";
+    isIncompleteSubsetEvidenceClass(source.evidenceClass);
   if (programQualified) {
     const stableProgramColorKey = /^not printed(?:$|[; /])/i.test(
       color.rowCode.trim(),
@@ -938,6 +947,45 @@ export function buildArchiveSearchRecords(
               availability?.code,
               availability?.state,
               availability?.applicationType,
+              availability?.factoryCode,
+              availability?.factoryCodeStatus,
+              availability?.touchUpCode,
+              availability?.rpoCode
+                ? `rpo_code ${availability.rpoCode} RPO ${availability.rpoCode}`
+                : undefined,
+              availability?.seoCode
+                ? `seo_code ${availability.seoCode} SEO ${availability.seoCode}`
+                : undefined,
+              availability?.seoCodeStatus
+                ? `seo_code_status ${availability.seoCodeStatus}`
+                : undefined,
+              availability?.sourceSeoCodeRaw != null
+                ? `source_seo_code_raw ${availability.sourceSeoCodeRaw}`
+                : undefined,
+              availability?.sourceSeoCodeCellState
+                ? `source_seo_code_cell_state ${availability.sourceSeoCodeCellState}`
+                : undefined,
+              availability?.waCode
+                ? `wa_code ${availability.waCode}`
+                : undefined,
+              availability?.sourceWaCodeRaw != null
+                ? `source_wa_code_raw ${availability.sourceWaCodeRaw}`
+                : undefined,
+              availability?.sourceWaCodeCellState
+                ? `source_wa_code_cell_state ${availability.sourceWaCodeCellState}`
+                : undefined,
+              availability?.upfitterOrderCodes
+                ? `upfitter_code_1 ${availability.upfitterOrderCodes.code1} ` +
+                  `upfitter_code_2 ${availability.upfitterOrderCodes.code2} ` +
+                  `upfitter_solid_color_option ${availability.upfitterOrderCodes.solidColorOption} ` +
+                  `upfitter_two_tone_color_option ${availability.upfitterOrderCodes.twoToneColorOption}`
+                : undefined,
+              availability?.minimumBatchUnits != null
+                ? `minimum_batch_units ${availability.minimumBatchUnits}`
+                : undefined,
+              availability?.factoryInstallationClaim != null
+                ? `factory_installation_claim ${availability.factoryInstallationClaim}`
+                : undefined,
               availability?.restriction,
               ...flattenSearchValues(availability?.sourceIds),
               source?.name,

@@ -25,13 +25,13 @@ MODERN_SOURCE_LEDGER_PATH = (
 )
 CRAWLER_OBJECT_ROOT = ROOT / "tmp" / "crawler-state" / "objects" / "sha256"
 
-EXPECTED_RETAINED_SOURCE_ASSET_COUNT = 97
+EXPECTED_RETAINED_SOURCE_ASSET_COUNT = 111
 EXPECTED_PRESERVED_ASSET_COUNT = 28
-EXPECTED_NON_CHECKSUM_ASSET_COUNT = 125
-EXPECTED_ASSET_COUNT = 126
-EXPECTED_PDF_COUNT = 102
-EXPECTED_PDF_BYTES = 1_226_505_194
-EXPECTED_PDF_PAGE_COUNT = 7_904
+EXPECTED_NON_CHECKSUM_ASSET_COUNT = 139
+EXPECTED_ASSET_COUNT = 140
+EXPECTED_PDF_COUNT = 116
+EXPECTED_PDF_BYTES = 1_408_805_873
+EXPECTED_PDF_PAGE_COUNT = 8_635
 
 
 PRESERVED_EXISTING_ASSET_NAMES = (
@@ -223,6 +223,16 @@ CRAWLER_SOURCES = (
         "gm-heritage-1976-chevrolet-suburban",
         "1976-chevrolet-suburban-vehicle-information-kit-gm.pdf",
         "controlling_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1981-chevrolet-g-van",
+        "1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+        "controlling_qualified_historical_vehicle_information_kit",
+    ),
+    (
+        "gm-heritage-1981-chevrolet-motorhome",
+        "1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+        "controlling_qualified_historical_vehicle_information_kit",
     ),
     (
         "gm-heritage-1982-chevrolet-suburban",
@@ -645,6 +655,160 @@ LOCAL_SOURCES = (
         "pdf_page_count": 40,
     },
     {
+        "source_id": "gm-2015-tahoe-5w4",
+        "asset_name": "2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2015-tahoe-5w4.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2015_tahoe_5w4_4x4_specification_guide_4_10.pdf",
+        "sha256": "aa9fa6a25c8deb0c53476730704a698d70f0b2c1adfd8afd8eaa5831ce2a32df",
+        "bytes": 10_165_047,
+        "pdf_page_count": 41,
+    },
+    {
+        "source_id": "gm-2016-tahoe-9c1",
+        "asset_name": "2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-research"
+        / "historic-official-pdfs"
+        / "gm-2016-tahoe-9c1.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2016-Tahoe-9C1-2WD-Specification-Guide.pdf",
+        "sha256": "557d7f6e460d12ff257d563848f2c0aa905729495d8a99fb8bc8df68bef8ce4c",
+        "bytes": 11_491_154,
+        "pdf_page_count": 42,
+    },
+    {
+        "source_id": "gm-2016-tahoe-5w4",
+        "asset_name": "2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2016-tahoe-5w4.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Tahoe-Special-Service-4x4-Specification-Guide.pdf",
+        "sha256": "383f603bd378965d4932e145650ab90eadb084c6c5ae9c24ca870530721d1696",
+        "bytes": 38_765_853,
+        "pdf_page_count": 42,
+    },
+    {
+        "source_id": "gm-2017-tahoe-9c1-4wd",
+        "asset_name": "2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2017-tahoe-9c1.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/Tahoe-9C1-4WD-Specification-Guide-2017.pdf",
+        "sha256": "e51297ea8d36bb458db2e9cd2796807ad424930194ad4c283236d181619c2aaa",
+        "bytes": 21_730_455,
+        "pdf_page_count": 46,
+    },
+    {
+        "source_id": "gm-2018-tahoe-9c1-4wd",
+        "asset_name": "2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2018-tahoe-9c1.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2018-Tahoe-4WD-9C1-Pursuit.pdf",
+        "sha256": "dfe05400fb07c349665a79aebdcec7e4e66ddbe38ac5efc98afe8991b61bb01d",
+        "bytes": 17_155_009,
+        "pdf_page_count": 53,
+    },
+    {
+        "source_id": "gm-2019-tahoe-5w4",
+        "asset_name": "2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2019-tahoe-5w4.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/09/2019-Tahoe-4x4-Special-Service-5W4.pdf",
+        "sha256": "31ad0b80b9f822761e7d01c33dae1e93f5e2267b96382dd8ddb70013000dc397",
+        "bytes": 11_212_375,
+        "pdf_page_count": 45,
+    },
+    {
+        "source_id": "gm-2020-tahoe-5w4",
+        "asset_name": "2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2020-tahoe-5w4.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2020-Tahoe-4x4-Special-Service-5W4-8.pdf",
+        "sha256": "152ce9c7e2f0a89908b0fe5b17b990b7a7897b22b6b085d8cc26a7ea5de7ebb1",
+        "bytes": 12_650_720,
+        "pdf_page_count": 45,
+    },
+    {
+        "source_id": "gm-2015-impala-limited-9c1-9c3",
+        "asset_name": "2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2015-impala-limited-9c1-9c3.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2015_impala_limited_police_specification_guide_4_10.pdf",
+        "sha256": "e6247f215d4ea186b39a663eccd6454a27ad3adf05134e11318a19be39981f94",
+        "bytes": 11_524_978,
+        "pdf_page_count": 35,
+    },
+    {
+        "source_id": "gm-2016-impala-limited-9c1-9c3",
+        "asset_name": "2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2016-impala-limited-9c1-9c3.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Impala-Limited-Police-Specification-Guide.pdf",
+        "sha256": "74f946e2a505d2c113002afc75188871e0f9b5f20361a42167d8329ec8b731fd",
+        "bytes": 9_949_295,
+        "pdf_page_count": 36,
+    },
+    {
+        "source_id": "gm-2019-suburban-1fl-3500hd",
+        "asset_name": "2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2019-suburban-1fl.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2019-Suburban-1FL-Suburban-3500HD.pdf",
+        "sha256": "42fc66eed0cb1f62418e2636c91c8c98c9ca0c84f1ddcccbdec772dae9e1d22c",
+        "bytes": 9_884_550,
+        "pdf_page_count": 28,
+    },
+    {
+        "source_id": "gm-2020-suburban-1fl",
+        "asset_name": "2020-chevrolet-suburban-1fl-specification-guide-gm.pdf",
+        "role": "controlling_specialty_vehicle_specification_guide",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-upfitter"
+        / "2020-suburban-1fl.pdf",
+        "url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2020-Suburban-1FL-7.pdf",
+        "sha256": "0608bdfc002d40868fc1d3e2dd40c505799beaadf3ac1a5ce5037a8d41010cf2",
+        "bytes": 7_743_853,
+        "pdf_page_count": 26,
+    },
+    {
         "source_id": "gm-2023-bolt-euv-5w4",
         "asset_name": "2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
         "role": "controlling_specialty_vehicle_specification_guide",
@@ -875,6 +1039,20 @@ LOCAL_SOURCES = (
         "sha256": "665d96d3115ef330fb232152c92d532a1f52ac63a6ec6b4e8e0387066c334b28",
         "bytes": 4_431_496,
         "pdf_page_count": 115,
+    },
+    {
+        "source_id": "gm-1983-chevrolet-truck-color-trim",
+        "asset_name": "1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
+        "role": "controlling_specialty_vehicle_information_kit",
+        "path": ROOT
+        / "tmp"
+        / "specialty-color-sources"
+        / "gm-truck-kits"
+        / "1983-Chevrolet-Truck.pdf",
+        "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1983-Chevrolet-Truck.pdf",
+        "sha256": "4e8b447e6617d7be8b9c56fa4ef6e1e5e62918c8d8d45c5abc71f74e5ee04ce1",
+        "bytes": 6_802_994,
+        "pdf_page_count": 181,
     },
     {
         "source_id": "gm-heritage-1989-chevrolet-truck",
@@ -1227,9 +1405,13 @@ def main() -> int:
         "the GM truck kit, exact Service News extract, its complete parent issue, and "
         "the Corvair 95 paint-and-trim compilation. The archive also retains the "
         "1979 Blazer and 1993 S-10 vehicle information kits, the 1980 Chevrolet "
-        "truck color-and-trim kit, the 2011-2014 Chevrolet municipal and police "
-        "manuals, the 2015-2017 Caprice PPV 9C1 specification guides, the 2023 "
-        "Bolt EUV SSV guide, the 2024-2026 Blazer EV municipal "
+        "truck color-and-trim kit, the 1981 Chevrolet G Van and Motorhome vehicle "
+        "information kits, the 1983 Chevrolet truck color-and-trim kit, the "
+        "2011-2014 Chevrolet municipal and police "
+        "manuals, the 2015-2017 Caprice PPV 9C1 specification guides, eleven exact "
+        "2015-2020 Tahoe 9C1/5W4, Impala Limited 9C1/9C3 Kerr, and Suburban "
+        "1FL/3500HD specification guides, the 2023 Bolt EUV SSV guide, the "
+        "2024-2026 Blazer EV municipal "
         "guides, two dated Blazer EV order-guide snapshots, and the April 14, 2026 "
         "Silverado 9C1 and 5W4 guides. It also retains all 19 audited 2008-2026 GM "
         "Fleet Guides and four audited 2022-2023 Chevrolet eBrochures that govern "

@@ -38,12 +38,16 @@ each matrix spans only the selected sourced platform, base, or era band. An
 unreviewed year remains as an explicit blank column instead of borrowing colors
 from an adjacent year.
 
-The reviewed public matrices currently contain 1,748 source-linked listings.
+The reviewed public matrices currently contain 2,000 source-linked listings.
 They divide into 973 direct source transcriptions, 454 qualified official
-palette-union rows across 56 model-years, and 321 reviewed specialty-paint subset
-rows across 35 model-years. Twenty-five model-years remain specialty-only
-incomplete records; the other ten coexist with a separately complete or
-qualified regular palette. Complete exact-year
+palette-union rows across 56 model-years, 569 reviewed specialty-paint subset
+rows across 57 application model-years, and four ordinary qualified-historical
+table rows. Specialty evidence is the strongest research status for 42
+model-years; the other 15 specialty model-years coexist with a separately
+complete or qualified regular palette. Six model-years have a
+reviewed-qualified-historical research status. The four 1981 Woodland Green
+rows are ordinary chart evidence in that class, not specialty-paint records.
+Complete exact-year
 Suburban palettes now cover 1969, 1972-2005, and 2007. The 2002 and 2003
 brochures and the 2004 service table are pinned in the GitHub Release with
 artifact hashes and retrieval-carrier provenance. Model-year presence and
@@ -163,8 +167,8 @@ Suburban published coverage:
 | 1976 | 15 | 0 | 0 | GM Heritage Suburban chart, PDF pp. 6-7; Frost White pairing retained as metadata |
 | 1977 | 15 | 6 | 0 | GM Heritage Suburban chart, PDF pp. 6-7 |
 | 1978 | 15 | 6 | 0 | GM Heritage Suburban chart, PDF pp. 30-31 |
-| 1979 | 15 | 6 | 0 | GM Heritage Suburban chart, PDF pp. 32-34 |
-| 1980 | 15 | 6 | 1 | GM Heritage Suburban chart plus reviewed Woodland Green SEO row |
+| 1979 | 15 | 6 | 2 | GM Heritage Suburban chart plus exact Tangier Orange and Wheatland Yellow SEO rows |
+| 1980 | 15 | 6 | 3 | GM Heritage Suburban chart plus exact Woodland Green, Tangier Orange, and Wheatland Yellow SEO rows |
 | 1981 | 15 | 8 | 0 | GM Heritage Suburban chart, PDF pp. 26-27 |
 | 1982 | 10 | 0 | 0 | GM-authored Suburban sales brochure, PDF p. 10 |
 | 1983 | 10 | 8 | 0 | GM Heritage C/K Suburban chart, PDF p. 27 |
@@ -196,15 +200,15 @@ Suburban published coverage:
 | 2009 | 9 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2010 | 10 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2011 | 10 | 0 | 1 | Qualified GM Fleet Guide union plus reviewed Woodland Green SEO row |
-| 2012 | 8 | 0 | 0 | Qualified GM Fleet Guide union |
-| 2013 | 10 | 0 | 0 | Qualified GM Fleet Guide union |
-| 2014 | 8 | 0 | 0 | Qualified GM Fleet Guide union |
+| 2012 | 8 | 0 | 8 | Qualified GM Fleet Guide union plus exact Commercial Fleet 1FL SEO table |
+| 2013 | 10 | 0 | 8 | Qualified GM Fleet Guide union plus exact Commercial Fleet 1FL SEO table |
+| 2014 | 8 | 0 | 1 | Qualified GM Fleet Guide union plus Victory Red in the revised Commercial Fleet 1FL SEO table |
 | 2015 | 8 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2016 | 10 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2017 | 9 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2018 | 10 | 0 | 0 | Qualified GM Fleet Guide union |
-| 2019 | 9 | 0 | 0 | Qualified GM Fleet Guide union |
-| 2020 | 8 | 0 | 0 | Qualified GM Fleet Guide union |
+| 2019 | 9 | 0 | 5 | Qualified GM Fleet Guide union plus exact 1FL/3500HD SEO table |
+| 2020 | 8 | 0 | 5 | Qualified GM Fleet Guide union plus exact 1FL SEO table |
 | 2021 | 9 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2022 | 10 | 0 | 0 | Qualified GM Fleet Guide union |
 | 2023 | 10 | 0 | 0 | Qualified GM Fleet Guide union |
@@ -213,7 +217,7 @@ Suburban published coverage:
 | 2026 | 8 | 0 | 0 | Qualified GM Fleet Guide union |
 
 The 1,185 printed scheme rows audited in these documents remain separate from
-400 exact regular listings, 171 qualified Fleet Guide listings, and 22
+400 exact regular listings, 171 qualified Fleet Guide listings, and 53
 specialty subset listings. Primary and secondary roles, package, body style
 scope, stripe and interior metadata, source locator, and revision are preserved
 without converting a component into standalone paint availability. Separate
@@ -224,9 +228,9 @@ Across all years, 33 complete official regular palettes cover 1969,
 1972-2001, 2005, and 2007. Three archival gap closures add complete exact-year
 palettes for 2002-2004, for 36 complete palettes total. The 2000-2005 and 2007
 reviews contribute 59 regular rows. Exact 2002-2004 sources now supply 24 of
-those rows, so no supplemental-only mentions remain. Four specialty overlays
-contribute 22 restricted rows. The 2008-2026 Fleet Guide review adds 171
-qualified Suburban rows across 19 model-years. The 2006 column remains
+those rows, so no supplemental-only mentions remain. Ten exact specialty
+model-year subsets contribute 53 source-qualified rows. The 2008-2026 Fleet
+Guide review adds 171 qualified Suburban rows across 19 model-years. The 2006 column remains
 explicitly blank.
 Suburban model years 1935–1942 and 1946–2026 are all navigable. The explicit
 1943–1945 civilian-production gap is not represented as a model year.
@@ -235,11 +239,15 @@ Tahoe model years 1995–2026 are all navigable. Exact sources establish 125
 solid-color application rows for 1995–2007. Model year 2000 remains split into
 four simultaneous programs: redesigned GMT800 Base/LS and LT, carryover GMT400
 Limited, and carryover GMT400 Z71. The 2002–2006 regular palettes add 40 exact
-rows, while 14 specialty rows for 2003, 2005, and 2006 remain restricted
-overlays. The 184 two-tone rows for 1995–1999 remain a separate evidence class.
-A separate 2011 specialty subset retains Woodland Green only for the exact
-police and special-service variants printed by GM. The official 2022 eBrochure
-adds a 10-color per-trim union, and the 2025 and 2026 Fleet Guides add
+rows. Ninety-one specialty rows remain separate overlays across 13 exact
+application model-years: 2003, 2005, 2006, and 2011–2020. The 2012 and 2013 evidence keeps Tahoe 2WD Police Package PPV
+and Tahoe 4WD Special Service 5W4 as separate exact programs; the revised 2014
+tables retain only Victory Red for each. The 2016 evidence likewise keeps the
+9C1 and 5W4 tables separate. No 9C1/5W4 counterpart or adjacent-year row is
+inferred where only one exact program guide was reviewed. The 184 two-tone rows for 1995–1999
+remain a separate evidence class. The 2011 specialty subset retains Woodland
+Green only for the exact police and special-service variants printed by GM.
+The official 2022 eBrochure adds a 10-color per-trim union, and the 2025 and 2026 Fleet Guides add
 eight-color qualified unions. The T1XX refresh matrix joins 2025 and 2026 only
 where the exact color label, code, state, and restriction semantics match.
 Incomplete years remain blank and visibly unverified.
@@ -260,17 +268,18 @@ plus 302 web previews. Both forms are stored under the pinned GitHub Release tag
 photo card links the Commons source, license, and archived original. Photographs
 remain illustrations only and never establish factory paint availability.
 
-The pinned `brochure-source-archive-v1` Release preserves 126 audited assets,
-including 102 PDFs totaling 1,226,505,194 bytes and 7,904 pages. Of those, 97 are
-retained source assets, including 93 retained source PDFs totaling 1,171,307,951
+The pinned `brochure-source-archive-v1` Release preserves 140 audited assets,
+including 116 PDFs totaling 1,408,805,873 bytes and 8,635 pages. Of those, 111 are
+retained source assets, including 107 retained source PDFs totaling 1,353,608,630
 bytes. The archive closes the Tahoe 1995–2007 evidence set, all 19 audited
 2008–2026 GM Fleet Guides, the retained eBrochure set, and every currently
 published specialty citation. The
-flat-filename checksum manifest covers all 125 other assets. Release validation
-identifies 30 governing audit assets, 30 app-fed audit citations, 94
+flat-filename checksum manifest covers all 139 other assets. Release validation
+identifies 30 governing audit assets, 30 app-fed audit citations, 108
 application Release URLs, 61 modern palette tables, 483 modern color
-assertions, 281 published specialty records, and 10 verified nonpublished,
-nonrouting specialty snapshots.
+assertions, 529 published specialty records, four published ordinary
+qualified-history records, and 10 verified nonpublished, nonrouting specialty
+snapshots.
 
 ## Evidence rules
 

@@ -26,7 +26,7 @@ BROCHURE_SOURCE_RELEASE_MANIFEST_PATH = (
 )
 ROCKAUTO_LEADS_PATH = ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
 SUBURBAN_2000_2007_AUDIT_PATH = ROOT / "data" / "audits" / "suburban-2000-2007.json"
-SCHEMA_VERSION = 9
+SCHEMA_VERSION = 11
 URL_PATTERN = re.compile(r"https?://[^\s<>\"`]+")
 PLACEHOLDER_SOURCE_HOSTS = frozenset(
     {"example.com", "example.net", "example.org", "example.invalid"}
@@ -54,6 +54,18 @@ FACTORY_CODE_REJECTED_PLACEHOLDERS = frozenset(
         "unknown",
         "unavailable",
     }
+)
+SEO_CODE_STATUS_VALUES = frozenset(
+    {
+        "printed_in_source",
+        "not_applicable_in_source",
+        "not_printed_in_source",
+        "not_stated_in_source",
+        "column_absent_in_source",
+    }
+)
+SEO_CODE_REJECTED_PLACEHOLDERS = frozenset(
+    {"not applicable", "not printed", "not stated", "tbd"}
 )
 SOURCE_OFFICIALITY_VALUES = frozenset({"official", "secondary", "licensed", "unknown"})
 DOCUMENT_AUTHORITY_VALUES = frozenset({"official_manufacturer_document"})
@@ -90,8 +102,9 @@ RELEASE_ASSET_MEDIA_TYPES = {
 }
 AVAILABILITY_SOURCE_RANK = {
     "published_source_transcription": 0,
-    "published_qualified_palette_union": 1,
-    "published_specialty_palette_subset": 2,
+    "published_qualified_historical_table": 1,
+    "published_qualified_palette_union": 2,
+    "published_specialty_palette_subset": 3,
 }
 
 
@@ -604,6 +617,20 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("factory_code", pa.string(), True),
             ("factory_code_status", pa.string(), False),
             ("touch_up_code", pa.string(), True),
+            ("rpo_code", pa.string(), True),
+            ("seo_code", pa.string(), True),
+            ("seo_code_status", pa.string(), True),
+            ("source_seo_code_raw", pa.string(), True),
+            ("source_seo_code_cell_state", pa.string(), True),
+            ("wa_code", pa.string(), True),
+            ("source_wa_code_raw", pa.string(), True),
+            ("source_wa_code_cell_state", pa.string(), True),
+            ("upfitter_code_1", pa.string(), True),
+            ("upfitter_code_2", pa.string(), True),
+            ("upfitter_solid_color_option", pa.string(), True),
+            ("upfitter_two_tone_color_option", pa.string(), True),
+            ("minimum_batch_units", pa.int16(), True),
+            ("factory_installation_claim", pa.bool_(), True),
             ("availability_state", pa.string(), False),
             ("application_type", pa.string(), False),
             ("restriction", pa.string(), True),
@@ -831,6 +858,20 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("transcribed_factory_code", pa.string(), True),
             ("transcribed_factory_code_status", pa.string(), False),
             ("transcribed_touch_up_code", pa.string(), True),
+            ("transcribed_rpo_code", pa.string(), True),
+            ("transcribed_seo_code", pa.string(), True),
+            ("transcribed_seo_code_status", pa.string(), True),
+            ("transcribed_source_seo_code_raw", pa.string(), True),
+            ("transcribed_source_seo_code_cell_state", pa.string(), True),
+            ("transcribed_wa_code", pa.string(), True),
+            ("transcribed_source_wa_code_raw", pa.string(), True),
+            ("transcribed_source_wa_code_cell_state", pa.string(), True),
+            ("transcribed_upfitter_code_1", pa.string(), True),
+            ("transcribed_upfitter_code_2", pa.string(), True),
+            ("transcribed_upfitter_solid_color_option", pa.string(), True),
+            ("transcribed_upfitter_two_tone_color_option", pa.string(), True),
+            ("minimum_batch_units", pa.int16(), True),
+            ("factory_installation_claim", pa.bool_(), True),
             ("availability_state", pa.string(), False),
             ("restriction", pa.string(), True),
             ("chart_title", pa.string(), False),
@@ -1071,6 +1112,166 @@ def validate_factory_code_rows(table_name: str, rows: list[dict[str, Any]]) -> N
             )
 
 
+def validate_specialty_code_rows(
+    table_name: str,
+    rows: list[dict[str, Any]],
+    *,
+    prefix: str = "",
+) -> None:
+    code_field = f"{prefix}seo_code"
+    status_field = f"{prefix}seo_code_status"
+    raw_field = f"{prefix}source_seo_code_raw"
+    state_field = f"{prefix}source_seo_code_cell_state"
+    for index, row in enumerate(rows):
+        code = row[code_field]
+        status = row[status_field]
+        raw = row[raw_field]
+        cell_state = row[state_field]
+        if status is not None and status not in SEO_CODE_STATUS_VALUES:
+            raise ValueError(
+                f"{table_name}[{index}].{status_field} has unsupported value: "
+                f"{status!r}"
+            )
+        if code is not None:
+            normalized = re.sub(r"\s+", " ", str(code).strip().casefold())
+            if not str(code).strip() or normalized in SEO_CODE_REJECTED_PLACEHOLDERS:
+                raise ValueError(
+                    f"{table_name}[{index}].{code_field} contains placeholder prose: "
+                    f"{code!r}"
+                )
+            if status != "printed_in_source":
+                raise ValueError(
+                    f"{table_name}[{index}] has an SEO code but status is {status!r}"
+                )
+        elif status == "printed_in_source":
+            raise ValueError(
+                f"{table_name}[{index}] claims a printed SEO code but is null"
+            )
+        if cell_state not in {
+            None,
+            "printed",
+            "blank",
+            "tbd",
+            "em_dash",
+            "literal_none",
+            "column_absent",
+        }:
+            raise ValueError(
+                f"{table_name}[{index}].{state_field} has unsupported value: "
+                f"{cell_state!r}"
+            )
+        if cell_state is None:
+            if raw is not None:
+                raise ValueError(
+                    f"{table_name}[{index}] has raw SEO text without a cell state"
+                )
+        elif cell_state == "printed":
+            if raw != code or status != "printed_in_source":
+                raise ValueError(
+                    f"{table_name}[{index}] printed SEO metadata is inconsistent"
+                )
+        elif cell_state == "blank":
+            if raw is not None or code is not None or status != "not_printed_in_source":
+                raise ValueError(
+                    f"{table_name}[{index}] blank SEO metadata is inconsistent"
+                )
+        elif cell_state == "tbd" and (
+            raw != "TBD" or code is not None or status != "not_stated_in_source"
+        ):
+            raise ValueError(
+                f"{table_name}[{index}] TBD SEO metadata is inconsistent"
+            )
+        elif cell_state == "em_dash" and (
+            raw != "—" or code is not None or status != "not_printed_in_source"
+        ):
+            raise ValueError(
+                f"{table_name}[{index}] em-dash SEO metadata is inconsistent"
+            )
+        elif cell_state == "literal_none" and (
+            raw != "NONE" or code is not None or status != "not_applicable_in_source"
+        ):
+            raise ValueError(
+                f"{table_name}[{index}] literal-NONE SEO metadata is inconsistent"
+            )
+        elif cell_state == "column_absent" and (
+            raw is not None
+            or code is not None
+            or status != "column_absent_in_source"
+        ):
+            raise ValueError(
+                f"{table_name}[{index}] absent-column SEO metadata is inconsistent"
+            )
+        minimum_batch_units = row["minimum_batch_units"]
+        if minimum_batch_units is not None and minimum_batch_units <= 0:
+            raise ValueError(
+                f"{table_name}[{index}].minimum_batch_units must be positive"
+            )
+
+
+def validate_wa_upfitter_rows(
+    table_name: str,
+    rows: list[dict[str, Any]],
+    *,
+    prefix: str = "",
+) -> None:
+    wa_field = f"{prefix}wa_code"
+    raw_field = f"{prefix}source_wa_code_raw"
+    state_field = f"{prefix}source_wa_code_cell_state"
+    upfitter_fields = [
+        f"{prefix}upfitter_code_1",
+        f"{prefix}upfitter_code_2",
+        f"{prefix}upfitter_solid_color_option",
+        f"{prefix}upfitter_two_tone_color_option",
+    ]
+    for index, row in enumerate(rows):
+        wa_code = row[wa_field]
+        raw = row[raw_field]
+        cell_state = row[state_field]
+        if wa_code is not None and not re.fullmatch(r"WA-[0-9A-Z]+", wa_code):
+            raise ValueError(
+                f"{table_name}[{index}].{wa_field} is not a normalized WA code: "
+                f"{wa_code!r}"
+            )
+        if cell_state not in {
+            None,
+            "printed_with_prefix",
+            "printed_without_prefix",
+        }:
+            raise ValueError(
+                f"{table_name}[{index}].{state_field} has unsupported value: "
+                f"{cell_state!r}"
+            )
+        if cell_state is None:
+            if raw is not None:
+                raise ValueError(
+                    f"{table_name}[{index}] has raw WA text without a cell state"
+                )
+        elif cell_state == "printed_with_prefix":
+            if raw != wa_code:
+                raise ValueError(
+                    f"{table_name}[{index}] prefixed WA metadata is inconsistent"
+                )
+        elif cell_state == "printed_without_prefix":
+            if wa_code is None or f"WA-{raw}" != wa_code:
+                raise ValueError(
+                    f"{table_name}[{index}] unprefixed WA metadata is inconsistent"
+                )
+
+        upfitter_values = [row[field] for field in upfitter_fields]
+        if any(value is not None for value in upfitter_values):
+            if any(value is None or not str(value).strip() for value in upfitter_values):
+                raise ValueError(
+                    f"{table_name}[{index}] has an incomplete upfitter order-code set"
+                )
+            if prefix == "" and not str(row["application_type"]).startswith(
+                "authorized_upfitter"
+            ):
+                raise ValueError(
+                    f"{table_name}[{index}] has upfitter codes outside an "
+                    "authorized-upfitter program"
+                )
+
+
 def validate_normalized_rows(rows_by_table: dict[str, list[dict[str, Any]]]) -> None:
     """Validate schemas, primary keys, foreign keys, and code null semantics."""
     if set(rows_by_table) != set(SCHEMAS):
@@ -1130,6 +1331,18 @@ def validate_normalized_rows(rows_by_table: dict[str, list[dict[str, Any]]]) -> 
 
     for table_name in FACTORY_CODE_COLUMNS:
         validate_factory_code_rows(table_name, rows_by_table[table_name])
+    validate_specialty_code_rows(
+        "color_availability", rows_by_table["color_availability"]
+    )
+    validate_specialty_code_rows(
+        "evidence_claims", rows_by_table["evidence_claims"], prefix="transcribed_"
+    )
+    validate_wa_upfitter_rows(
+        "color_availability", rows_by_table["color_availability"]
+    )
+    validate_wa_upfitter_rows(
+        "evidence_claims", rows_by_table["evidence_claims"], prefix="transcribed_"
+    )
 
 
 class NormalizedArchiveBuilder:
@@ -1873,6 +2086,9 @@ class NormalizedArchiveBuilder:
         for record in self.specialty_color_sources["app_publication_records"]:
             artifact = record["source"]
             model_ids = list(record.get("catalog_model_ids") or [])
+            is_qualified_historical_table = (
+                record.get("evidence_class") == "qualified_historical_table"
+            )
             add_record(
                 category="app_publication_records",
                 entity_id=f"app_publication_records:{record['record_id']}",
@@ -1882,11 +2098,19 @@ class NormalizedArchiveBuilder:
                 source_type=artifact.get("source_type")
                 or "specialty_paint_primary_pdf",
                 confidence="human_checked_primary_source",
-                review_state="reviewed_specialty_palette_subset",
+                review_state=(
+                    "reviewed_qualified_historical_table"
+                    if is_qualified_historical_table
+                    else "reviewed_specialty_palette_subset"
+                ),
                 claim_summary=(
                     f"Retained and rehashed primary-source artifact for "
                     f"{record['record_id']}. Publication remains limited to the "
-                    "reviewed specialty-paint subset."
+                    + (
+                        "reviewed qualified historical table subset."
+                        if is_qualified_historical_table
+                        else "reviewed specialty-paint subset."
+                    )
                 ),
                 model_id=model_ids[0] if len(model_ids) == 1 else None,
                 model_year=int(record["model_year"]),
@@ -2118,7 +2342,7 @@ class NormalizedArchiveBuilder:
                 content_length_bytes=artifact["content_length_bytes"],
                 content_sha256=artifact["content_sha256"],
                 notes=(
-                    "Retained specialty-color research artifact; categories: "
+                    "Retained color-research artifact; categories: "
                     + ", ".join(sorted(artifact["categories"]))
                 ),
             )
@@ -2294,7 +2518,14 @@ class NormalizedArchiveBuilder:
                     evidence_class = year_source.get("evidenceClass")
                     is_palette_union = evidence_class == "qualified_palette_union"
                     is_specialty_subset = evidence_class == "specialty_palette_subset"
-                    is_qualified_source = is_palette_union or is_specialty_subset
+                    is_qualified_historical_table = (
+                        evidence_class == "qualified_historical_table"
+                    )
+                    is_qualified_source = (
+                        is_palette_union
+                        or is_specialty_subset
+                        or is_qualified_historical_table
+                    )
                     source_id = self.ensure_source(
                         year_source["url"],
                         source_id=year_source.get("sourceId"),
@@ -2347,6 +2578,8 @@ class NormalizedArchiveBuilder:
                             if is_palette_union
                             else "specialty_palette_subset"
                             if is_specialty_subset
+                            else "qualified_historical_table"
+                            if is_qualified_historical_table
                             else "audited_color_chart"
                         ),
                         entity_type="model_year",
@@ -2363,6 +2596,8 @@ class NormalizedArchiveBuilder:
                             if is_palette_union
                             else "human_checked_specialty_subset"
                             if is_specialty_subset
+                            else "human_checked_qualified_historical_table"
+                            if is_qualified_historical_table
                             else "source_transcribed"
                         ),
                         review_state=(
@@ -2370,6 +2605,8 @@ class NormalizedArchiveBuilder:
                             if is_palette_union
                             else "reviewed_specialty_palette_subset"
                             if is_specialty_subset
+                            else "reviewed_qualified_historical_table"
+                            if is_qualified_historical_table
                             else "verified"
                         ),
                     )
@@ -2490,6 +2727,10 @@ class NormalizedArchiveBuilder:
                             year_source.get("evidenceClass")
                             == "specialty_palette_subset"
                         )
+                        is_qualified_historical_table = (
+                            year_source.get("evidenceClass")
+                            == "qualified_historical_table"
+                        )
                         source_factory_code_status = availability.get(
                             "factoryCodeStatus"
                         )
@@ -2536,6 +2777,40 @@ class NormalizedArchiveBuilder:
                                 "factory_code": factory_code,
                                 "factory_code_status": factory_code_status,
                                 "touch_up_code": availability.get("touchUpCode"),
+                                "rpo_code": availability.get("rpoCode"),
+                                "seo_code": availability.get("seoCode"),
+                                "seo_code_status": availability.get("seoCodeStatus"),
+                                "source_seo_code_raw": availability.get(
+                                    "sourceSeoCodeRaw"
+                                ),
+                                "source_seo_code_cell_state": availability.get(
+                                    "sourceSeoCodeCellState"
+                                ),
+                                "wa_code": availability.get("waCode"),
+                                "source_wa_code_raw": availability.get(
+                                    "sourceWaCodeRaw"
+                                ),
+                                "source_wa_code_cell_state": availability.get(
+                                    "sourceWaCodeCellState"
+                                ),
+                                "upfitter_code_1": (
+                                    availability.get("upfitterOrderCodes") or {}
+                                ).get("code1"),
+                                "upfitter_code_2": (
+                                    availability.get("upfitterOrderCodes") or {}
+                                ).get("code2"),
+                                "upfitter_solid_color_option": (
+                                    availability.get("upfitterOrderCodes") or {}
+                                ).get("solidColorOption"),
+                                "upfitter_two_tone_color_option": (
+                                    availability.get("upfitterOrderCodes") or {}
+                                ).get("twoToneColorOption"),
+                                "minimum_batch_units": availability.get(
+                                    "minimumBatchUnits"
+                                ),
+                                "factory_installation_claim": availability.get(
+                                    "factoryInstallationClaim"
+                                ),
                                 "availability_state": availability["state"],
                                 "application_type": availability.get("applicationType")
                                 or (
@@ -2549,6 +2824,8 @@ class NormalizedArchiveBuilder:
                                     if is_palette_union
                                     else "published_specialty_palette_subset"
                                     if is_specialty_subset
+                                    else "published_qualified_historical_table"
+                                    if is_qualified_historical_table
                                     else "published_source_transcription"
                                 ),
                                 "evidence_source_id": year_source["source_id"],
@@ -2583,6 +2860,8 @@ class NormalizedArchiveBuilder:
                                 if is_palette_union
                                 else "human_checked_specialty_subset"
                                 if is_specialty_subset
+                                else "human_checked_qualified_historical_table"
+                                if is_qualified_historical_table
                                 else "source_transcribed"
                             ),
                             review_state=(
@@ -2590,6 +2869,8 @@ class NormalizedArchiveBuilder:
                                 if is_palette_union
                                 else "reviewed_specialty_palette_subset"
                                 if is_specialty_subset
+                                else "reviewed_qualified_historical_table"
+                                if is_qualified_historical_table
                                 else "verified"
                             ),
                         )
@@ -2657,7 +2938,12 @@ class NormalizedArchiveBuilder:
                             )
                         )
                         if (
-                            "specialty_palette_subset" not in combined_classes
+                            not combined_classes.intersection(
+                                {
+                                    "specialty_palette_subset",
+                                    "qualified_historical_table",
+                                }
+                            )
                             and not is_exact_program_partition
                         ):
                             raise ValueError(
@@ -2669,11 +2955,12 @@ class NormalizedArchiveBuilder:
                     governing_classes = combined_classes - {
                         "qualified_palette_union",
                         "specialty_palette_subset",
+                        "qualified_historical_table",
                     }
                     audit_state = gap_audit_state_by_model_year.get(model_year_id)
-                    if (
-                        combined_color_count
-                        and audit_state == "reviewed_qualified_historical_table"
+                    if combined_color_count and (
+                        audit_state == "reviewed_qualified_historical_table"
+                        or "qualified_historical_table" in combined_classes
                     ):
                         status = "reviewed_qualified_historical_table"
                     elif combined_color_count and governing_classes:
@@ -2700,9 +2987,15 @@ class NormalizedArchiveBuilder:
                     model_year_evidence_classes[model_year_id] = combined_classes
                     model_year_source_ids[model_year_id] = combined_source_ids
                     if model_year_id in model_year_keys:
-                        if existing_classes == {
-                            "specialty_palette_subset"
-                        } and evidence_classes - {"specialty_palette_subset"}:
+                        if existing_classes.issubset(
+                            {
+                                "specialty_palette_subset",
+                                "qualified_historical_table",
+                            }
+                        ) and evidence_classes - {
+                            "specialty_palette_subset",
+                            "qualified_historical_table",
+                        }:
                             existing_row["generation_id"] = generation_id
                         existing_row["research_status"] = status
                         existing_row["verified_color_count"] = combined_color_count
@@ -2751,6 +3044,8 @@ class NormalizedArchiveBuilder:
                 membership["membership_role"] = "primary"
             elif membership["evidence_class"] == "specialty_palette_subset":
                 membership["membership_role"] = "specialty_overlay"
+            elif membership["evidence_class"] == "qualified_historical_table":
+                membership["membership_role"] = "qualified_historical_overlay"
             elif membership["model_year_id"] == "tahoe:2000" and membership[
                 "generation_id"
             ].startswith("tahoe:tahoe-2000-"):
@@ -3757,6 +4052,40 @@ class NormalizedArchiveBuilder:
                         "factory_code_status"
                     ],
                     "transcribed_touch_up_code": availability.get("touch_up_code"),
+                    "transcribed_rpo_code": availability.get("rpo_code"),
+                    "transcribed_seo_code": availability.get("seo_code"),
+                    "transcribed_seo_code_status": availability.get(
+                        "seo_code_status"
+                    ),
+                    "transcribed_source_seo_code_raw": availability.get(
+                        "source_seo_code_raw"
+                    ),
+                    "transcribed_source_seo_code_cell_state": availability.get(
+                        "source_seo_code_cell_state"
+                    ),
+                    "transcribed_wa_code": availability.get("wa_code"),
+                    "transcribed_source_wa_code_raw": availability.get(
+                        "source_wa_code_raw"
+                    ),
+                    "transcribed_source_wa_code_cell_state": availability.get(
+                        "source_wa_code_cell_state"
+                    ),
+                    "transcribed_upfitter_code_1": availability.get(
+                        "upfitter_code_1"
+                    ),
+                    "transcribed_upfitter_code_2": availability.get(
+                        "upfitter_code_2"
+                    ),
+                    "transcribed_upfitter_solid_color_option": availability.get(
+                        "upfitter_solid_color_option"
+                    ),
+                    "transcribed_upfitter_two_tone_color_option": availability.get(
+                        "upfitter_two_tone_color_option"
+                    ),
+                    "minimum_batch_units": availability.get("minimum_batch_units"),
+                    "factory_installation_claim": availability.get(
+                        "factory_installation_claim"
+                    ),
                     "availability_state": availability["availability_state"],
                     "restriction": availability.get("restriction"),
                     "chart_title": availability["evidence_chart"],
@@ -3771,6 +4100,9 @@ class NormalizedArchiveBuilder:
                         else "human_checked_specialty_palette_subset"
                         if availability["claim_status"]
                         == "published_specialty_palette_subset"
+                        else "human_checked_qualified_historical_table"
+                        if availability["claim_status"]
+                        == "published_qualified_historical_table"
                         else "human_transcribed_source_linked"
                     ),
                 }
@@ -4054,6 +4386,10 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
             row["claim_status"] == "published_qualified_palette_union"
             for row in builder.rows["color_availability"]
         ),
+        "qualified_historical_table_availability_rows": sum(
+            row["claim_status"] == "published_qualified_historical_table"
+            for row in builder.rows["color_availability"]
+        ),
         "reviewed_specialty_palette_subset_model_years": sum(
             row["research_status"] == "reviewed_specialty_palette_subset"
             for row in builder.rows["model_years"]
@@ -4087,10 +4423,14 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
         "normalization_contract": (
             "Missing color rows mean unverified research coverage, not negative availability. "
             "Every published color availability row has one direct evidence_source_id. "
-            "Qualified GM Fleet Guide palette unions and reviewed specialty-paint subsets "
-            "remain distinct from complete governing charts. Exact simultaneous model programs "
+            "Qualified GM Fleet Guide palette unions, qualified historical-table subsets, "
+            "and reviewed specialty-paint subsets remain distinct from complete governing "
+            "charts. Exact simultaneous model programs "
             "remain separate generation memberships within one model-year. Missing factory codes are null "
-            "and carry a controlled source-status value. Paint schemes preserve primary and "
+            "and carry a controlled source-status value. RPO, SEO, literal SEO-cell state, "
+            "normalized WA code, literal WA-cell state, authorized-upfitter order codes, "
+            "minimum-batch, and factory-installation fields remain structured and source-linked. "
+            "Paint schemes preserve primary and "
             "secondary components separately and never create standalone color availability. "
             "RockAuto retailer observations remain isolated in four secondary-lead tables and "
             "never create color availability or evidence claims."

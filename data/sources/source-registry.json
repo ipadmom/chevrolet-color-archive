@@ -1,9 +1,9 @@
 {
-  "schema_version": 9,
-  "generated_at": "2026-07-22T23:29:52Z",
+  "schema_version": 11,
+  "generated_at": "2026-07-23T01:22:06Z",
   "scope": "Canonical source registry for catalog, platform, factory-color, photo, archive, license, and research-document citations.",
-  "source_count": 2693,
-  "source_link_count": 26000,
+  "source_count": 2718,
+  "source_link_count": 27631,
   "sources": [
     {
       "source_id": "autocolorlibrary-1970-chevrolet-truck",
@@ -633,7 +633,28 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
       "citation_count": 75,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
+    },
+    {
+      "source_id": "gm-1983-chevrolet-truck-color-trim",
+      "canonical_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1983-Chevrolet-Truck.pdf",
+      "title": "1983 Chevrolet Truck Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "retrieved_on": null,
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 6802994,
+      "content_sha256": "4e8b447e6617d7be8b9c56fa4ef6e1e5e62918c8d8d45c5abc71f74e5ee04ce1",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 18,
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-2011-police-manual",
@@ -653,8 +674,8 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 234,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "citation_count": 235,
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-2012-municipal-manual",
@@ -674,8 +695,8 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 151,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+      "citation_count": 358,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2013-municipal-guide",
@@ -695,8 +716,8 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-chevrolet-municipal-vehicles-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 146,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+      "citation_count": 273,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2014-police-guide",
@@ -716,8 +737,8 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 126,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+      "citation_count": 226,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2015-caprice-9c1-specification-guide",
@@ -738,7 +759,28 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 27,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2015-impala-limited-9c1-9c3",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2015_impala_limited_police_specification_guide_4_10.pdf",
+      "title": "2015 Chevrolet Impala Limited 9C1 and 9C3 Police Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 11524978,
+      "content_sha256": "e6247f215d4ea186b39a663eccd6454a27ad3adf05134e11318a19be39981f94",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 98,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2015-silverado-ssv",
@@ -759,7 +801,28 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2015-tahoe-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2015_tahoe_5w4_4x4_specification_guide_4_10.pdf",
+      "title": "2015 Chevrolet Tahoe 4x4 Special Service 5W4 Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 10165047,
+      "content_sha256": "aa9fa6a25c8deb0c53476730704a698d70f0b2c1adfd8afd8eaa5831ce2a32df",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 30,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2016-caprice-9c1-specification-guide",
@@ -780,28 +843,70 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 26,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2016-impala-limited-9c1-9c3",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Impala-Limited-Police-Specification-Guide.pdf",
+      "title": "2016 Chevrolet Impala Limited 9C1 and 9C3 Police Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9949295,
+      "content_sha256": "74f946e2a505d2c113002afc75188871e0f9b5f20361a42167d8329ec8b731fd",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 98,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2016-tahoe-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Tahoe-Special-Service-4x4-Specification-Guide.pdf",
+      "title": "2016 Chevrolet Tahoe 4x4 Special Service 5W4 Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 38765853,
+      "content_sha256": "383f603bd378965d4932e145650ab90eadb084c6c5ae9c24ca870530721d1696",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 28,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2016-tahoe-9c1",
       "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2016-Tahoe-9C1-2WD-Specification-Guide.pdf",
-      "title": "2016 Chevrolet municipal/fleet manual candidate",
+      "title": "2016 Chevrolet Tahoe 2WD Police Package 9C1 Specification Guide",
       "publisher": "General Motors",
-      "source_type": "official_municipal_fleet_manual_candidate",
+      "source_type": "specialty_paint_primary_pdf",
       "officiality": "official",
       "document_authority": null,
       "retrieval_host_type": null,
-      "retrieved_on": null,
+      "retrieved_on": "2026-07-22",
       "discovered_from_url": null,
       "http_status": null,
       "content_type": "application/pdf",
       "content_length_bytes": 11491154,
       "content_sha256": "557d7f6e460d12ff257d563848f2c0aa905729495d8a99fb8bc8df68bef8ce4c",
       "last_modified": null,
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "citation_count": 30,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2017-caprice-9c1-specification-guide",
@@ -822,7 +927,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 92,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2017-express-passenger",
@@ -843,7 +948,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2017-silverado-ssv",
@@ -864,7 +969,28 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2017-tahoe-9c1-4wd",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/Tahoe-9C1-4WD-Specification-Guide-2017.pdf",
+      "title": "2017 Chevrolet Tahoe 4WD Police Package 9C1 Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 21730455,
+      "content_sha256": "e51297ea8d36bb458db2e9cd2796807ad424930194ad4c283236d181619c2aaa",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 27,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2018-silverado-ssv",
@@ -885,7 +1011,28 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2018-tahoe-9c1-4wd",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2018-Tahoe-4WD-9C1-Pursuit.pdf",
+      "title": "2018 Chevrolet Tahoe 4WD Police Package 9C1 Pursuit Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 17155009,
+      "content_sha256": "dfe05400fb07c349665a79aebdcec7e4e66ddbe38ac5efc98afe8991b61bb01d",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 25,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2019-silverado-ssv",
@@ -906,7 +1053,49 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2019-suburban-1fl-3500hd",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2019-Suburban-1FL-Suburban-3500HD.pdf",
+      "title": "2019 Chevrolet Suburban 1FL and 3500HD Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9884550,
+      "content_sha256": "42fc66eed0cb1f62418e2636c91c8c98c9ca0c84f1ddcccbdec772dae9e1d22c",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 21,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2019-tahoe-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/09/2019-Tahoe-4x4-Special-Service-5W4.pdf",
+      "title": "2019 Chevrolet Tahoe 4x4 Special Service 5W4 Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 11212375,
+      "content_sha256": "31ad0b80b9f822761e7d01c33dae1e93f5e2267b96382dd8ddb70013000dc397",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 24,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2020-silverado-ssv",
@@ -927,7 +1116,49 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2020-suburban-1fl",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2020-Suburban-1FL-7.pdf",
+      "title": "2020 Chevrolet Suburban 1FL Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 7743853,
+      "content_sha256": "0608bdfc002d40868fc1d3e2dd40c505799beaadf3ac1a5ce5037a8d41010cf2",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-suburban-1fl-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 21,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
+    },
+    {
+      "source_id": "gm-2020-tahoe-5w4",
+      "canonical_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2020-Tahoe-4x4-Special-Service-5W4-8.pdf",
+      "title": "2020 Chevrolet Tahoe 4x4 Special Service 5W4 Specification Guide",
+      "publisher": "General Motors",
+      "source_type": "specialty_paint_primary_pdf",
+      "officiality": "official",
+      "document_authority": null,
+      "retrieval_host_type": null,
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": null,
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 12650720,
+      "content_sha256": "152ce9c7e2f0a89908b0fe5b17b990b7a7897b22b6b085d8cc26a7ea5de7ebb1",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 24,
+      "notes": "Retained color-research artifact; categories: app_publication_records, historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2021-suburban-1fl",
@@ -948,7 +1179,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2021-tahoe-9c1",
@@ -969,7 +1200,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2022-express-cargo",
@@ -990,7 +1221,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2022-silverado-ltd-5w4",
@@ -1011,7 +1242,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2022-tahoe-5w4",
@@ -1032,7 +1263,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2023-bolt-euv-5w4",
@@ -1053,7 +1284,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-bolt-euv-ssv-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 27,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-2023-silverado-9c1",
@@ -1074,7 +1305,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2023-tahoe-5w4",
@@ -1095,7 +1326,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2024-blazer-ev-9c1-9c3",
@@ -1116,7 +1347,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 11,
-      "notes": "Retained specialty-color research artifact; categories: verified_not_published"
+      "notes": "Retained color-research artifact; categories: verified_not_published"
     },
     {
       "source_id": "gm-2024-silverado-9c1",
@@ -1137,7 +1368,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2024-tahoe-5w4",
@@ -1158,7 +1389,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2025-blazer-ev-9c1-9c3-5w4",
@@ -1179,7 +1410,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 11,
-      "notes": "Retained specialty-color research artifact; categories: verified_not_published"
+      "notes": "Retained color-research artifact; categories: verified_not_published"
     },
     {
       "source_id": "gm-2025-silverado-5w4",
@@ -1200,7 +1431,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2025-silverado-9c1",
@@ -1221,7 +1452,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2025-tahoe-5w4",
@@ -1242,7 +1473,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2026-blazer-ev-9c1-9c3-5w4",
@@ -1263,7 +1494,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-blazer-ev-9c1-9c3-5w4-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 16,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-2026-silverado-5w4-041426",
@@ -1284,7 +1515,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-5w4-ssv-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 79,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-2026-silverado-9c1",
@@ -1305,7 +1536,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: historic_gm_upfitter_candidates"
+      "notes": "Retained color-research artifact; categories: historic_gm_upfitter_candidates"
     },
     {
       "source_id": "gm-2026-silverado-9c1-041426",
@@ -1326,7 +1557,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2026-chevrolet-silverado-9c1-specification-guide-gm.pdf",
       "archive_relpath": null,
       "citation_count": 79,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-brochure-1982-chevrolet-suburban-xr793",
@@ -7497,9 +7728,9 @@
       "content_length_bytes": 2028295,
       "content_sha256": "9afb28d13caca261b3cc2f493b353c2d79e2c678c8e67de2906906ec5229a317",
       "last_modified": "Tue, 21 Jul 2026 06:27:15 GMT",
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
       "archive_relpath": "9a/fb/9afb28d13caca261b3cc2f493b353c2d79e2c678c8e67de2906906ec5229a317.pdf",
-      "citation_count": 9,
+      "citation_count": 24,
       "notes": "Official index title: 1981 Chevrolet G Van"
     },
     {
@@ -7602,9 +7833,9 @@
       "content_length_bytes": 11196101,
       "content_sha256": "ea5aa8b61c7975cf814e56518293f870b46a390f4db5b33d3428eb2d38d655c9",
       "last_modified": "Tue, 21 Jul 2026 06:27:24 GMT",
-      "archive_url": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
       "archive_relpath": "ea/5a/ea5aa8b61c7975cf814e56518293f870b46a390f4db5b33d3428eb2d38d655c9.pdf",
-      "citation_count": 7,
+      "citation_count": 20,
       "notes": "Official index title: 1981 Chevrolet Motorhome"
     },
     {
@@ -11700,7 +11931,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
       "citation_count": 19,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "gm-heritage-1994-chevrolet-astro-van",
@@ -12602,7 +12833,7 @@
       "last_modified": "Tue, 21 Jul 2026 06:32:10 GMT",
       "archive_url": null,
       "archive_relpath": "ab/08/ab08a6e92b13d07b659617fb7214b732f49b1bd35ad9f8545d2111deb743617b.pdf",
-      "citation_count": 58,
+      "citation_count": 59,
       "notes": "Official index title: 1996 Chevrolet G Van"
     },
     {
@@ -16403,7 +16634,7 @@
       "last_modified": "Fri, 17 Jul 2026 04:52:43 GMT",
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 3232,
+      "citation_count": 3235,
       "notes": "Every link in the official index whose resolved URL is in the GM Chevrolet vehicle-information-kits PDF directory."
     },
     {
@@ -16509,7 +16740,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
       "archive_relpath": null,
       "citation_count": 21,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "new-jersey-tahoe-police-contract-2006",
@@ -16530,7 +16761,7 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
       "archive_relpath": null,
       "citation_count": 21,
-      "notes": "Retained specialty-color research artifact; categories: app_publication_records"
+      "notes": "Retained color-research artifact; categories: app_publication_records"
     },
     {
       "source_id": "rockauto-paint-code-leads",
@@ -16887,7 +17118,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_01326505d29c085732242ec8",
@@ -17349,7 +17580,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_035bf3253447e7c7d3ab49e9",
@@ -17705,7 +17936,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 10,
+      "citation_count": 55,
       "notes": null
     },
     {
@@ -18167,7 +18398,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2013-chevrolet-municipal-vehicles-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 52,
+      "citation_count": 95,
       "notes": "{\"asset_name\":\"2013-chevrolet-municipal-vehicles-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2013-municipal-guide\"}"
     },
     {
@@ -19722,7 +19953,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_141aa2594ec7b5e9dd3db260",
@@ -20229,6 +20460,27 @@
       "notes": null
     },
     {
+      "source_id": "src_17a4c522939f7d85f4015a5c",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9949295,
+      "content_sha256": "74f946e2a505d2c113002afc75188871e0f9b5f20361a42167d8329ec8b731fd",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 35,
+      "notes": "{\"asset_name\":\"2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2016-impala-limited-9c1-9c3\"}"
+    },
+    {
       "source_id": "src_18171822e5e1326b39f9ce8d",
       "canonical_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/1980_Chevrolet_Citation_fr.jpg",
       "title": "1980 Chevrolet Citation fr.jpg",
@@ -20709,7 +20961,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_1b9b84d103ae325b7482cd0d",
@@ -21276,7 +21528,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_202c84f3a856c6830a8505c6",
@@ -22245,6 +22497,27 @@
       "notes": null
     },
     {
+      "source_id": "src_252c5f32776c3f9d6afdd137",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 11491154,
+      "content_sha256": "557d7f6e460d12ff257d563848f2c0aa905729495d8a99fb8bc8df68bef8ce4c",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 13,
+      "notes": "{\"asset_name\":\"2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2016-tahoe-9c1\"}"
+    },
+    {
       "source_id": "src_256b70cb3cf1839ad34e33e2",
       "canonical_url": "https://www.xr793.com/wp-content/uploads/2019/06/1959-Chevrolet-Truck-Engineering-Features-.pdf",
       "title": "1959-Chevrolet-Truck-Engineering-Features-.pdf",
@@ -22516,6 +22789,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_279e5d1c31500d4fb02cc56e",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 11212375,
+      "content_sha256": "31ad0b80b9f822761e7d01c33dae1e93f5e2267b96382dd8ddb70013000dc397",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 11,
+      "notes": "{\"asset_name\":\"2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2019-tahoe-5w4\"}"
     },
     {
       "source_id": "src_27d73eeb31764f50ecfe9246",
@@ -22852,6 +23146,27 @@
       "archive_relpath": null,
       "citation_count": 5,
       "notes": null
+    },
+    {
+      "source_id": "src_29ba390f7f4f2b30e982b4ab",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 10165047,
+      "content_sha256": "aa9fa6a25c8deb0c53476730704a698d70f0b2c1adfd8afd8eaa5831ce2a32df",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 13,
+      "notes": "{\"asset_name\":\"2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2015-tahoe-5w4\"}"
     },
     {
       "source_id": "src_29ef94a9c3cf11c701805603",
@@ -24194,7 +24509,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 90,
+      "citation_count": 91,
       "notes": null
     },
     {
@@ -25056,7 +25371,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 4,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates, verified_not_published"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates, verified_not_published"
     },
     {
       "source_id": "src_38032dd01a89186e0949ce60",
@@ -25748,7 +26063,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 97,
+      "citation_count": 98,
       "notes": null
     },
     {
@@ -26421,7 +26736,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_4355ec1f83fb9f3674097ef2",
@@ -27093,7 +27408,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_47926a811a3bfeb0a399eb7b",
@@ -28142,7 +28457,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 53,
+      "citation_count": 54,
       "notes": null
     },
     {
@@ -29024,7 +29339,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 20,
+      "citation_count": 70,
       "notes": null
     },
     {
@@ -29817,8 +30132,8 @@
       "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
       "http_status": null,
       "content_type": "text/plain",
-      "content_length_bytes": 14411,
-      "content_sha256": "79cf8d14ed9ef9d64f89f43b5261d76fba857fdcc3c475dd1c6a2889816043cf",
+      "content_length_bytes": 16118,
+      "content_sha256": "6bf87dd7e698b6183ec8f6d45692bb7ebcc41b5846f753e55eaba7d791e3ec63",
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest.txt",
       "archive_relpath": null,
@@ -30351,6 +30666,27 @@
       "notes": null
     },
     {
+      "source_id": "src_5d9ea797ab68fd07b39baf11",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 11524978,
+      "content_sha256": "e6247f215d4ea186b39a663eccd6454a27ad3adf05134e11318a19be39981f94",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 35,
+      "notes": "{\"asset_name\":\"2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2015-impala-limited-9c1-9c3\"}"
+    },
+    {
       "source_id": "src_5dabb293ce4f9c105c69a67a",
       "canonical_url": "https://www.youtube.com/watch?v=mSGW5FfidnU",
       "title": "watch",
@@ -30645,6 +30981,27 @@
       "notes": null
     },
     {
+      "source_id": "src_5f86a91b2ae0ac498abda8e0",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "title": "Retained source Release asset: 1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 11196101,
+      "content_sha256": "ea5aa8b61c7975cf814e56518293f870b46a390f4db5b33d3428eb2d38d655c9",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 6,
+      "notes": "{\"asset_name\":\"1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_historical_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1981-chevrolet-motorhome\"}"
+    },
+    {
       "source_id": "src_5f934ce53d616a6381ea0dce",
       "canonical_url": "https://commons.wikimedia.org/wiki/File:2006_Chevrolet_SSR_(20229726871).jpg",
       "title": "Wikimedia Commons file page: 2006 Chevrolet SSR (20229726871).jpg",
@@ -30788,7 +31145,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 57,
+      "citation_count": 58,
       "notes": "{\"asset_name\":\"2011-chevrolet-municipal-vehicles-technical-manual-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2011-police-manual\"}"
     },
     {
@@ -31229,7 +31586,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 17,
+      "citation_count": 16,
       "notes": null
     },
     {
@@ -31271,7 +31628,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2014-chevrolet-police-vehicles-technical-guide-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 47,
+      "citation_count": 83,
       "notes": "{\"asset_name\":\"2014-chevrolet-police-vehicles-technical-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2014-police-guide\"}"
     },
     {
@@ -31314,7 +31671,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_637dcc470c7208bfc0422c10",
@@ -31800,6 +32157,27 @@
       "notes": null
     },
     {
+      "source_id": "src_65e7e02608a7095167d19e95",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 9884550,
+      "content_sha256": "42fc66eed0cb1f62418e2636c91c8c98c9ca0c84f1ddcccbdec772dae9e1d22c",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 9,
+      "notes": "{\"asset_name\":\"2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2019-suburban-1fl-3500hd\"}"
+    },
+    {
       "source_id": "src_65f54e70291581b2868976e8",
       "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-suburban-brochure-image-11.jpg",
       "title": "Retained source Release asset: 1993-chevrolet-blazer-suburban-brochure-image-11.jpg",
@@ -31839,7 +32217,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_66ab5879fc66a15c5f3f2212",
@@ -33645,7 +34023,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_70e83f6f86e7947b760c921d",
@@ -34296,7 +34674,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_75745f476862ee3a0deadd14",
@@ -34465,6 +34843,27 @@
       "archive_relpath": null,
       "citation_count": 4,
       "notes": null
+    },
+    {
+      "source_id": "src_76fae921fb01af79481bcd87",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 12650720,
+      "content_sha256": "152ce9c7e2f0a89908b0fe5b17b990b7a7897b22b6b085d8cc26a7ea5de7ebb1",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 11,
+      "notes": "{\"asset_name\":\"2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2020-tahoe-5w4\"}"
     },
     {
       "source_id": "src_771129200203b7bd14999d9d",
@@ -35115,7 +35514,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_7b2afbf4a4dbcc9006ce2870",
@@ -35913,7 +36312,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 4,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates, verified_not_published"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates, verified_not_published"
     },
     {
       "source_id": "src_816d24e40ba99cae132b315c",
@@ -36144,7 +36543,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_826742a6f473b0d4e9968436",
@@ -36649,6 +37048,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_8671e7b8dead9093c23174f5",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 17155009,
+      "content_sha256": "dfe05400fb07c349665a79aebdcec7e4e66ddbe38ac5efc98afe8991b61bb01d",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 12,
+      "notes": "{\"asset_name\":\"2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2018-tahoe-9c1-4wd\"}"
     },
     {
       "source_id": "src_8682a35b19b38a7e73ca5854",
@@ -37281,6 +37701,27 @@
       "notes": null
     },
     {
+      "source_id": "src_8b30a2d960a9c40deca4746c",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 38765853,
+      "content_sha256": "383f603bd378965d4932e145650ab90eadb084c6c5ae9c24ca870530721d1696",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 12,
+      "notes": "{\"asset_name\":\"2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2016-tahoe-5w4\"}"
+    },
+    {
       "source_id": "src_8b59e5083c99dc8d8f0040b7",
       "canonical_url": "https://en.wikipedia.org/wiki/Chevrolet_HHR",
       "title": "Chevrolet HHR",
@@ -37530,7 +37971,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_8d25ee95007faf8766278cc1",
@@ -37909,6 +38350,27 @@
       "archive_relpath": null,
       "citation_count": 3,
       "notes": null
+    },
+    {
+      "source_id": "src_90935320dcb438fe2764e9f3",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "title": "Retained source Release asset: 1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 6802994,
+      "content_sha256": "4e8b447e6617d7be8b9c56fa4ef6e1e5e62918c8d8d45c5abc71f74e5ee04ce1",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 8,
+      "notes": "{\"asset_name\":\"1983-chevrolet-truck-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_information_kit\",\"upstream_source_id\":\"gm-1983-chevrolet-truck-color-trim\"}"
     },
     {
       "source_id": "src_90b8c0ecaba9d977dbb11961",
@@ -41120,7 +41582,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 23,
+      "citation_count": 60,
       "notes": null
     },
     {
@@ -41226,7 +41688,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_a431bb00eec274f87e3245ba",
@@ -41876,7 +42338,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 8,
+      "citation_count": 9,
       "notes": "{\"asset_name\":\"1993-chevrolet-s-10-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1993-chevrolet-s-10\"}"
     },
     {
@@ -42590,7 +43052,7 @@
       "last_modified": null,
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf",
       "archive_relpath": null,
-      "citation_count": 53,
+      "citation_count": 122,
       "notes": "{\"asset_name\":\"2012-chevrolet-municipal-vehicles-specifications-manual-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_manual\",\"upstream_source_id\":\"gm-2012-municipal-manual\"}"
     },
     {
@@ -43768,6 +44230,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_b1d719973d0fbf0d828c8898",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-suburban-1fl-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2020-chevrolet-suburban-1fl-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 7743853,
+      "content_sha256": "0608bdfc002d40868fc1d3e2dd40c505799beaadf3ac1a5ce5037a8d41010cf2",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-suburban-1fl-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 9,
+      "notes": "{\"asset_name\":\"2020-chevrolet-suburban-1fl-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2020-suburban-1fl\"}"
     },
     {
       "source_id": "src_b1ed5cbcf32573884d794d30",
@@ -45026,7 +45509,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 58,
+      "citation_count": 68,
       "notes": null
     },
     {
@@ -45908,7 +46391,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 364,
+      "citation_count": 363,
       "notes": null
     },
     {
@@ -45951,7 +46434,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_c1bbe51431a770fc540e2715",
@@ -46245,7 +46728,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_c3695df9c2c40fb64b225a4d",
@@ -46329,7 +46812,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_c3c6c23a9802f8561a2922cf",
@@ -46790,7 +47273,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 7,
+      "citation_count": 52,
       "notes": null
     },
     {
@@ -48344,7 +48827,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 217,
+      "citation_count": 222,
       "notes": null
     },
     {
@@ -48408,7 +48891,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_d113345a064ea641666a8b8c",
@@ -49037,7 +49520,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 17,
+      "citation_count": 78,
       "notes": null
     },
     {
@@ -50886,7 +51369,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_dfada0e7effe5d629a2f0df1",
@@ -52083,7 +52566,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_e76750be494668f71dc47b4d",
@@ -52187,7 +52670,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 127,
+      "citation_count": 126,
       "notes": null
     },
     {
@@ -52314,7 +52797,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 2,
-      "notes": "Retained specialty-color research artifact; categories: modern_order_guide_snapshot_candidates"
+      "notes": "Retained color-research artifact; categories: modern_order_guide_snapshot_candidates"
     },
     {
       "source_id": "src_e8c3afd044049d85d5e5493b",
@@ -52565,7 +53048,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 68,
+      "citation_count": 71,
       "notes": null
     },
     {
@@ -52798,6 +53281,27 @@
       "archive_relpath": null,
       "citation_count": 6,
       "notes": "{\"asset_name\":\"1963-chevrolet-suburban-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"reviewed_no_chart_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1963-chevrolet-suburban\"}"
+    },
+    {
+      "source_id": "src_ea7a7b2ce5b2e6bf82c43335",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "title": "Retained source Release asset: 1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 2028295,
+      "content_sha256": "9afb28d13caca261b3cc2f493b353c2d79e2c678c8e67de2906906ec5229a317",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 7,
+      "notes": "{\"asset_name\":\"1981-chevrolet-g-van-vehicle-information-kit-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_qualified_historical_vehicle_information_kit\",\"upstream_source_id\":\"gm-heritage-1981-chevrolet-g-van\"}"
     },
     {
       "source_id": "src_eaac29bbe10ae2f53abe8dc2",
@@ -54392,7 +54896,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 9,
+      "citation_count": 14,
       "notes": null
     },
     {
@@ -54770,7 +55274,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 63,
+      "citation_count": 90,
       "notes": null
     },
     {
@@ -55589,7 +56093,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 21,
+      "citation_count": 71,
       "notes": null
     },
     {
@@ -55843,6 +56347,27 @@
       "archive_relpath": null,
       "citation_count": 2,
       "notes": null
+    },
+    {
+      "source_id": "src_fbf5e0c2be86fe5e8b101eb4",
+      "canonical_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "title": "Retained source Release asset: 2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "publisher": "Chevrolet Color Archive on GitHub",
+      "source_type": "archive_mirror",
+      "officiality": "licensed",
+      "document_authority": null,
+      "retrieval_host_type": "archival_mirror",
+      "retrieved_on": "2026-07-22",
+      "discovered_from_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+      "http_status": null,
+      "content_type": "application/pdf",
+      "content_length_bytes": 21730455,
+      "content_sha256": "e51297ea8d36bb458db2e9cd2796807ad424930194ad4c283236d181619c2aaa",
+      "last_modified": null,
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+      "archive_relpath": null,
+      "citation_count": 12,
+      "notes": "{\"asset_name\":\"2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf\",\"release_tag\":\"brochure-source-archive-v1\",\"role\":\"controlling_specialty_vehicle_specification_guide\",\"upstream_source_id\":\"gm-2017-tahoe-9c1-4wd\"}"
     },
     {
       "source_id": "src_fc363147a8a3950ed9cd6ea4",
@@ -56303,7 +56828,7 @@
       "last_modified": null,
       "archive_url": null,
       "archive_relpath": null,
-      "citation_count": 12,
+      "citation_count": 53,
       "notes": null
     },
     {
@@ -56451,7 +56976,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 3,
-      "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
+      "notes": "Retained color-research artifact; categories: usda_primary_sources"
     },
     {
       "source_id": "usfs-hotshot-superintendent",
@@ -56472,7 +56997,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 4,
-      "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
+      "notes": "Retained color-research artifact; categories: usda_primary_sources"
     },
     {
       "source_id": "usfs-model-326-chassis",
@@ -56493,7 +57018,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 3,
-      "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
+      "notes": "Retained color-research artifact; categories: usda_primary_sources"
     },
     {
       "source_id": "usfs-model-346-chassis",
@@ -56514,7 +57039,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 3,
-      "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
+      "notes": "Retained color-research artifact; categories: usda_primary_sources"
     },
     {
       "source_id": "usfs-model-428u-448u-body",
@@ -56535,7 +57060,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 4,
-      "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
+      "notes": "Retained color-research artifact; categories: usda_primary_sources"
     },
     {
       "source_id": "usfs-model-643-chassis",
@@ -56556,7 +57081,7 @@
       "archive_url": null,
       "archive_relpath": null,
       "citation_count": 4,
-      "notes": "Retained specialty-color research artifact; categories: usda_primary_sources"
+      "notes": "Retained color-research artifact; categories: usda_primary_sources"
     }
   ]
 }

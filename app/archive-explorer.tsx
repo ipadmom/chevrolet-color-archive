@@ -303,6 +303,7 @@ export function ArchiveExplorer() {
   const yearSourceIsIncompleteSubset =
     yearSource?.evidenceClass === "qualified_palette_union" ||
     yearSource?.evidenceClass === "specialty_palette_subset" ||
+    yearSource?.evidenceClass === "qualified_historical_table" ||
     yearSource?.evidenceClass === "qualified_exact_program_palette";
   const yearSourceIsReviewedNoChart = Boolean(
     yearSource && generation?.listingCount === 0,
@@ -313,6 +314,9 @@ export function ArchiveExplorer() {
     }
     if (yearSource?.evidenceClass === "specialty_palette_subset") {
       return "THIS IS AN EXACT, REVIEWED SPECIALTY-PAINT SUBSET FOR THE CITED MODEL VARIANT. IT IS NOT THE COMPLETE MODEL-YEAR EXTERIOR-COLOR PALETTE.";
+    }
+    if (yearSource?.evidenceClass === "qualified_historical_table") {
+      return "THIS IS AN EXACT, REVIEWED SUBSET FROM THE CITED STANDARD EXTERIOR-COLOR TABLE. IT IS NOT A SPECIALTY-PAINT CLAIM OR A COMPLETE MODEL-YEAR PALETTE.";
     }
     if (yearSource?.evidenceClass === "qualified_exact_program_palette") {
       return "THIS IS AN EXACT, REVIEWED PROGRAM-SPECIFIC PALETTE FROM A MANUFACTURER DOCUMENT CARRIED BY THE CITED ARCHIVAL HOST. IT IS NOT AN UNQUALIFIED ALL-TAHOE PALETTE.";
@@ -1132,9 +1136,10 @@ export function ArchiveExplorer() {
                   />
                 </label>
                 <small>
-                  Searches model, year, era/platform, color, code, restriction,
-                  fleet/specialty notes, source, revision, locator, and clearly
-                  labeled secondary retailer leads. Secondary leads are research
+                  Searches model, year, era/platform, color, RPO/SEO/paint code,
+                  source-cell state, batch requirement, restriction, fleet/specialty
+                  notes, source, revision, locator, and clearly labeled secondary
+                  retailer leads. Secondary leads are research
                   only and never open a model-year route. Examples: {" "}
                   <code>forest.*green</code>, <code>^200[1-7]$</code>, or {" "}
                   <code>/tahoe|suburban/i</code>.

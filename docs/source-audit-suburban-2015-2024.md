@@ -14,6 +14,8 @@ sources:
   - gm-fleet-guide-us-2022-v6
   - gm-fleet-guide-us-2023-v3
   - gm-fleet-guide-us-2024-v3
+  - gm-2019-suburban-1fl-3500hd
+  - gm-2020-suburban-1fl
 ---
 
 # Chevrolet Suburban exterior-color cross-check, 2015-2024
@@ -42,6 +44,28 @@ Two additional source-metadata issues do not change the 92-row result:
 
 1. The 2018 source-level `color_table_candidate_pdf_pages` array originally omitted PDF page 65 because the Suburban palette’s image-heavy layout reduced text extraction recall. PDF page 60 remains a valid Traverse color-table candidate; the audited Suburban PDF page 65 is now also enumerated.
 2. The 2024 source record’s historical GM path names a `2023MY` Fleet Guide dated `050622`. It now lives in `historical_official_url`, not `direct_official_url`, because it redirects and does not serve the retained 2024 V3 bytes.
+
+The regular-palette total is intentionally separate from **10 exact specialty-paint applications** in the official GM Upfitter specification guides: five for the 2019 Suburban 1FL and 3500HD source scope, and five for the 2020 Suburban 1FL source scope. These applications are published as specialty overlays and do not change the 92 regular-palette rows.
+
+## Separate 2019-2020 Suburban specialty-paint applications
+
+| Model year | Exact source scope | Color | WA number as printed | SEO cell | Minimum batch |
+|---:|---|---|---|---|---|
+| 2019 | Suburban 1FL and 3500HD | Victory Red | 9260 | 5T4 | none printed |
+| 2019 | Suburban 1FL and 3500HD | Woodland Green | 9015 | 9V5 | none printed |
+| 2019 | Suburban 1FL and 3500HD | Wheatland Yellow | 253A | 9W3 | none printed |
+| 2019 | Suburban 1FL and 3500HD | MSP Blue | 5665 | `NONE` | none printed |
+| 2019 | Suburban 1FL and 3500HD | Dark Toreador Red | 334D | `NONE` | none printed |
+| 2020 | Suburban 1FL | Victory Red | 9260 | 5T4 | none printed |
+| 2020 | Suburban 1FL | Woodland Green | 9015 | 9V5 | none printed |
+| 2020 | Suburban 1FL | Wheatland Yellow | 253A | 9W3 | none printed |
+| 2020 | Suburban 1FL | MSP Blue | 5665 | `NONE` | none printed |
+| 2020 | Suburban 1FL | Dark Toreador Red | 334D | `NONE` | none printed |
+
+- 2019 controlling source: [official GM Upfitter guide](https://www.gmupfitter.com/wp-content/uploads/2021/05/2019-Suburban-1FL-Suburban-3500HD.pdf), PDF page 10, printed page 6; [retained GitHub Release copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf).
+- 2020 controlling source: [official GM Upfitter guide](https://www.gmupfitter.com/wp-content/uploads/2021/05/2020-Suburban-1FL-7.pdf), PDF page 10, printed page 6; [retained GitHub Release copy](https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2020-chevrolet-suburban-1fl-specification-guide-gm.pdf).
+
+The archive preserves the source semantics exactly. The WA cells omit the `WA-` prefix, so the normalized `WA-` form and source-literal value are stored separately. Four SEO cells literally print `NONE`; `NONE` is a cell state, not an inferred option code. Neither guide prints a minimum-batch requirement or expressly states the paint-application site. No adjacent year, trim, or counterpart program is inferred.
 
 ## Method and palette classification
 

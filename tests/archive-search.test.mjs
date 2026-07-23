@@ -707,6 +707,77 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
     30,
   );
 
+  const laterFleetCounts = new Map([
+    ["2015", 7],
+    ["2016", 14],
+    ["2017", 6],
+    ["2018", 5],
+    ["2019", 5],
+    ["2020", 5],
+  ]);
+  const tahoe = byId.get("tahoe");
+  for (const [year, expectedCount] of laterFleetCounts) {
+    const rows = tahoe.generations.filter(
+      (generation) =>
+        generation.years.includes(year) &&
+        generation.sources[year]?.evidenceClass === "specialty_palette_subset",
+    );
+    assert.equal(rows.length, expectedCount, `Tahoe ${year} specialty rows`);
+  }
+  assert.deepEqual(
+    new Set(
+      tahoe.generations
+        .filter(
+          (generation) =>
+            generation.years.includes("2016") &&
+            generation.sources["2016"]?.evidenceClass ===
+              "specialty_palette_subset",
+        )
+        .map((generation) => generation.programId),
+    ),
+    new Set([
+      "gm-2016-tahoe-9c1-seo-paint",
+      "gm-2016-tahoe-5w4-seo-paint",
+    ]),
+  );
+
+  for (const year of ["2015", "2016"]) {
+    const kerrRows = byId.get("impala-limited").generations.filter(
+      (generation) =>
+        generation.years.includes(year) &&
+        generation.programId ===
+          `gm-${year}-impala-limited-kerr-authorized-upfitter-paint`,
+    );
+    assert.equal(kerrRows.length, 30, `Impala Limited ${year} Kerr rows`);
+    assert.ok(
+      kerrRows.every(({ colors }) => {
+        const availability = colors[0].availability[year];
+        return (
+          availability.applicationType === "authorized_upfitter_post_build" &&
+          availability.factoryCode === null &&
+          availability.factoryCodeStatus === "not printed" &&
+          availability.seoCode === null &&
+          availability.seoCodeStatus === "column_absent_in_source" &&
+          availability.sourceSeoCodeCellState === "column_absent" &&
+          availability.sourceWaCodeCellState === "printed_without_prefix" &&
+          availability.factoryInstallationClaim === false &&
+          availability.upfitterOrderCodes?.solidColorOption === "AAS" &&
+          availability.upfitterOrderCodes?.twoToneColorOption === "AAT"
+        );
+      }),
+    );
+  }
+
+  for (const year of ["2019", "2020"]) {
+    const suburbanRows = byId.get("suburban").generations.filter(
+      (generation) =>
+        generation.years.includes(year) &&
+        generation.sources[year]?.evidenceClass === "specialty_palette_subset" &&
+        generation.programId?.startsWith(`gm-${year}-suburban-`),
+    );
+    assert.equal(suburbanRows.length, 5, `Suburban ${year} fleet rows`);
+  }
+
   const bolt = buildArchiveMatrix(byId.get("bolt-euv"), "2023");
   assert.equal(
     bolt.colors.filter((color) => color.availability["2023"]).length,
@@ -829,6 +900,89 @@ test("all-field search indexes the normalized fallback specialty application typ
   );
   assert.equal(matches.length, 21);
   assert.ok(matches.every((record) => record.recordKind === "availability"));
+});
+
+test("all-field search indexes structured RPO, SEO, source-cell, and batch fields", async () => {
+  const [
+    { buildArchiveSearchRecords, compileSafeArchivePattern, recordMatchesPattern },
+    models,
+  ] = await Promise.all([loadSearchModule(), loadArchiveModels()]);
+  const records = buildArchiveSearchRecords(models, [], {
+    includeDefaultSupplementalRecords: false,
+  });
+  const matching = (pattern) => {
+    const compiled = compileSafeArchivePattern(pattern);
+    assert.equal(compiled.error, null);
+    return records.filter((record) =>
+      recordMatchesPattern(record, compiled.regex),
+    );
+  };
+
+  assert.ok(
+    matching("seo_code 9V5").some(
+      (record) => record.modelId === "tahoe" && record.year === "2012",
+    ),
+  );
+  assert.ok(
+    matching("source_seo_code_cell_state blank").some(
+      (record) => record.modelId === "express" && record.year === "2012",
+    ),
+  );
+  assert.ok(
+    matching("source_seo_code_raw TBD").some(
+      (record) => record.modelId === "express" && record.year === "2014",
+    ),
+  );
+  assert.ok(
+    matching("minimum_batch_units 5").some(
+      (record) => record.modelId === "suburban" && record.year === "2013",
+    ),
+  );
+  assert.ok(
+    matching("factory_installation_claim false").some(
+      (record) => record.modelId === "ck-series" && record.year === "1983",
+    ),
+  );
+  assert.ok(
+    matching("factory_installation_claim true").some(
+      (record) => record.modelId === "s10" && record.year === "1993",
+    ),
+  );
+  assert.ok(
+    matching("wa_code WA-121A").some(
+      (record) =>
+        record.modelId === "impala-limited" && record.year === "2015",
+    ),
+  );
+  assert.ok(
+    matching("source_wa_code_raw 121A").some(
+      (record) =>
+        record.modelId === "impala-limited" && record.year === "2015",
+    ),
+  );
+  assert.ok(
+    matching("source_wa_code_cell_state printed_without_prefix").some(
+      (record) =>
+        record.modelId === "impala-limited" && record.year === "2016",
+    ),
+  );
+  assert.ok(
+    matching("upfitter_code_1 BEA").some(
+      (record) =>
+        record.modelId === "impala-limited" && record.year === "2015",
+    ),
+  );
+  assert.ok(
+    matching("seo_code_status column_absent_in_source").some(
+      (record) =>
+        record.modelId === "impala-limited" && record.year === "2016",
+    ),
+  );
+  assert.ok(
+    matching("source_seo_code_cell_state literal_none").some(
+      (record) => record.modelId === "suburban" && record.year === "2019",
+    ),
+  );
 });
 
 test("real commercial-model strips stop at sourced era and production boundaries", async () => {

@@ -16,14 +16,19 @@ and `data/parquet/sources.parquet` contain one row per canonical URL.
 source. The separation prevents a source title or URL from being copied into
 hundreds of color records while retaining a complete, queryable citation trail.
 
-The public availability set contains 1,748 rows: 973 direct source
+The public availability set contains 2,000 rows: 973 direct source
 transcriptions, 454 qualified official palette-union rows across 56
-model-years, and 321 specialty subset rows across 35 model-years. Twenty-five
-model-years remain specialty-only; the other ten also have a separately
-complete or qualified regular palette. Complete
+model-years, 569 specialty subset rows across 57 application model-years, and
+four ordinary qualified-historical table rows. Specialty evidence is the
+strongest research status for 42 model-years; the other 15 also have a
+separately complete or qualified regular palette. Six model-years have a
+reviewed-qualified-historical research status. The four published 1981
+Woodland Green rows are ordinary chart evidence, not specialty paint. Complete
 Suburban evidence added 114 exact-year rows for 1969, 1972-1976, and 2002-2004.
 Exact Tahoe program and regular-palette evidence adds 59 rows for 2000 and
 2002-2006 without flattening simultaneous programs or specialty subsets.
+The membership ledger preserves 509 `specialty_overlay` rows and one separate
+`qualified_historical_overlay` row; neither is folded into a primary era band.
 
 ## What each color citation preserves
 
@@ -50,8 +55,8 @@ secondary component. Component rows explicitly set
 `standalone_availability_asserted = false`; they do not create color
 availability claims.
 
-Factory-code fields in schema version 9 retain the version 4 null semantics.
-Schema version 9 also requires `application_type` on every availability row and
+Factory-code fields in schema version 11 retain the version 4 null semantics.
+Schema version 11 also requires `application_type` on every availability row and
 an `other_availability_state_count` research aggregate so program-specific
 states remain explicit without breaking row-count reconciliation. Schema
 version 7 added `evidence_locator_type`. PDF claims use `pdf_page` and
@@ -62,6 +67,19 @@ does not supply a code, the value is null and the status is either
 `not_printed_in_source` or `not_stated_in_source`. The matching evidence claim
 copies both fields. Values such as “Not printed,” “not stated,” “unknown,” and
 “N/A” are rejected from the code columns themselves.
+
+Schema version 11 also preserves RPO and SEO evidence as structured data.
+`rpo_code`, `seo_code`, `seo_code_status`, `source_seo_code_raw`, and
+`source_seo_code_cell_state` distinguish a printed code, an empty source cell,
+and a literal `TBD` cell. `minimum_batch_units` records an exact source-stated
+batch threshold. Nullable `factory_installation_claim` records only an express
+source conclusion. `evidence_claims.parquet` repeats the transcribed RPO, SEO,
+literal-cell, batch, and factory-installation values so each remains bound to
+the immutable source revision. Schema version 11 adds normalized `wa_code`,
+literal `source_wa_code_raw`, `source_wa_code_cell_state`, and four Kerr
+upfitter fields for Code 1, Code 2, AAS solid-color, and AAT two-tone order
+semantics. A literal `NONE`, an em dash, and an absent SEO column remain
+different source states and never become invented SEO codes.
 
 Official PDFs are content-addressed during crawling. The source row gains the
 complete-file SHA-256, byte length, origin response metadata, and local archive
@@ -86,16 +104,17 @@ The ledger currently covers:
   2023 Colorado and Silverado HD palettes, each bound to its exact live
   Chevrolet retrieval URL, local path, SHA-256, byte length, retrieval time,
   and PDF page count;
-- all 126 assets in the pinned `brochure-source-archive-v1` Release. The set
-  includes 102 PDFs totaling 1,226,505,194 bytes and 7,904 pages. Of those, 97
-  are retained source assets, including 93 retained source PDFs totaling
-  1,171,307,951 bytes. Other retained formats include the complete 16-image
+- all 140 assets in the pinned `brochure-source-archive-v1` Release. The set
+  includes 116 PDFs totaling 1,408,805,873 bytes and 8,635 pages. Of those, 111
+  are retained source assets, including 107 retained source PDFs totaling
+  1,353,608,630 bytes. Other retained formats include the complete 16-image
   1993 carrier set, one listing HTML file, the 2004 service-table image, and the
   flat-filename checksum
-  manifest covering all 125 other assets. The validated application surface
-  uses 30 governing audit assets, 30 app-fed audit citations, and 94
-  application Release URLs. It includes 281 published specialty records and
-  preserves 10 verified nonpublished, nonrouting specialty snapshots;
+  manifest covering all 139 other assets. The validated application surface
+  uses 30 governing audit assets, 30 app-fed audit citations, and 108
+  application Release URLs. It includes 529 published specialty records, four
+  published ordinary qualified-history records, and 10 verified nonpublished,
+  nonrouting specialty snapshots;
 - complete retained 2002 and 2003 sales-brochure palettes and the complete 2004
   GM service-table palette, with the earlier GM-kit change statements linked
   as supporting evidence rather than duplicate supplemental rows;
@@ -110,6 +129,9 @@ The ledger currently covers:
 - every photo license URL;
 - every pinned GitHub Release archive URL.
 
+The normalized ledger currently contains 2,718 canonical source rows, 1,856
+immutable source revisions, and 27,631 source-to-claim links.
+
 The crawler database also retains three legacy Camaro aliases created by the
 original bounded example manifest. Each alias has the same canonical URL and
 complete-file hash as its corresponding 1967, 1968, or 1969 record in the
@@ -123,8 +145,8 @@ distinct SHA-256 identities totaling 5,133,028,799 bytes and 59,193 PDF pages,
 with requested and
 final URLs, retrieval times, safe response headers, declared and received byte
 counts, and content-addressed crawler object paths. The complete 5.1 GB corpus
-remains in ignored research storage. The 97 retained source assets, including
-93 retained source PDFs totaling 1,171,307,951 bytes, are independently copied
+remains in ignored research storage. The 111 retained source assets, including
+107 retained source PDFs totaling 1,353,608,630 bytes, are independently copied
 to the pinned public Release. They close the current Tahoe and Suburban audits,
 preserve the 1963 comparison record, and retain the published modern and
 specialty sources.
@@ -170,17 +192,18 @@ adjacent years.
 ## Validation
 
 `scripts/validate-normalized-parquet.py` checks primary keys, foreign keys,
-manifest hashes, schema version 9 locator typing, application classification,
+manifest hashes, schema version 11 locator typing, application classification,
 availability-state reconciliation, and model-year generation memberships,
 complete HTTPS source URLs,
 citation counts, per-year listing counts, one evidence link for every color
 availability row, qualified-palette and specialty-subset review flags, the
 empty post-promotion supplemental table, the bounded RockAuto 20/28/111/96
-counts, the published README row counts, 126 brochure Release assets, all 125
+counts, the published README row counts, 140 brochure Release assets, all 139
 non-manifest assets covered by the flat-filename checksum manifest, 30
-  governing audit assets, 30 app-fed audit citations, 94 application Release
-  URLs, 281 published specialty records, 10 verified nonpublished, nonrouting
-specialty snapshots, pinned photo archive URLs, 1,369 exact paint schemes,
+governing audit assets, 30 app-fed audit citations, 108 application Release
+URLs, 529 published specialty records, four published ordinary
+qualified-history records, 10 verified nonpublished, nonrouting specialty
+snapshots, pinned photo archive URLs, 1,369 exact paint schemes,
 2,738 ordered primary and secondary components, immutable scheme evidence
 revisions, the no-flattening sentinel, the nullable
 factory-code contract and controlled statuses, a complete flat-filename

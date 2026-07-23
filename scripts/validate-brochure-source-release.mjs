@@ -13,16 +13,18 @@ const REPOSITORY = "ipadmom/chevrolet-color-archive";
 const RELEASE_URL = `https://github.com/${REPOSITORY}/releases/tag/${RELEASE_TAG}`;
 const RELEASE_DOWNLOAD_BASE =
   `https://github.com/${REPOSITORY}/releases/download/${RELEASE_TAG}/`;
-const EXPECTED_ASSET_COUNT = 126;
-const EXPECTED_PDF_COUNT = 102;
-const EXPECTED_PDF_BYTES = 1_226_505_194;
-const EXPECTED_PDF_PAGE_COUNT = 7_904;
+const EXPECTED_ASSET_COUNT = 140;
+const EXPECTED_PDF_COUNT = 116;
+const EXPECTED_PDF_BYTES = 1_408_805_873;
+const EXPECTED_PDF_PAGE_COUNT = 8_635;
 const EXPECTED_MODERN_SOURCE_COUNT = 23;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 19;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
 const EXPECTED_MODERN_TABLE_COUNT = 61;
 const EXPECTED_MODERN_ASSERTION_COUNT = 483;
-const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 281;
+const EXPECTED_PUBLISHED_RECORD_COUNT = 533;
+const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 529;
+const EXPECTED_QUALIFIED_HISTORICAL_RECORD_COUNT = 4;
 const EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT = 10;
 const EARLY_SUBURBAN_AUDIT_RELATIVE_PATH =
   "data/audits/suburban-1969-1976.json";
@@ -147,7 +149,28 @@ const tahoeGoverningAssets = new Map([
   ],
 ]);
 
-const publishedSpecialtyAssets = new Map([
+const publishedColorResearchAssets = new Map([
+  [
+    "1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-heritage-1981-chevrolet-g-van",
+      role: "controlling_qualified_historical_vehicle_information_kit",
+    },
+  ],
+  [
+    "1981-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-heritage-1981-chevrolet-motorhome",
+      role: "controlling_qualified_historical_vehicle_information_kit",
+    },
+  ],
+  [
+    "1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-1983-chevrolet-truck-color-trim",
+      role: "controlling_specialty_vehicle_information_kit",
+    },
+  ],
   [
     "1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
     {
@@ -239,6 +262,83 @@ const specialtyResearchAssets = new Map([
     "2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
     {
       sourceId: "gm-2017-caprice-9c1-specification-guide",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2015-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2015-tahoe-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2016-chevrolet-tahoe-9c1-2wd-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2016-tahoe-9c1",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2016-tahoe-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2017-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2017-tahoe-9c1-4wd",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2018-chevrolet-tahoe-9c1-4wd-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2018-tahoe-9c1-4wd",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2019-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2019-tahoe-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2020-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2020-tahoe-5w4",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2015-impala-limited-9c1-9c3",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2016-impala-limited-9c1-9c3",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2019-suburban-1fl-3500hd",
+      role: "controlling_specialty_vehicle_specification_guide",
+    },
+  ],
+  [
+    "2020-chevrolet-suburban-1fl-specification-guide-gm.pdf",
+    {
+      sourceId: "gm-2020-suburban-1fl",
       role: "controlling_specialty_vehicle_specification_guide",
     },
   ],
@@ -578,9 +678,9 @@ function assertManifestContract(manifest) {
       `${assetName} must have role ${role}`,
     );
   }
-  for (const [assetName, { sourceId, role }] of publishedSpecialtyAssets) {
+  for (const [assetName, { sourceId, role }] of publishedColorResearchAssets) {
     const entry = entriesByName.get(assetName);
-    invariant(entry, `missing published specialty asset: ${assetName}`);
+    invariant(entry, `missing published color-research asset: ${assetName}`);
     invariant(
       entry.source_id === sourceId,
       `${assetName} must have source_id ${sourceId}`,
@@ -1142,21 +1242,42 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   );
 
   const specialtyColorSource = JSON.parse(specialtyColorSourceText);
+  const publishedRecords = specialtyColorSource.app_publication_records.filter(
+    (record) =>
+      record.publication_status === "published_specialty_subset" ||
+      record.publication_status === "published_qualified_historical_subset",
+  );
   const publishedSpecialtyRecords =
     specialtyColorSource.app_publication_records.filter(
       (record) => record.publication_status === "published_specialty_subset",
     );
   invariant(
+    publishedRecords.length === EXPECTED_PUBLISHED_RECORD_COUNT,
+    `source audit must retain exactly ${EXPECTED_PUBLISHED_RECORD_COUNT} published rows`,
+  );
+  invariant(
     publishedSpecialtyRecords.length === EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT,
     `specialty source audit must retain exactly ${EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT} published rows`,
   );
+  const qualifiedHistoricalRecords =
+    specialtyColorSource.app_publication_records.filter(
+      (record) =>
+        record.publication_status === "published_qualified_historical_subset",
+    );
+  invariant(
+    qualifiedHistoricalRecords.length === EXPECTED_QUALIFIED_HISTORICAL_RECORD_COUNT,
+    `source audit must retain exactly ${EXPECTED_QUALIFIED_HISTORICAL_RECORD_COUNT} qualified historical rows`,
+  );
   assertUnique(
-    publishedSpecialtyRecords.map(({ record_id: recordId }) => recordId),
-    "published specialty record_id",
+    publishedRecords.map(({ record_id: recordId }) => recordId),
+    "published record_id",
   );
   const expectedPublishedSpecialtySourceIds = [
     "gm-heritage-1979-chevrolet-blazer",
+    "gm-heritage-1981-chevrolet-g-van",
+    "gm-heritage-1981-chevrolet-motorhome",
     "gm-1980-chevrolet-truck-color-trim",
+    "gm-1983-chevrolet-truck-color-trim",
     "gm-heritage-1993-chevrolet-s-10",
     "gm-heritage-1993-chevrolet-truck",
     "gm-heritage-2003-chevrolet-tahoe",
@@ -1167,8 +1288,19 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "gm-2013-municipal-guide",
     "gm-2014-police-guide",
     "gm-2015-caprice-9c1-specification-guide",
+    "gm-2015-tahoe-5w4",
+    "gm-2015-impala-limited-9c1-9c3",
     "gm-2016-caprice-9c1-specification-guide",
+    "gm-2016-tahoe-9c1",
+    "gm-2016-tahoe-5w4",
+    "gm-2016-impala-limited-9c1-9c3",
     "gm-2017-caprice-9c1-specification-guide",
+    "gm-2017-tahoe-9c1-4wd",
+    "gm-2018-tahoe-9c1-4wd",
+    "gm-2019-tahoe-5w4",
+    "gm-2019-suburban-1fl-3500hd",
+    "gm-2020-tahoe-5w4",
+    "gm-2020-suburban-1fl",
     "gm-2023-bolt-euv-5w4",
     "gm-2026-blazer-ev-9c1-9c3-5w4",
     "gm-2026-silverado-9c1-041426",
@@ -1176,13 +1308,13 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   ].sort();
   const actualPublishedSpecialtySourceIds = [
     ...new Set(
-      publishedSpecialtyRecords.map(({ source }) => source.source_id),
+      publishedRecords.map(({ source }) => source.source_id),
     ),
   ].sort();
   invariant(
     JSON.stringify(actualPublishedSpecialtySourceIds) ===
       JSON.stringify(expectedPublishedSpecialtySourceIds),
-    "published specialty rows must resolve to the 18 audited governing sources",
+    "published rows must resolve to the 32 audited governing sources",
   );
   const verifiedNotPublishedSpecialtyRecords =
     specialtyColorSource.verified_not_published;
@@ -1226,14 +1358,24 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
       record.catalog_model_ids.includes("tahoe"),
   );
   invariant(
-    tahoeSpecialtyRecords.length === 15,
-    "Tahoe specialty source audit must retain exactly 15 published rows",
+    tahoeSpecialtyRecords.length === 91,
+    "Tahoe specialty source audit must retain exactly 91 published rows",
   );
   const expectedTahoeSpecialtySourceIds = [
     "gm-heritage-2003-chevrolet-tahoe",
     "new-jersey-tahoe-police-contract-2005",
     "new-jersey-tahoe-police-contract-2006",
     "gm-2011-police-manual",
+    "gm-2012-municipal-manual",
+    "gm-2013-municipal-guide",
+    "gm-2014-police-guide",
+    "gm-2015-tahoe-5w4",
+    "gm-2016-tahoe-9c1",
+    "gm-2016-tahoe-5w4",
+    "gm-2017-tahoe-9c1-4wd",
+    "gm-2018-tahoe-9c1-4wd",
+    "gm-2019-tahoe-5w4",
+    "gm-2020-tahoe-5w4",
   ].sort();
   const actualTahoeSpecialtySourceIds = [
     ...new Set(tahoeSpecialtyRecords.map(({ source }) => source.source_id)),
@@ -1241,9 +1383,9 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualTahoeSpecialtySourceIds) ===
       JSON.stringify(expectedTahoeSpecialtySourceIds),
-    "Tahoe specialty rows must resolve to the four retained governing sources",
+    "Tahoe specialty rows must resolve to the 14 retained governing sources",
   );
-  for (const record of publishedSpecialtyRecords) {
+  for (const record of publishedRecords) {
     const { source } = record;
     invariant(
       typeof source.archive_url === "string" &&
@@ -1354,7 +1496,9 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     modernPaletteSourceCount: retainedModernSources.length,
     modernPaletteTableCount: modernPaletteTables.length,
     modernPaletteAssertionCount,
+    publishedRecordCount: publishedRecords.length,
     publishedSpecialtyRecordCount: publishedSpecialtyRecords.length,
+    publishedQualifiedHistoricalRecordCount: qualifiedHistoricalRecords.length,
     verifiedNotPublishedSpecialtyRecordCount:
       verifiedNotPublishedSpecialtyRecords.length,
   };
@@ -1476,6 +1620,9 @@ export async function validateBrochureSourceRelease({
       appCitationReport.modernPaletteAssertionCount,
     published_specialty_record_count:
       appCitationReport.publishedSpecialtyRecordCount,
+    published_record_count: appCitationReport.publishedRecordCount,
+    published_qualified_historical_record_count:
+      appCitationReport.publishedQualifiedHistoricalRecordCount,
     verified_not_published_specialty_record_count:
       appCitationReport.verifiedNotPublishedSpecialtyRecordCount,
     local_staging: hasStaging ? "verified" : "not-present",

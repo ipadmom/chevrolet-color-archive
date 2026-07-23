@@ -596,11 +596,24 @@ ledger.premium_color_restrictions = [
 
 ledger.generated_at = generatedAt;
 const artifactIdentities = collectArtifactIdentities(ledger);
+const publishedSpecialtyRecords = ledger.app_publication_records.filter(
+  ({ publication_status: status }) => status === "published_specialty_subset",
+);
+const publishedQualifiedHistoricalRecords = ledger.app_publication_records.filter(
+  ({ publication_status: status }) =>
+    status === "published_qualified_historical_subset",
+);
 ledger.integrity_audit.unique_retained_artifacts_reconciled =
   artifactIdentities.size;
 ledger.integrity_audit.artifact_reference_groups = {
-  published_specialty_sources: collectArtifactIdentities(
+  published_record_sources: collectArtifactIdentities(
     ledger.app_publication_records,
+  ).size,
+  published_specialty_sources: collectArtifactIdentities(
+    publishedSpecialtyRecords,
+  ).size,
+  published_qualified_historical_sources: collectArtifactIdentities(
+    publishedQualifiedHistoricalRecords,
   ).size,
   verified_not_published_sources: collectArtifactIdentities(
     ledger.verified_not_published,

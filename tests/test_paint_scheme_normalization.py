@@ -627,7 +627,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         )
 
     def test_schema_manifest_contract_exposes_both_tables(self) -> None:
-        self.assertEqual(9, BUILD.SCHEMA_VERSION)
+        self.assertEqual(11, BUILD.SCHEMA_VERSION)
         for field in ("d85_stripe_colors", "wheel_flare_color", "source_annotation"):
             self.assertIn(field, BUILD.SCHEMAS["paint_schemes"].names)
         self.assertEqual(["paint_scheme_id"], BUILD.PRIMARY_KEYS["paint_schemes"])

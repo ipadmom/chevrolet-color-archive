@@ -53,6 +53,19 @@ FACTORY_CODE_REJECTED_PLACEHOLDERS = {
     "unknown",
     "unavailable",
 }
+SEO_CODE_STATUS_VALUES = {
+    "printed_in_source",
+    "not_applicable_in_source",
+    "not_printed_in_source",
+    "not_stated_in_source",
+    "column_absent_in_source",
+}
+SEO_CODE_REJECTED_PLACEHOLDERS = {
+    "not applicable",
+    "not printed",
+    "not stated",
+    "tbd",
+}
 UNRESOLVED_FOREST_GREEN_LABEL_PATTERN = re.compile(
     r"\b(?:u\.?s\.?\s+)?forest service green\b|\bforestry green\b",
     re.IGNORECASE,
@@ -176,6 +189,138 @@ def require_factory_code_contract(
             )
 
 
+def require_specialty_code_contract(
+    rows: list[dict], table_name: str, *, prefix: str = ""
+) -> None:
+    code_field = f"{prefix}seo_code"
+    status_field = f"{prefix}seo_code_status"
+    raw_field = f"{prefix}source_seo_code_raw"
+    state_field = f"{prefix}source_seo_code_cell_state"
+    for row in rows:
+        code = row[code_field]
+        status = row[status_field]
+        raw = row[raw_field]
+        cell_state = row[state_field]
+        if status is not None and status not in SEO_CODE_STATUS_VALUES:
+            raise AssertionError(
+                f"{table_name}.{status_field} contains unsupported value: {status!r}"
+            )
+        if code is not None:
+            normalized = re.sub(r"\s+", " ", str(code).strip().casefold())
+            if not str(code).strip() or normalized in SEO_CODE_REJECTED_PLACEHOLDERS:
+                raise AssertionError(
+                    f"{table_name}.{code_field} contains placeholder prose: {code!r}"
+                )
+            if status != "printed_in_source":
+                raise AssertionError(
+                    f"{table_name}.{code_field} has a code but status is {status!r}"
+                )
+        elif status == "printed_in_source":
+            raise AssertionError(
+                f"{table_name}.{code_field} is null but claims a printed code"
+            )
+        if cell_state not in {
+            None,
+            "printed",
+            "blank",
+            "tbd",
+            "em_dash",
+            "literal_none",
+            "column_absent",
+        }:
+            raise AssertionError(
+                f"{table_name}.{state_field} contains unsupported value: {cell_state!r}"
+            )
+        if cell_state is None:
+            if raw is not None:
+                raise AssertionError(
+                    f"{table_name}.{raw_field} has text without a cell state"
+                )
+        elif cell_state == "printed":
+            if raw != code or status != "printed_in_source":
+                raise AssertionError(f"{table_name} printed SEO metadata is inconsistent")
+        elif cell_state == "blank":
+            if raw is not None or code is not None or status != "not_printed_in_source":
+                raise AssertionError(f"{table_name} blank SEO metadata is inconsistent")
+        elif cell_state == "tbd" and (
+            raw != "TBD" or code is not None or status != "not_stated_in_source"
+        ):
+            raise AssertionError(f"{table_name} TBD SEO metadata is inconsistent")
+        elif cell_state == "em_dash" and (
+            raw != "—" or code is not None or status != "not_printed_in_source"
+        ):
+            raise AssertionError(f"{table_name} em-dash SEO metadata is inconsistent")
+        elif cell_state == "literal_none" and (
+            raw != "NONE" or code is not None or status != "not_applicable_in_source"
+        ):
+            raise AssertionError(
+                f"{table_name} literal-NONE SEO metadata is inconsistent"
+            )
+        elif cell_state == "column_absent" and (
+            raw is not None
+            or code is not None
+            or status != "column_absent_in_source"
+        ):
+            raise AssertionError(
+                f"{table_name} absent-column SEO metadata is inconsistent"
+            )
+        minimum_batch_units = row["minimum_batch_units"]
+        if minimum_batch_units is not None and minimum_batch_units <= 0:
+            raise AssertionError(
+                f"{table_name}.minimum_batch_units must be positive"
+            )
+
+
+def require_wa_upfitter_contract(
+    rows: list[dict], table_name: str, *, prefix: str = ""
+) -> None:
+    wa_field = f"{prefix}wa_code"
+    raw_field = f"{prefix}source_wa_code_raw"
+    state_field = f"{prefix}source_wa_code_cell_state"
+    upfitter_fields = [
+        f"{prefix}upfitter_code_1",
+        f"{prefix}upfitter_code_2",
+        f"{prefix}upfitter_solid_color_option",
+        f"{prefix}upfitter_two_tone_color_option",
+    ]
+    for row in rows:
+        wa_code = row[wa_field]
+        raw = row[raw_field]
+        state = row[state_field]
+        if wa_code is not None and not re.fullmatch(r"WA-[0-9A-Z]+", wa_code):
+            raise AssertionError(
+                f"{table_name}.{wa_field} contains a non-normalized WA code: "
+                f"{wa_code!r}"
+            )
+        if state not in {None, "printed_with_prefix", "printed_without_prefix"}:
+            raise AssertionError(
+                f"{table_name}.{state_field} contains unsupported value: {state!r}"
+            )
+        if state is None and raw is not None:
+            raise AssertionError(
+                f"{table_name}.{raw_field} has text without a cell state"
+            )
+        if state == "printed_with_prefix" and raw != wa_code:
+            raise AssertionError(f"{table_name} prefixed WA metadata is inconsistent")
+        if state == "printed_without_prefix" and (
+            wa_code is None or f"WA-{raw}" != wa_code
+        ):
+            raise AssertionError(f"{table_name} unprefixed WA metadata is inconsistent")
+
+        upfitter_values = [row[field] for field in upfitter_fields]
+        if any(value is not None for value in upfitter_values):
+            if any(value is None or not str(value).strip() for value in upfitter_values):
+                raise AssertionError(
+                    f"{table_name} has an incomplete upfitter order-code set"
+                )
+            if prefix == "" and not str(row["application_type"]).startswith(
+                "authorized_upfitter"
+            ):
+                raise AssertionError(
+                    f"{table_name} has upfitter codes outside an authorized-upfitter program"
+                )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Validate normalized Chevrolet archive Parquet tables"
@@ -191,8 +336,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     manifest = json.loads((PARQUET_ROOT / "manifest.json").read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != 9:
-        raise AssertionError("normalized Parquet manifest must use schema version 9")
+    if manifest.get("schema_version") != 11:
+        raise AssertionError("normalized Parquet manifest must use schema version 11")
     tables = {item["table"]: item for item in manifest["tables"]}
     required_paint_tables = {"paint_schemes", "paint_scheme_components"}
     if not required_paint_tables <= set(tables):
@@ -230,6 +375,14 @@ def main() -> int:
         require_factory_code_contract(
             rows[table_name], table_name, code_field, status_field
         )
+    require_specialty_code_contract(rows["color_availability"], "color_availability")
+    require_specialty_code_contract(
+        rows["evidence_claims"], "evidence_claims", prefix="transcribed_"
+    )
+    require_wa_upfitter_contract(rows["color_availability"], "color_availability")
+    require_wa_upfitter_contract(
+        rows["evidence_claims"], "evidence_claims", prefix="transcribed_"
+    )
 
     for name, item in tables.items():
         path = ROOT / item["path"]
@@ -616,14 +769,22 @@ def main() -> int:
         "caprice-ppv:2017",
         "ck-series:1979",
         "ck-series:1980",
+        "ck-series:1983",
         "ck-series:1993",
+        "express:2012",
+        "express:2013",
+        "express:2014",
         "g-series-van:1979",
         "g-series-van:1980",
         "impala-limited:2014",
+        "impala-limited:2015",
+        "impala-limited:2016",
         "impala:2011",
         "impala:2012",
         "impala:2013",
         "s10:1993",
+        "silverado:2012",
+        "silverado:2014",
         "silverado:2026",
         "sportvan:1979",
         "sportvan:1980",
@@ -632,12 +793,26 @@ def main() -> int:
         "suburban:2005",
         "suburban:2007",
         "suburban:2011",
+        "suburban:2012",
+        "suburban:2013",
+        "suburban:2014",
+        "suburban:2019",
+        "suburban:2020",
         "tahoe:2003",
         "tahoe:2005",
         "tahoe:2006",
+        "tahoe:2012",
+        "tahoe:2013",
+        "tahoe:2014",
+        "tahoe:2015",
+        "tahoe:2016",
+        "tahoe:2017",
+        "tahoe:2018",
+        "tahoe:2019",
+        "tahoe:2020",
     }
     if (
-        len(specialty_memberships) != 278
+        len(specialty_memberships) != 509
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -649,6 +824,19 @@ def main() -> int:
         raise AssertionError(
             "generation overlays do not match the explicit specialty subsets"
         )
+    qualified_historical_memberships = [
+        row
+        for row in overlay_memberships
+        if row["membership_role"] == "qualified_historical_overlay"
+    ]
+    if (
+        len(qualified_historical_memberships) != 1
+        or qualified_historical_memberships[0]["model_year_id"]
+        != "g-series-van:1981"
+        or qualified_historical_memberships[0]["evidence_class"]
+        != "qualified_historical_table"
+    ):
+        raise AssertionError("qualified historical table overlays are incomplete")
     program_memberships = [
         row
         for row in overlay_memberships
@@ -1258,6 +1446,8 @@ def main() -> int:
         audit_state = research_audit_state_by_model_year[model_year["model_year_id"]]
         if audit_state == "reviewed_qualified_historical_table":
             expected_status = "reviewed_qualified_historical_table"
+        elif "published_qualified_historical_table" in claim_statuses:
+            expected_status = "reviewed_qualified_historical_table"
         elif "published_qualified_palette_union" in claim_statuses:
             expected_status = "reviewed_qualified_palette_union"
         elif claim_statuses == {"published_specialty_palette_subset"}:
@@ -1367,15 +1557,23 @@ def main() -> int:
         "caprice-ppv:2017",
         "ck-series:1979",
         "ck-series:1980",
+        "ck-series:1983",
         "ck-series:1993",
         "express:2011",
+        "express:2012",
+        "express:2013",
+        "express:2014",
         "g-series-van:1979",
         "g-series-van:1980",
         "impala-limited:2014",
+        "impala-limited:2015",
+        "impala-limited:2016",
         "impala:2011",
         "impala:2012",
         "impala:2013",
         "s10:1993",
+        "silverado:2012",
+        "silverado:2014",
         "silverado:2026",
         "silverado-hd:2011",
         "sportvan:1979",
@@ -1385,13 +1583,27 @@ def main() -> int:
         "suburban:2005",
         "suburban:2007",
         "suburban:2011",
+        "suburban:2012",
+        "suburban:2013",
+        "suburban:2014",
+        "suburban:2019",
+        "suburban:2020",
         "tahoe:2003",
         "tahoe:2005",
         "tahoe:2006",
         "tahoe:2011",
+        "tahoe:2012",
+        "tahoe:2013",
+        "tahoe:2014",
+        "tahoe:2015",
+        "tahoe:2016",
+        "tahoe:2017",
+        "tahoe:2018",
+        "tahoe:2019",
+        "tahoe:2020",
     }
     if (
-        len(specialty_rows) != 321
+        len(specialty_rows) != 569
         or {row["model_year_id"] for row in specialty_rows}
         != expected_specialty_model_years
     ):
@@ -1401,11 +1613,11 @@ def main() -> int:
     expected_application_type_counts = Counter(
         {
             "manufacturer_listed": 1_427,
-            "authorized_upfitter_post_build": 120,
-            "special_equipment_option_paint": 46,
+            "authorized_upfitter_post_build": 180,
+            "special_equipment_option_paint": 230,
             "specialty_program_unspecified": 41,
-            "manufacturer_special_equipment_option": 28,
-            "standard_program_palette": 82,
+            "manufacturer_special_equipment_option": 32,
+            "standard_program_palette": 86,
             "factory_installed_special_equipment_option": 4,
         }
     )
@@ -1418,9 +1630,9 @@ def main() -> int:
         raise AssertionError("availability application types are incomplete or stale")
     expected_specialty_state_counts = Counter(
         {
-            "available": 107,
-            "available_through_authorized_upfitter": 120,
-            "available_with_minimum_batch": 7,
+            "available": 152,
+            "available_through_authorized_upfitter": 180,
+            "available_with_minimum_batch": 150,
             "available_with_possible_extended_lead": 4,
             "closed_after_2026-02-02": 42,
             "restricted": 41,
@@ -1437,14 +1649,101 @@ def main() -> int:
         if row["application_type"] == "authorized_upfitter_post_build"
     ]
     if (
-        len(kerr_rows) != 120
+        len(kerr_rows) != 180
         or {row["model_year_id"] for row in kerr_rows}
-        != {"impala:2011", "impala:2012", "impala:2013", "impala-limited:2014"}
+        != {
+            "impala:2011",
+            "impala:2012",
+            "impala:2013",
+            "impala-limited:2014",
+            "impala-limited:2015",
+            "impala-limited:2016",
+        }
         or {row["availability_state"] for row in kerr_rows}
         != {"available_through_authorized_upfitter"}
         or any(not row["restriction"] for row in kerr_rows)
     ):
         raise AssertionError("Impala Kerr authorized-upfitter palettes are incomplete")
+
+    later_fleet_source_counts = Counter(
+        {
+            "gm-2015-tahoe-5w4": 7,
+            "gm-2016-tahoe-9c1": 7,
+            "gm-2016-tahoe-5w4": 7,
+            "gm-2017-tahoe-9c1-4wd": 6,
+            "gm-2018-tahoe-9c1-4wd": 5,
+            "gm-2019-tahoe-5w4": 5,
+            "gm-2020-tahoe-5w4": 5,
+            "gm-2015-impala-limited-9c1-9c3": 30,
+            "gm-2016-impala-limited-9c1-9c3": 30,
+            "gm-2019-suburban-1fl-3500hd": 5,
+            "gm-2020-suburban-1fl": 5,
+        }
+    )
+    later_fleet_rows = [
+        row
+        for row in specialty_rows
+        if row["evidence_source_id"] in later_fleet_source_counts
+    ]
+    later_upfitter_rows = [
+        row for row in later_fleet_rows if row["upfitter_code_1"] is not None
+    ]
+    if (
+        len(later_fleet_rows) != 112
+        or Counter(row["evidence_source_id"] for row in later_fleet_rows)
+        != later_fleet_source_counts
+        or Counter(row["source_seo_code_cell_state"] for row in later_fleet_rows)
+        != Counter(
+            {
+                "printed": 37,
+                "em_dash": 11,
+                "literal_none": 4,
+                "column_absent": 60,
+            }
+        )
+        or Counter(row["seo_code_status"] for row in later_fleet_rows)
+        != Counter(
+            {
+                "printed_in_source": 37,
+                "not_printed_in_source": 11,
+                "not_applicable_in_source": 4,
+                "column_absent_in_source": 60,
+            }
+        )
+        or Counter(row["source_wa_code_cell_state"] for row in later_fleet_rows)
+        != Counter({"printed_with_prefix": 42, "printed_without_prefix": 70})
+        or Counter(row["factory_installation_claim"] for row in later_fleet_rows)
+        != Counter({None: 52, False: 60})
+        or Counter(row["factory_code_status"] for row in later_fleet_rows)
+        != Counter({"printed_in_source": 52, "not_printed_in_source": 60})
+        or Counter(row["minimum_batch_units"] for row in later_fleet_rows)
+        != Counter({None: 91, 5: 21})
+        or len(later_upfitter_rows) != 60
+        or {row["upfitter_solid_color_option"] for row in later_upfitter_rows}
+        != {"AAS"}
+        or {row["upfitter_two_tone_color_option"] for row in later_upfitter_rows}
+        != {"AAT"}
+        or any(
+            row["factory_code"] is not None
+            or row["wa_code"] is None
+            or row["rpo_code"] != "9C1/9C3"
+            for row in later_upfitter_rows
+        )
+        or any(
+            row["source_color_name"] == "Havana Brown Metallic"
+            for row in later_fleet_rows
+        )
+    ):
+        raise AssertionError(
+            "2015-2020 Tahoe, Impala Limited, and Suburban specialty programs drifted"
+        )
+    tahoe_2016_later = [
+        row for row in later_fleet_rows if row["model_year_id"] == "tahoe:2016"
+    ]
+    if len(tahoe_2016_later) != 14 or {
+        row["evidence_source_id"] for row in tahoe_2016_later
+    } != {"gm-2016-tahoe-9c1", "gm-2016-tahoe-5w4"}:
+        raise AssertionError("2016 Tahoe simultaneous 9C1 and 5W4 programs were merged")
 
     silverado_2026 = [
         row for row in specialty_rows if row["model_year_id"] == "silverado:2026"
@@ -1549,22 +1848,180 @@ def main() -> int:
         )
     ):
         raise AssertionError("1993 C/K Pickup specialty paints are incomplete")
+
+    municipal_source_ids = {
+        "gm-2012-municipal-manual",
+        "gm-2013-municipal-guide",
+        "gm-2014-police-guide",
+    }
+    municipal_rows = [
+        row
+        for row in specialty_rows
+        if row["evidence_source_id"] in municipal_source_ids
+        and row["application_type"] == "special_equipment_option_paint"
+    ]
+    expected_municipal_model_year_counts = Counter(
+        {
+            (2012, "tahoe"): 16,
+            (2012, "express"): 15,
+            (2012, "suburban"): 8,
+            (2012, "silverado"): 26,
+            (2013, "tahoe"): 16,
+            (2013, "express"): 15,
+            (2013, "suburban"): 8,
+            (2014, "tahoe"): 2,
+            (2014, "express"): 15,
+            (2014, "suburban"): 1,
+            (2014, "silverado"): 10,
+        }
+    )
+    municipal_generation_programs = {
+        generation["program_id"]
+        for generation in rows["generations"]
+        if generation["generation_id"]
+        in {row["generation_id"] for row in municipal_rows}
+    }
+    expected_municipal_programs = {
+        "gm-2012-tahoe-ppv-seo-paint",
+        "gm-2012-tahoe-5w4-seo-paint",
+        "gm-2012-express-1ls-2ls-seo-paint",
+        "gm-2012-suburban-1fl-seo-paint",
+        "gm-2012-silverado-1wt-tgk-seo-paint",
+        "gm-2013-tahoe-ppv-seo-paint",
+        "gm-2013-tahoe-5w4-seo-paint",
+        "gm-2013-express-1ls-2ls-seo-paint",
+        "gm-2013-suburban-1fl-seo-paint",
+        "gm-2014-tahoe-ppv-seo-paint",
+        "gm-2014-tahoe-5w4-seo-paint",
+        "gm-2014-express-1ls-2ls-seo-paint",
+        "gm-2014-suburban-1fl-seo-paint",
+        "gm-2014-silverado-1wt-seo-paint",
+    }
+    if (
+        len(municipal_rows) != 132
+        or Counter(
+            (row["model_year"], row["model_id"]) for row in municipal_rows
+        )
+        != expected_municipal_model_year_counts
+        or Counter(row["availability_state"] for row in municipal_rows)
+        != Counter({"available_with_minimum_batch": 122, "available": 10})
+        or municipal_generation_programs != expected_municipal_programs
+        or any(not row["restriction"] for row in municipal_rows)
+        or Counter(row["seo_code_status"] for row in municipal_rows)
+        != Counter(
+            {
+                "printed_in_source": 48,
+                "not_printed_in_source": 66,
+                "not_stated_in_source": 18,
+            }
+        )
+        or Counter(row["source_seo_code_cell_state"] for row in municipal_rows)
+        != Counter({"printed": 48, "blank": 66, "tbd": 18})
+        or Counter(row["minimum_batch_units"] for row in municipal_rows)
+        != Counter({5: 122, None: 10})
+        or {row["factory_installation_claim"] for row in municipal_rows}
+        != {False}
+        or {row["rpo_code"] for row in municipal_rows} != {None}
+    ):
+        raise AssertionError("2012-2014 municipal SEO paint programs are incomplete")
+    if any(
+        row["model_year"] == 2013 and row["model_id"] == "silverado"
+        for row in municipal_rows
+    ):
+        raise AssertionError("a nonexistent 2013 Silverado SEO paint table was inferred")
+
+    historic_1981_rows = [
+        row
+        for row in rows["color_availability"]
+        if row["claim_status"] == "published_qualified_historical_table"
+        and row["evidence_source_id"]
+        in {
+            "gm-heritage-1981-chevrolet-g-van",
+            "gm-heritage-1981-chevrolet-motorhome",
+        }
+    ]
+    if (
+        len(historic_1981_rows) != 4
+        or Counter(row["model_id"] for row in historic_1981_rows)
+        != Counter(
+            {
+                "sportvan": 1,
+                "g-series-van": 2,
+                "p-series-step-van": 1,
+            }
+        )
+        or {row["source_color_name"] for row in historic_1981_rows}
+        != {"Woodland Green"}
+        or {row["factory_code"] for row in historic_1981_rows} != {"46"}
+        or {row["application_type"] for row in historic_1981_rows}
+        != {"standard_program_palette"}
+        or {row["availability_state"] for row in historic_1981_rows}
+        != {"available"}
+        or {row["seo_code"] for row in historic_1981_rows} != {None}
+        or {row["seo_code_status"] for row in historic_1981_rows} != {None}
+        or {row["source_seo_code_cell_state"] for row in historic_1981_rows}
+        != {None}
+        or {row["minimum_batch_units"] for row in historic_1981_rows} != {None}
+        or {row["factory_installation_claim"] for row in historic_1981_rows}
+        != {False}
+        or any("assembly-plant installation" not in row["restriction"] for row in historic_1981_rows)
+    ):
+        raise AssertionError("1981 van Woodland Green chart scopes are incomplete")
+
+    ck_1983_rows = [
+        row for row in specialty_rows if row["model_year_id"] == "ck-series:1983"
+    ]
+    if (
+        Counter(row["source_color_name"] for row in ck_1983_rows)
+        != Counter(
+            {
+                "Tangier Orange": 1,
+                "Wheatland Yellow": 1,
+                "Woodland Green": 1,
+                "Cardinal Red": 1,
+            }
+        )
+        or {row["factory_code"] for row in ck_1983_rows} != {None}
+        or {row["factory_code_status"] for row in ck_1983_rows}
+        != {"not_printed_in_source"}
+        or {row["evidence_source_id"] for row in ck_1983_rows}
+        != {"gm-1983-chevrolet-truck-color-trim"}
+        or {row["application_type"] for row in ck_1983_rows}
+        != {"manufacturer_special_equipment_option"}
+        or {row["seo_code"] for row in ck_1983_rows}
+        != {"9V2", "9V4", "9V5", "9V8"}
+        or {row["seo_code_status"] for row in ck_1983_rows}
+        != {"printed_in_source"}
+        or {row["minimum_batch_units"] for row in ck_1983_rows} != {None}
+        or {row["factory_installation_claim"] for row in ck_1983_rows}
+        != {False}
+        or sum("S-10/15" in row["restriction"] for row in ck_1983_rows) != 1
+    ):
+        raise AssertionError("1983 C/K permanent fleet colors are incomplete")
+
     woodland_rows = [
         row
         for row in specialty_rows
         if row["source_color_name"] in {"Woodland Green", "Green, Woodland"}
     ]
     if (
-        len(woodland_rows) != 16
+        len(woodland_rows) != 37
         or Counter(row["availability_state"] for row in woodland_rows)
-        != Counter({"restricted": 12, "closed_after_2026-02-02": 2, "available": 2})
+        != Counter(
+            {
+                "restricted": 12,
+                "closed_after_2026-02-02": 2,
+                "available": 9,
+                "available_with_minimum_batch": 14,
+            }
+        )
         or Counter(row["application_type"] for row in woodland_rows)
         != Counter(
             {
                 "specialty_program_unspecified": 12,
-                "special_equipment_option_paint": 2,
+                "special_equipment_option_paint": 22,
                 "factory_installed_special_equipment_option": 1,
-                "manufacturer_special_equipment_option": 1,
+                "manufacturer_special_equipment_option": 2,
             }
         )
         or any(not row["restriction"] for row in woodland_rows)
@@ -1612,6 +2069,56 @@ def main() -> int:
     claim_by_availability = {
         row["availability_id"]: row for row in rows["evidence_claims"]
     }
+    structured_claim_fields = {
+        "rpo_code": "transcribed_rpo_code",
+        "seo_code": "transcribed_seo_code",
+        "seo_code_status": "transcribed_seo_code_status",
+        "source_seo_code_raw": "transcribed_source_seo_code_raw",
+        "source_seo_code_cell_state": "transcribed_source_seo_code_cell_state",
+        "wa_code": "transcribed_wa_code",
+        "source_wa_code_raw": "transcribed_source_wa_code_raw",
+        "source_wa_code_cell_state": "transcribed_source_wa_code_cell_state",
+        "upfitter_code_1": "transcribed_upfitter_code_1",
+        "upfitter_code_2": "transcribed_upfitter_code_2",
+        "upfitter_solid_color_option": "transcribed_upfitter_solid_color_option",
+        "upfitter_two_tone_color_option": (
+            "transcribed_upfitter_two_tone_color_option"
+        ),
+        "minimum_batch_units": "minimum_batch_units",
+        "factory_installation_claim": "factory_installation_claim",
+    }
+    for availability in rows["color_availability"]:
+        claim = claim_by_availability[availability["availability_id"]]
+        for availability_field, claim_field in structured_claim_fields.items():
+            if availability[availability_field] != claim[claim_field]:
+                raise AssertionError(
+                    f"structured evidence drifted for {availability['availability_id']}: "
+                    f"{availability_field}"
+                )
+    factory_installed_rows = [
+        row
+        for row in rows["color_availability"]
+        if row["factory_installation_claim"] is True
+    ]
+    if (
+        len(factory_installed_rows) != 4
+        or {row["model_year_id"] for row in factory_installed_rows} != {"s10:1993"}
+        or {
+            (row["source_color_name"], row["factory_code"], row["seo_code"])
+            for row in factory_installed_rows
+        }
+        != {
+            ("Tangier Orange", "WE9417", "9W4"),
+            ("Wheatland Yellow", "WE9418", "9W3"),
+            ("Woodland Green", "WE7156", "9V5"),
+            ("Doeskin Tan", "WE8265", "9V9"),
+        }
+        or {
+            row["application_type"] for row in factory_installed_rows
+        }
+        != {"factory_installed_special_equipment_option"}
+    ):
+        raise AssertionError("factory-installation claims drifted from the 1993 S-10 source")
     source_by_id = {row["source_id"]: row for row in rows["sources"]}
     specialty_ledger = json.loads(SPECIALTY_LEDGER_PATH.read_text(encoding="utf-8"))
     unresolved_identities = {

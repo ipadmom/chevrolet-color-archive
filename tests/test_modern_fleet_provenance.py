@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import unittest
+from collections import Counter
 from pathlib import Path
 
 
@@ -83,17 +84,18 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         return [row for row in cls.records if row.get("program_id") == program_id]
 
     def test_specialty_publication_boundary_is_exact(self) -> None:
-        self.assertEqual(281, len(self.records))
-        self.assertEqual(281, len(self.records_by_id))
+        self.assertEqual(533, len(self.records))
+        self.assertEqual(533, len(self.records_by_id))
         self.assertEqual(
-            301,
+            553,
             sum(len(row["catalog_model_ids"]) for row in self.records),
         )
-        self.assertTrue(
-            all(
-                row["publication_status"] == "published_specialty_subset"
-                for row in self.records
-            )
+        self.assertEqual(
+            {
+                "published_specialty_subset": 529,
+                "published_qualified_historical_subset": 4,
+            },
+            dict(Counter(row["publication_status"] for row in self.records)),
         )
         self.assertTrue(
             all(
@@ -102,6 +104,31 @@ class SpecialtyProgramDataTest(unittest.TestCase):
                 )
                 for row in self.records
             )
+        )
+        new_source_counts = {
+            "gm-2015-tahoe-5w4": 7,
+            "gm-2016-tahoe-9c1": 7,
+            "gm-2016-tahoe-5w4": 7,
+            "gm-2017-tahoe-9c1-4wd": 6,
+            "gm-2018-tahoe-9c1-4wd": 5,
+            "gm-2019-tahoe-5w4": 5,
+            "gm-2020-tahoe-5w4": 5,
+            "gm-2015-impala-limited-9c1-9c3": 30,
+            "gm-2016-impala-limited-9c1-9c3": 30,
+            "gm-2019-suburban-1fl-3500hd": 5,
+            "gm-2020-suburban-1fl": 5,
+        }
+        self.assertEqual(11, len(new_source_counts))
+        self.assertEqual(112, sum(new_source_counts.values()))
+        self.assertEqual(
+            new_source_counts,
+            dict(
+                Counter(
+                    row["source"]["source_id"]
+                    for row in self.records
+                    if row["source"]["source_id"] in new_source_counts
+                )
+            ),
         )
 
         nonpublished = self.specialty["verified_not_published"]
@@ -235,8 +262,32 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         self.assertTrue(
             all(
                 row["application_type"] == "factory_installed_special_equipment_option"
+                and row["program_id"]
+                == "gm-1993-s10-pickup-factory-installed-special-equipment-options"
+                and row["factory_installation_claim"] is True
                 for row in rows_1993
             )
+        )
+        s10_program = next(
+            row
+            for row in self.specialty["program_definitions"]
+            if row["program_id"]
+            == "gm-1993-s10-pickup-factory-installed-special-equipment-options"
+        )
+        self.assertTrue(s10_program["factory_installation_claim"])
+        self.assertEqual("S-10 Pickup only", s10_program["source_scope"])
+        self.assertEqual(
+            {
+                "gm-1993-s10-tangier-orange-we9417-9w4",
+                "gm-1993-s10-wheatland-yellow-we9418-9w3",
+                "gm-1993-s10-woodland-green-we7156-9v5",
+                "gm-1993-s10-doeskin-tan-we8265-9v9",
+            },
+            set(
+                self.specialty["integrity_audit"]["structured_field_backfills"][
+                    0
+                ]["record_ids"]
+            ),
         )
 
         ck_rows_1993 = self.program_rows(
@@ -345,15 +396,21 @@ class SpecialtyProgramDataTest(unittest.TestCase):
             2012: ("impala", "gm-2012-municipal-manual", [54, 55, 56, 57, 58, 59]),
             2013: ("impala", "gm-2013-municipal-guide", [55, 56, 57]),
             2014: ("impala-limited", "gm-2014-police-guide", [50, 51, 52]),
+            2015: ("impala-limited", "gm-2015-impala-limited-9c1-9c3", [8, 9]),
+            2016: ("impala-limited", "gm-2016-impala-limited-9c1-9c3", [8, 9]),
         }
 
         for year, (model_id, source_id, pdf_pages) in year_contracts.items():
+            expected_year_colors = dict(expected_colors)
+            if year >= 2015:
+                expected_year_colors["8555"] = ("Black", "BEM", "BFQ")
+                expected_year_colors["8624"] = ("Summit White", "BG8", "BGK")
             rows = self.program_rows(
-                f"gm-{year}-{'impala-limited' if year == 2014 else 'impala'}-kerr-authorized-upfitter-paint"
+                f"gm-{year}-{'impala-limited' if year >= 2014 else 'impala'}-kerr-authorized-upfitter-paint"
             )
             self.assertEqual(30, len(rows), year)
             self.assertEqual(
-                expected_colors,
+                expected_year_colors,
                 {
                     row["paint_code"]: (
                         row["label"],
@@ -387,9 +444,20 @@ class SpecialtyProgramDataTest(unittest.TestCase):
             self.assertTrue(
                 all(not row["paint_code"].startswith("WA-") for row in rows)
             )
-            self.assertTrue(all(row["seo_code"] == "Not applicable" for row in rows))
+            if year <= 2014:
+                self.assertTrue(
+                    all(row["seo_code"] == "Not applicable" for row in rows)
+                )
+            else:
+                self.assertTrue(all(row["seo_code"] is None for row in rows))
+                self.assertTrue(
+                    all(
+                        row["source_seo_code_cell_state"] == "column_absent"
+                        for row in rows
+                    )
+                )
 
-        self.assertEqual(3, len(self.specialty["program_definitions"]))
+        self.assertEqual(18, len(self.specialty["program_definitions"]))
         program = next(
             row
             for row in self.specialty["program_definitions"]
@@ -413,6 +481,24 @@ class SpecialtyProgramDataTest(unittest.TestCase):
                 for row in program["two_tone_schemes"]
             ],
         )
+        limited_program = next(
+            row
+            for row in self.specialty["program_definitions"]
+            if row["program_id"]
+            == "gm-impala-limited-kerr-authorized-upfitter-paint-2015-2016"
+        )
+        self.assertEqual(
+            [
+                "gm-2015-impala-limited-kerr-authorized-upfitter-paint",
+                "gm-2016-impala-limited-kerr-authorized-upfitter-paint",
+            ],
+            limited_program["program_ids"],
+        )
+        self.assertEqual(["impala-limited"], limited_program["catalog_model_ids"])
+        self.assertEqual(
+            "authorized_upfitter_post_build", limited_program["application_type"]
+        )
+        self.assertFalse(limited_program["factory_installation_claim"])
 
     def test_caprice_ppv_program_palettes_and_source_precedence_are_exact(self) -> None:
         expected_counts = {
@@ -490,7 +576,7 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         )
 
         self.assertEqual(6, len(self.specialty["source_conflict_assertions"]))
-        self.assertEqual(6, len(self.specialty["program_lifecycle_assertions"]))
+        self.assertEqual(12, len(self.specialty["program_lifecycle_assertions"]))
         self.assertTrue(
             all(
                 row["precedence_policy_id"]
@@ -1049,16 +1135,32 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
         )
         self.assertEqual(
-            74,
+            87,
             specialty["integrity_audit"]["unique_retained_artifacts_reconciled"],
         )
+        last_rehash = specialty["integrity_audit"]["last_updater_rehash"]
+        self.assertEqual(11, last_rehash["file_count"])
         self.assertEqual(
-            7,
-            specialty["integrity_audit"]["last_updater_rehash"]["file_count"],
+            "scripts/update-2015-2020-specialty-fleet-tranche.mjs",
+            last_rehash["script"],
         )
-        updater = (
-            ROOT / "scripts" / "update-caprice-ppv-specialty-tranche.mjs"
-        ).read_text(encoding="utf-8")
+        self.assertEqual(
+            [
+                "gm-2015-tahoe-5w4",
+                "gm-2016-tahoe-9c1",
+                "gm-2016-tahoe-5w4",
+                "gm-2017-tahoe-9c1-4wd",
+                "gm-2018-tahoe-9c1-4wd",
+                "gm-2019-tahoe-5w4",
+                "gm-2020-tahoe-5w4",
+                "gm-2015-impala-limited-9c1-9c3",
+                "gm-2016-impala-limited-9c1-9c3",
+                "gm-2019-suburban-1fl-3500hd",
+                "gm-2020-suburban-1fl",
+            ],
+            last_rehash["source_ids"],
+        )
+        updater = (ROOT / last_rehash["script"]).read_text(encoding="utf-8")
         self.assertNotIn("Math.max", updater)
         self.assertIn("collectArtifactIdentities", updater)
         self.assertTrue(specialty["integrity_audit"]["byte_lengths_reconciled"])

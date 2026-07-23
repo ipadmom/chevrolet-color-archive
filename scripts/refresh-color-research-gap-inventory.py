@@ -49,6 +49,9 @@ MODERN_SOURCE_CLASSIFICATIONS = {
         "official_live",
     ),
 }
+INCOMPLETE_SUBSET_EVIDENCE_CLASSES = frozenset(
+    {"specialty_palette_subset", "qualified_historical_table"}
+)
 
 STATUS_DEFINITIONS = {
     "verified_complete": (
@@ -352,7 +355,7 @@ def current_generation_index(
             for generation in generations
         }
         if (
-            "specialty_palette_subset" not in evidence_classes
+            not evidence_classes.intersection(INCOMPLETE_SUBSET_EVIDENCE_CLASSES)
             and not is_exact_program_partition
         ):
             raise ValueError(f"resolved app snapshot overlaps model-year: {key}")
@@ -366,7 +369,7 @@ def structural_generation_for_year(
         generations,
         key=lambda generation: (
             (generation["sources"].get(str(year)) or {}).get("evidenceClass")
-            == "specialty_palette_subset",
+            in INCOMPLETE_SUBSET_EVIDENCE_CLASSES,
         ),
     )
 
@@ -378,7 +381,7 @@ def source_generation_for_year(
         source = generation["sources"].get(str(year))
         if source is None:
             return 2
-        if source.get("evidenceClass") == "specialty_palette_subset":
+        if source.get("evidenceClass") in INCOMPLETE_SUBSET_EVIDENCE_CLASSES:
             return 1
         return 0
 
@@ -407,6 +410,7 @@ def resolved_audit_state(
 ) -> str:
     evidence_class = source.get("evidenceClass") if source else None
     qualified_states = {
+        "qualified_historical_table": "reviewed_qualified_historical_table",
         "qualified_palette_union": "reviewed_qualified_palette_union",
         "specialty_palette_subset": "reviewed_specialty_palette_subset",
     }
@@ -894,8 +898,14 @@ def build_inventory(
         listing["evidence_class"] == "specialty_palette_subset"
         for listing in all_listings
     )
+    qualified_historical_listing_count = sum(
+        listing["evidence_class"] == "qualified_historical_table"
+        for listing in all_listings
+    )
     source_transcription_listing_count = len(all_listings) - (
-        palette_listing_count + specialty_listing_count
+        palette_listing_count
+        + specialty_listing_count
+        + qualified_historical_listing_count
     )
     specialty_application_year_count = sum(
         any(
@@ -913,6 +923,9 @@ def build_inventory(
             + bucket["reviewed_no_chart_count"]
         ),
         "reviewed_qualified_palette_union_listing_count": palette_listing_count,
+        "reviewed_qualified_historical_table_listing_count": (
+            qualified_historical_listing_count
+        ),
         "reviewed_specialty_palette_subset_listing_count": specialty_listing_count,
         "reviewed_specialty_palette_subset_application_year_count": (
             specialty_application_year_count

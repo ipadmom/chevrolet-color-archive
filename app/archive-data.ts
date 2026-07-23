@@ -25,6 +25,37 @@ export type Availability = {
   factoryCode?: string | null;
   factoryCodeStatus?: string;
   touchUpCode?: string;
+  rpoCode?: string | null;
+  seoCode?: string | null;
+  seoCodeStatus?:
+    | "printed_in_source"
+    | "not_applicable_in_source"
+    | "not_printed_in_source"
+    | "not_stated_in_source"
+    | "column_absent_in_source";
+  sourceSeoCodeRaw?: string | null;
+  sourceSeoCodeCellState?:
+    | "printed"
+    | "blank"
+    | "tbd"
+    | "em_dash"
+    | "literal_none"
+    | "column_absent"
+    | null;
+  waCode?: string | null;
+  sourceWaCodeRaw?: string | null;
+  sourceWaCodeCellState?:
+    | "printed_with_prefix"
+    | "printed_without_prefix"
+    | null;
+  upfitterOrderCodes?: {
+    code1: string;
+    code2: string;
+    solidColorOption: string;
+    twoToneColorOption: string;
+  } | null;
+  minimumBatchUnits?: number | null;
+  factoryInstallationClaim?: boolean | null;
   restriction?: string;
   sourceIds?: string[];
 };
@@ -62,6 +93,7 @@ export type YearSourceCitation = {
   evidenceClass?:
     | "qualified_palette_union"
     | "specialty_palette_subset"
+    | "qualified_historical_table"
     | "qualified_exact_program_palette";
   artifactSha256?: string;
   artifactBytes?: number;
@@ -4088,11 +4120,34 @@ type SpecialtyPublicationRecord = {
   source_label_raw?: string;
   finish: string;
   paint_code: string;
-  rpo_code?: string;
-  seo_code?: string;
+  factory_paint_code?: string | null;
+  wa_code?: string | null;
+  source_wa_code_raw?: string | null;
+  source_wa_code_cell_state?:
+    | "printed_with_prefix"
+    | "printed_without_prefix";
+  rpo_code?: string | null;
+  seo_code?: string | null;
+  source_seo_code_raw?: string | null;
+  source_seo_code_cell_state?:
+    | "printed"
+    | "blank"
+    | "tbd"
+    | "em_dash"
+    | "literal_none"
+    | "column_absent";
+  minimum_batch_units?: number | null;
+  factory_installation_claim?: boolean | null;
   code_display?: string;
+  upfitter_order_codes?: {
+    code_1: string;
+    code_2: string;
+    solid_color_option: string;
+    two_tone_color_option: string;
+  };
   program_id?: string;
   program_label?: string;
+  evidence_class?: "qualified_historical_table";
   application_type?: string;
   availability_state?: AvailabilityState;
   touch_up_paint_number: string | null;
@@ -4107,22 +4162,74 @@ function specialtyPdfLocator(source: SpecialtyPublicationSource) {
   return `PDF ${pageLabel} ${pages.join(", ")}, ${source.section}.`;
 }
 
+function normalizeSpecialtySeoCode(
+  value: string | null | undefined,
+  cellState: SpecialtyPublicationRecord["source_seo_code_cell_state"],
+) {
+  if (value == null) {
+    if (cellState === "literal_none") {
+      return { code: null, status: "not_applicable_in_source" as const };
+    }
+    if (cellState === "column_absent") {
+      return { code: null, status: "column_absent_in_source" as const };
+    }
+    if (cellState === "em_dash" || cellState === "blank") {
+      return { code: null, status: "not_printed_in_source" as const };
+    }
+    if (cellState === "tbd") {
+      return { code: null, status: "not_stated_in_source" as const };
+    }
+    return { code: null, status: undefined };
+  }
+  const normalized = value.trim().toLowerCase();
+  if (normalized === "not applicable") {
+    return { code: null, status: "not_applicable_in_source" as const };
+  }
+  if (normalized === "not printed") {
+    return { code: null, status: "not_printed_in_source" as const };
+  }
+  if (normalized === "not stated") {
+    return { code: null, status: "not_stated_in_source" as const };
+  }
+  return { code: value, status: "printed_in_source" as const };
+}
+
 function buildSpecialtyColorGenerations() {
   const byModel = new Map<string, Generation[]>();
   const records = specialtyColorSourceData.app_publication_records as SpecialtyPublicationRecord[];
 
   for (const record of records) {
-    if (record.publication_status !== "published_specialty_subset") continue;
+    if (
+      record.publication_status !== "published_specialty_subset" &&
+      record.publication_status !== "published_qualified_historical_subset"
+    ) {
+      continue;
+    }
     const year = String(record.model_year);
+    const isQualifiedHistoricalTable =
+      record.evidence_class === "qualified_historical_table";
+    const normalizedSeoCode = normalizeSpecialtySeoCode(
+      record.seo_code,
+      record.source_seo_code_cell_state,
+    );
     for (const modelId of record.catalog_model_ids) {
-      const printedPaintCode =
+      const factoryPaintCodeRaw =
+        record.factory_paint_code === undefined
+          ? record.paint_code
+          : record.factory_paint_code;
+      const printedFactoryPaintCode =
+        factoryPaintCodeRaw == null ||
+        factoryPaintCodeRaw.trim().toLowerCase() === "not printed"
+          ? null
+          : factoryPaintCodeRaw;
+      const displayedPaintCode =
         record.paint_code.trim().toLowerCase() === "not printed"
           ? null
           : record.paint_code;
       const code =
         record.code_display ??
         [
-          printedPaintCode,
+          displayedPaintCode,
           record.rpo_code ? `RPO ${record.rpo_code}` : null,
           record.seo_code ? `SEO ${record.seo_code}` : null,
         ]
@@ -4142,21 +4249,27 @@ function buildSpecialtyColorGenerations() {
           ? ` The cited table prints the label as “${record.source_label_raw}”.`
           : "";
       const generation: Generation = {
-        id: `specialty-${modelId}-${record.record_id}`,
-        label: `${year} Chevrolet specialty paint subset`,
+        id: `${isQualifiedHistoricalTable ? "qualified-historical" : "specialty"}-${modelId}-${record.record_id}`,
+        label: isQualifiedHistoricalTable
+          ? `${year} Chevrolet reviewed historical table subset`
+          : `${year} Chevrolet specialty paint subset`,
         programId: record.program_id,
         programLabel: record.program_label,
         range: year,
         years: [year],
         listingCount: 1,
         revisionNote:
-          `This is an exact specialty-paint subset for ${record.source_model_scope.join("; ")}. ` +
+          (isQualifiedHistoricalTable
+            ? `This is an exact, qualified subset from the standard exterior-color table for ${record.source_model_scope.join("; ")}. `
+            : `This is an exact specialty-paint subset for ${record.source_model_scope.join("; ")}. `) +
           "It is not a complete model-year exterior-color palette, and adjacent years are not inferred." +
           applicationNote,
         sources: {
           [year]: {
             name: record.source.title,
-            chart: `Specialty paint subset for ${record.source_model_scope.join("; ")}`,
+            chart: isQualifiedHistoricalTable
+              ? `Qualified historical color-table subset for ${record.source_model_scope.join("; ")}`
+              : `Specialty paint subset for ${record.source_model_scope.join("; ")}`,
             locator: specialtyPdfLocator(record.source),
             revision: record.source.revision,
             url: record.source.url,
@@ -4170,7 +4283,9 @@ function buildSpecialtyColorGenerations() {
               record.source.archive_url !== record.source.url
                 ? record.source.url
                 : undefined,
-            evidenceClass: "specialty_palette_subset",
+            evidenceClass: isQualifiedHistoricalTable
+              ? "qualified_historical_table"
+              : "specialty_palette_subset",
             artifactSha256: record.source.sha256,
             artifactBytes: record.source.bytes,
             pdfPageCount: record.source.pdf_page_count,
@@ -4194,8 +4309,33 @@ function buildSpecialtyColorGenerations() {
                 code,
                 applicationType:
                   record.application_type ?? "specialty_program_unspecified",
-                factoryCode: printedPaintCode,
-                factoryCodeStatus: printedPaintCode ? "printed" : "not printed",
+                factoryCode: printedFactoryPaintCode,
+                factoryCodeStatus: printedFactoryPaintCode
+                  ? "printed"
+                  : "not printed",
+                rpoCode: record.rpo_code ?? null,
+                seoCode: normalizedSeoCode.code,
+                seoCodeStatus: normalizedSeoCode.status,
+                sourceSeoCodeRaw: record.source_seo_code_raw ?? null,
+                sourceSeoCodeCellState:
+                  record.source_seo_code_cell_state ?? null,
+                waCode: record.wa_code ?? null,
+                sourceWaCodeRaw: record.source_wa_code_raw ?? null,
+                sourceWaCodeCellState:
+                  record.source_wa_code_cell_state ?? null,
+                upfitterOrderCodes: record.upfitter_order_codes
+                  ? {
+                      code1: record.upfitter_order_codes.code_1,
+                      code2: record.upfitter_order_codes.code_2,
+                      solidColorOption:
+                        record.upfitter_order_codes.solid_color_option,
+                      twoToneColorOption:
+                        record.upfitter_order_codes.two_tone_color_option,
+                    }
+                  : null,
+                minimumBatchUnits: record.minimum_batch_units ?? null,
+                factoryInstallationClaim:
+                  record.factory_installation_claim ?? null,
                 restriction: record.restrictions.join(" "),
                 sourceIds: [record.source.source_id],
               },

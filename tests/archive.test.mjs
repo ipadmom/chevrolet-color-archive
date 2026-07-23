@@ -937,11 +937,24 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     Object.values(item.sources).some(
       (source) => source.evidenceClass === "qualified_palette_union",
     );
+  const isSpecialtySubset = (item) =>
+    Object.values(item.sources).some(
+      (source) => source.evidenceClass === "specialty_palette_subset",
+    );
+  const isQualifiedHistoricalSubset = (item) =>
+    Object.values(item.sources).some(
+      (source) => source.evidenceClass === "qualified_historical_table",
+    );
   assert.equal(
     allGenerations
-      .filter((item) => !isQualifiedPalette(item))
+      .filter(
+        (item) =>
+          !isQualifiedPalette(item) &&
+          !isSpecialtySubset(item) &&
+          !isQualifiedHistoricalSubset(item),
+      )
       .reduce((total, item) => total + item.listingCount, 0),
-    1294,
+    973,
   );
   assert.equal(
     allGenerations
@@ -950,8 +963,20 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     454,
   );
   assert.equal(
+    allGenerations
+      .filter(isSpecialtySubset)
+      .reduce((total, item) => total + item.listingCount, 0),
+    569,
+  );
+  assert.equal(
+    allGenerations
+      .filter(isQualifiedHistoricalSubset)
+      .reduce((total, item) => total + item.listingCount, 0),
+    4,
+  );
+  assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    1748,
+    2000,
   );
 });
 
@@ -2510,16 +2535,20 @@ test("generation overlaps are limited to explicit specialty-program rows", async
       const evidenceClasses = generations.map(
         (generation) => generation.sources[year]?.evidenceClass,
       );
+      const incompleteSubsetClasses = new Set([
+        "specialty_palette_subset",
+        "qualified_historical_table",
+      ]);
       assert.ok(
-        evidenceClasses.includes("specialty_palette_subset"),
-        `${model.name} ${year} overlap lacks a specialty subset`,
+        evidenceClasses.some((value) => incompleteSubsetClasses.has(value)),
+        `${model.name} ${year} overlap lacks an explicit subset`,
       );
-      const specialtyOnly = evidenceClasses.every(
-        (value) => value === "specialty_palette_subset",
+      const subsetOnly = evidenceClasses.every((value) =>
+        incompleteSubsetClasses.has(value),
       );
-      if (!specialtyOnly) {
+      if (!subsetOnly) {
         assert.ok(
-          evidenceClasses.some((value) => value !== "specialty_palette_subset"),
+          evidenceClasses.some((value) => !incompleteSubsetClasses.has(value)),
           `${model.name} ${year} overlap lacks a governing generation`,
         );
       }
@@ -2533,6 +2562,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "bolt-euv:2023",
     "ck-series:1979",
     "ck-series:1980",
+    "ck-series:1983",
     "ck-series:1993",
     "caprice-ppv:2011",
     "caprice-ppv:2012",
@@ -2541,13 +2571,21 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "caprice-ppv:2015",
     "caprice-ppv:2016",
     "caprice-ppv:2017",
+    "express:2012",
+    "express:2013",
+    "express:2014",
     "g-series-van:1979",
     "g-series-van:1980",
+    "g-series-van:1981",
     "impala:2011",
     "impala:2012",
     "impala:2013",
     "impala-limited:2014",
+    "impala-limited:2015",
+    "impala-limited:2016",
     "s10:1993",
+    "silverado:2012",
+    "silverado:2014",
     "silverado:2026",
     "sportvan:1979",
     "sportvan:1980",
@@ -2556,10 +2594,24 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "suburban:2005",
     "suburban:2007",
     "suburban:2011",
+    "suburban:2012",
+    "suburban:2013",
+    "suburban:2014",
+    "suburban:2019",
+    "suburban:2020",
     "tahoe:2000",
     "tahoe:2003",
     "tahoe:2005",
     "tahoe:2006",
+    "tahoe:2012",
+    "tahoe:2013",
+    "tahoe:2014",
+    "tahoe:2015",
+    "tahoe:2016",
+    "tahoe:2017",
+    "tahoe:2018",
+    "tahoe:2019",
+    "tahoe:2020",
   ]);
 });
 
@@ -2572,11 +2624,32 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
     ),
   ]);
   const specialty = JSON.parse(specialtySourceText);
+  const publishedSpecialty = specialty.app_publication_records.filter(
+    (record) => record.publication_status === "published_specialty_subset",
+  );
+  const publishedQualifiedHistorical = specialty.app_publication_records.filter(
+    (record) =>
+      record.publication_status === "published_qualified_historical_subset",
+  );
 
   assert.equal(specialty.visibility, "public");
-  assert.equal(specialty.app_publication_records.length, 281);
-  assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 74);
-  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 7);
+  assert.equal(specialty.dataset_kind, "chevrolet_color_source_candidates");
+  assert.equal(specialty.app_publication_records.length, 533);
+  assert.equal(publishedSpecialty.length, 529);
+  assert.equal(publishedQualifiedHistorical.length, 4);
+  assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 87);
+  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 11);
+  assert.deepEqual(specialty.integrity_audit.artifact_reference_groups, {
+    published_record_sources: 32,
+    published_specialty_sources: 30,
+    published_qualified_historical_sources: 2,
+    verified_not_published_sources: 4,
+    historic_gm_upfitter_candidates: 36,
+    usda_primary_sources: 6,
+    modern_order_guide_snapshot_candidates: 24,
+    comparison_sources: 2,
+    rejected_or_unresolved_source_artifacts: 2,
+  });
   assert.ok(
     specialty.app_publication_records.every(
       (record) =>
@@ -2668,6 +2741,66 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
         snapshot.retrieved_at.endsWith("Z") &&
         snapshot.bytes > 0 &&
         /^[0-9a-f]{64}$/.test(snapshot.sha256),
+    ),
+  );
+});
+
+test("1981 historical chart rows and 1983 permanent-fleet SEO rows remain distinct", async () => {
+  const { models } = await loadArchiveData();
+  const historical = models.flatMap((model) =>
+    model.generations
+      .filter(
+        (generation) =>
+          generation.years.includes("1981") &&
+          generation.sources["1981"]?.evidenceClass ===
+            "qualified_historical_table",
+      )
+      .map((generation) => ({ model, generation })),
+  );
+  assert.deepEqual(
+    historical.map(({ model }) => model.id).sort(),
+    ["g-series-van", "g-series-van", "p-series-step-van", "sportvan"],
+  );
+  assert.ok(
+    historical.every(({ generation }) =>
+      generation.revisionNote.includes(
+        "exact, qualified subset from the standard exterior-color table",
+      ),
+    ),
+  );
+  assert.ok(
+    historical.every(({ generation }) => !/specialty paint/i.test(generation.label)),
+  );
+  assert.ok(
+    historical.every(({ generation }) => {
+      const availability = generation.colors[0].availability["1981"];
+      return (
+        availability.applicationType === "standard_program_palette" &&
+        availability.factoryInstallationClaim === false &&
+        availability.seoCode === null
+      );
+    }),
+  );
+
+  const ck = models.find((model) => model.id === "ck-series");
+  const permanentFleet = ck.generations.filter(
+    (generation) =>
+      generation.years.includes("1983") &&
+      generation.sources["1983"]?.evidenceClass === "specialty_palette_subset" &&
+      generation.programId === "gm-1983-ck-pickup-permanent-fleet-colors",
+  );
+  assert.equal(permanentFleet.length, 4);
+  assert.deepEqual(
+    permanentFleet
+      .map((generation) => generation.colors[0].availability["1983"].seoCode)
+      .sort(),
+    ["9V2", "9V4", "9V5", "9V8"],
+  );
+  assert.ok(
+    permanentFleet.every(
+      (generation) =>
+        generation.colors[0].availability["1983"].factoryInstallationClaim ===
+        false,
     ),
   );
 });
