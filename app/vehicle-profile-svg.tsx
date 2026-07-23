@@ -39,9 +39,9 @@ type ProfileSpec = {
   wheelRearX: number;
 };
 
-const dark = "#38404b";
-const glass = "#dce7ef";
-const chrome = "#aeb7bf";
+const dark = "#3d3931";
+const glass = "#efe8d7";
+const chrome = "#aaa294";
 
 function numericYear(year?: string) {
   const parsed = Number(year);
@@ -201,7 +201,7 @@ function windowPath(spec: ProfileSpec) {
 function wheel(cx: number, key: string) {
   return (
     <g key={key}>
-      <circle cx={cx} cy="70" fill="#f8f8f8" r="12.5" stroke={dark} strokeWidth="3" />
+      <circle cx={cx} cy="70" fill="#fdfbf5" r="12.5" stroke={dark} strokeWidth="3" />
       <circle cx={cx} cy="70" fill={chrome} r="5.25" stroke={dark} strokeWidth="1.4" />
       <circle cx={cx} cy="70" fill={dark} r="1.4" />
     </g>
@@ -209,7 +209,7 @@ function wheel(cx: number, key: string) {
 }
 
 export function VehicleProfileSvg({
-  accent = "#737f95",
+  accent = "var(--ia-gold)",
   label,
   modelId,
   vehicleClass,
@@ -238,8 +238,8 @@ export function VehicleProfileSvg({
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>{`${label} stylized side profile`}</title>
-      <rect fill="#f7f7f7" height="96" width="240" />
-      <path d="M 8 82 H 232" stroke="#d5d8dc" strokeWidth="1" />
+      <rect fill="#fbf7ef" height="96" width="240" />
+      <path d="M 8 82 H 232" stroke="#ded3bd" strokeWidth="1" />
       {prewar ? (
         <>
           <path d="M 39 55 Q 49 42 63 55 M 166 54 Q 182 39 198 55" fill="none" stroke={accent} strokeWidth="10" />
@@ -291,7 +291,7 @@ export function VehicleProfileSvg({
       {modelYear < 1980 ? <path d={`M ${spec.frontX - 8} ${spec.baseY - 2} H ${spec.frontX + 4} M ${spec.rearX - 3} ${spec.baseY - 2} H ${spec.rearX + 8}`} stroke={chrome} strokeWidth="3" /> : null}
       {wheel(spec.wheelRearX, "rear")}
       {wheel(spec.wheelFrontX, "front")}
-      <text fill="#596270" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="700" textAnchor="middle" x="120" y="91">
+      <text fill="#665d4e" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="700" textAnchor="middle" x="120" y="91">
         {era.toUpperCase().replaceAll("-", " ")}
       </text>
     </svg>

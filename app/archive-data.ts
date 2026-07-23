@@ -129,6 +129,7 @@ export type ArchiveModel = {
   name: string;
   vehicleClass: string;
   era: string;
+  current: boolean;
   status: string;
   pendingCopy?: string;
   generations: Generation[];
@@ -4355,29 +4356,35 @@ const specialtyColorGenerationsByModel = buildSpecialtyColorGenerations();
 const auditedModels: ArchiveModel[] = [
   {
     id: "camaro", name: "Camaro", vehicleClass: "sports coupe", era: "1967–1992 audited", status: "26 official charts verified",
+    current: false,
     generations: [firstGeneration, secondGenerationCamaro, thirdGenerationCamaro],
   },
   {
     id: "chevelle", name: "Chevelle", vehicleClass: "midsize car", era: "1964–1967 audited", status: "4 official charts verified",
+    current: false,
     generations: [firstChevelleGeneration],
   },
   {
     id: "bel-air", name: "Bel Air", vehicleClass: "full-size car", era: "Historic passenger car", status: "Source inventory in progress",
+    current: false,
     pendingCopy: "Generation boundaries and official chart locators are being audited. No matrix is published until a full year chart has been reviewed.",
     generations: [],
   },
   {
     id: "corvette", name: "Corvette", vehicleClass: "sports car", era: "1953–1962 source series", status: "9 official tables audited",
     pendingCopy: "The dedicated 1953 GM kit contains no exterior-color table. That year remains unverified while additional official documentation is sought.",
+    current: true,
     generations: [earlyCorvetteTables],
   },
   {
     id: "colorado", name: "Colorado", vehicleClass: "midsize pickup", era: "Modern truck", status: "Source inventory in progress",
+    current: true,
     pendingCopy: "Order guides need market-specific validation. Missing records remain unverified.",
     generations: [],
   },
   {
     id: "suburban", name: "Suburban", vehicleClass: "full-size SUV", era: "1935–present catalog expansion", status: "36 complete model-year color palettes verified (1969, 1972–2005, and 2007)",
+    current: true,
     pendingCopy: "All model years remain visible while official color charts are reviewed year by year.",
     generations: [
       ...suburbanEarlyNoChartGenerations,
@@ -4401,6 +4408,7 @@ const auditedModels: ArchiveModel[] = [
     id: "tahoe", name: "Tahoe", vehicleClass: "full-size SUV", era: "1995–present catalog expansion",
     status: `${tahoeAuditVerifiedYearCount} model years have complete source-linked palettes or exact program audits (1995–2007)`,
     pendingCopy: "All model years remain visible while source tables are reviewed year by year. Program-specific, specialty-paint, and two-tone evidence remains separate from ordinary retail palettes.",
+    current: true,
     generations: tahoeAuditGenerations,
   },
 ];
@@ -4579,6 +4587,7 @@ function mergeCatalogModel(model: CatalogModel): ArchiveModel {
     name: model.name,
     vehicleClass: model.vehicle_class,
     era: catalogEra(model),
+    current: model.current,
     status: listingCount
       ? `${audited?.status ?? `${listingCount} source-linked listings`}; ${reviewStatus}${paletteStatus}`
       : `${catalogYears.size} model years catalogued; color charts in research queue`,

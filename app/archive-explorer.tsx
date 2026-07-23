@@ -41,6 +41,11 @@ import {
 
 type ArchiveView = "models" | "years" | "archive";
 type ArchiveSearchMode = "structured" | "all-fields";
+type ModelSection = {
+  id: string;
+  label: string;
+  models: ArchiveModel[];
+};
 
 type ApiPhoto = {
   id: number;
@@ -114,6 +119,65 @@ const archiveModelYearCount = models.reduce(
     total + new Set(model.generations.flatMap((generation) => generation.years)).size,
   0,
 );
+const alphabeticalModels = [...models].sort((left, right) =>
+  left.name.localeCompare(right.name),
+);
+
+function modelEndYear(model: ArchiveModel) {
+  const documentedYears = model.generations
+    .flatMap((generation) => generation.years)
+    .map(Number)
+    .filter(Number.isFinite);
+  return documentedYears.length
+    ? Math.max(...documentedYears)
+    : Number.NEGATIVE_INFINITY;
+}
+
+function discontinuedBetween(
+  model: ArchiveModel,
+  start: number,
+  end = Number.POSITIVE_INFINITY,
+) {
+  const finalYear = modelEndYear(model);
+  return !model.current && finalYear >= start && finalYear <= end;
+}
+
+const modelSections: ModelSection[] = [
+  {
+    id: "current",
+    label: "CURRENT MODELS",
+    models: alphabeticalModels.filter((model) => model.current),
+  },
+  {
+    id: "discontinued-2000-plus",
+    label: "DISCONTINUED 2000 OR LATER",
+    models: alphabeticalModels.filter((model) =>
+      discontinuedBetween(model, 2000),
+    ),
+  },
+  {
+    id: "discontinued-1990s",
+    label: "DISCONTINUED 1990–1999",
+    models: alphabeticalModels.filter((model) =>
+      discontinuedBetween(model, 1990, 1999),
+    ),
+  },
+  {
+    id: "discontinued-1970s-1980s",
+    label: "DISCONTINUED 1970–1989",
+    models: alphabeticalModels.filter((model) =>
+      discontinuedBetween(model, 1970, 1989),
+    ),
+  },
+  {
+    id: "discontinued-before-1970",
+    label: "DISCONTINUED BEFORE 1970",
+    models: alphabeticalModels.filter((model) => {
+      const finalYear = modelEndYear(model);
+      return !model.current && Number.isFinite(finalYear) && finalYear < 1970;
+    }),
+  },
+];
 const archiveSearchRecords = buildArchiveSearchRecords(
   models,
   specialtyColorSourceData.search_leads,
@@ -199,7 +263,7 @@ function rangeLabel(segment: ArchiveTimelineSegment) {
 
 function modelAccent(model: ArchiveModel) {
   const firstColor = model.generations[0]?.colors[0];
-  return firstColor?.swatch ?? "#737f95";
+  return firstColor?.swatch ?? "var(--ia-gold)";
 }
 
 function modelProfileYear(model: ArchiveModel) {
@@ -213,7 +277,7 @@ function modelHasAuditedRows(model: ArchiveModel) {
 function generationAccent(generation: Generation, year: string) {
   return (
     generation.colors.find((color) => color.availability[year])?.swatch ??
-    "#737f95"
+    "var(--ia-gold)"
   );
 }
 
@@ -246,6 +310,11 @@ function generationForRecord(
 
 function searchChoice(value: string) {
   return value.trim().toLocaleLowerCase();
+}
+
+function pushArchiveHash(hash: string) {
+  if (window.location.hash === hash) return;
+  window.history.pushState(null, "", hash);
 }
 
 export function ArchiveExplorer() {
@@ -404,55 +473,82 @@ export function ArchiveExplorer() {
   }, [allFieldQuery]);
 
   useEffect(() => {
-    const routeTimer = window.setTimeout(() => {
-      const params = new URLSearchParams(
-        window.location.hash.replace(/^#/, ""),
-      );
-      const requestedModel = models.find(
-        (item) => item.id === params.get("model"),
-      );
-      if (!requestedModel) return;
-      setModelId(requestedModel.id);
-      setStructuredModel(requestedModel.name);
-
-      const requestedYear = params.get("year");
-      const requestedColorId = params.get("color");
-      const requestedGeneration = requestedYear
-        ? generationForRecord(requestedModel, requestedYear, requestedColorId)
-        : undefined;
-      if (!requestedYear || !requestedGeneration) {
-        setView("years");
-        return;
-      }
-
-      setYear(requestedYear);
-      setStructuredYear(requestedYear);
-      const requestedColor = requestedGeneration.colors.find(
-        (color) => color.id === requestedColorId,
-      );
-      const firstListed = requestedGeneration.colors.find(
-        (color) => color.availability[requestedYear],
-      );
-      if (requestedColor?.availability[requestedYear]) {
-        setColorId(requestedColor.id);
-        setStructuredColor(
-          structuredColorValue(
-            requestedModel.id,
-            requestedYear,
-            requestedColor.id,
-          ),
+    let routeTimer: number | undefined;
+    const syncRouteFromLocation = () => {
+      if (routeTimer !== undefined) window.clearTimeout(routeTimer);
+      routeTimer = window.setTimeout(() => {
+        const params = new URLSearchParams(
+          window.location.hash.replace(/^#/, ""),
         );
-      } else if (firstListed) {
-        setColorId(firstListed.id);
-        setStructuredColor(
-          structuredColorValue(requestedModel.id, requestedYear, firstListed.id),
+        const requestedModel = models.find(
+          (item) => item.id === params.get("model"),
         );
-      } else {
-        setStructuredColor("");
-      }
-      setView("archive");
-    }, 0);
-    return () => window.clearTimeout(routeTimer);
+        setSidebarOpen(false);
+        setShowAll(true);
+        setStructuredSearchError("");
+        setApiPhotos([]);
+        setSelectedPhotos([]);
+        setPhotoMessage("");
+        if (!requestedModel) {
+          setView("models");
+          return;
+        }
+        setModelId(requestedModel.id);
+        setStructuredModel(requestedModel.name);
+
+        const requestedYear = params.get("year");
+        const requestedColorId = params.get("color");
+        const requestedGeneration = requestedYear
+          ? generationForRecord(requestedModel, requestedYear, requestedColorId)
+          : undefined;
+        if (!requestedYear || !requestedGeneration) {
+          setStructuredColor("");
+          setView("years");
+          return;
+        }
+
+        setYear(requestedYear);
+        setStructuredYear(requestedYear);
+        const requestedColor = requestedGeneration.colors.find(
+          (color) => color.id === requestedColorId,
+        );
+        const firstListed = requestedGeneration.colors.find(
+          (color) => color.availability[requestedYear],
+        );
+        if (requestedColor?.availability[requestedYear]) {
+          setColorId(requestedColor.id);
+          setStructuredColor(
+            structuredColorValue(
+              requestedModel.id,
+              requestedYear,
+              requestedColor.id,
+            ),
+          );
+        } else if (firstListed) {
+          setColorId(firstListed.id);
+          setStructuredColor(
+            structuredColorValue(
+              requestedModel.id,
+              requestedYear,
+              firstListed.id,
+            ),
+          );
+        } else {
+          setColorId("");
+          setStructuredColor("");
+        }
+        setView("archive");
+      }, 0);
+    };
+
+    syncRouteFromLocation();
+    window.addEventListener("popstate", syncRouteFromLocation);
+    window.addEventListener("hashchange", syncRouteFromLocation);
+    return () => {
+      if (routeTimer !== undefined) window.clearTimeout(routeTimer);
+      window.removeEventListener("popstate", syncRouteFromLocation);
+      window.removeEventListener("hashchange", syncRouteFromLocation);
+    };
   }, []);
 
   useEffect(() => {
@@ -562,7 +658,7 @@ export function ArchiveExplorer() {
 
     const params = new URLSearchParams({ model: nextModel.id, year: nextYear });
     if (nextColor) params.set("color", nextColor.id);
-    window.history.replaceState(null, "", `#${params.toString()}`);
+    pushArchiveHash(`#${params.toString()}`);
     window.setTimeout(
       () => document.querySelector(".archive-title")?.scrollIntoView(),
       0,
@@ -627,7 +723,7 @@ export function ArchiveExplorer() {
       }
     }
     setStructuredSearchError("");
-    window.history.replaceState(null, "", `#model=${nextModelId}`);
+    pushArchiveHash(`#model=${nextModelId}`);
   }
 
   function chooseYear(nextYear: string) {
@@ -671,7 +767,7 @@ export function ArchiveExplorer() {
       year: nextYear,
     });
     if (nextColor) params.set("color", nextColor.id);
-    window.history.replaceState(null, "", `#${params.toString()}`);
+    pushArchiveHash(`#${params.toString()}`);
   }
 
   function chooseColor(nextColorId: string) {
@@ -689,7 +785,7 @@ export function ArchiveExplorer() {
       model: model.id,
       year,
     });
-    window.history.replaceState(null, "", `#${params.toString()}`);
+    pushArchiveHash(`#${params.toString()}`);
   }
 
   function chooseMatrixColor(
@@ -711,13 +807,13 @@ export function ArchiveExplorer() {
   function showModelIndex() {
     setView("models");
     setSidebarOpen(false);
-    window.history.replaceState(null, "", "#models");
+    pushArchiveHash("#models");
   }
 
   function showYearIndex() {
     setView("years");
     setSidebarOpen(false);
-    window.history.replaceState(null, "", `#model=${model.id}`);
+    pushArchiveHash(`#model=${model.id}`);
   }
 
   function openPhotoQueue() {
@@ -742,7 +838,7 @@ export function ArchiveExplorer() {
       model: "camaro",
       year: "1969",
     });
-    window.history.replaceState(null, "", `#${params.toString()}`);
+    pushArchiveHash(`#${params.toString()}`);
     window.setTimeout(
       () => document.querySelector(".photo-box")?.scrollIntoView(),
       0,
@@ -973,29 +1069,33 @@ export function ArchiveExplorer() {
         <button className="ia-sidebar-home" onClick={showModelIndex} type="button">
           Chevrolet Models
         </button>
-        <div className="ia-sidebar-label">ALL MODELS</div>
-        {models.map((item) => (
-          <button
-            aria-current={item.id === model.id && view !== "models" ? "page" : undefined}
-            className={item.id === model.id && view !== "models" ? "active" : ""}
-            key={item.id}
-            onClick={() => chooseModel(item.id)}
-            type="button"
-          >
-            <span aria-hidden="true" className="ia-sidebar-profile">
-              <VehicleProfileSvg
-                accent={modelAccent(item)}
-                label={item.name}
-                modelId={item.id}
-                vehicleClass={item.vehicleClass}
-                year={modelProfileYear(item)}
-              />
-            </span>
-            <span className="ia-sidebar-copy">
-              <strong>{item.name}</strong>
-              <small>{item.era}</small>
-            </span>
-          </button>
+        {modelSections.map((section) => (
+          <div className="ia-sidebar-model-section" key={section.id}>
+            <div className="ia-sidebar-label">{section.label}</div>
+            {section.models.map((item) => (
+              <button
+                aria-current={item.id === model.id && view !== "models" ? "page" : undefined}
+                className={item.id === model.id && view !== "models" ? "active" : ""}
+                key={item.id}
+                onClick={() => chooseModel(item.id)}
+                type="button"
+              >
+                <span aria-hidden="true" className="ia-sidebar-profile">
+                  <VehicleProfileSvg
+                    accent={modelAccent(item)}
+                    label={item.name}
+                    modelId={item.id}
+                    vehicleClass={item.vehicleClass}
+                    year={modelProfileYear(item)}
+                  />
+                </span>
+                <span className="ia-sidebar-copy">
+                  <strong>{item.name}</strong>
+                  <small>{item.era}</small>
+                </span>
+              </button>
+            ))}
+          </div>
         ))}
         <div className="ia-sidebar-label">ARCHIVE</div>
         <a href="https://www.gm.com/heritage/archive/vehicle-information-kits">
@@ -1194,26 +1294,40 @@ export function ArchiveExplorer() {
           {view === "models" ? (
             <>
               <h1 className="pageheader">Chevrolet Models (USA, all model years)</h1>
-              <div className="profile-grid" aria-label="Choose a model">
-                {models.map((item) => (
-                  <button
-                    className={`profile-tile ${modelHasAuditedRows(item) ? "" : "pending"}`}
-                    key={item.id}
-                    onClick={() => chooseModel(item.id)}
-                    type="button"
+              {modelSections.map((section) => (
+                <section
+                  aria-labelledby={`model-section-${section.id}`}
+                  className="model-section"
+                  key={section.id}
+                >
+                  <h2
+                    className="model-section-title"
+                    id={`model-section-${section.id}`}
                   >
-                    <VehicleProfileSvg
-                      accent={modelAccent(item)}
-                      label={item.name}
-                      modelId={item.id}
-                      vehicleClass={item.vehicleClass}
-                      year={modelProfileYear(item)}
-                    />
-                    <strong>{item.name}</strong>
-                    {!modelHasAuditedRows(item) ? <small>COLOR RESEARCH QUEUE</small> : null}
-                  </button>
-                ))}
-              </div>
+                    {section.label}
+                  </h2>
+                  <div className="profile-grid">
+                    {section.models.map((item) => (
+                      <button
+                        className={`profile-tile ${modelHasAuditedRows(item) ? "" : "pending"}`}
+                        key={item.id}
+                        onClick={() => chooseModel(item.id)}
+                        type="button"
+                      >
+                        <VehicleProfileSvg
+                          accent={modelAccent(item)}
+                          label={item.name}
+                          modelId={item.id}
+                          vehicleClass={item.vehicleClass}
+                          year={modelProfileYear(item)}
+                        />
+                        <strong>{item.name}</strong>
+                        {!modelHasAuditedRows(item) ? <small>COLOR RESEARCH QUEUE</small> : null}
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              ))}
               <div className="ia-accuracy-note">
                 Choose a model. Choose a year from its catalogued runs. Every
                 catalogued model year opens.
@@ -1275,7 +1389,7 @@ export function ArchiveExplorer() {
                               accent={
                                 profileGeneration
                                   ? generationAccent(profileGeneration, itemYear)
-                                  : "#737f95"
+                                  : "var(--ia-gold)"
                               }
                               label={`${model.name} ${itemYear}`}
                               modelId={model.id}
