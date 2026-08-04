@@ -24,8 +24,8 @@ class GapInventoryRefreshTest(unittest.TestCase):
         summary = self.inventory["summary"]
         self.assertEqual(149, summary["model_count"])
         self.assertEqual(1_792, summary["model_year_count"])
-        self.assertEqual(2_495, summary["listing_count"])
-        self.assertEqual(85, summary["completely_reviewed_count"])
+        self.assertEqual(2_753, summary["listing_count"])
+        self.assertEqual(106, summary["completely_reviewed_count"])
         self.assertEqual(6, summary["reviewed_qualified_historical_table_count"])
         self.assertEqual(72, summary["reviewed_qualified_palette_union_count"])
         self.assertEqual(590, summary["reviewed_qualified_palette_union_listing_count"])
@@ -36,10 +36,10 @@ class GapInventoryRefreshTest(unittest.TestCase):
         self.assertEqual(
             928, summary["reviewed_specialty_palette_subset_listing_count"]
         )
-        self.assertEqual(973, summary["source_transcription_listing_count"])
-        self.assertEqual(4, summary["reviewed_no_chart_count"])
+        self.assertEqual(1_231, summary["source_transcription_listing_count"])
+        self.assertEqual(13, summary["reviewed_no_chart_count"])
         self.assertEqual(0, summary["source_located_chart_unreviewed_count"])
-        self.assertEqual(1_583, summary["wholly_unreviewed_count"])
+        self.assertEqual(1_553, summary["wholly_unreviewed_count"])
         self.assertEqual(1_862, summary["official_source_candidate_link_count"])
         self.assertEqual(691, summary["crawler_source_document_count"])
         self.assertEqual(2_774, summary["crawler_candidate_page_count"])

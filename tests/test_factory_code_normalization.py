@@ -25,10 +25,14 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         cls.components = cls.builder.rows["paint_scheme_components"]
 
     def test_schema_uses_nullable_codes_and_required_controlled_statuses(self) -> None:
-        self.assertEqual(11, BUILD.SCHEMA_VERSION)
+        self.assertEqual(12, BUILD.SCHEMA_VERSION)
         expected = {
             "color_availability": ("factory_code", "factory_code_status"),
             "paint_scheme_components": ("factory_code", "factory_code_status"),
+            "audited_color_program_entries": (
+                "factory_code",
+                "factory_code_status",
+            ),
             "evidence_claims": (
                 "transcribed_factory_code",
                 "transcribed_factory_code_status",

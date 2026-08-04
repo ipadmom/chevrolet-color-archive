@@ -1,0 +1,2015 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-08-04",
+  "model": {
+    "id": "chevrolet-p-series-step-van",
+    "name": "Chevrolet P-Series / Step-Van / Forward-Control Chassis",
+    "years": [
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-1969-chevrolet-motorhome",
+      "model_year": 1969,
+      "title": "1969 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "c22b72b4784561924d8546d9717b90bd2fcd11c6995e90fd1880bc7b6b9b240f",
+      "artifact_bytes": 852608,
+      "pdf_page_count": 25,
+      "reviewed_pages": [
+        {
+          "pdf_page": 7,
+          "printed_page": "30: Page 6",
+          "section": "P30 Series - Gasoline, 1969 models",
+          "visual_verification": "Rendered page explicitly says 1969 MODELS and lists steel and aluminum Step-Van King plus Forward-Control Chassis models; it also assigns body work to Union City Body Co."
+        },
+        {
+          "pdf_page": 9,
+          "printed_page": "30: Page 8",
+          "section": "P30 steel Step-Van King - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows solid colors and two-tone combinations under option E32, body in prime under E32BM, and special applications routed to Union City Body Co."
+        },
+        {
+          "pdf_page": 10,
+          "printed_page": "30: Page 9",
+          "section": "P30 aluminum Step-Van King - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows solid colors and two-tone combinations under option E33, body in prime under E33XH, and special applications routed to Union City Body Co."
+        },
+        {
+          "pdf_page": 14,
+          "printed_page": "30: Page 19",
+          "section": "P30 steel Step-Van King - Diesel, Union City options",
+          "visual_verification": "Rendered page repeats E32 for solid and two-tone Chevrolet options and E32BM for body in prime on the diesel steel body."
+        },
+        {
+          "pdf_page": 15,
+          "printed_page": "30: Page 20",
+          "section": "P30 aluminum Step-Van King - Diesel, Union City options",
+          "visual_verification": "Rendered page repeats E33 for solid and two-tone Chevrolet options and E33XH for body in prime on the diesel aluminum body."
+        }
+      ],
+      "limitations": [
+        "The kit covers P30 Step-Van King and Forward-Control Chassis evidence, not a complete P10-P30 range.",
+        "Every paint-options page refers to a Color and Trim or Colors section, but the retained 25-page PDF does not contain the named exterior-color chart.",
+        "E32, E32BM, E33, and E33XH are body or body-finish option numbers, not paint-formula codes."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1969-chevrolet-g-van",
+      "model_year": 1970,
+      "title": "1969 Chevrolet G Van Vehicle Information Kit, containing 1970 Forward-Control data-book pages",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-G-Van.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "0b26e6bc4afcaa554d4cde8f99547f0491716aee0af1f3d04f4146602bb5e0cb",
+      "artifact_bytes": 4424781,
+      "pdf_page_count": 141,
+      "reviewed_pages": [
+        {
+          "pdf_page": 18,
+          "printed_page": "10: Page 13",
+          "section": "P10 Series - Gasoline",
+          "visual_verification": "Rendered page explicitly says 1970 MODELS, lists the P10 Step-Van, and states that Step-Van chassis go to Union City Body Co. for all body work."
+        },
+        {
+          "pdf_page": 19,
+          "printed_page": "10: Page 14",
+          "section": "P10 steel Step-Van - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows solid color and two-tone under E30, body in prime under E30AL, and a reference to the missing Color and Trim chart."
+        },
+        {
+          "pdf_page": 37,
+          "printed_page": "20: Page 16",
+          "section": "P20 Series - Gasoline",
+          "visual_verification": "Rendered page explicitly says 1970 MODELS, identifies steel and aluminum P20 Step-Van King bodies, and assigns all Step-Van body work to Union City Body Co."
+        },
+        {
+          "pdf_page": 39,
+          "printed_page": "20: Page 18",
+          "section": "P20 steel Step-Van King - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows E32 for solid and two-tone Chevrolet options and E32BM for body in prime."
+        },
+        {
+          "pdf_page": 40,
+          "printed_page": "20: Page 19",
+          "section": "P20 aluminum Step-Van King - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows E33 for solid and two-tone Chevrolet options and E33XH for body in prime."
+        },
+        {
+          "pdf_page": 49,
+          "printed_page": "30: Page 6",
+          "section": "P30 Series - Gasoline",
+          "visual_verification": "Rendered page explicitly says 1970 MODELS and lists steel and aluminum P30 Step-Van King bodies and Forward-Control Chassis models."
+        },
+        {
+          "pdf_page": 51,
+          "printed_page": "30: Page 8",
+          "section": "P30 steel Step-Van King - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows E32 for solid and two-tone Chevrolet options and E32BM for body in prime."
+        },
+        {
+          "pdf_page": 52,
+          "printed_page": "30: Page 9",
+          "section": "P30 aluminum Step-Van King - Gasoline, Union City options",
+          "visual_verification": "Rendered page shows E33 for solid and two-tone Chevrolet options and E33XH for body in prime."
+        },
+        {
+          "pdf_page": 61,
+          "printed_page": "30: Page 18",
+          "section": "P30 Series - Diesel",
+          "visual_verification": "Rendered page explicitly says 1970 MODELS and lists steel and aluminum P30 Step-Van King diesel bodies and Forward-Control Chassis models."
+        },
+        {
+          "pdf_page": 62,
+          "printed_page": "30: Page 19",
+          "section": "P30 steel Step-Van King - Diesel, Union City options",
+          "visual_verification": "Rendered page shows E32 for solid and two-tone Chevrolet options and E32BM for body in prime."
+        },
+        {
+          "pdf_page": 63,
+          "printed_page": "30: Page 20",
+          "section": "P30 aluminum Step-Van King - Diesel, Union City options",
+          "visual_verification": "Rendered page shows E33 for solid and two-tone Chevrolet options and E33XH for body in prime."
+        }
+      ],
+      "limitations": [
+        "The GM Heritage filename and inventory title say 1969, but every reviewed range-heading page explicitly says 1970 MODELS. This audit routes the evidence to model year 1970.",
+        "The retained PDF skips the referenced Color and Trim chart, so no named 1970 P-Series exterior colors are established.",
+        "The option numbers describe Union City body or finish choices and are not paint-formula codes."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1970-chevrolet-motorhome",
+      "model_year": 1970,
+      "title": "1970 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "202be26b96e1a6248fa6f48ebfbbc877c0374a84ae4b062b423378b5bbdabaa2",
+      "artifact_bytes": 692919,
+      "pdf_page_count": 23,
+      "reviewed_pages": [
+        {
+          "pdf_page": 7,
+          "printed_page": "30: Page 6",
+          "section": "P30 Series - Gasoline",
+          "visual_verification": "Rendered page explicitly says 1970 MODELS and lists steel and aluminum P30 Step-Van King bodies."
+        },
+        {
+          "pdf_page": 9,
+          "printed_page": "30: Page 8",
+          "section": "P30 steel Step-Van King - Gasoline",
+          "visual_verification": "Rendered page shows E32 solid and two-tone options, E32BM body in prime, and Union City special-application routing."
+        },
+        {
+          "pdf_page": 10,
+          "printed_page": "30: Page 9",
+          "section": "P30 aluminum Step-Van King - Gasoline",
+          "visual_verification": "Rendered page shows E33 solid and two-tone options, E33XH body in prime, and Union City special-application routing."
+        },
+        {
+          "pdf_page": 19,
+          "printed_page": "30: Page 18",
+          "section": "P30 Series - Diesel",
+          "visual_verification": "Rendered page explicitly says 1970 MODELS and lists steel and aluminum P30 Step-Van King diesel bodies."
+        },
+        {
+          "pdf_page": 20,
+          "printed_page": "30: Page 19",
+          "section": "P30 steel Step-Van King - Diesel",
+          "visual_verification": "Rendered page shows E32 solid and two-tone options and E32BM body in prime."
+        },
+        {
+          "pdf_page": 21,
+          "printed_page": "30: Page 20",
+          "section": "P30 aluminum Step-Van King - Diesel",
+          "visual_verification": "Rendered page shows E33 solid and two-tone options and E33XH body in prime."
+        }
+      ],
+      "limitations": [
+        "This is a P30 subset that corroborates the 1970-model pages in the larger G Van kit.",
+        "The named Color and Trim chart referenced by the option pages is not present."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1971-chevrolet-motorhome",
+      "model_year": 1971,
+      "title": "1971 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "531e04152d91279b1543fabbe5910c2fbd8ad5d28354135b0af38cda652d8d93",
+      "artifact_bytes": 3451083,
+      "pdf_page_count": 26,
+      "reviewed_pages": [
+        {
+          "pdf_page": 21,
+          "printed_page": "30: Page 21",
+          "section": "P30 Series - Gasoline",
+          "visual_verification": "Rendered page explicitly says 1971 MODELS, lists steel and aluminum P30 Step-Van King bodies, and assigns body work to Union City Body Co."
+        },
+        {
+          "pdf_page": 23,
+          "printed_page": "30: Page 23",
+          "section": "P30 steel Step-Van King - Gasoline",
+          "visual_verification": "Rendered page shows E32 solid and two-tone Chevrolet options, E32BM body in prime, and Union City special-application routing."
+        },
+        {
+          "pdf_page": 24,
+          "printed_page": "30: Page 24",
+          "section": "P30 aluminum Step-Van King - Gasoline",
+          "visual_verification": "Rendered page shows E33 solid and two-tone Chevrolet options, E33XH body in prime, and Union City special-application routing."
+        }
+      ],
+      "limitations": [
+        "The P-Series material retained here covers P30 gasoline Step-Van King bodies, not P10, P20, or diesel Step-Vans.",
+        "The referenced Color and Trim chart is absent, so no named 1971 P-Series exterior colors are established."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1972-chevrolet-motorhome",
+      "model_year": 1972,
+      "title": "1972 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "1c383156705ec971e8f10c5ef0a6d01b7b324bbd6328b2c41be45a7a290b0da5",
+      "artifact_bytes": 224317,
+      "pdf_page_count": 9,
+      "reviewed_pages": [
+        {
+          "pdf_page": 2,
+          "printed_page": "Motor Home Chassis - Page 1",
+          "section": "P30 Motor Home Chassis model selector",
+          "visual_verification": "Rendered selector is dated January 28, 1972 and limits the kit scope to P30 Motor Home Chassis models."
+        },
+        {
+          "pdf_page": 9,
+          "printed_page": "Motor Home Chassis - Page 8",
+          "section": "Exterior features - standard models",
+          "visual_verification": "Rendered page states black chassis and components, a black front frame member, white hub caps with black and blue trim, and white wheels."
+        }
+      ],
+      "limitations": [
+        "The kit documents only incomplete P30 motor-home chassis component finishes, not any Step-Van body palette."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1973-chevrolet-motorhome",
+      "model_year": 1973,
+      "title": "1973 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "966156b4aed0cb69b4bf2ee37ea200d42a88eec9c75ae0583c349a748da38631",
+      "artifact_bytes": 343204,
+      "pdf_page_count": 13,
+      "reviewed_pages": [
+        {
+          "pdf_page": 2,
+          "printed_page": "Motor Home Chassis - Page 1",
+          "section": "P30 Motor Home Chassis model selector",
+          "visual_verification": "Rendered selector is dated February 16, 1973 and limits the kit scope to P30 Motor Home Chassis models."
+        },
+        {
+          "pdf_page": 13,
+          "printed_page": "Motor Home Chassis - Page 12",
+          "section": "Exterior features - standard models",
+          "visual_verification": "Rendered page states black chassis and components, black front frame member, white hub caps with black and ochre trim except CP31832, and black wheels."
+        }
+      ],
+      "limitations": [
+        "The kit documents only incomplete P30 motor-home chassis component finishes, not any Step-Van body palette."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1974-chevrolet-motorhome",
+      "model_year": 1974,
+      "title": "1974 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "ced7d0df96f23cf115e997ede45c59b40e93d2f16decf59a06af1fa673e29694",
+      "artifact_bytes": 6057050,
+      "pdf_page_count": 28,
+      "reviewed_pages": [
+        {
+          "pdf_page": 1,
+          "printed_page": null,
+          "section": "FC Chassis and Step-Van selector",
+          "visual_verification": "Rendered and rotated page shows P10, P20, and P30 FC Chassis plus steel E32 and aluminum E33 Step-Van ordering scopes."
+        },
+        {
+          "pdf_page": 8,
+          "printed_page": null,
+          "section": "FC Chassis and all Step-Vans exterior features",
+          "visual_verification": "Rendered and rotated page states black FC chassis/components, white front bumper, white-black-ochre hub caps, black wheels, white front and black rear Step-Van bumpers, black mirrors, black wheels, and a reference to the missing Exterior and Interior Color Selection Chart."
+        },
+        {
+          "pdf_page": 11,
+          "printed_page": null,
+          "section": "Steel and aluminum Step-Van component finishes",
+          "visual_verification": "Rendered and rotated page distinguishes painted-steel bodies with white-and-black grille openings, white bezels, conditional white-or-black lettering, and white moldings from aluminum bodies with a silver grille panel, silver-and-black openings, bright bezels with silver trim, black lettering, and bright moldings."
+        }
+      ],
+      "limitations": [
+        "The retained scan is rotated and does not expose printed page labels on the reviewed sheets.",
+        "The pages refer to an Exterior and Interior Color Selection Chart, but no named-color chart appears in the retained 28-page PDF.",
+        "The GM Heritage source identity supplies the 1974 routing; the reviewed selector and feature pages do not print a model-year heading."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1975-chevrolet-motorhome",
+      "model_year": 1975,
+      "title": "1975 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "7ab3665b4630a44c47c78245027f66477db8480be83f9e93ce25bbdee0f35b40",
+      "artifact_bytes": 404518,
+      "pdf_page_count": 15,
+      "reviewed_pages": [
+        {
+          "pdf_page": 2,
+          "printed_page": "Motor Home Chassis - Page 1",
+          "section": "P30 Motor Home Chassis model selector",
+          "visual_verification": "Rendered selector is dated September 16, 1974 and limits the GM Heritage 1975 kit to P30 Motor Home Chassis models."
+        },
+        {
+          "pdf_page": 3,
+          "printed_page": "Motor Home Chassis - Page 2",
+          "section": "Exterior features - standard models",
+          "visual_verification": "Rendered page states black chassis and components, black front frame member, white hub caps with black and ochre trim except CP31832, and black wheels."
+        }
+      ],
+      "limitations": [
+        "The retained pages document only incomplete P30 motor-home chassis component finishes.",
+        "The pages are dated September 16, 1974 and do not print a 1975 model-year heading; routing follows the official GM Heritage 1975 kit identity, without carrying any evidence into adjacent years."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1976-chevrolet-motorhome",
+      "model_year": 1976,
+      "title": "1976 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "d12972490e7ca65ab201abf5311eb12021d395dcd395b04ea0b16d5834dcfeac",
+      "artifact_bytes": 785099,
+      "pdf_page_count": 41,
+      "reviewed_pages": [
+        {
+          "pdf_page": 2,
+          "printed_page": "Motor Home Chassis - Page 1",
+          "section": "P30 Motor Home Chassis model selector",
+          "visual_verification": "Rendered selector is dated August 29, 1975 and limits the GM Heritage 1976 kit to P30 Motor Home Chassis models."
+        },
+        {
+          "pdf_page": 4,
+          "printed_page": "Motor Home Chassis - Page 2",
+          "section": "Exterior features - standard models",
+          "visual_verification": "Rendered page states black chassis and components, bright Chevrolet emblem with black and ochre trim, black front frame member, white hub caps with black and ochre trim except CP31832, and white wheels."
+        }
+      ],
+      "limitations": [
+        "The retained pages document only incomplete P30 motor-home chassis component finishes.",
+        "The pages are dated August 29, 1975 and do not print a 1976 model-year heading; routing follows the official GM Heritage 1976 kit identity, without carrying any evidence into adjacent years."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1977-chevrolet-motorhome",
+      "model_year": 1977,
+      "title": "1977 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "548ec53990afe7335b9c446c176d6e9da86088d3b59ad33e702da5ddc6f357d0",
+      "artifact_bytes": 352983,
+      "pdf_page_count": 13,
+      "reviewed_pages": [
+        {
+          "pdf_page": 2,
+          "printed_page": "Motor Home Chassis - Page 1",
+          "section": "P30 Motor Home Chassis model selector",
+          "visual_verification": "Rendered selector is dated August 9, 1976 and limits the GM Heritage 1977 kit to P30 Motor Home Chassis models."
+        },
+        {
+          "pdf_page": 3,
+          "printed_page": "Motor Home Chassis - Page 2",
+          "section": "Exterior features - standard models",
+          "visual_verification": "Rendered page states black chassis and components, bright Chevrolet emblem with black and ochre trim, black front frame member, and white wheels; it does not state a hub-cap finish."
+        }
+      ],
+      "limitations": [
+        "The retained pages document only incomplete P30 motor-home chassis component finishes.",
+        "The pages are dated August 9, 1976 and do not print a 1977 model-year heading; routing follows the official GM Heritage 1977 kit identity, without carrying any evidence into adjacent years."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1978-chevrolet-motorhome",
+      "model_year": 1978,
+      "title": "1978 Chevrolet Motorhome Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official-vehicle-information-kit-pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Motorhome.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "63bdd01897a3cfbda7bb54c039ebac1a7a8dd34fc80832f93962b49279e00d26",
+      "artifact_bytes": 10733728,
+      "pdf_page_count": 54,
+      "reviewed_pages": [
+        {
+          "pdf_page": 1,
+          "printed_page": "Step-Van & FC Chassis - Page 1",
+          "section": "Step-Van and FC Chassis model selector",
+          "visual_verification": "Rendered page identifies 1978 Step-Van and FC Chassis and distinguishes ZW9 FC, E32 steel, and E33 aluminum body ordering codes across P10-P30."
+        },
+        {
+          "pdf_page": 20,
+          "printed_page": "Step-Van and F.C. Chassis - Page 20",
+          "section": "Steel Step-Van Union City options, 6200-10000 lb GVW",
+          "visual_verification": "Rendered page says the prices apply to 1978 model vehicles and lists solid exterior paint ZY1 with no additional charge plus separately priced special applications."
+        },
+        {
+          "pdf_page": 22,
+          "printed_page": "Step-Van and F.C. Chassis - Page 22",
+          "section": "Aluminum Step-Van Union City options, 6200-10000 lb GVW",
+          "visual_verification": "Rendered page says the prices apply to 1978 model vehicles and lists ZY1 for P10 and P20-P30 aluminum bodies plus separately priced special applications."
+        },
+        {
+          "pdf_page": 33,
+          "printed_page": "Step-Van and F.C. Chassis - Page 33",
+          "section": "Steel Step-Van Union City options, optional 11000 lb rear axle",
+          "visual_verification": "Rendered page lists ZY1 solid exterior paint without additional charge and routes special applications to Union City Body Company."
+        },
+        {
+          "pdf_page": 34,
+          "printed_page": "Step-Van and F.C. Chassis - Page 34",
+          "section": "Aluminum Step-Van Union City options, optional 11000 lb rear axle",
+          "visual_verification": "Rendered page lists ZY1 solid exterior paint as a priced option and routes special applications to Union City Body Company."
+        },
+        {
+          "pdf_page": 41,
+          "printed_page": "Step-Van & FC Chassis - Page A",
+          "section": "Cab and body features, color and trim charts divider",
+          "visual_verification": "Rendered divider explicitly identifies the following section as Color and Trim Charts."
+        },
+        {
+          "pdf_page": 42,
+          "printed_page": "Step-Van & FC Chassis - Page B",
+          "section": "Exterior features - standard models",
+          "visual_verification": "Rendered page distinguishes FC chassis black, white and ochre component finishes from all-Step-Van white and black bumpers, black mirrors, white wheels, and the body-color chart reference."
+        },
+        {
+          "pdf_page": 43,
+          "printed_page": "Step-Van & FC Chassis - Page C",
+          "section": "Steel and aluminum Step-Van component finishes",
+          "visual_verification": "Rendered page distinguishes painted steel, white-and-black, and conditional-lettering finishes from aluminum, silver, black, and bright component finishes."
+        },
+        {
+          "pdf_page": 44,
+          "printed_page": "Step-Van & FC Chassis - Page D",
+          "section": "Interior features - steel and all Step-Vans",
+          "visual_verification": "Rendered page states Dark Blue non-reflective driver-area paint, Silver Gray remainder on steel vans only, and Dark Red grained vinyl seats; this verifies the chart's steel-only Silver footnote context."
+        },
+        {
+          "pdf_page": 45,
+          "printed_page": "Step-Van & FC Chassis - Page E",
+          "section": "Interior features - aluminum Step-Vans",
+          "visual_verification": "Rendered page visually confirms the aluminum-body interior construction scope that differs from the steel-only Silver interior note."
+        },
+        {
+          "pdf_page": 54,
+          "printed_page": "Step Vans & FC Chassis - Page N",
+          "section": "Interior and exterior color availability chart",
+          "visual_verification": "Rendered chart lists 15 named exterior colors plus bare aluminum and body in prime, exact primary and secondary codes, metallic and steel-only footnotes, the no-two-tone rule, and ZY1 applicability to E32 steel and E33 aluminum Step-Vans."
+        }
+      ],
+      "limitations": [
+        "The chart closes the regular solid-color offering for Step-Van and Step-Van King, but separately priced special applications are not named or coded.",
+        "The kit does not route any Forest Service color or government fleet green by name or code."
+      ]
+    }
+  ],
+  "years": [
+    {
+      "model_year": 1969,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1969-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1969-p30-steel-union-city-finishes",
+          "program_label": "P30 steel Step-Van King Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P30 gasoline and diesel steel Step-Van King bodies; not Forward-Control bare chassis",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid colors",
+              "source_label_raw": "Solid colors (Chevrolet options)",
+              "factory_code": "E32",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-tone combinations",
+              "source_label_raw": "Two-tone combinations (Chevrolet options)",
+              "factory_code": "E32",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E32BM",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Van King body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special applications",
+              "source_label_raw": "Special applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "1969-p30-aluminum-union-city-finishes",
+          "program_label": "P30 aluminum Step-Van King Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P30 gasoline and diesel aluminum Step-Van King bodies",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid colors",
+              "source_label_raw": "Solid colors (Chevrolet options)",
+              "factory_code": "E33",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Colors section."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-tone combinations",
+              "source_label_raw": "Two-tone combinations (Chevrolet options)",
+              "factory_code": "E33",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Colors section."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E33XH",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Van King body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special applications",
+              "source_label_raw": "Special applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Only P30 evidence was located; the named exterior-color chart is absent, so the regular 1969 palette is not closed."
+      ]
+    },
+    {
+      "model_year": 1970,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1969-chevrolet-g-van",
+        "gm-heritage-1970-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1970-p10-steel-union-city-finishes",
+          "program_label": "P10 steel Step-Van Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P10 gasoline steel Step-Van body",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid color",
+              "source_label_raw": "Solid color (Chevrolet options)",
+              "factory_code": "E30",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-tone",
+              "source_label_raw": "Two-tone (Chevrolet options)",
+              "factory_code": "E30",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E30AL",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "P10 steel Step-Van body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special applications",
+              "source_label_raw": "Special applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "1970-p20-p30-steel-union-city-finishes",
+          "program_label": "P20-P30 steel Step-Van King Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P20 gasoline plus P30 gasoline and diesel steel Step-Van King bodies",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid color",
+              "source_label_raw": "Solid color (Chevrolet options)",
+              "factory_code": "E32",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-tone",
+              "source_label_raw": "Two-tone (Chevrolet options)",
+              "factory_code": "E32",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E32BM",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Van King body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special applications",
+              "source_label_raw": "Special applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "1970-p20-p30-aluminum-union-city-finishes",
+          "program_label": "P20-P30 aluminum Step-Van King Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P20 gasoline plus P30 gasoline and diesel aluminum Step-Van King bodies",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid color",
+              "source_label_raw": "Solid color (Chevrolet options)",
+              "factory_code": "E33",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-tone",
+              "source_label_raw": "Two-tone (Chevrolet options)",
+              "factory_code": "E33",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E33XH",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Van King body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special applications",
+              "source_label_raw": "Special applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "P10-P30 finish-option scopes are verified, but the named Color and Trim chart is absent, so the regular 1970 palette is not closed."
+      ]
+    },
+    {
+      "model_year": 1971,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1971-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1971-p30-steel-union-city-finishes",
+          "program_label": "P30 steel Step-Van King Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P30 gasoline steel Step-Van King bodies",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid",
+              "source_label_raw": "Solid (Chevrolet options)",
+              "factory_code": "E32",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-Tone",
+              "source_label_raw": "Two-Tone (Chevrolet options)",
+              "factory_code": "E32",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E32BM",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "P30 steel Step-Van King body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special Applications",
+              "source_label_raw": "Special Applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "1971-p30-aluminum-union-city-finishes",
+          "program_label": "P30 aluminum Step-Van King Union City finish options",
+          "palette_kind": "official-body-finish-options",
+          "source_scope": "P30 gasoline aluminum Step-Van King bodies",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid",
+              "source_label_raw": "Solid (Chevrolet options)",
+              "factory_code": "E33",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named colors are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Two-Tone",
+              "source_label_raw": "Two-Tone (Chevrolet options)",
+              "factory_code": "E33",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "Named combinations are deferred to a missing Color and Trim chart."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "E33XH",
+              "factory_code_status": "body-finish-option-number",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "P30 aluminum Step-Van King body."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Special Applications",
+              "source_label_raw": "Special Applications - Contact Union City Body Co. for prices",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The located P-Series pages cover P30 gasoline bodies only and omit the named Color and Trim chart."
+      ]
+    },
+    {
+      "model_year": 1972,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1972-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1972-p30-motorhome-chassis-components",
+          "program_label": "P30 Motor Home Chassis standard component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "P30 Motor Home Chassis only",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "Not a Step-Van body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Front Frame Member: Heavy channel reinforcement; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "front frame member",
+              "combination_code": null,
+              "restrictions": [
+                "Not a body color."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White with black and blue trim",
+              "source_label_raw": "Hub Caps: Painted white with black and blue trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "hub caps",
+              "combination_code": null,
+              "restrictions": [
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "White",
+              "source_label_raw": "Wheels: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No Step-Van body-color chart or named body paint appears in the retained official kit."
+      ]
+    },
+    {
+      "model_year": 1973,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1973-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1973-p30-motorhome-chassis-components",
+          "program_label": "P30 Motor Home Chassis standard component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "P30 Motor Home Chassis only",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "Not a Step-Van body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Front Frame Member: Heavy channel reinforcement; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "front frame member",
+              "combination_code": null,
+              "restrictions": [
+                "Not a body color."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White with black and ochre trim",
+              "source_label_raw": "Hub Caps: Painted white with black and ochre trim (except CP31832)",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "hub caps",
+              "combination_code": null,
+              "restrictions": [
+                "Except CP31832.",
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Black",
+              "source_label_raw": "Wheels: Painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No Step-Van body-color chart or named body paint appears in the retained official kit."
+      ]
+    },
+    {
+      "model_year": 1974,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1974-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1974-fc-stepvan-standard-components",
+          "program_label": "FC Chassis and Step-Van standard exterior component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "P10-P30 FC Chassis and steel or aluminum Step-Vans, with body-specific distinctions",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "FC chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "FC Chassis only; not a Step-Van body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "Bumper: Front; painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "FC chassis front bumper",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White with black and ochre trim",
+              "source_label_raw": "Hub Caps: Painted white with black and ochre trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "hub caps",
+              "combination_code": null,
+              "restrictions": [
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Black",
+              "source_label_raw": "Wheels: Painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "White front and black rear",
+              "source_label_raw": "Bumpers: Front painted white and rear painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "Step-Van bumpers",
+              "combination_code": null,
+              "restrictions": [
+                "All Step-Vans."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Black",
+              "source_label_raw": "Mirrors: RH & LH; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "Step-Van mirrors",
+              "combination_code": null,
+              "restrictions": [
+                "All Step-Vans."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White and black",
+              "source_label_raw": "Grille Panel Openings: Painted white and black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van grille panel openings",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "White",
+              "source_label_raw": "Headlamp Bezels: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van headlamp bezels",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "White or black",
+              "source_label_raw": "Lettering: Painted white or black, depending upon exterior color",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van lettering",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only; selection depends on the unstated exterior body color."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "White",
+              "source_label_raw": "Moldings: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van moldings",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "Silver",
+              "source_label_raw": "Grille Panel: Painted silver",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van steel grille panel",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Silver and black",
+              "source_label_raw": "Grille Panel Openings: Painted silver and black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van grille panel openings",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "Bright with silver paint trim",
+              "source_label_raw": "Headlamp Bezels: Bright with silver paint trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van headlamp bezels",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "Black",
+              "source_label_raw": "Lettering: Painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van lettering",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 15,
+              "label": "Bright",
+              "source_label_raw": "Moldings: Bright",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van moldings",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The source references an Exterior and Interior Color Selection Chart that is absent, so component finishes cannot be converted into a body palette."
+      ]
+    },
+    {
+      "model_year": 1975,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1975-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1975-p30-motorhome-chassis-components",
+          "program_label": "P30 Motor Home Chassis standard component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "P30 Motor Home Chassis only",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "Not a Step-Van body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Front Frame Member: Heavy channel reinforcement; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "front frame member",
+              "combination_code": null,
+              "restrictions": [
+                "Not a body color."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White with black and ochre trim",
+              "source_label_raw": "Hub Caps: Painted white with black and ochre trim (except CP31832)",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "hub caps",
+              "combination_code": null,
+              "restrictions": [
+                "Except CP31832.",
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Black",
+              "source_label_raw": "Wheels: Painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No Step-Van body-color chart or named body paint appears in the retained official kit."
+      ]
+    },
+    {
+      "model_year": 1976,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1976-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1976-p30-motorhome-chassis-components",
+          "program_label": "P30 Motor Home Chassis standard component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "P30 Motor Home Chassis only",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "Not a Step-Van body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Bright with black and ochre trim",
+              "source_label_raw": "Emblem: (Furnished loose in parts box) Bright Chevrolet with black and ochre trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "Chevrolet emblem",
+              "combination_code": null,
+              "restrictions": [
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Black",
+              "source_label_raw": "Front Frame Member: Heavy channel reinforcement; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "front frame member",
+              "combination_code": null,
+              "restrictions": [
+                "Not a body color."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "White with black and ochre trim",
+              "source_label_raw": "Hub Caps: Painted white with black and ochre trim (except CP31832)",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "hub caps",
+              "combination_code": null,
+              "restrictions": [
+                "Except CP31832.",
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "White",
+              "source_label_raw": "Wheels: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No Step-Van body-color chart or named body paint appears in the retained official kit."
+      ]
+    },
+    {
+      "model_year": 1977,
+      "audit_status": "partial-official-evidence",
+      "complete_regular_palette": false,
+      "source_ids": [
+        "gm-heritage-1977-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1977-p30-motorhome-chassis-components",
+          "program_label": "P30 Motor Home Chassis standard component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "P30 Motor Home Chassis only",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "Not a Step-Van body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Bright with black and ochre trim",
+              "source_label_raw": "Emblem: (Furnished loose in parts box) Bright Chevrolet with black and ochre trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "Chevrolet emblem",
+              "combination_code": null,
+              "restrictions": [
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Black",
+              "source_label_raw": "Front Frame Member: Heavy channel reinforcement; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "front frame member",
+              "combination_code": null,
+              "restrictions": [
+                "Not a body color."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "White",
+              "source_label_raw": "Wheels: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The official page does not state a hub-cap finish and contains no Step-Van body-color chart or named body paint."
+      ]
+    },
+    {
+      "model_year": 1978,
+      "audit_status": "complete-official-regular-palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1978-chevrolet-motorhome"
+      ],
+      "programs": [
+        {
+          "program_id": "1978-stepvan-solid-color-chart",
+          "program_label": "Step-Van and Step-Van King solid exterior colors",
+          "palette_kind": "official-exterior-color-chart",
+          "source_scope": "P10-P30 Step-Van and Step-Van King, steel E32 and aluminum E33 body scopes under ZY1",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "BLUE, LITE (Light)",
+              "source_label_raw": "BLUE, LITE (Light)",
+              "factory_code": "20",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "20/20",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "BLUE, HAWAIIAN (Medium)",
+              "source_label_raw": "BLUE, HAWAIIAN (Medium)",
+              "factory_code": "23",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "23/23",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "BLUE, MARINER (Dark) (M)",
+              "source_label_raw": "BLUE, MARINER (Dark) (M)",
+              "factory_code": "25",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "25/25",
+              "restrictions": [
+                "Metallic.",
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "BROWN, CORDOVA (Dark) (M)",
+              "source_label_raw": "BROWN, CORDOVA (Dark) (M)",
+              "factory_code": "81",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "81/81",
+              "restrictions": [
+                "Metallic.",
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "BUCKSKIN",
+              "source_label_raw": "BUCKSKIN",
+              "factory_code": "65",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "65/65",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "GREEN, SEAMIST (Light) (M)",
+              "source_label_raw": "GREEN, SEAMIST (Light) (M)",
+              "factory_code": "43",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "43/43",
+              "restrictions": [
+                "Metallic.",
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "GREEN, HOLLY (Dark)",
+              "source_label_raw": "GREEN, HOLLY (Dark)",
+              "factory_code": "46",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "46/46",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "MAHOGANY",
+              "source_label_raw": "MAHOGANY",
+              "factory_code": "76",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "76/76",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "RED, CARDINAL (Medium)",
+              "source_label_raw": "RED, CARDINAL (Medium)",
+              "factory_code": "70",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "70/70",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "RED, METALLIC (Dark) (M)",
+              "source_label_raw": "RED, METALLIC (Dark) (M)",
+              "factory_code": "71",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "71/71",
+              "restrictions": [
+                "Metallic.",
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "RUSSET METALLIC (M)",
+              "source_label_raw": "RUSSET METALLIC (M)",
+              "factory_code": "68",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "68/68",
+              "restrictions": [
+                "Metallic.",
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "SILVER, SARATOGA (M)",
+              "source_label_raw": "SILVER, SARATOGA (M)",
+              "factory_code": "17",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "17/17",
+              "restrictions": [
+                "Metallic.",
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "TAN, SANTA FE",
+              "source_label_raw": "TAN, SANTA FE",
+              "factory_code": "60",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "60/60",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "WHITE, FROST",
+              "source_label_raw": "WHITE, FROST",
+              "factory_code": "12",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "12/12",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 15,
+              "label": "YELLOW, COLONIAL",
+              "source_label_raw": "YELLOW, COLONIAL",
+              "factory_code": "53",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "53/53",
+              "restrictions": [
+                "Solid paint only; two-tones not available; secondary code equals primary code.",
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            },
+            {
+              "order": 16,
+              "label": "Body, Bare Aluminum",
+              "source_label_raw": "Body, Bare Aluminum (Aluminum Step-Van only)",
+              "factory_code": "02",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "02/02",
+              "restrictions": [
+                "Aluminum Step-Van only.",
+                "No Silver main interior mark appears in the chart."
+              ]
+            },
+            {
+              "order": 17,
+              "label": "Body in Prime",
+              "source_label_raw": "Body in Prime",
+              "factory_code": "00",
+              "factory_code_status": "official-chart-primary-code",
+              "component_role": "body",
+              "combination_code": "00/00",
+              "restrictions": [
+                "Chart marks Silver main interior; Silver applies to steel vans only."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "1978-stepvan-zy1-body-scope",
+          "program_label": "ZY1 solid-paint body scope",
+          "palette_kind": "official-body-finish-option",
+          "source_scope": "Steel E32 and aluminum E33 Step-Van bodies",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Solid color paint",
+              "source_label_raw": "Solid color paint (ZY1)",
+              "factory_code": "ZY1",
+              "factory_code_status": "paint-option-code",
+              "component_role": "all painted body areas",
+              "combination_code": null,
+              "restrictions": [
+                "Standard on steel E32 Step-Van models.",
+                "Available on aluminum E33 Step-Van models.",
+                "All painted areas of the body are painted the same color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Special Applications",
+              "source_label_raw": "Special Applications. Contact Union City Body Company for prices.",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "body",
+              "combination_code": null,
+              "restrictions": [
+                "No special-application color names or codes are stated."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "1978-fc-stepvan-standard-components",
+          "program_label": "FC Chassis and Step-Van standard exterior component finishes",
+          "palette_kind": "official-component-finishes",
+          "source_scope": "FC Chassis and all steel or aluminum Step-Vans",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Color: Chassis and components painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "FC chassis and components",
+              "combination_code": null,
+              "restrictions": [
+                "FC Chassis only; not a body color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "Bumper: Front; painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "FC chassis front bumper",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Bright with black and ochre trim",
+              "source_label_raw": "Emblem: Bright Chevrolet with black and ochre trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "FC chassis Chevrolet emblem",
+              "combination_code": null,
+              "restrictions": [
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "White with black and ochre trim",
+              "source_label_raw": "Hub Caps: Painted white with black and ochre trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "hub caps",
+              "combination_code": null,
+              "restrictions": [
+                "Component combination only."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "White",
+              "source_label_raw": "Wheels: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "wheels",
+              "combination_code": null,
+              "restrictions": [
+                "Component finish only."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "White front and black rear",
+              "source_label_raw": "Bumpers: Front painted white and rear painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "Step-Van bumpers",
+              "combination_code": null,
+              "restrictions": [
+                "All Step-Vans."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Black",
+              "source_label_raw": "Mirrors: RH & LH; painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "Step-Van mirrors",
+              "combination_code": null,
+              "restrictions": [
+                "All Step-Vans."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "White and black",
+              "source_label_raw": "Grille Panel Openings: Painted white and black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van grille panel openings",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "White",
+              "source_label_raw": "Headlamp Bezels: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van headlamp bezels",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "White or black",
+              "source_label_raw": "Lettering: Painted white or black, depending upon exterior color",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van lettering",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only; selection depends on exterior color."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "White",
+              "source_label_raw": "Moldings: Painted white",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "steel Step-Van moldings",
+              "combination_code": null,
+              "restrictions": [
+                "Steel Step-Vans only."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Silver",
+              "source_label_raw": "Grille Panel: Painted silver",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van steel grille panel",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "Silver and black",
+              "source_label_raw": "Grille Panel Openings: Painted silver and black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van grille panel openings",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "Bright with silver paint trim",
+              "source_label_raw": "Headlamp Bezels: Bright with silver paint trim",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van headlamp bezels",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 15,
+              "label": "Black",
+              "source_label_raw": "Lettering: Painted black",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van lettering",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            },
+            {
+              "order": 16,
+              "label": "Bright",
+              "source_label_raw": "Moldings: Bright",
+              "factory_code": null,
+              "factory_code_status": "not-stated",
+              "component_role": "aluminum Step-Van moldings",
+              "combination_code": null,
+              "restrictions": [
+                "Aluminum Step-Vans only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The regular solid-color chart is complete, but special applications remain unnamed and uncoded in the official kit."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No complete named P-Series or Step-Van exterior-color chart was located in the retained official kits for 1969-1977.",
+    "The official file named 1969-Chevrolet-G-Van.pdf contains reviewed pages explicitly labeled 1970 MODELS; only those printed 1970 pages are routed to 1970.",
+    "The 1972-1973 and 1975-1977 kits close only limited P30 motor-home chassis component finishes, not Step-Van body palettes.",
+    "The 1974 kit references an Exterior and Interior Color Selection Chart that is absent from the retained PDF.",
+    "Union City special applications are acknowledged where printed, but no Forest Service or other government-fleet color is assigned without direct GM year-and-model routing.",
+    "USDA color references 14260 and 5032 are not bridged into Chevrolet model-year availability."
+  ]
+}

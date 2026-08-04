@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-04T12:55:00Z",
+  "scope": "Reviewed Wikimedia Commons photographs that can be linked to an exact current-model, exact model-year palette label without treating a photograph as factory-paint proof.",
+  "policy": {
+    "identity_requirement": "The Commons metadata must identify the exact Chevrolet model and model year represented by the archive row.",
+    "label_requirement": "The Commons description must print the same complete color label as a reviewed model-year palette source.",
+    "visual_requirement": "The retained archive image must be visually reviewed as a clear complete-vehicle color reference.",
+    "factory_paint_boundary": "A Commons caption and photograph do not prove original factory finish. Every link remains factory-paint unverified unless a separate authoritative vehicle-specific source is retained.",
+    "adjacent_year_inference": false
+  },
+  "links": [
+    {
+      "link_id": "commons-2024-trax-crimson-metallic",
+      "photo_id": "commons-sha1-e02eb8861478e32c7ba2",
+      "model_id": "trax",
+      "model_year": 2024,
+      "archive_color_key": "trax-crimson-metallic-2024-gm-fleet-guide",
+      "color_label": "Crimson Metallic",
+      "visual_review_status": "reviewed",
+      "factory_paint_match_status": "unverified",
+      "commons_metadata_evidence": "2024 Chevrolet Trax ACTIV photographed in New Castle, Pennsylvania. Finished in Crimson Metallic.",
+      "commons_source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_front_left,_07-12-2023.jpg",
+      "archive_original_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-134333595-e02eb8861478-2024-chevrolet-trax-activ-front-left-07-12-2023.jpg",
+      "archive_preview_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-e02eb8861478e32c7ba2-658596c2811d5c48.webp",
+      "commons_sha1": "e02eb8861478e32c7ba246bcaa7efd4b50e3c0e2",
+      "sha256": "74cf2a8cde2da6441edb7557baf4ae21514f7bf9b21dae5e0aec7465e3061e79",
+      "width": 4581,
+      "height": 2631,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "attribution": "MercurySable99 - 2024 Chevrolet Trax ACTIV, front left, 07-12-2023 - CC BY-SA 4.0",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 36, EXTERIOR COLORS.",
+      "note": "The Commons description prints the exact reviewed 2024 palette label and the retained photograph was visually reviewed. This is a user-facing color example only; original factory finish and paint code remain unverified."
+    }
+  ]
+}

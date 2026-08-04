@@ -6,7 +6,7 @@
   "repository": "ipadmom/chevrolet-color-archive",
   "release_tag": "brochure-source-archive-v1",
   "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
-  "scope": "Retained governing, reviewed-no-chart, supporting, carrier, and comparison sources for the 1963, 1969-1976, 1982, 1989, 1993, and 2000-2007 Chevrolet Suburban color audits and the 1995-2007 Chevrolet Tahoe audits, including retained Tahoe sales brochures, specification sheets, code guides, and police-configuration contracts, plus the complete 1963 comparison record: the GM truck kit, exact Service News extract, its complete parent issue, and the Corvair 95 paint-and-trim compilation. The archive also retains the 1979 Blazer and 1993 S-10 vehicle information kits, the 1980 Chevrolet truck color-and-trim kit, the 1981 Chevrolet G Van and Motorhome vehicle information kits, the 1983 Chevrolet truck color-and-trim kit, the 2011-2014 Chevrolet municipal and police manuals, the 2015-2017 Caprice PPV 9C1 specification guides, eleven exact 2015-2020 Tahoe 9C1/5W4, Impala Limited 9C1/9C3 Kerr, and Suburban 1FL/3500HD specification guides, the 2023 Bolt EUV SSV guide, the 2024-2026 Blazer EV municipal guides, two dated Blazer EV order-guide snapshots, and the April 14, 2026 Silverado 9C1 and 5W4 guides. It also retains 20 audited GM Fleet Guide artifacts covering 2008-2026, including the first retained 2025 revision with explicitly labeled 2024 Equinox EV and Traverse pages, and four audited 2022-2023 Chevrolet eBrochures that govern qualified modern palette unions. Original, retrieval, independent mirror, and parent URLs are recorded separately where applicable. No source or carrier states a reuse license.",
+  "scope": "Retained governing, reviewed-no-chart, supporting, carrier, and comparison sources for the 1963, 1969-1976, 1982, 1989, 1993, and 2000-2007 Chevrolet Suburban color audits and the 1995-2007 Chevrolet Tahoe audits, including retained Tahoe sales brochures, specification sheets, code guides, and police-configuration contracts, plus the complete 1963 comparison record: the GM truck kit, exact Service News extract, its complete parent issue, and the Corvair 95 paint-and-trim compilation. The archive also retains the 1979 Blazer and 1993 S-10 vehicle information kits, the 1980 Chevrolet truck color-and-trim kit, the 1981 Chevrolet G Van and Motorhome vehicle information kits, the 1983 Chevrolet truck color-and-trim kit, the 2011-2014 Chevrolet municipal and police manuals, the 2015-2017 Caprice PPV 9C1 specification guides, eleven exact 2015-2020 Tahoe 9C1/5W4, Impala Limited 9C1/9C3 Kerr, and Suburban 1FL/3500HD specification guides, the 2023 Bolt EUV SSV guide, the 2024-2026 Blazer EV municipal guides, two dated Blazer EV order-guide snapshots, and the April 14, 2026 Silverado 9C1 and 5W4 guides. It also retains 20 audited GM Fleet Guide artifacts covering 2008-2026, including the first retained 2025 revision with explicitly labeled 2024 Equinox EV and Traverse pages, and four audited 2022-2023 Chevrolet eBrochures that govern qualified modern palette unions. Original, retrieval, independent mirror, and parent URLs are recorded separately where applicable. No source or carrier states a reuse license. It also retains 31 exact official GM vehicle information kits used by the 1963-1972 Corvette, 1970-1979 Monte Carlo, and 1969-1978 P-Series and Step-Van audits, including reviewed partial evidence that was not promoted to a complete palette.",
   "entries": [
     {
       "asset_name": "1962-october-chevrolet-service-news-vol-34-no-9.pdf",
@@ -18,6 +18,16 @@
       "original_source_url": "https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf",
       "pdf_page_count": 48,
       "retrieval_url": "https://web.archive.org/web/20221017094958id_/https://www.corvair.org/chapters/corvanatics/files/documents/manuals/ChevServNws/CSN-34-9.pdf"
+    },
+    {
+      "asset_name": "1963-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "8dc1430e551cf50766b39c3d29a240f2036f47e8a16fc6c8677e9a5f881e225e",
+      "bytes": 5984667,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1963-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1963-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 165
     },
     {
       "asset_name": "1963-chevrolet-service-news-paint-refinish-codes.pdf",
@@ -52,6 +62,86 @@
       "pdf_page_count": 107
     },
     {
+      "asset_name": "1964-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1964-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "013d8704b06c25d13f3564fae72faef82f9bf41f152951f19093f1cbcbe2ea3e",
+      "bytes": 3603696,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1964-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1964-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 119
+    },
+    {
+      "asset_name": "1965-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1965-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "049cf2e957d41d7fe34b96612bf4102d85a60f2a8f9eb3c53a1b448a194cef43",
+      "bytes": 3435983,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1965-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1965-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 99
+    },
+    {
+      "asset_name": "1966-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1966-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "92ab42ced023a8f7bb82d5454a9f83899a8455b8e84ed98e8f3e02d852433a43",
+      "bytes": 3838200,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1966-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1966-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 105
+    },
+    {
+      "asset_name": "1967-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1967-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "30c1f0ae34e13b2e14f8abd45ad8797de2b2152209529fb5c06e178251d75c8c",
+      "bytes": 2488000,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1967-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1967-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 85
+    },
+    {
+      "asset_name": "1968-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1968-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "1d9c80702b58a04027f528ff24329803bba18489ec1b5873e251141f1be93fc4",
+      "bytes": 4212232,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1968-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1968-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 139
+    },
+    {
+      "asset_name": "1969-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "f43493c6f47f09af8b818f6b988612b7d23f46f7ac502efbf85df470f4d8ec7a",
+      "bytes": 6091513,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1969-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 169
+    },
+    {
+      "asset_name": "1969-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "sha256": "0b26e6bc4afcaa554d4cde8f99547f0491716aee0af1f3d04f4146602bb5e0cb",
+      "bytes": 4424781,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1969-chevrolet-g-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-G-Van.pdf",
+      "pdf_page_count": 141
+    },
+    {
+      "asset_name": "1969-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "c22b72b4784561924d8546d9717b90bd2fcd11c6995e90fd1880bc7b6b9b240f",
+      "bytes": 852608,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1969-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 25
+    },
+    {
       "asset_name": "1969-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "sha256": "5fcf9bf85940cd3011990674d40cf7471dd7febe2158da10bc636c43d36db9f7",
@@ -60,6 +150,36 @@
       "source_id": "gm-heritage-1969-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Suburban.pdf",
       "pdf_page_count": 34
+    },
+    {
+      "asset_name": "1970-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "d202f567feee1d719abe7bdac314f609a79ee970db95a45a0207f0e416ef2841",
+      "bytes": 5627535,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1970-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 159
+    },
+    {
+      "asset_name": "1970-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "d02bfad011cce89e7723bb2d983a9640848cc896e9ffdae531caa9bf54554d51",
+      "bytes": 3292911,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1970-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 109
+    },
+    {
+      "asset_name": "1970-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "202be26b96e1a6248fa6f48ebfbbc877c0374a84ae4b062b423378b5bbdabaa2",
+      "bytes": 692919,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1970-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 23
     },
     {
       "asset_name": "1970-chevrolet-suburban-vehicle-information-kit-gm.pdf",
@@ -82,6 +202,36 @@
       "pdf_page_count": 64
     },
     {
+      "asset_name": "1971-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "18ae90d71c57815aa7b52c0d1d0dd3c081b0f7caa0fa0e7a9245a77f707de11b",
+      "bytes": 5325506,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1971-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 165
+    },
+    {
+      "asset_name": "1971-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "9f6794e9d21eab432160c876c35353b93c7ecfaa367688b106a6e852c402351a",
+      "bytes": 4174076,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1971-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 111
+    },
+    {
+      "asset_name": "1971-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "531e04152d91279b1543fabbe5910c2fbd8ad5d28354135b0af38cda652d8d93",
+      "bytes": 3451083,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1971-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 26
+    },
+    {
       "asset_name": "1971-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "sha256": "54e322d01cc0f28b8b6245a390db29513370fa172aa32216f54594ce584260e3",
@@ -90,6 +240,36 @@
       "source_id": "gm-heritage-1971-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Suburban.pdf",
       "pdf_page_count": 17
+    },
+    {
+      "asset_name": "1972-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "14155e664b176334a36c30c5b9d6a42c35694a693c701d76474449bec6603bc6",
+      "bytes": 5315030,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1972-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 163
+    },
+    {
+      "asset_name": "1972-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "9a1a5bcef04bd61a0b2b632301d46af21b95f5dc576a00d7b1dc80fdd830fc6f",
+      "bytes": 2948760,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1972-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 97
+    },
+    {
+      "asset_name": "1972-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "1c383156705ec971e8f10c5ef0a6d01b7b324bbd6328b2c41be45a7a290b0da5",
+      "bytes": 224317,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1972-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 9
     },
     {
       "asset_name": "1972-chevrolet-suburban-vehicle-information-kit-gm.pdf",
@@ -102,6 +282,26 @@
       "pdf_page_count": 19
     },
     {
+      "asset_name": "1973-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "e1dc6515c3db8cde2990f10660720eba4f79be5e2f98be0c4844c5c6c544d705",
+      "bytes": 2887269,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1973-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 109
+    },
+    {
+      "asset_name": "1973-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "966156b4aed0cb69b4bf2ee37ea200d42a88eec9c75ae0583c349a748da38631",
+      "bytes": 343204,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1973-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 13
+    },
+    {
       "asset_name": "1973-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "sha256": "3085f54e1a286705859f0c2005cb108e9dcaba394704895274a6a86d1331b09c",
@@ -110,6 +310,26 @@
       "source_id": "gm-heritage-1973-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Suburban.pdf",
       "pdf_page_count": 29
+    },
+    {
+      "asset_name": "1974-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "cbf4f7e7fe3ed0110aa4faf3d89cc8ab9b87924a5628a4e973e96eb7e215d929",
+      "bytes": 2879669,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1974-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 105
+    },
+    {
+      "asset_name": "1974-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "ced7d0df96f23cf115e997ede45c59b40e93d2f16decf59a06af1fa673e29694",
+      "bytes": 6057050,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1974-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 28
     },
     {
       "asset_name": "1974-chevrolet-suburban-vehicle-information-kit-gm.pdf",
@@ -122,6 +342,26 @@
       "pdf_page_count": 29
     },
     {
+      "asset_name": "1975-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "57c75e86b7b754d0d9a1d425b65693140d4b01fefd14782196930c50485f2700",
+      "bytes": 2555859,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1975-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 95
+    },
+    {
+      "asset_name": "1975-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "7ab3665b4630a44c47c78245027f66477db8480be83f9e93ce25bbdee0f35b40",
+      "bytes": 404518,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1975-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 15
+    },
+    {
       "asset_name": "1975-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "sha256": "92f1cbcdc7f9da565b687673f2191d417fdea8cfc23fe97ab577fe6b34a19319",
@@ -130,6 +370,26 @@
       "source_id": "gm-heritage-1975-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Suburban.pdf",
       "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1976-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "a37a1ad6bbee0ef0a1588bf2560da1b716cdbc43b1152e93765dbbd927d74633",
+      "bytes": 2912195,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1976-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 105
+    },
+    {
+      "asset_name": "1976-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "d12972490e7ca65ab201abf5311eb12021d395dcd395b04ea0b16d5834dcfeac",
+      "bytes": 785099,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1976-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 41
     },
     {
       "asset_name": "1976-chevrolet-suburban-vehicle-information-kit-gm.pdf",
@@ -142,6 +402,46 @@
       "pdf_page_count": 28
     },
     {
+      "asset_name": "1977-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "c630e124f0f24b527385eb1874a6c08c7f73066e726e66034b44943f742512f2",
+      "bytes": 2634326,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1977-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 99
+    },
+    {
+      "asset_name": "1977-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "548ec53990afe7335b9c446c176d6e9da86088d3b59ad33e702da5ddc6f357d0",
+      "bytes": 352983,
+      "role": "supporting_reviewed_partial_vehicle_information_kit",
+      "source_id": "gm-heritage-1977-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 13
+    },
+    {
+      "asset_name": "1978-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "11859f2cb060491da6990f7456a3e92618d125a22f7028c0a2ea0e6dd3d0a5b6",
+      "bytes": 8658198,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1978-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 132
+    },
+    {
+      "asset_name": "1978-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-motorhome-vehicle-information-kit-gm.pdf",
+      "sha256": "63bdd01897a3cfbda7bb54c039ebac1a7a8dd34fc80832f93962b49279e00d26",
+      "bytes": 10733728,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1978-chevrolet-motorhome",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Motorhome.pdf",
+      "pdf_page_count": 54
+    },
+    {
       "asset_name": "1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-blazer-vehicle-information-kit-gm.pdf",
       "sha256": "868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add",
@@ -150,6 +450,16 @@
       "source_id": "gm-heritage-1979-chevrolet-blazer",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Blazer.pdf",
       "pdf_page_count": 22
+    },
+    {
+      "asset_name": "1979-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "sha256": "d862313a154d3d0fac8a8f4c3951805e8d8a79a1b1657d95e97b2989d22eed73",
+      "bytes": 6986152,
+      "role": "controlling_exact_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-1979-chevrolet-monte-carlo",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Monte-Carlo.pdf",
+      "pdf_page_count": 143
     },
     {
       "asset_name": "1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
@@ -1371,11 +1681,22 @@
       "retrieval_url": "https://web.archive.org/web/20240519115026id_/https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf"
     },
     {
-      "asset_name": "suburban-1982-1989-1993-source-audit.md",
-      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/suburban-1982-1989-1993-source-audit.md",
-      "sha256": "3cd55f7b33ca8d6c8ae355786c839435bb23c51a738bbfc998875bfa5579c6c0",
-      "bytes": 16523,
-      "role": "audit_report",
+      "asset_name": "source-sha256-manifest-141-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-141-reviewed.txt",
+      "sha256": "be153e57a0a92a25c581c21fc156c3a4db5317e128f85120a3b1fba912d372c3",
+      "bytes": 16324,
+      "role": "checksum_manifest_snapshot",
+      "original_source_url": null,
+      "covered_asset_count": 141,
+      "uploaded_at": "2026-08-04T11:59:22Z"
+    },
+    {
+      "asset_name": "source-sha256-manifest-173-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-173-reviewed.txt",
+      "sha256": "061c4c088769081894f840d80e84239580ed4853f372db00a66d9f86e0ce1549",
+      "bytes": 20218,
+      "role": "checksum_manifest_snapshot",
+      "source_id": null,
       "original_source_url": null
     },
     {
@@ -1387,14 +1708,12 @@
       "original_source_url": null
     },
     {
-      "asset_name": "source-sha256-manifest-141-reviewed.txt",
-      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-141-reviewed.txt",
-      "sha256": "be153e57a0a92a25c581c21fc156c3a4db5317e128f85120a3b1fba912d372c3",
-      "bytes": 16324,
-      "role": "checksum_manifest_snapshot",
-      "original_source_url": null,
-      "covered_asset_count": 141,
-      "uploaded_at": "2026-08-04T11:59:22Z"
+      "asset_name": "suburban-1982-1989-1993-source-audit.md",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/suburban-1982-1989-1993-source-audit.md",
+      "sha256": "3cd55f7b33ca8d6c8ae355786c839435bb23c51a738bbfc998875bfa5579c6c0",
+      "bytes": 16523,
+      "role": "audit_report",
+      "original_source_url": null
     }
   ]
 }

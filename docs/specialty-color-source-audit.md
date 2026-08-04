@@ -1,5 +1,4 @@
 ---
----
 title: Chevrolet specialty exterior color source audit
 visibility: public
 classification: archive-internal
@@ -15,10 +14,10 @@ The source ledger now publishes 892 directly reviewed records: 888 specialty,
 police, or special-service records and four ordinary qualified-historical
 table records. Multi-model records expand those totals to 908 exact specialty
 model applications and four qualified-historical applications, 912 in all.
-The normalized Parquet archive contains 601 specialty availability rows across
-66 application model-years and four qualified-historical rows. Specialty
+The normalized Parquet archive contains 928 specialty availability rows across
+69 application model-years and four qualified-historical rows. Specialty
 evidence is the strongest research status for 42 model-years; six model-years
-have a qualified-historical research status. Schema version 11 preserves 541
+have a qualified-historical research status. Schema version 12 preserves 868
 `specialty_overlay` memberships and one
 `qualified_historical_overlay`
 membership.

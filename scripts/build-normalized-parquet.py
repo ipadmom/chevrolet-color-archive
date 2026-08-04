@@ -35,7 +35,45 @@ CURRENT_MANUAL_REFERENCES_PATH = (
 CURRENT_PROFILE_REFERENCES_PATH = (
     ROOT / "data" / "catalog" / "chevrolet-current-profile-references.json"
 )
-SCHEMA_VERSION = 11
+CURRENT_MODEL_COLOR_PHOTO_LINKS_PATH = (
+    ROOT / "data" / "photos" / "current-model-color-photo-links.json"
+)
+CURRENT_MODEL_COLOR_PHOTO_CRAWL_QUEUE_PATH = (
+    ROOT / "data" / "photos" / "current-model-color-photo-crawl-queue.json"
+)
+OFFICIAL_PALETTE_AUDIT_CONFIGS = (
+    {
+        "model_id": "corvette",
+        "path": ROOT
+        / "data"
+        / "audits"
+        / "corvette-official-palettes-1963-1972.json",
+        "selected_program_ids": {
+            1969: "regular-body-paint-color-and-trim",
+            1972: "regular-body-paint-color-and-trim",
+        },
+        "published_palette_kinds": {"regular_body_paint"},
+    },
+    {
+        "model_id": "monte-carlo",
+        "path": ROOT
+        / "data"
+        / "audits"
+        / "monte-carlo-official-palettes-1970-1979.json",
+        "selected_program_ids": {},
+        "published_palette_kinds": {"regular_body_paint"},
+    },
+    {
+        "model_id": "p-series-step-van",
+        "path": ROOT
+        / "data"
+        / "audits"
+        / "p-series-official-palettes-1969-1978.json",
+        "selected_program_ids": {1978: "1978-stepvan-solid-color-chart"},
+        "published_palette_kinds": {"official-exterior-color-chart"},
+    },
+)
+SCHEMA_VERSION = 12
 URL_PATTERN = re.compile(r"https?://[^\s<>\"`]+")
 PLACEHOLDER_SOURCE_HOSTS = frozenset(
     {"example.com", "example.net", "example.org", "example.invalid"}
@@ -128,6 +166,7 @@ AVAILABILITY_SOURCE_RANK = {
     "published_qualified_historical_table": 1,
     "published_qualified_palette_union": 2,
     "published_specialty_palette_subset": 3,
+    "published_qualified_exact_program_palette": 4,
 }
 
 
@@ -705,6 +744,48 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("standalone_availability_asserted", pa.bool_(), False),
         ]
     ),
+    "audited_color_programs": schema(
+        [
+            ("audit_program_id", pa.string(), False),
+            ("model_year_id", pa.string(), False),
+            ("model_id", pa.string(), False),
+            ("model_year", pa.int16(), False),
+            ("audit_file", pa.string(), False),
+            ("audit_status", pa.string(), False),
+            ("complete_regular_palette", pa.bool_(), False),
+            ("program_id", pa.string(), False),
+            ("program_label", pa.string(), False),
+            ("palette_kind", pa.string(), False),
+            ("source_scope", pa.string(), False),
+            ("program_complete", pa.bool_(), False),
+            ("publication_role", pa.string(), False),
+            ("primary_evidence_source_id", pa.string(), False),
+            ("supporting_evidence_source_ids", pa.list_(pa.string()), False),
+            ("reviewed_pdf_pages", pa.list_(pa.int16()), False),
+            ("limitations", pa.list_(pa.string()), False),
+        ]
+    ),
+    "audited_color_program_entries": schema(
+        [
+            ("audit_program_entry_id", pa.string(), False),
+            ("audit_program_id", pa.string(), False),
+            ("model_year_id", pa.string(), False),
+            ("model_id", pa.string(), False),
+            ("model_year", pa.int16(), False),
+            ("entry_order", pa.int16(), False),
+            ("source_color_name", pa.string(), False),
+            ("source_label_raw", pa.string(), False),
+            ("normalized_color_name", pa.string(), False),
+            ("factory_code", pa.string(), True),
+            ("factory_code_status", pa.string(), False),
+            ("factory_code_source_status_raw", pa.string(), False),
+            ("component_role", pa.string(), False),
+            ("combination_code", pa.string(), True),
+            ("restrictions", pa.list_(pa.string()), False),
+            ("publication_role", pa.string(), False),
+            ("standalone_body_color_availability_asserted", pa.bool_(), False),
+        ]
+    ),
     "model_year_research": schema(
         [
             ("model_year_id", pa.string(), False),
@@ -989,6 +1070,8 @@ PRIMARY_KEYS = {
     "color_availability": ["availability_id"],
     "paint_schemes": ["paint_scheme_id"],
     "paint_scheme_components": ["paint_scheme_component_id"],
+    "audited_color_programs": ["audit_program_id"],
+    "audited_color_program_entries": ["audit_program_entry_id"],
     "model_year_research": ["model_year_id"],
     "model_year_source_candidates": ["source_candidate_link_id"],
     "secondary_catalog_configurations": ["catalog_configuration_id"],
@@ -1038,6 +1121,16 @@ FOREIGN_KEYS = {
     },
     "paint_scheme_components": {
         "paint_scheme_id": "paint_schemes.paint_scheme_id",
+    },
+    "audited_color_programs": {
+        "model_year_id": "model_years.model_year_id",
+        "model_id": "models.model_id",
+        "primary_evidence_source_id": "sources.source_id",
+    },
+    "audited_color_program_entries": {
+        "audit_program_id": "audited_color_programs.audit_program_id",
+        "model_year_id": "model_years.model_year_id",
+        "model_id": "models.model_id",
     },
     "model_year_research": {
         "model_year_id": "model_years.model_year_id",
@@ -1100,6 +1193,7 @@ FOREIGN_KEYS = {
 FACTORY_CODE_COLUMNS = {
     "color_availability": ("factory_code", "factory_code_status"),
     "paint_scheme_components": ("factory_code", "factory_code_status"),
+    "audited_color_program_entries": ("factory_code", "factory_code_status"),
     "evidence_claims": (
         "transcribed_factory_code",
         "transcribed_factory_code_status",
@@ -1391,6 +1485,12 @@ class NormalizedArchiveBuilder:
         self.photos = json_load(
             ROOT / "data" / "photos" / "commons-release-manifest.json"
         )
+        self.current_model_color_photo_links = json_load(
+            CURRENT_MODEL_COLOR_PHOTO_LINKS_PATH
+        )
+        self.current_model_color_photo_crawl_queue = json_load(
+            CURRENT_MODEL_COLOR_PHOTO_CRAWL_QUEUE_PATH
+        )
         self.gap_inventory = json_load(
             ROOT / "data" / "audits" / "color-research-gap-inventory.json"
         )
@@ -1417,6 +1517,10 @@ class NormalizedArchiveBuilder:
         self.suburban_paint_schemes = json_load(
             ROOT / "data" / "audits" / "suburban-paint-schemes-1977-1999.json"
         )
+        self.official_palette_audits = [
+            {**config, "audit": json_load(config["path"])}
+            for config in OFFICIAL_PALETTE_AUDIT_CONFIGS
+        ]
         self.crawler_db = crawler_db if crawler_db and crawler_db.is_file() else None
         self.rows: dict[str, list[dict[str, Any]]] = {name: [] for name in SCHEMAS}
         self.sources_by_url: dict[str, dict[str, Any]] = {}
@@ -2809,10 +2913,17 @@ class NormalizedArchiveBuilder:
                     is_qualified_historical_table = (
                         evidence_class == "qualified_historical_table"
                     )
+                    is_qualified_exact_program_palette = (
+                        evidence_class == "qualified_exact_program_palette"
+                    )
+                    is_reviewed_no_complete_palette = (
+                        evidence_class == "reviewed_no_complete_palette"
+                    )
                     is_qualified_source = (
                         is_palette_union
                         or is_specialty_subset
                         or is_qualified_historical_table
+                        or is_qualified_exact_program_palette
                     )
                     source_id = self.ensure_source(
                         year_source["url"],
@@ -2875,6 +2986,10 @@ class NormalizedArchiveBuilder:
                             if is_specialty_subset
                             else "qualified_historical_table"
                             if is_qualified_historical_table
+                            else "qualified_exact_program_palette"
+                            if is_qualified_exact_program_palette
+                            else "reviewed_no_complete_palette"
+                            if is_reviewed_no_complete_palette
                             else "audited_color_chart"
                         ),
                         entity_type="model_year",
@@ -2893,6 +3008,10 @@ class NormalizedArchiveBuilder:
                             if is_specialty_subset
                             else "human_checked_qualified_historical_table"
                             if is_qualified_historical_table
+                            else "human_checked_qualified_exact_program_palette"
+                            if is_qualified_exact_program_palette
+                            else "human_checked_no_complete_palette"
+                            if is_reviewed_no_complete_palette
                             else "source_transcribed"
                         ),
                         review_state=(
@@ -2902,6 +3021,10 @@ class NormalizedArchiveBuilder:
                             if is_specialty_subset
                             else "reviewed_qualified_historical_table"
                             if is_qualified_historical_table
+                            else "reviewed_qualified_exact_program_palette"
+                            if is_qualified_exact_program_palette
+                            else "source_reviewed_no_color_chart_found"
+                            if is_reviewed_no_complete_palette
                             else "verified"
                         ),
                     )
@@ -3057,6 +3180,10 @@ class NormalizedArchiveBuilder:
                             year_source.get("evidenceClass")
                             == "qualified_historical_table"
                         )
+                        is_qualified_exact_program_palette = (
+                            year_source.get("evidenceClass")
+                            == "qualified_exact_program_palette"
+                        )
                         source_factory_code_status = availability.get(
                             "factoryCodeStatus"
                         )
@@ -3152,6 +3279,8 @@ class NormalizedArchiveBuilder:
                                     if is_specialty_subset
                                     else "published_qualified_historical_table"
                                     if is_qualified_historical_table
+                                    else "published_qualified_exact_program_palette"
+                                    if is_qualified_exact_program_palette
                                     else "published_source_transcription"
                                 ),
                                 "evidence_source_id": year_source["source_id"],
@@ -3188,6 +3317,8 @@ class NormalizedArchiveBuilder:
                                 if is_specialty_subset
                                 else "human_checked_qualified_historical_table"
                                 if is_qualified_historical_table
+                                else "human_checked_qualified_exact_program_palette"
+                                if is_qualified_exact_program_palette
                                 else "source_transcribed"
                             ),
                             review_state=(
@@ -3197,6 +3328,8 @@ class NormalizedArchiveBuilder:
                                 if is_specialty_subset
                                 else "reviewed_qualified_historical_table"
                                 if is_qualified_historical_table
+                                else "reviewed_qualified_exact_program_palette"
+                                if is_qualified_exact_program_palette
                                 else "verified"
                             ),
                         )
@@ -3657,6 +3790,289 @@ class NormalizedArchiveBuilder:
                 "paint schemes must retain exactly primary and secondary components"
             )
 
+    def build_audited_color_programs(self) -> None:
+        for config in self.official_palette_audits:
+            model_id = str(config["model_id"])
+            audit_path = Path(config["path"])
+            audit = config["audit"]
+            source_by_id = {
+                str(source["source_id"]): source for source in audit["sources"]
+            }
+            published_palette_kinds = set(config["published_palette_kinds"])
+            selected_program_ids = {
+                int(year): str(program_id)
+                for year, program_id in config["selected_program_ids"].items()
+            }
+
+            for source in source_by_id.values():
+                source_id = self.ensure_source(
+                    source["url"],
+                    source_id=source["source_id"],
+                    title=source["title"],
+                    publisher=source["publisher"],
+                    source_type=source["source_type"],
+                    officiality="official",
+                    document_authority="official_manufacturer_document",
+                    retrieval_host_type=(
+                        "archival_mirror"
+                        if source.get("archive_url")
+                        else "official_live"
+                    ),
+                    content_type="application/pdf",
+                    content_length_bytes=source["artifact_bytes"],
+                    content_sha256=source["artifact_sha256"],
+                    archive_url=source.get("archive_url"),
+                )
+                page_count = int(source["pdf_page_count"])
+                prior_page_count = self.source_pdf_page_counts.get(source_id)
+                if prior_page_count not in (None, page_count):
+                    raise ValueError(
+                        f"official palette audit PDF page-count conflict: {source_id}"
+                    )
+                self.source_pdf_page_counts[source_id] = page_count
+
+            for year_record in audit["years"]:
+                model_year = int(year_record["model_year"])
+                model_year_id = f"{model_id}:{model_year}"
+                if not any(
+                    row["model_year_id"] == model_year_id
+                    for row in self.rows["model_years"]
+                ):
+                    raise ValueError(
+                        f"official palette audit has no catalog year: {model_year_id}"
+                    )
+                complete_candidates = [
+                    program
+                    for program in year_record["programs"]
+                    if program["complete"]
+                    and program["palette_kind"] in published_palette_kinds
+                ]
+                selected_program_id = selected_program_ids.get(model_year)
+                if selected_program_id is None and complete_candidates:
+                    selected_program_id = str(complete_candidates[0]["program_id"])
+                if bool(year_record["complete_regular_palette"]) != bool(
+                    selected_program_id
+                ):
+                    raise ValueError(
+                        "complete palette flag and selected program disagree: "
+                        f"{model_year_id}"
+                    )
+                source_ids = [str(value) for value in year_record["source_ids"]]
+                if not source_ids:
+                    raise ValueError(
+                        f"official palette audit year has no source: {model_year_id}"
+                    )
+                missing_sources = [
+                    source_id
+                    for source_id in source_ids
+                    if source_id not in source_by_id
+                ]
+                if missing_sources:
+                    raise ValueError(
+                        f"official palette audit year has unknown sources: "
+                        f"{model_year_id} {missing_sources}"
+                    )
+                reviewed_pdf_pages = sorted(
+                    {
+                        int(page["pdf_page"])
+                        for source_id in source_ids
+                        for page in source_by_id[source_id]["reviewed_pages"]
+                    }
+                )
+                global_limitations = [
+                    str(issue)
+                    for issue in audit.get("unresolved") or []
+                    if isinstance(issue, str)
+                ]
+                year_issue_descriptions = [
+                    str(issue["description"])
+                    for issue in audit.get("unresolved") or []
+                    if isinstance(issue, dict)
+                    and int(issue.get("model_year", -1)) == model_year
+                    and issue.get("description")
+                ]
+                limitations = list(
+                    dict.fromkeys(
+                        [
+                            *year_record.get("limitations", []),
+                            *(
+                                limitation
+                                for source_id in source_ids
+                                for limitation in source_by_id[source_id].get(
+                                    "limitations", []
+                                )
+                            ),
+                            *global_limitations,
+                            *year_issue_descriptions,
+                        ]
+                    )
+                )
+
+                for program in year_record["programs"]:
+                    program_id = str(program["program_id"])
+                    if program_id == selected_program_id:
+                        publication_role = "published_regular_palette"
+                    elif (
+                        bool(program["complete"])
+                        and program["palette_kind"] in published_palette_kinds
+                    ):
+                        publication_role = "alternate_complete_regular_palette"
+                    elif program["palette_kind"] in published_palette_kinds:
+                        publication_role = "research_only_partial_palette"
+                    else:
+                        publication_role = "research_only_component_program"
+                    audit_program_id = stable_id(
+                        "acp", model_id, model_year, program_id
+                    )
+                    self.rows["audited_color_programs"].append(
+                        {
+                            "audit_program_id": audit_program_id,
+                            "model_year_id": model_year_id,
+                            "model_id": model_id,
+                            "model_year": model_year,
+                            "audit_file": audit_path.relative_to(ROOT).as_posix(),
+                            "audit_status": year_record["audit_status"],
+                            "complete_regular_palette": bool(
+                                year_record["complete_regular_palette"]
+                            ),
+                            "program_id": program_id,
+                            "program_label": program["program_label"],
+                            "palette_kind": program["palette_kind"],
+                            "source_scope": program["source_scope"],
+                            "program_complete": bool(program["complete"]),
+                            "publication_role": publication_role,
+                            "primary_evidence_source_id": source_ids[0],
+                            "supporting_evidence_source_ids": source_ids[1:],
+                            "reviewed_pdf_pages": reviewed_pdf_pages,
+                            "limitations": limitations,
+                        }
+                    )
+                    locator = (
+                        f"{program['source_scope']}; reviewed PDF pages "
+                        + ", ".join(str(page) for page in reviewed_pdf_pages)
+                    )
+                    for source_order, source_id in enumerate(source_ids):
+                        self.add_source_link(
+                            source_id,
+                            claim_type="audited_color_program_evidence",
+                            entity_type="audited_color_program",
+                            entity_id=audit_program_id,
+                            model_id=model_id,
+                            model_year=model_year,
+                            year_start=model_year,
+                            year_end=model_year,
+                            locator=locator,
+                            revision=f"Visual audit {audit['generated_on']}",
+                            claim_summary=(
+                                f"{program['program_label']} ({publication_role})"
+                            ),
+                            confidence="human_transcribed_source_linked",
+                            review_state=(
+                                "published"
+                                if publication_role == "published_regular_palette"
+                                else "research_only"
+                                if publication_role.startswith("research_only")
+                                else "alternate_official_table"
+                            ),
+                        )
+
+                    for color in program["colors"]:
+                        factory_code, factory_code_status = normalize_factory_code(
+                            color.get("factory_code")
+                        )
+                        entry_id = stable_id(
+                            "acpe",
+                            audit_program_id,
+                            color["order"],
+                            color["label"],
+                            color.get("factory_code"),
+                            color.get("combination_code"),
+                        )
+                        standalone_body_color = (
+                            publication_role == "published_regular_palette"
+                        )
+                        self.rows["audited_color_program_entries"].append(
+                            {
+                                "audit_program_entry_id": entry_id,
+                                "audit_program_id": audit_program_id,
+                                "model_year_id": model_year_id,
+                                "model_id": model_id,
+                                "model_year": model_year,
+                                "entry_order": int(color["order"]),
+                                "source_color_name": color["label"],
+                                "source_label_raw": color["source_label_raw"],
+                                "normalized_color_name": re.sub(
+                                    r"[^a-z0-9]+",
+                                    " ",
+                                    color["label"].lower(),
+                                ).strip(),
+                                "factory_code": factory_code,
+                                "factory_code_status": factory_code_status,
+                                "factory_code_source_status_raw": color[
+                                    "factory_code_status"
+                                ],
+                                "component_role": color["component_role"]
+                                or "not_stated_in_source",
+                                "combination_code": color.get("combination_code"),
+                                "restrictions": list(color["restrictions"]),
+                                "publication_role": publication_role,
+                                "standalone_body_color_availability_asserted": (
+                                    standalone_body_color
+                                ),
+                            }
+                        )
+                        for source_id in source_ids:
+                            self.add_source_link(
+                                source_id,
+                                claim_type="audited_color_program_entry_evidence",
+                                entity_type="audited_color_program_entry",
+                                entity_id=entry_id,
+                                model_id=model_id,
+                                model_year=model_year,
+                                year_start=model_year,
+                                year_end=model_year,
+                                locator=locator,
+                                revision=f"Visual audit {audit['generated_on']}",
+                                claim_summary=(
+                                    f"{color['source_label_raw']} in "
+                                    f"{program['program_label']}"
+                                ),
+                                confidence="human_transcribed_source_linked",
+                                review_state=(
+                                    "published"
+                                    if standalone_body_color
+                                    else "research_only_component_or_alternate"
+                                ),
+                            )
+
+                published_entries = [
+                    row
+                    for row in self.rows["audited_color_program_entries"]
+                    if row["model_year_id"] == model_year_id
+                    and row["publication_role"] == "published_regular_palette"
+                ]
+                app_entries = [
+                    row
+                    for row in self.rows["color_availability"]
+                    if row["model_year_id"] == model_year_id
+                    and row["claim_status"]
+                    == "published_qualified_exact_program_palette"
+                ]
+                if bool(published_entries) != bool(app_entries):
+                    raise ValueError(
+                        f"audit program and app publication disagree: {model_year_id}"
+                    )
+                if published_entries and sorted(
+                    (row["source_color_name"], row["factory_code"])
+                    for row in published_entries
+                ) != sorted(
+                    (row["source_color_name"], row["factory_code"])
+                    for row in app_entries
+                ):
+                    raise ValueError(
+                        f"audit program and app palette rows differ: {model_year_id}"
+                    )
+
     def build_research_inventory(self) -> None:
         rank = {
             "dedicated": 1,
@@ -4075,15 +4491,16 @@ class NormalizedArchiveBuilder:
                 )
                 if archive_color_key and year is not None:
                     color_identity_id = color_lookup.get((model_id, archive_color_key))
+                    photo_color_link_id = stable_id(
+                        "pcl",
+                        asset["candidate_id"],
+                        model_id,
+                        year,
+                        archive_color_key,
+                    )
                     self.rows["photo_color_links"].append(
                         {
-                            "photo_color_link_id": stable_id(
-                                "pcl",
-                                asset["candidate_id"],
-                                model_id,
-                                year,
-                                archive_color_key,
-                            ),
+                            "photo_color_link_id": photo_color_link_id,
                             "photo_id": asset["candidate_id"],
                             "model_id": model_id,
                             "model_year": int(year),
@@ -4095,6 +4512,99 @@ class NormalizedArchiveBuilder:
                             "note": context.get("legacy_note"),
                         }
                     )
+                    for evidence_url in context.get("evidence_source_urls", []):
+                        evidence_source_id = self.ensure_source(evidence_url)
+                        is_commons_caption = (
+                            urlsplit(evidence_url).hostname
+                            == "commons.wikimedia.org"
+                        )
+                        self.add_source_link(
+                            evidence_source_id,
+                            claim_type=(
+                                "photo_color_caption_reference"
+                                if is_commons_caption
+                                else "photo_color_palette_reference"
+                            ),
+                            entity_type="photo_color_link",
+                            entity_id=photo_color_link_id,
+                            model_id=model_id,
+                            model_year=int(year),
+                            year_start=int(year),
+                            year_end=int(year),
+                            locator=context.get("kind"),
+                            claim_summary=context.get("legacy_note")
+                            or "Reviewed photo-to-color reference",
+                            confidence="qualified_example_only",
+                            review_state=context.get("legacy_prior_status")
+                            or "candidate",
+                        )
+
+        queue = self.current_model_color_photo_crawl_queue
+        for candidate in queue.get("queued_candidates", []):
+            entity_id = stable_id("pcq", candidate["candidate_key"])
+            commons_source_id = self.ensure_source(
+                candidate["source_page_url"],
+                title=(
+                    "Queued Wikimedia Commons color-photo lead: "
+                    f"{candidate['candidate_key']}"
+                ),
+                publisher="Wikimedia Commons",
+                source_type="media_description_page_candidate",
+                officiality="secondary",
+                retrieved_on=queue["generated_at"],
+            )
+            palette_source_id = self.ensure_source(candidate["palette_source_url"])
+            for source_id, claim_type, locator, summary in (
+                (
+                    commons_source_id,
+                    "photo_color_candidate_metadata",
+                    "Commons description",
+                    candidate["metadata_evidence"],
+                ),
+                (
+                    palette_source_id,
+                    "photo_color_candidate_palette",
+                    candidate["palette_locator"],
+                    (
+                        f"Exact {candidate['model_year']} {candidate['model_id']} "
+                        f"palette contains {candidate['color_label']}"
+                    ),
+                ),
+            ):
+                self.add_source_link(
+                    source_id,
+                    claim_type=claim_type,
+                    entity_type="photo_color_research_candidate",
+                    entity_id=entity_id,
+                    model_id=candidate["model_id"],
+                    model_year=int(candidate["model_year"]),
+                    year_start=int(candidate["model_year"]),
+                    year_end=int(candidate["model_year"]),
+                    locator=locator,
+                    claim_summary=summary,
+                    confidence="metadata_match_pending_archive_review",
+                    review_state=candidate["review_state"],
+                )
+
+        for index, rejected in enumerate(queue.get("rejected_or_unresolved", []), 1):
+            source_id = self.ensure_source(
+                rejected["source_page_url"],
+                title=f"Rejected current-model color-photo lead {index}",
+                publisher="Wikimedia Commons",
+                source_type="media_description_page_rejected_candidate",
+                officiality="secondary",
+                retrieved_on=queue["generated_at"],
+            )
+            self.add_source_link(
+                source_id,
+                claim_type="photo_color_candidate_rejection",
+                entity_type="photo_color_rejected_lead",
+                entity_id=stable_id("pcr", rejected["source_page_url"]),
+                locator="reviewed discovery result",
+                claim_summary=rejected["reason"],
+                confidence="rejected_or_unresolved",
+                review_state="rejected_market_or_label_mismatch",
+            )
 
     def build_document_references(self) -> None:
         files: set[Path] = set()
@@ -4958,6 +5468,7 @@ class NormalizedArchiveBuilder:
         self.apply_crawler_artifacts()
         self.build_catalog_and_colors()
         self.build_paint_schemes()
+        self.build_audited_color_programs()
         self.apply_specialty_artifacts()
         self.build_research_inventory()
         self.build_photos()
@@ -5029,6 +5540,10 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
         "verified_color_availability_rows": len(builder.rows["color_availability"]),
         "paint_schemes": len(builder.rows["paint_schemes"]),
         "paint_scheme_components": len(builder.rows["paint_scheme_components"]),
+        "audited_color_programs": len(builder.rows["audited_color_programs"]),
+        "audited_color_program_entries": len(
+            builder.rows["audited_color_program_entries"]
+        ),
         "model_year_research_rows": len(builder.rows["model_year_research"]),
         "model_year_source_candidates": len(
             builder.rows["model_year_source_candidates"]
@@ -5060,6 +5575,11 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
         ),
         "qualified_historical_table_availability_rows": sum(
             row["claim_status"] == "published_qualified_historical_table"
+            for row in builder.rows["color_availability"]
+        ),
+        "qualified_exact_program_palette_availability_rows": sum(
+            row["claim_status"]
+            == "published_qualified_exact_program_palette"
             for row in builder.rows["color_availability"]
         ),
         "reviewed_specialty_palette_subset_model_years": sum(
@@ -5104,6 +5624,9 @@ def write_outputs(builder: NormalizedArchiveBuilder) -> dict[str, Any]:
             "minimum-batch, and factory-installation fields remain structured and source-linked. "
             "Paint schemes preserve primary and "
             "secondary components separately and never create standalone color availability. "
+            "Audited color programs preserve every alternate table, component finish, "
+            "roof, top, stripe, two-tone, and body-finish entry separately from the one "
+            "selected regular palette. "
             "RockAuto retailer observations remain isolated in four secondary-lead tables and "
             "never create color availability or evidence claims."
         ),

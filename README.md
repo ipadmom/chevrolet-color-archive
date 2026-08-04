@@ -38,15 +38,20 @@ each matrix spans only the selected sourced platform, base, or era band. An
 unreviewed year remains as an explicit blank column instead of borrowing colors
 from an adjacent year.
 
-The reviewed public matrices currently contain 2,146 source-linked listings.
-They divide into 973 direct source transcriptions, 568 qualified official
-palette-union rows across 69 model-years, 601 reviewed specialty-paint subset
-rows across 66 application model-years, and four ordinary qualified-historical
+The reviewed public matrices currently contain 2,753 source-linked listings.
+They divide into 1,231 direct source transcriptions, 590 qualified official
+palette-union rows across 72 model-years, 928 reviewed specialty-paint subset
+rows across 69 application model-years, and four ordinary qualified-historical
 table rows. Specialty evidence is the strongest research status for 42
-model-years; the other 24 specialty model-years coexist with a separately
+model-years; the other 27 specialty model-years coexist with a separately
 complete or qualified regular palette. Six model-years have a
 reviewed-qualified-historical research status. The four 1981 Woodland Green
 rows are ordinary chart evidence in that class, not specialty-paint records.
+The exact-program layer now preserves 80 audited programs and 552 literal
+entries for Corvette 1963-1972, Monte Carlo 1970-1979, and P-Series/Step-Van
+1969-1978. It publishes only the 258 selected regular-palette entries and keeps
+alternate tables, tops, roofs, two-tones, chassis finishes, and component
+finishes as nonpublishing research rows.
 Complete exact-year
 Suburban palettes now cover 1969, 1972-2005, and 2007. The 2002 and 2003
 brochures and the 2004 service table are pinned in the GitHub Release with
@@ -308,15 +313,17 @@ plus 304 web previews. Both forms are stored under the pinned GitHub Release tag
 photo card links the Commons source, license, and archived original. Photographs
 remain illustrations only and never establish factory paint availability.
 
-The pinned `brochure-source-archive-v1` Release preserves 142 audited assets,
-including 117 PDFs totaling 1,451,230,138 bytes and 8,739 pages. Of those, 112 are
-retained source assets, including 108 retained source PDFs totaling 1,396,032,895
-bytes. The archive closes the Tahoe 1995–2007 evidence set, 20 audited GM Fleet
-Guide artifacts covering 2008–2026, the retained eBrochure set, and every currently
-published specialty citation. The
-versioned checksum snapshot covers all 141 assets that preceded it while the
+The pinned `brochure-source-archive-v1` Release preserves 174 audited assets,
+including 148 PDFs totaling 1,565,404,205 bytes and 11,600 pages. Of those, 143
+are retained source assets, including 139 retained source PDFs totaling
+1,510,206,962 bytes. The archive closes the Tahoe 1995–2007 evidence set, 20
+audited GM Fleet Guide artifacts covering 2008–2026, the retained eBrochure
+set, every currently published specialty citation, and 31 exact-palette audit
+PDFs for Corvette, Monte Carlo, and P-Series/Step-Van. The versioned checksum
+snapshot covers all 173 assets that preceded it while the
 older checksum manifest remains immutable. Release validation
-identifies 30 governing audit assets, 30 app-fed audit citations, 140
+identifies 30 legacy governing audit assets, 31 additional exact-palette audit
+assets, 30 legacy app-fed audit citations, 171
 application Release URLs, 83 modern palette tables, 638 modern color
 assertions, 888 published specialty records, four published ordinary
 qualified-history records, and eight verified nonpublished, nonrouting specialty

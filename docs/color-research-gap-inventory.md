@@ -17,15 +17,15 @@ Generated from the tracked catalog, resolved application data, platform bands, d
 ## Bottom line
 
 - Catalog: 149 models, 1,792 model-years, 174 discontinuous model ranges.
-- Complete governing color charts: 85 model-years (4.74%).
+- Complete governing color charts: 106 model-years (5.92%).
 - Reviewed, qualified historical tables: 6 model-years.
 - Reviewed, qualified official palette unions: 72 model-years and 590 listing rows.
 - Reviewed specialty-paint subsets: 42 specialty-only model-years, 69 model-year applications, and 928 restricted listing rows. Overlays do not make an otherwise incomplete year complete.
-- Official source reviewed with no color chart found: 4 model-year.
+- Official source reviewed with no color chart found: 13 model-year.
 - Located dedicated sources awaiting chart transcription: 0 model-years.
-- Wholly unreviewed: 1,583 model-years.
-- Published color applications: 2,495 rows, reconciled exactly to the resolved application data.
-- App source-linked listing years: 208, using 138 unique direct source URLs.
+- Wholly unreviewed: 1,553 model-years.
+- Published color applications: 2,753 rows, reconciled exactly to the resolved application data.
+- App source-linked listing years: 238, using 168 unique direct source URLs.
 - Official GM Heritage discovery inventory: 691 records and 691 unique URLs; the crawler manifest reconciles exactly.
 - Consolidated official-PDF OCR queue: 691 source documents, 2,774 candidate pages, and 11,733 automated color candidates; 0 candidate pages have been visually promoted through this queue.
 
@@ -50,8 +50,8 @@ A missing row is never negative availability evidence. It means only that the go
 | 1930s | 65 | 0 | 0 | 0 | 0 | 0 | 0 | 65 | 0 | 0 | 0 | 65 | 0 | 0 | 0 |
 | 1940s | 71 | 0 | 0 | 0 | 0 | 0 | 0 | 71 | 0 | 0 | 0 | 71 | 0 | 0 | 0 |
 | 1950s | 162 | 3 | 3 | 0 | 0 | 1 | 0 | 155 | 36 | 8 | 0 | 154 | 0 | 0 | 0 |
-| 1960s | 205 | 11 | 0 | 0 | 0 | 1 | 0 | 193 | 144 | 56 | 21 | 126 | 2 | 0 | 0 |
-| 1970s | 258 | 18 | 0 | 0 | 4 | 2 | 0 | 234 | 280 | 120 | 37 | 100 | 1 | 0 | 0 |
+| 1960s | 205 | 18 | 0 | 0 | 0 | 2 | 0 | 185 | 206 | 56 | 21 | 126 | 2 | 0 | 0 |
+| 1970s | 258 | 32 | 0 | 0 | 4 | 10 | 0 | 212 | 476 | 120 | 37 | 100 | 1 | 0 | 0 |
 | 1980s | 219 | 20 | 3 | 0 | 5 | 0 | 0 | 191 | 244 | 156 | 7 | 0 | 54 | 2 | 0 |
 | 1990s | 211 | 18 | 0 | 0 | 2 | 0 | 0 | 191 | 176 | 147 | 6 | 0 | 56 | 2 | 0 |
 | 2000s | 226 | 15 | 0 | 2 | 0 | 0 | 0 | 209 | 187 | 124 | 0 | 39 | 63 | 0 | 0 |
@@ -62,7 +62,7 @@ A missing row is never negative availability evidence. It means only that the go
 
 | Availability | Model-years | Complete | Historical qualified | Palette union | Specialty subset | No chart | Located/unreviewed | Unreviewed | Listings |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| dedicated_official_kit | 611 | 85 | 5 | 0 | 5 | 4 | 0 | 512 | 1030 |
+| dedicated_official_kit | 611 | 106 | 5 | 0 | 5 | 13 | 0 | 482 | 1288 |
 | related_line_official_kit | 71 | 0 | 1 | 0 | 2 | 0 | 0 | 68 | 7 |
 | generic_full_line_official_kit | 927 | 0 | 0 | 72 | 32 | 0 | 0 | 823 | 1447 |
 | catalog_official_evidence_only | 179 | 0 | 0 | 0 | 3 | 0 | 0 | 176 | 11 |
@@ -75,16 +75,16 @@ These source categories are mutually exclusive and describe the strongest discov
 
 | Rank | Model ID | Model | Target MY | Ranges | Official PDFs | PDF bytes |
 | ---: | --- | --- | ---: | --- | ---: | ---: |
-| 1 | corvette | Corvette | 43 | 1963-1982, 1984-2006 | 43 | 272027671 |
-| 2 | monte-carlo | Monte Carlo | 31 | 1970-1988, 1995-2006 | 31 | 188725317 |
-| 3 | p-series-step-van | P-Series / Step-Van | 29 | 1969-1980, 1982-1998 | 29 | 44531711 |
-| 4 | g-series-van | G-Series Van | 27 | 1964-1969, 1972-1978, 1983-1996 | 30 | 122304656 |
-| 5 | blazer | Blazer | 27 | 1969-1972, 1975-1978, 1981, 1983-1986, 1989-1996, 2000-2005 | 27 | 153551847 |
-| 6 | el-camino | El Camino | 26 | 1959-1960, 1964-1987 | 26 | 314617073 |
-| 7 | cavalier | Cavalier | 23 | 1982-1992, 1994-2005 | 23 | 134391765 |
-| 8 | nova | Nova | 22 | 1962-1979, 1985-1988 | 23 | 144009004 |
-| 9 | s10 | S-10 | 22 | 1982-1992, 1994-2004 | 22 | 114334880 |
-| 10 | astro | Astro | 21 | 1985-2005 | 21 | 124512059 |
+| 1 | corvette | Corvette | 33 | 1973-1982, 1984-2006 | 33 | 226105309 |
+| 2 | g-series-van | G-Series Van | 27 | 1964-1969, 1972-1978, 1983-1996 | 30 | 122304656 |
+| 3 | blazer | Blazer | 27 | 1969-1972, 1975-1978, 1981, 1983-1986, 1989-1996, 2000-2005 | 27 | 153551847 |
+| 4 | el-camino | El Camino | 26 | 1959-1960, 1964-1987 | 26 | 314617073 |
+| 5 | cavalier | Cavalier | 23 | 1982-1992, 1994-2005 | 23 | 134391765 |
+| 6 | nova | Nova | 22 | 1962-1979, 1985-1988 | 23 | 144009004 |
+| 7 | s10 | S-10 | 22 | 1982-1992, 1994-2004 | 22 | 114334880 |
+| 8 | monte-carlo | Monte Carlo | 21 | 1980-1988, 1995-2006 | 21 | 148795902 |
+| 9 | astro | Astro | 21 | 1985-2005 | 21 | 124512059 |
+| 10 | p-series-step-van | P-Series / Step-Van | 19 | 1979-1980, 1982-1998 | 19 | 20634202 |
 | 11 | caprice | Caprice | 18 | 1978, 1980-1996 | 18 | 57983231 |
 | 12 | malibu | Malibu | 17 | 1978-1983, 1997-2007 | 17 | 271887574 |
 | 13 | impala | Impala | 16 | 1967-1968, 1980-1981, 1983, 1994-1996, 2000-2007 | 16 | 187765983 |
@@ -162,7 +162,7 @@ Source columns are mutually exclusive per model-year. `Unreviewed dedicated rang
 | townsman | Townsman | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | 9 | 0 | 0 | 0 | - |
 | beauville-wagon | Beauville | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | - |
 | nomad | Nomad | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 | 5 | 7 | 0 | 0 | 0 | - |
-| corvette | Corvette | 73 | 6 | 3 | 3 | 0 | 1 | 0 | 60 | 93 | 53 | 0 | 19 | 1 | 0 | 0 | 1963-1982, 1984-2006 |
+| corvette | Corvette | 73 | 16 | 3 | 3 | 0 | 1 | 0 | 50 | 185 | 53 | 0 | 19 | 1 | 0 | 0 | 1973-1982, 1984-2006 |
 | delray | Delray | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | - |
 | biscayne | Biscayne | 15 | 0 | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 | 0 | 15 | 0 | 0 | 0 | - |
 | brookwood | Brookwood | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | - |
@@ -182,7 +182,7 @@ Source columns are mutually exclusive per model-year. `Unreviewed dedicated rang
 | camaro | Camaro | 51 | 26 | 0 | 0 | 0 | 0 | 0 | 25 | 331 | 36 | 0 | 15 | 0 | 0 | 0 | 1993-2002 |
 | caprice | Caprice | 32 | 0 | 0 | 0 | 0 | 0 | 0 | 32 | 0 | 18 | 0 | 14 | 0 | 0 | 0 | 1978, 1980-1996 |
 | kingswood-estate | Kingswood Estate | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | - |
-| monte-carlo | Monte Carlo | 32 | 0 | 0 | 0 | 0 | 0 | 0 | 32 | 0 | 31 | 0 | 0 | 1 | 0 | 0 | 1970-1988, 1995-2006 |
+| monte-carlo | Monte Carlo | 32 | 10 | 0 | 0 | 0 | 0 | 0 | 22 | 149 | 31 | 0 | 0 | 1 | 0 | 0 | 1980-1988, 1995-2006 |
 | vega | Vega | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 7 | 0 | 0 | 0 | 0 | 0 | 1971-1977 |
 | laguna | Laguna | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | - |
 | monza | Monza | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 6 | 0 | 0 | 0 | 0 | 0 | 1975-1980 |
@@ -234,7 +234,7 @@ Source columns are mutually exclusive per model-year. `Unreviewed dedicated rang
 | loadside | Loadside | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | - |
 | g-series-van | G-Series Van | 33 | 0 | 1 | 0 | 2 | 0 | 0 | 30 | 8 | 30 | 0 | 2 | 1 | 0 | 0 | 1964-1969, 1972-1978, 1983-1996 |
 | sportvan | Sportvan | 32 | 0 | 1 | 0 | 2 | 0 | 0 | 29 | 7 | 0 | 26 | 2 | 4 | 0 | 0 | - |
-| p-series-step-van | P-Series / Step-Van | 56 | 0 | 1 | 0 | 0 | 0 | 0 | 55 | 1 | 30 | 0 | 26 | 0 | 0 | 0 | 1969-1980, 1982-1998 |
+| p-series-step-van | P-Series / Step-Van | 56 | 1 | 1 | 0 | 0 | 9 | 0 | 45 | 18 | 30 | 0 | 26 | 0 | 0 | 0 | 1979-1980, 1982-1998 |
 | l-series-tilt-cab | Tilt Cab / Steel Tilt Cab | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 22 | 0 | 0 | 0 | 20 | 2 | 0 | 0 | - |
 | b-series-bus-chassis | B-Series Bus Chassis | 37 | 0 | 0 | 0 | 0 | 0 | 0 | 37 | 0 | 0 | 0 | 13 | 24 | 0 | 0 | - |
 | titan-90 | Titan 90 | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 | 0 | 11 | 1 | 0 | 0 | - |
@@ -292,14 +292,16 @@ The live schema is versioned by the canonical tracked Parquet manifest. These ro
 | Table | Tracked rows | Primary key |
 | --- | ---: | --- |
 | models.parquet | 149 | model_id |
-| generations.parquet | 1335 | generation_id |
+| generations.parquet | 1340 | generation_id |
 | model_years.parquet | 1792 | model_year_id |
 | model_year_generation_memberships.parquet | 2664 | model_year_generation_membership_id |
 | platform_eras.parquet | 218 | platform_era_id |
-| color_identities.parquet | 2181 | color_identity_id |
-| color_availability.parquet | 2495 | availability_id |
+| color_identities.parquet | 2378 | color_identity_id |
+| color_availability.parquet | 2753 | availability_id |
 | paint_schemes.parquet | 1369 | paint_scheme_id |
 | paint_scheme_components.parquet | 2738 | paint_scheme_component_id |
+| audited_color_programs.parquet | 80 | audit_program_id |
+| audited_color_program_entries.parquet | 552 | audit_program_entry_id |
 | model_year_research.parquet | 1792 | model_year_id |
 | model_year_source_candidates.parquet | 1862 | source_candidate_link_id |
 | secondary_catalog_configurations.parquet | 20 | catalog_configuration_id |
@@ -307,13 +309,13 @@ The live schema is versioned by the canonical tracked Parquet manifest. These ro
 | secondary_paint_fitments.parquet | 111 | fitment_id |
 | color_code_crosswalk_candidates.parquet | 96 | candidate_id |
 | supplemental_color_mentions.parquet | 0 | supplemental_mention_id |
-| sources.parquet | 2937 | source_id |
-| source_revisions.parquet | 1877 | source_revision_id |
-| evidence_claims.parquet | 2495 | evidence_claim_id |
-| source_links.parquet | 31041 | source_link_id |
+| sources.parquet | 2981 | source_id |
+| source_revisions.parquet | 1909 | source_revision_id |
+| evidence_claims.parquet | 2753 | evidence_claim_id |
+| source_links.parquet | 32316 | source_link_id |
 | photo_assets.parquet | 304 | photo_id |
-| model_photo_links.parquet | 306 | model_photo_link_id |
-| photo_color_links.parquet | 5 | photo_color_link_id |
+| model_photo_links.parquet | 307 | model_photo_link_id |
+| photo_color_links.parquet | 6 | photo_color_link_id |
 
 Audit-state enum: `verified_complete`, `reviewed_qualified_historical_table`, `reviewed_qualified_palette_union`, `reviewed_specialty_palette_subset`, `source_reviewed_no_color_chart_found`, `source_located_chart_unreviewed`, `unreviewed`, `rejected`, `superseded`.
 
@@ -323,12 +325,12 @@ Audit-state enum: `verified_complete`, `reviewed_qualified_historical_table`, `r
 | --- | ---: | ---: | --- |
 | catalog_models | 149 | 149 | yes |
 | catalog_model_years | 1792 | 1792 | yes |
-| source_linked_reviewed_years | 208 | 208 | yes |
+| source_linked_reviewed_years | 238 | 238 | yes |
 | reviewed_qualified_palette_union_years | 72 | 72 | yes |
 | reviewed_specialty_palette_subset_years | 42 | 42 | yes |
 | specialty_palette_subset_application_years | 69 | 69 | yes |
-| current_color_listing_applications | 2495 | 2495 | yes |
-| model_year_listing_sum | 2495 | 2495 | yes |
+| current_color_listing_applications | 2753 | 2753 | yes |
+| model_year_listing_sum | 2753 | 2753 | yes |
 | audit_state_partition | 1792 | 1792 | yes |
 | gm_source_inventory_vs_crawler_manifest | 691 | 691 | yes |
 | gm_source_urls_vs_crawler_urls | 691 | 691 | yes |

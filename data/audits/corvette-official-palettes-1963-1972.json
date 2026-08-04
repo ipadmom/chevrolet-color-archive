@@ -1,0 +1,2364 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-08-04",
+  "model": {
+    "id": "corvette",
+    "name": "Chevrolet Corvette",
+    "years": [
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-1963-chevrolet-corvette",
+      "model_year": 1963,
+      "title": "1963 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1963-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1963-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "8dc1430e551cf50766b39c3d29a240f2036f47e8a16fc6c8677e9a5f881e225e",
+      "artifact_bytes": 5984667,
+      "pdf_page_count": 165,
+      "reviewed_pages": [
+        {
+          "pdf_page": 10,
+          "printed_page": "Section I - Page 25",
+          "section": "1963 Corvette Color and Trim Combinations",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; table headings, exterior rows, codes, and folding-top note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The GM-hosted kit is a compiled PDF. The reviewed-page record identifies the exact embedded Chevrolet publication page used."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1964-chevrolet-corvette",
+      "model_year": 1964,
+      "title": "1964 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1964-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1964-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "013d8704b06c25d13f3564fae72faef82f9bf41f152951f19093f1cbcbe2ea3e",
+      "artifact_bytes": 3603696,
+      "pdf_page_count": 119,
+      "reviewed_pages": [
+        {
+          "pdf_page": 10,
+          "printed_page": "Section II - Page 34",
+          "section": "1964 Corvette Color and Trim Combinations",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; table headings, exterior rows, codes, and folding-top note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The GM-hosted kit is a compiled PDF. The reviewed-page record identifies the exact embedded Chevrolet publication page used."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1965-chevrolet-corvette",
+      "model_year": 1965,
+      "title": "1965 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1965-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1965-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "049cf2e957d41d7fe34b96612bf4102d85a60f2a8f9eb3c53a1b448a194cef43",
+      "artifact_bytes": 3435983,
+      "pdf_page_count": 99,
+      "reviewed_pages": [
+        {
+          "pdf_page": 18,
+          "printed_page": "GENERAL-9",
+          "section": "Exterior-Interior Color Combinations",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, sales names, color descriptions, RPO codes, and convertible-top note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The GM-hosted kit is a compiled PDF. The reviewed-page record identifies the exact embedded Chevrolet specification page used."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1966-chevrolet-corvette",
+      "model_year": 1966,
+      "title": "1966 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1966-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1966-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "92ab42ced023a8f7bb82d5454a9f83899a8455b8e84ed98e8f3e02d852433a43",
+      "artifact_bytes": 3838200,
+      "pdf_page_count": 105,
+      "reviewed_pages": [
+        {
+          "pdf_page": 17,
+          "printed_page": "Section III - Page 38",
+          "section": "Options and Accessories When Installed by Chevrolet",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the solid-color restriction and folding-top color statement were visually checked against the page image."
+        },
+        {
+          "pdf_page": 20,
+          "printed_page": "Section III - Page 41",
+          "section": "Corvette Color and Trim Chart",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior-color column headings and numeric RPO codes were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The GM-hosted kit is a compiled PDF. The reviewed pages are the contemporaneous Chevrolet price-schedule pages, not the later reference material also present in the kit."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1967-chevrolet-corvette",
+      "model_year": 1967,
+      "title": "1967 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1967-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1967-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "30c1f0ae34e13b2e14f8abd45ad8797de2b2152209529fb5c06e178251d75c8c",
+      "artifact_bytes": 2488000,
+      "pdf_page_count": 85,
+      "reviewed_pages": [
+        {
+          "pdf_page": 18,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, RPO codes, source labels, and convertible-top note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The official BODY table uses abbreviated generic color labels rather than expanded sales names. This transcription preserves those labels and does not substitute names from adjacent pages or later references."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1968-chevrolet-corvette",
+      "model_year": 1968,
+      "title": "1968 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1968-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1968-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "1d9c80702b58a04027f528ff24329803bba18489ec1b5873e251141f1be93fc4",
+      "artifact_bytes": 4212232,
+      "pdf_page_count": 139,
+      "reviewed_pages": [
+        {
+          "pdf_page": 24,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, RPO codes, source labels, convertible-top note, and removable-hardtop vinyl note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The official BODY table uses generic color labels rather than expanded sales names. This transcription preserves those labels and does not infer sales names."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1969-chevrolet-corvette",
+      "model_year": 1969,
+      "title": "1969 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "f43493c6f47f09af8b818f6b988612b7d23f46f7ac502efbf85df470f4d8ec7a",
+      "artifact_bytes": 6091513,
+      "pdf_page_count": 169,
+      "reviewed_pages": [
+        {
+          "pdf_page": 82,
+          "printed_page": "6-CORVETTE",
+          "section": "1969 Corvette Color and Trim Choices",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, sales names, and codes were visually checked against the page image."
+        },
+        {
+          "pdf_page": 85,
+          "printed_page": "CORVETTE-7",
+          "section": "Vinyl Roof Cover Color Choice and Convertible Top Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the removable-hardtop vinyl-cover and convertible-top statements were visually checked against the page image."
+        },
+        {
+          "pdf_page": 114,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, alternate source labels, RPO codes, and top notes were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "Two official tables in the same kit use different labels for codes 990 and 988. Both exact readings are preserved as separate programs and flagged as unresolved source variance."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1970-chevrolet-corvette",
+      "model_year": 1970,
+      "title": "1970 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "d202f567feee1d719abe7bdac314f609a79ee970db95a45a0207f0e416ef2841",
+      "artifact_bytes": 5627535,
+      "pdf_page_count": 159,
+      "reviewed_pages": [
+        {
+          "pdf_page": 122,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, codes, convertible-top note, and removable-hardtop vinyl note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "Interior compatibility marks were not promoted to exterior colors."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1971-chevrolet-corvette",
+      "model_year": 1971,
+      "title": "1971 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "18ae90d71c57815aa7b52c0d1d0dd3c081b0f7caa0fa0e7a9245a77f707de11b",
+      "artifact_bytes": 5325506,
+      "pdf_page_count": 165,
+      "reviewed_pages": [
+        {
+          "pdf_page": 106,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, codes, Firemist markers, convertible-top note, and auxiliary-top vinyl note were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "Interior compatibility marks were not promoted to exterior colors."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1972-chevrolet-corvette",
+      "model_year": 1972,
+      "title": "1972 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "14155e664b176334a36c30c5b9d6a42c35694a693c701d76474449bec6603bc6",
+      "artifact_bytes": 5315030,
+      "pdf_page_count": 163,
+      "reviewed_pages": [
+        {
+          "pdf_page": 79,
+          "printed_page": "Section III - Page 52",
+          "section": "Corvette Interior and Exterior Selection Chart",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete solid-color table, lower and upper codes, source labels, and ordering note were visually checked against the page image."
+        },
+        {
+          "pdf_page": 89,
+          "printed_page": "10/Corvette",
+          "section": "Corvette Color and Trim",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, codes, Firemist markers, vinyl roof statement, and convertible-top statement were visually checked against the page image."
+        },
+        {
+          "pdf_page": 106,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors",
+          "visual_verification": "Rendered from the retained artifact at 180 dpi; the complete exterior table, codes, alternate code-98 label, Firemist markers, and top notes were visually checked against the page image."
+        }
+      ],
+      "limitations": [
+        "The price schedule and color-and-trim page label code 98 Steel Cities Gray, while the BODY specification page labels code 98 Atlanta Gray. Both exact readings are preserved and the conflict remains unresolved."
+      ]
+    }
+  ],
+  "years": [
+    {
+      "model_year": 1963,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1963-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 10, printed Section I - Page 25, complete exterior-color rows in the Color and Trim Combinations table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "TUXEDO BLACK",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Silver Blue (Med)",
+              "source_label_raw": "SILVER BLUE (MED)",
+              "factory_code": "912",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Daytona Blue (Dk)",
+              "source_label_raw": "DAYTONA BLUE (DK)",
+              "factory_code": "916",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Riverside Red",
+              "source_label_raw": "RIVERSIDE RED",
+              "factory_code": "923",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Saddle Tan",
+              "source_label_raw": "SADDLE TAN",
+              "factory_code": "932",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Ermine White",
+              "source_label_raw": "ERMINE WHITE",
+              "factory_code": "936",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Sebring Silver",
+              "source_label_raw": "SEBRING SILVER",
+              "factory_code": "941",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 10 folding-top columns; the page states all tops are available with any exterior color.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "BLACK",
+              "factory_code": "STD",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Standard folding-top color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Beige",
+              "source_label_raw": "BEIGE",
+              "factory_code": "C05A",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "White",
+              "source_label_raw": "WHITE",
+              "factory_code": "C05B",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior trim compatibility marks and the leather-seat-only footnote were not promoted to exterior colors.",
+        "The table header combines exterior body color and optional hardtop; it does not establish a separately coded hardtop paint palette."
+      ]
+    },
+    {
+      "model_year": 1964,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1964-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 10, printed Section II - Page 34, complete exterior-color rows in the Color and Trim Combinations table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "TUXEDO BLACK",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Silver Blue (Med)",
+              "source_label_raw": "SILVER BLUE (MED)",
+              "factory_code": "912",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Daytona Blue (Dk)",
+              "source_label_raw": "DAYTONA BLUE (DK)",
+              "factory_code": "916",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Riverside Red",
+              "source_label_raw": "RIVERSIDE RED",
+              "factory_code": "923",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Saddle Tan",
+              "source_label_raw": "SADDLE TAN",
+              "factory_code": "932",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Ermine White",
+              "source_label_raw": "ERMINE WHITE",
+              "factory_code": "936",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Satin Silver",
+              "source_label_raw": "SATIN SILVER",
+              "factory_code": "940",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 10 folding-top color column; all three are stated available with any exterior color.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "BLACK",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "WHITE",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Beige",
+              "source_label_raw": "BEIGE",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior trim combinations and instrument-panel or carpeting colors were not promoted to exterior colors.",
+        "The table header combines exterior body color and optional hardtop; it does not establish a separately coded hardtop paint palette."
+      ]
+    },
+    {
+      "model_year": 1965,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1965-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 18, printed GENERAL-9, complete Exterior Colors table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "Tuxedo Black",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Ermine White",
+              "source_label_raw": "Ermine White",
+              "factory_code": "CC",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Nassau Blue",
+              "source_label_raw": "Nassau Blue",
+              "factory_code": "FF",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Glen Green",
+              "source_label_raw": "Glen Green",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Milano Maroon",
+              "source_label_raw": "Milano Maroon",
+              "factory_code": "MM",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Rally Red",
+              "source_label_raw": "Rally Red",
+              "factory_code": "UU",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Goldwood Yellow",
+              "source_label_raw": "Goldwood Yellow",
+              "factory_code": "XX",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver Pearl",
+              "source_label_raw": "Silver Pearl",
+              "factory_code": "QQ",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 18 convertible-top note.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Beige",
+              "source_label_raw": "beige",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The body table's interior trim colors and compatibility marks were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1966,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1966-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 20, printed Section III - Page 41, complete exterior-color column headings and RPO row in the Corvette Color and Trim Chart; PDF page 17 states exterior paint is solid colors only.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "Tuxedo Black",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Ermine White",
+              "source_label_raw": "Ermine White",
+              "factory_code": "972",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Rally Red",
+              "source_label_raw": "Rally Red",
+              "factory_code": "974",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Nassau Blue",
+              "source_label_raw": "Nassau Blue",
+              "factory_code": "976",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Laguna Blue",
+              "source_label_raw": "Laguna Blue",
+              "factory_code": "978",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Trophy Blue",
+              "source_label_raw": "Trophy Blue",
+              "factory_code": "980",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Mosport Green",
+              "source_label_raw": "Mosport Green",
+              "factory_code": "982",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Sunfire Yellow",
+              "source_label_raw": "Sunfire Yellow",
+              "factory_code": "984",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Silver Pearl",
+              "source_label_raw": "Silver Pearl",
+              "factory_code": "986",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Milano Maroon",
+              "source_label_raw": "Milano Maroon",
+              "factory_code": "988",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Solid color only."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 17 folding-top option statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": "C05",
+              "factory_code_status": "group_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Beige",
+              "source_label_raw": "beige",
+              "factory_code": "C05",
+              "factory_code_status": "group_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": "C05",
+              "factory_code_status": "group_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior trim compatibility cells were not promoted to exterior colors.",
+        "RPO C05 is printed for the folding-top option as a group, not as a distinct code for each top color."
+      ]
+    },
+    {
+      "model_year": 1967,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1967-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 18, printed BODY-3, complete EXTERIOR rows in the Exterior-Interior Colors table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "972",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "974",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Med. Brt. Blue",
+              "source_label_raw": "Med. Brt. Blue",
+              "factory_code": "976",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Dk. Teal Blue",
+              "source_label_raw": "Dk. Teal Blue",
+              "factory_code": "977",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Silver Blue",
+              "source_label_raw": "Silver Blue",
+              "factory_code": "980",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Dk. Green",
+              "source_label_raw": "Dk. Green",
+              "factory_code": "983",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Yellow",
+              "source_label_raw": "Yellow",
+              "factory_code": "984",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "986",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Maroon",
+              "source_label_raw": "Maroon",
+              "factory_code": "988",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 18 convertible-top note.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Standard.",
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Dark Teal Blue",
+              "source_label_raw": "optional dark teal blue",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Optional.",
+                "Available with any exterior color."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The official table's abbreviated labels are retained. Expanded sales names found elsewhere were not substituted.",
+        "Interior trim compatibility cells were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1968,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1968-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 24, printed BODY-3, complete RPO and EXTERIOR COLOR rows.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "972",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "974",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Medium Blue",
+              "source_label_raw": "Medium Blue",
+              "factory_code": "976",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Dark Blue",
+              "source_label_raw": "Dark Blue",
+              "factory_code": "978",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Dark Green",
+              "source_label_raw": "Dark Green",
+              "factory_code": "983",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Yellow",
+              "source_label_raw": "Yellow",
+              "factory_code": "984",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "986",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Maroon",
+              "source_label_raw": "Maroon",
+              "factory_code": "988",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Copper Bronze",
+              "source_label_raw": "Copper Bronze",
+              "factory_code": "992",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 24 convertible-top note.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "regular_production_no_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Regular production.",
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Beige",
+              "source_label_raw": "Beige",
+              "factory_code": "C05",
+              "factory_code_status": "group_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": "C05",
+              "factory_code_status": "group_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "removable-hardtop-vinyl-cover",
+          "program_label": "Removable hardtop vinyl cover",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 24 Vinyl top (RPO C08) note.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "C08",
+              "factory_code_status": "printed",
+              "component_role": "removable_hardtop_vinyl_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Removable hardtop models only.",
+                "Available with any exterior color."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The official table's generic body-color labels are retained; expanded sales names were not inferred.",
+        "Interior trim compatibility cells were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1969,
+      "audit_status": "official_palette_transcribed_with_source_label_variance",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1969-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint-color-and-trim",
+          "program_label": "Regular body paint, color and trim publication",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 82, printed 6-CORVETTE, complete 1969 Corvette Color and Trim Choices exterior table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "Tuxedo Black",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Can-Am White",
+              "source_label_raw": "Can-Am White",
+              "factory_code": "972",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Monza Red",
+              "source_label_raw": "Monza Red",
+              "factory_code": "974",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Le Mans Blue",
+              "source_label_raw": "Le Mans Blue",
+              "factory_code": "976",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Monaco Orange",
+              "source_label_raw": "Monaco Orange",
+              "factory_code": "990",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "The BODY-3 table in the same kit labels code 990 Hugger Orange."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Fathom Green",
+              "source_label_raw": "Fathom Green",
+              "factory_code": "983",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Daytona Yellow",
+              "source_label_raw": "Daytona Yellow",
+              "factory_code": "984",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Cortez Silver",
+              "source_label_raw": "Cortez Silver",
+              "factory_code": "986",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Burgundy",
+              "source_label_raw": "Burgundy",
+              "factory_code": "988",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "The BODY-3 table in the same kit labels code 988 Burgundy Maroon."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Riverside Gold",
+              "source_label_raw": "Riverside Gold",
+              "factory_code": "980",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "regular-body-paint-body-specification",
+          "program_label": "Regular body paint, BODY specification",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 114, printed BODY-3, complete RPO and EXTERIOR COLOR rows.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "Tuxedo Black",
+              "factory_code": "900",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Can-Am White",
+              "source_label_raw": "Can-Am White",
+              "factory_code": "972",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Monza Red",
+              "source_label_raw": "Monza Red",
+              "factory_code": "974",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Le Mans Blue",
+              "source_label_raw": "Le Mans Blue",
+              "factory_code": "976",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Hugger Orange",
+              "source_label_raw": "Hugger Orange",
+              "factory_code": "990",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "The color-and-trim table in the same kit labels code 990 Monaco Orange."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Fathom Green",
+              "source_label_raw": "Fathom Green",
+              "factory_code": "983",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Daytona Yellow",
+              "source_label_raw": "Daytona Yellow",
+              "factory_code": "984",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Cortez Silver",
+              "source_label_raw": "Cortez Silver",
+              "factory_code": "986",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Burgundy Maroon",
+              "source_label_raw": "Burgundy Maroon",
+              "factory_code": "988",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "The color-and-trim table in the same kit labels code 988 Burgundy."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Riverside Gold",
+              "source_label_raw": "Riverside Gold",
+              "factory_code": "980",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 85 Convertible Top Colors statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Beige",
+              "source_label_raw": "beige",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "removable-hardtop-vinyl-cover",
+          "program_label": "Removable hardtop vinyl roof cover",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 85 Vinyl Roof Cover Color Choice (RPO C08) statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": "C08",
+              "factory_code_status": "printed",
+              "component_role": "removable_hardtop_vinyl_cover",
+              "combination_code": "C07",
+              "restrictions": [
+                "Removable hardtop (RPO C07) only.",
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The source-label variance for codes 990 and 988 is not normalized away.",
+        "Interior trim compatibility cells were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1970,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1970-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 122, printed BODY-3, complete RPO and EXTERIOR COLOR rows.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Classic White",
+              "source_label_raw": "Classic White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Cortez Silver",
+              "source_label_raw": "Cortez Silver",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Laguna Gray",
+              "source_label_raw": "Laguna Gray",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Mulsanne Blue",
+              "source_label_raw": "Mulsanne Blue",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Bridgehampton Blue",
+              "source_label_raw": "Bridgehampton Blue",
+              "factory_code": "27",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Donnybrooke Green",
+              "source_label_raw": "Donnybrooke Green",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Daytona Yellow",
+              "source_label_raw": "Daytona Yellow",
+              "factory_code": "51",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Ontario Orange",
+              "source_label_raw": "Ontario Orange",
+              "factory_code": "62",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Monza Red",
+              "source_label_raw": "Monza Red",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Marlboro Maroon",
+              "source_label_raw": "Marlboro Maroon",
+              "factory_code": "77",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible folding top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 122 convertible folding-top list.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "regular_production_no_code_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Production color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": null,
+              "factory_code_status": "rpo_not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "RPO; individual code not printed."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Sandalwood",
+              "source_label_raw": "Sandalwood",
+              "factory_code": null,
+              "factory_code_status": "rpo_not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "RPO; individual code not printed."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "removable-hardtop-vinyl-cover",
+          "program_label": "Removable hardtop vinyl roof option",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 122 RPO C08 Vinyl Roof Option statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black - pebble grain",
+              "source_label_raw": "Black - pebble grain",
+              "factory_code": "C08",
+              "factory_code_status": "printed",
+              "component_role": "removable_hardtop_vinyl_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Removable hardtop only."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior trim compatibility cells were not promoted to exterior colors.",
+        "The BODY page identifies White and Sandalwood folding tops as RPO but does not print distinct option codes."
+      ]
+    },
+    {
+      "model_year": 1971,
+      "audit_status": "official_palette_transcribed",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1971-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 106, printed BODY-3, complete CODE and EXTERIOR COLOR rows.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Classic White",
+              "source_label_raw": "Classic White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Nevada Silver",
+              "source_label_raw": "Nevada Silver",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Mulsanne Blue",
+              "source_label_raw": "Mulsanne Blue",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Bridgehampton Blue",
+              "source_label_raw": "Bridgehampton Blue",
+              "factory_code": "27",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Brands Hatch Green",
+              "source_label_raw": "Brands Hatch Green",
+              "factory_code": "48",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Sunflower Yellow",
+              "source_label_raw": "Sunflower Yellow",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Mille Miglia Red",
+              "source_label_raw": "Mille Miglia Red",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "War Bonnet Yellow",
+              "source_label_raw": "War Bonnet Yellow",
+              "factory_code": "91",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Ontario Orange",
+              "source_label_raw": "Ontario Orange",
+              "factory_code": "97",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Steel Cities Gray",
+              "source_label_raw": "Steel Cities Gray",
+              "factory_code": "98",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 106 Convertible Top statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with any exterior color."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "auxiliary-top-vinyl-cover",
+          "program_label": "Auxiliary-top vinyl cover",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 106 Vinyl Top statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "auxiliary_top_vinyl_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Auxiliary top only.",
+                "Available with any exterior color."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior trim compatibility cells were not promoted to exterior colors.",
+        "The BODY page does not print individual option codes for the convertible or auxiliary-top colors."
+      ]
+    },
+    {
+      "model_year": 1972,
+      "audit_status": "official_palette_transcribed_with_source_label_conflict",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1972-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint-price-schedule",
+          "program_label": "Regular body paint, price schedule",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 79, printed Section III - Page 52, complete solid-color rows. Lower and upper codes are identical for every listed color.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Bryar Blue",
+              "source_label_raw": "Blue, Bryar",
+              "factory_code": "37",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Targa Blue",
+              "source_label_raw": "Blue, Targa",
+              "factory_code": "27",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Steel Cities Gray",
+              "source_label_raw": "Gray, Steel Cities",
+              "factory_code": "98",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color, as marked on the color-and-trim page in the same kit.",
+                "The BODY-3 specification in the same kit labels code 98 Atlanta Gray."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Elkhart Green",
+              "source_label_raw": "Green, Elkhart",
+              "factory_code": "47",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Ontario Orange",
+              "source_label_raw": "Orange, Ontario",
+              "factory_code": "97",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color, as marked on the color-and-trim page in the same kit."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Mille Miglia Red",
+              "source_label_raw": "Red, Mille Miglia",
+              "factory_code": "76",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Pewter Silver",
+              "source_label_raw": "Silver, Pewter",
+              "factory_code": "14",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Classic White",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Sunflower Yellow",
+              "source_label_raw": "Yellow, Sunflower",
+              "factory_code": "52",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "War Bonnet Yellow",
+              "source_label_raw": "Yellow, War Bonnet",
+              "factory_code": "91",
+              "factory_code_status": "printed_lower_and_upper",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color, as marked on the color-and-trim page in the same kit."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "regular-body-paint-color-and-trim",
+          "program_label": "Regular body paint, color and trim publication",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 89, printed 10/Corvette, complete Exterior Colors table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Bryar Blue",
+              "source_label_raw": "Bryar Blue",
+              "factory_code": "37",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Targa Blue",
+              "source_label_raw": "Targa Blue",
+              "factory_code": "27",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Steel Cities Gray",
+              "source_label_raw": "Steel Cities Gray",
+              "factory_code": "98",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color.",
+                "The BODY-3 specification in the same kit labels code 98 Atlanta Gray."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Elkhart Green",
+              "source_label_raw": "Elkhart Green",
+              "factory_code": "47",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Ontario Orange",
+              "source_label_raw": "Ontario Orange",
+              "factory_code": "97",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Mille Miglia Red",
+              "source_label_raw": "Mille Miglia Red",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Pewter Silver",
+              "source_label_raw": "Pewter Silver",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Classic White",
+              "source_label_raw": "Classic White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Sunflower Yellow",
+              "source_label_raw": "Sunflower Yellow",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "War Bonnet Yellow",
+              "source_label_raw": "War Bonnet Yellow",
+              "factory_code": "91",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "regular-body-paint-body-specification",
+          "program_label": "Regular body paint, BODY specification",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 106, printed BODY-3, complete COLOR CODE and EXTERIOR COLOR rows.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Classic White",
+              "source_label_raw": "Classic White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Pewter Silver",
+              "source_label_raw": "Pewter Silver",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Targa Blue",
+              "source_label_raw": "Targa Blue",
+              "factory_code": "27",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Bryar Blue",
+              "source_label_raw": "Bryar Blue",
+              "factory_code": "37",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Elkhart Green",
+              "source_label_raw": "Elkhart Green",
+              "factory_code": "47",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Sunflower Yellow",
+              "source_label_raw": "Sunflower Yellow",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Mille Miglia Red",
+              "source_label_raw": "Mille Miglia Red",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "War Bonnet Yellow",
+              "source_label_raw": "War Bonnet Yellow",
+              "factory_code": "91",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Ontario Orange",
+              "source_label_raw": "Ontario Orange",
+              "factory_code": "97",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Atlanta Gray",
+              "source_label_raw": "Atlanta Gray",
+              "factory_code": "98",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Special Firemist color.",
+                "The price schedule and color-and-trim table in the same kit label code 98 Steel Cities Gray."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 89 Convertible Top Colors statement, corroborated on BODY-3.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "removable-hardtop-vinyl-cover",
+          "program_label": "Removable hardtop vinyl roof cover",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 89 Vinyl Roof Cover Color Choice (RPO C08) statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": "C08",
+              "factory_code_status": "printed",
+              "component_role": "removable_hardtop_vinyl_cover",
+              "combination_code": "C07",
+              "restrictions": [
+                "Extra-cost removable hardtop (RPO C07) only.",
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The code-98 sales-name conflict is preserved rather than normalized.",
+        "The price-schedule note governs trim combinations: Coupe combinations shown are recommendations and non-recommended combinations may be ordered with dealer initials; Convertible combinations shown are the only approved combinations.",
+        "Interior trim and belt colors were not promoted to exterior colors."
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "issue_id": "1969-code-990-and-988-source-label-variance",
+      "model_year": 1969,
+      "status": "unresolved_source_variance",
+      "source_ids": [
+        "gm-heritage-1969-chevrolet-corvette"
+      ],
+      "description": "The color-and-trim publication on PDF page 82 labels code 990 Monaco Orange and code 988 Burgundy. The BODY-3 specification on PDF page 114 labels the same codes Hugger Orange and Burgundy Maroon. Both official table readings are retained."
+    },
+    {
+      "issue_id": "1972-code-98-source-label-conflict",
+      "model_year": 1972,
+      "status": "unresolved_source_conflict",
+      "source_ids": [
+        "gm-heritage-1972-chevrolet-corvette"
+      ],
+      "description": "The price schedule on PDF page 79 and color-and-trim publication on PDF page 89 label code 98 Steel Cities Gray. The BODY-3 specification on PDF page 106 labels code 98 Atlanta Gray. The retained kit does not resolve the discrepancy."
+    }
+  ]
+}

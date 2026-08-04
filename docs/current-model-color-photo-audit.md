@@ -10,7 +10,7 @@ sources:
 
 # Current-model color and photo coverage audit
 
-Audited July 23, 2026.
+Audited August 4, 2026.
 
 This is the focused coverage ledger for the 18 nameplates marked `current` in
 [`chevrolet-us-nameplates.json`](../data/catalog/chevrolet-us-nameplates.json).
@@ -39,22 +39,22 @@ The independent 2025–2026 live-source comparison is retained separately in
 
 | Model | Catalog years | Complete | Qualified palette | Specialty subset | Unreviewed or no-chart years | Archived Commons candidates |
 |---|---:|---|---|---|---|---:|
-| Corvette | 73 | 1956–1958, 1960–1962 | 1954–1955, 1959; 2025–2026 | None | 1953 no chart; 1963–1982, 1984–2024 unreviewed | 10 |
+| Corvette | 73 | 1956–1958, 1960–1962 | 1954–1955, 1959; 2024–2026 | None | 1953 no chart; 1963–1982, 1984–2023 unreviewed | 10 |
 | Suburban | 89 | 1969, 1972–2005, 2007 | 2008–2026 | None | 1963, 1970–1971 no chart; 1935–1942, 1946–1962, 1964–1968, 2006 unreviewed | 3 |
-| Blazer | 45 | None | 2025–2026 | 1979–1980 | 1969–1978, 1981–2005, 2019–2024 | 2 |
-| Tahoe | 32 | 1995–2007 | 2022, 2025–2026 | 2011–2020 | 2008–2010, 2021, 2023–2024 | 5 |
-| Express | 31 | None | 2025–2026 | 2011–2014 | 1996–2010, 2015–2024 | 2 |
-| Silverado | 28 | None | 2025–2026 | 2012, 2014; 2025–2026 Retail and Fleet Woodland Green | 1999–2011, 2013, 2015–2024 | 2 |
-| Silverado HD | 26 | None | 2023, 2025–2026 | 2011 | 2001–2010, 2012–2022, 2024 | 2 |
-| TrailBlazer | 14 | None | 2025–2026 | None | 2002–2009, 2021–2024 | 2 |
-| Colorado | 21 | None | 2023, 2025–2026 | None | 2004–2012, 2015–2022, 2024 | 2 |
-| Equinox | 22 | None | 2025–2026 | None | 2005–2024 | 2 |
-| Traverse | 18 | None | 2025–2026 | None | 2009–2024 | 2 |
-| Trax | 11 | None | 2025–2026 | None | 2015–2022, 2024 | 2 |
-| Low Cab Forward | 11 | None | 2025–2026 | None | 2016–2024 | 1 |
-| Blazer EV | 3 | None | 2025–2026 | See separate 2024–2026 9C1/9C3/5W4 evidence | 2024 regular palette | 2 |
-| Equinox EV | 3 | None | 2025–2026 | None | 2024 | 2 |
-| Silverado EV | 3 | None | 2025–2026 | None | 2024 | 2 |
+| Blazer | 45 | None | 2024–2026 | 1979–1980 | 1969–1978, 1981–2005, 2019–2023 | 2 |
+| Tahoe | 32 | 1995–2007 | 2022, 2024–2026 | 2011–2020 | 2008–2010, 2021, 2023 | 5 |
+| Express | 31 | None | 2024–2026 | 2011–2014 | 1996–2010, 2015–2023 | 2 |
+| Silverado | 28 | None | 2024–2026 | 2012, 2014; 2025–2026 Retail and Fleet Woodland Green | 1999–2011, 2013, 2015–2023 | 2 |
+| Silverado HD | 26 | None | 2023–2026 | 2011 | 2001–2010, 2012–2022 | 2 |
+| TrailBlazer | 14 | None | 2024–2026 | None | 2002–2009, 2021–2023 | 2 |
+| Colorado | 21 | None | 2023–2026 | None | 2004–2012, 2015–2022 | 2 |
+| Equinox | 22 | None | 2024–2026 | None | 2005–2023 | 2 |
+| Traverse | 18 | None | 2024–2026 | None | 2009–2023 | 2 |
+| Trax | 11 | None | 2024–2026 | None | 2015–2022 | 2 |
+| Low Cab Forward | 11 | None | 2024–2026 | None | 2016–2023 | 1 |
+| Blazer EV | 3 | None | 2024–2026 | See separate 2024–2026 9C1/9C3/5W4 evidence | None | 2 |
+| Equinox EV | 3 | None | 2024–2026 | None | None | 2 |
+| Silverado EV | 3 | None | 2024–2026 | None | None | 2 |
 | BrightDrop 400 | 2 | None | 2025–2026 | None | None | 1 |
 | BrightDrop 600 | 2 | None | 2025–2026 | None | None | 2 |
 
@@ -62,14 +62,16 @@ Totals:
 
 - 434 catalog model-years.
 - 55 model-years with complete reviewed charts.
-- 59 model-years with qualified regular or historical palettes.
+- 71 model-years with qualified regular palettes and 3 with qualified
+  historical tables.
 - 19 model-years represented only by a reviewed specialty subset.
 - 4 model-years whose inspected source had no governing color chart.
-- 297 unreviewed model-years.
-- 1,326 published availability rows.
+- 282 unreviewed model-years.
+- 1,811 published availability rows.
 - 46 archived Commons originals and 46 archived previews for current
   nameplates.
-- 0 current-model photo-to-color links promoted from candidate status.
+- 1 current-model photo-to-color link visually reviewed as a qualified example;
+  factory paint remains unverified.
 
 ## Live Order Guide reconciliation
 
@@ -185,8 +187,11 @@ official 2026 GM Fleet Guide remains the dimensional and silhouette reference.
 ### August 4 Commons refresh
 
 The release manifest now has 46 archived candidates across the 18 current
-nameplates and zero current-model photo-to-color links. The full evidence ledger is
+nameplates and one qualified current-model photo-to-color link. The full identity
+evidence ledger is
 [`current-model-commons-photo-audit.json`](../data/photos/current-model-commons-photo-audit.json).
+The separate color-link evidence is in
+[`current-model-color-photo-links.json`](../data/photos/current-model-color-photo-links.json).
 
 - BrightDrop 400 now has one cross-referenced 2025 identity candidate. The
   Commons page, exact-file caption, and official show report remain separately
@@ -204,14 +209,31 @@ The existing 2019 Low Cab Forward photo mentions Bright White `16U`, but it is
 not current-model paint evidence. No current photo is promoted as factory color
 evidence in this audit.
 
+The retained 2024 Trax ACTIV photograph is now linked to the exact 2024
+Crimson Metallic palette row. Commons identifies the exact model year and says
+the photographed vehicle is finished in Crimson Metallic; the retained image
+was visually reviewed as a clear complete-vehicle example. The association is
+still marked `factory_paint_match_status = unverified`. A photograph and its
+caption do not prove original factory finish.
+
+Eight additional exact-label Commons leads are queued in
+[`current-model-color-photo-crawl-queue.json`](../data/photos/current-model-color-photo-crawl-queue.json):
+four 2024 Trax views, three 2024 Colorado views, and one 2025 Traverse view.
+The queue preserves multiple views for Trax Summit White and Colorado Nitro
+Yellow Metallic. No bytes were fetched or published because the configured VPS
+had 32.28 GiB and 18 percent free at preflight, below the project floors of
+40 GiB and 20 percent, and no dedicated Chevrolet crawler state was present.
+Philippine-market Jinx Metallic, Sharkskin Metallic, and Crimson Metallic leads
+remain rejected or unresolved for the U.S. archive rather than being joined by
+name alone.
+
 ## Highest-priority work queue
 
-1. Find complete official 2024 exterior-color tables for Traverse and Equinox
-   EV without promoting partial announcement lists.
-2. Review current 2025–2026 order guides or paint sections at trim level so
+1. Review current 2025–2026 order guides or paint sections at trim level so
    qualified palette unions can become governing model-year charts.
-3. Review the 46 current-model Commons candidates for identity and composition,
-   then link a photograph to a color only when separate color evidence supports
-   the association.
-4. Continue searching for a second BrightDrop 400 image whose own Commons
+2. Expand exact current-model color-photo examples only where Commons metadata
+   prints the complete reviewed palette label for the same model year.
+3. Continue searching for a second BrightDrop 400 image whose own Commons
    metadata states the exact 400 identity.
+4. Continue exact-year heritage-kit review for the legacy years still marked
+   unreviewed, beginning with the highest-yield dedicated PDF batches.

@@ -121,6 +121,9 @@ async function loadArchiveModels() {
     suburbanEarlySource,
     suburban2000Source,
     suburbanBrochureSource,
+    corvette1963Source,
+    monteCarlo1970Source,
+    pSeries1969Source,
     modernColorSource,
     specialtyColorSource,
   ] = await Promise.all([
@@ -133,6 +136,18 @@ async function loadArchiveModels() {
       readFile(new URL("data/audits/suburban-2000-2007.json", root), "utf8"),
       readFile(
         new URL("data/audits/suburban-brochure-palettes-1982-1989-1993.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/corvette-official-palettes-1963-1972.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/monte-carlo-official-palettes-1970-1979.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/p-series-official-palettes-1969-1978.json", root),
         "utf8",
       ),
       readFile(
@@ -172,6 +187,18 @@ async function loadArchiveModels() {
     .replace(
       /^import suburbanBrochurePaletteAudit from "\.\.\/data\/audits\/suburban-brochure-palettes-1982-1989-1993\.json";\r?\n/m,
       `const suburbanBrochurePaletteAudit = ${suburbanBrochureSource};\n`,
+    )
+    .replace(
+      /^import corvette1963to1972Audit from "\.\.\/data\/audits\/corvette-official-palettes-1963-1972\.json";\r?\n/m,
+      `const corvette1963to1972Audit = ${corvette1963Source};\n`,
+    )
+    .replace(
+      /^import monteCarlo1970to1979Audit from "\.\.\/data\/audits\/monte-carlo-official-palettes-1970-1979\.json";\r?\n/m,
+      `const monteCarlo1970to1979Audit = ${monteCarlo1970Source};\n`,
+    )
+    .replace(
+      /^import pSeries1969to1978Audit from "\.\.\/data\/audits\/p-series-official-palettes-1969-1978\.json";\r?\n/m,
+      `const pSeries1969to1978Audit = ${pSeries1969Source};\n`,
     )
     .replace(
       /^import modernColorSourceData from "\.\.\/data\/sources\/modern-chevrolet-color-source-candidates\.json";\r?\n/m,

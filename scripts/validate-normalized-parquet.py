@@ -37,6 +37,7 @@ FACTORY_CODE_STATUS_VALUES = {
 FACTORY_CODE_COLUMNS = {
     "color_availability": ("factory_code", "factory_code_status"),
     "paint_scheme_components": ("factory_code", "factory_code_status"),
+    "audited_color_program_entries": ("factory_code", "factory_code_status"),
     "evidence_claims": (
         "transcribed_factory_code",
         "transcribed_factory_code_status",
@@ -339,14 +340,23 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     manifest = json.loads((PARQUET_ROOT / "manifest.json").read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != 11:
-        raise AssertionError("normalized Parquet manifest must use schema version 11")
+    if manifest.get("schema_version") != 12:
+        raise AssertionError("normalized Parquet manifest must use schema version 12")
     tables = {item["table"]: item for item in manifest["tables"]}
     required_paint_tables = {"paint_schemes", "paint_scheme_components"}
     if not required_paint_tables <= set(tables):
         raise AssertionError(
             f"normalized Parquet manifest omits paint-scheme tables: "
             f"{sorted(required_paint_tables - set(tables))}"
+        )
+    required_audited_program_tables = {
+        "audited_color_programs",
+        "audited_color_program_entries",
+    }
+    if not required_audited_program_tables <= set(tables):
+        raise AssertionError(
+            "normalized Parquet manifest omits audited-program tables: "
+            f"{sorted(required_audited_program_tables - set(tables))}"
         )
     required_secondary_tables = {
         "secondary_catalog_configurations",
@@ -418,6 +428,16 @@ def main() -> int:
         rows["paint_scheme_components"],
         "paint_scheme_component_id",
         "paint_scheme_components",
+    )
+    audit_program_ids = require_unique(
+        rows["audited_color_programs"],
+        "audit_program_id",
+        "audited_color_programs",
+    )
+    require_unique(
+        rows["audited_color_program_entries"],
+        "audit_program_entry_id",
+        "audited_color_program_entries",
     )
     research_model_year_ids = require_unique(
         rows["model_year_research"], "model_year_id", "model_year_research"
@@ -541,6 +561,51 @@ def main() -> int:
         "paint_scheme_id",
         paint_scheme_ids,
         "paint_scheme_components",
+    )
+    require_fk(
+        rows["audited_color_programs"],
+        "model_year_id",
+        model_year_ids,
+        "audited_color_programs",
+    )
+    require_fk(
+        rows["audited_color_programs"],
+        "model_id",
+        model_ids,
+        "audited_color_programs",
+    )
+    require_fk(
+        rows["audited_color_programs"],
+        "primary_evidence_source_id",
+        source_ids,
+        "audited_color_programs",
+    )
+    for program in rows["audited_color_programs"]:
+        missing_supporting_source_ids = sorted(
+            set(program["supporting_evidence_source_ids"]) - source_ids
+        )
+        if missing_supporting_source_ids:
+            raise AssertionError(
+                "audited_color_programs.supporting_evidence_source_ids has missing "
+                f"foreign keys: {missing_supporting_source_ids[:5]}"
+            )
+    require_fk(
+        rows["audited_color_program_entries"],
+        "audit_program_id",
+        audit_program_ids,
+        "audited_color_program_entries",
+    )
+    require_fk(
+        rows["audited_color_program_entries"],
+        "model_year_id",
+        model_year_ids,
+        "audited_color_program_entries",
+    )
+    require_fk(
+        rows["audited_color_program_entries"],
+        "model_id",
+        model_ids,
+        "audited_color_program_entries",
     )
     require_fk(
         rows["model_year_research"],
@@ -1861,7 +1926,7 @@ def main() -> int:
         )
     expected_application_type_counts = Counter(
         {
-            "manufacturer_listed": 1_563,
+            "manufacturer_listed": 1_821,
             "authorized_upfitter_post_build": 180,
             "special_equipment_option_paint": 589,
             "specialty_program_unspecified": 41,
@@ -2566,6 +2631,12 @@ def main() -> int:
         "platform_eras": len(rows["platform_eras"]),
         "color_identities": len(rows["color_identities"]),
         "verified_color_availability_rows": len(rows["color_availability"]),
+        "paint_schemes": len(rows["paint_schemes"]),
+        "paint_scheme_components": len(rows["paint_scheme_components"]),
+        "audited_color_programs": len(rows["audited_color_programs"]),
+        "audited_color_program_entries": len(
+            rows["audited_color_program_entries"]
+        ),
         "model_year_research_rows": len(rows["model_year_research"]),
         "model_year_source_candidates": len(rows["model_year_source_candidates"]),
         "secondary_catalog_configurations": len(

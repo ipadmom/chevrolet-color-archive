@@ -22136,13 +22136,26 @@
       "candidate_id": "commons-sha1-e02eb8861478e32c7ba2",
       "status": "unreviewed_candidate",
       "selection_kinds": [
-        "representative"
+        "representative",
+        "reviewed_color_caption"
       ],
       "selection_contexts": [
         {
           "kind": "representative",
           "model_id": "trax",
           "exact_year": 2024
+        },
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "trax",
+          "exact_year": 2024,
+          "color_id": "trax-crimson-metallic-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 Trax as finished in Crimson Metallic. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_front_left,_07-12-2023.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ]
         }
       ],
       "model_ids": [

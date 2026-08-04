@@ -17,10 +17,10 @@ const CURRENT_ORDER_GUIDE_RELEASE_TAG = "current-order-guide-source-archive-v1";
 const CURRENT_ORDER_GUIDE_RELEASE_DOWNLOAD_BASE =
   `https://github.com/${REPOSITORY}/releases/download/` +
   `${CURRENT_ORDER_GUIDE_RELEASE_TAG}/`;
-const EXPECTED_ASSET_COUNT = 142;
-const EXPECTED_PDF_COUNT = 117;
-const EXPECTED_PDF_BYTES = 1_451_230_138;
-const EXPECTED_PDF_PAGE_COUNT = 8_739;
+const EXPECTED_ASSET_COUNT = 174;
+const EXPECTED_PDF_COUNT = 148;
+const EXPECTED_PDF_BYTES = 1_565_404_205;
+const EXPECTED_PDF_PAGE_COUNT = 11_600;
 const EXPECTED_MODERN_SOURCE_COUNT = 24;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 20;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
@@ -210,6 +210,49 @@ const publishedColorResearchAssets = new Map([
     {
       sourceId: "gm-2011-police-manual",
       role: "controlling_specialty_vehicle_manual",
+    },
+  ],
+]);
+
+const exactPaletteAuditAssets = new Map([
+  ...Array.from({ length: 10 }, (_, index) => {
+    const year = 1963 + index;
+    return [
+      `${year}-chevrolet-corvette-vehicle-information-kit-gm.pdf`,
+      {
+        sourceId: `gm-heritage-${year}-chevrolet-corvette`,
+        role: "controlling_exact_palette_vehicle_information_kit",
+      },
+    ];
+  }),
+  ...Array.from({ length: 10 }, (_, index) => {
+    const year = 1970 + index;
+    return [
+      `${year}-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf`,
+      {
+        sourceId: `gm-heritage-${year}-chevrolet-monte-carlo`,
+        role: "controlling_exact_palette_vehicle_information_kit",
+      },
+    ];
+  }),
+  ...Array.from({ length: 10 }, (_, index) => {
+    const year = 1969 + index;
+    return [
+      `${year}-chevrolet-motorhome-vehicle-information-kit-gm.pdf`,
+      {
+        sourceId: `gm-heritage-${year}-chevrolet-motorhome`,
+        role:
+          year === 1978
+            ? "controlling_exact_palette_vehicle_information_kit"
+            : "supporting_reviewed_partial_vehicle_information_kit",
+      },
+    ];
+  }),
+  [
+    "1969-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+    {
+      sourceId: "gm-heritage-1969-chevrolet-g-van",
+      role: "supporting_reviewed_partial_vehicle_information_kit",
     },
   ],
 ]);
@@ -701,6 +744,18 @@ function assertManifestContract(manifest) {
   for (const [assetName, { sourceId, role }] of publishedColorResearchAssets) {
     const entry = entriesByName.get(assetName);
     invariant(entry, `missing published color-research asset: ${assetName}`);
+    invariant(
+      entry.source_id === sourceId,
+      `${assetName} must have source_id ${sourceId}`,
+    );
+    invariant(
+      entry.role === role,
+      `${assetName} must have role ${role}`,
+    );
+  }
+  for (const [assetName, { sourceId, role }] of exactPaletteAuditAssets) {
+    const entry = entriesByName.get(assetName);
+    invariant(entry, `missing exact-palette audit asset: ${assetName}`);
     invariant(
       entry.source_id === sourceId,
       `${assetName} must have source_id ${sourceId}`,
@@ -1663,7 +1718,7 @@ async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
     );
   }
 
-  const checksumAssetName = "source-sha256-manifest-141-reviewed.txt";
+  const checksumAssetName = "source-sha256-manifest-173-reviewed.txt";
   const checksumText = await readFile(
     path.join(stagingDirectory, checksumAssetName),
     "utf8",
@@ -1675,7 +1730,7 @@ async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
     .map(({ asset_name: assetName, sha256: digest }) => `${digest}  ${assetName}`);
   invariant(
     JSON.stringify(checksumLines) === JSON.stringify(expectedChecksumLines),
-    "source-sha256-manifest-141-reviewed.txt must cover every preexisting Release asset by its flat asset name",
+    "source-sha256-manifest-173-reviewed.txt must cover every other Release asset by its flat asset name",
   );
 }
 

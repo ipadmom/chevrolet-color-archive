@@ -27,7 +27,11 @@ test("current-model Commons audit accounts for every current catalog nameplate",
   assert.deepEqual(audit.manifest_coverage.archived_asset_counts, expectedCounts);
   assert.equal(audit.manifest_coverage.archived_asset_total, Object.values(expectedCounts).reduce((total, count) => total + count, 0));
   assert.equal(audit.manifest_coverage.archived_asset_total, 46);
-  assert.equal(audit.manifest_coverage.published_current_model_photo_to_color_links, 0);
+  assert.equal(audit.manifest_coverage.published_current_model_photo_to_color_links, 1);
+  assert.match(
+    audit.manifest_coverage.published_current_model_photo_to_color_boundary,
+    /qualified visual example only.*Factory-paint identity remains unverified/,
+  );
 });
 
 test("undercovered current models retain only complete, pinned archive rows", async () => {

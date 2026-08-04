@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-04T13:10:00Z",
+  "scope": "Exact-year Wikimedia Commons color-photo leads for current Chevrolet U.S. archive rows. This is a discovery and staging queue, not an archive manifest and not factory-paint evidence.",
+  "policy": {
+    "required_before_manifest_merge": [
+      "VPS crawl preflight passes the project disk floor",
+      "complete Commons API source response retained",
+      "original and preview bytes fetched through the configured crawler host",
+      "Commons SHA-1 and local SHA-256 verified",
+      "complete vehicle visually reviewed",
+      "license and attribution retained",
+      "original and preview copied to the pinned ipadmom GitHub Release",
+      "GitHub-reported byte counts and downloaded SHA-256 verified"
+    ],
+    "factory_paint_boundary": "A Commons caption that prints an exact palette label supports a qualified visual example only. It does not prove original factory finish or a paint code.",
+    "market_boundary": "A non-U.S. vehicle is not linked to the U.S. palette merely because the same color words appear.",
+    "adjacent_year_inference": false
+  },
+  "vps_preflight": {
+    "checked_at": "2026-08-04T13:03:00Z",
+    "host_identifier_retained": false,
+    "free_gib": 32.28,
+    "total_gib": 179.4,
+    "free_percent": 18.0,
+    "minimum_free_gib": 40,
+    "minimum_free_percent": 20,
+    "dedicated_chevrolet_state_present": false,
+    "passed": false,
+    "result": "No original or preview was fetched. The shared VPS is below the project disk floor and has no dedicated Chevrolet crawler state."
+  },
+  "queued_candidates": [
+    {
+      "candidate_key": "2024-trax-cacti-green-front-left",
+      "model_id": "trax",
+      "model_year": 2024,
+      "color_label": "Cacti Green",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg",
+      "metadata_evidence": "2024 Chevrolet Trax 2RS photographed in New Castle, Pennsylvania. Finished in Cacti Green.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 36, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    },
+    {
+      "candidate_key": "2024-trax-summit-white-front-right",
+      "model_id": "trax",
+      "model_year": 2024,
+      "color_label": "Summit White",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg",
+      "metadata_evidence": "2024 Chevrolet Trax LS photographed in New Castle, Pennsylvania. Finished in Summit White.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 36, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    },
+    {
+      "candidate_key": "2024-trax-summit-white-rear-right",
+      "model_id": "trax",
+      "model_year": 2024,
+      "color_label": "Summit White",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg",
+      "metadata_evidence": "2024 Chevrolet Trax LS photographed in New Castle, Pennsylvania. Finished in Summit White.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 36, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    },
+    {
+      "candidate_key": "2024-trax-crimson-metallic-rear-left",
+      "model_id": "trax",
+      "model_year": 2024,
+      "color_label": "Crimson Metallic",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg",
+      "metadata_evidence": "2024 Chevrolet Trax ACTIV photographed in New Castle, Pennsylvania. Finished in Crimson Metallic.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 36, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review",
+      "option_note": "Would become the second view for the already linked Crimson Metallic example."
+    },
+    {
+      "candidate_key": "2024-colorado-nitro-yellow-front-right",
+      "model_id": "colorado",
+      "model_year": 2024,
+      "color_label": "Nitro Yellow Metallic",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg",
+      "metadata_evidence": "2024 Chevrolet Colorado ZR2 photographed in Hermitage, Pennsylvania. Finished in Nitro Yellow Metallic.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 61, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    },
+    {
+      "candidate_key": "2024-colorado-nitro-yellow-rear-right",
+      "model_id": "colorado",
+      "model_year": 2024,
+      "color_label": "Nitro Yellow Metallic",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg",
+      "metadata_evidence": "2024 Chevrolet Colorado ZR2 photographed in Hermitage, Pennsylvania. Finished in Nitro Yellow Metallic.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 61, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    },
+    {
+      "candidate_key": "2024-colorado-summit-white-front-left",
+      "model_id": "colorado",
+      "model_year": 2024,
+      "color_label": "Summit White",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg",
+      "metadata_evidence": "2024 Chevrolet Colorado Z71 photographed in Ellwood City, Pennsylvania. Finished in Summit White.",
+      "palette_source_id": "gm-fleet-guide-us-2024-v3",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "palette_locator": "PDF page 61, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    },
+    {
+      "candidate_key": "2025-traverse-mosaic-black-front-left",
+      "model_id": "traverse",
+      "model_year": 2025,
+      "color_label": "Mosaic Black Metallic",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+      "metadata_evidence": "2025 Chevrolet Traverse Z71 photographed in New Brighton, Pennsylvania. Finished in Mosaic Black Metallic.",
+      "palette_source_id": "gm-fleet-guide-us-2025-r2024-12-11",
+      "palette_source_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf",
+      "palette_locator": "PDF page 78, EXTERIOR COLORS.",
+      "review_state": "metadata_match_pending_vps_staging_and_visual_review"
+    }
+  ],
+  "rejected_or_unresolved": [
+    {
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_1.2_Redline_in_Jinx_Metallic,_front_left,_06-09-2024.jpg",
+      "reason": "Jinx Metallic is not in the reviewed 2024 U.S. Trax palette, and the photographed vehicle is Philippine-market."
+    },
+    {
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_1.2_LT_in_Jinx_Metallic,_front_right,_06-09-2024.jpg",
+      "reason": "Jinx Metallic is not in the reviewed 2024 U.S. Trax palette, and the photographed vehicle is Philippine-market."
+    },
+    {
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trailblazer_1.3_LT_in_Sharkskin_Metallic,_front_right,_06-09-2024.jpg",
+      "reason": "Sharkskin Metallic is not the reviewed U.S. source label Sterling Gray Metallic, and no cross-market paint-code identity is retained."
+    },
+    {
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trailblazer_1.3_Premier_in_Crimson_Metallic,_front_left,_06-09-2024.jpg",
+      "reason": "The exact words match a U.S. palette label, but the photographed vehicle is Philippine-market and no cross-market paint-code identity is retained."
+    }
+  ],
+  "search_gaps": [
+    "No exact-label result was returned for 2024 Equinox, Traverse, Tahoe, Suburban, Silverado, or Blazer in the reviewed search pass.",
+    "No exact-label result was returned for 2025 Equinox, Tahoe, Suburban, Trax, Colorado, Equinox EV, or Blazer EV in the reviewed search pass."
+  ]
+}

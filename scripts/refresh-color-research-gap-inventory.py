@@ -420,6 +420,12 @@ def resolved_audit_state(
         if not listings:
             raise ValueError(f"{evidence_class} source has no published listings")
         return qualified_states[evidence_class]
+    if evidence_class == "reviewed_no_complete_palette":
+        if listings:
+            raise ValueError(
+                "reviewed-no-complete-palette source has published listings"
+            )
+        return "source_reviewed_no_color_chart_found"
     if source and listings:
         if prior_state == "reviewed_qualified_historical_table":
             return prior_state

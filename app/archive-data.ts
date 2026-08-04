@@ -5,6 +5,9 @@ import tahoe2001to2007Audit from "../data/audits/tahoe-2001-2007.json";
 import suburban1969to1976Audit from "../data/audits/suburban-1969-1976.json";
 import suburban2000to2007Audit from "../data/audits/suburban-2000-2007.json";
 import suburbanBrochurePaletteAudit from "../data/audits/suburban-brochure-palettes-1982-1989-1993.json";
+import corvette1963to1972Audit from "../data/audits/corvette-official-palettes-1963-1972.json";
+import monteCarlo1970to1979Audit from "../data/audits/monte-carlo-official-palettes-1970-1979.json";
+import pSeries1969to1978Audit from "../data/audits/p-series-official-palettes-1969-1978.json";
 import modernColorSourceData from "../data/sources/modern-chevrolet-color-source-candidates.json";
 import specialtyColorSourceData from "../data/sources/specialty-color-source-candidates.json";
 
@@ -94,7 +97,8 @@ export type YearSourceCitation = {
     | "qualified_palette_union"
     | "specialty_palette_subset"
     | "qualified_historical_table"
-    | "qualified_exact_program_palette";
+    | "qualified_exact_program_palette"
+    | "reviewed_no_complete_palette";
   artifactSha256?: string;
   artifactBytes?: number;
   pdfPageCount?: number;
@@ -996,6 +1000,386 @@ function buildExactNameTimeline(
   }
   return [...grouped.values()];
 }
+
+type OfficialPaletteSource = {
+  source_id: string;
+  model_year: number;
+  title: string;
+  publisher: string;
+  source_type: string;
+  url: string;
+  archive_url: string | null;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count: number;
+  reviewed_pages: Array<{
+    pdf_page: number;
+    printed_page: string | number | null;
+    section: string;
+    visual_verification: string;
+  }>;
+  limitations: string[];
+};
+
+type OfficialPaletteColor = {
+  order: number;
+  label: string;
+  source_label_raw: string;
+  factory_code: string | null;
+  factory_code_status: string;
+  component_role: string;
+  combination_code: string | null;
+  restrictions: string[];
+};
+
+type OfficialPaletteProgram = {
+  program_id: string;
+  program_label: string;
+  palette_kind: string;
+  source_scope: string;
+  complete: boolean;
+  colors: OfficialPaletteColor[];
+};
+
+type OfficialPaletteYear = {
+  model_year: number;
+  audit_status: string;
+  complete_regular_palette: boolean;
+  source_ids: string[];
+  programs: OfficialPaletteProgram[];
+  limitations: string[];
+};
+
+type OfficialPaletteAudit = {
+  generated_on: string;
+  sources: OfficialPaletteSource[];
+  years: OfficialPaletteYear[];
+  unresolved: unknown[];
+};
+
+type OfficialPaletteEra = {
+  start: number;
+  end: number;
+  preferredPrograms?: Record<string, string>;
+};
+
+function officialAuditIssueDescriptions(
+  audit: OfficialPaletteAudit,
+  modelYear: number,
+) {
+  return audit.unresolved.flatMap((issue) => {
+    if (
+      issue &&
+      typeof issue === "object" &&
+      "model_year" in issue &&
+      Number(issue.model_year) === modelYear &&
+      "description" in issue &&
+      typeof issue.description === "string"
+    ) {
+      return [issue.description];
+    }
+    return [];
+  });
+}
+
+function officialProgramForYear(
+  record: OfficialPaletteYear,
+  preferredProgram?: string,
+) {
+  const regularPrograms = record.programs.filter(
+    (program) =>
+      ["regular_body_paint", "official-exterior-color-chart"].includes(
+        program.palette_kind,
+      ) && program.complete,
+  );
+  const selected = preferredProgram
+    ? regularPrograms.find((program) => program.program_id === preferredProgram)
+    : regularPrograms[0];
+  if (!record.complete_regular_palette || !selected) {
+    throw new Error(
+      `Missing complete regular body-paint program for ${record.model_year}`,
+    );
+  }
+  return selected;
+}
+
+function officialPaletteSource(
+  audit: OfficialPaletteAudit,
+  record: OfficialPaletteYear,
+  program: OfficialPaletteProgram,
+): YearSource {
+  const source = audit.sources.find(
+    (item) => item.source_id === record.source_ids[0],
+  );
+  if (!source) {
+    throw new Error(`Missing official source for ${record.model_year}`);
+  }
+  const reviewedPages = source.reviewed_pages
+    .map((page) => {
+      const printed =
+        page.printed_page === null ? "" : `, printed ${page.printed_page}`;
+      return `PDF p. ${page.pdf_page}${printed}: ${page.section}`;
+    })
+    .join("; ");
+  return {
+    name: source.title,
+    chart: program.program_label,
+    locator: `${program.source_scope} Reviewed pages: ${reviewedPages}`,
+    revision: `Exact ${record.model_year} model-year publication; visual audit recorded ${audit.generated_on}`,
+    url: source.url,
+    sourceId: source.source_id,
+    sourceType: source.source_type,
+    publisher: source.publisher,
+    contentType: "application/pdf",
+    documentAuthority: "official_manufacturer_document",
+    retrievalHostType: "official_live",
+    ...(source.archive_url
+      ? { archiveUrl: source.archive_url, officialUrl: source.url }
+      : {}),
+    evidenceClass: "qualified_exact_program_palette",
+    artifactSha256: source.artifact_sha256,
+    artifactBytes: source.artifact_bytes,
+    pdfPageCount: source.pdf_page_count,
+    availabilityScope: program.source_scope,
+    limitations: [
+      ...source.limitations,
+      ...record.limitations,
+      ...officialAuditIssueDescriptions(audit, record.model_year),
+    ],
+  };
+}
+
+function buildOfficialPaletteColors(
+  modelId: string,
+  records: Array<{
+    year: string;
+    sourceId: string;
+    colors: OfficialPaletteColor[];
+  }>,
+): ArchiveColor[] {
+  const grouped = new Map<string, ArchiveColor>();
+  const rowCodes = new Map<string, string[]>();
+  const rowNotes = new Map<string, string[]>();
+  for (const record of records) {
+    for (const color of record.colors) {
+      const displayCode = color.factory_code ?? "not printed";
+      const noteParts = [
+        color.source_label_raw !== color.label
+          ? `Source literal: ${color.source_label_raw}.`
+          : null,
+        ...color.restrictions,
+        "Interpretive screen swatch only; it is not sampled factory paint evidence.",
+      ].filter((value): value is string => Boolean(value));
+      const availability: Availability = {
+        state: "listed",
+        label: color.label,
+        code: displayCode,
+        factoryCode: color.factory_code,
+        factoryCodeStatus: color.factory_code ? "printed" : "not printed",
+        ...(color.restrictions.length
+          ? { restriction: color.restrictions.join(" ") }
+          : {}),
+        sourceIds: [record.sourceId],
+      };
+      const existing = grouped.get(color.label);
+      if (existing) {
+        existing.availability[record.year] = availability;
+        const codes = rowCodes.get(color.label)!;
+        if (!codes.includes(displayCode)) {
+          codes.push(displayCode);
+          existing.rowCode = codes.join("; ");
+        }
+        const notes = rowNotes.get(color.label)!;
+        for (const note of noteParts) {
+          if (!notes.includes(note)) notes.push(note);
+        }
+        existing.note = notes.join(" ");
+        continue;
+      }
+      rowCodes.set(color.label, [displayCode]);
+      rowNotes.set(color.label, [...noteParts]);
+      grouped.set(color.label, {
+        id: `${modelId}-${archiveColorId(color.label)}-${record.year}-official`,
+        name: color.label,
+        swatch: interpretiveArchiveSwatch(color.label),
+        rowCode: displayCode,
+        note: noteParts.join(" "),
+        availability: { [record.year]: availability },
+      });
+    }
+  }
+  return [...grouped.values()];
+}
+
+function buildOfficialPaletteGenerations(
+  modelId: string,
+  rawAudit: unknown,
+  eras: OfficialPaletteEra[],
+) {
+  const audit = rawAudit as OfficialPaletteAudit;
+  return eras.map((era) => {
+    const years = audit.years.filter(
+      (record) =>
+        record.model_year >= era.start && record.model_year <= era.end,
+    );
+    const selected = years.map((record) => ({
+      record,
+      program: officialProgramForYear(
+        record,
+        era.preferredPrograms?.[String(record.model_year)],
+      ),
+    }));
+    const generationYears = selected.map(({ record }) => String(record.model_year));
+    return {
+      id: `${modelId}-${era.start}-${era.end}-official-regular-palettes`,
+      label: `${era.start}-${era.end} official regular palettes`,
+      range:
+        era.start === era.end ? String(era.start) : `${era.start}–${era.end}`,
+      years: generationYears,
+      listingCount: selected.reduce(
+        (total, { program }) => total + program.colors.length,
+        0,
+      ),
+      revisionNote:
+        "Complete regular body-paint programs were transcribed from exact model-year official kits. Non-body components and alternate official tables remain separate in the audit; source conflicts are retained in the notes and are never silently resolved.",
+      sources: Object.fromEntries(
+        selected.map(({ record, program }) => [
+          String(record.model_year),
+          officialPaletteSource(audit, record, program),
+        ]),
+      ),
+      colors: buildOfficialPaletteColors(
+        modelId,
+        selected.map(({ record, program }) => ({
+          year: String(record.model_year),
+          sourceId: record.source_ids[0],
+          colors: program.colors,
+        })),
+      ),
+    } satisfies Generation;
+  });
+}
+
+const corvette1963To1972Generations = buildOfficialPaletteGenerations(
+  "corvette",
+  corvette1963to1972Audit,
+  [
+    { start: 1963, end: 1967 },
+    {
+      start: 1968,
+      end: 1972,
+      preferredPrograms: {
+        "1969": "regular-body-paint-color-and-trim",
+        "1972": "regular-body-paint-color-and-trim",
+      },
+    },
+  ],
+);
+
+const monteCarlo1970To1979Generations = buildOfficialPaletteGenerations(
+  "monte-carlo",
+  monteCarlo1970to1979Audit,
+  [
+    { start: 1970, end: 1972 },
+    { start: 1973, end: 1977 },
+    { start: 1978, end: 1979 },
+  ],
+);
+
+function officialPartialEvidenceSource(
+  audit: OfficialPaletteAudit,
+  record: OfficialPaletteYear,
+): YearSource {
+  const program = record.programs[0];
+  const sources = record.source_ids.map((sourceId) => {
+    const source = audit.sources.find((item) => item.source_id === sourceId);
+    if (!source) {
+      throw new Error(`Missing official source ${sourceId} for ${record.model_year}`);
+    }
+    const reviewedPages = source.reviewed_pages
+      .map((page) => `PDF p. ${page.pdf_page}: ${page.section}`)
+      .join("; ");
+    return {
+      name: source.title,
+      chart: program.program_label,
+      locator: `${program.source_scope} Reviewed pages: ${reviewedPages}`,
+      revision: `Exact ${record.model_year} evidence; visual audit recorded ${audit.generated_on}`,
+      url: source.url,
+      sourceId: source.source_id,
+      sourceType: source.source_type,
+      publisher: source.publisher,
+      contentType: "application/pdf",
+      documentAuthority: "official_manufacturer_document" as const,
+      retrievalHostType: "official_live" as const,
+      ...(source.archive_url
+        ? { archiveUrl: source.archive_url, officialUrl: source.url }
+        : {}),
+      evidenceClass: "reviewed_no_complete_palette" as const,
+      artifactSha256: source.artifact_sha256,
+      artifactBytes: source.artifact_bytes,
+      pdfPageCount: source.pdf_page_count,
+      availabilityScope: program.source_scope,
+      limitations: [...source.limitations, ...record.limitations],
+    } satisfies YearSourceCitation;
+  });
+  return {
+    ...sources[0],
+    ...(sources.length > 1 ? { supportingSources: sources.slice(1) } : {}),
+  };
+}
+
+function buildOfficialPartialEvidenceGeneration(
+  modelId: string,
+  rawAudit: unknown,
+  start: number,
+  end: number,
+): Generation {
+  const audit = rawAudit as OfficialPaletteAudit;
+  const records = audit.years.filter(
+    (record) =>
+      record.model_year >= start &&
+      record.model_year <= end &&
+      !record.complete_regular_palette,
+  );
+  const years = records.map((record) => String(record.model_year));
+  return {
+    id: `${modelId}-${start}-${end}-official-partial-evidence`,
+    label: `${start}-${end} official evidence, no complete color chart`,
+    range: start === end ? String(start) : `${start}–${end}`,
+    years,
+    listingCount: 0,
+    revisionNote:
+      "Official model-year pages were reviewed, but they do not contain a complete named exterior-color chart. Finish-option and chassis/component evidence remains in the audit and is not promoted to body-color availability.",
+    sources: Object.fromEntries(
+      records.map((record) => [
+        String(record.model_year),
+        officialPartialEvidenceSource(audit, record),
+      ]),
+    ),
+    colors: [],
+  };
+}
+
+const pSeries1969To1977Evidence = buildOfficialPartialEvidenceGeneration(
+  "p-series-step-van",
+  pSeries1969to1978Audit,
+  1969,
+  1977,
+);
+
+const pSeries1978Generation = buildOfficialPaletteGenerations(
+  "p-series-step-van",
+  pSeries1969to1978Audit,
+  [
+    {
+      start: 1978,
+      end: 1978,
+      preferredPrograms: {
+        "1978": "1978-stepvan-solid-color-chart",
+      },
+    },
+  ],
+)[0];
 
 type TahoeAuditColor = {
   name: string;
@@ -4420,10 +4804,22 @@ const auditedModels: ArchiveModel[] = [
     generations: [],
   },
   {
-    id: "corvette", name: "Corvette", vehicleClass: "sports car", era: "1953–1962 source series", status: "9 official tables audited",
+    id: "corvette", name: "Corvette", vehicleClass: "sports car", era: "1953–1972 source series", status: "19 exact model-year color tables audited",
     pendingCopy: "The dedicated 1953 GM kit contains no exterior-color table. That year remains unverified while additional official documentation is sought.",
     current: true,
-    generations: [earlyCorvetteTables],
+    generations: [earlyCorvetteTables, ...corvette1963To1972Generations],
+  },
+  {
+    id: "monte-carlo", name: "Monte Carlo", vehicleClass: "personal luxury coupe", era: "1970–1979 source series", status: "10 complete official regular palettes verified (1970–1979)",
+    pendingCopy: "Every 1970 through 1979 regular body-paint palette is source-linked. Later Monte Carlo model years remain in the research queue; non-body components and paint combinations stay in the normalized audit rather than being presented as ordinary body colors.",
+    current: false,
+    generations: monteCarlo1970To1979Generations,
+  },
+  {
+    id: "p-series-step-van", name: "P-Series / Step-Van", vehicleClass: "commercial walk-in van and stripped chassis", era: "1969–1978 exact audit tranche", status: "1978 complete regular Step-Van palette verified; 1969–1977 official evidence reviewed without a complete named color chart",
+    pendingCopy: "The exact 1969 through 1977 sources preserve Union City finish options and chassis or component finishes, but they do not close a named body-color palette. Forest Service and USDA codes are not bridged into Chevrolet availability.",
+    current: false,
+    generations: [pSeries1969To1977Evidence, pSeries1978Generation],
   },
   {
     id: "colorado", name: "Colorado", vehicleClass: "midsize pickup", era: "Modern truck", status: "Source inventory in progress",

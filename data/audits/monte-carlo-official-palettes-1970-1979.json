@@ -1,0 +1,4336 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-08-04",
+  "model": {
+    "id": "monte-carlo",
+    "name": "Chevrolet Monte Carlo",
+    "years": [
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-1970-chevrolet-monte-carlo",
+      "model_year": 1970,
+      "title": "1970 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "d02bfad011cce89e7723bb2d983a9640848cc896e9ffdae531caa9bf54554d51",
+      "artifact_bytes": 3292911,
+      "pdf_page_count": 109,
+      "reviewed_pages": [
+        {
+          "pdf_page": 16,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, revised March 1970",
+          "visual_verification": "Rendered at high resolution and visually checked against the body-color, two-tone, and vinyl-roof columns."
+        },
+        {
+          "pdf_page": 78,
+          "printed_page": "Section III-Page 17",
+          "section": "Monte Carlo interior and exterior selection chart, November 3, 1969",
+          "visual_verification": "Rendered at high resolution and visually checked for the complete paint list, combination codes, roof codes, and ordering note."
+        }
+      ],
+      "limitations": [
+        "The price-schedule heading says coupe and convertible, but the kit otherwise documents the Monte Carlo coupe; no convertible availability is inferred."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1971-chevrolet-monte-carlo",
+      "model_year": 1971,
+      "title": "1971 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "9f6794e9d21eab432160c876c35353b93c7ecfaa367688b106a6e852c402351a",
+      "artifact_bytes": 4174076,
+      "pdf_page_count": 111,
+      "reviewed_pages": [
+        {
+          "pdf_page": 44,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, September 1970",
+          "visual_verification": "Rendered at high resolution and visually checked for all paint and two-tone entries."
+        },
+        {
+          "pdf_page": 110,
+          "printed_page": "Section III-Page 15",
+          "section": "Monte Carlo interior and exterior selection chart, March 1, 1971",
+          "visual_verification": "Rendered at high resolution and visually checked for alternate literal labels, roof codes, and restrictions."
+        }
+      ],
+      "limitations": [
+        "The body chart and price schedule use different word order for some identical coded colors; both literal forms are retained in the audit notes."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1972-chevrolet-monte-carlo",
+      "model_year": 1972,
+      "title": "1972 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "9a1a5bcef04bd61a0b2b632301d46af21b95f5dc576a00d7b1dc80fdd830fc6f",
+      "artifact_bytes": 2948760,
+      "pdf_page_count": 97,
+      "reviewed_pages": [
+        {
+          "pdf_page": 11,
+          "printed_page": "10/Monte Carlo",
+          "section": "Monte Carlo Color & Trim",
+          "visual_verification": "Rendered at high resolution and visually checked for the complete exterior, two-tone, and vinyl-roof selections."
+        },
+        {
+          "pdf_page": 18,
+          "printed_page": null,
+          "section": "Chevrolet Motor Vehicle Price Schedule, December 1, 1971",
+          "visual_verification": "Rendered at high resolution and visually checked as an independent coded-palette corroboration."
+        },
+        {
+          "pdf_page": 32,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, revised December 1971",
+          "visual_verification": "Rendered at high resolution and visually checked for the complete coded body palette and two-tones."
+        },
+        {
+          "pdf_page": 33,
+          "printed_page": "BODY-4",
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the roof compatibility matrix."
+        }
+      ],
+      "limitations": [
+        "The sales, price-schedule, and engineering charts duplicate the closed palette with slightly different formatting; none is treated as an additional palette."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1973-chevrolet-monte-carlo",
+      "model_year": 1973,
+      "title": "1973 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "e1dc6515c3db8cde2990f10660720eba4f79be5e2f98be0c4844c5c6c544d705",
+      "artifact_bytes": 2887269,
+      "pdf_page_count": 109,
+      "reviewed_pages": [
+        {
+          "pdf_page": 22,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, September 1972",
+          "visual_verification": "Rendered at high resolution and visually checked for the closed 16-color palette and no-two-tones note."
+        },
+        {
+          "pdf_page": 23,
+          "printed_page": "BODY-4",
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the seven roof-cover columns."
+        },
+        {
+          "pdf_page": 56,
+          "printed_page": null,
+          "section": "Price Schedule exterior and roof selections, February 2, 1973",
+          "visual_verification": "Rendered at high resolution and visually checked for literal sales labels, roof codes, and pin-stripe restrictions."
+        },
+        {
+          "pdf_page": 77,
+          "printed_page": "16/Monte Carlo",
+          "section": "Monte Carlo color and trim selections",
+          "visual_verification": "Rendered at high resolution and visually checked as a duplicate sales-chart corroboration."
+        }
+      ],
+      "limitations": [
+        "Code 60 is called Yellow Orange Metallic on BODY-3 and Copper, Light (Metallic) in the price schedule; the disagreement is preserved and not silently normalized."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1974-chevrolet-monte-carlo",
+      "model_year": 1974,
+      "title": "1974 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "cbf4f7e7fe3ed0110aa4faf3d89cc8ab9b87924a5628a4e973e96eb7e215d929",
+      "artifact_bytes": 2879669,
+      "pdf_page_count": 105,
+      "reviewed_pages": [
+        {
+          "pdf_page": 24,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, September 1973",
+          "visual_verification": "Rendered at high resolution and visually checked for the closed 16-color palette and no-two-tone note."
+        },
+        {
+          "pdf_page": 25,
+          "printed_page": "BODY-4",
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the roof compatibility matrix."
+        },
+        {
+          "pdf_page": 68,
+          "printed_page": null,
+          "section": "Monte Carlo order and sales color chart",
+          "visual_verification": "Rendered at high resolution and visually checked for alternate sales labels, roof codes, and Landau pin-stripe codes."
+        }
+      ],
+      "limitations": [
+        "The sales chart calls code 55 Sandstone while BODY-3 calls it Colonial Gold; both official literals are preserved."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1975-chevrolet-monte-carlo",
+      "model_year": 1975,
+      "title": "1975 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "57c75e86b7b754d0d9a1d425b65693140d4b01fefd14782196930c50485f2700",
+      "artifact_bytes": 2555859,
+      "pdf_page_count": 95,
+      "reviewed_pages": [
+        {
+          "pdf_page": 24,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, revised March 1975",
+          "visual_verification": "Manually rendered at high resolution, rotated for reading, and visually checked for all 16 coded exterior colors."
+        },
+        {
+          "pdf_page": 25,
+          "printed_page": "BODY-4",
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for all seven roof-cover columns and compatibility marks."
+        },
+        {
+          "pdf_page": 26,
+          "printed_page": "BODY-5",
+          "section": "Monte Carlo Landau color, stripe, molding, and vinyl-top application",
+          "visual_verification": "Rendered at high resolution and visually checked for the component-role matrix; component colors were kept separate from body paints."
+        }
+      ],
+      "limitations": [
+        "The roof chart prints no roof ordering codes, so its roof-color factory_code values remain null.",
+        "The Landau application matrix is normalized as component palettes and restrictions, not as additional exterior body colors."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1976-chevrolet-monte-carlo",
+      "model_year": 1976,
+      "title": "1976 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "a37a1ad6bbee0ef0a1588bf2560da1b716cdbc43b1152e93765dbbd927d74633",
+      "artifact_bytes": 2912195,
+      "pdf_page_count": 105,
+      "reviewed_pages": [
+        {
+          "pdf_page": 24,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, September 1975",
+          "visual_verification": "Rendered at high resolution and visually checked for the closed 14-color body palette."
+        },
+        {
+          "pdf_page": 25,
+          "printed_page": "BODY-4",
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for all seven roof-cover columns."
+        },
+        {
+          "pdf_page": 26,
+          "printed_page": "BODY-5",
+          "section": "Monte Carlo Landau color, stripe, and vinyl-top application",
+          "visual_verification": "Rendered at high resolution and visually checked for stripe codes and the roof-specific application grid."
+        },
+        {
+          "pdf_page": 97,
+          "printed_page": "1976 Dealer Order Guide, Monte Carlo Landau, Page 2",
+          "section": "Color and trim selection",
+          "visual_verification": "Rendered at high resolution and visually checked for the sales labels, roof codes, and stripe application."
+        },
+        {
+          "pdf_page": 99,
+          "printed_page": "1976 Dealer Order Guide, Monte Carlo, Page 4",
+          "section": "Color and trim selection",
+          "visual_verification": "Rendered at high resolution and visually checked as a closed regular-palette corroboration."
+        },
+        {
+          "pdf_page": 101,
+          "printed_page": null,
+          "section": "Fashion-Tone Styling, revised April 28, 1976",
+          "visual_verification": "Rendered at high resolution and visually checked for every base, accent, stripe, and vinyl-roof combination."
+        }
+      ],
+      "limitations": [
+        "Fashion-Tone accent codes are component codes and are not promoted to the regular 14-color body palette."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1977-chevrolet-monte-carlo",
+      "model_year": 1977,
+      "title": "1977 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "c630e124f0f24b527385eb1874a6c08c7f73066e726e66034b44943f742512f2",
+      "artifact_bytes": 2634326,
+      "pdf_page_count": 99,
+      "reviewed_pages": [
+        {
+          "pdf_page": 24,
+          "printed_page": "BODY-3",
+          "section": "Exterior-Interior Colors, September 1976",
+          "visual_verification": "Rendered at high resolution and visually checked for the closed 14-color body palette."
+        },
+        {
+          "pdf_page": 25,
+          "printed_page": "BODY-4",
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the seven roof-cover columns."
+        },
+        {
+          "pdf_page": 90,
+          "printed_page": null,
+          "section": "Fabric, paint, and vinyl roof selector",
+          "visual_verification": "Rendered at high resolution and visually checked for literal sales labels, roof recommendations, and Fashion-Tone rows."
+        }
+      ],
+      "limitations": [
+        "The selector distinguishes recommended from acceptable roof combinations; that distinction is preserved in restrictions."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1978-chevrolet-monte-carlo",
+      "model_year": 1978,
+      "title": "1978 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "11859f2cb060491da6990f7456a3e92618d125a22f7028c0a2ea0e6dd3d0a5b6",
+      "artifact_bytes": 8658198,
+      "pdf_page_count": 132,
+      "reviewed_pages": [
+        {
+          "pdf_page": 30,
+          "printed_page": null,
+          "section": "Exterior colors and vinyl top combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the seven roof-cover columns and compatibility rows."
+        },
+        {
+          "pdf_page": 98,
+          "printed_page": null,
+          "section": "Dealer-order fabric, paint, and vinyl-roof selector",
+          "visual_verification": "Rendered at high resolution and visually checked for the closed 14-color palette and roof codes."
+        },
+        {
+          "pdf_page": 110,
+          "printed_page": "10/Monte Carlo",
+          "section": "1978 Monte Carlo Color Selections",
+          "visual_verification": "Rendered at high resolution and visually checked for all 14 illustrated paint names and codes."
+        },
+        {
+          "pdf_page": 111,
+          "printed_page": "11/Monte Carlo",
+          "section": "Color and Trim Combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the exterior-color rows and vinyl-roof carrier colors; interior columns were not promoted."
+        },
+        {
+          "pdf_page": 112,
+          "printed_page": "12/Monte Carlo",
+          "section": "Exterior Decor",
+          "visual_verification": "Rendered at high resolution and visually checked for roof-specific and no-roof body-side molding and pin-stripe matrices."
+        }
+      ],
+      "limitations": [
+        "The styling matrix is component evidence, not evidence of additional standalone body paints."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1979-chevrolet-monte-carlo",
+      "model_year": 1979,
+      "title": "1979 Chevrolet Monte Carlo Vehicle Information Kit",
+      "publisher": "Chevrolet Motor Division, General Motors Corporation",
+      "source_type": "official_vehicle_information_kit_pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Monte-Carlo.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
+      "artifact_sha256": "d862313a154d3d0fac8a8f4c3951805e8d8a79a1b1657d95e97b2989d22eed73",
+      "artifact_bytes": 6986152,
+      "pdf_page_count": 143,
+      "reviewed_pages": [
+        {
+          "pdf_page": 20,
+          "printed_page": "Monte Carlo/11",
+          "section": "Exterior Decor, vinyl roof covers",
+          "visual_verification": "Rendered at high resolution and visually checked for the seven roof-cover colors, codes, and exact compatible body colors."
+        },
+        {
+          "pdf_page": 22,
+          "printed_page": "Monte Carlo/13",
+          "section": "Vinyl roof, molding, pin striping, and custom two-tone colors",
+          "visual_verification": "Rendered at high resolution and visually checked for component roles and D84 rows."
+        },
+        {
+          "pdf_page": 32,
+          "printed_page": "24/Monte Carlo",
+          "section": "Color and Trim Combinations",
+          "visual_verification": "Rendered at high resolution and visually checked for the closed 14-color palette and six D84 descriptions; interior columns were excluded."
+        },
+        {
+          "pdf_page": 34,
+          "printed_page": "Monte Carlo/26",
+          "section": "1979 Monte Carlo Exterior Colors",
+          "visual_verification": "Rendered at high resolution and visually checked for every illustrated regular color, all six D84 combinations, and roof swatches."
+        },
+        {
+          "pdf_page": 37,
+          "printed_page": "1979 Dealer Order Guide, Monte Carlo Landau, Page 2",
+          "section": "Vinyl roof and color selection",
+          "visual_verification": "Rendered at high resolution and visually checked for the revised April 16, 1979 roof and paint tables."
+        },
+        {
+          "pdf_page": 39,
+          "printed_page": "1979 Dealer Order Guide, Monte Carlo, Page 4",
+          "section": "Vinyl roof and color selection",
+          "visual_verification": "Rendered at high resolution and visually checked for the regular and six D84 order rows."
+        },
+        {
+          "pdf_page": 60,
+          "printed_page": "BODY-3",
+          "section": "Exterior colors and vinyl roof combinations, October 1978",
+          "visual_verification": "Rendered at high resolution and visually checked for the engineering roof compatibility table."
+        },
+        {
+          "pdf_page": 62,
+          "printed_page": "BODY-6",
+          "section": "Custom two-tone color combinations, October 1978",
+          "visual_verification": "Rendered at high resolution and visually checked for exact body, accent, stripe, molding, and optional roof applications."
+        }
+      ],
+      "limitations": [
+        "The D84 program includes accent colors such as Medium Blue Metallic code 85 and Gray Metallic code 16 that are not regular single-color body choices; they remain components only."
+      ]
+    }
+  ],
+  "years": [
+    {
+      "model_year": 1970,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1970-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p16 BODY-3, corroborated by p78 price schedule",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Tuxedo Black",
+              "source_label_raw": "Tuxedo Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Classic White",
+              "source_label_raw": "Classic White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Cortez Silver",
+              "source_label_raw": "Cortez Silver",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Cranberry Red",
+              "source_label_raw": "Cranberry Red",
+              "factory_code": "75",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Black Cherry",
+              "source_label_raw": "Black Cherry",
+              "factory_code": "78",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Champagne Gold",
+              "source_label_raw": "Champagne Gold",
+              "factory_code": "55",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Autumn Gold",
+              "source_label_raw": "Autumn Gold",
+              "factory_code": "58",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Gobi Beige",
+              "source_label_raw": "Gobi Beige",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Desert Sand",
+              "source_label_raw": "Desert Sand",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Green Mist",
+              "source_label_raw": "Green Mist",
+              "factory_code": "45",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Forest Green",
+              "source_label_raw": "Forest Green",
+              "factory_code": "48",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 12,
+              "label": "Misty Turquoise",
+              "source_label_raw": "Misty Turquoise",
+              "factory_code": "34",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Astro Blue",
+              "source_label_raw": "Astro Blue",
+              "factory_code": "25",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Fathom Blue",
+              "source_label_raw": "Fathom Blue",
+              "factory_code": "28",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 15,
+              "label": "Shadow Gray",
+              "source_label_raw": "Shadow Gray",
+              "factory_code": "17",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "factory_two_tone",
+          "program_label": "Factory two-tone body-paint combinations",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF pp16 and 78",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Astro Blue / Classic White",
+              "source_label_raw": "Astro Blue lower; Classic White upper",
+              "factory_code": "25-10",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "25-10",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Misty Turquoise / Classic White",
+              "source_label_raw": "Misty Turquoise lower; Classic White upper",
+              "factory_code": "34-10",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "34-10",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Astro Blue / Fathom Blue",
+              "source_label_raw": "Astro Blue lower; Fathom Blue upper",
+              "factory_code": "25-28",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "25-28",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Fathom Blue / Astro Blue",
+              "source_label_raw": "Fathom Blue lower; Astro Blue upper",
+              "factory_code": "28-25",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "28-25",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Champagne Gold / Classic White",
+              "source_label_raw": "Champagne Gold lower; Classic White upper",
+              "factory_code": "55-10",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "55-10",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Autumn Gold / Classic White",
+              "source_label_raw": "Autumn Gold lower; Classic White upper",
+              "factory_code": "58-10",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "58-10",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Desert Sand / Classic White",
+              "source_label_raw": "Desert Sand lower; Classic White upper",
+              "factory_code": "63-10",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "63-10",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF p78 price schedule",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Dark Blue",
+              "source_label_raw": "Blue dark",
+              "factory_code": "CC",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Astro Blue, Fathom Blue, Cortez Silver, or Classic White."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Dark Gold",
+              "source_label_raw": "Gold dark",
+              "factory_code": "HH",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Champagne Gold, Autumn Gold, or Gobi Beige."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Green",
+              "source_label_raw": "Green dark",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Green Mist, Forest Green, or Classic White."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The regular palette is complete for model year 1970, but this does not establish unlisted fleet or special-order colors.",
+        "The price schedule permits a notation for nonrecommended solid exterior and interior pairings, but expressly excludes vinyl-roof and two-tone overrides."
+      ]
+    },
+    {
+      "model_year": 1971,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1971-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p44 BODY-3, corroborated by p110 price schedule",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Antique White",
+              "source_label_raw": "Antique White",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Nevada Silver",
+              "source_label_raw": "Nevada Silver",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Tuxedo Black",
+              "source_label_raw": "Tuxedo Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Ascot Blue",
+              "source_label_raw": "Ascot Blue",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Mulsanne Blue",
+              "source_label_raw": "Mulsanne Blue",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Cottonwood Green",
+              "source_label_raw": "Cottonwood Green",
+              "factory_code": "42",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Lime Green",
+              "source_label_raw": "Lime Green",
+              "factory_code": "43",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Antique Green",
+              "source_label_raw": "Antique Green",
+              "factory_code": "49",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Sunflower Yellow",
+              "source_label_raw": "Sunflower Yellow",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Placer Gold",
+              "source_label_raw": "Placer Gold",
+              "factory_code": "53",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Sandalwood",
+              "source_label_raw": "Sandalwood",
+              "factory_code": "61",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 12,
+              "label": "Burnt Orange",
+              "source_label_raw": "Burnt Orange",
+              "factory_code": "62",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Classic Copper",
+              "source_label_raw": "Classic Copper",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Cranberry Red",
+              "source_label_raw": "Cranberry Red",
+              "factory_code": "75",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 15,
+              "label": "Rosewood Metallic",
+              "source_label_raw": "Rosewood Metallic",
+              "factory_code": "78",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "factory_two_tone",
+          "program_label": "Factory two-tone body-paint combinations",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF pp44 and 110",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Mulsanne Blue / Antique White",
+              "source_label_raw": "Mulsanne Blue lower; Antique White upper",
+              "factory_code": "26-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "26-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Lime Green / Antique White",
+              "source_label_raw": "Lime Green lower; Antique White upper",
+              "factory_code": "43-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "43-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Antique Green / Antique White",
+              "source_label_raw": "Antique Green lower; Antique White upper",
+              "factory_code": "49-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "49-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Placer Gold / Antique White",
+              "source_label_raw": "Placer Gold lower; Antique White upper",
+              "factory_code": "53-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "53-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Sandalwood / Antique White",
+              "source_label_raw": "Sandalwood lower; Antique White upper",
+              "factory_code": "61-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "61-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Burnt Orange / Antique White",
+              "source_label_raw": "Burnt Orange lower; Antique White upper",
+              "factory_code": "62-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "62-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF p110 price schedule",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Dark Blue",
+              "source_label_raw": "Blue dark",
+              "factory_code": "CC",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Black, Blue, Silver, or White exterior colors."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Dark Brown",
+              "source_label_raw": "Brown dark",
+              "factory_code": "FF",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Copper, Orange, Rosewood, Sandalwood, or White exterior colors."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Green",
+              "source_label_raw": "Green dark",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Black, Green, or White exterior colors."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The regular palette is complete for model year 1971, but this does not establish unlisted fleet or special-order colors.",
+        "The price schedule permits a notation for nonrecommended solid exterior and interior pairings, but expressly excludes vinyl-roof and two-tone overrides."
+      ]
+    },
+    {
+      "model_year": 1972,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1972-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p11 Monte Carlo Color & Trim, corroborated by pp18 and 32",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Ascot Blue",
+              "source_label_raw": "Ascot Blue",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Mulsanne Blue",
+              "source_label_raw": "Mulsanne Blue",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Midnight Bronze",
+              "source_label_raw": "Midnight Bronze",
+              "factory_code": "68",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Golden Brown",
+              "source_label_raw": "Golden Brown",
+              "factory_code": "57",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Mohave Gold",
+              "source_label_raw": "Mohave Gold",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Placer Gold",
+              "source_label_raw": "Placer Gold",
+              "factory_code": "53",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Gulf Green",
+              "source_label_raw": "Gulf Green",
+              "factory_code": "43",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Sequoia Green",
+              "source_label_raw": "Sequoia Green",
+              "factory_code": "48",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Spring Green",
+              "source_label_raw": "Spring Green",
+              "factory_code": "36",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Orange Flame",
+              "source_label_raw": "Orange Flame",
+              "factory_code": "65",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Cranberry Red",
+              "source_label_raw": "Cranberry Red",
+              "factory_code": "75",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 12,
+              "label": "Pewter Silver",
+              "source_label_raw": "Pewter Silver",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Covert Tan",
+              "source_label_raw": "Covert Tan",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Antique White",
+              "source_label_raw": "Antique White",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 15,
+              "label": "Cream Yellow",
+              "source_label_raw": "Cream Yellow",
+              "factory_code": "56",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "factory_two_tone",
+          "program_label": "Factory two-tone body-paint combinations",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF pp11, 18, and 32",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Mulsanne Blue / Antique White",
+              "source_label_raw": "Mulsanne Blue lower; Antique White upper",
+              "factory_code": "26-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "26-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Golden Brown / Antique White",
+              "source_label_raw": "Golden Brown lower; Antique White upper",
+              "factory_code": "57-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "57-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Mohave Gold / Antique White",
+              "source_label_raw": "Mohave Gold lower; Antique White upper",
+              "factory_code": "63-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "63-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Gulf Green / Antique White",
+              "source_label_raw": "Gulf Green lower; Antique White upper",
+              "factory_code": "43-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "43-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Sequoia Green / Antique White",
+              "source_label_raw": "Sequoia Green lower; Antique White upper",
+              "factory_code": "48-11",
+              "factory_code_status": "printed",
+              "component_role": "lower_and_upper_exterior_paint",
+              "combination_code": "48-11",
+              "restrictions": [
+                "Only the upper and lower combination shown is approved."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp11 and 33",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Covert",
+              "source_label_raw": "Covert",
+              "factory_code": "TT",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Golden Brown, Midnight Bronze, Mohave Gold, Placer Gold, Sequoia Green, Orange Flame, Antique White, Covert Tan, or Cream Yellow."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Green",
+              "source_label_raw": "Green",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Gulf Green, Sequoia Green, Pewter Silver, or Antique White."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Tan",
+              "source_label_raw": "Tan",
+              "factory_code": "FF",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Midnight Bronze, Mohave Gold, or Antique White."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The regular palette is complete for model year 1972, but this does not establish unlisted fleet or special-order colors.",
+        "The engineering roof chart uses broader shade headings than the sales page; coded sales names control the normalized roof rows."
+      ]
+    },
+    {
+      "model_year": 1973,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1973-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p22 BODY-3, with price-schedule literals on pp56 and 77",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White C/O",
+              "source_label_raw": "White C/O",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: White, Antique."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black C/O",
+              "source_label_raw": "Black C/O",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Black, Tuxedo."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Medium Blue Metallic",
+              "source_label_raw": "Medium Blue Metallic",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Blue, Light (Metallic)."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Bright Blue Metallic",
+              "source_label_raw": "Bright Blue Metallic",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Blue, Dark (Metallic)."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Blue, Midnight (Metallic)."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Dark Bright Green Metallic",
+              "source_label_raw": "Dark Brt. Green Metallic",
+              "factory_code": "42",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Green, Dark (Metallic)."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Light Green Metallic",
+              "source_label_raw": "Light Green Metallic",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Green, Light (Metallic)."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Dark Green-Gold Metallic",
+              "source_label_raw": "Dark Green-Gold Metallic",
+              "factory_code": "46",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Green-Gold (Metallic)."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Dark Green",
+              "source_label_raw": "Dark Green",
+              "factory_code": "48",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Green, Midnight."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Chamois",
+              "source_label_raw": "Chamois",
+              "factory_code": "56",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Yellow Orange Metallic",
+              "source_label_raw": "Yellow Orange Metallic",
+              "factory_code": "60",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal differs: Copper, Light (Metallic). Both labels are official and neither is discarded."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Silver Taupe Metallic",
+              "source_label_raw": "Silver Taupe Metallic",
+              "factory_code": "64",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Silver (Metallic)."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "Taupe Metallic",
+              "source_label_raw": "Taupe Metallic",
+              "factory_code": "66",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Brown Metallic",
+              "source_label_raw": "Brown Metallic",
+              "factory_code": "68",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Brown, Dark (Metallic)."
+              ]
+            },
+            {
+              "order": 15,
+              "label": "Red Metallic",
+              "source_label_raw": "Red Metallic",
+              "factory_code": "74",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Red, Dark (Metallic)."
+              ]
+            },
+            {
+              "order": 16,
+              "label": "Yellow-Beige",
+              "source_label_raw": "Yellow-Beige",
+              "factory_code": "81",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Price schedule literal: Beige."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "factory_two_tone",
+          "program_label": "Factory two-tone body-paint combinations",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF p22 BODY-3",
+          "complete": true,
+          "colors": []
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp23 and 56",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Medium Blue",
+              "source_label_raw": "Blue medium",
+              "factory_code": "DD",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Light Blue, Midnight Blue, or Antique White."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Chamois",
+              "source_label_raw": "Chamois",
+              "factory_code": "FF",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Beige, Black, Chamois, Taupe, or Antique White."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Red",
+              "source_label_raw": "Red dark",
+              "factory_code": "HH",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Red, Silver, or Antique White."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Light Neutral",
+              "source_label_raw": "Neutral light",
+              "factory_code": "TT",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Black, Brown, Copper, Green-Gold, Midnight Green, Red, or Taupe."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Medium Green",
+              "source_label_raw": "Green medium",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with Light Green, Midnight Green, or Antique White."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "landau_pin_stripes",
+          "program_label": "Landau pin-stripe colors",
+          "palette_kind": "pin_stripe_component",
+          "source_scope": "PDF p56 price schedule",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_pin_stripe",
+              "combination_code": "RPO YF8",
+              "restrictions": [
+                "Not available with Black, Midnight Blue, or Midnight Green exterior."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_pin_stripe",
+              "combination_code": "RPO ZR8",
+              "restrictions": [
+                "Not available with Antique White exterior."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "BODY-3 explicitly states that no two-tone paint is available.",
+        "The regular palette is complete for model year 1973, but this does not establish unlisted fleet or special-order colors."
+      ]
+    },
+    {
+      "model_year": 1974,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1974-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p24 BODY-3, with sales literals on p68",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White C/O",
+              "source_label_raw": "White C/O",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: White, Antique."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black C/O",
+              "source_label_raw": "Black C/O",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Black, Tuxedo."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Medium Blue Metallic C/O",
+              "source_label_raw": "Medium Blue Met. C/O",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Blue, Light (Metallic)."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Bright Blue Metallic C/O",
+              "source_label_raw": "Bright Blue Met. C/O",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Blue, Bright (Metallic)."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Dark Blue Metallic C/O",
+              "source_label_raw": "Dark Blue Met. C/O",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Blue, Midnight (Metallic)."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Bright Aqua Metallic",
+              "source_label_raw": "Bright Aqua Metallic",
+              "factory_code": "36",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Blue, Aqua (Metallic)."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Medium Green",
+              "source_label_raw": "Medium Green",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Green, Medium."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Bright Green Metallic",
+              "source_label_raw": "Bright Green Metallic",
+              "factory_code": "46",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Green, Bright (Metallic)."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Dark Green Metallic",
+              "source_label_raw": "Dark Green Metallic",
+              "factory_code": "49",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Green, Med. Dark (Metallic)."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Cream-Beige",
+              "source_label_raw": "Cream-Beige",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Beige, Cream."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "Colonial Gold",
+              "source_label_raw": "Colonial Gold",
+              "factory_code": "55",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal differs: Sandstone. Both labels are retained."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Golden Brown Metallic",
+              "source_label_raw": "Golden Brown Metallic",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Brown, Golden (Metallic)."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "Silver Taupe Metallic C/O",
+              "source_label_raw": "Silver Taupe Met. C/O",
+              "factory_code": "64",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Silver (Metallic)."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "Russet Orange Metallic",
+              "source_label_raw": "Russet Orange Met.",
+              "factory_code": "66",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Bronze (Metallic)."
+              ]
+            },
+            {
+              "order": 15,
+              "label": "Dark Taupe Metallic",
+              "source_label_raw": "Dark Taupe Metallic",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Taupe, Dark (Metallic)."
+              ]
+            },
+            {
+              "order": 16,
+              "label": "Red Metallic",
+              "source_label_raw": "Red Metallic",
+              "factory_code": "74",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Sales-chart literal: Red, Medium (Metallic)."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "factory_two_tone",
+          "program_label": "Factory two-tone body-paint combinations",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF p24 BODY-3",
+          "complete": true,
+          "colors": []
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp25 and 68",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Medium Blue",
+              "source_label_raw": "Blue medium",
+              "factory_code": "DD",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with codes 11, 24, 26, or 29."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Brown",
+              "source_label_raw": "Brown",
+              "factory_code": "FF",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with codes 11, 50, 59, 64, or 69."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Cream-Beige",
+              "source_label_raw": "Cream-Beige",
+              "factory_code": "EE",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with codes 11, 19, 50, 55, 59, or 69."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Medium Green",
+              "source_label_raw": "Green medium",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with codes 11, 44, 46, or 49."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Dark Red",
+              "source_label_raw": "Red dark",
+              "factory_code": "HH",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Only with codes 11, 19, 64, or 74."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "landau_pin_stripes",
+          "program_label": "Landau pin-stripe colors",
+          "palette_kind": "pin_stripe_component",
+          "source_scope": "PDF p68 order and sales chart",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19A",
+              "factory_code_status": "printed",
+              "component_role": "landau_pin_stripe",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exteriors except Black or Midnight Blue."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "11A",
+              "factory_code_status": "printed",
+              "component_role": "landau_pin_stripe",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exteriors except White."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "BODY-3 explicitly states that two-tone paint is not available.",
+        "The regular palette is complete for model year 1974, but this does not establish unlisted fleet or special-order colors."
+      ]
+    },
+    {
+      "model_year": 1975,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1975-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p24 BODY-3, revised March 1975",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White C/O",
+              "source_label_raw": "White C/O",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver Metallic",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Light Graystone",
+              "source_label_raw": "Light Graystone",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Black C/O",
+              "source_label_raw": "Black C/O",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Medium Blue",
+              "source_label_raw": "Medium Blue",
+              "factory_code": "25",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Bright Blue Metallic",
+              "source_label_raw": "Bright Blue Metallic",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Medium Green C/O",
+              "source_label_raw": "Medium Green C/O",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Dark Green Metallic",
+              "source_label_raw": "Dark Green Metallic",
+              "factory_code": "49",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Cream-Beige C/O",
+              "source_label_raw": "Cream-Beige C/O",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Sandstone",
+              "source_label_raw": "Sandstone",
+              "factory_code": "55",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 12,
+              "label": "Dark Brown Metallic",
+              "source_label_raw": "Dark Brown Metallic",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Light Saddle Metallic",
+              "source_label_raw": "Light Saddle Metallic",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Persimmon Metallic",
+              "source_label_raw": "Persimmon Metallic",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 15,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 16,
+              "label": "Red Metallic C/O",
+              "source_label_raw": "Red Metallic C/O",
+              "factory_code": "74",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "factory_two_tone",
+          "program_label": "Factory two-tone body-paint combinations",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF p24 BODY-3",
+          "complete": true,
+          "colors": []
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF p25 BODY-4",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver Metallic",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with Silver Metallic, Black, Bright Blue Metallic, Dark Blue Metallic, or Red Metallic exterior."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black C/O",
+              "source_label_raw": "Black C/O",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "White C/O",
+              "source_label_raw": "White C/O",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Blue",
+              "source_label_raw": "Dark Blue",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Silver Metallic, Medium Blue, Bright Blue Metallic, or Dark Blue Metallic exterior."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Medium Green C/O",
+              "source_label_raw": "Medium Green C/O",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Medium Green, or Dark Green Metallic exterior."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Sandstone",
+              "source_label_raw": "Sandstone",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Black, Dark Green Metallic, Cream-Beige, Sandstone, Dark Brown Metallic, or Persimmon Metallic exterior."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Maroon",
+              "source_label_raw": "Maroon (production name); Dark Red (sales name)",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Silver Metallic, or Red Metallic exterior."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "landau_stripe_components",
+          "program_label": "Monte Carlo Landau stripe component colors",
+          "palette_kind": "pin_stripe_component",
+          "source_scope": "PDF p26 BODY-5, RPO Z03 application matrix",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Dark Blue",
+              "source_label_raw": "Dark Blue",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Medium Green",
+              "source_label_raw": "Med. Green",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Sandstone",
+              "source_label_raw": "Sandstone",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "landau_molding_components",
+          "program_label": "Monte Carlo Landau molding component colors",
+          "palette_kind": "body_side_molding_component",
+          "source_scope": "PDF p26 BODY-5, RPO Z03 application matrix",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Dark Blue",
+              "source_label_raw": "Dark Blue",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Medium Green",
+              "source_label_raw": "Med. Green",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Light Beige",
+              "source_label_raw": "Lt. Beige",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Maroon",
+              "source_label_raw": "Maroon",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver Metallic",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "landau_molding",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "Application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "BODY-3 explicitly states that two-tone paint is not available.",
+        "The p26 Landau grid is direct styling-component evidence; its stripe and molding rows are not standalone body paints.",
+        "The regular palette is complete for model year 1975, but this does not establish unlisted fleet or special-order colors."
+      ]
+    },
+    {
+      "model_year": 1976,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1976-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p24 BODY-3, corroborated by dealer-order pages 97 and 99",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White C/O",
+              "source_label_raw": "White C/O",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: White, Antique."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Silver Metallic C/O",
+              "source_label_raw": "Silver Metallic C/O",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Silver."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Black C/O",
+              "source_label_raw": "Black C/O",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Black."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Light Blue Metallic",
+              "source_label_raw": "Light Blue Metallic",
+              "factory_code": "28",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Blue, Light (Met)."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "35",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Blue, Dark (Met)."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Lime Metallic",
+              "source_label_raw": "Lime Metallic",
+              "factory_code": "40",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Green, Lime (Met)."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Dark Green Metallic C/O",
+              "source_label_raw": "Dk. Green Metallic C/O",
+              "factory_code": "49",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Green, Dark (Met)."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Cream",
+              "source_label_raw": "Cream",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Cream Gold",
+              "source_label_raw": "Cream Gold",
+              "factory_code": "57",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Buckskin",
+              "source_label_raw": "Buckskin",
+              "factory_code": "65",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Saddle Brown Metallic",
+              "source_label_raw": "Saddle Brown Metallic",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Saddle, Medium (Met)."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Firethorn Metallic",
+              "source_label_raw": "Firethorn Metallic",
+              "factory_code": "36",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Mahogany Metallic",
+              "source_label_raw": "Mahogany Metallic",
+              "factory_code": "37",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Red C/O",
+              "source_label_raw": "Red C/O",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Dealer-order literal: Red, Medium."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp25, 97, and 99",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Blue, Dark (Met)",
+              "factory_code": "DD",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Silver, Light Blue, or Dark Blue exterior."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Light Buckskin",
+              "source_label_raw": "Buckskin, Light",
+              "factory_code": "UU",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Black, Dark Blue, Firethorn, Mahogany, Cream, Saddle Brown, Dark Green, Red, or Buckskin exterior."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Firethorn Metallic",
+              "source_label_raw": "Firethorn, Dark (Met)",
+              "factory_code": "FF",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Silver, Firethorn, Mahogany, or Buckskin exterior."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Mahogany Metallic",
+              "source_label_raw": "Mahogany (Met)",
+              "factory_code": "YY",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Silver, Firethorn, Mahogany, Cream, Red, or Buckskin exterior."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver (Met)",
+              "factory_code": "QQ",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with White, Silver, Black, Dark Blue, Firethorn, Mahogany, or Red exterior."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "WW",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "landau_stripe_components",
+          "program_label": "Monte Carlo Landau stripe component colors",
+          "palette_kind": "pin_stripe_component",
+          "source_scope": "PDF p26 BODY-5, RPO Z03",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "11A",
+              "factory_code_status": "printed",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "WSA 3967; application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19A",
+              "factory_code_status": "printed",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "WSA 848; application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Bright Blue",
+              "source_label_raw": "Bright Blue",
+              "factory_code": "26A",
+              "factory_code_status": "printed",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "WSA 4864; application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Yellow Orange",
+              "source_label_raw": "Yellow Orange",
+              "factory_code": "51A",
+              "factory_code_status": "printed",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "WSA 4865; application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "78A",
+              "factory_code_status": "printed",
+              "component_role": "landau_stripe",
+              "combination_code": "RPO Z03",
+              "restrictions": [
+                "WSA 4408; application depends on exterior and vinyl-top color in the p26 matrix."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "fashion_tone_styling",
+          "program_label": "Fashion-Tone Styling",
+          "palette_kind": "body_accent_stripe_combination",
+          "source_scope": "PDF p101, RPO Z20, revised April 28, 1976",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Dark Blue Metallic with Light Blue Metallic accent",
+              "source_label_raw": "Blue Dark Met 35/35; accent 28M Blue Light Met",
+              "factory_code": "35/35",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 35/35-28M",
+              "restrictions": [
+                "Pin stripe: Light Blue.",
+                "With vinyl roof: DD Dark Blue."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Light Blue Metallic with Dark Blue Metallic accent",
+              "source_label_raw": "Blue Light Met 28/28; accent 35M Blue Dark Met",
+              "factory_code": "28/28",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 28/28-35M",
+              "restrictions": [
+                "Pin stripe: Dark Blue.",
+                "With vinyl roof: DD Dark Blue."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Cream with Buckskin accent",
+              "source_label_raw": "Cream 50/50; accent 65M Buckskin",
+              "factory_code": "50/50",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 50/50-65M",
+              "restrictions": [
+                "Pin stripe: Buckskin.",
+                "With vinyl roof: UU Light Buckskin."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Firethorn Metallic with Mahogany Metallic accent",
+              "source_label_raw": "Firethorn Met 36/36; accent 37M Mahogany Met",
+              "factory_code": "36/36",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 36/36-37M",
+              "restrictions": [
+                "Pin stripe: Mahogany.",
+                "With vinyl roof: YY Mahogany Metallic."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Mahogany Metallic with Firethorn Metallic accent",
+              "source_label_raw": "Mahogany Met 37/37; accent 36M Firethorn",
+              "factory_code": "37/37",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 37/37-36M",
+              "restrictions": [
+                "Pin stripe: Firethorn.",
+                "With vinyl roof: FF Dark Firethorn Metallic."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Mahogany Metallic with Silver Metallic accent",
+              "source_label_raw": "Mahogany Met 37/37; accent 13M Silver Met",
+              "factory_code": "37/37",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 37/37-13M",
+              "restrictions": [
+                "Pin stripe: Silver.",
+                "With vinyl roof: QQ Silver Metallic."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Silver with Medium Gray Metallic accent",
+              "source_label_raw": "Silver 13/13; accent 16M Gray Medium Met",
+              "factory_code": "13/13",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_accent",
+              "combination_code": "RPO Z20 13/13-16M",
+              "restrictions": [
+                "Pin stripe: Medium Gray.",
+                "With vinyl roof: QQ Silver Metallic.",
+                "Code 16 is an accent component, not a regular single-color body choice."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Fashion-Tone accents and Landau stripes are component programs and are not counted in the complete regular 14-color palette.",
+        "The regular palette is complete for model year 1976, but this does not establish unlisted fleet or special-order colors."
+      ]
+    },
+    {
+      "model_year": 1977,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1977-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p24 BODY-3, corroborated by p90 selector",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: White, Antique."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver Metallic",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Silver."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Light Blue Metallic",
+              "source_label_raw": "Lt. Blue Metallic",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Blue, Light (Met)."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Blue, Dark (Met)."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Firethorn Metallic",
+              "source_label_raw": "Firethorn Metallic",
+              "factory_code": "36",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Medium Green Metallic",
+              "source_label_raw": "Med. Green Metallic",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Green, Medium (Met)."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Dark Blue-Green Metallic",
+              "source_label_raw": "Dk. Blue Green Metallic",
+              "factory_code": "48",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Blue-Green, Dark (Met)."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Cream Gold",
+              "source_label_raw": "Cream Gold",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Light Buckskin",
+              "source_label_raw": "Light Buckskin",
+              "factory_code": "61",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Buckskin, Light."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "Buckskin Metallic",
+              "source_label_raw": "Buckskin Metallic",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Buckskin (Met)."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Brown Metallic",
+              "source_label_raw": "Brown Metallic",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Brown (Met)."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Red, Medium."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "Orange Metallic",
+              "source_label_raw": "Orange Metallic",
+              "factory_code": "78",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": [
+                "Selector literal: Orange (Met)."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp25 and 90",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 11, 13, 19, 22, 50, 61, 63, 78; acceptable with 29, 36, 44, 48, 69, 72."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Blue",
+              "source_label_raw": "Blue",
+              "factory_code": "DD",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 11, 22, or 29."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Buckskin",
+              "source_label_raw": "Buckskin",
+              "factory_code": "UU",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 11, 19, 48, 61, 63, 69, 78; acceptable with 36, 44, or 72."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Firethorn",
+              "source_label_raw": "Firethorn",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with code 36; acceptable with code 11."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Green",
+              "source_label_raw": "Green",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 11, 44, or 48."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "QQ",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 13 or 19; acceptable with 11, 29, 36, or 72."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": null,
+              "factory_code_status": "not_printed_on_page",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with all exterior codes except 13; code 13 is acceptable."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "fashion_tone_styling",
+          "program_label": "Fashion-Tone Styling",
+          "palette_kind": "body_and_vinyl_roof_combination",
+          "source_scope": "PDF p90 selector",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Light Blue Metallic with Blue vinyl roof",
+              "source_label_raw": "Blue, Light (Met) 22/22, DD",
+              "factory_code": "22/22",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_vinyl_roof",
+              "combination_code": "22/22-DD",
+              "restrictions": [
+                "DD means Blue vinyl roof."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Light Buckskin with Buckskin vinyl roof",
+              "source_label_raw": "Buckskin, Light 61/61, UU",
+              "factory_code": "61/61",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_vinyl_roof",
+              "combination_code": "61/61-UU",
+              "restrictions": [
+                "UU means Buckskin vinyl roof."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Silver with Silver vinyl roof",
+              "source_label_raw": "Silver 13/13, QQ",
+              "factory_code": "13/13",
+              "factory_code_status": "printed",
+              "component_role": "base_body_paint_with_vinyl_roof",
+              "combination_code": "13/13-QQ",
+              "restrictions": [
+                "QQ means Silver vinyl roof."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The selector's recommended and acceptable categories are both availability evidence, but their ranking remains explicit.",
+        "The regular palette is complete for model year 1977, but this does not establish unlisted fleet or special-order colors."
+      ]
+    },
+    {
+      "model_year": 1978,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1978-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p110 illustrated Color Selections, corroborated by p98 dealer-order selector",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Light Blue",
+              "source_label_raw": "Light Blue",
+              "factory_code": "21",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Light Blue Metallic",
+              "source_label_raw": "Light Blue Metallic",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Light Green Metallic",
+              "source_label_raw": "Light Green Metallic",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Medium Green Metallic",
+              "source_label_raw": "Medium Green Metallic",
+              "factory_code": "45",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Light Camel",
+              "source_label_raw": "Light Camel",
+              "factory_code": "61",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Camel Metallic",
+              "source_label_raw": "Camel Metallic",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Saffron Metallic",
+              "source_label_raw": "Saffron Metallic",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 12,
+              "label": "Dark Camel Metallic",
+              "source_label_raw": "Dark Camel Metallic",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Carmine Metallic",
+              "source_label_raw": "Carmine Metallic",
+              "factory_code": "77",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Dark Carmine Metallic",
+              "source_label_raw": "Dark Carmine Metallic",
+              "factory_code": "79",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp30, 98, and 111",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors except code 69 Dark Camel Metallic."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Light Blue Metallic",
+              "source_label_raw": "Blue",
+              "factory_code": "DD",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with codes 11, 19, 21, 22, or 29."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Light Camel",
+              "source_label_raw": "Camel",
+              "factory_code": "CC",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with codes 11, 19, 61, 63, 67, or 69."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Carmine Metallic",
+              "source_label_raw": "Carmine",
+              "factory_code": "RR",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with codes 77 or 79."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Light Green Metallic",
+              "source_label_raw": "Green",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with codes 11, 19, 44, or 45."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver",
+              "factory_code": "QQ",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Only with codes 15, 19, or 77."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "WW",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "body_side_decor",
+          "program_label": "Body-side molding and pin-stripe applications",
+          "palette_kind": "molding_and_pin_stripe_components",
+          "source_scope": "PDF p112, RPO BW2 molding and RPO D85 pin striping",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black exterior decor",
+              "source_label_raw": "Black 19",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Black molding, Gold stripe.",
+                "With BB: Black/Gold; DD: Blue/Blue; CC: Black/Gold; GG: Green/Green; QQ: Silver/Silver; WW: White/White. RR is unavailable."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Dark Blue Metallic exterior decor",
+              "source_label_raw": "Blue, Dark (Metallic) 29",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Black molding, Silver stripe.",
+                "With BB: Black/Silver; DD: Blue/Blue; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Light Blue Metallic exterior decor",
+              "source_label_raw": "Blue, Light (Metallic) 22",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Blue molding, Blue stripe.",
+                "With BB: Black/Black; DD: Blue/Blue; WW: Blue/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Light Blue exterior decor",
+              "source_label_raw": "Blue, Light 21",
+              "factory_code": "21",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Blue molding, Blue stripe.",
+                "With BB: Blue/Black; DD: Blue/Blue; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Camel Metallic exterior decor",
+              "source_label_raw": "Camel (Metallic) 63",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Camel molding, Gold stripe.",
+                "With BB: Camel/Gold; CC: Camel/Gold; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Dark Camel Metallic exterior decor",
+              "source_label_raw": "Camel, Dark (Metallic) 69",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Black molding, Gold stripe.",
+                "With CC: Camel/Gold; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Light Camel exterior decor",
+              "source_label_raw": "Camel, Light 61",
+              "factory_code": "61",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Camel molding, Buckskin stripe.",
+                "With BB: Black/Gold; CC: Camel/Buckskin; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Carmine Metallic exterior decor",
+              "source_label_raw": "Carmine (Metallic) 77",
+              "factory_code": "77",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Carmine molding, Red stripe.",
+                "With BB: Carmine/Red; RR: Carmine/Red; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Dark Carmine Metallic exterior decor",
+              "source_label_raw": "Carmine, Dark (Metallic) 79",
+              "factory_code": "79",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Carmine molding, Gold stripe.",
+                "With BB: Carmine/Gold; RR: Carmine/Gold; WW: Carmine/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Light Green Metallic exterior decor",
+              "source_label_raw": "Green, Light (Metallic) 44",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Green molding, Green stripe.",
+                "With BB: Green/Green; GG: Green/Green; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "Medium Green Metallic exterior decor",
+              "source_label_raw": "Green, Medium (Metallic) 45",
+              "factory_code": "45",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Green molding, Gold stripe.",
+                "With BB: Green/Gold; GG: Green/Green; WW: White/Green. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Saffron Metallic exterior decor",
+              "source_label_raw": "Saffron (Metallic) 67",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Black molding, White stripe.",
+                "With BB: Black/Black; CC: Black/Gold; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "Silver exterior decor",
+              "source_label_raw": "Silver 15",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Silver molding, Red stripe.",
+                "With BB: Black/Black; QQ: Silver/Red; WW: White/White. Other roof columns are unavailable."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "White exterior decor",
+              "source_label_raw": "White 11",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: White molding, Gold stripe.",
+                "With BB: Black/Black; DD: Blue/Blue; CC: Camel/Gold; GG: Green/Green; QQ: Silver/Black; WW: White/Gold. RR is unavailable."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The body-side decor program records component applications and does not enlarge the regular 14-color paint palette.",
+        "The regular palette is complete for model year 1978, but this does not establish unlisted fleet or special-order colors."
+      ]
+    },
+    {
+      "model_year": 1979,
+      "audit_status": "verified_complete_official_kit_palette",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1979-chevrolet-monte-carlo"
+      ],
+      "programs": [
+        {
+          "program_id": "regular_exterior_palette",
+          "program_label": "Regular exterior body colors",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF p34 illustrated exterior colors, corroborated by pp32, 37, and 39",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Pastel Blue",
+              "source_label_raw": "Pastel Blue",
+              "factory_code": "21",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Light Blue Metallic",
+              "source_label_raw": "Light Blue Metallic",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Light Green",
+              "source_label_raw": "Light Green",
+              "factory_code": "40",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Medium Green Metallic",
+              "source_label_raw": "Medium Green Metallic",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Light Yellow",
+              "source_label_raw": "Light Yellow",
+              "factory_code": "54",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Beige",
+              "source_label_raw": "Beige",
+              "factory_code": "61",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "Camel Metallic",
+              "source_label_raw": "Camel Metallic",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 12,
+              "label": "Dark Brown Metallic",
+              "source_label_raw": "Dark Brown Metallic",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 13,
+              "label": "Carmine Metallic",
+              "source_label_raw": "Carmine Metallic",
+              "factory_code": "77",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 14,
+              "label": "Dark Carmine Metallic",
+              "source_label_raw": "Dark Carmine Metallic",
+              "factory_code": "79",
+              "factory_code_status": "printed",
+              "component_role": null,
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "vinyl_roof_covers",
+          "program_label": "Vinyl roof-cover colors",
+          "palette_kind": "vinyl_roof_component",
+          "source_scope": "PDF pp20, 34, 37, 39, and 60",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige",
+              "source_label_raw": "Beige",
+              "factory_code": "UU",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 61, 63, or 69; acceptable with 11 or 19."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 11, 15, 19, 54, or 61; acceptable with 21, 22, 29, 40, 44, 63, 77, or 79. Code 69 is unavailable."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Light Blue Metallic",
+              "source_label_raw": "Blue, Light (Met)",
+              "factory_code": "DD",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 11, 19, 21, 22, or 29."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Dark Carmine Metallic",
+              "source_label_raw": "Carmine, Dark (Met)",
+              "factory_code": "RR",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 77 or 79."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Light Green",
+              "source_label_raw": "Green, Light",
+              "factory_code": "GG",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 40 or 44."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "QQ",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with codes 15 or 19; acceptable with 29, 77, or 79."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "WW",
+              "factory_code_status": "printed",
+              "component_role": "vinyl_roof_cover",
+              "combination_code": null,
+              "restrictions": [
+                "Recommended with all exterior codes except 15 or 21; codes 15 and 21 are acceptable."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "custom_two_tone_d84",
+          "program_label": "Custom Two-Tone Paint",
+          "palette_kind": "body_accent_stripe_molding_roof_combination",
+          "source_scope": "PDF pp22, 32, 34, 39, and 62, RPO D84",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Silver / Gray Metallic",
+              "source_label_raw": "Silver on body with Gray Metallic on hood and roof",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_hood_and_roof_accent",
+              "combination_code": "RPO D84 15-16",
+              "restrictions": [
+                "Body: Silver Metallic code 15, WA 7022; accent: Gray Metallic code 16, WA 7054.",
+                "Included body-side stripe: Red WMH 4330 / Gray Metallic WMH 7054.",
+                "If RPO BW2 is ordered: Silver Metallic molding 15Q.",
+                "RPO Z03 vinyl top is not available.",
+                "Not available on Landau."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Silver / Black",
+              "source_label_raw": "Silver on body with Black on hood and roof",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_hood_and_roof_accent",
+              "combination_code": "RPO D84 15-19",
+              "restrictions": [
+                "Body: Silver Metallic code 15, WA 7022; accent: Black code 19, WA 848.",
+                "Included body-side stripe: Red WMH 4330 / Gray Metallic WMH 7054.",
+                "If RPO BW2 is ordered: Silver Metallic molding 15Q.",
+                "If RPO Z03 is ordered: Black vinyl top 19T."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Light Blue Metallic / Medium Blue Metallic",
+              "source_label_raw": "Light Blue Metallic on body with Medium Blue Metallic on hood and roof",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_hood_and_roof_accent",
+              "combination_code": "RPO D84 22-85",
+              "restrictions": [
+                "Body: Light Blue Metallic code 22, WA 4964; accent: Medium Blue Metallic code 85, WA 7001.",
+                "Included body-side stripe: Pastel Blue WMH 8180 / Dark Blue Metallic WMH 8181.",
+                "If RPO BW2 is ordered: Light Blue Metallic molding 22Q.",
+                "RPO Z03 vinyl top is not available.",
+                "Not available on Landau."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Medium Green Metallic / Light Green",
+              "source_label_raw": "Medium Green Metallic on body with Light Green on hood and roof",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_hood_and_roof_accent",
+              "combination_code": "RPO D84 44-40",
+              "restrictions": [
+                "Body: Medium Green Metallic code 44, WA 8029; accent: Pastel Green code 40, WA 8028.",
+                "Included body-side stripe: Gold Metallic WMH 8063 / Dark Green Metallic WMH 8182.",
+                "If RPO BW2 is ordered: Pastel Green molding 40Q.",
+                "If RPO Z03 is ordered: Pastel Green vinyl top 40T."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Camel Metallic / Beige",
+              "source_label_raw": "Camel Metallic on body with Beige on hood and roof",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_hood_and_roof_accent",
+              "combination_code": "RPO D84 63-61",
+              "restrictions": [
+                "Body: Camel Metallic code 63, WA 8032; accent: Medium Beige code 61, WA 8080.",
+                "Included body-side stripe: Gold Metallic WMH 8063 / Dark Orange Metallic WMH 8183.",
+                "If RPO BW2 is ordered: Medium Beige molding 61Q.",
+                "If RPO Z03 is ordered: Medium Beige vinyl top 61T."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Carmine Metallic / Dark Carmine Metallic",
+              "source_label_raw": "Carmine Metallic on body with Dark Carmine Metallic on hood and roof",
+              "factory_code": "77",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_hood_and_roof_accent",
+              "combination_code": "RPO D84 77-79",
+              "restrictions": [
+                "Body: Carmine Metallic code 77, WA 7029; accent: Dark Carmine Metallic code 79, WA 7072.",
+                "Included body-side stripe: Red WMH 4330 / Black WMH 848.",
+                "If RPO BW2 is ordered: Dark Carmine Metallic molding 79Q.",
+                "If RPO Z03 is ordered: Dark Carmine Metallic vinyl top 79T."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "regular_body_side_decor",
+          "program_label": "Regular-paint body-side molding and pin-stripe applications",
+          "palette_kind": "molding_and_pin_stripe_components",
+          "source_scope": "PDF p22, without custom two-tone and without vinyl roof",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige exterior decor",
+              "source_label_raw": "Beige 61",
+              "factory_code": "61",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Beige molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black exterior decor",
+              "source_label_raw": "Black 19",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Black molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Dark Blue Metallic exterior decor",
+              "source_label_raw": "Dark Blue Metallic 29",
+              "factory_code": "29",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Silver molding, Silver stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Light Blue Metallic exterior decor",
+              "source_label_raw": "Light Blue Metallic 22",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Blue molding, Blue stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Pastel Blue exterior decor",
+              "source_label_raw": "Pastel Blue 21",
+              "factory_code": "21",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Blue molding, Blue stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Dark Brown Metallic exterior decor",
+              "source_label_raw": "Dark Brown Metallic 69",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Beige molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Camel Metallic exterior decor",
+              "source_label_raw": "Camel Metallic 63",
+              "factory_code": "63",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Beige molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Carmine Metallic exterior decor",
+              "source_label_raw": "Carmine Metallic 77",
+              "factory_code": "77",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Carmine molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Dark Carmine Metallic exterior decor",
+              "source_label_raw": "Dark Carmine Metallic 79",
+              "factory_code": "79",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Carmine molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Light Green exterior decor",
+              "source_label_raw": "Light Green 40",
+              "factory_code": "40",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Green molding, Green stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "Medium Green Metallic exterior decor",
+              "source_label_raw": "Medium Green Metallic 44",
+              "factory_code": "44",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Green molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 12,
+              "label": "Silver exterior decor",
+              "source_label_raw": "Silver 15",
+              "factory_code": "15",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Silver molding, Red stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 13,
+              "label": "White exterior decor",
+              "source_label_raw": "White 11",
+              "factory_code": "11",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: White molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            },
+            {
+              "order": 14,
+              "label": "Light Yellow exterior decor",
+              "source_label_raw": "Light Yellow 54",
+              "factory_code": "54",
+              "factory_code_status": "printed",
+              "component_role": "exterior_carrier_for_molding_and_pin_stripe",
+              "combination_code": "RPO BW2/D85",
+              "restrictions": [
+                "Without vinyl roof: Beige molding, Gold stripe.",
+                "Roof-specific applications remain in the p22 matrix."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "D84 component codes 16 and 85 are not regular single-color body choices.",
+        "The D84 chart says its six combinations are the only combinations available and allows no color overrides.",
+        "The regular palette is complete for model year 1979, but this does not establish unlisted fleet or special-order colors."
+      ]
+    }
+  ],
+  "unresolved": [
+    "No claim is made here about special-order, fleet, or SEO Monte Carlo colors absent from the reviewed model-specific kit tables.",
+    "Alternate official sales and engineering labels sharing the same numeric code remain source-specific literals, not silently chosen universal names."
+  ]
+}

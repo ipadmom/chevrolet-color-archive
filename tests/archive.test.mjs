@@ -15,6 +15,9 @@ async function loadArchiveData() {
     suburbanEarlySource,
     suburban2000Source,
     suburbanBrochureSource,
+    corvette1963Source,
+    monteCarlo1970Source,
+    pSeries1969Source,
     modernColorSource,
     specialtyColorSource,
   ] = await Promise.all([
@@ -27,6 +30,18 @@ async function loadArchiveData() {
     readFile(new URL("data/audits/suburban-2000-2007.json", root), "utf8"),
     readFile(
       new URL("data/audits/suburban-brochure-palettes-1982-1989-1993.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/corvette-official-palettes-1963-1972.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/monte-carlo-official-palettes-1970-1979.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/p-series-official-palettes-1969-1978.json", root),
       "utf8",
     ),
     readFile(
@@ -66,6 +81,18 @@ async function loadArchiveData() {
     .replace(
       /^import suburbanBrochurePaletteAudit from "\.\.\/data\/audits\/suburban-brochure-palettes-1982-1989-1993\.json";\r?\n/m,
       `const suburbanBrochurePaletteAudit = ${suburbanBrochureSource};\n`,
+    )
+    .replace(
+      /^import corvette1963to1972Audit from "\.\.\/data\/audits\/corvette-official-palettes-1963-1972\.json";\r?\n/m,
+      `const corvette1963to1972Audit = ${corvette1963Source};\n`,
+    )
+    .replace(
+      /^import monteCarlo1970to1979Audit from "\.\.\/data\/audits\/monte-carlo-official-palettes-1970-1979\.json";\r?\n/m,
+      `const monteCarlo1970to1979Audit = ${monteCarlo1970Source};\n`,
+    )
+    .replace(
+      /^import pSeries1969to1978Audit from "\.\.\/data\/audits\/p-series-official-palettes-1969-1978\.json";\r?\n/m,
+      `const pSeries1969to1978Audit = ${pSeries1969Source};\n`,
     )
     .replace(
       /^import modernColorSourceData from "\.\.\/data\/sources\/modern-chevrolet-color-source-candidates\.json";\r?\n/m,
@@ -674,6 +701,14 @@ test("Wikimedia Commons photos use the pinned GitHub Release with complete attri
     photoData.archivedColorPhotos("camaro", "1969", "hugger-orange").length,
     1,
   );
+  const traxCrimson = photoData.archivedColorPhotos(
+    "trax",
+    "2024",
+    "trax-crimson-metallic-2024-gm-fleet-guide",
+  );
+  assert.equal(traxCrimson.length, 1);
+  assert.equal(traxCrimson[0].status, "reviewed");
+  assert.match(traxCrimson[0].note, /factory-paint identity remains unverified/);
   assert.doesNotMatch(moduleSource, /upload\.wikimedia\.org|Special:Redirect\/file/);
 });
 
@@ -915,6 +950,91 @@ test("Corvette quantity audit reconciles the qualified production tables", async
   assert.match(audit, /Royal Heather Amethyst[\s\S]*unverified candidate/);
 });
 
+test("Corvette, Monte Carlo, and Step-Van exact-year audits reach the public matrix", async () => {
+  const { models } = await loadArchiveData();
+  const corvette = models.find((model) => model.id === "corvette");
+  const c2 = corvette.generations.find(
+    (generation) => generation.id === "corvette-1963-1967-official-regular-palettes",
+  );
+  const c3 = corvette.generations.find(
+    (generation) => generation.id === "corvette-1968-1972-official-regular-palettes",
+  );
+  assert.deepEqual(c2.years, ["1963", "1964", "1965", "1966", "1967"]);
+  assert.equal(c2.listingCount, 42);
+  assert.deepEqual(c3.years, ["1968", "1969", "1970", "1971", "1972"]);
+  assert.equal(c3.listingCount, 50);
+  assert.equal(c2.label, "C2");
+  assert.equal(c3.label, "C3");
+  assert.equal(c3.sources["1969"].evidenceClass, "qualified_exact_program_palette");
+  const monacoOrange = c3.colors.find(
+    (color) => color.availability["1969"]?.code === "990",
+  );
+  assert.equal(monacoOrange.availability["1969"].label, "Monaco Orange");
+  assert.match(monacoOrange.availability["1969"].restriction, /Hugger Orange/);
+  const steelCitiesGray = c3.colors.find(
+    (color) => color.availability["1972"]?.code === "98",
+  );
+  assert.equal(steelCitiesGray.availability["1972"].label, "Steel Cities Gray");
+  assert.match(steelCitiesGray.availability["1972"].restriction, /Atlanta Gray/);
+
+  const monteCarlo = models.find((model) => model.id === "monte-carlo");
+  const reviewedMonteCarlo = monteCarlo.generations.filter((generation) =>
+    generation.id.includes("official-regular-palettes"),
+  );
+  assert.deepEqual(
+    reviewedMonteCarlo.map((generation) => generation.listingCount),
+    [45, 76, 28],
+  );
+  assert.deepEqual(
+    reviewedMonteCarlo.map((generation) => generation.label),
+    [
+      "First generation, A-body",
+      "Second generation, Colonnade A-body",
+      "Third generation, downsized A-body",
+    ],
+  );
+  assert.equal(
+    reviewedMonteCarlo.reduce(
+      (total, generation) => total + generation.listingCount,
+      0,
+    ),
+    149,
+  );
+
+  const stepVan = models.find((model) => model.id === "p-series-step-van");
+  const partial = stepVan.generations.find(
+    (generation) =>
+      generation.id === "p-series-step-van-1969-1977-official-partial-evidence",
+  );
+  const palette1978 = stepVan.generations.find(
+    (generation) =>
+      generation.id === "p-series-step-van-1978-1978-official-regular-palettes",
+  );
+  assert.equal(partial.listingCount, 0);
+  assert.equal(partial.colors.length, 0);
+  assert.deepEqual(partial.years, [
+    "1969",
+    "1970",
+    "1971",
+    "1972",
+    "1973",
+    "1974",
+    "1975",
+    "1976",
+    "1977",
+  ]);
+  assert.equal(Object.keys(partial.sources).length, 9);
+  assert.equal(palette1978.listingCount, 17);
+  assert.equal(
+    palette1978.colors.filter((color) => color.availability["1978"]).length,
+    17,
+  );
+  assert.equal(
+    palette1978.colors.some((color) => /Forest Service/i.test(color.name)),
+    false,
+  );
+});
+
 test("Chevelle matrix preserves complete solid-color charts and exact-name rows", async () => {
   const { models } = await loadArchiveData();
   const chevelle = models.find((model) => model.id === "chevelle");
@@ -954,7 +1074,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
           !isQualifiedHistoricalSubset(item),
       )
       .reduce((total, item) => total + item.listingCount, 0),
-    973,
+    1231,
   );
   assert.equal(
     allGenerations
@@ -976,7 +1096,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    2495,
+    2753,
   );
 });
 
