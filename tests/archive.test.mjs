@@ -960,13 +960,13 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     allGenerations
       .filter(isQualifiedPalette)
       .reduce((total, item) => total + item.listingCount, 0),
-    462,
+    568,
   );
   assert.equal(
     allGenerations
       .filter(isSpecialtySubset)
       .reduce((total, item) => total + item.listingCount, 0),
-    571,
+    601,
   );
   assert.equal(
     allGenerations
@@ -976,7 +976,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    2010,
+    2146,
   );
 });
 
@@ -2226,11 +2226,11 @@ test("Tahoe publishes exact 1995-2007 palettes without flattening 2000 programs"
 
   assert.deepEqual(
     qualifiedPalettes.flatMap((generation) => generation.years),
-    ["2022", "2025", "2026"],
+    ["2022", "2024", "2025", "2026"],
   );
   assert.deepEqual(
     qualifiedPalettes.map((generation) => generation.listingCount),
-    [10, 8, 8],
+    [10, 9, 8, 8],
   );
   assert.equal(
     qualifiedPalettes.every((generation) =>
@@ -2648,6 +2648,8 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "express:2012",
     "express:2013",
     "express:2014",
+    "express:2025",
+    "express:2026",
     "g-series-van:1979",
     "g-series-van:1980",
     "g-series-van:1981",
@@ -2662,6 +2664,8 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "silverado:2014",
     "silverado:2025",
     "silverado:2026",
+    "silverado-hd:2025",
+    "silverado-hd:2026",
     "sportvan:1979",
     "sportvan:1980",
     "suburban:1979",
@@ -2674,6 +2678,8 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "suburban:2014",
     "suburban:2019",
     "suburban:2020",
+    "suburban:2025",
+    "suburban:2026",
     "tahoe:2000",
     "tahoe:2003",
     "tahoe:2005",
@@ -2687,6 +2693,8 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "tahoe:2018",
     "tahoe:2019",
     "tahoe:2020",
+    "tahoe:2025",
+    "tahoe:2026",
   ]);
 });
 
@@ -2709,14 +2717,14 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
 
   assert.equal(specialty.visibility, "public");
   assert.equal(specialty.dataset_kind, "chevrolet_color_source_candidates");
-  assert.equal(specialty.app_publication_records.length, 535);
-  assert.equal(publishedSpecialty.length, 531);
+  assert.equal(specialty.app_publication_records.length, 565);
+  assert.equal(publishedSpecialty.length, 561);
   assert.equal(publishedQualifiedHistorical.length, 4);
   assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 87);
-  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 11);
+  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 20);
   assert.deepEqual(specialty.integrity_audit.artifact_reference_groups, {
-    published_record_sources: 34,
-    published_specialty_sources: 32,
+    published_record_sources: 54,
+    published_specialty_sources: 52,
     published_qualified_historical_sources: 2,
     verified_not_published_sources: 2,
     historic_gm_upfitter_candidates: 36,

@@ -16,18 +16,18 @@ and `data/parquet/sources.parquet` contain one row per canonical URL.
 source. The separation prevents a source title or URL from being copied into
 hundreds of color records while retaining a complete, queryable citation trail.
 
-The public availability set contains 2,010 rows: 973 direct source
-transcriptions, 462 qualified official palette-union rows across 57
-model-years, 571 specialty subset rows across 58 application model-years, and
+The public availability set contains 2,146 rows: 973 direct source
+transcriptions, 568 qualified official palette-union rows across 69
+model-years, 601 specialty subset rows across 66 application model-years, and
 four ordinary qualified-historical table rows. Specialty evidence is the
-strongest research status for 42 model-years; the other 16 also have a
+strongest research status for 42 model-years; the other 24 also have a
 separately complete or qualified regular palette. Six model-years have a
 reviewed-qualified-historical research status. The four published 1981
 Woodland Green rows are ordinary chart evidence, not specialty paint. Complete
 Suburban evidence added 114 exact-year rows for 1969, 1972-1976, and 2002-2004.
 Exact Tahoe program and regular-palette evidence adds 59 rows for 2000 and
 2002-2006 without flattening simultaneous programs or specialty subsets.
-The membership ledger preserves 511 `specialty_overlay` rows and one separate
+The membership ledger preserves 541 `specialty_overlay` rows and one separate
 `qualified_historical_overlay` row; neither is folded into a primary era band.
 
 ## What each color citation preserves
@@ -119,8 +119,8 @@ The ledger currently covers:
   1993 carrier set, one listing HTML file, the 2004 service-table image, and the
   flat-filename checksum
   manifest covering all 139 other assets. The validated application surface
-  uses 30 governing audit assets, 30 app-fed audit citations, and 110
-  application Release URLs. It includes 531 published specialty records, four
+  uses 30 governing audit assets, 30 app-fed audit citations, and 135
+  application Release URLs. It includes 561 published specialty records, four
   published ordinary qualified-history records, and 8 verified nonpublished,
   nonrouting specialty snapshots;
 - complete retained 2002 and 2003 sales-brochure palettes and the complete 2004
@@ -208,8 +208,8 @@ availability row, qualified-palette and specialty-subset review flags, the
 empty post-promotion supplemental table, the bounded RockAuto 20/28/111/96
 counts, the published README row counts, 140 brochure Release assets, all 139
 non-manifest assets covered by the flat-filename checksum manifest, 30
-governing audit assets, 30 app-fed audit citations, 110 application Release
-URLs, 531 published specialty records, four published ordinary
+governing audit assets, 30 app-fed audit citations, 135 application Release
+URLs, 561 published specialty records, four published ordinary
 qualified-history records, eight verified nonpublished, nonrouting specialty
 snapshots, pinned photo archive URLs, 1,369 exact paint schemes,
 2,738 ordered primary and secondary components, immutable scheme evidence

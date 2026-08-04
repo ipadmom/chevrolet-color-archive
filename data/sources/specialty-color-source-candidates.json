@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-23T00:43:22Z",
+  "generated_at": "2026-07-23T20:05:54Z",
   "visibility": "public",
   "dataset_kind": "chevrolet_color_source_candidates",
   "scope": "United States Chevrolet fleet, government, Special Equipment Option, and other specialty exterior colors, plus qualified historical exterior-color table subsets. Forest Service Green is retained as a named USDA research lead without an invented Chevrolet model-year application.",
@@ -18,7 +18,7 @@
     "identity_rule": "Similar green labels and repeated SEO codes are not treated as the same paint identity without an explicit primary-source bridge."
   },
   "integrity_audit": {
-    "audited_on": "2026-07-22",
+    "audited_on": "2026-07-23",
     "byte_lengths_reconciled": true,
     "sha256_digests_reconciled": true,
     "promoted_pdf_pages_visually_rechecked": [
@@ -67,30 +67,59 @@
       "gm-2019-suburban-1fl-3500hd PDF page 10",
       "gm-2020-suburban-1fl PDF page 10",
       "gm-online-order-guide-pdf-22917 PDF page 221",
-      "gm-online-order-guide-pdf-23168 PDF page 236"
+      "gm-online-order-guide-pdf-23168 PDF page 236",
+      "gm-online-order-guide-pdf-22974 PDF page 29",
+      "gm-online-order-guide-pdf-23213 PDF page 29",
+      "gm-online-order-guide-pdf-22944 PDF page 83",
+      "gm-online-order-guide-pdf-23232 PDF page 90",
+      "gm-online-order-guide-pdf-23035 PDF page 64",
+      "gm-online-order-guide-pdf-23233 PDF page 68",
+      "gm-online-order-guide-pdf-23014 PDF page 35",
+      "gm-online-order-guide-pdf-23276 PDF page 37",
+      "gm-online-order-guide-pdf-23015 PDF page 49",
+      "gm-online-order-guide-pdf-23277 PDF page 51",
+      "gm-online-order-guide-pdf-23016 PDF page 28",
+      "gm-online-order-guide-pdf-23278 PDF page 30",
+      "gm-online-order-guide-pdf-22903 PDF page 106",
+      "gm-online-order-guide-pdf-23195 PDF page 102",
+      "gm-online-order-guide-pdf-22905 PDF page 31",
+      "gm-online-order-guide-pdf-23197 PDF page 30",
+      "gm-online-order-guide-pdf-22904 PDF page 85",
+      "gm-online-order-guide-pdf-23196 PDF page 84",
+      "gm-online-order-guide-pdf-23022 PDF page 122",
+      "gm-online-order-guide-pdf-23260 PDF page 119"
     ],
-    "publication_boundary": "The 535 app_publication_records are limited to directly reviewed model, year, and program scopes. The 1981 Woodland Green records are limited to four separately reviewed Sportvan, Chevy Van, Cutaway/Hi-Cube, and Step-Van/Step-Van King charts, preserve ZY1, ZY2, code 02, and bare-aluminum distinctions, and assert no factory-installation claim or continuity with SEO 9V5. The 1983 permanent fleet rows are limited to the C/K Pickup, preserve the Cardinal Red S-10/15 and El Camino/Caballero exclusion, print no inferred factory paint code or finish, and assert no assembly-plant installation. The 1993 C/K Pickup tranche is limited to the four zero-lead-day solid paints on PDF page 12 and does not assert assembly-plant installation or extend them to another model. The Caprice PPV tranche contains one row per exact 2011-2017 program, color, and model year, applies the revised model-specific guide over conflicting Fleet Guide summaries, and publishes no inferred WA, SEO, or factory paint code. The 2024 Blazer EV SEO rows marked not available and the 2025 rows marked planned or not available remain nonrouting snapshot evidence. The five no-RPO rows on the 2003 SEO chart remain research-only because the adjacent TGK ordering table expressly identifies only four orderable specialty colors. Forest Service Green remains a research lead without Chevrolet model-year availability. The 2012-2014 municipal SEO tranche publishes 132 exact program-color rows, preserves blank versus literal TBD code cells, records the 2014 Tahoe and Suburban deletions, and does not infer a 2013 Silverado specialty palette. The 2015-2020 later-fleet specialty tranche publishes 112 exact program-color rows from eleven separately retained and visually reviewed GM Upfitter guides, keeps Tahoe 9C1 and 5W4 separate, preserves Impala Kerr post-build application semantics, and does not infer adjacent years or route Forest Service Green. The 2025 and 2026 Silverado 1500 Retail and Fleet Order Guides each publish only the visually reviewed Woodland Green SEO row, preserve 9V5, WA-9015, the five-order minimum, and the extended lead-time warning, and do not promote the other twenty SEO Paint rows on either page.",
+    "publication_boundary": "The 565 app_publication_records are limited to directly reviewed model, year, and program scopes. The 1981 Woodland Green records are limited to four separately reviewed Sportvan, Chevy Van, Cutaway/Hi-Cube, and Step-Van/Step-Van King charts, preserve ZY1, ZY2, code 02, and bare-aluminum distinctions, and assert no factory-installation claim or continuity with SEO 9V5. The 1983 permanent fleet rows are limited to the C/K Pickup, preserve the Cardinal Red S-10/15 and El Camino/Caballero exclusion, print no inferred factory paint code or finish, and assert no assembly-plant installation. The 1993 C/K Pickup tranche is limited to the four zero-lead-day solid paints on PDF page 12 and does not assert assembly-plant installation or extend them to another model. The Caprice PPV tranche contains one row per exact 2011-2017 program, color, and model year, applies the revised model-specific guide over conflicting Fleet Guide summaries, and publishes no inferred WA, SEO, or factory paint code. The 2024 Blazer EV SEO rows marked not available and the 2025 rows marked planned or not available remain nonrouting snapshot evidence. The five no-RPO rows on the 2003 SEO chart remain research-only because the adjacent TGK ordering table expressly identifies only four orderable specialty colors. Forest Service Green remains a research lead without Chevrolet model-year availability. The 2012-2014 municipal SEO tranche publishes 132 exact program-color rows, preserves blank versus literal TBD code cells, records the 2014 Tahoe and Suburban deletions, and does not infer a 2013 Silverado specialty palette. The 2015-2020 later-fleet specialty tranche publishes 112 exact program-color rows from eleven separately retained and visually reviewed GM Upfitter guides, keeps Tahoe 9C1 and 5W4 separate, preserves Impala Kerr post-build application semantics, and does not infer adjacent years or route Forest Service Green. The 2025 and 2026 Silverado 1500 Retail and Fleet Order Guides each publish only the visually reviewed Woodland Green SEO row, preserve 9V5, WA-9015, the five-order minimum, and the extended lead-time warning, and do not promote the other twenty SEO Paint rows on either page. The retained 2025 and 2026 Tahoe, Suburban, Express, and Silverado HD Order Guide tranche publishes 30 exact configuration-color rows from twenty visually reviewed sources. It publishes the six-color combined Tahoe Police Package and Special Service palette for each year without splitting PPV from SSV, and publishes only Woodland Green from the reviewed retail, van, and HD tables. It preserves the Express flat-Black body-component rule, the light-duty HD five-order and extended-lead-time note, the medium-duty absence of that note, and the printed 5IS / WA-636R conflict. Forest Service Green and Isuzu Woodland Green 46U remain separate identities.",
     "unique_retained_artifacts_reconciled": 87,
     "last_updater_rehash": {
-      "script": "scripts/update-2015-2020-specialty-fleet-tranche.mjs",
+      "script": "scripts/update-current-order-guide-specialty-tranche.mjs",
       "source_ids": [
-        "gm-2015-tahoe-5w4",
-        "gm-2016-tahoe-9c1",
-        "gm-2016-tahoe-5w4",
-        "gm-2017-tahoe-9c1-4wd",
-        "gm-2018-tahoe-9c1-4wd",
-        "gm-2019-tahoe-5w4",
-        "gm-2020-tahoe-5w4",
-        "gm-2015-impala-limited-9c1-9c3",
-        "gm-2016-impala-limited-9c1-9c3",
-        "gm-2019-suburban-1fl-3500hd",
-        "gm-2020-suburban-1fl"
+        "gm-online-order-guide-pdf-22974",
+        "gm-online-order-guide-pdf-23213",
+        "gm-online-order-guide-pdf-22944",
+        "gm-online-order-guide-pdf-23232",
+        "gm-online-order-guide-pdf-23035",
+        "gm-online-order-guide-pdf-23233",
+        "gm-online-order-guide-pdf-23014",
+        "gm-online-order-guide-pdf-23276",
+        "gm-online-order-guide-pdf-23015",
+        "gm-online-order-guide-pdf-23277",
+        "gm-online-order-guide-pdf-23016",
+        "gm-online-order-guide-pdf-23278",
+        "gm-online-order-guide-pdf-22903",
+        "gm-online-order-guide-pdf-23195",
+        "gm-online-order-guide-pdf-22905",
+        "gm-online-order-guide-pdf-23197",
+        "gm-online-order-guide-pdf-22904",
+        "gm-online-order-guide-pdf-23196",
+        "gm-online-order-guide-pdf-23022",
+        "gm-online-order-guide-pdf-23260"
       ],
-      "file_count": 11
+      "file_count": 20
     },
     "artifact_reference_groups": {
-      "published_record_sources": 34,
-      "published_specialty_sources": 32,
+      "published_record_sources": 54,
+      "published_specialty_sources": 52,
       "published_qualified_historical_sources": 2,
       "verified_not_published_sources": 2,
       "historic_gm_upfitter_candidates": 36,
@@ -32135,6 +32164,1736 @@
         "pdf_page": 236,
         "printed_page": 236
       }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-police-package-and-special-service-victory-red-5t4-wa-9260",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Victory Red",
+      "source_label_raw": "Victory Red",
+      "finish": "solid",
+      "paint_code": "WA-9260",
+      "factory_paint_code": null,
+      "wa_code": "WA-9260",
+      "source_wa_code_raw": "WA-9260",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "5T4",
+      "source_seo_code_raw": "5T4",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9260 / SEO 5T4",
+      "touch_up_paint_number": "WA-9260",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service.",
+        "The table prints Victory Red, color code 5T4, and touch-up paint number WA-9260.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22974",
+        "title": "2025 Chevrolet Truck New Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+        "bytes": 220774,
+        "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+        "pdf_page_count": 47,
+        "archive_asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-police-package-and-special-service-msp-blue-9v2-wa-5665",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "MSP Blue",
+      "source_label_raw": "MSP Blue",
+      "finish": "solid",
+      "paint_code": "WA-5665",
+      "factory_paint_code": null,
+      "wa_code": "WA-5665",
+      "source_wa_code_raw": "WA-5665",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V2",
+      "source_seo_code_raw": "9V2",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-5665 / SEO 9V2",
+      "touch_up_paint_number": "WA-5665",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service.",
+        "The table prints MSP Blue, color code 9V2, and touch-up paint number WA-5665.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22974",
+        "title": "2025 Chevrolet Truck New Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+        "bytes": 220774,
+        "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+        "pdf_page_count": 47,
+        "archive_asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-police-package-and-special-service-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22974",
+        "title": "2025 Chevrolet Truck New Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+        "bytes": 220774,
+        "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+        "pdf_page_count": 47,
+        "archive_asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-police-package-and-special-service-dark-blue-metallic-9v7-wa-722j",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Dark Blue Metallic",
+      "source_label_raw": "Dark Blue Metallic",
+      "finish": "solid",
+      "paint_code": "WA-722J",
+      "factory_paint_code": null,
+      "wa_code": "WA-722J",
+      "source_wa_code_raw": "WA-722J",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V7",
+      "source_seo_code_raw": "9V7",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-722J / SEO 9V7",
+      "touch_up_paint_number": "WA-722J",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service.",
+        "The table prints Dark Blue Metallic, color code 9V7, and touch-up paint number WA-722J.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22974",
+        "title": "2025 Chevrolet Truck New Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+        "bytes": 220774,
+        "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+        "pdf_page_count": 47,
+        "archive_asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-police-package-and-special-service-wheatland-yellow-9w3-wa-253a",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Wheatland Yellow",
+      "source_label_raw": "Wheatland Yellow",
+      "finish": "solid",
+      "paint_code": "WA-253A",
+      "factory_paint_code": null,
+      "wa_code": "WA-253A",
+      "source_wa_code_raw": "WA-253A",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9W3",
+      "source_seo_code_raw": "9W3",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-253A / SEO 9W3",
+      "touch_up_paint_number": "WA-253A",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service.",
+        "The table prints Wheatland Yellow, color code 9W3, and touch-up paint number WA-253A.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22974",
+        "title": "2025 Chevrolet Truck New Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+        "bytes": 220774,
+        "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+        "pdf_page_count": 47,
+        "archive_asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-police-package-and-special-service-silver-ice-metallic-9w5-wa-636r",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Silver Ice Metallic",
+      "source_label_raw": "Silver Ice Metallic",
+      "finish": "solid",
+      "paint_code": "WA-636R",
+      "factory_paint_code": null,
+      "wa_code": "WA-636R",
+      "source_wa_code_raw": "WA-636R",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9W5",
+      "source_seo_code_raw": "9W5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-636R / SEO 9W5",
+      "touch_up_paint_number": "WA-636R",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service.",
+        "The table prints Silver Ice Metallic, color code 9W5, and touch-up paint number WA-636R.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22974",
+        "title": "2025 Chevrolet Truck New Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22974/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:29.0098295Z",
+        "bytes": 220774,
+        "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
+        "pdf_page_count": 47,
+        "archive_asset_name": "2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-police-package-and-special-service-22974.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-police-package-and-special-service-victory-red-5t4-wa-9260",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Victory Red",
+      "source_label_raw": "Victory Red",
+      "finish": "solid",
+      "paint_code": "WA-9260",
+      "factory_paint_code": null,
+      "wa_code": "WA-9260",
+      "source_wa_code_raw": "WA-9260",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "5T4",
+      "source_seo_code_raw": "5T4",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9260 / SEO 5T4",
+      "touch_up_paint_number": "WA-9260",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service.",
+        "The table prints Victory Red, color code 5T4, and touch-up paint number WA-9260.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23213",
+        "title": "2026 Chevrolet Truck Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 05, 2026",
+        "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+        "bytes": 233532,
+        "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+        "pdf_page_count": 52,
+        "archive_asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-police-package-and-special-service-msp-blue-9v2-wa-5665",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "MSP Blue",
+      "source_label_raw": "MSP Blue",
+      "finish": "solid",
+      "paint_code": "WA-5665",
+      "factory_paint_code": null,
+      "wa_code": "WA-5665",
+      "source_wa_code_raw": "WA-5665",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V2",
+      "source_seo_code_raw": "9V2",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-5665 / SEO 9V2",
+      "touch_up_paint_number": "WA-5665",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service.",
+        "The table prints MSP Blue, color code 9V2, and touch-up paint number WA-5665.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23213",
+        "title": "2026 Chevrolet Truck Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 05, 2026",
+        "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+        "bytes": 233532,
+        "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+        "pdf_page_count": 52,
+        "archive_asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-police-package-and-special-service-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23213",
+        "title": "2026 Chevrolet Truck Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 05, 2026",
+        "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+        "bytes": 233532,
+        "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+        "pdf_page_count": 52,
+        "archive_asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-police-package-and-special-service-dark-blue-metallic-9v7-wa-722j",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Dark Blue Metallic",
+      "source_label_raw": "Dark Blue Metallic",
+      "finish": "solid",
+      "paint_code": "WA-722J",
+      "factory_paint_code": null,
+      "wa_code": "WA-722J",
+      "source_wa_code_raw": "WA-722J",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V7",
+      "source_seo_code_raw": "9V7",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-722J / SEO 9V7",
+      "touch_up_paint_number": "WA-722J",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service.",
+        "The table prints Dark Blue Metallic, color code 9V7, and touch-up paint number WA-722J.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23213",
+        "title": "2026 Chevrolet Truck Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 05, 2026",
+        "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+        "bytes": 233532,
+        "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+        "pdf_page_count": 52,
+        "archive_asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-police-package-and-special-service-wheatland-yellow-9w3-wa-253a",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Wheatland Yellow",
+      "source_label_raw": "Wheatland Yellow",
+      "finish": "solid",
+      "paint_code": "WA-253A",
+      "factory_paint_code": null,
+      "wa_code": "WA-253A",
+      "source_wa_code_raw": "WA-253A",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9W3",
+      "source_seo_code_raw": "9W3",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-253A / SEO 9W3",
+      "touch_up_paint_number": "WA-253A",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service.",
+        "The table prints Wheatland Yellow, color code 9W3, and touch-up paint number WA-253A.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23213",
+        "title": "2026 Chevrolet Truck Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 05, 2026",
+        "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+        "bytes": 233532,
+        "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+        "pdf_page_count": 52,
+        "archive_asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-police-package-and-special-service-silver-ice-metallic-9w5-wa-636r",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Police Package and Special Service"
+      ],
+      "program_id": "gm-tahoe-police-special-service-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Silver Ice Metallic",
+      "source_label_raw": "Silver Ice Metallic",
+      "finish": "solid",
+      "paint_code": "WA-636R",
+      "factory_paint_code": null,
+      "wa_code": "WA-636R",
+      "source_wa_code_raw": "WA-636R",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9W5",
+      "source_seo_code_raw": "9W5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-636R / SEO 9W5",
+      "touch_up_paint_number": "WA-636R",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service.",
+        "The table prints Silver Ice Metallic, color code 9W5, and touch-up paint number WA-636R.",
+        "The table marks each published row available with the single Jet Black interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23213",
+        "title": "2026 Chevrolet Truck Tahoe Police Package and Special Service Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23213/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 05, 2026",
+        "retrieved_at": "2026-07-21T07:05:10.1458910Z",
+        "bytes": 233532,
+        "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
+        "pdf_page_count": 52,
+        "archive_asset_name": "2026-tahoe-police-package-and-special-service-23213.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-police-package-and-special-service-23213.pdf",
+        "pdf_page": 29,
+        "printed_page": 29
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-tahoe-retail-and-fleet-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "New Tahoe Retail and Fleet"
+      ],
+      "program_id": "gm-tahoe-retail-fleet-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Retail and Fleet SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Tahoe Retail and Fleet.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22944",
+        "title": "2025 Chevrolet Truck New Tahoe Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22944/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:31.1686862Z",
+        "bytes": 606304,
+        "sha256": "a5c24b31f587363abbec3630e4c9e57efadceae0e14b04cde8f193e88419a0e4",
+        "pdf_page_count": 129,
+        "archive_asset_name": "2025-new-tahoe-retail-and-fleet-22944.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-tahoe-retail-and-fleet-22944.pdf",
+        "pdf_page": 83,
+        "printed_page": 83
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-tahoe-retail-and-fleet-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_scope": [
+        "Tahoe Retail and Fleet"
+      ],
+      "program_id": "gm-tahoe-retail-fleet-seo-solid-paint-2025-2026",
+      "program_label": "Tahoe Retail and Fleet SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Tahoe Retail and Fleet.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23232",
+        "title": "2026 Chevrolet Truck Tahoe Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23232/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:05:12.7668206Z",
+        "bytes": 639318,
+        "sha256": "669d24954fd47259d0f0b71ed3857bf72546fae7fa93c2968f9cb52dff9dcbf2",
+        "pdf_page_count": 149,
+        "archive_asset_name": "2026-tahoe-retail-and-fleet-23232.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-tahoe-retail-and-fleet-23232.pdf",
+        "pdf_page": 90,
+        "printed_page": 90
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-new-suburban-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_scope": [
+        "New Suburban"
+      ],
+      "program_id": "gm-suburban-seo-solid-paint-2025-2026",
+      "program_label": "Suburban SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck New Suburban.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23035",
+        "title": "2025 Chevrolet Truck New Suburban Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23035/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:27.1555386Z",
+        "bytes": 538333,
+        "sha256": "30021a67d869b31b2a0b117645765d37c0738a13c6167e69d64404da2d5f3ad9",
+        "pdf_page_count": 106,
+        "archive_asset_name": "2025-new-suburban-23035.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-new-suburban-23035.pdf",
+        "pdf_page": 64,
+        "printed_page": 64
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-suburban-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "suburban"
+      ],
+      "source_model_scope": [
+        "Suburban"
+      ],
+      "program_id": "gm-suburban-seo-solid-paint-2025-2026",
+      "program_label": "Suburban SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Suburban.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23233",
+        "title": "2026 Chevrolet Truck Suburban Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23233/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:05:08.3242912Z",
+        "bytes": 554002,
+        "sha256": "7b8316a857af059c18f4839c4232633cf87dc97c1ebb365e1321199b2902da9d",
+        "pdf_page_count": 117,
+        "archive_asset_name": "2026-suburban-23233.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-suburban-23233.pdf",
+        "pdf_page": 68,
+        "printed_page": 68
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-express-cargo-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Cargo"
+      ],
+      "program_id": "gm-express-cargo-seo-solid-paint-2025-2026",
+      "program_label": "Express Cargo SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Green, Woodland",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Express Cargo.",
+        "The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "All extraneous body components formerly color-keyed to body color will be flat Black.",
+        "The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23014",
+        "title": "2025 Chevrolet Truck Express Cargo Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23014/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published November 07, 2025",
+        "retrieved_at": "2026-07-21T07:04:20.5880242Z",
+        "bytes": 241257,
+        "sha256": "8bf5e908fd167e1859d91b4635245b2c57f31365449c331c08cda9b872b0ada2",
+        "pdf_page_count": 60,
+        "archive_asset_name": "2025-express-cargo-23014.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-express-cargo-23014.pdf",
+        "pdf_page": 35,
+        "printed_page": 35
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-express-cargo-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Cargo"
+      ],
+      "program_id": "gm-express-cargo-seo-solid-paint-2025-2026",
+      "program_label": "Express Cargo SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Green, Woodland",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Express Cargo.",
+        "The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "All extraneous body components formerly color-keyed to body color will be flat Black.",
+        "The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23276",
+        "title": "2026 Chevrolet Truck Express Cargo Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23276/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published June 12, 2026",
+        "retrieved_at": "2026-07-21T07:04:52.6650932Z",
+        "bytes": 259881,
+        "sha256": "9596de3e96b0c5004c1b05ccce19e3d98381bfeddea9acf714379299e72a5190",
+        "pdf_page_count": 69,
+        "archive_asset_name": "2026-express-cargo-23276.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-express-cargo-23276.pdf",
+        "pdf_page": 37,
+        "printed_page": 37
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-express-cutaway-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Cutaway"
+      ],
+      "program_id": "gm-express-cutaway-seo-solid-paint-2025-2026",
+      "program_label": "Express Cutaway SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Green, Woodland",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Express Cutaway.",
+        "The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "All extraneous body components formerly color-keyed to body color will be flat Black.",
+        "The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23015",
+        "title": "2025 Chevrolet Truck Express Cutaway Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23015/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published March 06, 2026",
+        "retrieved_at": "2026-07-21T07:04:22.4511000Z",
+        "bytes": 281995,
+        "sha256": "bc50749b114d9b7d01bdf0ea392481ccac7c925f381e4f2f63cd8a30049219e1",
+        "pdf_page_count": 78,
+        "archive_asset_name": "2025-express-cutaway-23015.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-express-cutaway-23015.pdf",
+        "pdf_page": 49,
+        "printed_page": 49
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-express-cutaway-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Cutaway"
+      ],
+      "program_id": "gm-express-cutaway-seo-solid-paint-2025-2026",
+      "program_label": "Express Cutaway SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Green, Woodland",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Express Cutaway.",
+        "The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "All extraneous body components formerly color-keyed to body color will be flat Black.",
+        "The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23277",
+        "title": "2026 Chevrolet Truck Express Cutaway Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23277/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 22, 2026",
+        "retrieved_at": "2026-07-21T07:04:54.8688248Z",
+        "bytes": 313731,
+        "sha256": "6669f35a79305104d08e81dd4ae6f5ead67a9ffbe96fd74b652a3f32509b4e7f",
+        "pdf_page_count": 94,
+        "archive_asset_name": "2026-express-cutaway-23277.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-express-cutaway-23277.pdf",
+        "pdf_page": 51,
+        "printed_page": 51
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-express-passenger-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Passenger"
+      ],
+      "program_id": "gm-express-passenger-seo-solid-paint-2025-2026",
+      "program_label": "Express Passenger SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Green, Woodland",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Express Passenger.",
+        "The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Green, Woodland available with the listed Medium Pewter interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "All extraneous body components formerly color-keyed to body color will be flat Black.",
+        "The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23016",
+        "title": "2025 Chevrolet Truck Express Passenger Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23016/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published November 07, 2025",
+        "retrieved_at": "2026-07-21T07:04:24.8270867Z",
+        "bytes": 226284,
+        "sha256": "a5ebec5ba2bc54fcbccdcadc57226fc4ee8032a803c8e03e0d249248415a3270",
+        "pdf_page_count": 53,
+        "archive_asset_name": "2025-express-passenger-23016.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-express-passenger-23016.pdf",
+        "pdf_page": 28,
+        "printed_page": 28
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-express-passenger-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_scope": [
+        "Express Passenger"
+      ],
+      "program_id": "gm-express-passenger-seo-solid-paint-2025-2026",
+      "program_label": "Express Passenger SEO solid paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Green, Woodland",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Express Passenger.",
+        "The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Green, Woodland available with the listed Medium Pewter interior.",
+        "GM will require five orders before sending the order to the plant.",
+        "All extraneous body components formerly color-keyed to body color will be flat Black.",
+        "The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23278",
+        "title": "2026 Chevrolet Truck Express Passenger Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23278/all/en-us",
+        "section": "COLOR AND TRIM - SEO SOLID PAINT",
+        "revision": "Published May 01, 2026",
+        "retrieved_at": "2026-07-21T07:04:56.6296954Z",
+        "bytes": 248584,
+        "sha256": "532a058d066035594d653bfe3dabaa6d95a0c898ac399a0fc548a906eb7cb48a",
+        "pdf_page_count": 63,
+        "archive_asset_name": "2026-express-passenger-23278.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-express-passenger-23278.pdf",
+        "pdf_page": 30,
+        "printed_page": 30
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-silverado-2500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 2500 HD Retail and Fleet"
+      ],
+      "program_id": "gm-silverado-2500-hd-retail-fleet-seo-paint-2025-2026",
+      "program_label": "Silverado 2500 HD Retail and Fleet SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Silverado 2500 HD Retail and Fleet.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche.",
+        "The other twenty SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22903",
+        "title": "2025 Chevrolet Truck Silverado 2500 HD Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22903/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:04:35.6678875Z",
+        "bytes": 680709,
+        "sha256": "fe57e6e491357aca2c570a6a154dc4d11f3684e2f0c026904a844877d5158b78",
+        "pdf_page_count": 160,
+        "archive_asset_name": "2025-silverado-2500-hd-retail-and-fleet-22903.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-2500-hd-retail-and-fleet-22903.pdf",
+        "pdf_page": 106,
+        "printed_page": 106
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-silverado-2500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 2500 HD Retail and Fleet"
+      ],
+      "program_id": "gm-silverado-2500-hd-retail-fleet-seo-paint-2025-2026",
+      "program_label": "Silverado 2500 HD Retail and Fleet SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Silverado 2500 HD Retail and Fleet.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche.",
+        "The other twenty SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23195",
+        "title": "2026 Chevrolet Truck Silverado 2500 HD Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23195/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:05:00.7619335Z",
+        "bytes": 694761,
+        "sha256": "6284b3ff29dc52e827ac845a5ede479e30d604959b27716a769adaa4f0ec32f9",
+        "pdf_page_count": 161,
+        "archive_asset_name": "2026-silverado-2500-hd-retail-and-fleet-23195.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-2500-hd-retail-and-fleet-23195.pdf",
+        "pdf_page": 102,
+        "printed_page": 102
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-silverado-3500-hd-cc-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 3500 HD CC"
+      ],
+      "program_id": "gm-silverado-3500-hd-cc-seo-paint-2025-2026",
+      "program_label": "Silverado 3500 HD CC SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Silverado 3500 HD CC.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche.",
+        "The other twenty SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22905",
+        "title": "2025 Chevrolet Truck Silverado 3500 HD CC Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22905/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:04:38.2812509Z",
+        "bytes": 253025,
+        "sha256": "5e619bc5e358d8948e628e4d216f4644c767903d36c3eb659ce242a5aae3f09b",
+        "pdf_page_count": 55,
+        "archive_asset_name": "2025-silverado-3500-hd-cc-22905.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-3500-hd-cc-22905.pdf",
+        "pdf_page": 31,
+        "printed_page": 31
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-silverado-3500-hd-cc-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 3500 HD CC"
+      ],
+      "program_id": "gm-silverado-3500-hd-cc-seo-paint-2025-2026",
+      "program_label": "Silverado 3500 HD CC SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Silverado 3500 HD CC.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche.",
+        "The other twenty SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23197",
+        "title": "2026 Chevrolet Truck Silverado 3500 HD CC Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23197/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:05:02.9845214Z",
+        "bytes": 265669,
+        "sha256": "2a352b4fefd8b199d589021f7e9a6c7e3d7c35bc70a2f0274d1bfb9f36c77b70",
+        "pdf_page_count": 60,
+        "archive_asset_name": "2026-silverado-3500-hd-cc-23197.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-3500-hd-cc-23197.pdf",
+        "pdf_page": 30,
+        "printed_page": 30
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-silverado-3500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 3500 HD Retail and Fleet"
+      ],
+      "program_id": "gm-silverado-3500-hd-retail-fleet-seo-paint-2025-2026",
+      "program_label": "Silverado 3500 HD Retail and Fleet SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Silverado 3500 HD Retail and Fleet.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche.",
+        "The other twenty SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-22904",
+        "title": "2025 Chevrolet Truck Silverado 3500 HD Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/22904/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:04:40.5309506Z",
+        "bytes": 588543,
+        "sha256": "41aa8b902dccd96b002f6eee944ffc68ade475e20f8f007725ede36b06666939",
+        "pdf_page_count": 136,
+        "archive_asset_name": "2025-silverado-3500-hd-retail-and-fleet-22904.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-3500-hd-retail-and-fleet-22904.pdf",
+        "pdf_page": 85,
+        "printed_page": 85
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-silverado-3500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 3500 HD Retail and Fleet"
+      ],
+      "program_id": "gm-silverado-3500-hd-retail-fleet-seo-paint-2025-2026",
+      "program_label": "Silverado 3500 HD Retail and Fleet SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available_with_minimum_batch",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": 5,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Silverado 3500 HD Retail and Fleet.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "GM will require five orders before sending the order to the plant.",
+        "The color may require extended lead time.",
+        "The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche.",
+        "The other twenty SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23196",
+        "title": "2026 Chevrolet Truck Silverado 3500 HD Retail and Fleet Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23196/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published June 19, 2026",
+        "retrieved_at": "2026-07-21T07:05:04.7685056Z",
+        "bytes": 594169,
+        "sha256": "5a14aca04ae0c16ed0d7145aad59e14579c89c5e4898a3c3a9092501f8592c6f",
+        "pdf_page_count": 143,
+        "archive_asset_name": "2026-silverado-3500-hd-retail-and-fleet-23196.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-3500-hd-retail-and-fleet-23196.pdf",
+        "pdf_page": 84,
+        "printed_page": 84
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2025-silverado-4500-hd-5500-hd-and-6500-hd-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2025,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 4500 HD, 5500 HD and 6500 HD"
+      ],
+      "program_id": "gm-silverado-4500-6500-hd-seo-paint-2025-2026",
+      "program_label": "Silverado 4500 HD, 5500 HD and 6500 HD SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": null,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2025 Chevrolet Truck Silverado 4500 HD, 5500 HD and 6500 HD.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "The page prints no five-order minimum or extended lead-time warning.",
+        "The page footnote states that the applicable item is not available with APL Passenger Seat Delete, but no footnote marker is attached to the Woodland Green row.",
+        "The other twenty-nine SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23022",
+        "title": "2025 Chevrolet Truck Silverado 4500 HD, 5500 HD and 6500 HD Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23022/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published July 17, 2026",
+        "retrieved_at": "2026-07-21T07:04:45.8745287Z",
+        "bytes": 516754,
+        "sha256": "06a7d567d30c102eb7edbe262c2ca89872de111387f9775b6b030c8379131a70",
+        "pdf_page_count": 171,
+        "archive_asset_name": "2025-silverado-4500-hd-5500-hd-and-6500-hd-23022.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2025-silverado-4500-hd-5500-hd-and-6500-hd-23022.pdf",
+        "pdf_page": 122,
+        "printed_page": 122
+      }
+    },
+    {
+      "record_id": "gm-eog-current-2026-silverado-4500-hd-5500-hd-and-6500-hd-woodland-green-9v5-wa-9015",
+      "publication_status": "published_specialty_subset",
+      "model_year": 2026,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_scope": [
+        "Silverado 4500 HD, 5500 HD and 6500 HD"
+      ],
+      "program_id": "gm-silverado-4500-6500-hd-seo-paint-2025-2026",
+      "program_label": "Silverado 4500 HD, 5500 HD and 6500 HD SEO paint",
+      "application_type": "special_equipment_option_paint",
+      "availability_state": "available",
+      "label": "Woodland Green",
+      "source_label_raw": "Woodland Green",
+      "finish": "solid",
+      "paint_code": "WA-9015",
+      "factory_paint_code": null,
+      "wa_code": "WA-9015",
+      "source_wa_code_raw": "WA-9015",
+      "source_wa_code_cell_state": "printed_with_prefix",
+      "seo_code": "9V5",
+      "source_seo_code_raw": "9V5",
+      "source_seo_code_cell_state": "printed",
+      "rpo_code": null,
+      "code_display": "WA-9015 / SEO 9V5",
+      "touch_up_paint_number": "WA-9015",
+      "minimum_batch_units": null,
+      "factory_installation_claim": null,
+      "installation_semantics": "Official GM Electronic Order Guide SEO paint listing; application site is not expressly stated.",
+      "restrictions": [
+        "This row is limited to 2026 Chevrolet Truck Silverado 4500 HD, 5500 HD and 6500 HD.",
+        "The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015.",
+        "The table marks Woodland Green available with both listed interior columns.",
+        "The page prints no five-order minimum or extended lead-time warning.",
+        "The page footnote states that the applicable item is not available with APL Passenger Seat Delete, but no footnote marker is attached to the Woodland Green row.",
+        "The other twenty-nine SEO paint identities on the page remain outside this bounded publication tranche.",
+        "No availability is inferred for another Chevrolet model, configuration, or year."
+      ],
+      "source": {
+        "source_id": "gm-online-order-guide-pdf-23260",
+        "title": "2026 Chevrolet Truck Silverado 4500 HD, 5500 HD and 6500 HD Order Guide",
+        "publisher": "General Motors",
+        "source_type": "official electronic order guide snapshot",
+        "url": "https://eog-api.musea2.azure.ext.gm.com/api/Pdf/GeneratePdf/23260/all/en-us",
+        "section": "COLOR AND TRIM - SEO PAINT",
+        "revision": "Published July 17, 2026",
+        "retrieved_at": "2026-07-21T07:05:06.6536568Z",
+        "bytes": 508914,
+        "sha256": "7865540f282c603eef17bc6a6e4cc6bfac7b16ebe356c83dc9b7b0b06a28dab6",
+        "pdf_page_count": 167,
+        "archive_asset_name": "2026-silverado-4500-hd-5500-hd-and-6500-hd-23260.pdf",
+        "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/2026-silverado-4500-hd-5500-hd-and-6500-hd-23260.pdf",
+        "pdf_page": 119,
+        "printed_page": 119
+      }
     }
   ],
   "verified_not_published": [
@@ -33189,7 +34948,7 @@
       "retrieved_at": "2026-07-21T07:04:20.5880242Z",
       "bytes": 241257,
       "sha256": "8bf5e908fd167e1859d91b4635245b2c57f31365449c331c08cda9b872b0ada2",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33204,7 +34963,7 @@
       "retrieved_at": "2026-07-21T07:04:22.4511000Z",
       "bytes": 281995,
       "sha256": "bc50749b114d9b7d01bdf0ea392481ccac7c925f381e4f2f63cd8a30049219e1",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33219,7 +34978,7 @@
       "retrieved_at": "2026-07-21T07:04:24.8270867Z",
       "bytes": 226284,
       "sha256": "a5ebec5ba2bc54fcbccdcadc57226fc4ee8032a803c8e03e0d249248415a3270",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33234,7 +34993,7 @@
       "retrieved_at": "2026-07-21T07:04:27.1555386Z",
       "bytes": 538333,
       "sha256": "30021a67d869b31b2a0b117645765d37c0738a13c6167e69d64404da2d5f3ad9",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33249,7 +35008,7 @@
       "retrieved_at": "2026-07-21T07:04:29.0098295Z",
       "bytes": 220774,
       "sha256": "4f8b11d5a876a93f623fdf33ff79a5f9579862db8785c90ce51c101b831823d8",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33264,7 +35023,7 @@
       "retrieved_at": "2026-07-21T07:04:31.1686862Z",
       "bytes": 606304,
       "sha256": "a5c24b31f587363abbec3630e4c9e57efadceae0e14b04cde8f193e88419a0e4",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33294,7 +35053,7 @@
       "retrieved_at": "2026-07-21T07:04:35.6678875Z",
       "bytes": 680709,
       "sha256": "fe57e6e491357aca2c570a6a154dc4d11f3684e2f0c026904a844877d5158b78",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33309,7 +35068,7 @@
       "retrieved_at": "2026-07-21T07:04:38.2812509Z",
       "bytes": 253025,
       "sha256": "5e619bc5e358d8948e628e4d216f4644c767903d36c3eb659ce242a5aae3f09b",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33324,7 +35083,7 @@
       "retrieved_at": "2026-07-21T07:04:40.5309506Z",
       "bytes": 588543,
       "sha256": "41aa8b902dccd96b002f6eee944ffc68ade475e20f8f007725ede36b06666939",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2025,
@@ -33339,7 +35098,7 @@
       "retrieved_at": "2026-07-21T07:04:45.8745287Z",
       "bytes": 516754,
       "sha256": "06a7d567d30c102eb7edbe262c2ca89872de111387f9775b6b030c8379131a70",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33369,7 +35128,7 @@
       "retrieved_at": "2026-07-21T07:04:52.6650932Z",
       "bytes": 259881,
       "sha256": "9596de3e96b0c5004c1b05ccce19e3d98381bfeddea9acf714379299e72a5190",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33384,7 +35143,7 @@
       "retrieved_at": "2026-07-21T07:04:54.8688248Z",
       "bytes": 313731,
       "sha256": "6669f35a79305104d08e81dd4ae6f5ead67a9ffbe96fd74b652a3f32509b4e7f",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33399,7 +35158,7 @@
       "retrieved_at": "2026-07-21T07:04:56.6296954Z",
       "bytes": 248584,
       "sha256": "532a058d066035594d653bfe3dabaa6d95a0c898ac399a0fc548a906eb7cb48a",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33429,7 +35188,7 @@
       "retrieved_at": "2026-07-21T07:05:00.7619335Z",
       "bytes": 694761,
       "sha256": "6284b3ff29dc52e827ac845a5ede479e30d604959b27716a769adaa4f0ec32f9",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33444,7 +35203,7 @@
       "retrieved_at": "2026-07-21T07:05:02.9845214Z",
       "bytes": 265669,
       "sha256": "2a352b4fefd8b199d589021f7e9a6c7e3d7c35bc70a2f0274d1bfb9f36c77b70",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33459,7 +35218,7 @@
       "retrieved_at": "2026-07-21T07:05:04.7685056Z",
       "bytes": 594169,
       "sha256": "5a14aca04ae0c16ed0d7145aad59e14579c89c5e4898a3c3a9092501f8592c6f",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33474,7 +35233,7 @@
       "retrieved_at": "2026-07-21T07:05:06.6536568Z",
       "bytes": 508914,
       "sha256": "7865540f282c603eef17bc6a6e4cc6bfac7b16ebe356c83dc9b7b0b06a28dab6",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33489,7 +35248,7 @@
       "retrieved_at": "2026-07-21T07:05:08.3242912Z",
       "bytes": 554002,
       "sha256": "7b8316a857af059c18f4839c4232633cf87dc97c1ebb365e1321199b2902da9d",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33504,7 +35263,7 @@
       "retrieved_at": "2026-07-21T07:05:10.1458910Z",
       "bytes": 233532,
       "sha256": "71a41287fde90b40c16b79a291a402900cd0fd03b41578cff08492f2e23e7acf",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     },
     {
       "year": 2026,
@@ -33519,7 +35278,7 @@
       "retrieved_at": "2026-07-21T07:05:12.7668206Z",
       "bytes": 639318,
       "sha256": "669d24954fd47259d0f0b71ed3857bf72546fae7fa93c2968f9cb52dff9dcbf2",
-      "status": "exact_snapshot_page_located"
+      "status": "visually_verified_exact_snapshot"
     }
   ],
   "rejected_or_unresolved_leads": [

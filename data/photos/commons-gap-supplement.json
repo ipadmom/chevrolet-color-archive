@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T16:25:35.270Z",
+  "generated_at": "2026-07-23T20:13:18.737Z",
   "source_manifest": "data/photos/commons-release-manifest.json",
   "scope": "Exact-identity Wikimedia Commons follow-up for the 26 catalog models with no archived representative after the first quality audit.",
   "policy": {
@@ -640,6 +640,16 @@
           "evidence_note": "Title and description explicitly identify a Chevrolet BrightDrop Zevo 600. The stated 2024 model year precedes the catalog's 2025 Chevrolet rename, so no exact year is recorded."
         },
         {
+          "page_title": "File:FedEx BrightDrop Seattle June 2025.jpg",
+          "decision": "selected",
+          "identity_terms": [
+            "Chevrolet BrightDrop 600",
+            "BrightDrop 600"
+          ],
+          "explicit_year": null,
+          "evidence_note": "The Commons caption and description explicitly identify a Chevrolet BrightDrop 600. June 2025 is the capture date only, so no model year is recorded."
+        },
+        {
           "page_title": "File:FedEx Brightdrop Zevo 600 in downtown San Mateo, California, front qtr.jpg",
           "decision": "rejected",
           "identity_terms": [
@@ -673,10 +683,10 @@
     }
   ],
   "results": {
-    "applied_at": "2026-07-22T16:25:35.270Z",
-    "candidates_staged": 26,
-    "candidates_selected": 26,
-    "unique_assets_added": 25,
+    "applied_at": "2026-07-23T20:13:18.737Z",
+    "candidates_staged": 27,
+    "candidates_selected": 27,
+    "unique_assets_added": 26,
     "selected_model_ids": [
       "classic-six",
       "baby-grand",
@@ -1566,6 +1576,39 @@
         "identity_term_matched": "Zevo 600",
         "evidence_note": "Title and description explicitly identify a Chevrolet BrightDrop Zevo 600. The stated 2024 model year precedes the catalog's 2025 Chevrolet rename, so no exact year is recorded.",
         "local_path": "tmp/commons-release-assets/commons-164207072-78c8ddde7507-2024-chevrolet-brightdrop-zevo-600.jpg",
+        "raw_source_record_paths": [
+          "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+        ]
+      },
+      {
+        "model_id": "brightdrop-600",
+        "page_title": "File:FedEx BrightDrop Seattle June 2025.jpg",
+        "decision": "selected",
+        "candidate_id": "commons-sha1-b22e3fed412977c1c156",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:FedEx_BrightDrop_Seattle_June_2025.jpg",
+        "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FedEx_BrightDrop_Seattle_June_2025.jpg",
+        "commons_sha1": "b22e3fed412977c1c156d860d6d363bd7b86cdaf",
+        "sha256": "1c5a46b4dfb7b26733b97627ed7390b107bf50d9960a14d74109da07958e6711",
+        "bytes": 2770934,
+        "width": 4032,
+        "height": 2268,
+        "author": "AdJHu",
+        "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:AdJHu\" title=\"User:AdJHu\">AdJHu</a>",
+        "credit": "Own work",
+        "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "license": "CC0",
+        "license_family": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "license_url_source": "commons-extmetadata",
+        "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+        "attribution_required": false,
+        "attribution": "AdJHu - FedEx BrightDrop Seattle June 2025 - CC0",
+        "description": "FedEx branded Chevrolet BrightDrop 600 in Seattle (June 2025)",
+        "original_filename": "FedEx BrightDrop Seattle June 2025.jpg",
+        "explicit_year": null,
+        "identity_term_matched": "Chevrolet BrightDrop 600",
+        "evidence_note": "The Commons caption and description explicitly identify a Chevrolet BrightDrop 600. June 2025 is the capture date only, so no model year is recorded.",
+        "local_path": "tmp/commons-release-assets/commons-167694733-b22e3fed4129-fedex-brightdrop-seattle-june-2025.jpg",
         "raw_source_record_paths": [
           "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
         ]

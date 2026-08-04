@@ -1,15 +1,15 @@
 {
   "schema_version": 11,
-  "generated_at": "2026-07-23T18:22:40Z",
+  "generated_at": "2026-08-04T10:50:24Z",
   "archive": "Chevrolet Color Archive",
   "normalization_contract": "Missing color rows mean unverified research coverage, not negative availability. Every published color availability row has one direct evidence_source_id. Qualified GM Fleet Guide palette unions, qualified historical-table subsets, and reviewed specialty-paint subsets remain distinct from complete governing charts. Exact simultaneous model programs remain separate generation memberships within one model-year. Missing factory codes are null and carry a controlled source-status value. RPO, SEO, literal SEO-cell state, normalized WA code, literal WA-cell state, authorized-upfitter order codes, minimum-batch, and factory-installation fields remain structured and source-linked. Paint schemes preserve primary and secondary components separately and never create standalone color availability. RockAuto retailer observations remain isolated in four secondary-lead tables and never create color availability or evidence claims.",
   "coverage": {
     "models": 149,
     "model_years": 1792,
-    "model_year_generation_memberships": 2307,
+    "model_year_generation_memberships": 2337,
     "platform_eras": 218,
-    "color_identities": 1696,
-    "verified_color_availability_rows": 2010,
+    "color_identities": 1832,
+    "verified_color_availability_rows": 2146,
     "paint_schemes": 1369,
     "paint_scheme_components": 2738,
     "model_year_research_rows": 1792,
@@ -21,18 +21,18 @@
     "color_code_crosswalk_candidates": 96,
     "color_chart_verified_model_years": 85,
     "reviewed_qualified_historical_table_model_years": 6,
-    "reviewed_qualified_palette_union_model_years": 57,
-    "qualified_palette_union_availability_rows": 462,
+    "reviewed_qualified_palette_union_model_years": 69,
+    "qualified_palette_union_availability_rows": 568,
     "qualified_historical_table_availability_rows": 4,
     "reviewed_specialty_palette_subset_model_years": 42,
-    "specialty_palette_subset_model_years": 58,
-    "specialty_palette_subset_availability_rows": 571,
-    "unverified_model_years": 1598,
-    "sources": 2877,
-    "source_revisions": 1866,
-    "evidence_claims": 2010,
-    "source_links": 28490,
-    "photo_assets": 302,
+    "specialty_palette_subset_model_years": 66,
+    "specialty_palette_subset_availability_rows": 601,
+    "unverified_model_years": 1586,
+    "sources": 2883,
+    "source_revisions": 1869,
+    "evidence_claims": 2146,
+    "source_links": 28913,
+    "photo_assets": 303,
     "photo_color_links": 5
   },
   "tables": [
@@ -41,7 +41,7 @@
       "path": "data/parquet/models.parquet",
       "rows": 149,
       "columns": 11,
-      "sha256": "8925905769cced699d3eb9f3332b4bf01bcacd74c40801b4479aa73867d99f6c",
+      "sha256": "10e5c5d2788cb0df63f3205f5458d0e50eac59e4ff3ffd4233eda179062cda7a",
       "primary_key": [
         "model_id"
       ],
@@ -50,9 +50,9 @@
     {
       "table": "generations",
       "path": "data/parquet/generations.parquet",
-      "rows": 971,
+      "rows": 1007,
       "columns": 14,
-      "sha256": "131213359be36062ec46954ba857e2ae1ec7c64f905d5e555dcf5190a1d7b49f",
+      "sha256": "d6ed56f73d59f5b5397ae1476e1796a770177797db7057acf51486d4177a0e56",
       "primary_key": [
         "generation_id"
       ],
@@ -65,7 +65,7 @@
       "path": "data/parquet/model_years.parquet",
       "rows": 1792,
       "columns": 10,
-      "sha256": "bfcc96cc74b6e392b649a0884d8281ab59dcda1f5710674ba591bca927f65249",
+      "sha256": "ca9a88ae7daecabf67545fbc7118a5d16ada31d1d706314107e01e1c95a1b7ed",
       "primary_key": [
         "model_year_id"
       ],
@@ -78,9 +78,9 @@
     {
       "table": "model_year_generation_memberships",
       "path": "data/parquet/model_year_generation_memberships.parquet",
-      "rows": 2307,
+      "rows": 2337,
       "columns": 9,
-      "sha256": "57ee08b7d07d301d4fb50fd260c60fb815417a83a5712b016395cc84daf23d85",
+      "sha256": "bb1dc1615b629b34ef69673325f18a5f4d2321be3480739adeb202cc6435a85e",
       "primary_key": [
         "model_year_generation_membership_id"
       ],
@@ -106,9 +106,9 @@
     {
       "table": "color_identities",
       "path": "data/parquet/color_identities.parquet",
-      "rows": 1696,
+      "rows": 1832,
       "columns": 9,
-      "sha256": "73b5c351ffb14223623e88f19570cacb5f6217a373c8b551f7cb254819e0332a",
+      "sha256": "40d67a3984f97dd4d06daace2179ac87c63bc6925a1574a73b43f3e8277a3ab4",
       "primary_key": [
         "color_identity_id"
       ],
@@ -120,9 +120,9 @@
     {
       "table": "color_availability",
       "path": "data/parquet/color_availability.parquet",
-      "rows": 2010,
+      "rows": 2146,
       "columns": 32,
-      "sha256": "b4dbf65a93eb9e5bcc372011f2a706b8f41cde380b7cdeab6b6511ecd4f0e89f",
+      "sha256": "08ddb7d2b28079efb0c6e6598b2648a0fb3353e3f71d05b4b36db997ff9c4b92",
       "primary_key": [
         "availability_id"
       ],
@@ -168,7 +168,7 @@
       "path": "data/parquet/model_year_research.parquet",
       "rows": 1792,
       "columns": 17,
-      "sha256": "227c66cc04d68b2d260442f37aeee9f9d39d2d65c1432763f64d5925478e87b7",
+      "sha256": "9cfbea07a88833c5c9cfbfa8d1dddc5f6e474f1a9c8619c4421ff150ffe79595",
       "primary_key": [
         "model_year_id"
       ],
@@ -182,7 +182,7 @@
       "path": "data/parquet/model_year_source_candidates.parquet",
       "rows": 1862,
       "columns": 14,
-      "sha256": "af25f13f9fb75a258f0f4a6bcff510b313f7199bbedb24ef212196391e750be8",
+      "sha256": "ea662a06e885fcdfdeaa82b7edd393e04fca14c753cd20c9828037b99b733eea",
       "primary_key": [
         "source_candidate_link_id"
       ],
@@ -266,9 +266,9 @@
     {
       "table": "sources",
       "path": "data/parquet/sources.parquet",
-      "rows": 2877,
+      "rows": 2883,
       "columns": 19,
-      "sha256": "c6c5a5fb237499a3b7e1b6fd49bbc10c805857cbe6f8839987b1b91f388f3cae",
+      "sha256": "786a13b58b9bca9dbfa502f0ff2982bcb1cd5e94f22b1418a6f3111e66542821",
       "primary_key": [
         "source_id"
       ],
@@ -277,9 +277,9 @@
     {
       "table": "source_revisions",
       "path": "data/parquet/source_revisions.parquet",
-      "rows": 1866,
+      "rows": 1869,
       "columns": 14,
-      "sha256": "74d875e357b7b6da62733395b1217302d71c14114d25b7bf6263e63eae84c945",
+      "sha256": "425a0068d2c5abc53cf903b15a91c37827fc056dbfb87e4547e57f672b600cc9",
       "primary_key": [
         "source_revision_id"
       ],
@@ -290,9 +290,9 @@
     {
       "table": "evidence_claims",
       "path": "data/parquet/evidence_claims.parquet",
-      "rows": 2010,
+      "rows": 2146,
       "columns": 33,
-      "sha256": "62664f8e1392dfe33ca63b43bdd1b7023695e41ec8f7670c6685c5c5e3a680ac",
+      "sha256": "443da0b50eff2887d174e75870384407956a972a092c973db6973430a64e524c",
       "primary_key": [
         "evidence_claim_id"
       ],
@@ -307,9 +307,9 @@
     {
       "table": "source_links",
       "path": "data/parquet/source_links.parquet",
-      "rows": 28490,
+      "rows": 28913,
       "columns": 14,
-      "sha256": "132b6ad787bf5df7755c90e786de2157e71a9aac8dea9f7a71c4b7e5e403c1bb",
+      "sha256": "a62fd0e0d505f61a956d212fa466622f044c1144dc8ff059d3284fe2e47a8219",
       "primary_key": [
         "source_link_id"
       ],
@@ -320,9 +320,9 @@
     {
       "table": "photo_assets",
       "path": "data/parquet/photo_assets.parquet",
-      "rows": 302,
+      "rows": 303,
       "columns": 25,
-      "sha256": "85f4c1e70bb6e08d46dd6480450e6ea770690007da91a604ec52d4c177c3276d",
+      "sha256": "61557771b9630fb80aefdd917cf6a1cea69c81f6bc61c794a91bd3a27c54328c",
       "primary_key": [
         "photo_id"
       ],
@@ -336,9 +336,9 @@
     {
       "table": "model_photo_links",
       "path": "data/parquet/model_photo_links.parquet",
-      "rows": 304,
+      "rows": 305,
       "columns": 7,
-      "sha256": "10fb858569f4d284762ea27308ed0c7bc63f5afaf0cf6b79073aee7e3ae17b85",
+      "sha256": "e5ef1dc5abe3b0c5e2d5caf0182af06d313e92e0720da1f09dc60206a94e6f39",
       "primary_key": [
         "model_photo_link_id"
       ],

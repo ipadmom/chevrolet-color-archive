@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "archive": "Chevrolet Color Archive",
-  "generated_at": "2026-07-22T16:25:35.270Z",
+  "generated_at": "2026-07-23T20:13:18.737Z",
   "scope": {
     "market": "United States",
     "catalog_models_available": 149,
@@ -157,25 +157,25 @@
     "finished_at": "2026-07-21T04:34:49.876Z",
     "api_requests": 232,
     "api_errors": 0,
-    "unique_assets_selected": 302,
+    "unique_assets_selected": 303,
     "assets_downloaded": 14,
     "assets_reused": 272,
-    "staged_asset_count": 302,
-    "staged_total_bytes": 922817135,
+    "staged_asset_count": 303,
+    "staged_total_bytes": 925588069,
     "staged_directory": "tmp/commons-release-assets",
     "assets_excluded_by_quality_audit": 9,
     "model_associations_corrected": 12,
     "preview_assets": {
-      "started_at": "2026-07-22T16:26:02.873Z",
-      "finished_at": "2026-07-22T16:28:43.217Z",
-      "input_asset_count": 302,
-      "generated_asset_count": 3,
-      "reused_asset_count": 299,
-      "verified_original_count": 302,
-      "original_total_bytes": 922817135,
-      "preview_total_bytes": 60294094,
-      "bytes_saved": 862523041,
-      "percent_reduction": 93.47,
+      "started_at": "2026-07-23T20:13:45.058Z",
+      "finished_at": "2026-07-23T20:14:16.573Z",
+      "input_asset_count": 303,
+      "generated_asset_count": 1,
+      "reused_asset_count": 302,
+      "verified_original_count": 303,
+      "original_total_bytes": 925588069,
+      "preview_total_bytes": 60582620,
+      "bytes_saved": 865005449,
+      "percent_reduction": 93.45,
       "staged_directory": "tmp/commons-release-previews",
       "release_owner": "ipadmom",
       "release_repository": "chevrolet-color-archive",
@@ -6948,14 +6948,24 @@
           "returned": 1,
           "eligible": 1,
           "rejections": {}
+        },
+        {
+          "kind": "reviewed_exact_title",
+          "target_year": null,
+          "query": "exact Commons page title: File:FedEx BrightDrop Seattle June 2025.jpg",
+          "returned": 1,
+          "eligible": 1,
+          "rejections": {}
         }
       ],
       "representative_asset_ids": [
-        "commons-sha1-78c8ddde75075c8115a5"
+        "commons-sha1-78c8ddde75075c8115a5",
+        "commons-sha1-b22e3fed412977c1c156"
       ],
       "exact_year_candidates": [],
       "asset_ids": [
-        "commons-sha1-78c8ddde75075c8115a5"
+        "commons-sha1-78c8ddde75075c8115a5",
+        "commons-sha1-b22e3fed412977c1c156"
       ]
     }
   ],
@@ -24970,6 +24980,71 @@
       "preview_local_path": "tmp/commons-release-previews/preview-commons-sha1-bc99dd5476f65c05499b-58002f744dd71360.webp",
       "preview_release_asset_name": "preview-commons-sha1-bc99dd5476f65c05499b-58002f744dd71360.webp",
       "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-bc99dd5476f65c05499b-58002f744dd71360.webp"
+    },
+    {
+      "candidate_id": "commons-sha1-b22e3fed412977c1c156",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_gap_supplement"
+      ],
+      "selection_contexts": [
+        {
+          "kind": "reviewed_gap_supplement",
+          "model_id": "brightdrop-600",
+          "exact_year": null,
+          "evidence_note": "The Commons caption and description explicitly identify a Chevrolet BrightDrop 600. June 2025 is the capture date only, so no model year is recorded.",
+          "exact_page_title": "File:FedEx BrightDrop Seattle June 2025.jpg"
+        }
+      ],
+      "model_ids": [
+        "brightdrop-600"
+      ],
+      "explicit_year": null,
+      "explicit_year_source": null,
+      "explicit_year_evidence": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:FedEx_BrightDrop_Seattle_June_2025.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FedEx_BrightDrop_Seattle_June_2025.jpg",
+      "source_timestamp": "2025-06-15T03:57:14Z",
+      "author": "AdJHu",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:AdJHu\" title=\"User:AdJHu\">AdJHu</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC0",
+      "license_family": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+      "attribution_required": false,
+      "attribution": "AdJHu - FedEx BrightDrop Seattle June 2025 - CC0",
+      "description": "FedEx branded Chevrolet BrightDrop 600 in Seattle (June 2025)",
+      "model_queries": [
+        "exact Commons page title: File:FedEx BrightDrop Seattle June 2025.jpg"
+      ],
+      "score": 200,
+      "sha256": "1c5a46b4dfb7b26733b97627ed7390b107bf50d9960a14d74109da07958e6711",
+      "commons_sha1": "b22e3fed412977c1c156d860d6d363bd7b86cdaf",
+      "mime": "image/jpeg",
+      "width": 4032,
+      "height": 2268,
+      "bytes": 2770934,
+      "original_filename": "FedEx BrightDrop Seattle June 2025.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-167694733-b22e3fed4129-fedex-brightdrop-seattle-june-2025.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-167694733-b22e3fed4129-fedex-brightdrop-seattle-june-2025.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
+      "local_path": "tmp/commons-release-assets/commons-167694733-b22e3fed4129-fedex-brightdrop-seattle-june-2025.jpg",
+      "commons_raw_record_paths": [
+        "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+      ],
+      "supplement_audit": "data/photos/commons-gap-supplement.json",
+      "preview_sha256": "b79cad60e3aead633397c243e793d026a05dd07c06fe638345825cfd0397a274",
+      "preview_bytes": 288526,
+      "preview_width": 1600,
+      "preview_height": 900,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/commons-release-previews/preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
+      "preview_release_asset_name": "preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp"
     }
   ],
   "quality_audit": {
@@ -24984,11 +25059,11 @@
   },
   "coverage_supplement": {
     "report": "data/photos/commons-gap-supplement.json",
-    "applied_at": "2026-07-22T16:25:35.270Z",
+    "applied_at": "2026-07-23T20:13:18.737Z",
     "target_model_count": 26,
     "selected_model_count": 17,
-    "selected_asset_count": 26,
-    "unique_assets_added": 25,
+    "selected_asset_count": 27,
+    "unique_assets_added": 26,
     "selected_model_ids": [
       "classic-six",
       "baby-grand",

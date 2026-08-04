@@ -28,6 +28,7 @@ URLs.
 - Exact-title gap supplement runner: `scripts/apply-commons-gap-supplement.mjs`
 - Gap review-sheet builder: `scripts/build-commons-gap-review-sheets.mjs`
 - Review manifest: `data/photos/commons-release-manifest.json`
+- Current immutable release ledger: [commons-release-manifest-303.json](https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-release-manifest-303.json)
 - Association audit: `data/photos/commons-candidate-audit.json`
 - Exact-identity gap audit: `data/photos/commons-gap-supplement.json`
 - Ignored binary staging: `tmp/commons-release-assets/`
@@ -214,13 +215,19 @@ The 25 new originals and 25 previews were uploaded to the existing pinned
 `photo-archive-v1` Release on July 21 and 22, 2026. The added exact matches
 include a 1915 Model H4 Baby Grand and two views of a 1915 H-3 Amesbury Special.
 
+The July 23 current-model refresh added a second BrightDrop 600 identity
+reference. Commons explicitly describes the CC0 photograph as a Chevrolet
+BrightDrop 600. Its June 2025 date is the capture date, not model-year evidence.
+The exact original and its preview were uploaded to the same pinned Release and
+verified against GitHub-reported byte counts and SHA-256 digests.
+
 The current manifest therefore contains:
 
 - 140 models with at least one audited representative;
-- 302 exact Commons originals totaling 922,817,135 bytes;
-- 295 JPEG files and 7 PNG files;
-- 140 CC BY-SA, 74 CC BY, 74 public-domain, and 14 CC0 assets; and
-- 302 WebP site previews totaling 60,294,094 bytes, a 93.47 percent delivery
+- 303 exact Commons originals totaling 925,588,069 bytes;
+- 296 JPEG files and 7 PNG files;
+- 140 CC BY-SA, 74 CC BY, 74 public-domain, and 15 CC0 assets; and
+- 303 WebP site previews totaling 60,582,620 bytes, a 93.45 percent delivery
   reduction while preserving every original.
 
 Nine identities remain empty because no strong exact photograph survived the
@@ -229,7 +236,7 @@ same gate: Series F, Copper-Cooled, Malibu Limited, Malibu Classic (2008), Chevy
 discovery gaps. Do not fill them with siblings,
 generic generation photos, illustrations, detail images, or reused names.
 
-Every selected local file was rehashed after staging. All 302 original byte
+Every selected local file was rehashed after staging. All 303 original byte
 lengths and SHA-256 values match the final manifest. The preview build also
 reverified every original before encoding. All original and preview asset names
 and candidate IDs are unique, all five legacy references resolve, and no
@@ -238,7 +245,10 @@ and candidate IDs are unique, all five legacy references resolve, and no
 An earlier throttled attempt, the nine first-audit exclusions, and four new
 visual-review rejections leave 20 unreferenced originals in the ignored staging
 directory. They remain for reproducibility and are not part of the manifest.
-The live Release was then enumerated through the GitHub API. All 604 expected
+The live Release was then enumerated through the GitHub API. All 606 expected
 photo assets were present with exact byte counts and matching SHA-256 digests;
-the Release contains one additional attribution-ledger asset, for 605 assets
-total. The application may therefore use the pinned URLs in this manifest.
+the Release contains two immutable attribution-ledger snapshots, for 608 assets
+total. The current 303-photo ledger is 1,227,664 bytes with SHA-256
+`f048ff2fb241fbff828fb4cbd774ca9edbe5a2d304036383c51181c6d6aaba5b`.
+The earlier ledger remains untouched. The application may therefore use the
+pinned URLs in the current manifest.

@@ -37,7 +37,7 @@
       2023,
       2024
     ],
-    "verified_palette_table_count": 66,
+    "verified_palette_table_count": 80,
     "verified_order_guide_sample_count": 1,
     "highest_confidence_ingestion_ready_years": [
       2025,
@@ -4239,6 +4239,617 @@
       "bytes": 1236728,
       "pdf_page_count": 300,
       "archive_asset_name": "2026-corvette-23208.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:blazer-ev",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "blazer-ev"
+      ],
+      "source_model_label": "Chevrolet Blazer EV",
+      "pdf_pages": [
+        17
+      ],
+      "page_locator": "PDF page 17, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Galaxy Gray Metallic",
+        "Iridescent Pearl Tricoat",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional charge."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional charge."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:silverado-ev",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "silverado-ev"
+      ],
+      "source_model_label": "Chevrolet Silverado EV",
+      "pdf_pages": [
+        20
+      ],
+      "page_locator": "PDF page 20, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide palette for 2024 Silverado EV WT 3WT and 4WT; exact option restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Black": [
+          "Late model year availability."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:corvette",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "corvette"
+      ],
+      "source_model_label": "Chevrolet Corvette Stingray, Z06, and E-Ray",
+      "pdf_pages": [
+        32
+      ],
+      "page_locator": "PDF page 32, EXTERIOR COLORS.",
+      "colors": [
+        "Accelerate Yellow Metallic",
+        "Amplify Orange Tintcoat",
+        "Arctic White",
+        "Black",
+        "Cacti Green",
+        "Carbon Flash Metallic",
+        "Ceramic Matrix Gray Metallic",
+        "Hypersonic Gray Metallic",
+        "Rapid Blue",
+        "Red Mist Metallic Tintcoat",
+        "Riptide Blue Metallic",
+        "Sea Wolf Gray Tricoat",
+        "Silver Flare Metallic",
+        "Torch Red"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Accelerate Yellow Metallic": [
+          "Premium paint; additional cost."
+        ],
+        "Amplify Orange Tintcoat": [
+          "Premium paint; additional cost."
+        ],
+        "Rapid Blue": [
+          "Premium paint; additional cost."
+        ],
+        "Red Mist Metallic Tintcoat": [
+          "Premium paint; additional cost."
+        ],
+        "Sea Wolf Gray Tricoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:trax",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "trax"
+      ],
+      "source_model_label": "Chevrolet Trax",
+      "pdf_pages": [
+        36
+      ],
+      "page_locator": "PDF page 36, EXTERIOR COLORS.",
+      "colors": [
+        "Blue Glow Metallic",
+        "Cacti Green",
+        "Cayenne Orange Metallic",
+        "Crimson Metallic",
+        "Fountain Blue",
+        "Harvest Bronze Metallic",
+        "Mosaic Black Metallic",
+        "Nitro Yellow Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Cacti Green": [
+          "Late model year availability."
+        ],
+        "Cayenne Orange Metallic": [
+          "Premium paint; additional cost."
+        ],
+        "Fountain Blue": [
+          "Premium paint; additional cost."
+        ],
+        "Nitro Yellow Metallic": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:trailblazer",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "trailblazer"
+      ],
+      "source_model_label": "Chevrolet Trailblazer",
+      "pdf_pages": [
+        37
+      ],
+      "page_locator": "PDF page 37, EXTERIOR COLORS.",
+      "colors": [
+        "Cacti Green",
+        "Copper Harbor Metallic",
+        "Crimson Metallic",
+        "Fountain Blue",
+        "Iridescent Pearl Tricoat",
+        "Mosaic Black Metallic",
+        "Nitro Yellow Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Fountain Blue": [
+          "Premium paint; additional cost."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Nitro Yellow Metallic": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:equinox",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "equinox"
+      ],
+      "source_model_label": "Chevrolet Equinox",
+      "pdf_pages": [
+        40
+      ],
+      "page_locator": "PDF page 40, EXTERIOR COLORS.",
+      "colors": [
+        "Harvest Bronze Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Mosaic Black Metallic",
+        "Radiant Red Tintcoat",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:blazer",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "blazer"
+      ],
+      "source_model_label": "Chevrolet Blazer",
+      "pdf_pages": [
+        47
+      ],
+      "page_locator": "PDF page 47, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Copper Bronze Metallic",
+        "Iridescent Pearl Tricoat",
+        "Nitro Yellow Metallic",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Riptide Blue Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Nitro Yellow Metallic": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:tahoe",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "tahoe"
+      ],
+      "source_model_label": "Chevrolet Tahoe",
+      "pdf_pages": [
+        53
+      ],
+      "page_locator": "PDF page 53, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Dark Ash Metallic",
+        "Empire Beige Metallic",
+        "Iridescent Pearl Tricoat",
+        "Midnight Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Silver Sage Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:colorado",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "colorado"
+      ],
+      "source_model_label": "Chevrolet Colorado",
+      "pdf_pages": [
+        61
+      ],
+      "page_locator": "PDF page 61, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Glacier Blue Metallic",
+        "Harvest Bronze Metallic",
+        "Nitro Yellow Metallic",
+        "Radiant Red Tintcoat",
+        "Sand Dune Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Glacier Blue Metallic": [
+          "Premium paint; additional cost."
+        ],
+        "Nitro Yellow Metallic": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:silverado-1500",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "silverado"
+      ],
+      "source_model_label": "Chevrolet Silverado 1500",
+      "pdf_pages": [
+        66
+      ],
+      "page_locator": "PDF page 66, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Dark Ash Metallic",
+        "Glacier Blue Metallic",
+        "Harvest Bronze Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Glacier Blue Metallic": [
+          "Premium paint; additional cost."
+        ],
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:silverado-hd",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 2500 HD and 3500 HD",
+      "pdf_pages": [
+        70
+      ],
+      "page_locator": "PDF page 70, EXTERIOR COLORS.",
+      "colors": [
+        "Auburn Metallic",
+        "Black",
+        "Dark Ash Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Red Hot",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:silverado-3500-chassis-cab",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 3500 HD Chassis Cab",
+      "pdf_pages": [
+        76
+      ],
+      "page_locator": "PDF page 76, EXTERIOR COLORS.",
+      "colors": [
+        "Auburn Metallic",
+        "Black",
+        "Dark Ash Metallic",
+        "Iridescent Pearl Tricoat",
+        "Lakeshore Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Red Hot",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": [
+          "Premium paint; additional cost."
+        ],
+        "Radiant Red Tintcoat": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:silverado-4500-6500-hd",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "silverado-hd"
+      ],
+      "source_model_label": "Chevrolet Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab",
+      "pdf_pages": [
+        77
+      ],
+      "page_locator": "PDF page 77, EXTERIOR COLORS.",
+      "colors": [
+        "Auburn Metallic",
+        "Black",
+        "Dark Ash Metallic",
+        "Glacier Blue Metallic",
+        "Greenstone Metallic",
+        "Lakeshore Blue Metallic",
+        "Northsky Blue Metallic",
+        "Red Hot",
+        "Silver Ice Metallic",
+        "Slate Gray Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "color_restrictions": {
+        "Glacier Blue Metallic": [
+          "Premium paint; additional cost."
+        ]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "gm-fleet-guide-us-2024-v3:2024:express",
+      "source_id": "gm-fleet-guide-us-2024-v3",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": [
+        "express"
+      ],
+      "source_model_label": "Chevrolet Express Passenger, Cargo, and Cutaway",
+      "pdf_pages": [
+        87,
+        89,
+        91
+      ],
+      "page_locator": "PDF pages 87, 89, and 91, EXTERIOR COLORS.",
+      "colors": [
+        "Black",
+        "Red Hot",
+        "Silver Ice Metallic",
+        "Summit White"
+      ],
+      "availability_scope": "Visually verified GM Fleet Guide palette union shared by the listed Express Passenger, Cargo, and Cutaway configurations; exact option restrictions require the governing Order Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The page prints no factory paint codes."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+      "sha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+      "bytes": 14780183,
+      "pdf_page_count": 114,
+      "archive_asset_name": "2024-gm-fleet-guide-v3-mirror.pdf"
     }
   ],
   "verified_order_guide_samples": [

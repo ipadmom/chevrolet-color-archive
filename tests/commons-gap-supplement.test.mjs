@@ -41,7 +41,7 @@ test("Commons gap supplement covers all targets and retains only reviewed exact 
   assert.equal(plan.targets.length, 26);
   assert.equal(new Set(plan.targets.map((target) => target.model_id)).size, 26);
   assert.equal(candidates.filter((candidate) => candidate.decision === "review").length, 0);
-  assert.equal(selected.length, 26);
+  assert.equal(selected.length, 27);
   assert.equal(selectedModels.length, 17);
   assert.deepEqual(plan.results.selected_model_ids, selectedModels);
   assert.deepEqual(plan.results.models_still_without_exact_photo, expectedGaps);
@@ -54,8 +54,8 @@ test("Commons gap supplement covers all targets and retains only reviewed exact 
 
   assert.equal(manifest.coverage_supplement.visual_review_completed, true);
   assert.equal(manifest.coverage_supplement.release_upload_performed, true);
-  assert.equal(manifest.coverage_supplement.selected_asset_count, 26);
-  assert.equal(manifest.coverage_supplement.unique_assets_added, 25);
+  assert.equal(manifest.coverage_supplement.selected_asset_count, 27);
+  assert.equal(manifest.coverage_supplement.unique_assets_added, 26);
   assert.deepEqual(manifest.coverage_supplement.selected_model_ids, selectedModels);
   assert.deepEqual(manifest.coverage_supplement.models_still_without_exact_photo, expectedGaps);
 
@@ -148,7 +148,10 @@ test("BrightDrop photos fail closed on exact 400 identity and Chevrolet branding
     brightdrop600.candidates
       .filter((candidate) => candidate.decision === "selected")
       .map((candidate) => candidate.page_title),
-    ["File:2024 Chevrolet BrightDrop Zevo 600.jpg"],
+    [
+      "File:2024 Chevrolet BrightDrop Zevo 600.jpg",
+      "File:FedEx BrightDrop Seattle June 2025.jpg",
+    ],
   );
   const fedex = brightdrop600.candidates.find((candidate) =>
     candidate.page_title.startsWith("File:FedEx Brightdrop Zevo 600"),

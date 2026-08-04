@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-07-23T20:01:58.9219537Z",
+  "visibility": "public",
+  "classification": "archive-internal",
+  "source_manifest": "data/photos/commons-release-manifest.json",
+  "scope": "Wikimedia Commons identity-photo coverage for the 18 current Chevrolet U.S. nameplates, including the completed archival handoff for one new BrightDrop 600 reference. Identity photos are not paint evidence.",
+  "policy": {
+    "identity_rule": "A candidate must identify the exact current catalog nameplate or an exact model year in Commons metadata. Generic BrightDrop, a sibling model, a prior-generation image, or a visible resemblance is insufficient.",
+    "publication_rule": "A published candidate requires an existing pinned ipadmom GitHub Release URL, Commons source page and original URL, author, license, dimensions, Commons SHA-1, and local SHA-256. A source-only candidate stays release-stage only.",
+    "paint_rule": "Identity photographs are not paint evidence. No photo-to-color link is promoted unless Commons metadata states the exact paint identity and independent factory evidence supports that identity."
+  },
+  "manifest_coverage": {
+    "current_model_ids": ["corvette", "suburban", "blazer", "tahoe", "express", "silverado", "silverado-hd", "trailblazer", "colorado", "equinox", "traverse", "trax", "low-cab-forward", "blazer-ev", "equinox-ev", "silverado-ev", "brightdrop-400", "brightdrop-600"],
+    "archived_asset_counts": {
+      "corvette": 10,
+      "suburban": 3,
+      "blazer": 2,
+      "tahoe": 5,
+      "express": 2,
+      "silverado": 2,
+      "silverado-hd": 2,
+      "trailblazer": 2,
+      "colorado": 2,
+      "equinox": 2,
+      "traverse": 2,
+      "trax": 2,
+      "low-cab-forward": 1,
+      "blazer-ev": 2,
+      "equinox-ev": 2,
+      "silverado-ev": 2,
+      "brightdrop-400": 0,
+      "brightdrop-600": 2
+    },
+    "archived_asset_total": 45,
+    "published_current_model_photo_to_color_links": 0
+  },
+  "undercovered_models": [
+    {
+      "model_id": "low-cab-forward",
+      "archived_candidate_count": 1,
+      "existing_archived_candidate_ids": ["commons-sha1-4d36094bbb4775c24faf"],
+      "existing_source_page_url": "https://commons.wikimedia.org/wiki/File:2019_Chevrolet_LCF_5500_HD_Crew_Cab_in_Bright_White,_front_right.jpg",
+      "existing_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-180984748-4d36094bbb47-2019-chevrolet-lcf-5500-hd-crew-cab-in-bright-white-front-right.jpg",
+      "fresh_query_results": [
+        {"query": "\"2025 Chevrolet Low Cab Forward\"", "result_count": 0},
+        {"query": "\"2026 Chevrolet Low Cab Forward\"", "result_count": 0},
+        {"query": "\"Chevrolet Low Cab Forward\"", "result_count": 0},
+        {"query": "\"Chevrolet LCF\"", "result_count": 2, "exact_chevrolet_result_count": 1, "noncandidate_reason": "The other result is explicitly a GMC truck, not a Chevrolet LCF. The exact Chevrolet result is the already archived 2019 LCF."}
+      ],
+      "result": "No second exact candidate is safe to add. The 2019 asset remains an identity reference only. Its Commons Bright White (16U) description does not establish a 2025 or 2026 factory paint identity."
+    },
+    {
+      "model_id": "brightdrop-400",
+      "archived_candidate_count": 0,
+      "fresh_query_results": [
+        {"query": "\"2025 Chevrolet BrightDrop 400\"", "result_count": 0},
+        {"query": "\"2026 Chevrolet BrightDrop 400\"", "result_count": 0},
+        {"query": "\"Chevrolet BrightDrop 400\"", "result_count": 0},
+        {"query": "\"BrightDrop 400\"", "result_count": 0},
+        {"query": "\"BrightDrop Zevo 400\"", "result_count": 15, "exact_400_result_count": 0, "noncandidate_reason": "Every returned vehicle file identified a BrightDrop EV600 or Zevo 600, or did not distinguish a 400 from a 600."},
+        {"query": "\"Zevo 400\"", "result_count": 0},
+        {"query": "\"BrightDrop EV410\"", "result_count": 15, "exact_400_result_count": 0, "noncandidate_reason": "The legacy EV410 query returned EV600/Zevo 600 files, not a 400 identity."}
+      ],
+      "result": "No exact Commons BrightDrop 400 image was found. No generic BrightDrop or BrightDrop 600 file was reassigned."
+    }
+  ],
+  "archived_this_pass": [
+    {
+      "status": "archived_identity_reference",
+      "model_id": "brightdrop-600",
+      "candidate_id": "commons-sha1-b22e3fed412977c1c156",
+      "page_title": "File:FedEx BrightDrop Seattle June 2025.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:FedEx_BrightDrop_Seattle_June_2025.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FedEx_BrightDrop_Seattle_June_2025.jpg",
+      "source_timestamp": "2025-06-15T03:57:14Z",
+      "commons_sha1": "b22e3fed412977c1c156d860d6d363bd7b86cdaf",
+      "mime": "image/jpeg",
+      "bytes": 2770934,
+      "width": 4032,
+      "height": 2268,
+      "author": "AdJHu",
+      "credit": "Own work",
+      "license": "CC0",
+      "license_family": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "description": "FedEx branded Chevrolet BrightDrop 600 in Seattle (June 2025)",
+      "identity_evidence": "The Commons description explicitly identifies a Chevrolet BrightDrop 600 and dates the photograph June 2025.",
+      "paint_evidence": "None. The file is not paint evidence.",
+      "sha256": "1c5a46b4dfb7b26733b97627ed7390b107bf50d9960a14d74109da07958e6711",
+      "release_asset_name": "commons-167694733-b22e3fed4129-fedex-brightdrop-seattle-june-2025.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-167694733-b22e3fed4129-fedex-brightdrop-seattle-june-2025.jpg",
+      "preview_sha256": "b79cad60e3aead633397c243e793d026a05dd07c06fe638345825cfd0397a274",
+      "preview_bytes": 288526,
+      "preview_release_asset_name": "preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
+      "release_verification": "GitHub reported both assets uploaded with byte counts and SHA-256 digests matching the local manifest."
+    }
+  ],
+  "release_stage_candidates": [],
+  "rows_added_to_production_manifest": 1,
+  "remaining_gaps": [
+    "BrightDrop 400 has no exact Commons candidate.",
+    "Low Cab Forward has one archived exact candidate and no second exact Commons candidate from the refreshed searches."
+  ]
+}

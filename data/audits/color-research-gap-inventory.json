@@ -31,33 +31,33 @@
   "summary": {
     "model_year_count": 1792,
     "completely_reviewed_count": 85,
-    "reviewed_qualified_count": 105,
+    "reviewed_qualified_count": 117,
     "reviewed_qualified_historical_table_count": 6,
-    "reviewed_qualified_palette_union_count": 57,
+    "reviewed_qualified_palette_union_count": 69,
     "reviewed_specialty_palette_subset_count": 42,
     "reviewed_no_chart_count": 4,
     "source_located_chart_unreviewed_count": 0,
-    "wholly_unreviewed_count": 1598,
-    "listing_count": 2010,
+    "wholly_unreviewed_count": 1586,
+    "listing_count": 2146,
     "dedicated_official_kit_count": 611,
     "related_line_official_kit_count": 71,
     "generic_full_line_official_kit_count": 927,
     "catalog_official_evidence_only_count": 179,
     "catalog_nonofficial_evidence_only_count": 4,
     "none_identified_count": 0,
-    "reviewed_model_year_count": 194,
-    "reviewed_qualified_palette_union_listing_count": 462,
+    "reviewed_model_year_count": 206,
+    "reviewed_qualified_palette_union_listing_count": 568,
     "reviewed_qualified_historical_table_listing_count": 4,
-    "reviewed_specialty_palette_subset_listing_count": 571,
-    "reviewed_specialty_palette_subset_application_year_count": 58,
+    "reviewed_specialty_palette_subset_listing_count": 601,
+    "reviewed_specialty_palette_subset_application_year_count": 66,
     "source_transcription_listing_count": 973,
     "model_count": 149,
     "catalog_range_count": 174,
     "platform_band_count": 218,
-    "app_generation_count": 971,
-    "current_color_identity_row_count": 1696,
-    "current_listing_application_row_count": 2010,
-    "app_year_source_record_count": 193,
+    "app_generation_count": 1007,
+    "current_color_identity_row_count": 1832,
+    "current_listing_application_row_count": 2146,
+    "app_year_source_record_count": 205,
     "app_unique_source_url_count": 137,
     "official_source_candidate_link_count": 1862,
     "gm_source_inventory_record_count": 691,
@@ -81,13 +81,13 @@
       "pass": true
     },
     "source_linked_reviewed_years": {
-      "expected": 193,
-      "actual": 193,
+      "expected": 205,
+      "actual": 205,
       "pass": true
     },
     "reviewed_qualified_palette_union_years": {
-      "expected": 57,
-      "actual": 57,
+      "expected": 69,
+      "actual": 69,
       "pass": true
     },
     "reviewed_specialty_palette_subset_years": {
@@ -96,18 +96,18 @@
       "pass": true
     },
     "specialty_palette_subset_application_years": {
-      "expected": 58,
-      "actual": 58,
+      "expected": 66,
+      "actual": 66,
       "pass": true
     },
     "current_color_listing_applications": {
-      "expected": 2010,
-      "actual": 2010,
+      "expected": 2146,
+      "actual": 2146,
       "pass": true
     },
     "model_year_listing_sum": {
-      "expected": 2010,
-      "actual": 2010,
+      "expected": 2146,
+      "actual": 2146,
       "pass": true
     },
     "audit_state_partition": {
@@ -357,14 +357,14 @@
       "label": "2020s",
       "model_year_count": 125,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 47,
+      "reviewed_qualified_count": 59,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 45,
+      "reviewed_qualified_palette_union_count": 57,
       "reviewed_specialty_palette_subset_count": 2,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 78,
-      "listing_count": 426,
+      "wholly_unreviewed_count": 66,
+      "listing_count": 562,
       "dedicated_official_kit_count": 0,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 125,
@@ -413,14 +413,14 @@
     "generic_full_line_official_kit": {
       "model_year_count": 927,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 89,
+      "reviewed_qualified_count": 101,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 57,
+      "reviewed_qualified_palette_union_count": 69,
       "reviewed_specialty_palette_subset_count": 32,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 838,
-      "listing_count": 962,
+      "wholly_unreviewed_count": 826,
+      "listing_count": 1098,
       "dedicated_official_kit_count": 0,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 927,
@@ -1483,14 +1483,14 @@
       ],
       "model_year_count": 73,
       "completely_reviewed_count": 6,
-      "reviewed_qualified_count": 5,
+      "reviewed_qualified_count": 6,
       "reviewed_qualified_historical_table_count": 3,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 1,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 61,
-      "listing_count": 79,
+      "wholly_unreviewed_count": 60,
+      "listing_count": 93,
       "dedicated_official_kit_count": 53,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 19,
@@ -3144,7 +3144,7 @@
       "reviewed_no_chart_count": 3,
       "source_located_chart_unreviewed_count": 0,
       "wholly_unreviewed_count": 31,
-      "listing_count": 624,
+      "listing_count": 626,
       "dedicated_official_kit_count": 39,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 49,
@@ -3700,14 +3700,14 @@
       ],
       "model_year_count": 45,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 4,
+      "reviewed_qualified_count": 5,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 2,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 41,
-      "listing_count": 18,
+      "wholly_unreviewed_count": 40,
+      "listing_count": 27,
       "dedicated_official_kit_count": 29,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 10,
@@ -4044,14 +4044,14 @@
       ],
       "model_year_count": 32,
       "completely_reviewed_count": 13,
-      "reviewed_qualified_count": 13,
+      "reviewed_qualified_count": 14,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 3,
+      "reviewed_qualified_palette_union_count": 4,
       "reviewed_specialty_palette_subset_count": 10,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 6,
-      "listing_count": 242,
+      "wholly_unreviewed_count": 5,
+      "listing_count": 265,
       "dedicated_official_kit_count": 13,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 19,
@@ -4071,14 +4071,14 @@
       ],
       "model_year_count": 31,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 6,
+      "reviewed_qualified_count": 7,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 4,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 25,
-      "listing_count": 54,
+      "wholly_unreviewed_count": 24,
+      "listing_count": 64,
       "dedicated_official_kit_count": 7,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 19,
@@ -4185,14 +4185,14 @@
       ],
       "model_year_count": 28,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 4,
+      "reviewed_qualified_count": 5,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 2,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 24,
-      "listing_count": 106,
+      "wholly_unreviewed_count": 23,
+      "listing_count": 117,
       "dedicated_official_kit_count": 7,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 19,
@@ -4214,14 +4214,14 @@
       ],
       "model_year_count": 26,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 4,
+      "reviewed_qualified_count": 5,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 3,
+      "reviewed_qualified_palette_union_count": 4,
       "reviewed_specialty_palette_subset_count": 1,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 22,
-      "listing_count": 47,
+      "wholly_unreviewed_count": 21,
+      "listing_count": 69,
       "dedicated_official_kit_count": 4,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 19,
@@ -4248,14 +4248,14 @@
       ],
       "model_year_count": 14,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 2,
+      "reviewed_qualified_count": 3,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 12,
-      "listing_count": 16,
+      "wholly_unreviewed_count": 11,
+      "listing_count": 25,
       "dedicated_official_kit_count": 6,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 8,
@@ -4340,14 +4340,14 @@
       ],
       "model_year_count": 21,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 3,
+      "reviewed_qualified_count": 4,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 3,
+      "reviewed_qualified_palette_union_count": 4,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 18,
-      "listing_count": 24,
+      "wholly_unreviewed_count": 17,
+      "listing_count": 32,
       "dedicated_official_kit_count": 3,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 17,
@@ -4399,14 +4399,14 @@
       ],
       "model_year_count": 22,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 2,
+      "reviewed_qualified_count": 3,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 20,
-      "listing_count": 16,
+      "wholly_unreviewed_count": 19,
+      "listing_count": 24,
       "dedicated_official_kit_count": 2,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 19,
@@ -4514,14 +4514,14 @@
       ],
       "model_year_count": 11,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 2,
+      "reviewed_qualified_count": 3,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 9,
-      "listing_count": 16,
+      "wholly_unreviewed_count": 8,
+      "listing_count": 26,
       "dedicated_official_kit_count": 0,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 11,
@@ -4595,14 +4595,14 @@
       ],
       "model_year_count": 3,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 2,
+      "reviewed_qualified_count": 3,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 1,
-      "listing_count": 20,
+      "wholly_unreviewed_count": 0,
+      "listing_count": 28,
       "dedicated_official_kit_count": 0,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 3,
@@ -4649,14 +4649,14 @@
       ],
       "model_year_count": 3,
       "completely_reviewed_count": 0,
-      "reviewed_qualified_count": 2,
+      "reviewed_qualified_count": 3,
       "reviewed_qualified_historical_table_count": 0,
-      "reviewed_qualified_palette_union_count": 2,
+      "reviewed_qualified_palette_union_count": 3,
       "reviewed_specialty_palette_subset_count": 0,
       "reviewed_no_chart_count": 0,
       "source_located_chart_unreviewed_count": 0,
-      "wholly_unreviewed_count": 1,
-      "listing_count": 16,
+      "wholly_unreviewed_count": 0,
+      "listing_count": 18,
       "dedicated_official_kit_count": 0,
       "related_line_official_kit_count": 0,
       "generic_full_line_official_kit_count": 3,
@@ -5282,7 +5282,7 @@
         "foreign_keys": {
           "model_id": "models.model_id"
         },
-        "tracked_manifest_rows": 971
+        "tracked_manifest_rows": 1007
       },
       {
         "name": "model_years.parquet",
@@ -5306,7 +5306,7 @@
           "model_id": "models.model_id",
           "generation_id": "generations.generation_id"
         },
-        "tracked_manifest_rows": 2307
+        "tracked_manifest_rows": 2337
       },
       {
         "name": "platform_eras.parquet",
@@ -5327,7 +5327,7 @@
           "model_id": "models.model_id",
           "generation_id": "generations.generation_id"
         },
-        "tracked_manifest_rows": 1696
+        "tracked_manifest_rows": 1832
       },
       {
         "name": "color_availability.parquet",
@@ -5341,7 +5341,7 @@
           "color_identity_id": "color_identities.color_identity_id",
           "evidence_source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 2010
+        "tracked_manifest_rows": 2146
       },
       {
         "name": "paint_schemes.parquet",
@@ -5451,7 +5451,7 @@
           "source_id"
         ],
         "foreign_keys": {},
-        "tracked_manifest_rows": 2877
+        "tracked_manifest_rows": 2883
       },
       {
         "name": "source_revisions.parquet",
@@ -5461,7 +5461,7 @@
         "foreign_keys": {
           "source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 1866
+        "tracked_manifest_rows": 1869
       },
       {
         "name": "evidence_claims.parquet",
@@ -5475,7 +5475,7 @@
           "model_id": "models.model_id",
           "color_identity_id": "color_identities.color_identity_id"
         },
-        "tracked_manifest_rows": 2010
+        "tracked_manifest_rows": 2146
       },
       {
         "name": "source_links.parquet",
@@ -5485,7 +5485,7 @@
         "foreign_keys": {
           "source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 28490
+        "tracked_manifest_rows": 28913
       },
       {
         "name": "photo_assets.parquet",
@@ -5498,7 +5498,7 @@
           "archive_source_id": "sources.source_id",
           "preview_archive_source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 302
+        "tracked_manifest_rows": 303
       },
       {
         "name": "model_photo_links.parquet",
@@ -5509,7 +5509,7 @@
           "photo_id": "photo_assets.photo_id",
           "model_id": "models.model_id"
         },
-        "tracked_manifest_rows": 304
+        "tracked_manifest_rows": 305
       },
       {
         "name": "photo_color_links.parquet",
@@ -18382,7 +18382,7 @@
       "model_year": 2020,
       "model_range_key": "corvette:1984-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-corvette-2020-2024",
+      "generation_id": "catalog-corvette-2020-2023",
       "generation_label": "C8",
       "platform_band_id": "corvette:2020-2026:c8",
       "platform_band_label": "C8",
@@ -18451,7 +18451,7 @@
       "model_year": 2021,
       "model_range_key": "corvette:1984-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-corvette-2020-2024",
+      "generation_id": "catalog-corvette-2020-2023",
       "generation_label": "C8",
       "platform_band_id": "corvette:2020-2026:c8",
       "platform_band_label": "C8",
@@ -18520,7 +18520,7 @@
       "model_year": 2022,
       "model_range_key": "corvette:1984-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-corvette-2020-2024",
+      "generation_id": "catalog-corvette-2020-2023",
       "generation_label": "C8",
       "platform_band_id": "corvette:2020-2026:c8",
       "platform_band_label": "C8",
@@ -18589,7 +18589,7 @@
       "model_year": 2023,
       "model_range_key": "corvette:1984-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-corvette-2020-2024",
+      "generation_id": "catalog-corvette-2020-2023",
       "generation_label": "C8",
       "platform_band_id": "corvette:2020-2026:c8",
       "platform_band_label": "C8",
@@ -18658,7 +18658,7 @@
       "model_year": 2024,
       "model_range_key": "corvette:1984-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-corvette-2020-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "C8",
       "platform_band_id": "corvette:2020-2026:c8",
       "platform_band_label": "C8",
@@ -18668,16 +18668,39 @@
         "Y2AC",
         "ZERV"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 14,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 14,
+      "availability_state_counts": {
+        "restricted": 14
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Corvette Stingray, Z06, and E-Ray",
+        "locator": "PDF page 32, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -18717,7 +18740,162 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "corvette-accelerate-yellow-metallic-2024-gm-fleet-guide",
+          "color_name": "Accelerate Yellow Metallic",
+          "display_label": "Accelerate Yellow Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-amplify-orange-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Amplify Orange Tintcoat",
+          "display_label": "Amplify Orange Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-arctic-white-2024-gm-fleet-guide",
+          "color_name": "Arctic White",
+          "display_label": "Arctic White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-cacti-green-2024-gm-fleet-guide",
+          "color_name": "Cacti Green",
+          "display_label": "Cacti Green",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-carbon-flash-metallic-2024-gm-fleet-guide",
+          "color_name": "Carbon Flash Metallic",
+          "display_label": "Carbon Flash Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-ceramic-matrix-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Ceramic Matrix Gray Metallic",
+          "display_label": "Ceramic Matrix Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-hypersonic-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Hypersonic Gray Metallic",
+          "display_label": "Hypersonic Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-rapid-blue-2024-gm-fleet-guide",
+          "color_name": "Rapid Blue",
+          "display_label": "Rapid Blue",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-red-mist-metallic-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Red Mist Metallic Tintcoat",
+          "display_label": "Red Mist Metallic Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-riptide-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Riptide Blue Metallic",
+          "display_label": "Riptide Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-sea-wolf-gray-tricoat-2024-gm-fleet-guide",
+          "color_name": "Sea Wolf Gray Tricoat",
+          "display_label": "Sea Wolf Gray Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-silver-flare-metallic-2024-gm-fleet-guide",
+          "color_name": "Silver Flare Metallic",
+          "display_label": "Silver Flare Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "corvette-torch-red-2024-gm-fleet-guide",
+          "color_name": "Torch Red",
+          "display_label": "Torch Red",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Corvette Stingray, Z06, and E-Ray; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "corvette:2025",
@@ -81088,10 +81266,11 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 8,
+      "exact_listing_count": 9,
       "listed_count": 0,
       "restricted_count": 8,
       "availability_state_counts": {
+        "available_with_minimum_batch": 1,
         "restricted": 8
       },
       "current_app_source": {
@@ -81157,6 +81336,17 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "suburban-woodland-green-2025-gm-eog-current-2025-new-suburban-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Suburban SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Suburban. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "suburban-black-2025-gm-fleet-guide",
           "color_name": "Black",
@@ -81271,10 +81461,11 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 8,
+      "exact_listing_count": 9,
       "listed_count": 0,
       "restricted_count": 8,
       "availability_state_counts": {
+        "available_with_minimum_batch": 1,
         "restricted": 8
       },
       "current_app_source": {
@@ -81340,6 +81531,17 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "suburban-woodland-green-2026-gm-eog-current-2026-suburban-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Suburban SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Suburban. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "suburban-black-2026-gm-fleet-guide",
           "color_name": "Black",
@@ -102598,7 +102800,7 @@
       "model_year": 2023,
       "model_range_key": "blazer:2019-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-blazer-2023-2024",
+      "generation_id": "catalog-blazer-2023-2023",
       "generation_label": "C1XX crossover refresh, C1UC",
       "platform_band_id": "blazer:2023-2026:c1xxcrossoverrefreshc1uc",
       "platform_band_label": "C1XX crossover refresh, C1UC",
@@ -102665,7 +102867,7 @@
       "model_year": 2024,
       "model_range_key": "blazer:2019-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-blazer-2023-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "C1XX crossover refresh, C1UC",
       "platform_band_id": "blazer:2023-2026:c1xxcrossoverrefreshc1uc",
       "platform_band_label": "C1XX crossover refresh, C1UC",
@@ -102674,16 +102876,39 @@
         "C1UC",
         "Facelift"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 9,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 9,
+      "availability_state_counts": {
+        "restricted": 9
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Blazer",
+        "locator": "PDF page 47, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -102722,7 +102947,107 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "blazer-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-copper-bronze-metallic-2024-gm-fleet-guide",
+          "color_name": "Copper Bronze Metallic",
+          "display_label": "Copper Bronze Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-nitro-yellow-metallic-2024-gm-fleet-guide",
+          "color_name": "Nitro Yellow Metallic",
+          "display_label": "Nitro Yellow Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-red-hot-2024-gm-fleet-guide",
+          "color_name": "Red Hot",
+          "display_label": "Red Hot",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-riptide-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Riptide Blue Metallic",
+          "display_label": "Riptide Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Blazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "blazer:2025",
@@ -115890,7 +116215,7 @@
       "model_year": 2023,
       "model_range_key": "tahoe:1995-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-tahoe-2023-2024",
+      "generation_id": "catalog-tahoe-2023-2023",
       "generation_label": "T1XX / GMTT1UC",
       "platform_band_id": "tahoe:2021-2024:t1xxgmtt1uc",
       "platform_band_label": "T1XX / GMTT1UC",
@@ -115960,7 +116285,7 @@
       "model_year": 2024,
       "model_range_key": "tahoe:1995-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-tahoe-2023-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "T1XX / GMTT1UC",
       "platform_band_id": "tahoe:2021-2024:t1xxgmtt1uc",
       "platform_band_label": "T1XX / GMTT1UC",
@@ -115971,16 +116296,39 @@
         "GMT1UC",
         "T1XX"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 9,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 9,
+      "availability_state_counts": {
+        "restricted": 9
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Tahoe",
+        "locator": "PDF page 53, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -116020,7 +116368,107 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "tahoe-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-dark-ash-metallic-2024-gm-fleet-guide",
+          "color_name": "Dark Ash Metallic",
+          "display_label": "Dark Ash Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-empire-beige-metallic-2024-gm-fleet-guide",
+          "color_name": "Empire Beige Metallic",
+          "display_label": "Empire Beige Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-midnight-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Midnight Blue Metallic",
+          "display_label": "Midnight Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-silver-sage-metallic-2024-gm-fleet-guide",
+          "color_name": "Silver Sage Metallic",
+          "display_label": "Silver Sage Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "tahoe-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Tahoe; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "tahoe:2025",
@@ -116046,10 +116494,11 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 8,
+      "exact_listing_count": 15,
       "listed_count": 0,
       "restricted_count": 8,
       "availability_state_counts": {
+        "available_with_minimum_batch": 7,
         "restricted": 8
       },
       "current_app_source": {
@@ -116114,6 +116563,83 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "tahoe-victory-red-2025-gm-eog-current-2025-new-tahoe-police-package-and-special-service-victory-red-5t4-wa-9260",
+          "color_name": "Victory Red",
+          "display_label": "Victory Red",
+          "paint_code": "WA-9260 / SEO 5T4",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service. The table prints Victory Red, color code 5T4, and touch-up paint number WA-9260. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-msp-blue-2025-gm-eog-current-2025-new-tahoe-police-package-and-special-service-msp-blue-9v2-wa-5665",
+          "color_name": "MSP Blue",
+          "display_label": "MSP Blue",
+          "paint_code": "WA-5665 / SEO 9V2",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service. The table prints MSP Blue, color code 9V2, and touch-up paint number WA-5665. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-woodland-green-2025-gm-eog-current-2025-new-tahoe-police-package-and-special-service-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-dark-blue-metallic-2025-gm-eog-current-2025-new-tahoe-police-package-and-special-service-dark-blue-metallic-9v7-wa-722j",
+          "color_name": "Dark Blue Metallic",
+          "display_label": "Dark Blue Metallic",
+          "paint_code": "WA-722J / SEO 9V7",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service. The table prints Dark Blue Metallic, color code 9V7, and touch-up paint number WA-722J. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-wheatland-yellow-2025-gm-eog-current-2025-new-tahoe-police-package-and-special-service-wheatland-yellow-9w3-wa-253a",
+          "color_name": "Wheatland Yellow",
+          "display_label": "Wheatland Yellow",
+          "paint_code": "WA-253A / SEO 9W3",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service. The table prints Wheatland Yellow, color code 9W3, and touch-up paint number WA-253A. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-silver-ice-metallic-2025-gm-eog-current-2025-new-tahoe-police-package-and-special-service-silver-ice-metallic-9w5-wa-636r",
+          "color_name": "Silver Ice Metallic",
+          "display_label": "Silver Ice Metallic",
+          "paint_code": "WA-636R / SEO 9W5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Police Package and Special Service. The table prints Silver Ice Metallic, color code 9W5, and touch-up paint number WA-636R. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-woodland-green-2025-gm-eog-current-2025-new-tahoe-retail-and-fleet-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Retail and Fleet SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck New Tahoe Retail and Fleet. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "tahoe-black-2025-gm-fleet-guide",
           "color_name": "Black",
@@ -116228,10 +116754,11 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 8,
+      "exact_listing_count": 15,
       "listed_count": 0,
       "restricted_count": 8,
       "availability_state_counts": {
+        "available_with_minimum_batch": 7,
         "restricted": 8
       },
       "current_app_source": {
@@ -116296,6 +116823,83 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "tahoe-victory-red-2026-gm-eog-current-2026-tahoe-police-package-and-special-service-victory-red-5t4-wa-9260",
+          "color_name": "Victory Red",
+          "display_label": "Victory Red",
+          "paint_code": "WA-9260 / SEO 5T4",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service. The table prints Victory Red, color code 5T4, and touch-up paint number WA-9260. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-msp-blue-2026-gm-eog-current-2026-tahoe-police-package-and-special-service-msp-blue-9v2-wa-5665",
+          "color_name": "MSP Blue",
+          "display_label": "MSP Blue",
+          "paint_code": "WA-5665 / SEO 9V2",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service. The table prints MSP Blue, color code 9V2, and touch-up paint number WA-5665. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-woodland-green-2026-gm-eog-current-2026-tahoe-police-package-and-special-service-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-dark-blue-metallic-2026-gm-eog-current-2026-tahoe-police-package-and-special-service-dark-blue-metallic-9v7-wa-722j",
+          "color_name": "Dark Blue Metallic",
+          "display_label": "Dark Blue Metallic",
+          "paint_code": "WA-722J / SEO 9V7",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service. The table prints Dark Blue Metallic, color code 9V7, and touch-up paint number WA-722J. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-wheatland-yellow-2026-gm-eog-current-2026-tahoe-police-package-and-special-service-wheatland-yellow-9w3-wa-253a",
+          "color_name": "Wheatland Yellow",
+          "display_label": "Wheatland Yellow",
+          "paint_code": "WA-253A / SEO 9W3",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service. The table prints Wheatland Yellow, color code 9W3, and touch-up paint number WA-253A. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-silver-ice-metallic-2026-gm-eog-current-2026-tahoe-police-package-and-special-service-silver-ice-metallic-9w5-wa-636r",
+          "color_name": "Silver Ice Metallic",
+          "display_label": "Silver Ice Metallic",
+          "paint_code": "WA-636R / SEO 9W5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Police Package and Special Service SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Police Package and Special Service. The table prints Silver Ice Metallic, color code 9W5, and touch-up paint number WA-636R. The table marks each published row available with the single Jet Black interior. GM will require five orders before sending the order to the plant. The source is one combined Police Package and Special Service entry. It does not establish separate PPV-only or SSV-only applicability. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "tahoe-woodland-green-2026-gm-eog-current-2026-tahoe-retail-and-fleet-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Tahoe Retail and Fleet SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Tahoe Retail and Fleet. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. Victory Red and Wheatland Yellow are printed on the same page but remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "tahoe-black-2026-gm-fleet-guide",
           "color_name": "Black",
@@ -118034,7 +118638,7 @@
       "model_year": 2015,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118101,7 +118705,7 @@
       "model_year": 2016,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118168,7 +118772,7 @@
       "model_year": 2017,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118235,7 +118839,7 @@
       "model_year": 2018,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118302,7 +118906,7 @@
       "model_year": 2019,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118369,7 +118973,7 @@
       "model_year": 2020,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118436,7 +119040,7 @@
       "model_year": 2021,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118503,7 +119107,7 @@
       "model_year": 2022,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118570,7 +119174,7 @@
       "model_year": 2023,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "catalog-express-2015-2023",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
@@ -118637,23 +119241,46 @@
       "model_year": 2024,
       "model_range_key": "express:1996-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-express-2015-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "GMT610",
       "platform_band_id": "express:2003-2026:gmt610",
       "platform_band_label": "GMT610",
       "platform_aliases": [
         "GMT600 revision"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 4,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 4,
+      "availability_state_counts": {
+        "restricted": 4
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Express Passenger, Cargo, and Cutaway",
+        "locator": "PDF pages 87, 89, and 91, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide palette union shared by the listed Express Passenger, Cargo, and Cutaway configurations; exact option restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -118694,7 +119321,52 @@
         "https://www.chevrolet.com/commercial/express/cutaway"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "express-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide palette union shared by the listed Express Passenger, Cargo, and Cutaway configurations; exact option restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "express-red-hot-2024-gm-fleet-guide",
+          "color_name": "Red Hot",
+          "display_label": "Red Hot",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide palette union shared by the listed Express Passenger, Cargo, and Cutaway configurations; exact option restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "express-silver-ice-metallic-2024-gm-fleet-guide",
+          "color_name": "Silver Ice Metallic",
+          "display_label": "Silver Ice Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide palette union shared by the listed Express Passenger, Cargo, and Cutaway configurations; exact option restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "express-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide palette union shared by the listed Express Passenger, Cargo, and Cutaway configurations; exact option restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "express:2025",
@@ -118716,10 +119388,11 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 4,
+      "exact_listing_count": 7,
       "listed_count": 0,
       "restricted_count": 4,
       "availability_state_counts": {
+        "available_with_minimum_batch": 3,
         "restricted": 4
       },
       "current_app_source": {
@@ -118786,6 +119459,39 @@
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
         {
+          "color_id": "express-woodland-green-2025-gm-eog-current-2025-express-cargo-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Express Cargo SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Express Cargo. The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015. The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns. GM will require five orders before sending the order to the plant. All extraneous body components formerly color-keyed to body color will be flat Black. The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "express-woodland-green-2025-gm-eog-current-2025-express-cutaway-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Express Cutaway SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Express Cutaway. The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015. The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns. GM will require five orders before sending the order to the plant. All extraneous body components formerly color-keyed to body color will be flat Black. The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "express-woodland-green-2025-gm-eog-current-2025-express-passenger-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Express Passenger SEO solid paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Express Passenger. The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015. The table marks Green, Woodland available with the listed Medium Pewter interior. GM will require five orders before sending the order to the plant. All extraneous body components formerly color-keyed to body color will be flat Black. The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
           "color_id": "express-black-2025-gm-fleet-guide",
           "color_name": "Black",
           "display_label": "Black",
@@ -118851,10 +119557,11 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 4,
+      "exact_listing_count": 7,
       "listed_count": 0,
       "restricted_count": 4,
       "availability_state_counts": {
+        "available_with_minimum_batch": 3,
         "restricted": 4
       },
       "current_app_source": {
@@ -118920,6 +119627,39 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "express-woodland-green-2026-gm-eog-current-2026-express-cargo-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Express Cargo SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Express Cargo. The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015. The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns. GM will require five orders before sending the order to the plant. All extraneous body components formerly color-keyed to body color will be flat Black. The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "express-woodland-green-2026-gm-eog-current-2026-express-cutaway-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Express Cutaway SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Express Cutaway. The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015. The table marks Green, Woodland available with both Neutral and Medium Pewter interior columns. GM will require five orders before sending the order to the plant. All extraneous body components formerly color-keyed to body color will be flat Black. The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "express-woodland-green-2026-gm-eog-current-2026-express-passenger-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Express Passenger SEO solid paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Express Passenger. The table prints Green, Woodland, color code 9V5, and touch-up paint number WA-9015. The table marks Green, Woodland available with the listed Medium Pewter interior. GM will require five orders before sending the order to the plant. All extraneous body components formerly color-keyed to body color will be flat Black. The other seventeen SEO solid-paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "express-black-2026-gm-fleet-guide",
           "color_name": "Black",
@@ -121446,7 +122186,7 @@
       "model_year": 2019,
       "model_range_key": "silverado:1999-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-2019-2024",
+      "generation_id": "catalog-silverado-2019-2023",
       "generation_label": "Fourth generation, T1XX",
       "platform_band_id": "silverado:2019-2026:fourthgenerationt1xx",
       "platform_band_label": "Fourth generation, T1XX",
@@ -121514,7 +122254,7 @@
       "model_year": 2020,
       "model_range_key": "silverado:1999-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-2019-2024",
+      "generation_id": "catalog-silverado-2019-2023",
       "generation_label": "Fourth generation, T1XX",
       "platform_band_id": "silverado:2019-2026:fourthgenerationt1xx",
       "platform_band_label": "Fourth generation, T1XX",
@@ -121582,7 +122322,7 @@
       "model_year": 2021,
       "model_range_key": "silverado:1999-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-2019-2024",
+      "generation_id": "catalog-silverado-2019-2023",
       "generation_label": "Fourth generation, T1XX",
       "platform_band_id": "silverado:2019-2026:fourthgenerationt1xx",
       "platform_band_label": "Fourth generation, T1XX",
@@ -121650,7 +122390,7 @@
       "model_year": 2022,
       "model_range_key": "silverado:1999-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-2019-2024",
+      "generation_id": "catalog-silverado-2019-2023",
       "generation_label": "Fourth generation, T1XX",
       "platform_band_id": "silverado:2019-2026:fourthgenerationt1xx",
       "platform_band_label": "Fourth generation, T1XX",
@@ -121718,7 +122458,7 @@
       "model_year": 2023,
       "model_range_key": "silverado:1999-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-2019-2024",
+      "generation_id": "catalog-silverado-2019-2023",
       "generation_label": "Fourth generation, T1XX",
       "platform_band_id": "silverado:2019-2026:fourthgenerationt1xx",
       "platform_band_label": "Fourth generation, T1XX",
@@ -121786,7 +122526,7 @@
       "model_year": 2024,
       "model_range_key": "silverado:1999-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-2019-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "Fourth generation, T1XX",
       "platform_band_id": "silverado:2019-2026:fourthgenerationt1xx",
       "platform_band_label": "Fourth generation, T1XX",
@@ -121795,16 +122535,39 @@
         "T1RCF",
         "T1CCF"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 11,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 11,
+      "availability_state_counts": {
+        "restricted": 11
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Silverado 1500",
+        "locator": "PDF page 66, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -121844,7 +122607,129 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "silverado-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-dark-ash-metallic-2024-gm-fleet-guide",
+          "color_name": "Dark Ash Metallic",
+          "display_label": "Dark Ash Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-glacier-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Glacier Blue Metallic",
+          "display_label": "Glacier Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-harvest-bronze-metallic-2024-gm-fleet-guide",
+          "color_name": "Harvest Bronze Metallic",
+          "display_label": "Harvest Bronze Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-lakeshore-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Lakeshore Blue Metallic",
+          "display_label": "Lakeshore Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-red-hot-2024-gm-fleet-guide",
+          "color_name": "Red Hot",
+          "display_label": "Red Hot",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-slate-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Slate Gray Metallic",
+          "display_label": "Slate Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Silverado 1500; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "silverado:2025",
@@ -124557,7 +125442,7 @@
       "model_year": 2024,
       "model_range_key": "silverado-hd:2001-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-hd-2024-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "Fourth generation HD, T1XX",
       "platform_band_id": "silverado-hd:2020-2026:fourthgenerationhdt1xx",
       "platform_band_label": "Fourth generation HD, T1XX",
@@ -124567,16 +125452,39 @@
         "T1ECH",
         "T1CCH"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 14,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 14,
+      "availability_state_counts": {
+        "restricted": 14
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Silverado 2500 HD and 3500 HD; Chevrolet Silverado 3500 HD Chassis Cab; Chevrolet Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab",
+        "locator": "PDF page 70, EXTERIOR COLORS. PDF page 76, EXTERIOR COLORS. PDF page 77, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -124617,7 +125525,162 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "silverado-hd-auburn-metallic-2024-gm-fleet-guide",
+          "color_name": "Auburn Metallic",
+          "display_label": "Auburn Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-dark-ash-metallic-2024-gm-fleet-guide",
+          "color_name": "Dark Ash Metallic",
+          "display_label": "Dark Ash Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-glacier-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Glacier Blue Metallic",
+          "display_label": "Glacier Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-greenstone-metallic-2024-gm-fleet-guide",
+          "color_name": "Greenstone Metallic",
+          "display_label": "Greenstone Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-lakeshore-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Lakeshore Blue Metallic",
+          "display_label": "Lakeshore Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-northsky-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Northsky Blue Metallic",
+          "display_label": "Northsky Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-red-hot-2024-gm-fleet-guide",
+          "color_name": "Red Hot",
+          "display_label": "Red Hot",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-silver-ice-metallic-2024-gm-fleet-guide",
+          "color_name": "Silver Ice Metallic",
+          "display_label": "Silver Ice Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-slate-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Slate Gray Metallic",
+          "display_label": "Slate Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-hd-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide body-series palette for Silverado 2500 HD and 3500 HD; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 3500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Visually verified GM Fleet Guide body-series palette for Silverado 4500 HD, 5500 HD, and 6500 HD Chassis Cab; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "silverado-hd:2025",
@@ -124642,10 +125705,12 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 15,
+      "exact_listing_count": 19,
       "listed_count": 0,
       "restricted_count": 15,
       "availability_state_counts": {
+        "available": 1,
+        "available_with_minimum_batch": 3,
         "restricted": 15
       },
       "current_app_source": {
@@ -124711,6 +125776,50 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "silverado-hd-woodland-green-2025-gm-eog-current-2025-silverado-2500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 2500 HD Retail and Fleet SEO paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Silverado 2500 HD Retail and Fleet. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. The color may require extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche. The other twenty SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "silverado-hd-woodland-green-2025-gm-eog-current-2025-silverado-3500-hd-cc-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 3500 HD CC SEO paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Silverado 3500 HD CC. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. The color may require extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche. The other twenty SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "silverado-hd-woodland-green-2025-gm-eog-current-2025-silverado-3500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 3500 HD Retail and Fleet SEO paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Silverado 3500 HD Retail and Fleet. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. The color may require extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche. The other twenty SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "silverado-hd-woodland-green-2025-gm-eog-current-2025-silverado-4500-hd-5500-hd-and-6500-hd-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 4500 HD, 5500 HD and 6500 HD SEO paint",
+          "restriction": "This row is limited to 2025 Chevrolet Truck Silverado 4500 HD, 5500 HD and 6500 HD. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. The page prints no five-order minimum or extended lead-time warning. The page footnote states that the applicable item is not available with APL Passenger Seat Delete, but no footnote marker is attached to the Woodland Green row. The other twenty-nine SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "silverado-hd-auburn-metallic-2025-gm-fleet-guide",
           "color_name": "Auburn Metallic",
@@ -124901,10 +126010,12 @@
       "audit_state": "reviewed_qualified_palette_union",
       "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 16,
+      "exact_listing_count": 20,
       "listed_count": 0,
       "restricted_count": 16,
       "availability_state_counts": {
+        "available": 1,
+        "available_with_minimum_batch": 3,
         "restricted": 16
       },
       "current_app_source": {
@@ -124970,6 +126081,50 @@
       ],
       "catalog_nonofficial_evidence_urls": [],
       "listings": [
+        {
+          "color_id": "silverado-hd-woodland-green-2026-gm-eog-current-2026-silverado-2500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 2500 HD Retail and Fleet SEO paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Silverado 2500 HD Retail and Fleet. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. The color may require extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche. The other twenty SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "silverado-hd-woodland-green-2026-gm-eog-current-2026-silverado-3500-hd-cc-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 3500 HD CC SEO paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Silverado 3500 HD CC. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. The color may require extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche. The other twenty SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "silverado-hd-woodland-green-2026-gm-eog-current-2026-silverado-3500-hd-retail-and-fleet-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available_with_minimum_batch",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 3500 HD Retail and Fleet SEO paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Silverado 3500 HD Retail and Fleet. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. GM will require five orders before sending the order to the plant. The color may require extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R. That literal conflicts with the separate 2026 Silverado police and special-service guide and is not normalized in this tranche. The other twenty SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
+        {
+          "color_id": "silverado-hd-woodland-green-2026-gm-eog-current-2026-silverado-4500-hd-5500-hd-and-6500-hd-woodland-green-9v5-wa-9015",
+          "color_name": "Woodland Green",
+          "display_label": "Woodland Green",
+          "paint_code": "WA-9015 / SEO 9V5",
+          "availability_state": "available",
+          "application_type": "special_equipment_option_paint",
+          "program_label": "Silverado 4500 HD, 5500 HD and 6500 HD SEO paint",
+          "restriction": "This row is limited to 2026 Chevrolet Truck Silverado 4500 HD, 5500 HD and 6500 HD. The table prints Woodland Green, color code 9V5, and touch-up paint number WA-9015. The table marks Woodland Green available with both listed interior columns. The page prints no five-order minimum or extended lead-time warning. The page footnote states that the applicable item is not available with APL Passenger Seat Delete, but no footnote marker is attached to the Woodland Green row. The other twenty-nine SEO paint identities on the page remain outside this bounded publication tranche. No availability is inferred for another Chevrolet model, configuration, or year.",
+          "evidence_class": "specialty_palette_subset"
+        },
         {
           "color_id": "silverado-hd-auburn-metallic-2026-gm-fleet-guide",
           "color_name": "Auburn Metallic",
@@ -125824,7 +126979,7 @@
       "model_year": 2024,
       "model_range_key": "trailblazer:2021-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-trailblazer-2024-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "VSS-F crossover refresh",
       "platform_band_id": "trailblazer:2024-2026:vssfcrossoverrefresh",
       "platform_band_label": "VSS-F crossover refresh",
@@ -125832,16 +126987,39 @@
         "VSS-F",
         "Facelift"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 9,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 9,
+      "availability_state_counts": {
+        "restricted": 9
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Trailblazer",
+        "locator": "PDF page 37, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -125880,7 +127058,107 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "trailblazer-cacti-green-2024-gm-fleet-guide",
+          "color_name": "Cacti Green",
+          "display_label": "Cacti Green",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-copper-harbor-metallic-2024-gm-fleet-guide",
+          "color_name": "Copper Harbor Metallic",
+          "display_label": "Copper Harbor Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-crimson-metallic-2024-gm-fleet-guide",
+          "color_name": "Crimson Metallic",
+          "display_label": "Crimson Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-fountain-blue-2024-gm-fleet-guide",
+          "color_name": "Fountain Blue",
+          "display_label": "Fountain Blue",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-mosaic-black-metallic-2024-gm-fleet-guide",
+          "color_name": "Mosaic Black Metallic",
+          "display_label": "Mosaic Black Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-nitro-yellow-metallic-2024-gm-fleet-guide",
+          "color_name": "Nitro Yellow Metallic",
+          "display_label": "Nitro Yellow Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trailblazer-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trailblazer; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "trailblazer:2025",
@@ -128438,7 +129716,7 @@
       "model_year": 2024,
       "model_range_key": "colorado:2015-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-colorado-2024-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "Third generation, 31XX-2",
       "platform_band_id": "colorado:2023-2026:thirdgeneration31xx2",
       "platform_band_label": "Third generation, 31XX-2",
@@ -128446,16 +129724,39 @@
         "31XX-2",
         "GMT31XX-2"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 8,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 8,
+      "availability_state_counts": {
+        "restricted": 8
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Colorado",
+        "locator": "PDF page 61, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -128494,7 +129795,96 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "colorado-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-glacier-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Glacier Blue Metallic",
+          "display_label": "Glacier Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-harvest-bronze-metallic-2024-gm-fleet-guide",
+          "color_name": "Harvest Bronze Metallic",
+          "display_label": "Harvest Bronze Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-nitro-yellow-metallic-2024-gm-fleet-guide",
+          "color_name": "Nitro Yellow Metallic",
+          "display_label": "Nitro Yellow Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-sand-dune-metallic-2024-gm-fleet-guide",
+          "color_name": "Sand Dune Metallic",
+          "display_label": "Sand Dune Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "colorado-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Colorado; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "colorado:2025",
@@ -129915,7 +131305,7 @@
       "model_year": 2018,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "catalog-equinox-2018-2023",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -129983,7 +131373,7 @@
       "model_year": 2019,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "catalog-equinox-2018-2023",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -130051,7 +131441,7 @@
       "model_year": 2020,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "catalog-equinox-2018-2023",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -130119,7 +131509,7 @@
       "model_year": 2021,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "catalog-equinox-2018-2023",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -130187,7 +131577,7 @@
       "model_year": 2022,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "catalog-equinox-2018-2023",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -130255,7 +131645,7 @@
       "model_year": 2023,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "catalog-equinox-2018-2023",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -130323,7 +131713,7 @@
       "model_year": 2024,
       "model_range_key": "equinox:2005-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-equinox-2018-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "Third generation, D2XX / D2UC",
       "platform_band_id": "equinox:2018-2024:thirdgenerationd2xxd2uc",
       "platform_band_label": "Third generation, D2XX / D2UC",
@@ -130332,16 +131722,39 @@
         "D2UC",
         "Global Delta"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 8,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 8,
+      "availability_state_counts": {
+        "restricted": 8
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Equinox",
+        "locator": "PDF page 40, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -130381,7 +131794,96 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "equinox-harvest-bronze-metallic-2024-gm-fleet-guide",
+          "color_name": "Harvest Bronze Metallic",
+          "display_label": "Harvest Bronze Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-lakeshore-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Lakeshore Blue Metallic",
+          "display_label": "Lakeshore Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-mosaic-black-metallic-2024-gm-fleet-guide",
+          "color_name": "Mosaic Black Metallic",
+          "display_label": "Mosaic Black Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-riptide-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Riptide Blue Metallic",
+          "display_label": "Riptide Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "equinox-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Equinox; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "equinox:2025",
@@ -133053,7 +134555,7 @@
       "model_year": 2024,
       "model_range_key": "trax:2024-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-trax-2024-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "Second U.S. generation, VSS-F",
       "platform_band_id": "trax:2024-2026:secondusgenerationvssf",
       "platform_band_label": "Second U.S. generation, VSS-F",
@@ -133061,16 +134563,39 @@
         "VSS-F",
         "Global Emerging Markets platform"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 10,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 10,
+      "availability_state_counts": {
+        "restricted": 10
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Trax",
+        "locator": "PDF page 36, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -133109,7 +134634,118 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "trax-blue-glow-metallic-2024-gm-fleet-guide",
+          "color_name": "Blue Glow Metallic",
+          "display_label": "Blue Glow Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-cacti-green-2024-gm-fleet-guide",
+          "color_name": "Cacti Green",
+          "display_label": "Cacti Green",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Late model year availability.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-cayenne-orange-metallic-2024-gm-fleet-guide",
+          "color_name": "Cayenne Orange Metallic",
+          "display_label": "Cayenne Orange Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-crimson-metallic-2024-gm-fleet-guide",
+          "color_name": "Crimson Metallic",
+          "display_label": "Crimson Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-fountain-blue-2024-gm-fleet-guide",
+          "color_name": "Fountain Blue",
+          "display_label": "Fountain Blue",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-harvest-bronze-metallic-2024-gm-fleet-guide",
+          "color_name": "Harvest Bronze Metallic",
+          "display_label": "Harvest Bronze Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-mosaic-black-metallic-2024-gm-fleet-guide",
+          "color_name": "Mosaic Black Metallic",
+          "display_label": "Mosaic Black Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-nitro-yellow-metallic-2024-gm-fleet-guide",
+          "color_name": "Nitro Yellow Metallic",
+          "display_label": "Nitro Yellow Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional cost.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "trax-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for Trax; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "trax:2025",
@@ -134710,7 +136346,7 @@
       "model_year": 2024,
       "model_range_key": "blazer-ev:2024-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-blazer-ev-2024-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "BEV3 / Ultium",
       "platform_band_id": "blazer-ev:2024-2026:bev3ultium",
       "platform_band_label": "BEV3 / Ultium",
@@ -134718,16 +136354,39 @@
         "BEV3",
         "Ultium"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 8,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 8,
+      "availability_state_counts": {
+        "restricted": 8
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Blazer EV",
+        "locator": "PDF page 17, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -134767,7 +136426,96 @@
         "https://www.chevrolet.com/electric/blazer-ev"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "blazer-ev-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-galaxy-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Galaxy Gray Metallic",
+          "display_label": "Galaxy Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-iridescent-pearl-tricoat-2024-gm-fleet-guide",
+          "color_name": "Iridescent Pearl Tricoat",
+          "display_label": "Iridescent Pearl Tricoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional charge.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-radiant-red-tintcoat-2024-gm-fleet-guide",
+          "color_name": "Radiant Red Tintcoat",
+          "display_label": "Radiant Red Tintcoat",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide. Premium paint; additional charge.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-red-hot-2024-gm-fleet-guide",
+          "color_name": "Red Hot",
+          "display_label": "Red Hot",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-riptide-blue-metallic-2024-gm-fleet-guide",
+          "color_name": "Riptide Blue Metallic",
+          "display_label": "Riptide Blue Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-sterling-gray-metallic-2024-gm-fleet-guide",
+          "color_name": "Sterling Gray Metallic",
+          "display_label": "Sterling Gray Metallic",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "blazer-ev-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide model-page palette union for regular Blazer EV; exterior colors vary by trim level and exact restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "blazer-ev:2025",
@@ -135622,7 +137370,7 @@
       "model_year": 2024,
       "model_range_key": "silverado-ev:2024-2026",
       "catalog_range_confidence": "high",
-      "generation_id": "catalog-silverado-ev-2024-2024",
+      "generation_id": "gm-fleet-guide-qualified-2024",
       "generation_label": "BT1XX / Ultium",
       "platform_band_id": "silverado-ev:2024-2026:bt1xxultium",
       "platform_band_label": "BT1XX / Ultium",
@@ -135631,16 +137379,39 @@
         "BT1",
         "Ultium"
       ],
-      "color_chart_reviewed": false,
+      "color_chart_reviewed": true,
       "completely_reviewed_color_chart": false,
-      "audit_state": "unreviewed",
-      "audit_note": null,
+      "audit_state": "reviewed_qualified_palette_union",
+      "audit_note": "Official GM Fleet Guide palette union visually checked against the cited pages. Exterior colors vary by trim; the Online Order Guide remains controlling for option codes and restrictions.",
       "reviewed_no_chart_source": null,
-      "exact_listing_count": 0,
+      "exact_listing_count": 2,
       "listed_count": 0,
-      "restricted_count": 0,
-      "availability_state_counts": {},
-      "current_app_source": null,
+      "restricted_count": 2,
+      "availability_state_counts": {
+        "restricted": 2
+      },
+      "current_app_source": {
+        "name": "2024 GM Envolve Fleet Guide V3",
+        "chart": "EXTERIOR COLORS palette union for Chevrolet Silverado EV",
+        "locator": "PDF page 20, EXTERIOR COLORS.",
+        "revision": "2023-11-20",
+        "url": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "archiveUrl": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf",
+        "originalUrl": "https://xr793.com/wp-content/uploads/2024/01/2024-GM-Fleet-Guide-v3.pdf",
+        "sourceId": "gm-fleet-guide-us-2024-v3",
+        "sourceType": "fleet_guide_pdf",
+        "historicalOfficialUrl": "https://www.gmfleet.com/content/dam/fleet/na/us/english/index/guides/02-pdfs/2023MY%20GM%20Fleet%20Guide%20US%20iPDF%20050622.pdf",
+        "landingUrl": "https://www.gmfleet.com/resources/guides-and-manuals",
+        "evidenceClass": "qualified_palette_union",
+        "artifactSha256": "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+        "artifactBytes": 14780183,
+        "pdfPageCount": 114,
+        "retrievedAt": "2026-07-21T06:50:39Z",
+        "availabilityScope": "Visually verified GM Fleet Guide palette for 2024 Silverado EV WT 3WT and 4WT; exact option restrictions require the governing Order Guide.",
+        "limitations": [
+          "The page prints no factory paint codes."
+        ]
+      },
       "likely_source_availability": "generic_full_line_official_kit",
       "official_source_record_count": 1,
       "official_source_records": [
@@ -135680,7 +137451,30 @@
         "https://www.chevrolet.com/vehicles"
       ],
       "catalog_nonofficial_evidence_urls": [],
-      "listings": []
+      "listings": [
+        {
+          "color_id": "silverado-ev-black-2024-gm-fleet-guide",
+          "color_name": "Black",
+          "display_label": "Black",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide palette for 2024 Silverado EV WT 3WT and 4WT; exact option restrictions require the governing Order Guide. Late model year availability.",
+          "evidence_class": "qualified_palette_union"
+        },
+        {
+          "color_id": "silverado-ev-summit-white-2024-gm-fleet-guide",
+          "color_name": "Summit White",
+          "display_label": "Summit White",
+          "paint_code": "not printed",
+          "availability_state": "restricted",
+          "application_type": null,
+          "program_label": null,
+          "restriction": "Visually verified GM Fleet Guide palette for 2024 Silverado EV WT 3WT and 4WT; exact option restrictions require the governing Order Guide.",
+          "evidence_class": "qualified_palette_union"
+        }
+      ]
     },
     {
       "model_year_key": "silverado-ev:2025",

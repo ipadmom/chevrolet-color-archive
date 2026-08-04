@@ -44,12 +44,37 @@ test("published current Order Guide source manifest is complete and immutable", 
   assert.equal(manifest.release_tag, "current-order-guide-source-archive-v1");
   assert.equal(manifest.release_upload_performed, true);
   assert.match(manifest.uploaded_at, /^\d{4}-\d{2}-\d{2}T/);
-  assert.equal(manifest.remote_asset_count, 33);
+  assert.equal(manifest.remote_asset_count, 34);
   assert.equal(
     manifest.remote_total_bytes,
     manifest.total_pdf_bytes +
       manifest.checksum_asset.bytes +
-      Buffer.byteLength(manifestText),
+      manifest.remote_manifest_assets.reduce(
+        (sum, asset) => sum + asset.bytes,
+        0,
+      ),
+  );
+  assert.deepEqual(
+    manifest.remote_manifest_assets.map((asset) => asset.asset_name),
+    [
+      "current-order-guide-source-release-manifest.json",
+      "current-order-guide-source-release-manifest-31-reviewed.json",
+    ],
+  );
+  assert.deepEqual(
+    manifest.remote_manifest_assets.map((asset) => asset.bytes),
+    [38988, 49823],
+  );
+  for (const asset of manifest.remote_manifest_assets) {
+    assert.match(asset.sha256, /^[a-f0-9]{64}$/);
+    assert.match(
+      asset.archive_url,
+      /^https:\/\/github\.com\/ipadmom\/chevrolet-color-archive\/releases\/download\/current-order-guide-source-archive-v1\//,
+    );
+  }
+  assert.equal(
+    manifest.remote_manifest_assets[1].sha256,
+    "f666db7407d998ed396a55f4f56ce537993b8944583565aeb1e1019e676415b7",
   );
   assert.equal(manifest.entry_count, 31);
   assert.equal(manifest.total_pdf_bytes, 14302332);

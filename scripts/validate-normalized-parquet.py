@@ -774,6 +774,8 @@ def main() -> int:
         "express:2012",
         "express:2013",
         "express:2014",
+        "express:2025",
+        "express:2026",
         "g-series-van:1979",
         "g-series-van:1980",
         "impala-limited:2014",
@@ -787,6 +789,8 @@ def main() -> int:
         "silverado:2014",
         "silverado:2025",
         "silverado:2026",
+        "silverado-hd:2025",
+        "silverado-hd:2026",
         "sportvan:1979",
         "sportvan:1980",
         "suburban:1979",
@@ -799,6 +803,8 @@ def main() -> int:
         "suburban:2014",
         "suburban:2019",
         "suburban:2020",
+        "suburban:2025",
+        "suburban:2026",
         "tahoe:2003",
         "tahoe:2005",
         "tahoe:2006",
@@ -811,9 +817,11 @@ def main() -> int:
         "tahoe:2018",
         "tahoe:2019",
         "tahoe:2020",
+        "tahoe:2025",
+        "tahoe:2026",
     }
     if (
-        len(specialty_memberships) != 511
+        len(specialty_memberships) != 541
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -1786,6 +1794,8 @@ def main() -> int:
         "express:2012",
         "express:2013",
         "express:2014",
+        "express:2025",
+        "express:2026",
         "g-series-van:1979",
         "g-series-van:1980",
         "impala-limited:2014",
@@ -1800,6 +1810,8 @@ def main() -> int:
         "silverado:2025",
         "silverado:2026",
         "silverado-hd:2011",
+        "silverado-hd:2025",
+        "silverado-hd:2026",
         "sportvan:1979",
         "sportvan:1980",
         "suburban:1979",
@@ -1812,6 +1824,8 @@ def main() -> int:
         "suburban:2014",
         "suburban:2019",
         "suburban:2020",
+        "suburban:2025",
+        "suburban:2026",
         "tahoe:2003",
         "tahoe:2005",
         "tahoe:2006",
@@ -1825,9 +1839,11 @@ def main() -> int:
         "tahoe:2018",
         "tahoe:2019",
         "tahoe:2020",
+        "tahoe:2025",
+        "tahoe:2026",
     }
     if (
-        len(specialty_rows) != 571
+        len(specialty_rows) != 601
         or {row["model_year_id"] for row in specialty_rows}
         != expected_specialty_model_years
     ):
@@ -1836,9 +1852,9 @@ def main() -> int:
         )
     expected_application_type_counts = Counter(
         {
-            "manufacturer_listed": 1_435,
+            "manufacturer_listed": 1_541,
             "authorized_upfitter_post_build": 180,
-            "special_equipment_option_paint": 232,
+            "special_equipment_option_paint": 262,
             "specialty_program_unspecified": 41,
             "manufacturer_special_equipment_option": 32,
             "standard_program_palette": 86,
@@ -1854,9 +1870,9 @@ def main() -> int:
         raise AssertionError("availability application types are incomplete or stale")
     expected_specialty_state_counts = Counter(
         {
-            "available": 152,
+            "available": 154,
             "available_through_authorized_upfitter": 180,
-            "available_with_minimum_batch": 152,
+            "available_with_minimum_batch": 180,
             "available_with_possible_extended_lead": 4,
             "closed_after_2026-02-02": 42,
             "restricted": 41,
@@ -2268,21 +2284,21 @@ def main() -> int:
         if row["source_color_name"] in {"Woodland Green", "Green, Woodland"}
     ]
     if (
-        len(woodland_rows) != 39
+        len(woodland_rows) != 59
         or Counter(row["availability_state"] for row in woodland_rows)
         != Counter(
             {
                 "restricted": 12,
                 "closed_after_2026-02-02": 2,
-                "available": 9,
-                "available_with_minimum_batch": 16,
+                "available": 11,
+                "available_with_minimum_batch": 34,
             }
         )
         or Counter(row["application_type"] for row in woodland_rows)
         != Counter(
             {
                 "specialty_program_unspecified": 12,
-                "special_equipment_option_paint": 24,
+                "special_equipment_option_paint": 44,
                 "factory_installed_special_equipment_option": 1,
                 "manufacturer_special_equipment_option": 2,
             }

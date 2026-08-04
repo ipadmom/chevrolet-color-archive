@@ -565,7 +565,7 @@ test("specialty matrices merge a stable program across years but keep simultaneo
   );
 });
 
-test("real Tahoe matrices join exact T1XX rows and leave unreviewed era years blank", async () => {
+test("real Tahoe matrices join exact T1XX regular and specialty rows", async () => {
   const [{ buildArchiveMatrix }, models] = await Promise.all([
     loadSearchModule(),
     loadArchiveModels(),
@@ -577,7 +577,11 @@ test("real Tahoe matrices join exact T1XX rows and leave unreviewed era years bl
     const matrix = buildArchiveMatrix(tahoe, selectedYear);
     assert.deepEqual(matrix.years, ["2025", "2026"]);
     assert.deepEqual(matrix.reviewedYears, ["2025", "2026"]);
-    assert.equal(matrix.colors.length, 9);
+    assert.equal(matrix.colors.length, 16);
+    assert.equal(
+      matrix.colors.filter((color) => color.availability[selectedYear]).length,
+      15,
+    );
     const summitWhite = matrix.colors.filter(
       (color) => color.name === "Summit White",
     );
@@ -591,11 +595,22 @@ test("real Tahoe matrices join exact T1XX rows and leave unreviewed era years bl
 
   const matrix2022 = buildArchiveMatrix(tahoe, "2022");
   assert.deepEqual(matrix2022.years, ["2021", "2022", "2023", "2024"]);
-  assert.deepEqual(matrix2022.reviewedYears, ["2022"]);
-  assert.equal(matrix2022.colors.length, 10);
+  assert.deepEqual(matrix2022.reviewedYears, ["2022", "2024"]);
+  assert.equal(matrix2022.colors.length, 13);
+  assert.equal(
+    matrix2022.colors.filter((color) => color.availability["2022"]).length,
+    10,
+  );
+  assert.equal(
+    matrix2022.colors.filter((color) => color.availability["2024"]).length,
+    9,
+  );
   assert.ok(
     matrix2022.colors.every(
-      (color) => Object.keys(color.availability).join() === "2022",
+      (color) =>
+        Object.keys(color.availability).every((year) =>
+          ["2022", "2024"].includes(year),
+        ),
     ),
   );
 });

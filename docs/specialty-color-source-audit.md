@@ -11,15 +11,16 @@ sources: General Motors Heritage Archive, GM Upfitter, GM Vehicle Order Guide, U
 
 ## Result
 
-The source ledger now publishes 535 directly reviewed records: 531 specialty,
+The source ledger now publishes 565 directly reviewed records: 561 specialty,
 police, or special-service records and four ordinary qualified-historical
-table records. Multi-model records expand those totals to 551 exact specialty
-model applications and four qualified-historical applications, 555 in all.
-The normalized Parquet archive contains 571 specialty availability rows across
-58 application model-years and four qualified-historical rows. Specialty
+table records. Multi-model records expand those totals to 581 exact specialty
+model applications and four qualified-historical applications, 585 in all.
+The normalized Parquet archive contains 601 specialty availability rows across
+66 application model-years and four qualified-historical rows. Specialty
 evidence is the strongest research status for 42 model-years; six model-years
-have a qualified-historical research status. Schema version 11 preserves 511
-`specialty_overlay` memberships and one `qualified_historical_overlay`
+have a qualified-historical research status. Schema version 11 preserves 541
+`specialty_overlay` memberships and one
+`qualified_historical_overlay`
 membership.
 
 | Reviewed tranche | Ledger records | Exact model applications | Publication boundary |
@@ -41,9 +42,10 @@ membership.
 | 2026 Blazer EV 9C1/9C3/5W4 SEO paint | 4 | 4 | Police and Special Service guide only |
 | 2026 Silverado 9C1 PPV and 5W4 SSV | 50 | 50 | 25 separately sourced rows per program |
 | 2025–2026 Silverado 1500 retail/fleet Woodland Green | 2 | 2 | Exact 9V5 row on each retained Order Guide page only |
-| **Specialty subtotal** | **531** | **551** | No adjacent-model or adjacent-year inference |
+| 2025–2026 current Tahoe, Suburban, Express, and Silverado HD tranche | 30 | 30 | Twenty exact source configurations; Tahoe police/special-service remains one combined program |
+| **Specialty subtotal** | **561** | **581** | No adjacent-model or adjacent-year inference |
 | **Qualified-historical subtotal** | **4** | **4** | Ordinary 1981 chart evidence, kept outside the specialty class |
-| **All published records** | **535** | **555** | Publication classes remain separate |
+| **All published records** | **565** | **585** | Publication classes remain separate |
 
 Each specialty ledger record uses `publication_status` value
 `published_specialty_subset`; the four 1981 records use
@@ -68,14 +70,13 @@ artifact, and archive-link ledger is
 
 ## Integrity audit
 
-On July 22, 2026, the ledger reconciled 87 unique retained artifacts. The most
-recent fleet updater independently rehashed 11 source files: seven 2015-2020
-Tahoe guides, the 2015 and 2016 Impala Limited guides, and the 2019 and 2020
-Suburban guides.
+The ledger reconciles 87 unique retained artifacts. The most recent specialty
+updater independently rehashed all 20 reviewed 2025-2026 Tahoe, Suburban,
+Express, and Silverado HD or medium-duty Order Guide source files.
 
 Every recorded byte length and SHA-256 digest reconciled. Every promoted PDF
 page was rendered and visually reviewed. The ledger records all 87 unique
-retained artifacts and their source URLs. Every source used by the 535
+retained artifacts and their source URLs. Every source used by the 565
 published records also carries its exact GitHub Release URL.
 
 ## Governing Chevrolet sources
@@ -374,10 +375,20 @@ snapshot, vehicle ID 23168, PDF page 236, were visually reviewed. Each publishes
 one exact retail-and-fleet Woodland Green row with SEO 9V5, touch-up number
 WA-9015, a five-order minimum, and the possible extended lead-time warning.
 Those records are separate from the 2026 9C1 and 5W4 program rows. The other 20
-SEO-paint entries on each reviewed page remain unpublished. The remaining 24
-Order Guide snapshots have complete bytes,
-retrieval timestamps, SHA-256 digests, and exact candidate pages, but remain
-`exact_snapshot_page_located` pending direct visual review.
+SEO-paint entries on each reviewed page remain unpublished.
+
+Twenty more retained entries were visually reviewed for the bounded
+[`current Order Guide specialty tranche`](current-order-guide-specialty-tranche.md).
+They publish the six-row combined Tahoe Police Package and Special Service
+table for each year plus exact Woodland Green rows for Tahoe retail/fleet,
+Suburban, Express Cargo, Express Cutaway, Express Passenger, and four
+Silverado HD or medium-duty configurations. Eight adjacent Silverado pages
+were confirmed to contain seat-trim evidence only.
+
+Four Order Guide snapshots remain pending direct visual review: 2025 and 2026
+Colorado plus 2025 and 2026 Blazer EV Police Package. Every retained PDF has
+complete bytes, a retrieval timestamp, a SHA-256 digest, and an exact candidate
+page.
 
 ## Forest Service Green
 
@@ -436,5 +447,5 @@ a Chevrolet application.
   Impala/Impala Limited Kerr, 2011-2017 Caprice PPV, 2012-2014 municipal, and
   exact 2015-2020 Tahoe/Suburban pages documented above are complete and no
   longer part of this queue.
-- Visually review the 24 remaining current Order Guide snapshot records and publish only exact, nonduplicate program scopes.
+- Visually review the four remaining current Order Guide snapshots and publish only exact, nonduplicate program scopes.
 - Human-review the consolidated OCR corpus: 2,774 candidate pages and 11,733 automated color-row candidates across 691 source documents. Automated extraction is complete; no candidate is promoted without page-level review.

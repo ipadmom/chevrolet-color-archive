@@ -84,15 +84,15 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         return [row for row in cls.records if row.get("program_id") == program_id]
 
     def test_specialty_publication_boundary_is_exact(self) -> None:
-        self.assertEqual(535, len(self.records))
-        self.assertEqual(535, len(self.records_by_id))
+        self.assertEqual(565, len(self.records))
+        self.assertEqual(565, len(self.records_by_id))
         self.assertEqual(
-            555,
+            585,
             sum(len(row["catalog_model_ids"]) for row in self.records),
         )
         self.assertEqual(
             {
-                "published_specialty_subset": 531,
+                "published_specialty_subset": 561,
                 "published_qualified_historical_subset": 4,
             },
             dict(Counter(row["publication_status"] for row in self.records)),
@@ -1181,24 +1181,33 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             specialty["integrity_audit"]["unique_retained_artifacts_reconciled"],
         )
         last_rehash = specialty["integrity_audit"]["last_updater_rehash"]
-        self.assertEqual(11, last_rehash["file_count"])
+        self.assertEqual(20, last_rehash["file_count"])
         self.assertEqual(
-            "scripts/update-2015-2020-specialty-fleet-tranche.mjs",
+            "scripts/update-current-order-guide-specialty-tranche.mjs",
             last_rehash["script"],
         )
         self.assertEqual(
             [
-                "gm-2015-tahoe-5w4",
-                "gm-2016-tahoe-9c1",
-                "gm-2016-tahoe-5w4",
-                "gm-2017-tahoe-9c1-4wd",
-                "gm-2018-tahoe-9c1-4wd",
-                "gm-2019-tahoe-5w4",
-                "gm-2020-tahoe-5w4",
-                "gm-2015-impala-limited-9c1-9c3",
-                "gm-2016-impala-limited-9c1-9c3",
-                "gm-2019-suburban-1fl-3500hd",
-                "gm-2020-suburban-1fl",
+                "gm-online-order-guide-pdf-22974",
+                "gm-online-order-guide-pdf-23213",
+                "gm-online-order-guide-pdf-22944",
+                "gm-online-order-guide-pdf-23232",
+                "gm-online-order-guide-pdf-23035",
+                "gm-online-order-guide-pdf-23233",
+                "gm-online-order-guide-pdf-23014",
+                "gm-online-order-guide-pdf-23276",
+                "gm-online-order-guide-pdf-23015",
+                "gm-online-order-guide-pdf-23277",
+                "gm-online-order-guide-pdf-23016",
+                "gm-online-order-guide-pdf-23278",
+                "gm-online-order-guide-pdf-22903",
+                "gm-online-order-guide-pdf-23195",
+                "gm-online-order-guide-pdf-22905",
+                "gm-online-order-guide-pdf-23197",
+                "gm-online-order-guide-pdf-22904",
+                "gm-online-order-guide-pdf-23196",
+                "gm-online-order-guide-pdf-23022",
+                "gm-online-order-guide-pdf-23260",
             ],
             last_rehash["source_ids"],
         )

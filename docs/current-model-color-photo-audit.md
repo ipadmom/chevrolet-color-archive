@@ -56,7 +56,7 @@ The independent 2025–2026 live-source comparison is retained separately in
 | Equinox EV | 3 | None | 2025–2026 | None | 2024 | 2 |
 | Silverado EV | 3 | None | 2025–2026 | None | 2024 | 2 |
 | BrightDrop 400 | 2 | None | 2025–2026 | None | None | 0 |
-| BrightDrop 600 | 2 | None | 2025–2026 | None | None | 1 |
+| BrightDrop 600 | 2 | None | 2025–2026 | None | None | 2 |
 
 Totals:
 
@@ -67,7 +67,7 @@ Totals:
 - 4 model-years whose inspected source had no governing color chart.
 - 297 unreviewed model-years.
 - 1,326 published availability rows.
-- 44 archived Commons originals and 44 archived previews for current
+- 45 archived Commons originals and 45 archived previews for current
   nameplates.
 - 0 current-model photo-to-color links promoted from candidate status.
 
@@ -94,13 +94,13 @@ reconciliation results are:
 | Corvette | `22973` | `23208` | The retained 2026 page now publishes Blade Silver Matte `GRF / WA-730S`, limited to the Quail Silver Limited Edition and unavailable with `D30`. |
 | Equinox | `22850` | `23091` | Identity union matches. The 2026 Fleet Guide prints “Polar White”; the Order Guide prints “Polar White Tricoat,” `G4J / WA-241L`. |
 | Equinox EV | `23098` | `23159` | Names match. 2026 Galaxy Gray is no longer orderable; premium-paint restrictions remain to be normalized. |
-| Express | `23014`, `23015`, `23016` | `23276`, `23277`, `23278` | Four regular names match. Eighteen SEO colors per year, including Woodland Green, remain outside the normalized regular layer. |
+| Express | `23014`, `23015`, `23016` | `23276`, `23277`, `23278` | Four regular names match. Woodland Green `9V5 / WA-9015` is published for Cargo, Cutaway, and Passenger with the five-order minimum and flat-Black body-component rule. Seventeen other SEO identities per year remain outside the normalized regular layer. |
 | Low Cab Forward | `22745`, `22775`, `22821` | `22954`, `22975`, `23023` | Three retained 2025 body-family tables now publish the six-color union: Arc White `16U`, Cardinal Red `74U`, Dark Blue `47U`, Ebony Black `41U`, Wheatland Yellow `86U`, and Woodland Green `46U`. The five nonwhite diesel colors are extra cost. Isuzu Woodland Green `46U` has no printed WA number and is not GM Woodland Green `9V5 / WA-9015`. |
 | Silverado 1500 | `22917` | `23168` | Nine regular names match. Woodland Green `9V5 / WA-9015` is published for the exact retail/fleet scope; the other 20 SEO colors per year remain separate from the regular layer and from PPV/SSV. |
 | Silverado EV | `22982` | `23290` | Names match. Several 2026 colors are late, built out, extra cost, or trim limited. |
-| Silverado HD | `22903`, `22904`, `22905`, `23022` | `23195`, `23196`, `23197`, `23260` | Regular body-series unions match. Forty-eight distinct SEO name/code identities across HD and medium-duty entries remain unnormalized for each year. |
-| Suburban | `23035` | `23233` | Eight regular names match. Victory Red, Woodland Green, and Wheatland Yellow SEO rows remain absent for both years. |
-| Tahoe | `22944`; police/SSV `22974` | `23232`; police/SSV `23213` | Eight regular names match. Three retail/fleet SEO colors and the full current PPV/SSV program remain absent. |
+| Silverado HD | `22903`, `22904`, `22905`, `23022` | `23195`, `23196`, `23197`, `23260` | Regular body-series unions match. Woodland Green `9V5 / WA-9015` is published for all four exact configurations in both years. Forty-seven other distinct SEO identities per year remain unnormalized. |
+| Suburban | `23035` | `23233` | Eight regular names match. Woodland Green `9V5 / WA-9015` is published from both exact SEO pages. Victory Red and Wheatland Yellow remain outside this tranche. |
+| Tahoe | `22944`; police/SSV `22974` | `23232`; police/SSV `23213` | Eight regular names match. Retail/fleet Woodland Green and all six colors on each combined Police Package and Special Service SEO page are published. The source does not split PPV from SSV. |
 | TrailBlazer | `22849` | `23094` | Names match. Trim, roof-option, premium-cost, and build-out restrictions remain to be normalized. |
 | Traverse | `23025` | `23144` | Names match. 2026 Stardust Metallic is built out; premium-paint states remain to be normalized. |
 | Trax | `22839` | `23139` | Names match. Trim, premium-cost, and build-out restrictions remain to be normalized. |
@@ -121,28 +121,30 @@ The exact PPV, SSV, SEO, municipal, and upfitter programs are documented in
 [`specialty-color-source-audit.md`](specialty-color-source-audit.md). Important
 current-nameplate boundaries include:
 
-- Tahoe PPV and SSV programs are published only for the exact reviewed
-  2011–2020 applications. No current-generation Tahoe specialty palette is
-  inferred from those years.
+- Tahoe PPV and SSV programs for 2011-2020 remain exact historical programs.
+  The current 2025 and 2026 source is separately published only as a combined
+  Police Package and Special Service entry and does not split PPV from SSV.
 - The 2026 Blazer EV guide publishes four 9C1/9C3/5W4 specialty colors. That
   table is not a complete regular Blazer EV palette.
 - The 2026 Silverado 9C1 PPV and 5W4 SSV guides each publish four standard
   colors and 21 SEO colors that closed to ordering after February 2, 2026.
-- The current Tahoe police/SSV Order Guide entries each expose six standard
-  colors and six SEO colors for 2025 and 2026: Victory Red
+- The current Tahoe police/SSV Order Guide entries each expose six SEO solid
+  paints for 2025 and 2026: Victory Red
   `5T4 / WA-9260`, MSP Blue `9V2 / WA-5665`, Woodland Green
   `9V5 / WA-9015`, Dark Blue Metallic `9V7 / WA-722J`, Wheatland Yellow
   `9W3 / WA-253A`, and Silver Ice Metallic `9W5 / WA-636R`. The retained
-  generated PDFs locate the combined program table on page 29. Those pages
-  remain page-located rather than visually reviewed, so separate PPV-versus-SSV
-  applicability is not inferred.
+  generated PDFs place the combined program table on page 29. Both pages are
+  visually reviewed and all twelve year-specific rows are published. Separate
+  PPV-versus-SSV applicability is not inferred.
 - Thirty-one retained 2025–2026 GM Order Guide snapshots now form the current
   source release. Twenty-six locate Woodland Green `9V5 / WA-9015` or related
   specialty pages for current trucks, vans, SUVs, police, and SSV
   configurations. The exact 2025 and 2026 Silverado 1500 Retail and Fleet
   pages have been visually reviewed and now publish one scoped specialty row
   per year, including the five-order minimum and extended-lead-time warning.
-  The other 24 in that specialty queue remain page-located but unreviewed.
+  Twenty additional Tahoe, Suburban, Express, and Silverado HD source entries
+  are also visually reviewed and publish 30 exact rows. Four source entries
+  remain pending: two Colorado and two Blazer EV Police Package PDFs.
   Five additional snapshots close the Blazer EV, Corvette, and Low Cab Forward
   regular-palette identity omissions documented above.
 
@@ -175,15 +177,37 @@ BrightDrop 600/Zevo 600 vehicles. A generic van cannot be relabeled 400 merely
 because its license permits reuse. The official 2026 GM Fleet Guide illustration
 therefore remains the dimensional and silhouette reference for BrightDrop 400.
 
+### July 23 Commons refresh
+
+The release manifest now has 45 archived candidates across the 18 current
+nameplates and zero current-model photo-to-color links. The full evidence ledger is
+[`current-model-commons-photo-audit.json`](../data/photos/current-model-commons-photo-audit.json).
+
+- BrightDrop 400 remains at zero exact candidates. Fresh exact 2025, 2026,
+  BrightDrop 400, Zevo 400, and EV410 searches returned no 400 identity.
+- Low Cab Forward remains at one archived candidate. Fresh 2025 and 2026
+  queries returned none, and the only other LCF search result was explicitly a
+  GMC truck.
+- BrightDrop 600 now has two archived candidates. The June 2025 file explicitly
+  described as a Chevrolet BrightDrop 600 was visually reviewed, hashed, copied
+  to the existing `photo-archive-v1` Release with its WebP preview, and verified
+  against the GitHub-reported byte counts and SHA-256 digests. The June 2025
+  date remains a capture date only, not model-year evidence.
+
+The existing 2019 Low Cab Forward photo mentions Bright White `16U`, but it is
+not current-model paint evidence. No current photo is promoted as factory color
+evidence in this audit.
+
 ## Highest-priority work queue
 
-1. Visually review the 24 retained Woodland Green Order Guide records and publish
-   only exact model, year, configuration, code, and restriction scopes.
-2. Complete current-generation Tahoe PPV/SSV source review without carrying
-   forward 2011–2020 programs.
+1. Review the two retained Colorado Woodland Green pages and the two Blazer EV
+   Police Package pages that remain pending.
+2. Transcribe the non-Woodland rows on the reviewed Tahoe retail/fleet,
+   Suburban, Express, and Silverado HD pages without combining configurations
+   or overwriting printed conflicts.
 3. Review current 2025–2026 order guides or paint sections at trim level so
    qualified palette unions can become governing model-year charts.
-4. Review the 44 current-model Commons candidates for identity and composition,
+4. Review the 45 current-model Commons candidates for identity and composition,
    then link a photograph to a color only when separate color evidence supports
    the association.
 5. Keep BrightDrop 400 photo coverage explicitly empty until an exact,

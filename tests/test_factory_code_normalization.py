@@ -334,6 +334,8 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "express:2012",
                 "express:2013",
                 "express:2014",
+                "express:2025",
+                "express:2026",
                 "g-series-van:1979",
                 "g-series-van:1980",
                 "impala-limited:2014",
@@ -347,6 +349,8 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "silverado:2014",
                 "silverado:2025",
                 "silverado:2026",
+                "silverado-hd:2025",
+                "silverado-hd:2026",
                 "sportvan:1979",
                 "sportvan:1980",
                 "suburban:1979",
@@ -359,6 +363,8 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "suburban:2014",
                 "suburban:2019",
                 "suburban:2020",
+                "suburban:2025",
+                "suburban:2026",
                 "tahoe:2003",
                 "tahoe:2005",
                 "tahoe:2006",
@@ -371,10 +377,12 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "tahoe:2018",
                 "tahoe:2019",
                 "tahoe:2020",
+                "tahoe:2025",
+                "tahoe:2026",
             },
             {row["model_year_id"] for row in overlays},
         )
-        self.assertEqual(511, len(overlays))
+        self.assertEqual(541, len(overlays))
         self.assertEqual(
             {"specialty_palette_subset"},
             {row["evidence_class"] for row in overlays},

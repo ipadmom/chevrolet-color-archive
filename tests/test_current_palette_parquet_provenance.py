@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import unittest
+from collections import Counter
 from pathlib import Path
 
 import pyarrow.parquet as pq
@@ -141,6 +142,112 @@ class CurrentPaletteParquetProvenanceTest(unittest.TestCase):
                 "gm-online-order-guide-pdf-22821",
             },
             supporting,
+        )
+
+    def test_2024_current_model_fleet_guide_union_is_exact(self) -> None:
+        rows = [
+            row
+            for row in self.availability
+            if row["model_year"] == 2024
+            and row["claim_status"] == "published_qualified_palette_union"
+            and row["evidence_source_id"] == "gm-fleet-guide-us-2024-v3"
+        ]
+        expected_counts = {
+            "blazer": 9,
+            "blazer-ev": 8,
+            "colorado": 8,
+            "corvette": 14,
+            "equinox": 8,
+            "express": 4,
+            "silverado": 11,
+            "silverado-ev": 2,
+            "silverado-hd": 14,
+            "suburban": 9,
+            "tahoe": 9,
+            "trailblazer": 9,
+            "trax": 10,
+        }
+        self.assertEqual(115, len(rows))
+        self.assertEqual(
+            expected_counts,
+            dict(Counter(row["model_id"] for row in rows)),
+        )
+        self.assertTrue(
+            all(
+                row["factory_code"] is None
+                and row["factory_code_status"] == "not_printed_in_source"
+                and row["availability_state"] == "restricted"
+                for row in rows
+            )
+        )
+        self.assertFalse(
+            {"traverse", "low-cab-forward", "equinox-ev"}
+            & {row["model_id"] for row in rows}
+        )
+
+        cited_pages = set()
+        for row in rows:
+            claim = self.claims[row["availability_id"]]
+            self.assertEqual("gm-fleet-guide-us-2024-v3", claim["source_id"])
+            self.assertEqual(
+                "human_checked_qualified_palette_union",
+                claim["verification_status"],
+            )
+            self.assertEqual(
+                "not_printed_in_source",
+                claim["transcribed_factory_code_status"],
+            )
+            cited_pages.update(claim["pdf_pages"])
+            revision = self.revisions[claim["source_revision_id"]]
+            self.assertEqual(
+                "7511f74a0edee3c396bbe2a42746f75d0d61871897686505f4899e65835c8851",
+                revision["artifact_sha256"],
+            )
+            self.assertEqual(
+                "complete_file_rehashed",
+                revision["integrity_status"],
+            )
+
+        self.assertEqual(
+            {
+                17,
+                20,
+                32,
+                36,
+                37,
+                40,
+                47,
+                53,
+                54,
+                61,
+                66,
+                70,
+                76,
+                77,
+                87,
+                89,
+                91,
+            },
+            cited_pages,
+        )
+        self.assertRegex(
+            self.sources["gm-fleet-guide-us-2024-v3"]["archive_url"],
+            r"/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror\.pdf$",
+        )
+
+        self.assertRegex(
+            self.row("silverado-ev", 2024, "Black")["restriction"],
+            r"Late model year availability",
+        )
+        self.assertRegex(
+            self.row("corvette", 2024, "Sea Wolf Gray Tricoat")["restriction"],
+            r"Premium paint; additional cost",
+        )
+        self.assertRegex(
+            self.row("blazer-ev", 2024, "Iridescent Pearl Tricoat")[
+                "restriction"
+            ],
+            r"Premium paint; additional charge",
         )
 
 

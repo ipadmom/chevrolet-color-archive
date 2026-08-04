@@ -38,12 +38,12 @@ each matrix spans only the selected sourced platform, base, or era band. An
 unreviewed year remains as an explicit blank column instead of borrowing colors
 from an adjacent year.
 
-The reviewed public matrices currently contain 2,010 source-linked listings.
-They divide into 973 direct source transcriptions, 462 qualified official
-palette-union rows across 57 model-years, 571 reviewed specialty-paint subset
-rows across 58 application model-years, and four ordinary qualified-historical
+The reviewed public matrices currently contain 2,146 source-linked listings.
+They divide into 973 direct source transcriptions, 568 qualified official
+palette-union rows across 69 model-years, 601 reviewed specialty-paint subset
+rows across 66 application model-years, and four ordinary qualified-historical
 table rows. Specialty evidence is the strongest research status for 42
-model-years; the other 16 specialty model-years coexist with a separately
+model-years; the other 24 specialty model-years coexist with a separately
 complete or qualified regular palette. Six model-years have a
 reviewed-qualified-historical research status. The four 1981 Woodland Green
 rows are ordinary chart evidence in that class, not specialty-paint records.
@@ -295,7 +295,12 @@ Woodland Green, and palette-completion review queues: 3,457 pages and
 [tracked manifest](data/sources/current-order-guide-source-release-manifest.json)
 records every original GM URL, retrieval time, byte count, SHA-256, cited page,
 and immutable Release URL. Retention is not treated as color verification until
-the cited page has been visually reviewed.
+the cited page has been visually reviewed. Twenty-seven of the 31 retained
+entries now have completed page review. The
+[current Order Guide specialty tranche](docs/current-order-guide-specialty-tranche.md)
+publishes 30 exact 2025-2026 Tahoe, Suburban, Express, and Silverado HD rows
+without inferring adjacent configurations or splitting the combined Tahoe
+Police Package and Special Service entry.
 
 The Wikimedia Commons archive contains 302 audited originals across 140 models,
 plus 302 web previews. Both forms are stored under the pinned GitHub Release tag
@@ -310,9 +315,9 @@ bytes. The archive closes the Tahoe 1995–2007 evidence set, all 19 audited
 2008–2026 GM Fleet Guides, the retained eBrochure set, and every currently
 published specialty citation. The
 flat-filename checksum manifest covers all 139 other assets. Release validation
-identifies 30 governing audit assets, 30 app-fed audit citations, 110
-application Release URLs, 61 modern palette tables, 483 modern color
-assertions, 531 published specialty records, four published ordinary
+identifies 30 governing audit assets, 30 app-fed audit citations, 135
+application Release URLs, 80 modern palette tables, 616 modern color
+assertions, 561 published specialty records, four published ordinary
 qualified-history records, and eight verified nonpublished, nonrouting specialty
 snapshots.
 

@@ -24,8 +24,8 @@ const EXPECTED_PDF_PAGE_COUNT = 8_635;
 const EXPECTED_MODERN_SOURCE_COUNT = 23;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 19;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
-const EXPECTED_MODERN_TABLE_COUNT = 66;
-const EXPECTED_MODERN_ASSERTION_COUNT = 493;
+const EXPECTED_MODERN_TABLE_COUNT = 80;
+const EXPECTED_MODERN_ASSERTION_COUNT = 616;
 const PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = new Set([
   "gm-online-order-guide-pdf-22745",
   "gm-online-order-guide-pdf-22775",
@@ -33,8 +33,8 @@ const PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = new Set([
   "gm-online-order-guide-pdf-22878",
   "gm-online-order-guide-pdf-23208",
 ]);
-const EXPECTED_PUBLISHED_RECORD_COUNT = 535;
-const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 531;
+const EXPECTED_PUBLISHED_RECORD_COUNT = 565;
+const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 561;
 const EXPECTED_QUALIFIED_HISTORICAL_RECORD_COUNT = 4;
 const EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT = 8;
 const EARLY_SUBURBAN_AUDIT_RELATIVE_PATH =
@@ -1387,6 +1387,26 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "gm-2026-silverado-5w4-041426",
     "gm-online-order-guide-pdf-22917",
     "gm-online-order-guide-pdf-23168",
+    "gm-online-order-guide-pdf-22903",
+    "gm-online-order-guide-pdf-22904",
+    "gm-online-order-guide-pdf-22905",
+    "gm-online-order-guide-pdf-22944",
+    "gm-online-order-guide-pdf-22974",
+    "gm-online-order-guide-pdf-23014",
+    "gm-online-order-guide-pdf-23015",
+    "gm-online-order-guide-pdf-23016",
+    "gm-online-order-guide-pdf-23022",
+    "gm-online-order-guide-pdf-23035",
+    "gm-online-order-guide-pdf-23195",
+    "gm-online-order-guide-pdf-23196",
+    "gm-online-order-guide-pdf-23197",
+    "gm-online-order-guide-pdf-23213",
+    "gm-online-order-guide-pdf-23232",
+    "gm-online-order-guide-pdf-23233",
+    "gm-online-order-guide-pdf-23260",
+    "gm-online-order-guide-pdf-23276",
+    "gm-online-order-guide-pdf-23277",
+    "gm-online-order-guide-pdf-23278",
   ].sort();
   const actualPublishedSpecialtySourceIds = [
     ...new Set(
@@ -1396,7 +1416,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualPublishedSpecialtySourceIds) ===
       JSON.stringify(expectedPublishedSpecialtySourceIds),
-    "published rows must resolve to the 34 audited governing sources",
+    "published rows must resolve to the 54 audited governing sources",
   );
   const verifiedNotPublishedSpecialtyRecords =
     specialtyColorSource.verified_not_published;
@@ -1440,8 +1460,8 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
       record.catalog_model_ids.includes("tahoe"),
   );
   invariant(
-    tahoeSpecialtyRecords.length === 91,
-    "Tahoe specialty source audit must retain exactly 91 published rows",
+    tahoeSpecialtyRecords.length === 105,
+    "Tahoe specialty source audit must retain exactly 105 published rows",
   );
   const expectedTahoeSpecialtySourceIds = [
     "gm-heritage-2003-chevrolet-tahoe",
@@ -1458,6 +1478,10 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "gm-2018-tahoe-9c1-4wd",
     "gm-2019-tahoe-5w4",
     "gm-2020-tahoe-5w4",
+    "gm-online-order-guide-pdf-22944",
+    "gm-online-order-guide-pdf-22974",
+    "gm-online-order-guide-pdf-23213",
+    "gm-online-order-guide-pdf-23232",
   ].sort();
   const actualTahoeSpecialtySourceIds = [
     ...new Set(tahoeSpecialtyRecords.map(({ source }) => source.source_id)),
@@ -1465,7 +1489,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualTahoeSpecialtySourceIds) ===
       JSON.stringify(expectedTahoeSpecialtySourceIds),
-    "Tahoe specialty rows must resolve to the 14 retained governing sources",
+    "Tahoe specialty rows must resolve to the 18 retained governing sources",
   );
   for (const record of publishedRecords) {
     const { source } = record;

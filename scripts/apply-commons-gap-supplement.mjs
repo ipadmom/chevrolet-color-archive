@@ -510,7 +510,7 @@ function mergeIntoManifest(manifest, selected, plan, options) {
   const priorSupplement = manifest.coverage_supplement;
   const retainedAssetsAdded =
     priorSupplement?.report === relativePath(options.root, options.plan)
-      ? (priorSupplement.unique_assets_added ?? assetsAdded)
+      ? (priorSupplement.unique_assets_added ?? 0) + assetsAdded
       : assetsAdded;
   const retainedReleaseUploadPerformed =
     priorSupplement?.report === relativePath(options.root, options.plan)
