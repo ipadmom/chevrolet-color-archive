@@ -55,7 +55,7 @@ The independent 2025–2026 live-source comparison is retained separately in
 | Blazer EV | 3 | None | 2025–2026 | See separate 2024–2026 9C1/9C3/5W4 evidence | 2024 regular palette | 2 |
 | Equinox EV | 3 | None | 2025–2026 | None | 2024 | 2 |
 | Silverado EV | 3 | None | 2025–2026 | None | 2024 | 2 |
-| BrightDrop 400 | 2 | None | 2025–2026 | None | None | 0 |
+| BrightDrop 400 | 2 | None | 2025–2026 | None | None | 1 |
 | BrightDrop 600 | 2 | None | 2025–2026 | None | None | 2 |
 
 Totals:
@@ -67,7 +67,7 @@ Totals:
 - 4 model-years whose inspected source had no governing color chart.
 - 297 unreviewed model-years.
 - 1,326 published availability rows.
-- 45 archived Commons originals and 45 archived previews for current
+- 46 archived Commons originals and 46 archived previews for current
   nameplates.
 - 0 current-model photo-to-color links promoted from candidate status.
 
@@ -142,9 +142,10 @@ current-nameplate boundaries include:
   configurations. The exact 2025 and 2026 Silverado 1500 Retail and Fleet
   pages have been visually reviewed and now publish one scoped specialty row
   per year, including the five-order minimum and extended-lead-time warning.
-  Twenty additional Tahoe, Suburban, Express, and Silverado HD source entries
-  are also visually reviewed and publish 30 exact rows. Four source entries
-  remain pending: two Colorado and two Blazer EV Police Package PDFs.
+  Twenty-four additional Tahoe, Suburban, Express, Silverado HD, Colorado, and
+  Blazer EV source entries are also visually reviewed and publish 69 exact
+  rows. No retained current Order Guide source entry remains pending visual
+  review.
   Five additional snapshots close the Blazer EV, Corvette, and Low Cab Forward
   regular-palette identity omissions documented above.
 
@@ -171,20 +172,25 @@ The current-model files remain identification candidates. A photo is never
 treated as proof of its paint name, factory finish, model year, or orderability
 unless those facts are independently supported.
 
-No exact BrightDrop 400 photograph was found under the archive’s conservative
-identity rule. Current Commons files are generic BrightDrops or explicit
-BrightDrop 600/Zevo 600 vehicles. A generic van cannot be relabeled 400 merely
-because its license permits reuse. The official 2026 GM Fleet Guide illustration
-therefore remains the dimensional and silhouette reference for BrightDrop 400.
+One BrightDrop 400 identity reference now passes the archive’s conservative
+cross-reference rule. Commons identifies the exact file as a 2025 Chevrolet
+BrightDrop at the 2025 Montreal International Auto Show, but does not provide
+the 400 designation. The exact-file English Wikipedia caption identifies a
+2025 BrightDrop 400, and the show organizer’s official report lists a 2025
+Chevrolet BrightDrop 400 as the event’s BrightDrop Canadian debut. The manifest
+therefore records `official_event_roster_plus_exact_file_caption` as the basis.
+This does not turn a generic BrightDrop photograph into paint evidence, and the
+official 2026 GM Fleet Guide remains the dimensional and silhouette reference.
 
-### July 23 Commons refresh
+### August 4 Commons refresh
 
-The release manifest now has 45 archived candidates across the 18 current
+The release manifest now has 46 archived candidates across the 18 current
 nameplates and zero current-model photo-to-color links. The full evidence ledger is
 [`current-model-commons-photo-audit.json`](../data/photos/current-model-commons-photo-audit.json).
 
-- BrightDrop 400 remains at zero exact candidates. Fresh exact 2025, 2026,
-  BrightDrop 400, Zevo 400, and EV410 searches returned no 400 identity.
+- BrightDrop 400 now has one cross-referenced 2025 identity candidate. The
+  Commons page, exact-file caption, and official show report remain separately
+  linked so the 400 designation is not misattributed to Commons metadata.
 - Low Cab Forward remains at one archived candidate. Fresh 2025 and 2026
   queries returned none, and the only other LCF search result was explicitly a
   GMC truck.
@@ -200,15 +206,12 @@ evidence in this audit.
 
 ## Highest-priority work queue
 
-1. Review the two retained Colorado Woodland Green pages and the two Blazer EV
-   Police Package pages that remain pending.
-2. Transcribe the non-Woodland rows on the reviewed Tahoe retail/fleet,
-   Suburban, Express, and Silverado HD pages without combining configurations
-   or overwriting printed conflicts.
-3. Review current 2025–2026 order guides or paint sections at trim level so
+1. Find complete official 2024 exterior-color tables for Traverse and Equinox
+   EV without promoting partial announcement lists.
+2. Review current 2025–2026 order guides or paint sections at trim level so
    qualified palette unions can become governing model-year charts.
-4. Review the 45 current-model Commons candidates for identity and composition,
+3. Review the 46 current-model Commons candidates for identity and composition,
    then link a photograph to a color only when separate color evidence supports
    the association.
-5. Keep BrightDrop 400 photo coverage explicitly empty until an exact,
-   reusable, model-identified file is found.
+4. Continue searching for a second BrightDrop 400 image whose own Commons
+   metadata states the exact 400 identity.

@@ -3904,6 +3904,7 @@ const publishedModernPaletteSourceIds = new Set([
   "gm-fleet-guide-us-2022-v6",
   "gm-fleet-guide-us-2023-v3",
   "gm-fleet-guide-us-2024-v3",
+  "gm-fleet-guide-us-2025-v1-r2024-05-29",
   "gm-fleet-guide-us-2025-r2024-12-11",
   "gm-fleet-guide-us-2026-r2026-04-01",
   "chevrolet-ebrochure-us-2022-tahoe",

@@ -848,7 +848,7 @@ LOCAL_SOURCES = (
         "pdf_page_count": 55,
     },
     {
-        "source_id": "gm-order-guide-2025-blazer-ev-police-22887",
+        "source_id": "gm-online-order-guide-pdf-22887",
         "asset_name": "2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
         "role": "supporting_specialty_vehicle_order_guide_snapshot",
         "path": ROOT
@@ -875,7 +875,7 @@ LOCAL_SOURCES = (
         "pdf_page_count": 57,
     },
     {
-        "source_id": "gm-order-guide-2026-blazer-ev-police-23158",
+        "source_id": "gm-online-order-guide-pdf-23158",
         "asset_name": "2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
         "role": "supporting_specialty_vehicle_order_guide_snapshot",
         "path": ROOT
@@ -1155,9 +1155,9 @@ def modern_entries() -> list[dict[str, Any]]:
         source["source_type"] in {"consumer_brochure_pdf", "commercial_brochure_pdf"}
         for source in retained_sources
     )
-    if (fleet_count, brochure_count) != (19, 4):
+    if (fleet_count, brochure_count) != (20, 4):
         raise ValueError(
-            "modern retained sources must contain exactly 19 Fleet Guides and "
+            "modern retained sources must contain exactly 20 Fleet Guides and "
             f"four eBrochures, found {fleet_count} and {brochure_count}"
         )
 

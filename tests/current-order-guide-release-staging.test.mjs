@@ -44,7 +44,7 @@ test("published current Order Guide source manifest is complete and immutable", 
   assert.equal(manifest.release_tag, "current-order-guide-source-archive-v1");
   assert.equal(manifest.release_upload_performed, true);
   assert.match(manifest.uploaded_at, /^\d{4}-\d{2}-\d{2}T/);
-  assert.equal(manifest.remote_asset_count, 34);
+  assert.equal(manifest.remote_asset_count, 35);
   assert.equal(
     manifest.remote_total_bytes,
     manifest.total_pdf_bytes +
@@ -59,11 +59,12 @@ test("published current Order Guide source manifest is complete and immutable", 
     [
       "current-order-guide-source-release-manifest.json",
       "current-order-guide-source-release-manifest-31-reviewed.json",
+      "current-order-guide-source-release-manifest-31-complete-review.json",
     ],
   );
   assert.deepEqual(
     manifest.remote_manifest_assets.map((asset) => asset.bytes),
-    [38988, 49823],
+    [38988, 49823, 52519],
   );
   for (const asset of manifest.remote_manifest_assets) {
     assert.match(asset.sha256, /^[a-f0-9]{64}$/);
@@ -75,6 +76,10 @@ test("published current Order Guide source manifest is complete and immutable", 
   assert.equal(
     manifest.remote_manifest_assets[1].sha256,
     "f666db7407d998ed396a55f4f56ce537993b8944583565aeb1e1019e676415b7",
+  );
+  assert.equal(
+    manifest.remote_manifest_assets[2].sha256,
+    "fa82802781e36b28c2602f3551548d74406db674792d8514498fbe629b3c05da",
   );
   assert.equal(manifest.entry_count, 31);
   assert.equal(manifest.total_pdf_bytes, 14302332);

@@ -198,7 +198,7 @@ test("specialty programs and Forest Service Green stay scope-qualified", async (
     (finding) => finding.model_id === "silverado",
   );
 
-  assert.deepEqual(tahoe.vehicle_ids, [22974, 23213]);
+  assert.deepEqual(tahoe.vehicle_ids, [22944, 22974, 23232, 23213]);
   assert.equal(tahoe.generated_pdf_page, 29);
   assert.equal(tahoe.standard_color_count_per_year, 6);
   assert.equal(tahoe.seo_colors.length, 6);

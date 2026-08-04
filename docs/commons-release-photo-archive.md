@@ -28,7 +28,7 @@ URLs.
 - Exact-title gap supplement runner: `scripts/apply-commons-gap-supplement.mjs`
 - Gap review-sheet builder: `scripts/build-commons-gap-review-sheets.mjs`
 - Review manifest: `data/photos/commons-release-manifest.json`
-- Current immutable release ledger: [commons-release-manifest-303.json](https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-release-manifest-303.json)
+- Current immutable release ledger: [commons-release-manifest-304.json](https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-release-manifest-304.json)
 - Association audit: `data/photos/commons-candidate-audit.json`
 - Exact-identity gap audit: `data/photos/commons-gap-supplement.json`
 - Ignored binary staging: `tmp/commons-release-assets/`
@@ -55,8 +55,12 @@ Automatic staging is limited to raster originals that Commons identifies as:
 
 Noncommercial, no-derivatives, fair-use, all-rights-reserved, unknown, and
 GFDL-only records do not pass the gate. A candidate also needs an explicit
-Chevrolet/model match, author metadata, a supported photo MIME type, and at
-least 640 by 400 pixels. Obvious brochures, logos, toys, detail shots, and
+Chevrolet/model match in Commons metadata or a documented exact-file
+cross-reference to a reliable event or manufacturer record, plus author
+metadata, a supported photo MIME type, and at least 640 by 400 pixels. A generic
+vehicle description or visible resemblance is never enough by itself. Every
+cross-reference basis and supporting URL is retained in the photo manifest and
+normalized source ledger. Obvious brochures, logos, toys, detail shots, and
 similar non-vehicle images are rejected.
 
 The model year is never inferred from a query or the catalog range. The crawler
@@ -221,22 +225,34 @@ BrightDrop 600. Its June 2025 date is the capture date, not model-year evidence.
 The exact original and its preview were uploaded to the same pinned Release and
 verified against GitHub-reported byte counts and SHA-256 digests.
 
+The August 4 current-model refresh added one BrightDrop 400 identity reference.
+Commons identifies the exact file as a 2025 Chevrolet BrightDrop photographed
+at the 2025 Montreal International Auto Show, but does not distinguish 400 from
+600. The archive therefore records the 400 designation only through a declared
+cross-reference: the English Wikipedia article captions the exact file as a
+2025 BrightDrop 400, and the show organizer's official report lists a 2025
+Chevrolet BrightDrop 400 as the BrightDrop Canadian debut. The original and
+preview were fetched through the configured VPS, rehashed locally, visually
+reviewed, uploaded to the pinned Release, and verified against GitHub's byte
+counts and SHA-256 digests. It remains identity evidence only, not paint
+evidence.
+
 The current manifest therefore contains:
 
-- 140 models with at least one audited representative;
-- 303 exact Commons originals totaling 925,588,069 bytes;
-- 296 JPEG files and 7 PNG files;
-- 140 CC BY-SA, 74 CC BY, 74 public-domain, and 15 CC0 assets; and
-- 303 WebP site previews totaling 60,582,620 bytes, a 93.45 percent delivery
+- 141 models with at least one audited representative;
+- 304 exact Commons originals totaling 926,922,586 bytes;
+- 297 JPEG files and 7 PNG files;
+- 140 CC BY-SA, 74 CC BY, 75 public-domain, and 15 CC0 assets; and
+- 304 WebP site previews totaling 60,732,668 bytes, a 93.45 percent delivery
   reduction while preserving every original.
 
-Nine identities remain empty because no strong exact photograph survived the
+Eight identities remain empty because no strong exact photograph survived the
 same gate: Series F, Copper-Cooled, Malibu Limited, Malibu Classic (2008), Chevy
-90, Bison, Bruin, Traverse Limited, and BrightDrop 400. These are documented
-discovery gaps. Do not fill them with siblings,
+90, Bison, Bruin, and Traverse Limited. These are documented discovery gaps. Do
+not fill them with siblings,
 generic generation photos, illustrations, detail images, or reused names.
 
-Every selected local file was rehashed after staging. All 303 original byte
+Every selected local file was rehashed after staging. All 304 original byte
 lengths and SHA-256 values match the final manifest. The preview build also
 reverified every original before encoding. All original and preview asset names
 and candidate IDs are unique, all five legacy references resolve, and no
@@ -247,8 +263,8 @@ visual-review rejections leave 20 unreferenced originals in the ignored staging
 directory. They remain for reproducibility and are not part of the manifest.
 The live Release was then enumerated through the GitHub API. All 606 expected
 photo assets were present with exact byte counts and matching SHA-256 digests;
-the Release contains two immutable attribution-ledger snapshots, for 608 assets
-total. The current 303-photo ledger is 1,227,664 bytes with SHA-256
-`f048ff2fb241fbff828fb4cbd774ca9edbe5a2d304036383c51181c6d6aaba5b`.
-The earlier ledger remains untouched. The application may therefore use the
-pinned URLs in the current manifest.
+the Release contains three immutable attribution-ledger snapshots, for 611
+assets total. The current 304-photo ledger is 1,233,351 bytes with SHA-256
+`b36aef2481dfd444b3eb7dac842ed1fbb8d866bb83a731f9592f6daae0c142f2`.
+The two earlier ledgers remain untouched. The application may therefore use
+the pinned URLs in the current manifest.

@@ -316,6 +316,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         ]
         self.assertEqual(
             {
+                "blazer-ev:2025",
                 "blazer-ev:2026",
                 "blazer:1979",
                 "blazer:1980",
@@ -331,6 +332,8 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "ck-series:1980",
                 "ck-series:1983",
                 "ck-series:1993",
+                "colorado:2025",
+                "colorado:2026",
                 "express:2012",
                 "express:2013",
                 "express:2014",
@@ -382,7 +385,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
             },
             {row["model_year_id"] for row in overlays},
         )
-        self.assertEqual(541, len(overlays))
+        self.assertEqual(868, len(overlays))
         self.assertEqual(
             {"specialty_palette_subset"},
             {row["evidence_class"] for row in overlays},
@@ -418,6 +421,74 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
             "suburban:gm-fleet-guide-qualified-2011",
             suburban_2011["generation_id"],
         )
+
+    def test_specialty_research_urls_are_exhaustively_source_linked(self) -> None:
+        specialty = self.builder.specialty_color_sources
+        usda_urls = {
+            BUILD.canonical_url(url)
+            for source in specialty["usda_primary_sources"]
+            for url in [source["url"], *source.get("alternate_urls", [])]
+        }
+        rejected_urls = {
+            BUILD.canonical_url(url)
+            for lead in specialty["rejected_or_unresolved_leads"]
+            for url in (
+                ([lead["url"]] if lead.get("url") else [])
+                + [source["url"] for source in lead.get("sources", [])]
+            )
+        }
+        self.assertEqual(15, len(usda_urls))
+        self.assertEqual(10, len(rejected_urls))
+        expected_urls = usda_urls | rejected_urls
+        sources_by_url = {
+            row["canonical_url"]: row for row in self.builder.rows["sources"]
+        }
+        self.assertTrue(expected_urls <= set(sources_by_url))
+
+        provenance_source_ids = {
+            row["source_id"]
+            for row in self.builder.rows["source_links"]
+            if row["claim_type"]
+            in {
+                "specialty_source_artifact_provenance",
+                "specialty_external_reference_provenance",
+            }
+        }
+        self.assertTrue(
+            all(
+                sources_by_url[url]["source_id"] in provenance_source_ids
+                for url in expected_urls
+            )
+        )
+
+        external_urls = {
+            BUILD.canonical_url(source["url"])
+            for source in specialty["usda_primary_sources"]
+            if source["artifact_retention_status"]
+            == "external_reference_not_retained"
+        }
+        external_urls.update(
+            BUILD.canonical_url(url)
+            for source in specialty["usda_primary_sources"]
+            for url in source.get("alternate_urls", [])
+        )
+        external_urls.update(
+            BUILD.canonical_url(source["url"])
+            for lead in specialty["rejected_or_unresolved_leads"]
+            for source in (
+                ([lead] if lead.get("url") else []) + lead.get("sources", [])
+            )
+            if source.get("artifact_retention_status")
+            == "external_reference_not_retained"
+        )
+        revision_source_ids = {
+            row["source_id"] for row in self.builder.rows["source_revisions"]
+        }
+        for url in external_urls:
+            source = sources_by_url[url]
+            self.assertIsNone(source["content_length_bytes"])
+            self.assertIsNone(source["content_sha256"])
+            self.assertNotIn(source["source_id"], revision_source_ids)
 
     def test_image_evidence_uses_an_explicit_non_pdf_locator(self) -> None:
         claims = [

@@ -17,15 +17,15 @@ const CURRENT_ORDER_GUIDE_RELEASE_TAG = "current-order-guide-source-archive-v1";
 const CURRENT_ORDER_GUIDE_RELEASE_DOWNLOAD_BASE =
   `https://github.com/${REPOSITORY}/releases/download/` +
   `${CURRENT_ORDER_GUIDE_RELEASE_TAG}/`;
-const EXPECTED_ASSET_COUNT = 140;
-const EXPECTED_PDF_COUNT = 116;
-const EXPECTED_PDF_BYTES = 1_408_805_873;
-const EXPECTED_PDF_PAGE_COUNT = 8_635;
-const EXPECTED_MODERN_SOURCE_COUNT = 23;
-const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 19;
+const EXPECTED_ASSET_COUNT = 142;
+const EXPECTED_PDF_COUNT = 117;
+const EXPECTED_PDF_BYTES = 1_451_230_138;
+const EXPECTED_PDF_PAGE_COUNT = 8_739;
+const EXPECTED_MODERN_SOURCE_COUNT = 24;
+const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 20;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
-const EXPECTED_MODERN_TABLE_COUNT = 80;
-const EXPECTED_MODERN_ASSERTION_COUNT = 616;
+const EXPECTED_MODERN_TABLE_COUNT = 83;
+const EXPECTED_MODERN_ASSERTION_COUNT = 638;
 const PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = new Set([
   "gm-online-order-guide-pdf-22745",
   "gm-online-order-guide-pdf-22775",
@@ -33,8 +33,8 @@ const PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = new Set([
   "gm-online-order-guide-pdf-22878",
   "gm-online-order-guide-pdf-23208",
 ]);
-const EXPECTED_PUBLISHED_RECORD_COUNT = 565;
-const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 561;
+const EXPECTED_PUBLISHED_RECORD_COUNT = 892;
+const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 888;
 const EXPECTED_QUALIFIED_HISTORICAL_RECORD_COUNT = 4;
 const EXPECTED_VERIFIED_NOT_PUBLISHED_SPECIALTY_RECORD_COUNT = 8;
 const EARLY_SUBURBAN_AUDIT_RELATIVE_PATH =
@@ -379,7 +379,7 @@ const specialtyResearchAssets = new Map([
   [
     "2025-chevrolet-blazer-ev-police-order-guide-gm.pdf",
     {
-      sourceId: "gm-order-guide-2025-blazer-ev-police-22887",
+      sourceId: "gm-online-order-guide-pdf-22887",
       role: "supporting_specialty_vehicle_order_guide_snapshot",
     },
   ],
@@ -393,7 +393,7 @@ const specialtyResearchAssets = new Map([
   [
     "2026-chevrolet-blazer-ev-police-order-guide-gm.pdf",
     {
-      sourceId: "gm-order-guide-2026-blazer-ev-police-23158",
+      sourceId: "gm-online-order-guide-pdf-23158",
       role: "supporting_specialty_vehicle_order_guide_snapshot",
     },
   ],
@@ -537,6 +537,13 @@ const modernPaletteAssets = new Map([
     "2025-gm-fleet-guide-r2024-12-11.pdf",
     {
       sourceId: "gm-fleet-guide-us-2025-r2024-12-11",
+      role: "controlling_qualified_palette_fleet_guide",
+    },
+  ],
+  [
+    "2025-gm-envolve-fleet-guide-v1-r2024-05-29.pdf",
+    {
+      sourceId: "gm-fleet-guide-us-2025-v1-r2024-05-29",
       role: "controlling_qualified_palette_fleet_guide",
     },
   ],
@@ -1183,7 +1190,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualModernSourceIds) ===
       JSON.stringify(expectedModernSourceIds),
-    "modern retained-source set must match the exact 23 audited PDFs",
+    "modern retained-source set must match the exact 24 audited PDFs",
   );
 
   const modernSourcesById = new Map();
@@ -1385,6 +1392,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "gm-2026-blazer-ev-9c1-9c3-5w4",
     "gm-2026-silverado-9c1-041426",
     "gm-2026-silverado-5w4-041426",
+    "gm-online-order-guide-pdf-22887",
     "gm-online-order-guide-pdf-22917",
     "gm-online-order-guide-pdf-23168",
     "gm-online-order-guide-pdf-22903",
@@ -1397,10 +1405,13 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     "gm-online-order-guide-pdf-23016",
     "gm-online-order-guide-pdf-23022",
     "gm-online-order-guide-pdf-23035",
+    "gm-online-order-guide-pdf-23079",
+    "gm-online-order-guide-pdf-23158",
     "gm-online-order-guide-pdf-23195",
     "gm-online-order-guide-pdf-23196",
     "gm-online-order-guide-pdf-23197",
     "gm-online-order-guide-pdf-23213",
+    "gm-online-order-guide-pdf-23215",
     "gm-online-order-guide-pdf-23232",
     "gm-online-order-guide-pdf-23233",
     "gm-online-order-guide-pdf-23260",
@@ -1416,7 +1427,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
   invariant(
     JSON.stringify(actualPublishedSpecialtySourceIds) ===
       JSON.stringify(expectedPublishedSpecialtySourceIds),
-    "published rows must resolve to the 54 audited governing sources",
+    "published rows must resolve to the 58 audited governing sources",
   );
   const verifiedNotPublishedSpecialtyRecords =
     specialtyColorSource.verified_not_published;
@@ -1460,8 +1471,8 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
       record.catalog_model_ids.includes("tahoe"),
   );
   invariant(
-    tahoeSpecialtyRecords.length === 105,
-    "Tahoe specialty source audit must retain exactly 105 published rows",
+    tahoeSpecialtyRecords.length === 109,
+    "Tahoe specialty source audit must retain exactly 109 published rows",
   );
   const expectedTahoeSpecialtySourceIds = [
     "gm-heritage-2003-chevrolet-tahoe",
@@ -1652,7 +1663,7 @@ async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
     );
   }
 
-  const checksumAssetName = "source-sha256-manifest.txt";
+  const checksumAssetName = "source-sha256-manifest-141-reviewed.txt";
   const checksumText = await readFile(
     path.join(stagingDirectory, checksumAssetName),
     "utf8",
@@ -1664,7 +1675,7 @@ async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
     .map(({ asset_name: assetName, sha256: digest }) => `${digest}  ${assetName}`);
   invariant(
     JSON.stringify(checksumLines) === JSON.stringify(expectedChecksumLines),
-    "source-sha256-manifest.txt must cover every non-self Release asset by its flat asset name",
+    "source-sha256-manifest-141-reviewed.txt must cover every preexisting Release asset by its flat asset name",
   );
 }
 

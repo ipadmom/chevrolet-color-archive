@@ -14,14 +14,14 @@ sources:
 
 ## Result
 
-The source search located a complete GM-authored Fleet Guide for every model year from 2008 through 2026. All 19 guides were downloaded in full, parsed through their complete page counts, hashed, and registered in `data/sources/modern-chevrolet-color-source-candidates.json`. Four Chevrolet eBrochures used by published 2022 and 2023 palettes are also retained and hashed. No model year in the requested range lacks a full guide.
+The source search located a complete GM-authored Fleet Guide for every model year from 2008 through 2026. The 19 annual coverage anchors and one additional first-retained 2025 revision were downloaded in full, parsed through their complete page counts, hashed, and registered in `data/sources/modern-chevrolet-color-source-candidates.json`. The additional revision contains explicitly labeled 2024 Equinox EV and Traverse pages. Four Chevrolet eBrochures used by published 2022 and 2023 palettes are also retained and hashed. No model year in the requested range lacks a full guide.
 
 The registry currently contains:
 
-- 36 provenance records.
-- 23 complete retained PDFs, 19 Fleet Guides plus four Chevrolet eBrochures, totaling 520,591,010 bytes.
+- 37 provenance records.
+- 24 complete retained PDFs, 20 Fleet Guide artifacts plus four Chevrolet eBrochures, totaling 563,015,275 bytes.
 - Five exact generated Online Order Guide PDFs in a separate immutable Release.
-- 80 page-verified model and model-year palette tables.
+- 83 page-verified model and model-year palette tables.
 - One timestamped GM Online Order Guide sample with order and touch-up codes.
 - Exact candidate page lists for the older guides whose remaining tables have not yet been normalized.
 
@@ -53,8 +53,9 @@ This closes source discovery for 2008-2026. It does not mean that every table in
 | 2020 | `gm-fleet-guide-us-2020` | 124 | 2019-10-17 | GM document, archival mirror | Complete PDF; Suburban palette verified; other candidate pages indexed |
 | 2021 | `gm-fleet-guide-us-2021-v3` | 110 | 2020-10-07 | GM document, archival mirror | Complete PDF; Suburban palette verified; other candidate pages indexed |
 | 2022 | `gm-fleet-guide-us-2022-v6` | 119 | 2022-02-28 | GM document, archival mirror | Complete PDF; Suburban Fleet Guide and Tahoe brochure palettes verified; other candidate pages indexed |
-| 2023 | `gm-fleet-guide-us-2023-v3` | 121 | 2022-12-20 | GM document, archival mirror | Complete PDF; Suburban Fleet Guide and three brochure palettes verified; other candidate pages indexed |
-| 2024 | `gm-fleet-guide-us-2024-v3` | 114 | 2023-11-20 | GM document, archival mirror | Complete PDF; 15 exact current-model tables verified across 13 catalog nameplates; Traverse, LCF, and Equinox EV remain excluded |
+| 2023 | `gm-fleet-guide-us-2023-v3` | 121 | 2022-12-20 | GM document, archival mirror | Complete PDF; Suburban palette plus explicitly labeled advance-2024 Low Cab Forward pages verified; other candidate pages indexed |
+| 2024 | `gm-fleet-guide-us-2024-v3` | 114 | 2023-11-20 | GM document, archival mirror | Complete PDF; 15 exact current-model tables verified across 13 catalog nameplates; its 2023 Traverse and 2025 LCF pages remain excluded |
+| 2024 supplement | `gm-fleet-guide-us-2025-v1-r2024-05-29` | 104 | 2024-05-29 | GM document, archival mirror | Explicitly labeled 2024 Equinox EV page 12 and 2024 Traverse page 41 verified; not an annual coverage anchor |
 | 2025 | `gm-fleet-guide-us-2025-r2024-12-11` | 179 | 2024-12-11 | Live official GM PDF | 19 model palette tables verified |
 | 2026 | `gm-fleet-guide-us-2026-r2026-04-01` | 184 | 2026-04-01 | Live official GM PDF | 21 model palette tables verified, including 2026 LCF pages in the prior guide |
 
@@ -67,15 +68,15 @@ The exact URLs, candidate page lists, local paths, SHA-256 hashes, byte lengths,
 | 2008-2021 | 14 | 126 | One Suburban Fleet Guide palette per year |
 | 2022 | 2 | 20 | Suburban Fleet Guide palette and Tahoe per-trim eBrochure union |
 | 2023 | 4 | 39 | Suburban Fleet Guide palette plus Colorado and two Silverado HD brochure tables |
-| 2024 | 15 | 132 | Thirteen current catalog nameplates, including separate Silverado body-family tables |
+| 2024 | 18 | 154 | All sixteen current catalog nameplates, including separate Silverado body-family tables and explicitly labeled advance-model-year pages from the 2023 and first 2025 guide revisions |
 | 2025 | 23 | 152 | Main Chevrolet car, EV, SUV, truck, van, and BrightDrop Fleet Guide palettes, plus four retained Order Guide completion tables |
 | 2026 | 22 | 147 | Main Chevrolet EV, SUV, truck, van, BrightDrop, and Low Cab Forward Fleet Guide palettes, plus the retained Corvette completion table |
 
-The tables contain 616 source color-name assertions. After overlapping body
-series are reconciled without discarding their citations, they publish 568
-qualified palette-union rows across 69 model-year records.
+The tables contain 638 source color-name assertions. After overlapping body
+series are reconciled without discarding their citations, they publish 590
+qualified palette-union rows across 72 model-year records.
 
-All 80 verified tables are now represented in the application. The four earlier
+All 83 verified tables are now represented in the application. The four earlier
 brochure tables add three distinct model-year records and 33 unique app rows:
 ten for the 2022 Tahoe, eight for the 2023 Colorado, and 15 across the two
 separately cited 2023 Silverado HD body-series sources. The corrected
@@ -84,13 +85,18 @@ controlling locators are Tahoe PDF pp. 8, 10, 12, 14, 16, and 18; Silverado
 remains PDF pp. 13, 15, 17, 19, and 21. Printed extra-cost and trim or body
 restrictions are retained at the color claim.
 
-The 2024 Fleet Guide tranche adds 14 exact tables beyond the previously
-published Suburban table. Its 123 newly transcribed source assertions publish
-106 additional qualified rows across 12 additional model-year records. Together
-the 15 verified 2024 tables preserve 132 assertions and publish 115 qualified
-rows across 13 current catalog nameplates. Page 49 is excluded because the page
-itself says 2023 Traverse. Pages 82-84 are excluded because they say 2025 Low
-Cab Forward. The guide has no complete 2024 Equinox EV palette.
+The 2024 Fleet Guide tranche adds 17 exact tables beyond the previously
+published Suburban table. Its 145 newly transcribed source assertions publish
+128 additional qualified rows across 15 additional model-year records. Together
+the 18 verified 2024 tables preserve 154 assertions and publish 137 qualified
+rows across all 16 current catalog nameplates. The 2024 Low Cab Forward table
+comes from pages 77-78 of the retained 2023 guide, whose advance-model-year
+labels control. Page 49 of the later guide remains excluded because it says
+2023 Traverse; pages 82-84 remain excluded because they say 2025 Low Cab
+Forward. The first retained 2025 guide revision resolves the prior Equinox EV
+and Traverse gaps with pages 12 and 41, each explicitly labeled 2024. Both are
+qualified unions because the pages vary by trim and the governing 2024 U.S.
+Order Guide is not retained.
 
 Five retained and visually reviewed Online Order Guide tables add eight unique
 application rows. They publish 2025 Blazer EV Habanero Orange, 2026 Corvette
@@ -148,7 +154,7 @@ This sample proves that a Fleet Guide palette is not always exhaustive. The prin
 - Special Equipment Option and police colors can be absent from a printed retail palette.
 - The same marketed name can map to different codes across years, and the same code can be marketed under different names. Identity must be keyed by the source code and year context, with names handled as sourced labels and aliases.
 - Chevrolet consumer brochure endpoints were intermittently rate-limited during this audit. The four brochures used by published Tahoe, Colorado, and Silverado HD palettes were subsequently fetched in full from their recorded Chevrolet URLs, rehashed, and registered. The Trailblazer brochure remains a partial candidate and is not represented as a verified complete table.
-- All 23 complete retained PDFs are pinned in the immutable [`brochure-source-archive-v1` Release](https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1). The source ledger preserves each upstream retrieval URL separately from its Release URL, hash, byte length, and page count.
+- All 24 complete retained PDFs are pinned in the immutable [`brochure-source-archive-v1` Release](https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1). The source ledger preserves each upstream retrieval URL separately from its Release URL, hash, byte length, and page count. The first 2025 revision also retains an independent exact-hash mirror URL.
 
 ## Ingestion contract
 
@@ -172,23 +178,23 @@ The JSON is intentionally shaped so its `sources`, `verified_palette_tables`, an
 
 Run `npm run sources:validate-modern` from the repository root. The validator:
 
-- rehashes all 23 retained complete PDFs and reconciles 520,591,010 bytes;
-- opens all 2,599 PDF pages and checks recorded page counts;
+- rehashes all 24 retained complete PDFs and reconciles 563,015,275 bytes;
+- opens all 2,703 PDF pages and checks recorded page counts;
 - verifies one GM-authored Fleet Guide for every model year from 2008 through
   2026;
 - confirms that every published catalog model ID exists;
-- checks all 80 published palette tables against 97 exact PDF page references;
+- checks all 83 published palette tables against 101 exact PDF page references;
   and
-- finds every one of the 616 published color-name assertions in the cited page
+- finds every one of the 638 published color-name assertions in the cited page
   text.
 
-Those immutable-artifact checks cover the 71 Fleet Guide tables and four
+Those immutable-artifact checks cover the 74 Fleet Guide tables and four
 Chevrolet eBrochure tables retained locally, plus five exact generated Order
 Guide PDFs retained in
 [`current-order-guide-source-archive-v1`](https://github.com/ipadmom/chevrolet-color-archive/releases/tag/current-order-guide-source-archive-v1).
 The validator joins each Order Guide source and table to the tracked Release
 manifest, exact artifact digest, byte count, page count, archive URL, and cited
-visual-review finding. Application tests separately enforce the 568 unique
+visual-review finding. Application tests separately enforce the 590 unique
 qualified app rows, per-color restrictions, and multi-source joins.
 
 The validator also keeps the mutable Online Order Guide observation distinct

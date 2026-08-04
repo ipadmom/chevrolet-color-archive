@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-07-23T20:01:58.9219537Z",
+  "audited_at": "2026-08-04T11:27:46.1599800Z",
   "visibility": "public",
   "classification": "archive-internal",
   "source_manifest": "data/photos/commons-release-manifest.json",
-  "scope": "Wikimedia Commons identity-photo coverage for the 18 current Chevrolet U.S. nameplates, including the completed archival handoff for one new BrightDrop 600 reference. Identity photos are not paint evidence.",
+  "scope": "Wikimedia Commons identity-photo coverage for the 18 current Chevrolet U.S. nameplates, including completed archival handoffs for new BrightDrop 400 and BrightDrop 600 references. Identity photos are not paint evidence.",
   "policy": {
-    "identity_rule": "A candidate must identify the exact current catalog nameplate or an exact model year in Commons metadata. Generic BrightDrop, a sibling model, a prior-generation image, or a visible resemblance is insufficient.",
+    "identity_rule": "A candidate must identify the exact current catalog nameplate in Commons metadata or through a documented exact-file cross-reference to a reliable event or manufacturer record. A generic BrightDrop file, sibling model, prior-generation image, or visible resemblance is insufficient by itself; every non-Commons identity basis must be explicit and source-linked.",
     "publication_rule": "A published candidate requires an existing pinned ipadmom GitHub Release URL, Commons source page and original URL, author, license, dimensions, Commons SHA-1, and local SHA-256. A source-only candidate stays release-stage only.",
     "paint_rule": "Identity photographs are not paint evidence. No photo-to-color link is promoted unless Commons metadata states the exact paint identity and independent factory evidence supports that identity."
   },
@@ -29,10 +29,10 @@
       "blazer-ev": 2,
       "equinox-ev": 2,
       "silverado-ev": 2,
-      "brightdrop-400": 0,
+      "brightdrop-400": 1,
       "brightdrop-600": 2
     },
-    "archived_asset_total": 45,
+    "archived_asset_total": 46,
     "published_current_model_photo_to_color_links": 0
   },
   "undercovered_models": [
@@ -52,7 +52,10 @@
     },
     {
       "model_id": "brightdrop-400",
-      "archived_candidate_count": 0,
+      "archived_candidate_count": 1,
+      "existing_archived_candidate_ids": ["commons-sha1-0389a3d594263d394933"],
+      "existing_source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+      "existing_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
       "fresh_query_results": [
         {"query": "\"2025 Chevrolet BrightDrop 400\"", "result_count": 0},
         {"query": "\"2026 Chevrolet BrightDrop 400\"", "result_count": 0},
@@ -62,10 +65,46 @@
         {"query": "\"Zevo 400\"", "result_count": 0},
         {"query": "\"BrightDrop EV410\"", "result_count": 15, "exact_400_result_count": 0, "noncandidate_reason": "The legacy EV410 query returned EV600/Zevo 600 files, not a 400 identity."}
       ],
-      "result": "No exact Commons BrightDrop 400 image was found. No generic BrightDrop or BrightDrop 600 file was reassigned."
+      "result": "One 2025 identity reference is now archived. Commons identifies the exact file as a 2025 Chevrolet BrightDrop at the 2025 Montreal International Auto Show; the exact-file English Wikipedia caption and the show organizer's official roster identify the event vehicle as a 2025 BrightDrop 400. The 400 designation is therefore recorded as a cross-reference result, not as Commons-native metadata or paint evidence."
     }
   ],
   "archived_this_pass": [
+    {
+      "status": "archived_identity_reference",
+      "model_id": "brightdrop-400",
+      "candidate_id": "commons-sha1-0389a3d594263d394933",
+      "page_title": "File:2025 Chevrolet Brightdrop au SIAM 2025.jpg",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+      "source_timestamp": "2025-04-19T04:00:07Z",
+      "commons_sha1": "0389a3d594263d3949334027820467dec3bad795",
+      "mime": "image/jpeg",
+      "bytes": 1334517,
+      "width": 3073,
+      "height": 2197,
+      "author": "Bull-Doser",
+      "credit": "Own work",
+      "license": "Public domain",
+      "license_family": "public-domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "description": "2025 Chevrolet BrightDrop photographed in Montreal, Quebec, Canada at the 2025 Montreal International Auto Show.",
+      "identity_basis": "official_event_roster_plus_exact_file_caption",
+      "identity_source_urls": [
+        "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+        "https://en.wikipedia.org/wiki/Chevrolet_BrightDrop",
+        "https://assets.salonautomontreal.com/wp-content/uploads/2025/01/27142725/PR_EN_SIAM_PositiveOutcome_80th-edition.pdf"
+      ],
+      "identity_evidence": "Commons identifies the exact file, 2025 model year, Chevrolet BrightDrop name, and event. The exact-file English Wikipedia caption and the official event roster identify the event vehicle as a 2025 Chevrolet BrightDrop 400. Commons does not itself supply the 400 designation.",
+      "paint_evidence": "None. The file is not paint evidence.",
+      "sha256": "ebe389803dfe765c0b4dbf4ed254f6a8981b9ec4c732a541207fdb2b1b096145",
+      "release_asset_name": "commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
+      "preview_sha256": "56ced33e59c54a94d6f889e36df27bff14b59e15f1228def1572919fbb48194b",
+      "preview_bytes": 150048,
+      "preview_release_asset_name": "preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
+      "release_verification": "GitHub reported both assets uploaded with byte counts and SHA-256 digests matching the local manifest."
+    },
     {
       "status": "archived_identity_reference",
       "model_id": "brightdrop-600",
@@ -98,9 +137,9 @@
     }
   ],
   "release_stage_candidates": [],
-  "rows_added_to_production_manifest": 1,
+  "rows_added_to_production_manifest": 2,
   "remaining_gaps": [
-    "BrightDrop 400 has no exact Commons candidate.",
+    "BrightDrop 400 has one cross-referenced archived candidate, but Commons metadata alone does not distinguish the 400 and no second qualifying reference was found.",
     "Low Cab Forward has one archived exact candidate and no second exact Commons candidate from the refreshed searches."
   ]
 }

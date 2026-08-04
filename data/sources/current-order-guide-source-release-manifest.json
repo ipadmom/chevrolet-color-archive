@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-04T10:31:01Z",
+  "generated_at": "2026-08-04T11:42:16Z",
   "repository": "ipadmom/chevrolet-color-archive",
   "release_tag": "current-order-guide-source-archive-v1",
   "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/current-order-guide-source-archive-v1",
   "scope": "Complete retained GM Online Order Guide PDF snapshots for the current-model 2025 and 2026 specialty, Woodland Green, and exact palette-completion review queues. Retention does not itself promote a color or complete a model-year chart.",
   "release_upload_performed": true,
   "uploaded_at": "2026-07-23T17:39:14Z",
-  "remote_asset_count": 34,
-  "remote_total_bytes": 14394426,
+  "remote_asset_count": 35,
+  "remote_total_bytes": 14446945,
   "remote_manifest_assets": [
     {
       "role": "original_publication_manifest",
@@ -25,6 +25,14 @@
       "sha256": "f666db7407d998ed396a55f4f56ce537993b8944583565aeb1e1019e676415b7",
       "bytes": 49823,
       "uploaded_at": "2026-08-04T10:31:00Z"
+    },
+    {
+      "role": "complete_visual_review_source_ledger_snapshot",
+      "asset_name": "current-order-guide-source-release-manifest-31-complete-review.json",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/current-order-guide-source-archive-v1/current-order-guide-source-release-manifest-31-complete-review.json",
+      "sha256": "fa82802781e36b28c2602f3551548d74406db674792d8514498fbe629b3c05da",
+      "bytes": 52519,
+      "uploaded_at": "2026-08-04T11:42:15Z"
     }
   ],
   "entry_count": 31,
@@ -81,11 +89,14 @@
           "pdf_page": 23,
           "printed_page": 23,
           "published_date": "November 14, 2025",
-          "text_sha256": "1c395c9e71411e2344c4e7ccc892c9a2fc192a7f887f0a68da52e625ca6d5f6b"
+          "text_sha256": "1c395c9e71411e2344c4e7ccc892c9a2fc192a7f887f0a68da52e625ca6d5f6b",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-08-04T11:05:00Z",
+          "visual_review_finding": "The Blazer EV Police Package 9C1 and 9C3 SEO table prints four A rows: Victory Red 5T4 / WA-9260, MSP Goose Blue 9V2 / WA-5665, Dark Blue Metallic 9V7 / WA-722J, and Silver Ice Metallic 9W5 / WA-636R. Victory Red carries a planned-Q1-2025 note. The other three carry a controlling not-available-at-this-time note. The page also warns that SEO colors may require extended lead time."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
-      "review_status": "page_located_pending_visual_review"
+      "review_status": "cited_pages_visually_reviewed"
     },
     {
       "source_id": "gm-online-order-guide-pdf-23079",
@@ -104,11 +115,14 @@
           "pdf_page": 54,
           "printed_page": 54,
           "published_date": "December 19, 2025",
-          "text_sha256": "b64a947ae79e61c47e04ee7ce84521ad757bb7b7c2bc8997cf162fc45b12b0d8"
+          "text_sha256": "b64a947ae79e61c47e04ee7ce84521ad757bb7b7c2bc8997cf162fc45b12b0d8",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-08-04T11:05:00Z",
+          "visual_review_finding": "The Colorado WT SEO Paint table confirms seventeen available rows in the single Jet Black column, including Woodland Green 9V5 / WA-9015. Thirteen color-code cells literally print none, four print SEO codes, and every row is subject to a five-order minimum. Five separate Yellow rows are distinguished by their WA touch-up numbers."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
-      "review_status": "page_located_pending_visual_review"
+      "review_status": "cited_pages_visually_reviewed"
     },
     {
       "source_id": "gm-online-order-guide-pdf-23014",
@@ -130,7 +144,7 @@
           "text_sha256": "68eda5d9bf34505e96373ddedad20b8591fa3b0e1c81f3f52fbabb7ff3906ca8",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Express Cargo SEO Solid Paint table confirms the source-literal label Green, Woodland, code 9V5, touch-up paint number WA-9015, available with both listed interiors. The page requires five orders and states that extraneous formerly color-keyed body components will be flat Black."
+          "visual_review_finding": "The Express Cargo SEO Solid Paint table publishes all eighteen printed A rows without collapsing repeated labels. Every row carries the five-order minimum and the flat-Black extraneous-body-component rule."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -156,7 +170,7 @@
           "text_sha256": "b6791245dc5dbae17e2b52ccf35265b7cfe1568dee430166aababb4968ca4880",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Express Cutaway SEO Solid Paint table confirms the source-literal label Green, Woodland, code 9V5, touch-up paint number WA-9015, available with both listed interiors. The page requires five orders and states that extraneous formerly color-keyed body components will be flat Black."
+          "visual_review_finding": "The Express Cutaway SEO Solid Paint table publishes all eighteen printed A rows without collapsing repeated labels. Every row carries the five-order minimum and the flat-Black extraneous-body-component rule."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -182,7 +196,7 @@
           "text_sha256": "92cf52768f7c3e149adf0974db5c5a2bc0fc861b512f7bc5786a62fcae309723",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Express Passenger SEO Solid Paint table confirms the source-literal label Green, Woodland, code 9V5, touch-up paint number WA-9015, available with the listed Medium Pewter interior. The page requires five orders and states that extraneous formerly color-keyed body components will be flat Black."
+          "visual_review_finding": "The Express Passenger SEO Solid Paint table publishes all eighteen printed A rows without collapsing repeated labels. Every row carries the five-order minimum and the flat-Black extraneous-body-component rule."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -286,7 +300,7 @@
           "text_sha256": "39203e08e6fcbd3dc648800ef091cf0029555c3aadc7682d2fe429706294c984",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Solid Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, with a five-order minimum. Victory Red and Wheatland Yellow remain unpromoted."
+          "visual_review_finding": "The New Suburban SEO Solid Paint table publishes all three A rows: Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A. Both listed interior columns are available, and the page requires five orders before plant submission."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -338,7 +352,7 @@
           "text_sha256": "cdcd6acb92a330fbc467d92c8d83163fd247abc6b469529b0836c6aa16fe5f98",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Retail and Fleet SEO Solid Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, with a five-order minimum. Victory Red and Wheatland Yellow remain unpromoted."
+          "visual_review_finding": "The New Tahoe Retail and Fleet SEO Solid Paint table publishes all three A rows: Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A. Both listed interior columns are available, and the page requires five orders before plant submission."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -408,7 +422,7 @@
           "text_sha256": "cd1632f424f5a43ad86fa74889655103477a76c06d268145f14c0137200ed481",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, a five-order minimum, and possible extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R; that separate literal is preserved and not promoted."
+          "visual_review_finding": "The Silverado 2500 HD Retail and Fleet SEO Paint table publishes all twenty-one printed A rows. Seventeen code cells literally print none. Every row carries the five-order minimum and possible extended lead-time warning; the 5IS / WA-636R literal and unbound numbered notes remain source-scoped."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -443,7 +457,7 @@
           "text_sha256": "dc47aed83dccf802ed36c31d050feb39170697e23ad8e545f89dc8638dfd5cab",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, a five-order minimum, and possible extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R; that separate literal is preserved and not promoted."
+          "visual_review_finding": "The Silverado 3500 HD CC SEO Paint table publishes all twenty-one printed A rows. Seventeen code cells literally print none. Every row carries the five-order minimum and possible extended lead-time warning; the 5IS / WA-636R literal and unbound numbered notes remain source-scoped."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -478,7 +492,7 @@
           "text_sha256": "d8126ac44ea991dcaae9fcb680c7b80b3ef30ea02f741a12fd88a60d65619a7f",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, a five-order minimum, and possible extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R; that separate literal is preserved and not promoted."
+          "visual_review_finding": "The Silverado 3500 HD Retail and Fleet SEO Paint table publishes all twenty-one printed A rows. Seventeen code cells literally print none. Every row carries the five-order minimum and possible extended lead-time warning; the 5IS / WA-636R literal and unbound numbered notes remain source-scoped."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -513,7 +527,7 @@
           "text_sha256": "d99f99c7dc690f07cb7896eed7acf99ce4688d978e27db012c568fe10b29ee43",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors. The page prints no five-order or extended lead-time note. Its only footnote concerns APL Passenger Seat Delete and is not marked on the Woodland Green row."
+          "visual_review_finding": "The Silverado 4500 HD, 5500 HD and 6500 HD SEO Paint table publishes all thirty printed A rows for both listed interior columns. The page has no five-order minimum or extended lead-time warning. Its APL Passenger Seat Delete note remains unbound, and Dark Ming Blue 5IH / WA-722J remains source-literal."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -536,11 +550,14 @@
           "pdf_page": 20,
           "printed_page": 20,
           "published_date": "June 05, 2026",
-          "text_sha256": "07dbd282df5896e8848da1a191680ddc1b00efcfed4b440ced7d85dd1d49ae59"
+          "text_sha256": "07dbd282df5896e8848da1a191680ddc1b00efcfed4b440ced7d85dd1d49ae59",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-08-04T11:05:00Z",
+          "visual_review_finding": "The Blazer EV Police Package 9C1 and 9C3 SEO table confirms four A rows: Victory Red 5T4 / WA-9260, MSP Goose Blue 9V2 / WA-5665, Dark Blue Metallic 9V7 / WA-722J, and Silver Ice Metallic 9W5 / WA-636R. The page prints no row-specific unavailability footnote and states that SEO colors may require extended lead time."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
-      "review_status": "page_located_pending_visual_review"
+      "review_status": "cited_pages_visually_reviewed"
     },
     {
       "source_id": "gm-online-order-guide-pdf-23215",
@@ -559,11 +576,14 @@
           "pdf_page": 61,
           "printed_page": 61,
           "published_date": "July 10, 2026",
-          "text_sha256": "e1cb75baa8d5f780e749f3c441294b968eb98245db8dd670940887e0ae8bd598"
+          "text_sha256": "e1cb75baa8d5f780e749f3c441294b968eb98245db8dd670940887e0ae8bd598",
+          "visual_review_status": "visually_verified_exact_snapshot",
+          "visual_reviewed_at": "2026-08-04T11:05:00Z",
+          "visual_review_finding": "The Colorado WT SEO Paint table confirms fourteen available rows in the single Jet Black column, including Woodland Green 9V5 / WA-9015. Ten color-code cells literally print none, four print SEO codes, and every row is subject to a five-order minimum. Five separate Yellow rows are distinguished by their WA touch-up numbers."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
-      "review_status": "page_located_pending_visual_review"
+      "review_status": "cited_pages_visually_reviewed"
     },
     {
       "source_id": "gm-online-order-guide-pdf-23208",
@@ -611,7 +631,7 @@
           "text_sha256": "8b0fd24a175aa72774032fffab4257203d72a202c33e4e01aabce7fbc3c15a3a",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Express Cargo SEO Solid Paint table confirms the source-literal label Green, Woodland, code 9V5, touch-up paint number WA-9015, available with both listed interiors. The page requires five orders and states that extraneous formerly color-keyed body components will be flat Black."
+          "visual_review_finding": "The Express Cargo SEO Solid Paint table publishes all eighteen printed A rows without collapsing repeated labels. Every row carries the five-order minimum and the flat-Black extraneous-body-component rule."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -637,7 +657,7 @@
           "text_sha256": "bc3063b29e0ebce9f336dae7e5cbe24aaaeebd69fc673a2f7f9e7828d2a90d29",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Express Cutaway SEO Solid Paint table confirms the source-literal label Green, Woodland, code 9V5, touch-up paint number WA-9015, available with both listed interiors. The page requires five orders and states that extraneous formerly color-keyed body components will be flat Black."
+          "visual_review_finding": "The Express Cutaway SEO Solid Paint table publishes all eighteen printed A rows without collapsing repeated labels. Every row carries the five-order minimum and the flat-Black extraneous-body-component rule."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -663,7 +683,7 @@
           "text_sha256": "63ab2ddc3a8d9eee9b971b1c8e84ad6d53ec49f2e58d55325d5a0e571e36d041",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Express Passenger SEO Solid Paint table confirms the source-literal label Green, Woodland, code 9V5, touch-up paint number WA-9015, available with the listed Medium Pewter interior. The page requires five orders and states that extraneous formerly color-keyed body components will be flat Black."
+          "visual_review_finding": "The Express Passenger SEO Solid Paint table publishes all eighteen printed A rows without collapsing repeated labels. Every row carries the five-order minimum and the flat-Black extraneous-body-component rule."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -733,7 +753,7 @@
           "text_sha256": "3bef850e847cd06da88eb7ace8bf74310fc2748efb30e47dd4cb0e46eb40a5c1",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, a five-order minimum, and possible extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R; that separate literal is preserved and not promoted."
+          "visual_review_finding": "The Silverado 2500 HD Retail and Fleet SEO Paint table publishes all twenty-one printed A rows. Seventeen code cells literally print none. Every row carries the five-order minimum and possible extended lead-time warning; the 5IS / WA-636R literal and unbound numbered notes remain source-scoped."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -768,7 +788,7 @@
           "text_sha256": "e32128c6e15249a6fef6cc6517940ce6fbf526cb4e5835be12679e912e6755dd",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, a five-order minimum, and possible extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R; that separate literal is preserved and not promoted."
+          "visual_review_finding": "The Silverado 3500 HD CC SEO Paint table publishes all twenty-one printed A rows. Seventeen code cells literally print none. Every row carries the five-order minimum and possible extended lead-time warning; the 5IS / WA-636R literal and unbound numbered notes remain source-scoped."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -803,7 +823,7 @@
           "text_sha256": "efee0e3c312075294f7df3ac63bdaee0a60833180c7cbe8917e0460ae294f231",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, a five-order minimum, and possible extended lead time. The page prints Silver Ice Metallic as 5IS / WA-636R; that separate literal is preserved and not promoted."
+          "visual_review_finding": "The Silverado 3500 HD Retail and Fleet SEO Paint table publishes all twenty-one printed A rows. Seventeen code cells literally print none. Every row carries the five-order minimum and possible extended lead-time warning; the 5IS / WA-636R literal and unbound numbered notes remain source-scoped."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -838,7 +858,7 @@
           "text_sha256": "48706a8bd33169af1a231ba8991a85f70a468b95df8ba3e46c5ff2ade4ddad74",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors. The page prints no five-order or extended lead-time note. Its only footnote concerns APL Passenger Seat Delete and is not marked on the Woodland Green row."
+          "visual_review_finding": "The Silverado 4500 HD, 5500 HD and 6500 HD SEO Paint table publishes all thirty printed A rows for both listed interior columns. The page has no five-order minimum or extended lead-time warning. Its APL Passenger Seat Delete note remains unbound, and Dark Ming Blue 5IH / WA-722J remains source-literal."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -864,7 +884,7 @@
           "text_sha256": "226b3a1bd0b5d385922df26367ce5a1bfd035a10d206a925bd4b17dd835b0889",
           "visual_review_status": "visually_verified_exact_snapshot",
           "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The SEO Solid Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, with a five-order minimum. Victory Red and Wheatland Yellow remain unpromoted."
+          "visual_review_finding": "The Suburban SEO Solid Paint table publishes all three A rows: Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A. Both listed interior columns are available, and the page requires five orders before plant submission."
         }
       ],
       "artifact_status": "retained_exact_snapshot",
@@ -915,8 +935,8 @@
           "published_date": "June 19, 2026",
           "text_sha256": "4b695581758aac29d6341a9030f510946e789b12e72498bc8c44d5c706e40b1c",
           "visual_review_status": "visually_verified_exact_snapshot",
-          "visual_reviewed_at": "2026-07-23T20:05:54Z",
-          "visual_review_finding": "The Retail and Fleet SEO Solid Paint table confirms Woodland Green, code 9V5, touch-up paint number WA-9015, available with both listed interiors, with a five-order minimum. The source prints Wheatland Yellow's color-code cell as the literal value 3; that conflict is preserved and the row is not promoted."
+          "visual_reviewed_at": "2026-08-04T11:05:00Z",
+          "visual_review_finding": "The Tahoe Retail and Fleet SEO Solid Paint table publishes all three A rows: Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A. Both listed interior columns are available, and the page requires five orders before plant submission."
         }
       ],
       "artifact_status": "retained_exact_snapshot",

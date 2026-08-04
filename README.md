@@ -295,31 +295,41 @@ Woodland Green, and palette-completion review queues: 3,457 pages and
 [tracked manifest](data/sources/current-order-guide-source-release-manifest.json)
 records every original GM URL, retrieval time, byte count, SHA-256, cited page,
 and immutable Release URL. Retention is not treated as color verification until
-the cited page has been visually reviewed. Twenty-seven of the 31 retained
+the cited page has been visually reviewed. All 31 retained
 entries now have completed page review. The
 [current Order Guide specialty tranche](docs/current-order-guide-specialty-tranche.md)
-publishes 30 exact 2025-2026 Tahoe, Suburban, Express, and Silverado HD rows
-without inferring adjacent configurations or splitting the combined Tahoe
-Police Package and Special Service entry.
+publishes 357 exact 2025-2026 Tahoe, Suburban, Express, Silverado HD, Colorado,
+and Blazer EV rows without inferring adjacent configurations or splitting the
+combined Tahoe Police Package and Special Service entry.
 
-The Wikimedia Commons archive contains 302 audited originals across 140 models,
-plus 302 web previews. Both forms are stored under the pinned GitHub Release tag
+The Wikimedia Commons archive contains 304 audited originals across 141 models,
+plus 304 web previews. Both forms are stored under the pinned GitHub Release tag
 `photo-archive-v1`; the application does not serve Wikimedia hotlinks. Each
 photo card links the Commons source, license, and archived original. Photographs
 remain illustrations only and never establish factory paint availability.
 
-The pinned `brochure-source-archive-v1` Release preserves 140 audited assets,
-including 116 PDFs totaling 1,408,805,873 bytes and 8,635 pages. Of those, 111 are
-retained source assets, including 107 retained source PDFs totaling 1,353,608,630
-bytes. The archive closes the Tahoe 1995–2007 evidence set, all 19 audited
-2008–2026 GM Fleet Guides, the retained eBrochure set, and every currently
+The pinned `brochure-source-archive-v1` Release preserves 142 audited assets,
+including 117 PDFs totaling 1,451,230,138 bytes and 8,739 pages. Of those, 112 are
+retained source assets, including 108 retained source PDFs totaling 1,396,032,895
+bytes. The archive closes the Tahoe 1995–2007 evidence set, 20 audited GM Fleet
+Guide artifacts covering 2008–2026, the retained eBrochure set, and every currently
 published specialty citation. The
-flat-filename checksum manifest covers all 139 other assets. Release validation
-identifies 30 governing audit assets, 30 app-fed audit citations, 135
-application Release URLs, 80 modern palette tables, 616 modern color
-assertions, 561 published specialty records, four published ordinary
+versioned checksum snapshot covers all 141 assets that preceded it while the
+older checksum manifest remains immutable. Release validation
+identifies 30 governing audit assets, 30 app-fed audit citations, 140
+application Release URLs, 83 modern palette tables, 638 modern color
+assertions, 888 published specialty records, four published ordinary
 qualified-history records, and eight verified nonpublished, nonrouting specialty
 snapshots.
+
+The specialty source ledger separately records 14 exact USDA Forest Service
+Green specification occurrences: eight print color 14260 and six print
+identifier 5032. Twelve are USDA-hosted and two are qualified carrier copies;
+six existing PDFs have retained bytes and hashes. The two identifiers remain
+separate, nonrouting research identities because no primary source crosswalks
+them or ties either one to a Chevrolet model year, RPO, SEO, WA number, or paint
+formula. GM Woodland Green 9V5 / WA-9015, Isuzu Woodland Green 46U, Forest Green
+Metallic, Forest Green, and Green WA-7927 remain separate identities.
 
 ## Evidence rules
 

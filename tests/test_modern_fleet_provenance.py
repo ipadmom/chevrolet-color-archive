@@ -40,6 +40,11 @@ ANCHOR_ARTIFACTS = {
         "bytes": 14_780_183,
         "pages": 114,
     },
+    "gm-fleet-guide-us-2025-v1-r2024-05-29": {
+        "sha256": "6f968d048948ad05e20a27a8c1961ea32bf183d7159c1bd2ffa9d22b689e6867",
+        "bytes": 42_424_265,
+        "pages": 104,
+    },
 }
 
 QUALIFIED_PALETTE_ARTIFACTS = {
@@ -84,15 +89,15 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         return [row for row in cls.records if row.get("program_id") == program_id]
 
     def test_specialty_publication_boundary_is_exact(self) -> None:
-        self.assertEqual(565, len(self.records))
-        self.assertEqual(565, len(self.records_by_id))
+        self.assertEqual(892, len(self.records))
+        self.assertEqual(892, len(self.records_by_id))
         self.assertEqual(
-            585,
+            912,
             sum(len(row["catalog_model_ids"]) for row in self.records),
         )
         self.assertEqual(
             {
-                "published_specialty_subset": 561,
+                "published_specialty_subset": 888,
                 "published_qualified_historical_subset": 4,
             },
             dict(Counter(row["publication_status"] for row in self.records)),
@@ -173,7 +178,86 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         self.assertEqual(["WE9015", "SEO 9V5"], ck_woodland["codes"])
         self.assertIn("Forest Service Green", ck_woodland["not_equated_to"])
         self.assertIn("Woodland Green WA-9015", ck_woodland["not_equated_to"])
-        self.assertEqual(6, len(self.specialty["usda_primary_sources"]))
+        usda_sources = self.specialty["usda_primary_sources"]
+        self.assertEqual(14, len(usda_sources))
+        self.assertEqual(
+            {
+                "usfs-model-643-chassis",
+                "usfs-model-643p-body",
+                "usfs-model-643u-body-2015",
+                "usfs-model-428u-448u-body",
+                "usfs-hotshot-superintendent-chassis",
+                "usfs-hotshot-superintendent",
+                "usfs-model-326-346-body",
+                "usfs-model-643u-body-2023",
+                "usfs-model-326-chassis",
+                "usfs-model-346-chassis",
+                "usfs-model-428u-chassis",
+                "usfs-model-448u-chassis",
+                "usfs-crew-carrier-chassis",
+                "usfs-optional-crew-carrier-chassis",
+            },
+            {row["source_id"] for row in usda_sources},
+        )
+        self.assertEqual(
+            {
+                "usfs-forest-service-green-fs595-14260": 8,
+                "usfs-forest-service-green-5032": 6,
+            },
+            Counter(row["identity_id"] for row in usda_sources),
+        )
+        self.assertEqual(
+            12,
+            sum(
+                row["source_authority"] == "official_usda_host"
+                for row in usda_sources
+            ),
+        )
+        self.assertEqual(
+            2,
+            sum(row["source_authority"].startswith("qualified_") for row in usda_sources),
+        )
+        self.assertEqual(
+            6,
+            sum(
+                row["artifact_retention_status"] == "retained_and_hashed"
+                for row in usda_sources
+            ),
+        )
+        self.assertTrue(
+            all(
+                row["routing_status"] == "research_only_nonrouting"
+                and row["chevrolet_application_status"]
+                == "no_primary_chevrolet_bridge"
+                and row["chevrolet_make"] is None
+                and row["vehicle_model_year"] is None
+                and row["gm_code"] is None
+                and "catalog_model_ids" not in row
+                and "model_year" not in row
+                and row["revision_boundary"]
+                and row["restrictions"]
+                for row in usda_sources
+            )
+        )
+        all_usda_urls = {row["url"] for row in usda_sources}
+        for row in usda_sources:
+            all_usda_urls.update(row.get("alternate_urls", []))
+        self.assertEqual(all_usda_urls, set(leads[0]["source_urls"]))
+        self.assertEqual(
+            {row["source_id"] for row in usda_sources},
+            set(leads[0]["source_ids"]),
+        )
+        rules = {
+            row["rule_id"]: row
+            for row in self.specialty["identity_separation_rules"]
+        }
+        self.assertEqual(
+            "keep_separate", rules["usda-14260-versus-5032"]["treatment"]
+        )
+        self.assertEqual(
+            "nonrouting",
+            rules["agency-spec-scope-is-not-chevrolet-scope"]["treatment"],
+        )
 
     def test_historic_factory_and_fleet_rows_preserve_printed_codes(self) -> None:
         rows_1979 = [row for row in self.records if row["model_year"] == 1979]
@@ -691,10 +775,22 @@ class SpecialtyProgramDataTest(unittest.TestCase):
         )
         self.assertFalse(
             any(
-                row["model_year"] in {2024, 2025}
+                row["model_year"] == 2024
                 and "blazer-ev" in row["catalog_model_ids"]
                 for row in self.records
             )
+        )
+        blazer_2025 = [
+            row
+            for row in self.records
+            if row["model_year"] == 2025
+            and row["program_id"]
+            == "gm-blazer-ev-police-package-9c1-9c3-seo-paint-2025-2026"
+        ]
+        self.assertEqual(4, len(blazer_2025))
+        self.assertEqual(
+            {"5T4", "9V2", "9V7", "9W5"},
+            {row["seo_code"] for row in blazer_2025},
         )
 
     def test_silverado_ppv_and_ssv_programs_remain_separate_and_complete(self) -> None:
@@ -889,7 +985,7 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             )
 
     def test_all_retained_fleet_guides_have_immutable_revisions(self) -> None:
-        self.assertEqual(19, len(self.fleet_manifest))
+        self.assertEqual(20, len(self.fleet_manifest))
         self.assertTrue(set(self.fleet_manifest) <= set(self.revisions))
         for source_id, manifest in self.fleet_manifest.items():
             source = self.sources[source_id]
@@ -907,7 +1003,7 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             self.assertIsNone(revision["http_status"])
 
     def test_all_retained_modern_pdfs_have_immutable_revisions(self) -> None:
-        self.assertEqual(23, len(self.retained_manifest))
+        self.assertEqual(24, len(self.retained_manifest))
         self.assertEqual(
             set(self.retained_manifest)
             | set(self.current_order_entries)
@@ -1177,17 +1273,21 @@ class ModernFleetProvenanceTest(unittest.TestCase):
             ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
         )
         self.assertEqual(
-            87,
+            89,
             specialty["integrity_audit"]["unique_retained_artifacts_reconciled"],
         )
         last_rehash = specialty["integrity_audit"]["last_updater_rehash"]
-        self.assertEqual(20, last_rehash["file_count"])
+        self.assertEqual(24, last_rehash["file_count"])
         self.assertEqual(
             "scripts/update-current-order-guide-specialty-tranche.mjs",
             last_rehash["script"],
         )
         self.assertEqual(
             [
+                "gm-online-order-guide-pdf-22887",
+                "gm-online-order-guide-pdf-23079",
+                "gm-online-order-guide-pdf-23158",
+                "gm-online-order-guide-pdf-23215",
                 "gm-online-order-guide-pdf-22974",
                 "gm-online-order-guide-pdf-23213",
                 "gm-online-order-guide-pdf-22944",

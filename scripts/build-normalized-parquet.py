@@ -1211,7 +1211,10 @@ def validate_specialty_code_rows(
                 f"{table_name}[{index}] em-dash SEO metadata is inconsistent"
             )
         elif cell_state == "literal_none" and (
-            raw != "NONE" or code is not None or status != "not_applicable_in_source"
+            not isinstance(raw, str)
+            or raw.casefold() != "none"
+            or code is not None
+            or status != "not_applicable_in_source"
         ):
             raise ValueError(
                 f"{table_name}[{index}] literal-NONE SEO metadata is inconsistent"
@@ -1421,6 +1424,7 @@ class NormalizedArchiveBuilder:
         self.source_pdf_page_counts: dict[str, int] = {}
         self.source_links_seen: set[tuple[Any, ...]] = set()
         self.specialty_artifacts_by_url: dict[str, dict[str, Any]] = {}
+        self.specialty_external_reference_records: list[dict[str, Any]] = []
         self.brochure_release_entries_by_source_id: dict[str, dict[str, Any]] = {}
         self.brochure_release_source_ids_by_asset: dict[str, str] = {}
 
@@ -1910,9 +1914,9 @@ class NormalizedArchiveBuilder:
             for item in retained_modern_sources
             if item.get("source_type") == "fleet_guide_pdf"
         ]
-        if len(retained_fleet_guides) != 19:
+        if len(retained_fleet_guides) != 20:
             raise ValueError(
-                "modern source inventory must retain exactly 19 Fleet Guide PDFs"
+                "modern source inventory must retain exactly 20 Fleet Guide PDFs"
             )
         retained_source_ids = {item["source_id"] for item in retained_modern_sources}
         current_order_release_entries = {
@@ -2143,6 +2147,7 @@ class NormalizedArchiveBuilder:
             raise ValueError("specialty source artifact audit is incomplete")
 
         artifact_records: list[dict[str, Any]] = []
+        external_reference_records: list[dict[str, Any]] = []
 
         def locator_for(artifact: dict[str, Any]) -> str | None:
             pages = artifact.get("pdf_pages") or artifact.get("candidate_pages")
@@ -2181,6 +2186,67 @@ class NormalizedArchiveBuilder:
                     "locator": locator_for(artifact),
                 }
             )
+
+        def add_external_reference(
+            *,
+            category: str,
+            entity_id: str,
+            artifact: dict[str, Any],
+            title: str,
+            publisher: str,
+            source_type: str,
+            officiality: str,
+            confidence: str,
+            review_state: str,
+            claim_summary: str,
+            source_id: str | None = None,
+        ) -> None:
+            if (
+                artifact.get("artifact_retention_status")
+                != "external_reference_not_retained"
+            ):
+                raise ValueError(
+                    "external specialty source must be explicitly marked "
+                    f"external_reference_not_retained: {entity_id}"
+                )
+            if not artifact.get("url"):
+                raise ValueError(f"external specialty source has no URL: {entity_id}")
+            external_reference_records.append(
+                {
+                    "category": category,
+                    "entity_id": entity_id,
+                    "artifact": artifact,
+                    "title": title,
+                    "publisher": publisher,
+                    "source_type": source_type,
+                    "officiality": officiality,
+                    "confidence": confidence,
+                    "review_state": review_state,
+                    "claim_summary": claim_summary,
+                    "source_id": source_id,
+                    "locator": locator_for(artifact),
+                }
+            )
+
+        def rejected_reference_classification(url: str) -> tuple[str, str]:
+            host = (urlsplit(url).hostname or "").lower()
+            if host.endswith("fs.usda.gov"):
+                return "USDA Forest Service", "official"
+            if host.endswith("govinfo.gov"):
+                return "U.S. Government Publishing Office", "official"
+            if host.endswith("congress.gov"):
+                return "Congress.gov", "official"
+            if host.endswith("gm.com"):
+                return "General Motors", "official"
+            if host.endswith("wikimedia.org"):
+                return "Wikimedia Commons", "secondary"
+            if host.endswith("rockauto.com"):
+                return "RockAuto", "secondary"
+            if host.endswith("paintscratch.com"):
+                return "PaintScratch", "secondary"
+            if host.endswith("paintref.com"):
+                return "PaintRef", "secondary"
+            return host or "Unknown publisher", "unknown"
 
         for record in self.specialty_color_sources["app_publication_records"]:
             artifact = record["source"]
@@ -2237,21 +2303,82 @@ class NormalizedArchiveBuilder:
             )
 
         for artifact in self.specialty_color_sources["usda_primary_sources"]:
-            add_record(
-                category="usda_primary_sources",
-                entity_id=f"usda_primary_sources:{artifact['source_id']}",
-                artifact=artifact,
-                title=artifact.get("title"),
-                publisher="USDA Forest Service",
-                source_type="official_specification_pdf",
-                confidence="primary_source_identity_only",
-                review_state="retained_research_lead",
-                claim_summary=(
-                    "Retained and rehashed USDA primary source for the named "
-                    "Forest Service Green research lead. It does not establish a "
-                    "Chevrolet model-year application."
-                ),
-            )
+            if not artifact.get("bytes") or not artifact.get("sha256"):
+                if (
+                    artifact.get("artifact_retention_status")
+                    != "external_reference_not_retained"
+                ):
+                    raise ValueError(
+                        "USDA source without retained bytes and SHA-256 must be "
+                        "marked external_reference_not_retained: "
+                        f"{artifact['source_id']}"
+                    )
+                add_external_reference(
+                    category="usda_primary_sources",
+                    entity_id=f"usda_primary_sources:{artifact['source_id']}",
+                    artifact=artifact,
+                    title=artifact["title"],
+                    publisher="USDA Forest Service",
+                    source_type="agency_specification_external_reference",
+                    officiality=(
+                        "official"
+                        if artifact.get("source_authority")
+                        == "official_usda_host"
+                        else "secondary"
+                    ),
+                    confidence="identity_only_external_reference",
+                    review_state=artifact["review_status"],
+                    claim_summary=(
+                        "External USDA or qualified-carrier research reference for "
+                        "Forest Service Green identity. No retained artifact hash is "
+                        "asserted, and this source does not establish a Chevrolet "
+                        "model-year application."
+                    ),
+                    source_id=artifact["source_id"],
+                )
+            else:
+                add_record(
+                    category="usda_primary_sources",
+                    entity_id=f"usda_primary_sources:{artifact['source_id']}",
+                    artifact=artifact,
+                    title=artifact.get("title"),
+                    publisher="USDA Forest Service",
+                    source_type="official_specification_pdf",
+                    confidence="primary_source_identity_only",
+                    review_state="retained_research_lead",
+                    claim_summary=(
+                        "Retained and rehashed USDA primary source for the named "
+                        "Forest Service Green research lead. It does not establish a "
+                        "Chevrolet model-year application."
+                    ),
+                )
+            for alternate_index, alternate_url in enumerate(
+                artifact.get("alternate_urls", [])
+            ):
+                add_external_reference(
+                    category="usda_primary_sources",
+                    entity_id=(
+                        f"usda_primary_sources:{artifact['source_id']}:"
+                        f"alternate:{alternate_index}"
+                    ),
+                    artifact={
+                        "url": alternate_url,
+                        "artifact_retention_status": (
+                            "external_reference_not_retained"
+                        ),
+                    },
+                    title=f"Alternate carrier for {artifact['title']}",
+                    publisher="USDA Forest Service or document carrier",
+                    source_type="agency_specification_alternate_reference",
+                    officiality="unknown",
+                    confidence="alternate_url_identity_only",
+                    review_state=artifact["review_status"],
+                    claim_summary=(
+                        "Alternate URL retained for exhaustive Forest Service Green "
+                        "source provenance. It does not establish a Chevrolet "
+                        "model-year application."
+                    ),
+                )
 
         for artifact in self.specialty_color_sources["comparison_sources"]:
             add_record(
@@ -2319,22 +2446,53 @@ class NormalizedArchiveBuilder:
         for lead_index, lead in enumerate(
             self.specialty_color_sources["rejected_or_unresolved_leads"]
         ):
-            for source_index, artifact in enumerate(lead.get("sources") or []):
-                add_record(
+            lead_sources = list(lead.get("sources") or [])
+            if lead.get("url"):
+                lead_sources.insert(0, lead)
+            for source_index, artifact in enumerate(lead_sources):
+                entity_id = (
+                    "rejected_or_unresolved_leads:"
+                    f"{lead_index}:source:{source_index}"
+                )
+                if artifact.get("bytes") and artifact.get("sha256"):
+                    add_record(
+                        category="rejected_or_unresolved_leads",
+                        entity_id=entity_id,
+                        artifact=artifact,
+                        title="Reviewed Chevrolet vehicle information kit",
+                        publisher="General Motors",
+                        source_type="reviewed_official_vehicle_information_kit",
+                        confidence="human_checked_no_bridge",
+                        review_state=lead["disposition"],
+                        claim_summary=(
+                            "Retained and rehashed reviewed source candidate. The "
+                            "review found no Chevrolet model-year bridge for Forest "
+                            "Service Green."
+                        ),
+                    )
+                    continue
+                publisher, officiality = rejected_reference_classification(
+                    artifact["url"]
+                )
+                relationship = artifact.get("relationship")
+                add_external_reference(
                     category="rejected_or_unresolved_leads",
-                    entity_id=(
-                        "rejected_or_unresolved_leads:"
-                        f"{lead_index}:source:{source_index}"
-                    ),
+                    entity_id=entity_id,
                     artifact=artifact,
-                    title="Reviewed Chevrolet vehicle information kit",
-                    publisher="General Motors",
-                    source_type="reviewed_official_vehicle_information_kit",
-                    confidence="human_checked_no_bridge",
+                    title=(
+                        f"{lead['lead']} ({relationship})"
+                        if relationship
+                        else lead["lead"]
+                    ),
+                    publisher=publisher,
+                    source_type="rejected_or_unresolved_research_reference",
+                    officiality=officiality,
+                    confidence="reviewed_nonrouting_reference",
                     review_state=lead["disposition"],
                     claim_summary=(
-                        "Retained and rehashed reviewed source candidate. The review "
-                        "found no Chevrolet model-year bridge for Forest Service Green."
+                        f"External research reference for rejected or unresolved lead: "
+                        f"{lead['lead']} The source does not establish a Chevrolet "
+                        "model-year application."
                     ),
                 )
 
@@ -2461,6 +2619,36 @@ class NormalizedArchiveBuilder:
                 model_year=model_year,
                 year_start=model_year,
                 year_end=model_year,
+                locator=record.get("locator"),
+                claim_summary=record["claim_summary"],
+                confidence=record["confidence"],
+                review_state=record["review_state"],
+            )
+
+        self.specialty_external_reference_records = external_reference_records
+
+    def apply_specialty_external_references(self) -> None:
+        for record in self.specialty_external_reference_records:
+            artifact = record["artifact"]
+            source_id = self.ensure_source(
+                artifact["url"],
+                source_id=record.get("source_id"),
+                title=record["title"],
+                publisher=record["publisher"],
+                source_type=record["source_type"],
+                officiality=record["officiality"],
+                retrieved_on=artifact.get("retrieved_at"),
+                notes=(
+                    "External-only color-research reference. The URL is preserved "
+                    "for provenance, but no retained artifact hash is asserted; "
+                    f"category: {record['category']}."
+                ),
+            )
+            self.add_source_link(
+                source_id,
+                claim_type="specialty_external_reference_provenance",
+                entity_type="specialty_source_record",
+                entity_id=record["entity_id"],
                 locator=record.get("locator"),
                 claim_summary=record["claim_summary"],
                 confidence=record["confidence"],
@@ -3838,6 +4026,50 @@ class NormalizedArchiveBuilder:
                         "evidence": evidence,
                     }
                 )
+                for identity_url in context.get("identity_source_urls", []):
+                    identity_host = urlsplit(identity_url).hostname or ""
+                    if identity_host == "assets.salonautomontreal.com":
+                        identity_title = (
+                            "2025 Montreal International Auto Show positive outcome report"
+                        )
+                        identity_publisher = "Montreal International Auto Show"
+                        identity_source_type = "event_report"
+                        identity_officiality = "official"
+                    elif identity_host.endswith("wikipedia.org"):
+                        identity_title = "Chevrolet BrightDrop model article"
+                        identity_publisher = "Wikipedia"
+                        identity_source_type = "encyclopedia_article"
+                        identity_officiality = "secondary"
+                    else:
+                        identity_title = (
+                            f"Photo identity cross-reference: {asset['original_filename']}"
+                        )
+                        identity_publisher = identity_host
+                        identity_source_type = "identity_cross_reference"
+                        identity_officiality = "secondary"
+                    identity_source_id = self.ensure_source(
+                        identity_url,
+                        title=identity_title,
+                        publisher=identity_publisher,
+                        source_type=identity_source_type,
+                        officiality=identity_officiality,
+                        retrieved_on=self.photos["generated_at"],
+                    )
+                    self.add_source_link(
+                        identity_source_id,
+                        claim_type="photo_model_identity_cross_reference",
+                        entity_type="model_photo_link",
+                        entity_id=link_id,
+                        model_id=model_id,
+                        model_year=int(year) if year is not None else None,
+                        year_start=int(year) if year is not None else None,
+                        year_end=int(year) if year is not None else None,
+                        locator=context.get("identity_basis"),
+                        claim_summary=context.get("evidence_note")
+                        or "Photo model identity cross-reference",
+                        confidence="cross_referenced",
+                        review_state=asset["status"],
+                    )
                 archive_color_key = context.get("color_id") or context.get(
                     "legacy_color_id"
                 )
@@ -4325,9 +4557,9 @@ class NormalizedArchiveBuilder:
             for source_id, item in modern_artifacts.items()
             if item.get("source_type") == "fleet_guide_pdf"
         }
-        if len(retained_fleet_guides) != 19:
+        if len(retained_fleet_guides) != 20:
             raise ValueError(
-                "source revisions require all 19 retained Fleet Guide artifacts"
+                "source revisions require all 20 retained Fleet Guide artifacts"
             )
         missing_qualified_palettes = sorted(
             QUALIFIED_MODERN_PALETTE_SOURCE_IDS
@@ -4736,6 +4968,7 @@ class NormalizedArchiveBuilder:
         self.apply_current_manual_references()
         self.build_secondary_paint_leads()
         self.build_supplemental_color_mentions()
+        self.apply_specialty_external_references()
         self.finalize_sources()
         self.build_source_revisions_and_claims()
         validate_normalized_rows(self.rows)

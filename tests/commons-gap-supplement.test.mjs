@@ -35,14 +35,13 @@ test("Commons gap supplement covers all targets and retains only reviewed exact 
     "bison",
     "bruin",
     "traverse-limited",
-    "brightdrop-400",
   ];
 
   assert.equal(plan.targets.length, 26);
   assert.equal(new Set(plan.targets.map((target) => target.model_id)).size, 26);
   assert.equal(candidates.filter((candidate) => candidate.decision === "review").length, 0);
-  assert.equal(selected.length, 27);
-  assert.equal(selectedModels.length, 17);
+  assert.equal(selected.length, 28);
+  assert.equal(selectedModels.length, 18);
   assert.deepEqual(plan.results.selected_model_ids, selectedModels);
   assert.deepEqual(plan.results.models_still_without_exact_photo, expectedGaps);
   assert.equal(plan.results.release_upload_performed, true);
@@ -54,8 +53,8 @@ test("Commons gap supplement covers all targets and retains only reviewed exact 
 
   assert.equal(manifest.coverage_supplement.visual_review_completed, true);
   assert.equal(manifest.coverage_supplement.release_upload_performed, true);
-  assert.equal(manifest.coverage_supplement.selected_asset_count, 27);
-  assert.equal(manifest.coverage_supplement.unique_assets_added, 26);
+  assert.equal(manifest.coverage_supplement.selected_asset_count, 28);
+  assert.equal(manifest.coverage_supplement.unique_assets_added, 27);
   assert.deepEqual(manifest.coverage_supplement.selected_model_ids, selectedModels);
   assert.deepEqual(manifest.coverage_supplement.models_still_without_exact_photo, expectedGaps);
 
@@ -127,7 +126,7 @@ test("Commons crawler helpers can be imported without starting a crawl", async (
   assert.equal(result.stderr, "");
 });
 
-test("BrightDrop photos fail closed on exact 400 identity and Chevrolet branding", async () => {
+test("BrightDrop photos preserve exact 400 cross-reference and Chevrolet branding boundaries", async () => {
   const plan = await loadJson("data/photos/commons-gap-supplement.json");
   const byModel = new Map(
     plan.targets.map((target) => [target.model_id, target]),
@@ -135,9 +134,15 @@ test("BrightDrop photos fail closed on exact 400 identity and Chevrolet branding
   const brightdrop400 = byModel.get("brightdrop-400");
   const brightdrop600 = byModel.get("brightdrop-600");
 
-  assert.equal(brightdrop400.outcome, "no_exact_photo_found");
-  assert.deepEqual(brightdrop400.candidates, []);
-  assert.equal(brightdrop400.rejections.length, 4);
+  assert.equal(brightdrop400.outcome, "candidate_found_by_cross_reference");
+  assert.equal(brightdrop400.candidates.length, 1);
+  const selected400 = brightdrop400.candidates[0];
+  assert.equal(selected400.decision, "selected");
+  assert.equal(selected400.explicit_year, 2025);
+  assert.equal(selected400.identity_basis, "official_event_roster_plus_exact_file_caption");
+  assert.equal(selected400.identity_source_urls.length, 3);
+  assert.match(selected400.evidence_note, /Commons alone does not provide the 400 designation/i);
+  assert.equal(brightdrop400.rejections.length, 3);
   assert.ok(
     brightdrop400.rejections.every((rejection) =>
       /distinguish|identif|model-identity/i.test(rejection.reason),

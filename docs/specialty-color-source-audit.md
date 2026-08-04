@@ -11,10 +11,10 @@ sources: General Motors Heritage Archive, GM Upfitter, GM Vehicle Order Guide, U
 
 ## Result
 
-The source ledger now publishes 565 directly reviewed records: 561 specialty,
+The source ledger now publishes 892 directly reviewed records: 888 specialty,
 police, or special-service records and four ordinary qualified-historical
-table records. Multi-model records expand those totals to 581 exact specialty
-model applications and four qualified-historical applications, 585 in all.
+table records. Multi-model records expand those totals to 908 exact specialty
+model applications and four qualified-historical applications, 912 in all.
 The normalized Parquet archive contains 601 specialty availability rows across
 66 application model-years and four qualified-historical rows. Specialty
 evidence is the strongest research status for 42 model-years; six model-years
@@ -42,10 +42,12 @@ membership.
 | 2026 Blazer EV 9C1/9C3/5W4 SEO paint | 4 | 4 | Police and Special Service guide only |
 | 2026 Silverado 9C1 PPV and 5W4 SSV | 50 | 50 | 25 separately sourced rows per program |
 | 2025–2026 Silverado 1500 retail/fleet Woodland Green | 2 | 2 | Exact 9V5 row on each retained Order Guide page only |
-| 2025–2026 current Tahoe, Suburban, Express, and Silverado HD tranche | 30 | 30 | Twenty exact source configurations; Tahoe police/special-service remains one combined program |
-| **Specialty subtotal** | **561** | **581** | No adjacent-model or adjacent-year inference |
+| 2025–2026 current Colorado WT Order Guide rows | 31 | 31 | Every printed WT SEO Paint row; repeated labels remain separate by WA identity |
+| 2025–2026 current Blazer EV Police Package Order Guide rows | 8 | 8 | Exact 9C1/9C3 SEO tables; row footnotes control the 2025 snapshot |
+| 2025–2026 current Tahoe, Suburban, Express, and Silverado HD tranche | 318 | 318 | Twenty exact source configurations; duplicate rows remain configuration-scoped |
+| **Specialty subtotal** | **888** | **908** | No adjacent-model or adjacent-year inference |
 | **Qualified-historical subtotal** | **4** | **4** | Ordinary 1981 chart evidence, kept outside the specialty class |
-| **All published records** | **565** | **585** | Publication classes remain separate |
+| **All published records** | **892** | **912** | Publication classes remain separate |
 
 Each specialty ledger record uses `publication_status` value
 `published_specialty_subset`; the four 1981 records use
@@ -70,13 +72,14 @@ artifact, and archive-link ledger is
 
 ## Integrity audit
 
-The ledger reconciles 87 unique retained artifacts. The most recent specialty
-updater independently rehashed all 20 reviewed 2025-2026 Tahoe, Suburban,
-Express, and Silverado HD or medium-duty Order Guide source files.
+The ledger reconciles 89 unique retained artifacts. The most recent specialty
+updater independently rehashed all 24 reviewed 2025-2026 Tahoe, Suburban,
+Express, Silverado HD or medium-duty, Colorado, and Blazer EV Order Guide
+source files.
 
 Every recorded byte length and SHA-256 digest reconciled. Every promoted PDF
-page was rendered and visually reviewed. The ledger records all 87 unique
-retained artifacts and their source URLs. Every source used by the 565
+page was rendered and visually reviewed. The ledger records all 89 unique
+retained artifacts and their source URLs. Every source used by the 892
 published records also carries its exact GitHub Release URL.
 
 ## Governing Chevrolet sources
@@ -377,42 +380,77 @@ WA-9015, a five-order minimum, and the possible extended lead-time warning.
 Those records are separate from the 2026 9C1 and 5W4 program rows. The other 20
 SEO-paint entries on each reviewed page remain unpublished.
 
-Twenty more retained entries were visually reviewed for the bounded
+Twenty-four more retained entries were visually reviewed for the
 [`current Order Guide specialty tranche`](current-order-guide-specialty-tranche.md).
 They publish the six-row combined Tahoe Police Package and Special Service
-table for each year plus exact Woodland Green rows for Tahoe retail/fleet,
-Suburban, Express Cargo, Express Cutaway, Express Passenger, and four
-Silverado HD or medium-duty configurations. Eight adjacent Silverado pages
-were confirmed to contain seat-trim evidence only.
+table for each year, all three Tahoe and Suburban retail/fleet rows per exact
+configuration, all eighteen Express rows per configuration, all twenty-one
+light-HD rows per configuration, and all thirty medium-duty rows per
+configuration. The tranche also publishes all 31 exact Colorado WT SEO Paint
+rows and all eight exact Blazer EV Police Package 9C1 and 9C3 SEO rows, 357
+records in all. It preserves literal `none` cells, exact interior columns,
+unbound numbered notes, body-component and batch restrictions, both printed
+`5IS` conflicts, all three `WA-722J` variants, and the 2025 Blazer conflict
+between the `A` cells and three controlling not-available-at-this-time
+footnotes. Eight adjacent Silverado pages were confirmed to contain seat-trim
+evidence only.
 
-Four Order Guide snapshots remain pending direct visual review: 2025 and 2026
-Colorado plus 2025 and 2026 Blazer EV Police Package. Every retained PDF has
-complete bytes, a retrieval timestamp, a SHA-256 digest, and an exact candidate
-page.
+No retained current Order Guide snapshot remains pending direct visual review.
+Every retained PDF has complete bytes, a retrieval timestamp, a SHA-256 digest,
+and an exact visually reviewed candidate page.
 
 ## Forest Service Green
 
-Six official USDA sources establish the agency color name or identifier:
+The source ledger records 14 exact agency-specification occurrences. Twelve are
+on official USDA hosts. Two are qualified carrier copies of USDA documents for
+which an official attachment URL was not recovered. Six official PDFs have
+retained bytes and hashes in the existing source archive; eight are complete
+external references and are not represented as retained artifacts.
 
-- [Type 6 Fire Engine, Model 643 chassis specification](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m643_engine.pdf), page 8, says “No. 14260 of Federal Standard No. 595 (Forest Service Green).”
-- [Models 428U and 448U body specification](https://www.fs.usda.gov/sites/default/files/2019-09/508_bodyspecification_model428u_model_448u_engine.pdf), page 52, requires the chassis cab and body to use No. 14260 and says the chassis manufacturer supplies the chassis finish.
-- [Hotshot Superintendent Vehicle body specification](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecification_suptvehicle.pdf), page 26, specifies No. 14260 for the chassis cab exterior and body.
-- [Type 3 Fire Engine, Model 346 chassis specification](https://www.fs.usda.gov/sites/default/files/2019-09/508_chassisspecification_m346_engine.pdf), page 10, prints `5032 FOREST SERVICE GREEN`.
-- [Type 3 Fire Engine, Model 326 chassis specification](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m326_engine.pdf), page 10, prints `5032 FOREST SERVICE GREEN`.
-- [Ten Person Crew Carrier chassis specification](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_crewcarrier.pdf), page 9, prints `5032 FOREST SERVICE GREEN`.
+Eight occurrences print Federal Standard or SAE AMS-STD-595 color 14260:
 
-No reviewed USDA source identifies Chevrolet as the chassis manufacturer,
-prints a Chevrolet model year, or supplies a Chevrolet paint or option code.
-No primary source equates identifier 5032 with Federal Standard 14260. The
-archive retains both identities without merging them and publishes neither as
-a Chevrolet application.
+| Agency specification | Revision boundary | Exact identifier and page | Scope restriction |
+|---|---|---|---|
+| [Type 6 Model 643 chassis](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m643_engine.pdf) | February 2016; supersedes January 2015 | `No. 14260 of Federal Standard No. 595`, page 8 | Single-color cab exterior; white steel wheels |
+| [Type 6 Model 643P body](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecification_model643p_engine.pdf) ([alternate USDA copy](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/m643p-specs.pdf)) | Supersedes March 2010 | `No. 14260 of Federal Standard No. 595`, page 33 | Body matches cab; apparatus builder does not repaint cab |
+| [Type 6 Model 643U body](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecification_model643u_engine.pdf) | Supersedes August 2015 | `No. 14260 of Federal Standard No. 595`, page 48 | Body matches cab; apparatus builder does not repaint cab |
+| [Type 4 Models 428U and 448U body](https://www.fs.usda.gov/sites/default/files/2019-09/508_bodyspecification_model428u_model_448u_engine.pdf) | Supersedes August 2015 | `No. 14260 of Federal Standard No. 595`, page 52 | Chassis manufacturer supplies finish; body matches cab; builder does not repaint cab |
+| [Hotshot Superintendent Vehicle chassis](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_hotshotsupt_vehicle.pdf) | Supersedes January 2012 | `No. 14260 of Federal Standard No. 595`, page 8 | Single-color cab exterior; white steel wheels |
+| [Hotshot Superintendent Vehicle body](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecification_suptvehicle.pdf) | Supersedes January 2015 | `No. 14260 of Federal Standard No. 595`, page 26 | Body finish matches chassis cab |
+| [Type 3 Models 326 and 346 body](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_bodyspecifiction_model326_model346_1.pdf) | February 2016; supersedes April 2015 | `Number 14260 of Federal Standard Number 595`, page 55 | Chassis manufacturer supplies finish; body matches cab; builder does not repaint cab |
+| [Type 6 Model 643U body, March 2023](https://govtribe.com/file/government-file/1116090-specification-type-6-fire-engines-dot-pdf) | March 2023; supersedes January 2023 | `No. 14260 of SAE AMS-STD-595 Rev. A`, page 45 | Government-furnished chassis; qualified GovTribe government-attachment mirror |
+
+Six occurrences separately print USDA identifier 5032:
+
+| Agency specification | Revision boundary | Exact identifier and page | Scope restriction |
+|---|---|---|---|
+| [Type 3 Model 326 chassis](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m326_engine.pdf) | Supersedes February 2014 | `5032 FOREST SERVICE GREEN`, page 10 | 33,000-pound GVWR, set-back axle, 4x2, severe service |
+| [Type 3 Model 346 chassis](https://www.fs.usda.gov/sites/default/files/2019-09/508_chassisspecification_m346_engine.pdf) | Supersedes February 2014 | `5032 FOREST SERVICE GREEN`, page 10 | 37,000-pound GVWR, set-forward axle, 4x4, severe service |
+| [Type 4 Model 428U chassis](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_m428u_engine_1.pdf) | February 2016; supersedes April 2014 | `5032 FOREST SERVICE GREEN`, page 10 | 37,000-pound GVWR, set-back axle, 2WD, severe service |
+| [Type 4 Model 448U chassis](https://studylib.net/doc/10455306/type-4-fire-engine-%E2%80%94-model-448u-chassis-only-specification) | February 2016; supersedes April 2014 | `5032 FOREST SERVICE GREEN`, page 9 | 37,000-pound GVWR, set-forward axle, 4WD, severe service; qualified StudyLib copy |
+| [Ten Person Crew Carrier chassis](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_crewcarrier.pdf) | February 2016; supersedes February 2012 | `5032 Forest Service Green`, page 9 | 25,999-pound GVWR, standard cab, 2WD, severe service |
+| [Optional Ten Person Crew Carrier chassis](https://www.fs.usda.gov/sites/default/files/media_wysiwyg/508_chassisspecification_optional_crewcarrier.pdf) | February 2016; supersedes February 2012 | `5032 Forest Service Green`, page 9 | 33,000-pound GVWR, standard cab, 2WD, severe service |
+
+No reviewed source identifies Chevrolet as the chassis manufacturer, prints a
+Chevrolet vehicle model year, or supplies a Chevrolet RPO, SEO, WA number, or
+paint formula. USDA apparatus identifiers such as 643U and document issue or
+supersession dates are not Chevrolet models or model years. The 2024
+procurement context around the March 2023 643U document is not a chassis model
+year.
+
+The 14260 and 5032 occurrences remain two separate, nonrouting research
+identities. Paired body and chassis specifications make a relationship
+plausible, but no reviewed primary source explicitly crosswalks 5032 to 14260.
+The archive therefore publishes neither identity as a Chevrolet application.
 
 ## Similar names kept separate
 
 | Name | What the primary source proves | Treatment |
 |---|---|---|
-| Forest Service Green | USDA agency color, FS 595 No. 14260; separate USDA documents use identifier 5032 | Searchable research lead, no Chevrolet route |
+| Forest Service Green, 14260 | USDA agency color under Federal Standard 595 and later SAE AMS-STD-595 | Searchable nonrouting research identity; not merged with 5032 |
+| Forest Service Green, 5032 | Separate identifier printed in USDA chassis specifications | Searchable nonrouting research identity; not merged with 14260 |
 | Woodland Green | GM specialty or SEO color; 1980 option 46/9V5, 1993 S-10 WE7156/9V5, 1993 C/K Pickup WE9015/9V5, and later WA-9015/9V5 | Published only for exact reviewed Chevrolet applications; code continuity is not inferred |
+| Woodland Green 46U | Isuzu-origin color in the Chevrolet Low Cab Forward table; no WA number printed | Separate from GM 9V5 / WA-9015 and both USDA identities |
 | Forest Green Metallic | Regular 2001 Tahoe color and 2002 Tahoe Z71 color; reviewed pages print no code | Separate Tahoe color |
 | Forest Green | Separate historic Chevrolet label supported elsewhere in the archive | Never treated as Forest Service Green |
 | Green WA-7927 | Generic SEO green in the 2026 Silverado tables | Separate code and identity |
@@ -420,14 +458,21 @@ a Chevrolet application.
 
 ## Rejected and unresolved leads
 
-- A Wikimedia Commons caption identifies a photographed 2002 Silverado K2500HD as Forest Service Green. A photograph and uploader caption do not prove factory paint, original finish, a GM code, or orderability.
+- A [Wikimedia Commons caption](https://commons.wikimedia.org/wiki/File:2002_Chevrolet_Silverado_K2500HD_in_Forest_Service_Green,_Front_Right,_08-06-2022.jpg) identifies a photographed 2002 Silverado K2500HD as Forest Service Green. A photograph and uploader caption do not prove factory paint, original finish, a GM code, or orderability.
 - Complete official 2002 Silverado and Silverado HD kits were reviewed as possible primary bridges. Neither connects Forest Service Green to a Chevrolet model, year, or code. Their bytes and hashes remain in the ledger.
+- [USDA tree-marking paint color 34350](https://www.fs.usda.gov/t-d/pubs/pdf/01241803.pdf) is not vehicle-body evidence.
+- A [House amendment debate reference](https://www.govinfo.gov/content/pkg/CREC-2000-06-15/pdf/CREC-2000-06-15-pt1-PgH4567.pdf) to Forest Service Green vehicles supplies useful agency context, not a Chevrolet model-year or paint-code bridge. The language was not located in the [reviewed enacted law](https://www.congress.gov/106/plaws/publ291/PLAW-106publ291.htm).
+- The [USDA wildland fire vehicle guide](https://www.fs.usda.gov/eng/pubs/pdf/00511203.pdf), printed page 20 and PDF page 27, is supporting policy context, not a Chevrolet availability chart.
+- [RockAuto](https://www.rockauto.com/) remains a discovery lead. No exact indexed result located in this audit supplied primary Chevrolet evidence for 14260 or 5032.
+- [PaintScratch](https://www.paintscratch.com/colors/chevrolet/woodland-green-505535l-1963/) and [PaintRef](https://paintref.com/cgi-bin/paintdetail.cgi?painty=1997%7CGM%7C46%2C9V5%7C41234) are secondary discovery aids. They do not merge the USDA, GM, and Isuzu identities.
 - No primary source equates historical Woodland Green option 46, S-10 WE7156, C/K Pickup WE9015, and modern Woodland Green WA-9015 as one paint formula.
+- USDA apparatus model numbers and specification revision dates are not Chevrolet models or model years.
 - Five no-RPO rows on the 2003 Tahoe SEO chart remain research-only because the adjacent TGK ordering table expressly identifies only four orderable specialty colors.
 
 ## Publication safeguards
 
-- Research-only results have no model ID or year and cannot route to an unrelated Chevrolet record.
+- Research-only results have no Chevrolet catalog model ID or vehicle model year and cannot route to an unrelated Chevrolet record.
+- All 14 USDA occurrences carry an explicit nonrouting status and a no-primary-Chevrolet-bridge status. Only the six entries with retained bytes and hashes can enter the normalized retained-artifact table.
 - Published specialty rows require exact model scope, year, program, label, code treatment, restriction, source locator, complete artifact bytes, and SHA-256 digest.
 - Schema version 11 preserves RPO, SEO, literal SEO-cell state, normalized and
   source-literal WA values, Kerr upfitter order codes, minimum-batch, and
@@ -447,5 +492,7 @@ a Chevrolet application.
   Impala/Impala Limited Kerr, 2011-2017 Caprice PPV, 2012-2014 municipal, and
   exact 2015-2020 Tahoe/Suburban pages documented above are complete and no
   longer part of this queue.
-- Visually review the four remaining current Order Guide snapshots and publish only exact, nonduplicate program scopes.
+- Review the twenty non-Woodland SEO Paint rows on each retained Silverado
+  1500 retail/fleet page before any broader publication; those pages remain
+  outside this completed Tahoe, Suburban, Express, and Silverado HD pass.
 - Human-review the consolidated OCR corpus: 2,774 candidate pages and 11,733 automated color-row candidates across 691 source documents. Automated extraction is complete; no candidate is promoted without page-level review.

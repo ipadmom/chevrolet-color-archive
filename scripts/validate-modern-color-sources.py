@@ -37,6 +37,7 @@ PUBLISHED_FLEET_SOURCE_IDS = {
     "gm-fleet-guide-us-2022-v6",
     "gm-fleet-guide-us-2023-v3",
     "gm-fleet-guide-us-2024-v3",
+    "gm-fleet-guide-us-2025-v1-r2024-05-29",
     "gm-fleet-guide-us-2025-r2024-12-11",
     "gm-fleet-guide-us-2026-r2026-04-01",
 }
@@ -53,11 +54,11 @@ PUBLISHED_PALETTE_SOURCE_IDS = PUBLISHED_FLEET_SOURCE_IDS | PUBLISHED_ORDER_GUID
     "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
     "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
 }
-EXPECTED_LOCAL_PDF_BYTES = 520_591_010
-EXPECTED_LOCAL_PDF_PAGES = 2_599
-EXPECTED_PUBLISHED_TABLES = 80
-EXPECTED_PUBLISHED_PAGE_REFERENCES = 97
-EXPECTED_PUBLISHED_COLOR_ASSERTIONS = 616
+EXPECTED_LOCAL_PDF_BYTES = 563_015_275
+EXPECTED_LOCAL_PDF_PAGES = 2_703
+EXPECTED_PUBLISHED_TABLES = 83
+EXPECTED_PUBLISHED_PAGE_REFERENCES = 101
+EXPECTED_PUBLISHED_COLOR_ASSERTIONS = 638
 ALLOWED_APPLICATION_SOURCE_SETS = {
     ("silverado-hd", 2023): frozenset(
         {
@@ -128,8 +129,8 @@ def main() -> int:
 
     if data["schema_version"] != 1:
         raise AssertionError("unexpected modern-source schema version")
-    if len(sources) != 36:
-        raise AssertionError("modern-source inventory no longer contains 36 sources")
+    if len(sources) != 37:
+        raise AssertionError("modern-source inventory no longer contains 37 sources")
     require_unique([source["source_id"] for source in sources], "source_id")
     require_unique([table["table_id"] for table in tables], "table_id")
     require_unique([sample["sample_id"] for sample in samples], "sample_id")
@@ -143,6 +144,7 @@ def main() -> int:
             source
             for source in sources
             if source["source_type"] == "fleet_guide_pdf"
+            and source.get("annual_model_year_coverage_anchor", True)
             and source["source_id"].startswith(f"gm-fleet-guide-us-{year}")
         ]
         if len(matches) != 1:
@@ -150,8 +152,8 @@ def main() -> int:
 
     readers: dict[str, PdfReader] = {}
     local_sources = [source for source in sources if source.get("local_file_path")]
-    if len(local_sources) != 23:
-        raise AssertionError("modern-source inventory no longer retains 23 complete PDFs")
+    if len(local_sources) != 24:
+        raise AssertionError("modern-source inventory no longer retains 24 complete PDFs")
     if sum(source["bytes"] for source in local_sources) != EXPECTED_LOCAL_PDF_BYTES:
         raise AssertionError("retained modern-source byte total is stale")
     if sum(source["page_count"] for source in local_sources) != EXPECTED_LOCAL_PDF_PAGES:
@@ -186,6 +188,14 @@ def main() -> int:
         if direct_official_url:
             require_https_url(
                 direct_official_url, f"{source_id}.direct_official_url"
+            )
+        independent_exact_hash_mirror_url = source.get(
+            "independent_exact_hash_mirror_url"
+        )
+        if independent_exact_hash_mirror_url:
+            require_https_url(
+                independent_exact_hash_mirror_url,
+                f"{source_id}.independent_exact_hash_mirror_url",
             )
         historical_official_url = source.get("historical_official_url")
         if historical_official_url:

@@ -577,10 +577,10 @@ test("real Tahoe matrices join exact T1XX regular and specialty rows", async () 
     const matrix = buildArchiveMatrix(tahoe, selectedYear);
     assert.deepEqual(matrix.years, ["2025", "2026"]);
     assert.deepEqual(matrix.reviewedYears, ["2025", "2026"]);
-    assert.equal(matrix.colors.length, 16);
+    assert.equal(matrix.colors.length, 18);
     assert.equal(
       matrix.colors.filter((color) => color.availability[selectedYear]).length,
-      15,
+      17,
     );
     const summitWhite = matrix.colors.filter(
       (color) => color.name === "Summit White",
@@ -867,6 +867,18 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
         generation.sources["2024"]?.evidenceClass === "specialty_palette_subset",
     );
   assert.equal(blazer2024.length, 0);
+  const blazer2025 = byId
+    .get("blazer-ev")
+    .generations.filter(
+      (generation) =>
+        generation.years.includes("2025") &&
+        generation.sources["2025"]?.evidenceClass === "specialty_palette_subset",
+    );
+  assert.equal(blazer2025.length, 4);
+  assert.deepEqual(
+    new Set(blazer2025.map((generation) => generation.programId)),
+    new Set(["gm-blazer-ev-police-package-9c1-9c3-seo-paint-2025-2026"]),
+  );
   const blazer2026 = byId
     .get("blazer-ev")
     .generations.filter(
@@ -874,7 +886,14 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
         generation.years.includes("2026") &&
         generation.sources["2026"]?.evidenceClass === "specialty_palette_subset",
     );
-  assert.equal(blazer2026.length, 4);
+  assert.equal(blazer2026.length, 8);
+  assert.deepEqual(
+    new Set(blazer2026.map((generation) => generation.programId)),
+    new Set([
+      "gm-2026-blazer-ev-9c1-9c3-5w4-seo-paint",
+      "gm-blazer-ev-police-package-9c1-9c3-seo-paint-2025-2026",
+    ]),
+  );
 
   const silverado2026 = byId
     .get("silverado")

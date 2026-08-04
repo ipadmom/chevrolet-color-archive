@@ -251,7 +251,10 @@ def require_specialty_code_contract(
         ):
             raise AssertionError(f"{table_name} em-dash SEO metadata is inconsistent")
         elif cell_state == "literal_none" and (
-            raw != "NONE" or code is not None or status != "not_applicable_in_source"
+            not isinstance(raw, str)
+            or raw.casefold() != "none"
+            or code is not None
+            or status != "not_applicable_in_source"
         ):
             raise AssertionError(
                 f"{table_name} literal-NONE SEO metadata is inconsistent"
@@ -756,6 +759,7 @@ def main() -> int:
         if row["membership_role"] == "specialty_overlay"
     ]
     expected_specialty_overlay_model_years = {
+        "blazer-ev:2025",
         "blazer-ev:2026",
         "blazer:1979",
         "blazer:1980",
@@ -771,6 +775,8 @@ def main() -> int:
         "ck-series:1980",
         "ck-series:1983",
         "ck-series:1993",
+        "colorado:2025",
+        "colorado:2026",
         "express:2012",
         "express:2013",
         "express:2014",
@@ -821,7 +827,7 @@ def main() -> int:
         "tahoe:2026",
     }
     if (
-        len(specialty_memberships) != 541
+        len(specialty_memberships) != 868
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -1257,8 +1263,8 @@ def main() -> int:
         for item in retained_modern_sources
         if item.get("source_type") == "fleet_guide_pdf"
     ]
-    if len(fleet_guides) != 19:
-        raise AssertionError("modern source ledger no longer retains 19 Fleet Guides")
+    if len(fleet_guides) != 20:
+        raise AssertionError("modern source ledger no longer retains 20 Fleet Guides")
     qualified_palette_source_ids = {
         "chevrolet-ebrochure-us-2022-tahoe",
         "chevrolet-ebrochure-us-2023-colorado",
@@ -1266,8 +1272,8 @@ def main() -> int:
         "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
     } | published_order_guide_source_ids
     retained_modern_source_ids = {item["source_id"] for item in retained_modern_sources}
-    if len(retained_modern_sources) != 23:
-        raise AssertionError("modern source ledger no longer retains 23 complete PDFs")
+    if len(retained_modern_sources) != 24:
+        raise AssertionError("modern source ledger no longer retains 24 complete PDFs")
     if not qualified_palette_source_ids <= (
         retained_modern_source_ids | set(current_order_entries)
     ):
@@ -1775,6 +1781,7 @@ def main() -> int:
         if row["claim_status"] == "published_specialty_palette_subset"
     ]
     expected_specialty_model_years = {
+        "blazer-ev:2025",
         "blazer-ev:2026",
         "blazer:1979",
         "blazer:1980",
@@ -1790,6 +1797,8 @@ def main() -> int:
         "ck-series:1980",
         "ck-series:1983",
         "ck-series:1993",
+        "colorado:2025",
+        "colorado:2026",
         "express:2011",
         "express:2012",
         "express:2013",
@@ -1843,7 +1852,7 @@ def main() -> int:
         "tahoe:2026",
     }
     if (
-        len(specialty_rows) != 601
+        len(specialty_rows) != 928
         or {row["model_year_id"] for row in specialty_rows}
         != expected_specialty_model_years
     ):
@@ -1852,9 +1861,9 @@ def main() -> int:
         )
     expected_application_type_counts = Counter(
         {
-            "manufacturer_listed": 1_541,
+            "manufacturer_listed": 1_563,
             "authorized_upfitter_post_build": 180,
-            "special_equipment_option_paint": 262,
+            "special_equipment_option_paint": 589,
             "specialty_program_unspecified": 41,
             "manufacturer_special_equipment_option": 32,
             "standard_program_palette": 86,
@@ -1870,12 +1879,13 @@ def main() -> int:
         raise AssertionError("availability application types are incomplete or stale")
     expected_specialty_state_counts = Counter(
         {
-            "available": 154,
+            "available": 212,
             "available_through_authorized_upfitter": 180,
-            "available_with_minimum_batch": 180,
-            "available_with_possible_extended_lead": 4,
+            "available_with_minimum_batch": 441,
+            "available_with_possible_extended_lead": 9,
             "closed_after_2026-02-02": 42,
             "restricted": 41,
+            "footnoted_not_available_at_revision": 3,
         }
     )
     if Counter(row["availability_state"] for row in specialty_rows) != (
@@ -2043,13 +2053,19 @@ def main() -> int:
 
     blazer_ev_rows = [row for row in specialty_rows if row["model_id"] == "blazer-ev"]
     if (
-        len(blazer_ev_rows) != 4
-        or {row["model_year"] for row in blazer_ev_rows} != {2026}
-        or {row["availability_state"] for row in blazer_ev_rows}
-        != {"available_with_possible_extended_lead"}
+        len(blazer_ev_rows) != 12
+        or Counter(row["model_year"] for row in blazer_ev_rows)
+        != Counter({2025: 4, 2026: 8})
+        or Counter(row["availability_state"] for row in blazer_ev_rows)
+        != Counter(
+            {
+                "available_with_possible_extended_lead": 9,
+                "footnoted_not_available_at_revision": 3,
+            }
+        )
     ):
         raise AssertionError(
-            "Blazer EV negative-year boundary or 2026 SEO palette drifted"
+            "Blazer EV 9C1/9C3/5W4 program boundaries or SEO palettes drifted"
         )
 
     bolt_euv_rows = [
@@ -2284,21 +2300,21 @@ def main() -> int:
         if row["source_color_name"] in {"Woodland Green", "Green, Woodland"}
     ]
     if (
-        len(woodland_rows) != 59
+        len(woodland_rows) != 61
         or Counter(row["availability_state"] for row in woodland_rows)
         != Counter(
             {
                 "restricted": 12,
                 "closed_after_2026-02-02": 2,
                 "available": 11,
-                "available_with_minimum_batch": 34,
+                "available_with_minimum_batch": 36,
             }
         )
         or Counter(row["application_type"] for row in woodland_rows)
         != Counter(
             {
                 "specialty_program_unspecified": 12,
-                "special_equipment_option_paint": 44,
+                "special_equipment_option_paint": 46,
                 "factory_installed_special_equipment_option": 1,
                 "manufacturer_special_equipment_option": 2,
             }
@@ -2411,10 +2427,51 @@ def main() -> int:
     }
     if set(unresolved_identities) != expected_unresolved_identity_ids:
         raise AssertionError("Forest Service Green unresolved identities drifted")
-    unresolved_source_urls = {
-        canonical_url(source["url"])
-        for source in specialty_ledger["usda_primary_sources"]
+    unresolved_source_urls = set()
+    for source in specialty_ledger["usda_primary_sources"]:
+        unresolved_source_urls.add(canonical_url(source["url"]))
+        unresolved_source_urls.update(
+            canonical_url(url) for url in source.get("alternate_urls", [])
+        )
+    rejected_reference_urls = {
+        canonical_url(url)
+        for lead in specialty_ledger["rejected_or_unresolved_leads"]
+        for url in (
+            ([lead["url"]] if lead.get("url") else [])
+            + [source["url"] for source in lead.get("sources", [])]
+        )
     }
+    normalized_sources_by_url = {
+        canonical_url(source["canonical_url"]): source for source in rows["sources"]
+    }
+    expected_specialty_reference_urls = (
+        unresolved_source_urls | rejected_reference_urls
+    )
+    missing_specialty_reference_urls = sorted(
+        expected_specialty_reference_urls - set(normalized_sources_by_url)
+    )
+    if missing_specialty_reference_urls:
+        raise AssertionError(
+            "specialty research URLs are absent from normalized sources: "
+            + ", ".join(missing_specialty_reference_urls)
+        )
+    specialty_provenance_source_ids = {
+        link["source_id"]
+        for link in rows["source_links"]
+        if link["claim_type"]
+        in {
+            "specialty_source_artifact_provenance",
+            "specialty_external_reference_provenance",
+        }
+    }
+    if any(
+        normalized_sources_by_url[url]["source_id"]
+        not in specialty_provenance_source_ids
+        for url in expected_specialty_reference_urls
+    ):
+        raise AssertionError(
+            "specialty research URLs lack normalized source-link provenance"
+        )
 
     for availability in rows["color_availability"]:
         if contains_unresolved_forest_green_identity(

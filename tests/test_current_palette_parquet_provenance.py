@@ -34,6 +34,9 @@ class CurrentPaletteParquetProvenanceTest(unittest.TestCase):
             ).to_pylist()
         }
         cls.links = pq.read_table(PARQUET / "source_links.parquet").to_pylist()
+        cls.model_photo_links = pq.read_table(
+            PARQUET / "model_photo_links.parquet"
+        ).to_pylist()
 
     def row(self, model_id: str, model_year: int, label: str) -> dict:
         matches = [
@@ -248,6 +251,96 @@ class CurrentPaletteParquetProvenanceTest(unittest.TestCase):
                 "restriction"
             ],
             r"Premium paint; additional charge",
+        )
+
+    def test_2024_low_cab_forward_uses_the_advance_model_year_pages(self) -> None:
+        rows = [
+            row
+            for row in self.availability
+            if row["model_id"] == "low-cab-forward"
+            and row["model_year"] == 2024
+            and row["claim_status"] == "published_qualified_palette_union"
+            and row["evidence_source_id"] == "gm-fleet-guide-us-2023-v3"
+        ]
+        self.assertEqual(6, len(rows))
+        self.assertEqual(
+            {
+                "Arc White",
+                "Cardinal Red",
+                "Dark Blue",
+                "Ebony Black",
+                "Wheatland Yellow",
+                "Woodland Green",
+            },
+            {row["source_color_name"] for row in rows},
+        )
+        self.assertTrue(
+            all(
+                row["factory_code"] is None
+                and row["factory_code_status"] == "not_printed_in_source"
+                and row["availability_state"] == "restricted"
+                for row in rows
+            )
+        )
+        for row in rows:
+            claim = self.claims[row["availability_id"]]
+            self.assertEqual("gm-fleet-guide-us-2023-v3", claim["source_id"])
+            self.assertEqual([77, 78], claim["pdf_pages"])
+            revision = self.revisions[claim["source_revision_id"]]
+            self.assertEqual(
+                "697423b1c274d8fe30f9e58fc5dc9ecf365d119f7f1155f54dc4c3fd9d8484ef",
+                revision["artifact_sha256"],
+            )
+        self.assertRegex(
+            self.sources["gm-fleet-guide-us-2023-v3"]["archive_url"],
+            r"/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror\.pdf$",
+        )
+        self.assertRegex(
+            self.row("low-cab-forward", 2024, "Woodland Green")["restriction"],
+            r"6500 XD/7500 XD page lists Arc White only",
+        )
+
+    def test_brightdrop_400_photo_cross_reference_sources_are_exhaustive(
+        self,
+    ) -> None:
+        photo_id = "commons-sha1-0389a3d594263d394933"
+        matches = [
+            row
+            for row in self.model_photo_links
+            if row["photo_id"] == photo_id
+            and row["model_id"] == "brightdrop-400"
+            and row["model_year"] == 2025
+        ]
+        self.assertEqual(1, len(matches))
+        model_photo_link_id = matches[0]["model_photo_link_id"]
+        links = [
+            row
+            for row in self.links
+            if row["entity_type"] == "model_photo_link"
+            and row["entity_id"] == model_photo_link_id
+            and row["claim_type"] == "photo_model_identity_cross_reference"
+        ]
+        self.assertEqual(3, len(links))
+        self.assertEqual(
+            {
+                "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+                "https://en.wikipedia.org/wiki/Chevrolet_BrightDrop",
+                "https://assets.salonautomontreal.com/wp-content/uploads/2025/01/27142725/PR_EN_SIAM_PositiveOutcome_80th-edition.pdf",
+            },
+            {self.sources[row["source_id"]]["canonical_url"] for row in links},
+        )
+        official_report = next(
+            self.sources[row["source_id"]]
+            for row in links
+            if self.sources[row["source_id"]]["source_type"] == "event_report"
+        )
+        self.assertEqual("official", official_report["officiality"])
+        self.assertTrue(
+            all(
+                row["locator"]
+                == "official_event_roster_plus_exact_file_caption"
+                for row in links
+            )
         )
 
 

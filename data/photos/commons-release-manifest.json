@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "archive": "Chevrolet Color Archive",
-  "generated_at": "2026-07-23T20:13:18.737Z",
+  "generated_at": "2026-08-04T11:22:23.340Z",
   "scope": {
     "market": "United States",
     "catalog_models_available": 149,
@@ -157,24 +157,24 @@
     "finished_at": "2026-07-21T04:34:49.876Z",
     "api_requests": 232,
     "api_errors": 0,
-    "unique_assets_selected": 303,
+    "unique_assets_selected": 304,
     "assets_downloaded": 14,
     "assets_reused": 272,
-    "staged_asset_count": 303,
-    "staged_total_bytes": 925588069,
+    "staged_asset_count": 304,
+    "staged_total_bytes": 926922586,
     "staged_directory": "tmp/commons-release-assets",
     "assets_excluded_by_quality_audit": 9,
     "model_associations_corrected": 12,
     "preview_assets": {
-      "started_at": "2026-07-23T20:13:45.058Z",
-      "finished_at": "2026-07-23T20:14:16.573Z",
-      "input_asset_count": 303,
+      "started_at": "2026-08-04T11:22:27.821Z",
+      "finished_at": "2026-08-04T11:24:16.888Z",
+      "input_asset_count": 304,
       "generated_asset_count": 1,
-      "reused_asset_count": 302,
-      "verified_original_count": 303,
-      "original_total_bytes": 925588069,
-      "preview_total_bytes": 60582620,
-      "bytes_saved": 865005449,
+      "reused_asset_count": 303,
+      "verified_original_count": 304,
+      "original_total_bytes": 926922586,
+      "preview_total_bytes": 60732668,
+      "bytes_saved": 866189918,
       "percent_reduction": 93.45,
       "staged_directory": "tmp/commons-release-previews",
       "release_owner": "ipadmom",
@@ -6903,11 +6903,31 @@
           "returned": 0,
           "eligible": 0,
           "rejections": {}
+        },
+        {
+          "kind": "reviewed_exact_title",
+          "target_year": 2025,
+          "query": "exact Commons page title: File:2025 Chevrolet Brightdrop au SIAM 2025.jpg",
+          "returned": 1,
+          "eligible": 1,
+          "rejections": {}
         }
       ],
-      "representative_asset_ids": [],
-      "exact_year_candidates": [],
-      "asset_ids": []
+      "representative_asset_ids": [
+        "commons-sha1-0389a3d594263d394933"
+      ],
+      "exact_year_candidates": [
+        {
+          "year": 2025,
+          "asset_ids": [
+            "commons-sha1-0389a3d594263d394933"
+          ],
+          "query": "reviewed exact Commons page title supplement"
+        }
+      ],
+      "asset_ids": [
+        "commons-sha1-0389a3d594263d394933"
+      ]
     },
     {
       "model_id": "brightdrop-600",
@@ -25045,6 +25065,77 @@
       "preview_local_path": "tmp/commons-release-previews/preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
       "preview_release_asset_name": "preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp",
       "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-b22e3fed412977c1c156-b79cad60e3aead63.webp"
+    },
+    {
+      "candidate_id": "commons-sha1-0389a3d594263d394933",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_gap_supplement"
+      ],
+      "selection_contexts": [
+        {
+          "kind": "reviewed_gap_supplement",
+          "model_id": "brightdrop-400",
+          "exact_year": 2025,
+          "evidence_note": "Commons identifies the exact file as a 2025 Chevrolet BrightDrop photographed at the 2025 Montreal International Auto Show. The English Wikipedia article captions this exact file as a 2025 Chevrolet BrightDrop 400, and the show organizer's official report lists Chevrolet BrightDrop 400 2025 as the BrightDrop Canadian debut. Commons alone does not provide the 400 designation, so this is an identity reference based on the documented cross-reference chain, not paint evidence.",
+          "exact_page_title": "File:2025 Chevrolet Brightdrop au SIAM 2025.jpg",
+          "identity_basis": "official_event_roster_plus_exact_file_caption",
+          "identity_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+            "https://en.wikipedia.org/wiki/Chevrolet_BrightDrop",
+            "https://assets.salonautomontreal.com/wp-content/uploads/2025/01/27142725/PR_EN_SIAM_PositiveOutcome_80th-edition.pdf"
+          ]
+        }
+      ],
+      "model_ids": [
+        "brightdrop-400"
+      ],
+      "explicit_year": 2025,
+      "explicit_year_source": "reviewed Commons metadata",
+      "explicit_year_evidence": "Commons identifies the exact file as a 2025 Chevrolet BrightDrop photographed at the 2025 Montreal International Auto Show. The English Wikipedia article captions this exact file as a 2025 Chevrolet BrightDrop 400, and the show organizer's official report lists Chevrolet BrightDrop 400 2025 as the BrightDrop Canadian debut. Commons alone does not provide the 400 designation, so this is an identity reference based on the documented cross-reference chain, not paint evidence.",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2025-04-19T04:00:07Z",
+      "author": "Bull-Doser",
+      "author_raw_html": "<a href=\"https://en.wikipedia.org/wiki/User:Bull-Doser\" class=\"extiw\" title=\"en:User:Bull-Doser\">Bull-Doser</a>",
+      "credit": "Own work .",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>.",
+      "license": "Public domain",
+      "license_family": "public-domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "license_url_source": "public-domain-fallback",
+      "usage_terms": "Public domain",
+      "attribution_required": false,
+      "attribution": "Bull-Doser - 2025 Chevrolet Brightdrop au SIAM 2025 - Public domain",
+      "description": "2025 Chevrolet BrightDrop photographed in Montréal , Québec , Canada at the 2025 Montréal International Auto Show .",
+      "model_queries": [
+        "exact Commons page title: File:2025 Chevrolet Brightdrop au SIAM 2025.jpg"
+      ],
+      "score": 200,
+      "sha256": "ebe389803dfe765c0b4dbf4ed254f6a8981b9ec4c732a541207fdb2b1b096145",
+      "commons_sha1": "0389a3d594263d3949334027820467dec3bad795",
+      "mime": "image/jpeg",
+      "width": 3073,
+      "height": 2197,
+      "bytes": 1334517,
+      "original_filename": "2025 Chevrolet Brightdrop au SIAM 2025.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
+      "local_path": "tmp/commons-release-assets/commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
+      "commons_raw_record_paths": [
+        "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"
+      ],
+      "supplement_audit": "data/photos/commons-gap-supplement.json",
+      "preview_sha256": "56ced33e59c54a94d6f889e36df27bff14b59e15f1228def1572919fbb48194b",
+      "preview_bytes": 150048,
+      "preview_width": 1600,
+      "preview_height": 1144,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/commons-release-previews/preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
+      "preview_release_asset_name": "preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp"
     }
   ],
   "quality_audit": {
@@ -25059,11 +25150,11 @@
   },
   "coverage_supplement": {
     "report": "data/photos/commons-gap-supplement.json",
-    "applied_at": "2026-07-23T20:13:18.737Z",
+    "applied_at": "2026-08-04T11:22:23.340Z",
     "target_model_count": 26,
-    "selected_model_count": 17,
-    "selected_asset_count": 27,
-    "unique_assets_added": 26,
+    "selected_model_count": 18,
+    "selected_asset_count": 28,
+    "unique_assets_added": 27,
     "selected_model_ids": [
       "classic-six",
       "baby-grand",
@@ -25081,6 +25172,7 @@
       "tiltmaster-w-series",
       "t-series-medium-duty",
       "s10-ev",
+      "brightdrop-400",
       "brightdrop-600"
     ],
     "models_still_without_exact_photo": [
@@ -25091,8 +25183,7 @@
       "chevy-90",
       "bison",
       "bruin",
-      "traverse-limited",
-      "brightdrop-400"
+      "traverse-limited"
     ],
     "raw_source_record_paths": [
       "tmp/commons-gap-audit/selected-raw/commons-titles-response-001.json"

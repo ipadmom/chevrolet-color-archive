@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-07-23T20:05:54Z",
+  "audited_at": "2026-08-04T11:05:00Z",
   "catalog_year_ceiling": 2026,
   "scope": "Independent reconciliation of every stored 2025 and 2026 regular exterior-color union for the 18 current Chevrolet nameplates against exact GM Online Order Guide vehicle records.",
   "publication_rule": "A matching color-name union is not verified complete until exact order codes, WA or manufacturer paint identities, trim restrictions, extra-cost states, build-out or late-availability states, and applicable SEO programs have been normalized from a retained and reviewed source artifact.",
@@ -303,7 +303,26 @@
           ],
           "retained_completion_source_id": "gm-online-order-guide-pdf-22878",
           "retained_completion_pdf_page": 35,
-          "completion_note": "Habanero Orange GAG / WA-221K is published with the exact SS-only restriction."
+          "completion_note": "Habanero Orange GAG / WA-221K is published with the exact SS-only restriction.",
+          "published_current_order_guide_specialty_record_count": 4,
+          "retained_specialty_source_ids": [
+            "gm-online-order-guide-pdf-22887"
+          ],
+          "retained_specialty_pdf_pages": [
+            {
+              "source_id": "gm-online-order-guide-pdf-22887",
+              "vehicle_id": 22887,
+              "pdf_page": 23,
+              "printed_page": 23
+            }
+          ],
+          "published_police_seo_identity_count": 4,
+          "omitted_police_seo_identity_count": 0,
+          "omitted_police_standard_identity_count": 6,
+          "published_police_seo_availability_states": {
+            "available_with_possible_extended_lead": 1,
+            "footnoted_not_available_at_revision": 3
+          }
         },
         {
           "model_year": 2026,
@@ -317,10 +336,28 @@
           ],
           "availability_notes": [
             "Galaxy Gray Metallic is no longer orderable in the audited Order Guide state."
-          ]
+          ],
+          "published_current_order_guide_specialty_record_count": 4,
+          "retained_specialty_source_ids": [
+            "gm-online-order-guide-pdf-23158"
+          ],
+          "retained_specialty_pdf_pages": [
+            {
+              "source_id": "gm-online-order-guide-pdf-23158",
+              "vehicle_id": 23158,
+              "pdf_page": 20,
+              "printed_page": 20
+            }
+          ],
+          "published_police_seo_identity_count": 4,
+          "omitted_police_seo_identity_count": 0,
+          "omitted_police_standard_identity_count": 6,
+          "published_police_seo_availability_states": {
+            "available_with_possible_extended_lead": 4
+          }
         }
       ],
-      "result": "The 2025 identity omission is closed with the retained and visually reviewed Habanero Orange row. The 2026 names match, but other availability states remain incomplete."
+      "result": "All four exact Blazer EV Police Package 9C1 and 9C3 SEO rows are published for both years. The 2025 source conflict is preserved: three rows print A but carry a controlling not-available-at-this-time footnote. Six standard police-program color memberships per year remain outside this specialty table."
     },
     {
       "model_id": "brightdrop-400",
@@ -404,7 +441,22 @@
               "order_code": "GXD",
               "paint_code": "WA-130H"
             }
-          ]
+          ],
+          "published_current_order_guide_specialty_record_count": 17,
+          "retained_specialty_source_ids": [
+            "gm-online-order-guide-pdf-23079"
+          ],
+          "retained_specialty_pdf_pages": [
+            {
+              "source_id": "gm-online-order-guide-pdf-23079",
+              "vehicle_id": 23079,
+              "pdf_page": 54,
+              "printed_page": 54
+            }
+          ],
+          "published_wt_seo_identity_count": 17,
+          "omitted_wt_seo_identity_count": 0,
+          "literal_none_color_code_count": 13
         },
         {
           "model_year": 2026,
@@ -415,10 +467,25 @@
           ],
           "order_guide_vehicle_ids": [
             23215
-          ]
+          ],
+          "published_current_order_guide_specialty_record_count": 14,
+          "retained_specialty_source_ids": [
+            "gm-online-order-guide-pdf-23215"
+          ],
+          "retained_specialty_pdf_pages": [
+            {
+              "source_id": "gm-online-order-guide-pdf-23215",
+              "vehicle_id": 23215,
+              "pdf_page": 61,
+              "printed_page": 61
+            }
+          ],
+          "published_wt_seo_identity_count": 14,
+          "omitted_wt_seo_identity_count": 0,
+          "literal_none_color_code_count": 10
         }
       ],
-      "result": "The identity unions match. The 2025 spelling conflict and unnormalized SEO sets prevent a complete claim."
+      "result": "The regular identity unions match. All exact Colorado WT SEO Paint rows are published from the retained 2025 and 2026 pages, including the repeated Yellow labels as distinct WA identities and every literal none color-code cell. Retail option and package availability remains incomplete."
     },
     {
       "model_id": "corvette",
@@ -545,8 +612,8 @@
             23015,
             23016
           ],
-          "missing_specialty_identity_count": 17,
-          "published_current_order_guide_specialty_record_count": 3,
+          "missing_specialty_identity_count": 0,
+          "published_current_order_guide_specialty_record_count": 54,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-23014",
             "gm-online-order-guide-pdf-23015",
@@ -572,8 +639,8 @@
               "printed_page": 28
             }
           ],
-          "published_specialty_identity_count": 1,
-          "published_configuration_row_count": 3
+          "published_specialty_identity_count": 18,
+          "published_configuration_row_count": 54
         },
         {
           "model_year": 2026,
@@ -589,8 +656,8 @@
             23277,
             23278
           ],
-          "missing_specialty_identity_count": 17,
-          "published_current_order_guide_specialty_record_count": 3,
+          "missing_specialty_identity_count": 0,
+          "published_current_order_guide_specialty_record_count": 54,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-23276",
             "gm-online-order-guide-pdf-23277",
@@ -616,11 +683,11 @@
               "printed_page": 30
             }
           ],
-          "published_specialty_identity_count": 1,
-          "published_configuration_row_count": 3
+          "published_specialty_identity_count": 18,
+          "published_configuration_row_count": 54
         }
       ],
-      "result": "Four regular names match. Woodland Green 9V5 / WA-9015 is now published for Cargo, Cutaway, and Passenger from exact retained pages for both years. Seventeen other SEO identities per year remain outside the normalized regular layer."
+      "result": "Four regular names match. All eighteen exact SEO Solid Paint rows are published separately for Cargo, Cutaway, and Passenger in both years. Repeated labels remain separated by code and WA number, and every row retains its exact interior applicability, five-order minimum, and flat-Black body-component rule."
     },
     {
       "model_id": "low-cab-forward",
@@ -752,8 +819,8 @@
             22905,
             23022
           ],
-          "missing_body_series_seo_identity_count": 47,
-          "published_current_order_guide_specialty_record_count": 4,
+          "missing_body_series_seo_identity_count": 0,
+          "published_current_order_guide_specialty_record_count": 93,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-22903",
             "gm-online-order-guide-pdf-22905",
@@ -786,8 +853,8 @@
               "printed_page": 122
             }
           ],
-          "published_body_series_seo_identity_count": 1,
-          "published_configuration_row_count": 4
+          "published_body_series_seo_identity_count": 48,
+          "published_configuration_row_count": 93
         },
         {
           "model_year": 2026,
@@ -804,8 +871,8 @@
             23197,
             23260
           ],
-          "missing_body_series_seo_identity_count": 47,
-          "published_current_order_guide_specialty_record_count": 4,
+          "missing_body_series_seo_identity_count": 0,
+          "published_current_order_guide_specialty_record_count": 93,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-23195",
             "gm-online-order-guide-pdf-23197",
@@ -838,11 +905,11 @@
               "printed_page": 119
             }
           ],
-          "published_body_series_seo_identity_count": 1,
-          "published_configuration_row_count": 4
+          "published_body_series_seo_identity_count": 48,
+          "published_configuration_row_count": 93
         }
       ],
-      "result": "The regular body-series unions match. Woodland Green 9V5 / WA-9015 is published for the exact 2500 HD Retail and Fleet, 3500 HD CC, 3500 HD Retail and Fleet, and 4500/5500/6500 HD configurations in both years. Forty-seven other distinct SEO identities per year remain unnormalized."
+      "result": "The regular body-series unions match. All twenty-one light-HD SEO Paint rows are published separately for 2500 HD Retail and Fleet, 3500 HD CC, and 3500 HD Retail and Fleet, and all thirty medium-duty rows are published for 4500/5500/6500 HD, in both years. The archive preserves 93 exact configuration rows and 48 distinct source identities per year without importing medium-duty codes into literal-none light-HD cells."
     },
     {
       "model_id": "suburban",
@@ -859,11 +926,8 @@
           "order_guide_vehicle_ids": [
             23035
           ],
-          "omitted_specialty_colors": [
-            "Victory Red",
-            "Wheatland Yellow"
-          ],
-          "published_current_order_guide_specialty_record_count": 1,
+          "omitted_specialty_colors": [],
+          "published_current_order_guide_specialty_record_count": 3,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-23035"
           ],
@@ -875,7 +939,7 @@
               "printed_page": 64
             }
           ],
-          "published_specialty_identity_count": 1
+          "published_specialty_identity_count": 3
         },
         {
           "model_year": 2026,
@@ -887,11 +951,8 @@
           "order_guide_vehicle_ids": [
             23233
           ],
-          "omitted_specialty_colors": [
-            "Victory Red",
-            "Wheatland Yellow"
-          ],
-          "published_current_order_guide_specialty_record_count": 1,
+          "omitted_specialty_colors": [],
+          "published_current_order_guide_specialty_record_count": 3,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-23233"
           ],
@@ -903,10 +964,10 @@
               "printed_page": 68
             }
           ],
-          "published_specialty_identity_count": 1
+          "published_specialty_identity_count": 3
         }
       ],
-      "result": "The regular names match. Woodland Green 9V5 / WA-9015 is published from the exact SEO Solid Paint page for both years. Victory Red and Wheatland Yellow remain outside this bounded tranche."
+      "result": "The regular names match. Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A are published from each exact SEO Solid Paint page with both listed interiors and the five-order minimum."
     },
     {
       "model_id": "tahoe",
@@ -926,10 +987,10 @@
           "police_ssv_order_guide_vehicle_ids": [
             22974
           ],
-          "omitted_retail_fleet_seo_identity_count": 2,
+          "omitted_retail_fleet_seo_identity_count": 0,
           "omitted_police_ssv_standard_identity_count": 6,
           "omitted_police_ssv_seo_identity_count": 0,
-          "published_current_order_guide_specialty_record_count": 7,
+          "published_current_order_guide_specialty_record_count": 9,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-22974",
             "gm-online-order-guide-pdf-22944"
@@ -948,7 +1009,7 @@
               "printed_page": 83
             }
           ],
-          "published_retail_fleet_seo_identity_count": 1,
+          "published_retail_fleet_seo_identity_count": 3,
           "published_police_ssv_seo_identity_count": 6
         },
         {
@@ -964,10 +1025,10 @@
           "police_ssv_order_guide_vehicle_ids": [
             23213
           ],
-          "omitted_retail_fleet_seo_identity_count": 2,
+          "omitted_retail_fleet_seo_identity_count": 0,
           "omitted_police_ssv_standard_identity_count": 6,
           "omitted_police_ssv_seo_identity_count": 0,
-          "published_current_order_guide_specialty_record_count": 7,
+          "published_current_order_guide_specialty_record_count": 9,
           "retained_specialty_source_ids": [
             "gm-online-order-guide-pdf-23213",
             "gm-online-order-guide-pdf-23232"
@@ -986,11 +1047,11 @@
               "printed_page": 90
             }
           ],
-          "published_retail_fleet_seo_identity_count": 1,
+          "published_retail_fleet_seo_identity_count": 3,
           "published_police_ssv_seo_identity_count": 6
         }
       ],
-      "result": "The regular names match. Woodland Green is published for Retail and Fleet, and all six exact SEO Solid Paint rows are published for the combined Police Package and Special Service entry for each year. The source does not split PPV from SSV, and two other retail/fleet SEO identities plus standard police-program memberships remain outside this tranche."
+      "result": "The regular names match. All three Retail and Fleet SEO Solid Paint rows and all six exact combined Police Package and Special Service SEO Solid Paint rows are published for each year. The source does not split PPV from SSV. Standard police-program memberships outside these SEO tables remain separate evidence."
     },
     {
       "model_id": "trailblazer",
@@ -1093,9 +1154,11 @@
         2025,
         2026
       ],
-      "program_scope": "Combined Tahoe Police Package and Special Service Order Guide entry",
+      "program_scope": "Tahoe Retail and Fleet plus combined Police Package and Special Service Order Guide entries",
       "vehicle_ids": [
+        22944,
         22974,
+        23232,
         23213
       ],
       "generated_pdf_page": 29,
@@ -1133,8 +1196,14 @@
         }
       ],
       "publication_status": "retained_pages_visually_verified_and_published",
-      "qualification": "The six rows are published only for the combined Police Package and Special Service entry. No separate PPV-only or SSV-only applicability is inferred.",
+      "qualification": "All three Retail and Fleet rows are published per year. The six police and special-service rows are published only for the combined entry; no PPV-only or SSV-only applicability is inferred.",
       "source_pages": [
+        {
+          "vehicle_id": 22944,
+          "model_year": 2025,
+          "pdf_page": 83,
+          "printed_page": 83
+        },
         {
           "vehicle_id": 22974,
           "model_year": 2025,
@@ -1142,12 +1211,19 @@
           "printed_page": 29
         },
         {
+          "vehicle_id": 23232,
+          "model_year": 2026,
+          "pdf_page": 90,
+          "printed_page": 90
+        },
+        {
           "vehicle_id": 23213,
           "model_year": 2026,
           "pdf_page": 29,
           "printed_page": 29
         }
-      ]
+      ],
+      "finding": "Each Retail and Fleet page publishes Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A. Each combined Police Package and Special Service page publishes six rows. Interior applicability, the five-order minimum, and the combined-program boundary remain exact."
     },
     {
       "model_id": "blazer-ev",
@@ -1155,7 +1231,29 @@
         2025,
         2026
       ],
-      "finding": "The police Order Guide entries contain six standard colors plus four SEO colors. The normalized archive currently publishes only the four 2026 SEO memberships, not the standard police-program memberships."
+      "finding": "Both retained police-package tables print Victory Red 5T4 / WA-9260, MSP Goose Blue 9V2 / WA-5665, Dark Blue Metallic 9V7 / WA-722J, and Silver Ice Metallic 9W5 / WA-636R. In 2025, Victory Red carries a planned-Q1-2025 note, and the other three rows are footnoted not available at the reviewed revision despite their A cells. The 2026 page has no row-specific unavailability footnotes.",
+      "program_scope": "Blazer EV Police Package 9C1 and 9C3 Order Guide entries",
+      "vehicle_ids": [
+        22887,
+        23158
+      ],
+      "seo_color_count_per_year": 4,
+      "publication_status": "retained_pages_visually_verified_and_published",
+      "qualification": "The exact four-row SEO table is published for 9C1 and 9C3 only. The 2025 A cells and controlling row footnotes are both preserved; no 5W4 applicability is inferred from these pages.",
+      "source_pages": [
+        {
+          "vehicle_id": 22887,
+          "model_year": 2025,
+          "pdf_page": 23,
+          "printed_page": 23
+        },
+        {
+          "vehicle_id": 23158,
+          "model_year": 2026,
+          "pdf_page": 20,
+          "printed_page": 20
+        }
+      ]
     },
     {
       "model_id": "silverado",
@@ -1196,6 +1294,192 @@
         {
           "stored_upfitter_literal": "Sterling Gray Metallic GNO / WA-130H",
           "live_order_guide_literal": "Sterling Gray Metallic GXD / WA-130H"
+        }
+      ]
+    },
+    {
+      "model_id": "colorado",
+      "model_years": [
+        2025,
+        2026
+      ],
+      "program_scope": "Colorado WT SEO Paint Order Guide entries",
+      "vehicle_ids": [
+        23079,
+        23215
+      ],
+      "publication_status": "retained_pages_visually_verified_and_published",
+      "qualification": "Every row is limited to Colorado WT for its printed model year. Literal none code cells are normalized to null while the exact source literal remains recorded.",
+      "finding": "The 2025 table publishes seventeen A rows and the 2026 table publishes fourteen A rows. Both require five orders before plant submission. The archive keeps each repeated Yellow label separate by WA identity and does not apply the interior-only PCU footnote to paint availability.",
+      "source_pages": [
+        {
+          "vehicle_id": 23079,
+          "model_year": 2025,
+          "pdf_page": 54,
+          "printed_page": 54
+        },
+        {
+          "vehicle_id": 23215,
+          "model_year": 2026,
+          "pdf_page": 61,
+          "printed_page": 61
+        }
+      ]
+    },
+    {
+      "model_id": "suburban",
+      "model_years": [
+        2025,
+        2026
+      ],
+      "program_scope": "Suburban SEO Solid Paint Order Guide entries",
+      "vehicle_ids": [
+        23035,
+        23233
+      ],
+      "publication_status": "retained_pages_visually_verified_and_published",
+      "qualification": "All three rows are published only for the exact Suburban source heading and model year.",
+      "finding": "Each page publishes Victory Red 5T4 / WA-9260, Woodland Green 9V5 / WA-9015, and Wheatland Yellow 9W3 / WA-253A with both listed interior columns and a five-order minimum.",
+      "source_pages": [
+        {
+          "vehicle_id": 23035,
+          "model_year": 2025,
+          "pdf_page": 64,
+          "printed_page": 64
+        },
+        {
+          "vehicle_id": 23233,
+          "model_year": 2026,
+          "pdf_page": 68,
+          "printed_page": 68
+        }
+      ]
+    },
+    {
+      "model_id": "express",
+      "model_years": [
+        2025,
+        2026
+      ],
+      "program_scope": "Express Cargo, Cutaway, and Passenger SEO Solid Paint Order Guide entries",
+      "vehicle_ids": [
+        23014,
+        23015,
+        23016,
+        23276,
+        23277,
+        23278
+      ],
+      "publication_status": "retained_pages_visually_verified_and_published",
+      "qualification": "All eighteen printed rows are published independently for Cargo, Cutaway, and Passenger in each model year; duplicate labels are not collapsed across configurations or WA identities.",
+      "finding": "The six pages produce 108 exact configuration-color records. Every row preserves its interior columns, five-order minimum, and flat-Black extraneous-body-component rule.",
+      "source_pages": [
+        {
+          "vehicle_id": 23014,
+          "model_year": 2025,
+          "pdf_page": 35,
+          "printed_page": 35
+        },
+        {
+          "vehicle_id": 23015,
+          "model_year": 2025,
+          "pdf_page": 49,
+          "printed_page": 49
+        },
+        {
+          "vehicle_id": 23016,
+          "model_year": 2025,
+          "pdf_page": 28,
+          "printed_page": 28
+        },
+        {
+          "vehicle_id": 23276,
+          "model_year": 2026,
+          "pdf_page": 37,
+          "printed_page": 37
+        },
+        {
+          "vehicle_id": 23277,
+          "model_year": 2026,
+          "pdf_page": 51,
+          "printed_page": 51
+        },
+        {
+          "vehicle_id": 23278,
+          "model_year": 2026,
+          "pdf_page": 30,
+          "printed_page": 30
+        }
+      ]
+    },
+    {
+      "model_id": "silverado-hd",
+      "model_years": [
+        2025,
+        2026
+      ],
+      "program_scope": "Silverado 2500 HD Retail and Fleet, 3500 HD CC, 3500 HD Retail and Fleet, and 4500/5500/6500 HD SEO Paint Order Guide entries",
+      "vehicle_ids": [
+        22903,
+        22905,
+        22904,
+        23022,
+        23195,
+        23197,
+        23196,
+        23260
+      ],
+      "publication_status": "retained_pages_visually_verified_and_published",
+      "qualification": "All source rows are published separately by configuration and year. Literal none light-HD code cells, medium-duty codes, interior applicability, and unbound numbered notes remain source-scoped.",
+      "finding": "The eight pages produce 186 exact configuration-color records, 93 per year, representing 48 distinct source identities per year. The 5IS / WA-636R versus 5IS / WA-363R conflict and all three WA-722J variants remain explicit.",
+      "source_pages": [
+        {
+          "vehicle_id": 22903,
+          "model_year": 2025,
+          "pdf_page": 106,
+          "printed_page": 106
+        },
+        {
+          "vehicle_id": 22905,
+          "model_year": 2025,
+          "pdf_page": 31,
+          "printed_page": 31
+        },
+        {
+          "vehicle_id": 22904,
+          "model_year": 2025,
+          "pdf_page": 85,
+          "printed_page": 85
+        },
+        {
+          "vehicle_id": 23022,
+          "model_year": 2025,
+          "pdf_page": 122,
+          "printed_page": 122
+        },
+        {
+          "vehicle_id": 23195,
+          "model_year": 2026,
+          "pdf_page": 102,
+          "printed_page": 102
+        },
+        {
+          "vehicle_id": 23197,
+          "model_year": 2026,
+          "pdf_page": 30,
+          "printed_page": 30
+        },
+        {
+          "vehicle_id": 23196,
+          "model_year": 2026,
+          "pdf_page": 84,
+          "printed_page": 84
+        },
+        {
+          "vehicle_id": 23260,
+          "model_year": 2026,
+          "pdf_page": 119,
+          "printed_page": 119
         }
       ]
     }

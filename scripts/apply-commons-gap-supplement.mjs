@@ -305,13 +305,20 @@ async function verifyCommonsSha1(staged) {
 }
 
 function selectionContext(staged) {
-  return {
+  const context = {
     kind: "reviewed_gap_supplement",
     model_id: staged.supplement.model_id,
     exact_year: staged.explicitYear,
     evidence_note: staged.supplement.evidence_note,
     exact_page_title: staged.supplement.page_title,
   };
+  if (staged.supplement.identity_basis) {
+    context.identity_basis = staged.supplement.identity_basis;
+  }
+  if (Array.isArray(staged.supplement.identity_source_urls)) {
+    context.identity_source_urls = [...staged.supplement.identity_source_urls];
+  }
+  return context;
 }
 
 function toManifestAsset(staged, options) {
@@ -565,6 +572,8 @@ function auditResult(staged) {
     original_filename: staged.originalFilename,
     explicit_year: staged.explicitYear,
     identity_term_matched: staged.supplementIdentityMatch,
+    identity_basis: staged.supplement.identity_basis ?? null,
+    identity_source_urls: staged.supplement.identity_source_urls ?? [],
     evidence_note: staged.supplement.evidence_note,
     local_path: staged.localPath,
     raw_source_record_paths: staged.supplementRawFiles,

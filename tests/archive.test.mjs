@@ -960,13 +960,13 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     allGenerations
       .filter(isQualifiedPalette)
       .reduce((total, item) => total + item.listingCount, 0),
-    568,
+    590,
   );
   assert.equal(
     allGenerations
       .filter(isSpecialtySubset)
       .reduce((total, item) => total + item.listingCount, 0),
-    601,
+    928,
   );
   assert.equal(
     allGenerations
@@ -976,7 +976,55 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    2146,
+    2495,
+  );
+});
+
+test("2024 supplemental GM Fleet Guide palettes reach the public archive", async () => {
+  const { models } = await loadArchiveData();
+  const generationFor = (modelId) =>
+    models
+      .find((model) => model.id === modelId)
+      .generations.find(
+        (generation) =>
+          generation.years.length === 1 &&
+          generation.years[0] === "2024" &&
+          generation.sources["2024"]?.sourceId ===
+            "gm-fleet-guide-us-2025-v1-r2024-05-29",
+      );
+
+  const equinoxEv = generationFor("equinox-ev");
+  assert.ok(equinoxEv);
+  assert.equal(equinoxEv.listingCount, 8);
+  assert.deepEqual(
+    equinoxEv.colors.map((color) => color.name),
+    [
+      "Black",
+      "Galaxy Gray Metallic",
+      "Iridescent Pearl Tricoat",
+      "Radiant Red Tintcoat",
+      "Red Hot",
+      "Riptide Blue Metallic",
+      "Sterling Gray Metallic",
+      "Summit White",
+    ],
+  );
+
+  const traverse = generationFor("traverse");
+  assert.ok(traverse);
+  assert.equal(traverse.listingCount, 8);
+  assert.deepEqual(
+    traverse.colors.map((color) => color.name),
+    [
+      "Harvest Bronze Metallic",
+      "Iridescent Pearl Tricoat",
+      "Lakeshore Blue Metallic",
+      "Mosaic Black Metallic",
+      "Radiant Red Tintcoat",
+      "Stardust Metallic",
+      "Sterling Gray Metallic",
+      "Summit White",
+    ],
   );
 });
 
@@ -2358,7 +2406,7 @@ test("earlier official brochure palette unions retain exact pages, restrictions,
   ]);
   const sourceData = JSON.parse(sourceText);
   const retainedSources = sourceData.sources.filter((source) => source.local_file_path);
-  assert.equal(retainedSources.length, 23);
+  assert.equal(retainedSources.length, 24);
   assert.ok(
     retainedSources.every(
       (source) =>
@@ -2632,6 +2680,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
   assert.deepEqual(overlaps, [
     "blazer:1979",
     "blazer:1980",
+    "blazer-ev:2025",
     "blazer-ev:2026",
     "bolt-euv:2023",
     "ck-series:1979",
@@ -2645,6 +2694,8 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "caprice-ppv:2015",
     "caprice-ppv:2016",
     "caprice-ppv:2017",
+    "colorado:2025",
+    "colorado:2026",
     "express:2012",
     "express:2013",
     "express:2014",
@@ -2717,14 +2768,25 @@ test("verified specialty paint subsets preserve exact labels, codes, scope, and 
 
   assert.equal(specialty.visibility, "public");
   assert.equal(specialty.dataset_kind, "chevrolet_color_source_candidates");
-  assert.equal(specialty.app_publication_records.length, 565);
-  assert.equal(publishedSpecialty.length, 561);
+  assert.equal(specialty.app_publication_records.length, 892);
+  assert.equal(publishedSpecialty.length, 888);
   assert.equal(publishedQualifiedHistorical.length, 4);
-  assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 87);
-  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 20);
+  assert.equal(specialty.integrity_audit.unique_retained_artifacts_reconciled, 89);
+  assert.equal(specialty.integrity_audit.last_updater_rehash.file_count, 24);
+  assert.equal(specialty.integrity_audit.usda_primary_source_occurrences, 14);
+  assert.equal(
+    specialty.integrity_audit.usda_primary_source_official_host_occurrences,
+    12,
+  );
+  assert.equal(
+    specialty.integrity_audit.usda_primary_source_qualified_carrier_occurrences,
+    2,
+  );
+  assert.equal(specialty.integrity_audit.usda_primary_source_retained_artifacts, 6);
+  assert.equal(specialty.integrity_audit.usda_primary_source_chevrolet_routes, 0);
   assert.deepEqual(specialty.integrity_audit.artifact_reference_groups, {
-    published_record_sources: 54,
-    published_specialty_sources: 52,
+    published_record_sources: 58,
+    published_specialty_sources: 56,
     published_qualified_historical_sources: 2,
     verified_not_published_sources: 2,
     historic_gm_upfitter_candidates: 36,

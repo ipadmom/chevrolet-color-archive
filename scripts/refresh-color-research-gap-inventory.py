@@ -206,6 +206,8 @@ def modern_fleet_source_records(root: Path = ROOT) -> dict[int, list[dict[str, A
     for source in data["sources"]:
         if source.get("source_type") != "fleet_guide_pdf":
             continue
+        if not source.get("annual_model_year_coverage_anchor", True):
+            continue
         match = re.match(r"gm-fleet-guide-us-(\d{4})", source["source_id"])
         if not match:
             raise ValueError(
