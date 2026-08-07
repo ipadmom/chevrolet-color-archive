@@ -714,9 +714,29 @@ test("Wikimedia Commons photos use the pinned GitHub Release with complete attri
     "2024",
     "trax-crimson-metallic-2024-gm-fleet-guide",
   );
-  assert.equal(traxCrimson.length, 1);
-  assert.equal(traxCrimson[0].status, "reviewed");
-  assert.match(traxCrimson[0].note, /factory-paint identity remains unverified/);
+  assert.equal(traxCrimson.length, 2);
+  assert.ok(traxCrimson.every((photo) => photo.status === "reviewed"));
+  assert.ok(
+    traxCrimson.every((photo) =>
+      /factory-paint identity remains unverified/.test(photo.note),
+    ),
+  );
+  assert.equal(
+    photoData.archivedColorPhotos(
+      "trax",
+      "2024",
+      "trax-summit-white-2024-gm-fleet-guide",
+    ).length,
+    2,
+  );
+  assert.equal(
+    photoData.archivedColorPhotos(
+      "colorado",
+      "2024",
+      "colorado-nitro-yellow-metallic-2024-gm-fleet-guide",
+    ).length,
+    2,
+  );
   assert.doesNotMatch(moduleSource, /upload\.wikimedia\.org|Special:Redirect\/file/);
 });
 

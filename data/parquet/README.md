@@ -56,15 +56,15 @@ produce byte-identical Parquet files; a two-pass build check covers this rule.
 | `secondary_paint_fitments.parquet` | One product listed for one audited RockAuto configuration | 111 |
 | `color_code_crosswalk_candidates.parquet` | One unverified retailer code and model-year research lead | 96 |
 | `supplemental_color_mentions.parquet` | One exact research-only color mention from an incomplete model-year source | 0 |
-| `sources.parquet` | One canonical source URL | 3,009 |
-| `source_revisions.parquet` | One immutable file revision of a source | 1,933 |
+| `sources.parquet` | One canonical source URL | 3,033 |
+| `source_revisions.parquet` | One immutable file revision of a source | 1,957 |
 | `evidence_claims.parquet` | One exact source-revision and locator claim for a published availability row | 5,403 |
-| `source_links.parquet` | One source-to-claim citation | 39,653 |
-| `photo_assets.parquet` | One archived Wikimedia Commons original | 304 |
-| `model_photo_links.parquet` | One model or exact-year photo selection-context association | 307 |
-| `photo_color_links.parquet` | One qualified or tentative photo-to-color association | 6 |
+| `source_links.parquet` | One source-to-claim citation | 39,853 |
+| `photo_assets.parquet` | One archived Wikimedia Commons original | 312 |
+| `model_photo_links.parquet` | One model or exact-year photo selection-context association | 315 |
+| `photo_color_links.parquet` | One qualified or tentative photo-to-color association | 14 |
 
-Counts in this README describe the 2026-08-06 build. `manifest.json` controls
+Counts in this README describe the 2026-08-07 build. `manifest.json` controls
 if later research changes them.
 
 ## Evidence guarantees

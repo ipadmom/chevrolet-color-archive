@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "audited_at": "2026-08-04T11:27:46.1599800Z",
+  "schema_version": 2,
+  "audited_at": "2026-08-07T19:45:35.772432Z",
   "visibility": "public",
   "classification": "archive-internal",
   "source_manifest": "data/photos/commons-release-manifest.json",
@@ -11,7 +11,26 @@
     "paint_rule": "Identity photographs are not paint evidence. No photo-to-color link is promoted unless Commons metadata states the exact paint identity and independent factory evidence supports that identity."
   },
   "manifest_coverage": {
-    "current_model_ids": ["corvette", "suburban", "blazer", "tahoe", "express", "silverado", "silverado-hd", "trailblazer", "colorado", "equinox", "traverse", "trax", "low-cab-forward", "blazer-ev", "equinox-ev", "silverado-ev", "brightdrop-400", "brightdrop-600"],
+    "current_model_ids": [
+      "corvette",
+      "suburban",
+      "blazer",
+      "tahoe",
+      "express",
+      "silverado",
+      "silverado-hd",
+      "trailblazer",
+      "colorado",
+      "equinox",
+      "traverse",
+      "trax",
+      "low-cab-forward",
+      "blazer-ev",
+      "equinox-ev",
+      "silverado-ev",
+      "brightdrop-400",
+      "brightdrop-600"
+    ],
     "archived_asset_counts": {
       "corvette": 10,
       "suburban": 3,
@@ -21,10 +40,10 @@
       "silverado": 2,
       "silverado-hd": 2,
       "trailblazer": 2,
-      "colorado": 2,
+      "colorado": 5,
       "equinox": 2,
-      "traverse": 2,
-      "trax": 2,
+      "traverse": 3,
+      "trax": 6,
       "low-cab-forward": 1,
       "blazer-ev": 2,
       "equinox-ev": 2,
@@ -32,39 +51,82 @@
       "brightdrop-400": 1,
       "brightdrop-600": 2
     },
-    "archived_asset_total": 46,
-    "published_current_model_photo_to_color_links": 1,
-    "published_current_model_photo_to_color_boundary": "The exact 2024 Trax Crimson Metallic Commons caption is a qualified visual example only. Factory-paint identity remains unverified."
+    "archived_asset_total": 54,
+    "published_current_model_photo_to_color_links": 9,
+    "published_current_model_photo_to_color_boundary": "Every reviewed color link is a qualified visual example only. Original factory finish and paint-code identity remain unverified."
   },
   "undercovered_models": [
     {
       "model_id": "low-cab-forward",
       "archived_candidate_count": 1,
-      "existing_archived_candidate_ids": ["commons-sha1-4d36094bbb4775c24faf"],
+      "existing_archived_candidate_ids": [
+        "commons-sha1-4d36094bbb4775c24faf"
+      ],
       "existing_source_page_url": "https://commons.wikimedia.org/wiki/File:2019_Chevrolet_LCF_5500_HD_Crew_Cab_in_Bright_White,_front_right.jpg",
       "existing_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-180984748-4d36094bbb47-2019-chevrolet-lcf-5500-hd-crew-cab-in-bright-white-front-right.jpg",
       "fresh_query_results": [
-        {"query": "\"2025 Chevrolet Low Cab Forward\"", "result_count": 0},
-        {"query": "\"2026 Chevrolet Low Cab Forward\"", "result_count": 0},
-        {"query": "\"Chevrolet Low Cab Forward\"", "result_count": 0},
-        {"query": "\"Chevrolet LCF\"", "result_count": 2, "exact_chevrolet_result_count": 1, "noncandidate_reason": "The other result is explicitly a GMC truck, not a Chevrolet LCF. The exact Chevrolet result is the already archived 2019 LCF."}
+        {
+          "query": "\"2025 Chevrolet Low Cab Forward\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"2026 Chevrolet Low Cab Forward\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"Chevrolet Low Cab Forward\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"Chevrolet LCF\"",
+          "result_count": 2,
+          "exact_chevrolet_result_count": 1,
+          "noncandidate_reason": "The other result is explicitly a GMC truck, not a Chevrolet LCF. The exact Chevrolet result is the already archived 2019 LCF."
+        }
       ],
       "result": "No second exact candidate is safe to add. The 2019 asset remains an identity reference only. Its Commons Bright White (16U) description does not establish a 2025 or 2026 factory paint identity."
     },
     {
       "model_id": "brightdrop-400",
       "archived_candidate_count": 1,
-      "existing_archived_candidate_ids": ["commons-sha1-0389a3d594263d394933"],
+      "existing_archived_candidate_ids": [
+        "commons-sha1-0389a3d594263d394933"
+      ],
       "existing_source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Brightdrop_au_SIAM_2025.jpg",
       "existing_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-163789978-0389a3d59426-2025-chevrolet-brightdrop-au-siam-2025.jpg",
       "fresh_query_results": [
-        {"query": "\"2025 Chevrolet BrightDrop 400\"", "result_count": 0},
-        {"query": "\"2026 Chevrolet BrightDrop 400\"", "result_count": 0},
-        {"query": "\"Chevrolet BrightDrop 400\"", "result_count": 0},
-        {"query": "\"BrightDrop 400\"", "result_count": 0},
-        {"query": "\"BrightDrop Zevo 400\"", "result_count": 15, "exact_400_result_count": 0, "noncandidate_reason": "Every returned vehicle file identified a BrightDrop EV600 or Zevo 600, or did not distinguish a 400 from a 600."},
-        {"query": "\"Zevo 400\"", "result_count": 0},
-        {"query": "\"BrightDrop EV410\"", "result_count": 15, "exact_400_result_count": 0, "noncandidate_reason": "The legacy EV410 query returned EV600/Zevo 600 files, not a 400 identity."}
+        {
+          "query": "\"2025 Chevrolet BrightDrop 400\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"2026 Chevrolet BrightDrop 400\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"Chevrolet BrightDrop 400\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"BrightDrop 400\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"BrightDrop Zevo 400\"",
+          "result_count": 15,
+          "exact_400_result_count": 0,
+          "noncandidate_reason": "Every returned vehicle file identified a BrightDrop EV600 or Zevo 600, or did not distinguish a 400 from a 600."
+        },
+        {
+          "query": "\"Zevo 400\"",
+          "result_count": 0
+        },
+        {
+          "query": "\"BrightDrop EV410\"",
+          "result_count": 15,
+          "exact_400_result_count": 0,
+          "noncandidate_reason": "The legacy EV410 query returned EV600/Zevo 600 files, not a 400 identity."
+        }
       ],
       "result": "One 2025 identity reference is now archived. Commons identifies the exact file as a 2025 Chevrolet BrightDrop at the 2025 Montreal International Auto Show; the exact-file English Wikipedia caption and the show organizer's official roster identify the event vehicle as a 2025 BrightDrop 400. The 400 designation is therefore recorded as a cross-reference result, not as Commons-native metadata or paint evidence."
     }
@@ -142,5 +204,22 @@
   "remaining_gaps": [
     "BrightDrop 400 has one cross-referenced archived candidate, but Commons metadata alone does not distinguish the 400 and no second qualifying reference was found.",
     "Low Cab Forward has one archived exact candidate and no second exact Commons candidate from the refreshed searches."
-  ]
+  ],
+  "current_model_color_photo_batch": {
+    "review_report": "data/photos/current-model-color-photo-review.json",
+    "release_verification_report": "data/photos/current-model-color-photo-release-verification.json",
+    "complete_commons_api_response": "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json",
+    "published_asset_count": 8,
+    "published_color_link_count": 8,
+    "published_candidate_ids": [
+      "commons-sha1-57169b50941b575f71fc",
+      "commons-sha1-c993574a655f320cfefb",
+      "commons-sha1-ec436c9d96c84018dd28",
+      "commons-sha1-20621cbb4ea92b9964de",
+      "commons-sha1-a45a00eb9fa6720c0f01",
+      "commons-sha1-f56d03acddd5d152e088",
+      "commons-sha1-a72be27d15b04d1ded9e",
+      "commons-sha1-12c6e5a52ce1f1c805cc"
+    ]
+  }
 }

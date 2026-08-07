@@ -1,6 +1,6 @@
 {
   "schema_version": 13,
-  "generated_at": "2026-08-07T05:52:57Z",
+  "generated_at": "2026-08-07T20:02:19Z",
   "archive": "Chevrolet Color Archive",
   "normalization_contract": "Missing color rows mean unverified research coverage, not negative availability. Every published color availability row has one direct evidence_source_id. Qualified GM Fleet Guide palette unions, qualified historical-table subsets, and reviewed specialty-paint subsets remain distinct from complete governing charts. Exact simultaneous model programs remain separate generation memberships within one model-year. Missing factory codes are null and carry a controlled source-status value. RPO, SEO, literal SEO-cell state, normalized WA code, literal WA-cell state, authorized-upfitter order codes, minimum-batch, and factory-installation fields remain structured and source-linked. Paint schemes preserve primary and secondary components separately and never create standalone color availability. Audited color programs preserve every alternate table, component finish, roof, top, stripe, two-tone, and body-finish entry separately from the one selected regular palette. RockAuto retailer observations remain isolated in four secondary-lead tables and never create color availability or evidence claims.",
   "coverage": {
@@ -31,12 +31,12 @@
     "specialty_palette_subset_model_years": 69,
     "specialty_palette_subset_availability_rows": 928,
     "unverified_model_years": 1292,
-    "sources": 3009,
-    "source_revisions": 1933,
+    "sources": 3033,
+    "source_revisions": 1957,
     "evidence_claims": 5403,
-    "source_links": 39653,
-    "photo_assets": 304,
-    "photo_color_links": 6
+    "source_links": 39853,
+    "photo_assets": 312,
+    "photo_color_links": 14
   },
   "tables": [
     {
@@ -299,9 +299,9 @@
     {
       "table": "sources",
       "path": "data/parquet/sources.parquet",
-      "rows": 3009,
+      "rows": 3033,
       "columns": 19,
-      "sha256": "a93147f21bde08d2999ea2745467fe08c39983ce462fc086842b888705dc2323",
+      "sha256": "a9e906da185c9ed0657e81cb8206660523b624a89881b6083b1203508fc20ab6",
       "primary_key": [
         "source_id"
       ],
@@ -310,9 +310,9 @@
     {
       "table": "source_revisions",
       "path": "data/parquet/source_revisions.parquet",
-      "rows": 1933,
+      "rows": 1957,
       "columns": 14,
-      "sha256": "78d801e66eae515ed54f8558c27ce4bc89a5b3457c382beab57e774bc4ba4694",
+      "sha256": "8942fe0a93767e17bdedbfff57078fbe5ae9541abfc0f9442e8e31c6fa1a120a",
       "primary_key": [
         "source_revision_id"
       ],
@@ -340,9 +340,9 @@
     {
       "table": "source_links",
       "path": "data/parquet/source_links.parquet",
-      "rows": 39653,
+      "rows": 39853,
       "columns": 14,
-      "sha256": "c5ad014657b7495010812bdd8a3ca8ed5ce6e368f88d2dea9d01fb3ba5214a43",
+      "sha256": "af415b3e664d7b7c1df8f8ed6b936bf5ed580f39aeed890ebbdf162ac9a8e4fb",
       "primary_key": [
         "source_link_id"
       ],
@@ -353,9 +353,9 @@
     {
       "table": "photo_assets",
       "path": "data/parquet/photo_assets.parquet",
-      "rows": 304,
+      "rows": 312,
       "columns": 25,
-      "sha256": "fb083952a27a664ca3c7ccd001e3c97f50e2a09c1ecfc65f594ca9e7293c4a4f",
+      "sha256": "c3d4634486a20e211a5e8b2257148ad6477e16884c4c9bd58647111bcac36ada",
       "primary_key": [
         "photo_id"
       ],
@@ -369,9 +369,9 @@
     {
       "table": "model_photo_links",
       "path": "data/parquet/model_photo_links.parquet",
-      "rows": 307,
+      "rows": 315,
       "columns": 7,
-      "sha256": "410136a872e5d5b131992fb4f98cd028e9dc6d81a1a0af2d07c3740ca7046250",
+      "sha256": "2ac62ebe7a7ae2d8ef6277e2d9a2a959f0bd125ebb7f546532fb3943dfd5b96b",
       "primary_key": [
         "model_photo_link_id"
       ],
@@ -383,9 +383,9 @@
     {
       "table": "photo_color_links",
       "path": "data/parquet/photo_color_links.parquet",
-      "rows": 6,
+      "rows": 14,
       "columns": 9,
-      "sha256": "393af107fe4075bf3db9d0bb46fbec82344c8881461fae940574879a1e9b09c3",
+      "sha256": "841124178adf506a2fb4fa3f31a1ced12636ea83e90ca876569d52c341945b3a",
       "primary_key": [
         "photo_color_link_id"
       ],

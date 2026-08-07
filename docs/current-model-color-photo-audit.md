@@ -10,7 +10,7 @@ sources:
 
 # Current-model color and photo coverage audit
 
-Audited August 4, 2026.
+Audited August 7, 2026.
 
 This is the focused coverage ledger for the 18 nameplates marked `current` in
 [`chevrolet-us-nameplates.json`](../data/catalog/chevrolet-us-nameplates.json).
@@ -39,19 +39,19 @@ The independent 2025–2026 live-source comparison is retained separately in
 
 | Model | Catalog years | Complete | Qualified palette | Specialty subset | Unreviewed or no-chart years | Archived Commons candidates |
 |---|---:|---|---|---|---|---:|
-| Corvette | 73 | 1956–1958, 1960–1962 | 1954–1955, 1959; 2024–2026 | None | 1953 no chart; 1963–1982, 1984–2023 unreviewed | 10 |
+| Corvette | 73 | 1956–1958, 1960–1972 | 1954–1955, 1959; 2008–2026 | None | 1953 no chart; 1973–1982, 1984–2007 unreviewed | 10 |
 | Suburban | 89 | 1969, 1972–2005, 2007 | 2008–2026 | None | 1963, 1970–1971 no chart; 1935–1942, 1946–1962, 1964–1968, 2006 unreviewed | 3 |
-| Blazer | 45 | None | 2024–2026 | 1979–1980 | 1969–1978, 1981–2005, 2019–2023 | 2 |
-| Tahoe | 32 | 1995–2007 | 2022, 2024–2026 | 2011–2020 | 2008–2010, 2021, 2023 | 5 |
-| Express | 31 | None | 2024–2026 | 2011–2014 | 1996–2010, 2015–2023 | 2 |
-| Silverado | 28 | None | 2024–2026 | 2012, 2014; 2025–2026 Retail and Fleet Woodland Green | 1999–2011, 2013, 2015–2023 | 2 |
-| Silverado HD | 26 | None | 2023–2026 | 2011 | 2001–2010, 2012–2022 | 2 |
-| TrailBlazer | 14 | None | 2024–2026 | None | 2002–2009, 2021–2023 | 2 |
-| Colorado | 21 | None | 2023–2026 | None | 2004–2012, 2015–2022 | 2 |
-| Equinox | 22 | None | 2024–2026 | None | 2005–2023 | 2 |
-| Traverse | 18 | None | 2024–2026 | None | 2009–2023 | 2 |
-| Trax | 11 | None | 2024–2026 | None | 2015–2022 | 2 |
-| Low Cab Forward | 11 | None | 2024–2026 | None | 2016–2023 | 1 |
+| Blazer | 45 | None | 2019–2026 | 1979–1980 | 1969–1978, 1981–2005 | 2 |
+| Tahoe | 32 | 1995–2007 | 2008–2026 | None | None | 5 |
+| Express | 31 | None | 2008–2026 | None | 1996–2007 | 2 |
+| Silverado | 28 | None | 2008–2026 | None | 1999–2007 | 2 |
+| Silverado HD | 26 | None | 2008–2026 | None | 2001–2007 | 2 |
+| TrailBlazer | 14 | None | 2008–2009, 2021–2026 | None | 2002–2007 | 2 |
+| Colorado | 21 | None | 2008–2012, 2015–2026 | None | 2004–2007 | 5 |
+| Equinox | 22 | None | 2008–2026 | None | 2005–2007 | 2 |
+| Traverse | 18 | None | 2009–2026 | None | None | 3 |
+| Trax | 11 | None | 2015–2022, 2024–2026 | None | None | 6 |
+| Low Cab Forward | 11 | None | 2016–2026 | None | None | 1 |
 | Blazer EV | 3 | None | 2024–2026 | See separate 2024–2026 9C1/9C3/5W4 evidence | None | 2 |
 | Equinox EV | 3 | None | 2024–2026 | None | None | 2 |
 | Silverado EV | 3 | None | 2024–2026 | None | None | 2 |
@@ -60,17 +60,17 @@ The independent 2025–2026 live-source comparison is retained separately in
 
 Totals:
 
-- 434 catalog model-years.
-- 55 model-years with complete reviewed charts.
-- 71 model-years with qualified regular palettes and 3 with qualified
+- 434 catalog model years.
+- 65 model years with complete reviewed charts.
+- 219 model years with qualified regular palettes and 3 with qualified
   historical tables.
-- 19 model-years represented only by a reviewed specialty subset.
-- 4 model-years whose inspected source had no governing color chart.
-- 282 unreviewed model-years.
-- 1,811 published availability rows.
-- 46 archived Commons originals and 46 archived previews for current
+- 2 model years represented only by a reviewed specialty subset.
+- 4 model years whose inspected source had no governing color chart.
+- 141 unreviewed model years, all before 2008.
+- 3,336 published availability rows.
+- 54 archived Commons originals and 54 archived previews for current
   nameplates.
-- 1 current-model photo-to-color link visually reviewed as a qualified example;
+- 9 current model photo to color links visually reviewed as qualified examples;
   factory paint remains unverified.
 
 ## Live Order Guide reconciliation
@@ -184,10 +184,10 @@ therefore records `official_event_roster_plus_exact_file_caption` as the basis.
 This does not turn a generic BrightDrop photograph into paint evidence, and the
 official 2026 GM Fleet Guide remains the dimensional and silhouette reference.
 
-### August 4 Commons refresh
+### August 7 Commons refresh
 
-The release manifest now has 46 archived candidates across the 18 current
-nameplates and one qualified current-model photo-to-color link. The full identity
+The release manifest now has 54 archived candidates across the 18 current
+nameplates and nine qualified current model photo to color links. The full identity
 evidence ledger is
 [`current-model-commons-photo-audit.json`](../data/photos/current-model-commons-photo-audit.json).
 The separate color-link evidence is in
@@ -216,13 +216,19 @@ was visually reviewed as a clear complete-vehicle example. The association is
 still marked `factory_paint_match_status = unverified`. A photograph and its
 caption do not prove original factory finish.
 
-Eight additional exact-label Commons leads are queued in
+Eight additional exact label Commons leads were completed from
 [`current-model-color-photo-crawl-queue.json`](../data/photos/current-model-color-photo-crawl-queue.json):
 four 2024 Trax views, three 2024 Colorado views, and one 2025 Traverse view.
-The queue preserves multiple views for Trax Summit White and Colorado Nitro
-Yellow Metallic. No bytes were fetched or published because the configured VPS
-had 32.28 GiB and 18 percent free at preflight, below the project floors of
-40 GiB and 20 percent, and no dedicated Chevrolet crawler state was present.
+The published set preserves multiple views for Trax Summit White and Colorado
+Nitro Yellow Metallic. Every original matched the Commons SHA-1 and local
+SHA-256, every preview was visually reviewed, and all 16 Release assets matched
+GitHub's reported size and a fresh downloaded SHA-256. The exact VPS original,
+preview, and verification payloads were deleted after verification. The complete
+Commons API response, visual review, and Release receipt are retained in
+[`current-model-color-photo-review.json`](../data/photos/current-model-color-photo-review.json),
+[`current-model-color-photo-release-verification.json`](../data/photos/current-model-color-photo-release-verification.json),
+and
+[`current-model-color-photo-commons-api-2026-08-07.json`](../data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json).
 Philippine-market Jinx Metallic, Sharkskin Metallic, and Crimson Metallic leads
 remain rejected or unresolved for the U.S. archive rather than being joined by
 name alone.

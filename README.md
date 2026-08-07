@@ -307,11 +307,13 @@ publishes 357 exact 2025-2026 Tahoe, Suburban, Express, Silverado HD, Colorado,
 and Blazer EV rows without inferring adjacent configurations or splitting the
 combined Tahoe Police Package and Special Service entry.
 
-The Wikimedia Commons archive contains 304 audited originals across 141 models,
-plus 304 web previews. Both forms are stored under the pinned GitHub Release tag
+The Wikimedia Commons archive contains 312 audited originals across 141 models,
+plus 312 web previews. Both forms are stored under the pinned GitHub Release tag
 `photo-archive-v1`; the application does not serve Wikimedia hotlinks. Each
 photo card links the Commons source, license, and archived original. Photographs
-remain illustrations only and never establish factory paint availability.
+remain illustrations only and never establish factory paint availability. Nine
+current model examples have exact model year and palette label links, but their
+original factory finish and paint codes remain unverified.
 
 The pinned `brochure-source-archive-v1` Release preserves 174 audited assets,
 including 148 PDFs totaling 1,565,404,205 bytes and 11,600 pages. Of those, 143

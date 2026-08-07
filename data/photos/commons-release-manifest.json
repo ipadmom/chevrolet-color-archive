@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "archive": "Chevrolet Color Archive",
-  "generated_at": "2026-08-04T11:22:23.340Z",
+  "generated_at": "2026-08-07T19:45:35.772432Z",
   "scope": {
     "market": "United States",
     "catalog_models_available": 149,
@@ -157,25 +157,25 @@
     "finished_at": "2026-07-21T04:34:49.876Z",
     "api_requests": 232,
     "api_errors": 0,
-    "unique_assets_selected": 304,
+    "unique_assets_selected": 312,
     "assets_downloaded": 14,
     "assets_reused": 272,
-    "staged_asset_count": 304,
-    "staged_total_bytes": 926922586,
+    "staged_asset_count": 312,
+    "staged_total_bytes": 974291260,
     "staged_directory": "tmp/commons-release-assets",
     "assets_excluded_by_quality_audit": 9,
     "model_associations_corrected": 12,
     "preview_assets": {
       "started_at": "2026-08-04T11:22:27.821Z",
-      "finished_at": "2026-08-04T11:24:16.888Z",
-      "input_asset_count": 304,
-      "generated_asset_count": 1,
+      "finished_at": "2026-08-07T19:45:35.772432Z",
+      "input_asset_count": 312,
+      "generated_asset_count": 9,
       "reused_asset_count": 303,
-      "verified_original_count": 304,
-      "original_total_bytes": 926922586,
-      "preview_total_bytes": 60732668,
-      "bytes_saved": 866189918,
-      "percent_reduction": 93.45,
+      "verified_original_count": 312,
+      "original_total_bytes": 974291260,
+      "preview_total_bytes": 62381306,
+      "bytes_saved": 911909954,
+      "percent_reduction": 93.6,
       "staged_directory": "tmp/commons-release-previews",
       "release_owner": "ipadmom",
       "release_repository": "chevrolet-color-archive",
@@ -6463,7 +6463,10 @@
       "exact_year_candidates": [],
       "asset_ids": [
         "commons-sha1-bb2a53f0f80eaae62ed9",
-        "commons-sha1-cc6a863d2f20279f66a8"
+        "commons-sha1-cc6a863d2f20279f66a8",
+        "commons-sha1-a45a00eb9fa6720c0f01",
+        "commons-sha1-f56d03acddd5d152e088",
+        "commons-sha1-a72be27d15b04d1ded9e"
       ]
     },
     {
@@ -6570,7 +6573,8 @@
       "exact_year_candidates": [],
       "asset_ids": [
         "commons-sha1-bdaeb9bdcfe365c5959e",
-        "commons-sha1-dd462dbcaca2c80421f3"
+        "commons-sha1-dd462dbcaca2c80421f3",
+        "commons-sha1-12c6e5a52ce1f1c805cc"
       ]
     },
     {
@@ -6684,7 +6688,11 @@
       "exact_year_candidates": [],
       "asset_ids": [
         "commons-sha1-e02eb8861478e32c7ba2",
-        "commons-sha1-a6c520ac60a531c71e18"
+        "commons-sha1-a6c520ac60a531c71e18",
+        "commons-sha1-57169b50941b575f71fc",
+        "commons-sha1-c993574a655f320cfefb",
+        "commons-sha1-ec436c9d96c84018dd28",
+        "commons-sha1-20621cbb4ea92b9964de"
       ]
     },
     {
@@ -25149,6 +25157,598 @@
       "preview_local_path": "tmp/commons-release-previews/preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
       "preview_release_asset_name": "preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp",
       "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-0389a3d594263d394933-56ced33e59c54a94.webp"
+    },
+    {
+      "candidate_id": "commons-sha1-57169b50941b575f71fc",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "trax"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Trax",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/2024_Chevrolet_Trax_2RS%2C_front_left%2C_12-10-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2023-12-10T19:42:09Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Trax 2RS, front left, 12-10-2023 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Trax 2RS photographed in New Castle, Pennsylvania. Finished in Cacti Green.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg"
+      ],
+      "score": 186,
+      "sha256": "ebfb717fcabe8d2f2c551cd2bf0e1725f5ceb4c90a601c45760ff5ce2a4dd36a",
+      "commons_sha1": "57169b50941b575f71fc340e2b86d50284193954",
+      "mime": "image/jpeg",
+      "width": 4484,
+      "height": 2761,
+      "bytes": 7322389,
+      "original_filename": "2024 Chevrolet Trax 2RS, front left, 12-10-2023.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-141995572-57169b50941b-2024-chevrolet-trax-2rs-front-left-12-10-2023.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-141995572-57169b50941b-2024-chevrolet-trax-2rs-front-left-12-10-2023.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-57169b50941b575f71fc-01ee0696892c8e7a.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-141995572-57169b50941b-2024-chevrolet-trax-2rs-front-left-12-10-2023.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "01ee0696892c8e7ab2c72428d9f601994716255baa960fe2d3f695afe91bcdb3",
+      "preview_bytes": 218926,
+      "preview_width": 1600,
+      "preview_height": 985,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-57169b50941b575f71fc-01ee0696892c8e7a.webp",
+      "preview_release_asset_name": "preview-commons-sha1-57169b50941b575f71fc-01ee0696892c8e7a.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-57169b50941b575f71fc-01ee0696892c8e7a.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "trax",
+          "exact_year": 2024,
+          "color_id": "trax-cacti-green-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Cacti Green. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-trax-cacti-green-front-left",
+          "vehicle_group": "2024-trax-cacti-green-2rs-pa-2023-12-10",
+          "view": "front left"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-c993574a655f320cfefb",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "trax"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Trax",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/2024_Chevrolet_Trax_LS%2C_front_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2024-06-03T19:33:40Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Trax LS, front right, 05-26-2024 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Trax LS photographed in New Castle, Pennsylvania. Finished in Summit White.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg"
+      ],
+      "score": 186,
+      "sha256": "9d7705547bb90ad3efa9321156b723153d1e9481ff33ca63c2e601e3d7c2aaa4",
+      "commons_sha1": "c993574a655f320cfefb6c189841b43be7c6d9ce",
+      "mime": "image/jpeg",
+      "width": 4251,
+      "height": 3063,
+      "bytes": 7359085,
+      "original_filename": "2024 Chevrolet Trax LS, front right, 05-26-2024.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-149046249-c993574a655f-2024-chevrolet-trax-ls-front-right-05-26-2024.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-149046249-c993574a655f-2024-chevrolet-trax-ls-front-right-05-26-2024.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-c993574a655f320cfefb-8b4ded51c838bf8f.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-149046249-c993574a655f-2024-chevrolet-trax-ls-front-right-05-26-2024.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "8b4ded51c838bf8f97768b533694508d314dbe4f853201394e1a7ce703e3cb60",
+      "preview_bytes": 284626,
+      "preview_width": 1600,
+      "preview_height": 1153,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-c993574a655f320cfefb-8b4ded51c838bf8f.webp",
+      "preview_release_asset_name": "preview-commons-sha1-c993574a655f320cfefb-8b4ded51c838bf8f.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-c993574a655f320cfefb-8b4ded51c838bf8f.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "trax",
+          "exact_year": 2024,
+          "color_id": "trax-summit-white-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Summit White. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-trax-summit-white-front-right",
+          "vehicle_group": "2024-trax-summit-white-ls-pa-2024-05-26",
+          "view": "front right"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-ec436c9d96c84018dd28",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "trax"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Trax",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/2024_Chevrolet_Trax_LS%2C_rear_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2024-06-03T19:33:44Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Trax LS, rear right, 05-26-2024 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Trax LS photographed in New Castle, Pennsylvania. Finished in Summit White.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg"
+      ],
+      "score": 186,
+      "sha256": "47692d3b8068ee37343ee6cb33710f780fbc73961637e05ce0843a497c2f5313",
+      "commons_sha1": "ec436c9d96c84018dd285afcd547fe9c1dda47be",
+      "mime": "image/jpeg",
+      "width": 4697,
+      "height": 3186,
+      "bytes": 3179712,
+      "original_filename": "2024 Chevrolet Trax LS, rear right, 05-26-2024.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-149046252-ec436c9d96c8-2024-chevrolet-trax-ls-rear-right-05-26-2024.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-149046252-ec436c9d96c8-2024-chevrolet-trax-ls-rear-right-05-26-2024.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-ec436c9d96c84018dd28-60bb85bdb58eba13.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-149046252-ec436c9d96c8-2024-chevrolet-trax-ls-rear-right-05-26-2024.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "60bb85bdb58eba13768ac02419ad2932ba97df1173993957bb0c2abdd4427ca8",
+      "preview_bytes": 229334,
+      "preview_width": 1600,
+      "preview_height": 1085,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-ec436c9d96c84018dd28-60bb85bdb58eba13.webp",
+      "preview_release_asset_name": "preview-commons-sha1-ec436c9d96c84018dd28-60bb85bdb58eba13.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-ec436c9d96c84018dd28-60bb85bdb58eba13.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "trax",
+          "exact_year": 2024,
+          "color_id": "trax-summit-white-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Summit White. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-trax-summit-white-rear-right",
+          "vehicle_group": "2024-trax-summit-white-ls-pa-2024-05-26",
+          "view": "rear right"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-20621cbb4ea92b9964de",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "trax"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Trax",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2024_Chevrolet_Trax_ACTIV%2C_rear_left%2C_07-12-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2023-07-12T21:05:32Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Trax ACTIV, rear left, 07-12-2023 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Trax ACTIV photographed in New Castle, Pennsylvania. Finished in Crimson Metallic.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg"
+      ],
+      "score": 186,
+      "sha256": "9b6beb15fa1eb82fd05560d5c48e3d3367d145b5396ca862873220585af1b762",
+      "commons_sha1": "20621cbb4ea92b9964de0cf37f7796eece061c51",
+      "mime": "image/jpeg",
+      "width": 4814,
+      "height": 2778,
+      "bytes": 2441134,
+      "original_filename": "2024 Chevrolet Trax ACTIV, rear left, 07-12-2023.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-134333596-20621cbb4ea9-2024-chevrolet-trax-activ-rear-left-07-12-2023.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-134333596-20621cbb4ea9-2024-chevrolet-trax-activ-rear-left-07-12-2023.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-20621cbb4ea92b9964de-7be84cf7a5e0f087.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-134333596-20621cbb4ea9-2024-chevrolet-trax-activ-rear-left-07-12-2023.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "7be84cf7a5e0f087b67487c9130eede83ca2a247962140c032eab4c70106d509",
+      "preview_bytes": 128200,
+      "preview_width": 1600,
+      "preview_height": 923,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-20621cbb4ea92b9964de-7be84cf7a5e0f087.webp",
+      "preview_release_asset_name": "preview-commons-sha1-20621cbb4ea92b9964de-7be84cf7a5e0f087.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-20621cbb4ea92b9964de-7be84cf7a5e0f087.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "trax",
+          "exact_year": 2024,
+          "color_id": "trax-crimson-metallic-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Crimson Metallic. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-trax-crimson-metallic-rear-left",
+          "vehicle_group": "2024-trax-crimson-metallic-activ-pa-2023-07-12",
+          "view": "rear left"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-a45a00eb9fa6720c0f01",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "colorado"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Colorado",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Chevrolet_Colorado_ZR2%2C_front_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2024-07-18T20:20:38Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Colorado ZR2, front right, 07-18-2024 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Colorado ZR2 photographed in Hermitage, Pennsylvania. Finished in Nitro Yellow Metallic.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg"
+      ],
+      "score": 186,
+      "sha256": "7de1e4de7ba5e0c0b48ca23bfbe75964b8f26afedeef7c46a55a60c2410549de",
+      "commons_sha1": "a45a00eb9fa6720c0f01528d2e1eda012ea025ee",
+      "mime": "image/jpeg",
+      "width": 4680,
+      "height": 3616,
+      "bytes": 8512147,
+      "original_filename": "2024 Chevrolet Colorado ZR2, front right, 07-18-2024.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-150483021-a45a00eb9fa6-2024-chevrolet-colorado-zr2-front-right-07-18-2024.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-150483021-a45a00eb9fa6-2024-chevrolet-colorado-zr2-front-right-07-18-2024.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-a45a00eb9fa6720c0f01-5422477eb2bf96f8.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-150483021-a45a00eb9fa6-2024-chevrolet-colorado-zr2-front-right-07-18-2024.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "5422477eb2bf96f8e7038325c2c6dd6d549e0ee27226a46c4fec01dc45c6afcc",
+      "preview_bytes": 178270,
+      "preview_width": 1553,
+      "preview_height": 1200,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-a45a00eb9fa6720c0f01-5422477eb2bf96f8.webp",
+      "preview_release_asset_name": "preview-commons-sha1-a45a00eb9fa6720c0f01-5422477eb2bf96f8.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-a45a00eb9fa6720c0f01-5422477eb2bf96f8.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "colorado",
+          "exact_year": 2024,
+          "color_id": "colorado-nitro-yellow-metallic-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Nitro Yellow Metallic. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-colorado-nitro-yellow-front-right",
+          "vehicle_group": "2024-colorado-nitro-yellow-zr2-pa-2024-07-18",
+          "view": "front right"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-f56d03acddd5d152e088",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "colorado"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Colorado",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/2024_Chevrolet_Colorado_ZR2%2C_rear_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2024-07-18T20:20:47Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Colorado ZR2, rear right, 07-18-2024 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Colorado ZR2 photographed in Hermitage, Pennsylvania. Finished in Nitro Yellow Metallic.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg"
+      ],
+      "score": 186,
+      "sha256": "9729c21470fe3cfcb3999bc785b216021dcce4ac4ef64588c21e0ce5a32d4977",
+      "commons_sha1": "f56d03acddd5d152e088e0635ce0d08b6df3eb79",
+      "mime": "image/jpeg",
+      "width": 4777,
+      "height": 3197,
+      "bytes": 2335584,
+      "original_filename": "2024 Chevrolet Colorado ZR2, rear right, 07-18-2024.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-150483029-f56d03acddd5-2024-chevrolet-colorado-zr2-rear-right-07-18-2024.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-150483029-f56d03acddd5-2024-chevrolet-colorado-zr2-rear-right-07-18-2024.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-f56d03acddd5d152e088-6af41a8335a910d9.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-150483029-f56d03acddd5-2024-chevrolet-colorado-zr2-rear-right-07-18-2024.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "6af41a8335a910d980eb1c5d89df56ac920f8099cfab63aac9e08c6fb02ac8f5",
+      "preview_bytes": 143402,
+      "preview_width": 1600,
+      "preview_height": 1071,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-f56d03acddd5d152e088-6af41a8335a910d9.webp",
+      "preview_release_asset_name": "preview-commons-sha1-f56d03acddd5d152e088-6af41a8335a910d9.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-f56d03acddd5d152e088-6af41a8335a910d9.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "colorado",
+          "exact_year": 2024,
+          "color_id": "colorado-nitro-yellow-metallic-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Nitro Yellow Metallic. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-colorado-nitro-yellow-rear-right",
+          "vehicle_group": "2024-colorado-nitro-yellow-zr2-pa-2024-07-18",
+          "view": "rear right"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-a72be27d15b04d1ded9e",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "colorado"
+      ],
+      "explicit_year": 2024,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2024 Chevrolet Colorado",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/2024_Chevrolet_Colorado_Z71%2C_front_left%2C_09-28-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2024-09-29T02:22:13Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2024 Chevrolet Colorado Z71, front left, 09-28-2024 - CC BY-SA 4.0",
+      "description": "2024 Chevrolet Colorado Z71 photographed in Ellwood City, Pennsylvania. Finished in Summit White.",
+      "model_queries": [
+        "exact Commons page title: File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg"
+      ],
+      "score": 186,
+      "sha256": "be37c800aebf854104f70e1bd8cd9458bc4a882e54c46e437d9855f9448cfd37",
+      "commons_sha1": "a72be27d15b04d1ded9eb91d3fa1d5eb1b7776da",
+      "mime": "image/jpeg",
+      "width": 4276,
+      "height": 3058,
+      "bytes": 6434588,
+      "original_filename": "2024 Chevrolet Colorado Z71, front left, 09-28-2024.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-153301744-a72be27d15b0-2024-chevrolet-colorado-z71-front-left-09-28-2024.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-153301744-a72be27d15b0-2024-chevrolet-colorado-z71-front-left-09-28-2024.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-a72be27d15b04d1ded9e-3bf5e60ba7a84e94.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-153301744-a72be27d15b0-2024-chevrolet-colorado-z71-front-left-09-28-2024.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "3bf5e60ba7a84e940bec798777807c310a5b62c1fa5812cac7634d538cb403a1",
+      "preview_bytes": 156286,
+      "preview_width": 1600,
+      "preview_height": 1144,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-a72be27d15b04d1ded9e-3bf5e60ba7a84e94.webp",
+      "preview_release_asset_name": "preview-commons-sha1-a72be27d15b04d1ded9e-3bf5e60ba7a84e94.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-a72be27d15b04d1ded9e-3bf5e60ba7a84e94.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "colorado",
+          "exact_year": 2024,
+          "color_id": "colorado-summit-white-2024-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2024 vehicle as finished in Summit White. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-gm-fleet-guide-v3-mirror.pdf"
+          ],
+          "queue_candidate_key": "2024-colorado-summit-white-front-left",
+          "vehicle_group": "2024-colorado-summit-white-z71-pa-2024-09-28",
+          "view": "front left"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
+    },
+    {
+      "candidate_id": "commons-sha1-12c6e5a52ce1f1c805cc",
+      "status": "unreviewed_candidate",
+      "selection_kinds": [
+        "reviewed_color_caption"
+      ],
+      "model_ids": [
+        "traverse"
+      ],
+      "explicit_year": 2025,
+      "explicit_year_source": "title",
+      "explicit_year_evidence": "2025 Chevrolet Traverse",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+      "source_original_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/2025_Chevrolet_Traverse_Z71%2C_front_left%2C_09-06-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_timestamp": "2025-09-07T01:13:47Z",
+      "author": "MercurySable99",
+      "author_raw_html": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+      "credit": "Own work",
+      "credit_raw_html": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "license": "CC BY-SA 4.0",
+      "license_family": "CC-BY-SA",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_url_source": "commons-extmetadata",
+      "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+      "attribution_required": true,
+      "attribution": "MercurySable99 - 2025 Chevrolet Traverse Z71, front left, 09-06-2025 - CC BY-SA 4.0",
+      "description": "2025 Chevrolet Traverse Z71 photographed in New Brighton, Pennsylvania. Finished in Mosaic Black Metallic.",
+      "model_queries": [
+        "exact Commons page title: File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg"
+      ],
+      "score": 186,
+      "sha256": "f407f7fda71f5602ba8b52b6a4326e94791dcd785f0b62f77c645ec620af2edc",
+      "commons_sha1": "12c6e5a52ce1f1c805ccb2957af96502c4a58e7b",
+      "mime": "image/jpeg",
+      "width": 4251,
+      "height": 3200,
+      "bytes": 9784035,
+      "original_filename": "2025 Chevrolet Traverse Z71, front left, 09-06-2025.jpg",
+      "release_tag": "photo-archive-v1",
+      "release_asset_name": "commons-174552082-12c6e5a52ce1-2025-chevrolet-traverse-z71-front-left-09-06-2025.jpg",
+      "release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-174552082-12c6e5a52ce1-2025-chevrolet-traverse-z71-front-left-09-06-2025.jpg",
+      "site_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-12c6e5a52ce1f1c805cc-d186d1aeb0f5300b.webp",
+      "local_path": "tmp/current-model-color-photo-review/originals/commons-174552082-12c6e5a52ce1-2025-chevrolet-traverse-z71-front-left-09-06-2025.jpg",
+      "commons_raw_record_paths": [
+        "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json"
+      ],
+      "preview_sha256": "d186d1aeb0f5300b8e319aedcd6a4dad5261a09ea7990c01304ee3e60f0d3732",
+      "preview_bytes": 309594,
+      "preview_width": 1594,
+      "preview_height": 1200,
+      "preview_mime": "image/webp",
+      "preview_local_path": "tmp/current-model-color-photo-review/previews/preview-commons-sha1-12c6e5a52ce1f1c805cc-d186d1aeb0f5300b.webp",
+      "preview_release_asset_name": "preview-commons-sha1-12c6e5a52ce1f1c805cc-d186d1aeb0f5300b.webp",
+      "preview_release_asset_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-12c6e5a52ce1f1c805cc-d186d1aeb0f5300b.webp",
+      "selection_contexts": [
+        {
+          "kind": "reviewed_color_caption",
+          "model_id": "traverse",
+          "exact_year": 2025,
+          "color_id": "traverse-mosaic-black-metallic-2025-gm-fleet-guide",
+          "legacy_prior_status": "reviewed",
+          "legacy_note": "Commons identifies this exact 2025 vehicle as finished in Mosaic Black Metallic. The retained photograph was visually reviewed as a color example; factory-paint identity remains unverified.",
+          "evidence_source_urls": [
+            "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+            "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-fleet-guide-r2024-12-11.pdf"
+          ],
+          "queue_candidate_key": "2025-traverse-mosaic-black-front-left",
+          "vehicle_group": "2025-traverse-mosaic-black-z71-pa-2025-09-06",
+          "view": "front left"
+        }
+      ],
+      "visual_review_report": "data/photos/current-model-color-photo-review.json",
+      "release_verification_report": "data/photos/current-model-color-photo-release-verification.json"
     }
   ],
   "quality_audit": {
@@ -25203,5 +25803,15 @@
     ],
     "visual_review_completed": true,
     "release_upload_performed": true
+  },
+  "current_model_color_photo_batch": {
+    "visual_review_report": "data/photos/current-model-color-photo-review.json",
+    "release_verification_report": "data/photos/current-model-color-photo-release-verification.json",
+    "complete_commons_api_response": "data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json",
+    "applied_at": "2026-08-07T19:45:35.772432Z",
+    "selected_asset_count": 8,
+    "release_asset_count": 16,
+    "release_upload_verified": true,
+    "vps_photo_payload_deleted": true
   }
 }

@@ -309,13 +309,13 @@ The live schema is versioned by the canonical tracked Parquet manifest. These ro
 | secondary_paint_fitments.parquet | 111 | fitment_id |
 | color_code_crosswalk_candidates.parquet | 96 | candidate_id |
 | supplemental_color_mentions.parquet | 0 | supplemental_mention_id |
-| sources.parquet | 3009 | source_id |
-| source_revisions.parquet | 1933 | source_revision_id |
+| sources.parquet | 3033 | source_id |
+| source_revisions.parquet | 1957 | source_revision_id |
 | evidence_claims.parquet | 5403 | evidence_claim_id |
-| source_links.parquet | 39653 | source_link_id |
-| photo_assets.parquet | 304 | photo_id |
-| model_photo_links.parquet | 307 | model_photo_link_id |
-| photo_color_links.parquet | 6 | photo_color_link_id |
+| source_links.parquet | 39853 | source_link_id |
+| photo_assets.parquet | 312 | photo_id |
+| model_photo_links.parquet | 315 | model_photo_link_id |
+| photo_color_links.parquet | 14 | photo_color_link_id |
 
 Audit-state enum: `verified_complete`, `reviewed_qualified_historical_table`, `reviewed_qualified_palette_union`, `reviewed_specialty_palette_subset`, `source_reviewed_no_color_chart_found`, `source_located_chart_unreviewed`, `unreviewed`, `rejected`, `superseded`.
 

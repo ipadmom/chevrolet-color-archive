@@ -1,0 +1,929 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "normalized": [
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg",
+        "to": "File:2024 Chevrolet Trax 2RS, front left, 12-10-2023.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg",
+        "to": "File:2024 Chevrolet Trax LS, front right, 05-26-2024.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg",
+        "to": "File:2024 Chevrolet Trax LS, rear right, 05-26-2024.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg",
+        "to": "File:2024 Chevrolet Trax ACTIV, rear left, 07-12-2023.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg",
+        "to": "File:2024 Chevrolet Colorado ZR2, front right, 07-18-2024.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg",
+        "to": "File:2024 Chevrolet Colorado ZR2, rear right, 07-18-2024.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg",
+        "to": "File:2024 Chevrolet Colorado Z71, front left, 09-28-2024.jpg"
+      },
+      {
+        "fromencoded": false,
+        "from": "File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+        "to": "File:2025 Chevrolet Traverse Z71, front left, 09-06-2025.jpg"
+      }
+    ],
+    "pages": [
+      {
+        "pageid": 134333596,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Trax ACTIV, rear left, 07-12-2023.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2023-07-12T21:05:32Z",
+            "size": 2441134,
+            "width": 4814,
+            "height": 2778,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2024_Chevrolet_Trax_ACTIV%2C_rear_left%2C_07-12-2023.jpg/1920px-2024_Chevrolet_Trax_ACTIV%2C_rear_left%2C_07-12-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 923,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2024_Chevrolet_Trax_ACTIV%2C_rear_left%2C_07-12-2023.jpg/3840px-2024_Chevrolet_Trax_ACTIV%2C_rear_left%2C_07-12-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2024_Chevrolet_Trax_ACTIV%2C_rear_left%2C_07-12-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=134333596",
+            "sha1": "20621cbb4ea92b9964de0cf37f7796eece061c51",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-07-12 21:05:32",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Trax ACTIV, rear left, 07-12-2023",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|Chevrolet Trax (second generation)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Trax ACTIV photographed in New Castle, Pennsylvania. Finished in Crimson Metallic.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-07-12 13:07:17",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2024-12-16T05:46:50Z",
+        "lastrevid": 970888882,
+        "length": 464,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_ACTIV,_rear_left,_07-12-2023.jpg"
+      },
+      {
+        "pageid": 141995572,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Trax 2RS, front left, 12-10-2023.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2023-12-10T19:42:09Z",
+            "size": 7322389,
+            "width": 4484,
+            "height": 2761,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2024_Chevrolet_Trax_2RS%2C_front_left%2C_12-10-2023.jpg/1920px-2024_Chevrolet_Trax_2RS%2C_front_left%2C_12-10-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 985,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/2024_Chevrolet_Trax_2RS%2C_front_left%2C_12-10-2023.jpg/3840px-2024_Chevrolet_Trax_2RS%2C_front_left%2C_12-10-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/2024_Chevrolet_Trax_2RS%2C_front_left%2C_12-10-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=141995572",
+            "sha1": "57169b50941b575f71fc340e2b86d50284193954",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-12-10 19:42:09",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Trax 2RS, front left, 12-10-2023",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|2024 Chevrolet automobiles|Green Chevrolet SUVs|Chevrolet Trax (second generation)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Trax 2RS photographed in New Castle, Pennsylvania. Finished in Cacti Green.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-12-10 12:42:04",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2024-12-16T05:46:48Z",
+        "lastrevid": 970888872,
+        "length": 442,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_2RS,_front_left,_12-10-2023.jpg"
+      },
+      {
+        "pageid": 149046249,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Trax LS, front right, 05-26-2024.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-06-03T19:33:40Z",
+            "size": 7359085,
+            "width": 4251,
+            "height": 3063,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2024_Chevrolet_Trax_LS%2C_front_right%2C_05-26-2024.jpg/1920px-2024_Chevrolet_Trax_LS%2C_front_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 1153,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2024_Chevrolet_Trax_LS%2C_front_right%2C_05-26-2024.jpg/3840px-2024_Chevrolet_Trax_LS%2C_front_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/2024_Chevrolet_Trax_LS%2C_front_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=149046249",
+            "sha1": "c993574a655f320cfefb6c189841b43be7c6d9ce",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-06-03 19:33:40",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Trax LS, front right, 05-26-2024",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|2024 Chevrolet automobiles|White Chevrolet SUVs|Chevrolet Trax (second generation)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Trax LS photographed in New Castle, Pennsylvania. Finished in Summit White.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-26 12:53:16",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2024-12-16T05:46:51Z",
+        "lastrevid": 970888888,
+        "length": 528,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_front_right,_05-26-2024.jpg"
+      },
+      {
+        "pageid": 149046252,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Trax LS, rear right, 05-26-2024.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-06-03T19:33:44Z",
+            "size": 3179712,
+            "width": 4697,
+            "height": 3186,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2024_Chevrolet_Trax_LS%2C_rear_right%2C_05-26-2024.jpg/1920px-2024_Chevrolet_Trax_LS%2C_rear_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 1085,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2024_Chevrolet_Trax_LS%2C_rear_right%2C_05-26-2024.jpg/3840px-2024_Chevrolet_Trax_LS%2C_rear_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/2024_Chevrolet_Trax_LS%2C_rear_right%2C_05-26-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=149046252",
+            "sha1": "ec436c9d96c84018dd285afcd547fe9c1dda47be",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-06-03 19:33:44",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Trax LS, rear right, 05-26-2024",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|2024 Chevrolet automobiles|White Chevrolet SUVs|Chevrolet Trax (second generation)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Trax LS photographed in New Castle, Pennsylvania. Finished in Summit White.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-26 12:52:55",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2024-12-16T05:46:52Z",
+        "lastrevid": 970888894,
+        "length": 530,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Trax_LS,_rear_right,_05-26-2024.jpg"
+      },
+      {
+        "pageid": 150483021,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Colorado ZR2, front right, 07-18-2024.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-07-18T20:20:38Z",
+            "size": 8512147,
+            "width": 4680,
+            "height": 3616,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2024_Chevrolet_Colorado_ZR2%2C_front_right%2C_07-18-2024.jpg/1920px-2024_Chevrolet_Colorado_ZR2%2C_front_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 1236,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2024_Chevrolet_Colorado_ZR2%2C_front_right%2C_07-18-2024.jpg/3840px-2024_Chevrolet_Colorado_ZR2%2C_front_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Chevrolet_Colorado_ZR2%2C_front_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=150483021",
+            "sha1": "a45a00eb9fa6720c0f01528d2e1eda012ea025ee",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-07-18 20:20:38",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Colorado ZR2, front right, 07-18-2024",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Hermitage, Pennsylvania|Self-published work|Yellow Chevrolet pickup trucks|2024 Chevrolet trucks|Chevrolet Colorado (third generation)|Chevrolet Colorado ZR2",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Colorado ZR2 photographed in Hermitage, Pennsylvania. Finished in Nitro Yellow Metallic.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-07-18 13:44:57",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2025-08-20T16:31:59Z",
+        "lastrevid": 1075547000,
+        "length": 627,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_front_right,_07-18-2024.jpg"
+      },
+      {
+        "pageid": 150483029,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Colorado ZR2, rear right, 07-18-2024.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-07-18T20:20:47Z",
+            "size": 2335584,
+            "width": 4777,
+            "height": 3197,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/2024_Chevrolet_Colorado_ZR2%2C_rear_right%2C_07-18-2024.jpg/1920px-2024_Chevrolet_Colorado_ZR2%2C_rear_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 1071,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/2024_Chevrolet_Colorado_ZR2%2C_rear_right%2C_07-18-2024.jpg/3840px-2024_Chevrolet_Colorado_ZR2%2C_rear_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/2024_Chevrolet_Colorado_ZR2%2C_rear_right%2C_07-18-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=150483029",
+            "sha1": "f56d03acddd5d152e088e0635ce0d08b6df3eb79",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-07-18 20:20:47",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Colorado ZR2, rear right, 07-18-2024",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Hermitage, Pennsylvania|Self-published work|Yellow Chevrolet pickup trucks|2024 Chevrolet trucks|Chevrolet Colorado (third generation)|Chevrolet Colorado ZR2",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Colorado ZR2 photographed in Hermitage, Pennsylvania. Finished in Nitro Yellow Metallic.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-07-18 13:44:37",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2025-08-20T16:31:59Z",
+        "lastrevid": 1075547006,
+        "length": 629,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_ZR2,_rear_right,_07-18-2024.jpg"
+      },
+      {
+        "pageid": 153301744,
+        "ns": 6,
+        "title": "File:2024 Chevrolet Colorado Z71, front left, 09-28-2024.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-09-29T02:22:13Z",
+            "size": 6434588,
+            "width": 4276,
+            "height": 3058,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2024_Chevrolet_Colorado_Z71%2C_front_left%2C_09-28-2024.jpg/1920px-2024_Chevrolet_Colorado_Z71%2C_front_left%2C_09-28-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 1144,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/2024_Chevrolet_Colorado_Z71%2C_front_left%2C_09-28-2024.jpg/3840px-2024_Chevrolet_Colorado_Z71%2C_front_left%2C_09-28-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/2024_Chevrolet_Colorado_Z71%2C_front_left%2C_09-28-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=153301744",
+            "sha1": "a72be27d15b04d1ded9eb91d3fa1d5eb1b7776da",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-09-29 02:22:13",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2024 Chevrolet Colorado Z71, front left, 09-28-2024",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|White Chevrolet pickup trucks|2024 Chevrolet trucks|Chevrolet Colorado (third generation)|Chevrolet Colorado Z71",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2024 Chevrolet Colorado Z71 photographed in Ellwood City, Pennsylvania. Finished in Summit White.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-09-28 11:39:24",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2025-03-21T17:38:12Z",
+        "lastrevid": 1012281758,
+        "length": 492,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2024_Chevrolet_Colorado_Z71,_front_left,_09-28-2024.jpg"
+      },
+      {
+        "pageid": 174552082,
+        "ns": 6,
+        "title": "File:2025 Chevrolet Traverse Z71, front left, 09-06-2025.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2025-09-07T01:13:47Z",
+            "size": 9784035,
+            "width": 4251,
+            "height": 3200,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/2025_Chevrolet_Traverse_Z71%2C_front_left%2C_09-06-2025.jpg/1920px-2025_Chevrolet_Traverse_Z71%2C_front_left%2C_09-06-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1600,
+            "thumbheight": 1204,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/2025_Chevrolet_Traverse_Z71%2C_front_left%2C_09-06-2025.jpg/3840px-2025_Chevrolet_Traverse_Z71%2C_front_left%2C_09-06-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/2025_Chevrolet_Traverse_Z71%2C_front_left%2C_09-06-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=174552082",
+            "sha1": "12c6e5a52ce1f1c805ccb2957af96502c4a58e7b",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2025-09-07 01:13:47",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "2025 Chevrolet Traverse Z71, front left, 09-06-2025",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Self-published work|Black Chevrolet SUVs|2025 Chevrolet automobiles|Chevrolet Z71|Chevrolet Traverse (C1XX-2)|Automobiles in New Brighton, Pennsylvania",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "2025 Chevrolet Traverse Z71 photographed in New Brighton, Pennsylvania. Finished in Mosaic Black Metallic.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2025-09-06 15:28:16",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:MercurySable99\" title=\"User:MercurySable99\">MercurySable99</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ],
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-06-20T11:59:12Z",
+        "lastrevid": 1234689698,
+        "length": 622,
+        "fullurl": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg",
+        "editurl": "https://commons.wikimedia.org/w/index.php?title=File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg&action=edit",
+        "canonicalurl": "https://commons.wikimedia.org/wiki/File:2025_Chevrolet_Traverse_Z71,_front_left,_09-06-2025.jpg"
+      }
+    ]
+  }
+}

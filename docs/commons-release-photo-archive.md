@@ -26,9 +26,14 @@ URLs.
 
 - Crawler: `scripts/crawl-wikimedia-release-photos.mjs`
 - Exact-title gap supplement runner: `scripts/apply-commons-gap-supplement.mjs`
+- Current color candidate stager: `scripts/stage-current-model-color-photo-queue.mjs`
+- Current color batch integrator: `scripts/apply-current-model-color-photo-batch.mjs`
 - Gap review-sheet builder: `scripts/build-commons-gap-review-sheets.mjs`
 - Review manifest: `data/photos/commons-release-manifest.json`
-- Current immutable release ledger: [commons-release-manifest-304.json](https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-release-manifest-304.json)
+- Current immutable release ledger: [commons-release-manifest-312.json](https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-release-manifest-312.json)
+- Current color visual review: `data/photos/current-model-color-photo-review.json`
+- Current color Release receipt: `data/photos/current-model-color-photo-release-verification.json`
+- Complete retained current color API response: `data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json`
 - Association audit: `data/photos/commons-candidate-audit.json`
 - Exact-identity gap audit: `data/photos/commons-gap-supplement.json`
 - Ignored binary staging: `tmp/commons-release-assets/`
@@ -240,10 +245,10 @@ evidence.
 The current manifest therefore contains:
 
 - 141 models with at least one audited representative;
-- 304 exact Commons originals totaling 926,922,586 bytes;
-- 297 JPEG files and 7 PNG files;
-- 140 CC BY-SA, 74 CC BY, 75 public-domain, and 15 CC0 assets; and
-- 304 WebP site previews totaling 60,732,668 bytes, a 93.45 percent delivery
+- 312 exact Commons originals totaling 974,291,260 bytes;
+- 305 JPEG files and 7 PNG files;
+- 148 CC BY-SA, 74 CC BY, 75 public-domain, and 15 CC0 assets; and
+- 312 WebP site previews totaling 62,381,306 bytes, a 93.60 percent delivery
   reduction while preserving every original.
 
 Eight identities remain empty because no strong exact photograph survived the
@@ -252,19 +257,25 @@ same gate: Series F, Copper-Cooled, Malibu Limited, Malibu Classic (2008), Chevy
 not fill them with siblings,
 generic generation photos, illustrations, detail images, or reused names.
 
-Every selected local file was rehashed after staging. All 304 original byte
+Every selected local file was rehashed after staging. All 312 original byte
 lengths and SHA-256 values match the final manifest. The preview build also
 reverified every original before encoding. All original and preview asset names
 and candidate IDs are unique, all five legacy references resolve, and no
 `site_asset_url` points to Wikimedia.
 
-An earlier throttled attempt, the nine first-audit exclusions, and four new
-visual-review rejections leave 20 unreferenced originals in the ignored staging
-directory. They remain for reproducibility and are not part of the manifest.
-The live Release was then enumerated through the GitHub API. All 606 expected
-photo assets were present with exact byte counts and matching SHA-256 digests;
-the Release contains three immutable attribution-ledger snapshots, for 611
-assets total. The current 304-photo ledger is 1,233,351 bytes with SHA-256
-`b36aef2481dfd444b3eb7dac842ed1fbb8d866bb83a731f9592f6daae0c142f2`.
-The two earlier ledgers remain untouched. The application may therefore use
+The August 7 current color batch was fetched through the configured VPS. Its
+eight originals matched the Commons SHA-1 and local SHA-256, and its eight WebP
+previews passed visual review. GitHub reported the expected byte count for all
+16 files, and a fresh download of each file matched its SHA-256. The exact VPS
+original, preview, and verification copies were deleted immediately after each
+verification passed. The complete API response and verification receipt remain
+tracked with the audit.
+
+The live Release was then enumerated through the GitHub API. All 624 expected
+photo assets were present with exact byte counts and matching SHA-256 digests.
+With the new immutable attribution ledger, the Release contains four ledger
+snapshots and 628 assets total. The current 312-photo ledger is 1,272,301 bytes
+with SHA-256
+`6a0b37df5377c6fe1856b866a6c8a9d7ed367dac4f4572584e7ebb59f1f47873`.
+The three earlier ledgers remain untouched. The application may therefore use
 the pinned URLs in the current manifest.

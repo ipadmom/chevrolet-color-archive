@@ -22,7 +22,7 @@ const modern = JSON.parse(
 );
 
 test("current-model color-photo queue verifies Release bytes and deletes VPS payloads", () => {
-  assert.equal(queue.schema_version, 2);
+  assert.equal(queue.schema_version, 3);
   assert.equal(queue.vps_transfer_policy.persistent_vps_payload, false);
   assert.match(queue.vps_transfer_policy.verification, /byte length and SHA-256/);
   assert.match(queue.vps_transfer_policy.cleanup, /Delete the exact VPS staging/);
@@ -33,17 +33,22 @@ test("current-model color-photo queue verifies Release bytes and deletes VPS pay
   );
 });
 
-test("queued Commons captions match exact reviewed U.S. palette labels", () => {
+test("published Commons captions match exact reviewed U.S. palette labels", () => {
   assert.equal(queue.policy.adjacent_year_inference, false);
   assert.match(queue.policy.factory_paint_boundary, /does not prove original factory finish/);
-  assert.ok(queue.queued_candidates.length >= 8);
+  assert.equal(queue.queued_candidates.length, 0);
+  assert.equal(queue.published_candidates.length, 8);
 
   const keys = new Set();
-  for (const candidate of queue.queued_candidates) {
+  for (const candidate of queue.published_candidates) {
     assert.ok(!keys.has(candidate.candidate_key));
     keys.add(candidate.candidate_key);
     assert.match(candidate.source_page_url, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
-    assert.match(candidate.review_state, /^metadata_match_pending_/);
+    assert.equal(candidate.visual_review_status, "reviewed");
+    assert.equal(candidate.factory_paint_match_status, "unverified");
+    assert.equal(candidate.release_verification_status, "verified");
+    assert.equal(candidate.vps_payload_cleanup_status, "verified_deleted");
+    assert.match(candidate.candidate_id, /^commons-sha1-[a-f0-9]{20}$/);
     assert.match(candidate.metadata_evidence, new RegExp(`Finished in ${candidate.color_label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\.$`));
 
     const palette = modern.verified_palette_tables.find(

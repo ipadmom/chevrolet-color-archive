@@ -5475,7 +5475,7 @@
           "source_id"
         ],
         "foreign_keys": {},
-        "tracked_manifest_rows": 3009
+        "tracked_manifest_rows": 3033
       },
       {
         "name": "source_revisions.parquet",
@@ -5485,7 +5485,7 @@
         "foreign_keys": {
           "source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 1933
+        "tracked_manifest_rows": 1957
       },
       {
         "name": "evidence_claims.parquet",
@@ -5509,7 +5509,7 @@
         "foreign_keys": {
           "source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 39653
+        "tracked_manifest_rows": 39853
       },
       {
         "name": "photo_assets.parquet",
@@ -5522,7 +5522,7 @@
           "archive_source_id": "sources.source_id",
           "preview_archive_source_id": "sources.source_id"
         },
-        "tracked_manifest_rows": 304
+        "tracked_manifest_rows": 312
       },
       {
         "name": "model_photo_links.parquet",
@@ -5533,7 +5533,7 @@
           "photo_id": "photo_assets.photo_id",
           "model_id": "models.model_id"
         },
-        "tracked_manifest_rows": 307
+        "tracked_manifest_rows": 315
       },
       {
         "name": "photo_color_links.parquet",
@@ -5545,7 +5545,7 @@
           "model_id": "models.model_id",
           "color_identity_id": "color_identities.color_identity_id"
         },
-        "tracked_manifest_rows": 6
+        "tracked_manifest_rows": 14
       }
     ],
     "audit_state_enum": [

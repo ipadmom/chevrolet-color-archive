@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-08-07T19:45:35.772432Z",
+  "github_account": "ipadmom",
+  "repository": "ipadmom/chevrolet-color-archive",
+  "release_tag": "photo-archive-v1",
+  "asset_count": 16,
+  "assets": [
+    {
+      "asset_name": "commons-141995572-57169b50941b-2024-chevrolet-trax-2rs-front-left-12-10-2023.jpg",
+      "bytes": 7322389,
+      "candidate_id": "commons-sha1-57169b50941b575f71fc",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-141995572-57169b50941b-2024-chevrolet-trax-2rs-front-left-12-10-2023.jpg",
+      "sha256": "ebfb717fcabe8d2f2c551cd2bf0e1725f5ceb4c90a601c45760ff5ce2a4dd36a",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-57169b50941b575f71fc-01ee0696892c8e7a.webp",
+      "bytes": 218926,
+      "candidate_id": "commons-sha1-57169b50941b575f71fc",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-57169b50941b575f71fc-01ee0696892c8e7a.webp",
+      "sha256": "01ee0696892c8e7ab2c72428d9f601994716255baa960fe2d3f695afe91bcdb3",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-149046249-c993574a655f-2024-chevrolet-trax-ls-front-right-05-26-2024.jpg",
+      "bytes": 7359085,
+      "candidate_id": "commons-sha1-c993574a655f320cfefb",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-149046249-c993574a655f-2024-chevrolet-trax-ls-front-right-05-26-2024.jpg",
+      "sha256": "9d7705547bb90ad3efa9321156b723153d1e9481ff33ca63c2e601e3d7c2aaa4",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-c993574a655f320cfefb-8b4ded51c838bf8f.webp",
+      "bytes": 284626,
+      "candidate_id": "commons-sha1-c993574a655f320cfefb",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-c993574a655f320cfefb-8b4ded51c838bf8f.webp",
+      "sha256": "8b4ded51c838bf8f97768b533694508d314dbe4f853201394e1a7ce703e3cb60",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-149046252-ec436c9d96c8-2024-chevrolet-trax-ls-rear-right-05-26-2024.jpg",
+      "bytes": 3179712,
+      "candidate_id": "commons-sha1-ec436c9d96c84018dd28",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-149046252-ec436c9d96c8-2024-chevrolet-trax-ls-rear-right-05-26-2024.jpg",
+      "sha256": "47692d3b8068ee37343ee6cb33710f780fbc73961637e05ce0843a497c2f5313",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-ec436c9d96c84018dd28-60bb85bdb58eba13.webp",
+      "bytes": 229334,
+      "candidate_id": "commons-sha1-ec436c9d96c84018dd28",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-ec436c9d96c84018dd28-60bb85bdb58eba13.webp",
+      "sha256": "60bb85bdb58eba13768ac02419ad2932ba97df1173993957bb0c2abdd4427ca8",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-134333596-20621cbb4ea9-2024-chevrolet-trax-activ-rear-left-07-12-2023.jpg",
+      "bytes": 2441134,
+      "candidate_id": "commons-sha1-20621cbb4ea92b9964de",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-134333596-20621cbb4ea9-2024-chevrolet-trax-activ-rear-left-07-12-2023.jpg",
+      "sha256": "9b6beb15fa1eb82fd05560d5c48e3d3367d145b5396ca862873220585af1b762",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-20621cbb4ea92b9964de-7be84cf7a5e0f087.webp",
+      "bytes": 128200,
+      "candidate_id": "commons-sha1-20621cbb4ea92b9964de",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-20621cbb4ea92b9964de-7be84cf7a5e0f087.webp",
+      "sha256": "7be84cf7a5e0f087b67487c9130eede83ca2a247962140c032eab4c70106d509",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-150483021-a45a00eb9fa6-2024-chevrolet-colorado-zr2-front-right-07-18-2024.jpg",
+      "bytes": 8512147,
+      "candidate_id": "commons-sha1-a45a00eb9fa6720c0f01",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-150483021-a45a00eb9fa6-2024-chevrolet-colorado-zr2-front-right-07-18-2024.jpg",
+      "sha256": "7de1e4de7ba5e0c0b48ca23bfbe75964b8f26afedeef7c46a55a60c2410549de",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-a45a00eb9fa6720c0f01-5422477eb2bf96f8.webp",
+      "bytes": 178270,
+      "candidate_id": "commons-sha1-a45a00eb9fa6720c0f01",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-a45a00eb9fa6720c0f01-5422477eb2bf96f8.webp",
+      "sha256": "5422477eb2bf96f8e7038325c2c6dd6d549e0ee27226a46c4fec01dc45c6afcc",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-150483029-f56d03acddd5-2024-chevrolet-colorado-zr2-rear-right-07-18-2024.jpg",
+      "bytes": 2335584,
+      "candidate_id": "commons-sha1-f56d03acddd5d152e088",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-150483029-f56d03acddd5-2024-chevrolet-colorado-zr2-rear-right-07-18-2024.jpg",
+      "sha256": "9729c21470fe3cfcb3999bc785b216021dcce4ac4ef64588c21e0ce5a32d4977",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-f56d03acddd5d152e088-6af41a8335a910d9.webp",
+      "bytes": 143402,
+      "candidate_id": "commons-sha1-f56d03acddd5d152e088",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-f56d03acddd5d152e088-6af41a8335a910d9.webp",
+      "sha256": "6af41a8335a910d980eb1c5d89df56ac920f8099cfab63aac9e08c6fb02ac8f5",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-153301744-a72be27d15b0-2024-chevrolet-colorado-z71-front-left-09-28-2024.jpg",
+      "bytes": 6434588,
+      "candidate_id": "commons-sha1-a72be27d15b04d1ded9e",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-153301744-a72be27d15b0-2024-chevrolet-colorado-z71-front-left-09-28-2024.jpg",
+      "sha256": "be37c800aebf854104f70e1bd8cd9458bc4a882e54c46e437d9855f9448cfd37",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-a72be27d15b04d1ded9e-3bf5e60ba7a84e94.webp",
+      "bytes": 156286,
+      "candidate_id": "commons-sha1-a72be27d15b04d1ded9e",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-a72be27d15b04d1ded9e-3bf5e60ba7a84e94.webp",
+      "sha256": "3bf5e60ba7a84e940bec798777807c310a5b62c1fa5812cac7634d538cb403a1",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "commons-174552082-12c6e5a52ce1-2025-chevrolet-traverse-z71-front-left-09-06-2025.jpg",
+      "bytes": 9784035,
+      "candidate_id": "commons-sha1-12c6e5a52ce1f1c805cc",
+      "kind": "original",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/commons-174552082-12c6e5a52ce1-2025-chevrolet-traverse-z71-front-left-09-06-2025.jpg",
+      "sha256": "f407f7fda71f5602ba8b52b6a4326e94791dcd785f0b62f77c645ec620af2edc",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    },
+    {
+      "asset_name": "preview-commons-sha1-12c6e5a52ce1f1c805cc-d186d1aeb0f5300b.webp",
+      "bytes": 309594,
+      "candidate_id": "commons-sha1-12c6e5a52ce1f1c805cc",
+      "kind": "preview",
+      "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/photo-archive-v1/preview-commons-sha1-12c6e5a52ce1f1c805cc-d186d1aeb0f5300b.webp",
+      "sha256": "d186d1aeb0f5300b8e319aedcd6a4dad5261a09ea7990c01304ee3e60f0d3732",
+      "verification": "github_reported_size_and_downloaded_sha256_match"
+    }
+  ],
+  "vps_payload_cleanup": "Every listed original, preview, and downloaded verification copy was deleted immediately after its exact Release copy passed size and SHA-256 verification."
+}

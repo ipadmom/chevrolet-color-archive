@@ -23,6 +23,30 @@ const modern = JSON.parse(
     "utf8",
   ),
 );
+const review = JSON.parse(
+  await readFile(
+    new URL("../data/photos/current-model-color-photo-review.json", import.meta.url),
+    "utf8",
+  ),
+);
+const receipt = JSON.parse(
+  await readFile(
+    new URL(
+      "../data/photos/current-model-color-photo-release-verification.json",
+      import.meta.url,
+    ),
+    "utf8",
+  ),
+);
+const rawCommons = JSON.parse(
+  await readFile(
+    new URL(
+      "../data/photos/source-records/current-model-color-photo-commons-api-2026-08-07.json",
+      import.meta.url,
+    ),
+    "utf8",
+  ),
+);
 
 test("reviewed current-model photo links preserve the exact-year and factory-proof boundary", () => {
   assert.equal(audit.schema_version, 1);
@@ -69,4 +93,40 @@ test("reviewed current-model photo links preserve the exact-year and factory-pro
     assert.equal(palette.archive_url, link.palette_source_url);
     assert.equal(palette.page_locator, link.palette_locator);
   }
+});
+
+test("current-model color-photo batch retains visual, source, Release, and cleanup proof", () => {
+  assert.equal(review.counts.reviewed_photos, 8);
+  assert.equal(review.counts.approved_photos, 8);
+  assert.equal(review.counts.distinct_photographed_vehicles, 6);
+  assert.equal(review.counts.release_assets_verified, 16);
+  assert.equal(review.reviews.length, 8);
+  assert.ok(review.reviews.every((row) => row.decision === "approved"));
+  assert.ok(
+    review.reviews.every(
+      (row) => row.factory_paint_match_status === "unverified",
+    ),
+  );
+
+  assert.equal(receipt.github_account, "ipadmom");
+  assert.equal(receipt.asset_count, 16);
+  assert.equal(receipt.assets.length, 16);
+  assert.ok(
+    receipt.assets.every(
+      (row) =>
+        row.verification ===
+          "github_reported_size_and_downloaded_sha256_match" &&
+        /^[a-f0-9]{64}$/.test(row.sha256),
+    ),
+  );
+  assert.match(receipt.vps_payload_cleanup, /deleted immediately/);
+
+  assert.equal(rawCommons.query.pages.length, 8);
+  assert.ok(
+    rawCommons.query.pages.every(
+      (page) =>
+        /^File:/.test(page.title) &&
+        /^[a-f0-9]{40}$/.test(page.imageinfo[0].sha1),
+    ),
+  );
 });
