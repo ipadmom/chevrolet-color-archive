@@ -744,12 +744,33 @@ function safeAssetName(candidate) {
   return "commons-" + page + "-" + sourceHash + "-" + (stem || "photo") + extension;
 }
 
-async function sha256File(file) {
-  const bytes = await readFile(file);
+function verifyCandidateBytes(candidate, bytes, sourceLabel = "staged file") {
+  const expectedSha1 = String(candidate.commonsSha1 ?? "").trim().toLowerCase();
+  if (!/^[a-f0-9]{40}$/.test(expectedSha1)) {
+    throw new Error(`Missing valid Commons SHA-1 for ${candidate.id}`);
+  }
+  if (bytes.length !== candidate.bytes) {
+    throw new Error(
+      `Commons size changed for ${candidate.id}: API ${candidate.bytes}, ` +
+        `${sourceLabel} ${bytes.length}`,
+    );
+  }
+  const actualSha1 = createHash("sha1").update(bytes).digest("hex");
+  if (actualSha1 !== expectedSha1) {
+    throw new Error(
+      `Commons SHA-1 mismatch for ${candidate.id}: API ${expectedSha1}, ` +
+        `${sourceLabel} ${actualSha1}`,
+    );
+  }
   return {
     sha256: createHash("sha256").update(bytes).digest("hex"),
     bytes: bytes.length,
   };
+}
+
+async function verifyCandidateFile(candidate, file) {
+  const bytes = await readFile(file);
+  return verifyCandidateBytes(candidate, bytes, "staged file");
 }
 
 async function stageCandidate(candidate, options, runStats) {
@@ -759,12 +780,13 @@ async function stageCandidate(candidate, options, runStats) {
   if (!options.refresh) {
     try {
       const fileStat = await stat(destination);
-      if (fileStat.isFile() && fileStat.size === candidate.bytes) {
-        result = await sha256File(destination);
-        runStats.reusedAssets += 1;
+      if (!fileStat.isFile()) {
+        throw new Error(`Staged asset path is not a file: ${destination}`);
       }
-    } catch {
-      // Missing staged file is the normal first-run case.
+      result = await verifyCandidateFile(candidate, destination);
+      runStats.reusedAssets += 1;
+    } catch (error) {
+      if (error?.code !== "ENOENT") throw error;
     }
   }
 
@@ -780,21 +802,15 @@ async function stageCandidate(candidate, options, runStats) {
     const responseMime = String(response.headers.get("content-type") ?? "")
       .split(";")[0]
       .toLowerCase();
-    if (!ALLOWED_MIME.has(responseMime)) {
+    if (!ALLOWED_MIME.has(responseMime) || responseMime !== candidate.mime) {
       throw new Error("Unexpected download MIME " + responseMime + " for " + sourceUrl.href);
     }
     const bytes = Buffer.from(await response.arrayBuffer());
-    if (bytes.length !== candidate.bytes) {
-      throw new Error(
-        "Commons size changed for " + candidate.id + ": API " + candidate.bytes +
-          ", download " + bytes.length,
-      );
-    }
-    const sha256 = createHash("sha256").update(bytes).digest("hex");
+    const verified = verifyCandidateBytes(candidate, bytes, "download");
     const temporary = destination + ".tmp-" + process.pid;
     await writeFile(temporary, bytes, { flag: "wx" });
     await rename(temporary, destination);
-    result = { sha256, bytes: bytes.length };
+    result = verified;
     runStats.downloadedAssets += 1;
   }
 
@@ -1218,5 +1234,6 @@ export {
   normalizedText,
   safeAssetName,
   stageCandidate,
+  verifyCandidateBytes,
   writeJsonAtomic,
 };

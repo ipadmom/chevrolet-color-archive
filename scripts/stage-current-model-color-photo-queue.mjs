@@ -123,6 +123,77 @@ function titleKey(value) {
   return String(value).replaceAll("_", " ").trim().toLocaleLowerCase("en-US");
 }
 
+function requiredString(value, label) {
+  if (typeof value !== "string" || !value.trim()) {
+    throw new Error(`Queue candidate is missing ${label}`);
+  }
+  return value.trim();
+}
+
+function validateQueue(queue, catalog) {
+  if (queue?.schema_version !== 2) {
+    throw new Error(`Unsupported queue schema: ${queue?.schema_version}`);
+  }
+  if (!Array.isArray(queue.queued_candidates) || queue.queued_candidates.length === 0) {
+    throw new Error("Queue has no candidates");
+  }
+  if (!Array.isArray(catalog?.models)) {
+    throw new Error("Catalog has no model records");
+  }
+  const models = new Map(catalog.models.map((model) => [model.id, model]));
+  const candidateKeys = new Set();
+  const titles = new Set();
+  for (const item of queue.queued_candidates) {
+    const candidateKey = requiredString(item.candidate_key, "candidate_key");
+    if (candidateKeys.has(candidateKey)) {
+      throw new Error(`Queue contains duplicate candidate_key: ${candidateKey}`);
+    }
+    candidateKeys.add(candidateKey);
+    const modelId = requiredString(item.model_id, `${candidateKey} model_id`);
+    if (!models.has(modelId)) {
+      throw new Error(`Queue model is absent from catalog: ${modelId}`);
+    }
+    if (!Number.isInteger(item.model_year)) {
+      throw new Error(`${candidateKey} has no integer model_year`);
+    }
+    const colorLabel = requiredString(item.color_label, `${candidateKey} color_label`);
+    const metadataEvidence = requiredString(
+      item.metadata_evidence,
+      `${candidateKey} metadata_evidence`,
+    );
+    requiredString(item.palette_source_id, `${candidateKey} palette_source_id`);
+    requiredString(item.palette_source_url, `${candidateKey} palette_source_url`);
+    requiredString(item.palette_locator, `${candidateKey} palette_locator`);
+    const title = titleFromSourcePage(
+      requiredString(item.source_page_url, `${candidateKey} source_page_url`),
+    );
+    const normalizedTitle = titleKey(title);
+    if (titles.has(normalizedTitle)) {
+      throw new Error(`Queue contains duplicate Commons file title: ${title}`);
+    }
+    titles.add(normalizedTitle);
+    const expectedEnding = normalizedText(`Finished in ${colorLabel}.`);
+    if (!normalizedText(metadataEvidence).endsWith(expectedEnding)) {
+      throw new Error(
+        `${candidateKey} metadata evidence does not end with the exact color label`,
+      );
+    }
+  }
+  return models;
+}
+
+function validateMetadataMatch(candidate, queueItem) {
+  const description = normalizedText(candidate.description);
+  const color = normalizedText(queueItem.color_label);
+  const evidence = normalizedText(queueItem.metadata_evidence);
+  if (!color || !description.includes(color)) {
+    throw new Error(`${queueItem.candidate_key} metadata omits ${queueItem.color_label}`);
+  }
+  if (!evidence || !description.includes(evidence)) {
+    throw new Error(`${queueItem.candidate_key} metadata evidence drifted`);
+  }
+}
+
 function relativePath(value) {
   return path.relative(ROOT, value).replaceAll(path.sep, "/");
 }
@@ -196,19 +267,20 @@ async function main() {
     readFile(options.queue, "utf8").then((value) => JSON.parse(value)),
     readFile(options.catalog, "utf8").then((value) => JSON.parse(value)),
   ]);
-  if (!Array.isArray(queue.queued_candidates) || queue.queued_candidates.length === 0) {
-    throw new Error("Queue has no candidates");
-  }
-  const models = new Map(catalog.models.map((model) => [model.id, model]));
+  const models = validateQueue(queue, catalog);
   const titles = queue.queued_candidates.map((item) =>
     titleFromSourcePage(item.source_page_url),
   );
-  if (new Set(titles.map(titleKey)).size !== titles.length) {
-    throw new Error("Queue contains duplicate Commons file titles");
-  }
 
   const response = await fetchWithRetry(buildTitlesUrl(titles).href);
   const raw = await response.json();
+  await writeJsonAtomic(options.rawResponse, raw);
+  if (raw.error) {
+    throw new Error(`Commons API error: ${JSON.stringify(raw.error)}`);
+  }
+  if ((raw.query?.redirects ?? []).length > 0) {
+    throw new Error("Commons redirected one or more exact queued file titles");
+  }
   const pages = raw.query?.pages ?? [];
   const pagesByTitle = new Map(pages.map((page) => [titleKey(page.title), page]));
   if (pagesByTitle.size !== titles.length) {
@@ -216,15 +288,17 @@ async function main() {
       `Commons returned ${pagesByTitle.size} pages for ${titles.length} queued titles`,
     );
   }
-  await writeJsonAtomic(options.rawResponse, raw);
-
   const runStats = { downloadedAssets: 0, reusedAssets: 0 };
   const assets = [];
   const seenCandidateIds = new Set();
+  const seenDedupeKeys = new Set();
   for (let index = 0; index < queue.queued_candidates.length; index += 1) {
     const item = queue.queued_candidates[index];
     const title = titles[index];
     const page = pagesByTitle.get(titleKey(title));
+    if (!page) {
+      throw new Error(`${item.candidate_key} did not resolve to its exact Commons title`);
+    }
     const model = models.get(item.model_id);
     if (!model) throw new Error(`Queue model is absent from catalog: ${item.model_id}`);
     const normalized = makeCandidate(
@@ -239,13 +313,11 @@ async function main() {
       throw new Error(`${item.candidate_key} failed the crawler gate: ${normalized.rejected}`);
     }
     const candidate = normalized.candidate;
-    const description = normalizedText(candidate.description);
-    if (!description.includes(normalizedText(item.color_label))) {
-      throw new Error(`${item.candidate_key} metadata omits ${item.color_label}`);
+    validateMetadataMatch(candidate, item);
+    if (seenDedupeKeys.has(candidate.dedupeKey)) {
+      throw new Error(`Queue resolved to duplicate Commons bytes: ${candidate.dedupeKey}`);
     }
-    if (!description.includes(normalizedText(item.metadata_evidence))) {
-      throw new Error(`${item.candidate_key} metadata evidence drifted`);
-    }
+    seenDedupeKeys.add(candidate.dedupeKey);
     const staged = await stageCandidate(candidate, options, runStats);
     if (seenCandidateIds.has(staged.id)) {
       throw new Error(`Queue resolved to duplicate Commons bytes: ${staged.id}`);
@@ -307,4 +379,10 @@ if (
   });
 }
 
-export { parseArgs, titleFromSourcePage, titleKey };
+export {
+  parseArgs,
+  titleFromSourcePage,
+  titleKey,
+  validateMetadataMatch,
+  validateQueue,
+};
