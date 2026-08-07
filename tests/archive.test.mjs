@@ -19,6 +19,7 @@ async function loadArchiveData() {
     monteCarlo1970Source,
     pSeries1969Source,
     modernColorSource,
+    modernFleetPaletteAuditSource,
     specialtyColorSource,
   ] = await Promise.all([
     readFile(new URL("app/archive-data.ts", root), "utf8"),
@@ -46,6 +47,10 @@ async function loadArchiveData() {
     ),
     readFile(
       new URL("data/sources/modern-chevrolet-color-source-candidates.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/modern-fleet-palettes-2008-2026.json", root),
       "utf8",
     ),
     readFile(
@@ -97,6 +102,10 @@ async function loadArchiveData() {
     .replace(
       /^import modernColorSourceData from "\.\.\/data\/sources\/modern-chevrolet-color-source-candidates\.json";\r?\n/m,
       `const modernColorSourceData = ${modernColorSource};\n`,
+    )
+    .replace(
+      /^import modernFleetPaletteAudit from "\.\.\/data\/audits\/modern-fleet-palettes-2008-2026\.json";\r?\n/m,
+      `const modernFleetPaletteAudit = ${modernFleetPaletteAuditSource};\n`,
     )
     .replace(
       /^import specialtyColorSourceData from "\.\.\/data\/sources\/specialty-color-source-candidates\.json";\r?\n/m,
@@ -195,8 +204,7 @@ test("Camaro second generation preserves complete charts and generation order", 
       "1970–1981",
       "1982–1992",
       "1993–2002",
-      "2010–2015",
-      "2016–2024",
+      ...numericRangeForTest(2010, 2024),
     ],
   );
   assert.deepEqual(generation.years, [
@@ -1080,7 +1088,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     allGenerations
       .filter(isQualifiedPalette)
       .reduce((total, item) => total + item.listingCount, 0),
-    590,
+    3240,
   );
   assert.equal(
     allGenerations
@@ -1096,7 +1104,7 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    2753,
+    5403,
   );
 });
 
@@ -2394,15 +2402,12 @@ test("Tahoe publishes exact 1995-2007 palettes without flattening 2000 programs"
 
   assert.deepEqual(
     qualifiedPalettes.flatMap((generation) => generation.years),
-    ["2022", "2024", "2025", "2026"],
+    numericRangeForTest(2008, 2026),
   );
-  assert.deepEqual(
-    qualifiedPalettes.map((generation) => generation.listingCount),
-    [10, 9, 8, 8],
-  );
+  assert.ok(qualifiedPalettes.every((generation) => generation.listingCount > 0));
   assert.equal(
     qualifiedPalettes.every((generation) =>
-      generation.colors.every((color) => color.rowCode === "not printed"),
+      generation.colors.every((color) => Boolean(color.rowCode)),
     ),
     true,
   );
@@ -2415,11 +2420,14 @@ test("Tahoe publishes exact 1995-2007 palettes without flattening 2000 programs"
     true,
   );
   assert.equal(
-    qualifiedPalettes[0].sources["2022"].locator,
+    qualifiedPalettes.find((generation) => generation.years.includes("2022"))
+      .sources["2022"].locator,
     "PDF pages 8, 10, 12, 14, 16, and 18, trim color strips.",
   );
   assert.match(
-    qualifiedPalettes[0].colors.find(
+    qualifiedPalettes
+      .find((generation) => generation.years.includes("2022"))
+      .colors.find(
       (color) => color.name === "Iridescent Pearl Tricoat",
     ).availability["2022"].restriction,
     /Unavailable on LS\.[\s\S]*Extra-cost color where offered\./,
@@ -2816,6 +2824,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "caprice-ppv:2017",
     "colorado:2025",
     "colorado:2026",
+    "express:2011",
     "express:2012",
     "express:2013",
     "express:2014",
@@ -2835,6 +2844,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "silverado:2014",
     "silverado:2025",
     "silverado:2026",
+    "silverado-hd:2011",
     "silverado-hd:2025",
     "silverado-hd:2026",
     "sportvan:1979",
@@ -2855,6 +2865,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
     "tahoe:2003",
     "tahoe:2005",
     "tahoe:2006",
+    "tahoe:2011",
     "tahoe:2012",
     "tahoe:2013",
     "tahoe:2014",

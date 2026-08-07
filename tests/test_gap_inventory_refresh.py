@@ -24,12 +24,12 @@ class GapInventoryRefreshTest(unittest.TestCase):
         summary = self.inventory["summary"]
         self.assertEqual(149, summary["model_count"])
         self.assertEqual(1_792, summary["model_year_count"])
-        self.assertEqual(2_753, summary["listing_count"])
+        self.assertEqual(5_403, summary["listing_count"])
         self.assertEqual(106, summary["completely_reviewed_count"])
         self.assertEqual(6, summary["reviewed_qualified_historical_table_count"])
-        self.assertEqual(72, summary["reviewed_qualified_palette_union_count"])
-        self.assertEqual(590, summary["reviewed_qualified_palette_union_listing_count"])
-        self.assertEqual(42, summary["reviewed_specialty_palette_subset_count"])
+        self.assertEqual(364, summary["reviewed_qualified_palette_union_count"])
+        self.assertEqual(3_240, summary["reviewed_qualified_palette_union_listing_count"])
+        self.assertEqual(11, summary["reviewed_specialty_palette_subset_count"])
         self.assertEqual(
             69, summary["reviewed_specialty_palette_subset_application_year_count"]
         )
@@ -39,7 +39,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
         self.assertEqual(1_231, summary["source_transcription_listing_count"])
         self.assertEqual(13, summary["reviewed_no_chart_count"])
         self.assertEqual(0, summary["source_located_chart_unreviewed_count"])
-        self.assertEqual(1_553, summary["wholly_unreviewed_count"])
+        self.assertEqual(1_292, summary["wholly_unreviewed_count"])
         self.assertEqual(1_862, summary["official_source_candidate_link_count"])
         self.assertEqual(691, summary["crawler_source_document_count"])
         self.assertEqual(2_774, summary["crawler_candidate_page_count"])
@@ -93,7 +93,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
             for row in self.inventory["model_years"]
             if row["audit_state"] == "reviewed_qualified_palette_union"
         ]
-        self.assertEqual(72, len(palette_rows))
+        self.assertEqual(364, len(palette_rows))
         self.assertTrue(all(row["color_chart_reviewed"] for row in palette_rows))
         self.assertTrue(
             all(not row["completely_reviewed_color_chart"] for row in palette_rows)
@@ -113,46 +113,15 @@ class GapInventoryRefreshTest(unittest.TestCase):
         expected_counts = {
             "blazer:1979": 2,
             "blazer:1980": 3,
-            "bolt-euv:2023": 7,
-            "caprice-ppv:2011": 14,
-            "caprice-ppv:2012": 16,
-            "caprice-ppv:2013": 14,
-            "caprice-ppv:2014": 7,
-            "caprice-ppv:2015": 6,
-            "caprice-ppv:2016": 6,
-            "caprice-ppv:2017": 4,
             "ck-series:1979": 2,
             "ck-series:1980": 3,
             "ck-series:1983": 4,
             "ck-series:1993": 4,
-            "express:2011": 1,
-            "express:2012": 15,
-            "express:2013": 15,
-            "express:2014": 15,
             "g-series-van:1979": 3,
             "g-series-van:1980": 3,
-            "impala:2011": 30,
-            "impala:2012": 30,
-            "impala:2013": 30,
-            "impala-limited:2014": 30,
-            "impala-limited:2015": 30,
-            "impala-limited:2016": 30,
             "s10:1993": 4,
-            "silverado:2012": 26,
-            "silverado:2014": 10,
-            "silverado-hd:2011": 1,
             "sportvan:1979": 3,
             "sportvan:1980": 3,
-            "tahoe:2011": 1,
-            "tahoe:2012": 16,
-            "tahoe:2013": 16,
-            "tahoe:2014": 2,
-            "tahoe:2015": 7,
-            "tahoe:2016": 14,
-            "tahoe:2017": 6,
-            "tahoe:2018": 5,
-            "tahoe:2019": 5,
-            "tahoe:2020": 5,
         }
         specialty_rows = [
             row
@@ -349,23 +318,19 @@ class GapInventoryRefreshTest(unittest.TestCase):
             )
         )
 
-    def test_modern_fleet_guides_are_not_regular_palette_evidence(self) -> None:
+    def test_modern_fleet_guides_preserve_regular_and_specialty_evidence(self) -> None:
         tahoe_2020 = next(
             row
             for row in self.inventory["model_years"]
             if row["model_year_key"] == "tahoe:2020"
         )
-        self.assertEqual(
-            "reviewed_specialty_palette_subset", tahoe_2020["audit_state"]
-        )
+        self.assertEqual("reviewed_qualified_palette_union", tahoe_2020["audit_state"])
         self.assertTrue(tahoe_2020["color_chart_reviewed"])
         self.assertFalse(tahoe_2020["completely_reviewed_color_chart"])
-        self.assertEqual(5, tahoe_2020["exact_listing_count"])
-        self.assertTrue(
-            all(
-                listing["evidence_class"] == "specialty_palette_subset"
-                for listing in tahoe_2020["listings"]
-            )
+        self.assertEqual(18, tahoe_2020["exact_listing_count"])
+        self.assertEqual(
+            {"qualified_palette_union": 13, "specialty_palette_subset": 5},
+            dict(Counter(listing["evidence_class"] for listing in tahoe_2020["listings"])),
         )
         self.assertEqual(
             "generic_full_line_official_kit", tahoe_2020["likely_source_availability"]

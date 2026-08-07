@@ -340,7 +340,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     manifest = json.loads((PARQUET_ROOT / "manifest.json").read_text(encoding="utf-8"))
-    if manifest.get("schema_version") != 12:
+    if manifest.get("schema_version") != 13:
         raise AssertionError("normalized Parquet manifest must use schema version 12")
     tables = {item["table"]: item for item in manifest["tables"]}
     required_paint_tables = {"paint_schemes", "paint_scheme_components"}
@@ -845,6 +845,7 @@ def main() -> int:
         "express:2012",
         "express:2013",
         "express:2014",
+        "express:2011",
         "express:2025",
         "express:2026",
         "g-series-van:1979",
@@ -862,6 +863,7 @@ def main() -> int:
         "silverado:2026",
         "silverado-hd:2025",
         "silverado-hd:2026",
+        "silverado-hd:2011",
         "sportvan:1979",
         "sportvan:1980",
         "suburban:1979",
@@ -882,6 +884,7 @@ def main() -> int:
         "tahoe:2012",
         "tahoe:2013",
         "tahoe:2014",
+        "tahoe:2011",
         "tahoe:2015",
         "tahoe:2016",
         "tahoe:2017",
@@ -892,7 +895,7 @@ def main() -> int:
         "tahoe:2026",
     }
     if (
-        len(specialty_memberships) != 868
+        len(specialty_memberships) != 899
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -1167,7 +1170,15 @@ def main() -> int:
         raise AssertionError(
             f"sources.officiality contains unsupported values: {invalid_officiality}"
         )
-    allowed_document_authority = {None, "official_manufacturer_document"}
+    allowed_document_authority = {
+        None,
+        "official_manufacturer_document",
+        "government_procurement_record",
+        "refinish_industry_color_index",
+        "third_party_vehicle_catalog",
+        "genuine_parts_fitment_catalog",
+        "trade_press_release_republication",
+    }
     invalid_document_authority = sorted(
         {
             row["document_authority"]
@@ -1180,7 +1191,12 @@ def main() -> int:
             "sources.document_authority contains unsupported values: "
             f"{invalid_document_authority}"
         )
-    allowed_retrieval_host_type = {None, "official_live", "archival_mirror"}
+    allowed_retrieval_host_type = {
+        None,
+        "official_live",
+        "archival_mirror",
+        "publisher_live",
+    }
     invalid_retrieval_host_type = sorted(
         {
             row["retrieval_host_type"]
@@ -1582,6 +1598,23 @@ def main() -> int:
                 raise AssertionError(
                     f"image claim incorrectly has a PDF page count: {claim['evidence_claim_id']}"
                 )
+        elif locator_type == "html_section":
+            if claim["pdf_pages"]:
+                raise AssertionError(
+                    f"HTML claim incorrectly has PDF pages: {claim['evidence_claim_id']}"
+                )
+            if not str(revision["media_type"]).startswith("text/html"):
+                raise AssertionError(
+                    f"HTML claim is not bound to HTML media: {claim['evidence_claim_id']}"
+                )
+            if revision["pdf_page_count"] is not None:
+                raise AssertionError(
+                    f"HTML claim incorrectly has a PDF page count: {claim['evidence_claim_id']}"
+                )
+            if not str(claim["source_locator"]).strip():
+                raise AssertionError(
+                    f"HTML claim has no section locator: {claim['evidence_claim_id']}"
+                )
         else:
             raise AssertionError(
                 f"unsupported evidence locator type: {claim['evidence_claim_id']} "
@@ -1926,7 +1959,7 @@ def main() -> int:
         )
     expected_application_type_counts = Counter(
         {
-            "manufacturer_listed": 1_821,
+            "manufacturer_listed": 4_471,
             "authorized_upfitter_post_build": 180,
             "special_equipment_option_paint": 589,
             "specialty_program_unspecified": 41,

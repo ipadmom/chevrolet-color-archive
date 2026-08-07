@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-21T06:50:39Z",
+  "generated_at": "2026-08-06",
   "visibility": "public",
   "dataset_kind": "source_provenance_candidates",
   "scope": "United States Chevrolet exterior-color sources for model years 2008-2026, with directly verified palette rows for the strongest current sources.",
   "summary": {
-    "source_count": 37,
+    "source_count": 49,
     "fleet_guide_document_count": 20,
     "fleet_guide_model_years": {
       "first": 2008,
@@ -37,7 +37,10 @@
       2023,
       2024
     ],
-    "verified_palette_table_count": 83,
+    "verified_palette_table_count": 93,
+    "supplemental_release_source_count": 12,
+    "supplemental_release_pdf_count": 9,
+    "supplemental_release_html_count": 3,
     "verified_order_guide_sample_count": 1,
     "highest_confidence_ingestion_ready_years": [
       2025,
@@ -1711,6 +1714,309 @@
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2025-gm-envolve-fleet-guide-v1-r2024-05-29.pdf",
       "pdf_page_count": 104,
       "archive_asset_name": "2025-gm-envolve-fleet-guide-v1-r2024-05-29.pdf"
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2016-cruze",
+      "title": "2016 Chevrolet Cruze brochure",
+      "publisher": "Chevrolet / General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "model_brochure_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2016-cruze.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2016],
+      "model_scope": "All-new 2016 Chevrolet Cruze, not the separately marketed Cruze Limited.",
+      "revision_or_document_date": "February 2016",
+      "retrieved_at": "2026-08-06",
+      "page_count": 30,
+      "page_locator": "PDF page 26, COLORS/WHEELS/FABRICS; footnotes continue on PDF page 27.",
+      "sha256": "5a9a80a34c4c02e27a5b7a25564ce1d3f2217316dade7daddb73aad2b1ecd17c",
+      "bytes": 2930813,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2016-chevrolet-cruze-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-cruze-brochure.pdf",
+      "limitations": [
+        "The brochure prints the complete United States color name list and restrictions but does not print paint codes."
+      ]
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2017-bolt-ev",
+      "title": "2017 Chevrolet Bolt EV brochure",
+      "publisher": "Chevrolet / General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "model_brochure_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://evnet.ca/wp-content/uploads/2019/10/2017-Bolt.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2017],
+      "model_scope": "2017 Chevrolet Bolt EV.",
+      "revision_or_document_date": "2017 model year",
+      "retrieved_at": "2026-08-06",
+      "page_count": 18,
+      "page_locator": "PDF page 12, COLORS/FABRICS/WHEELS.",
+      "sha256": "2fee3a2cc9d5784204430b70d01ce386f9546207b8ea86197baa7202e50c4698",
+      "bytes": 36277199,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2017-chevrolet-bolt-ev-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-bolt-ev-brochure.pdf",
+      "limitations": [
+        "The brochure prints the complete United States color name list and trim restrictions but does not print paint codes."
+      ]
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2019-blazer",
+      "title": "2019 Chevrolet Blazer brochure",
+      "publisher": "Chevrolet / General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "model_brochure_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2019-blazer.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2019],
+      "model_scope": "2019 Chevrolet Blazer.",
+      "revision_or_document_date": "2019 model year",
+      "retrieved_at": "2026-08-06",
+      "page_count": 31,
+      "page_locator": "PDF page 22, COLORS.",
+      "sha256": "fe4f6a320fe73504e5a07b5231f57ce859aa8d51c0bb381eec1b2be10bd1847a",
+      "bytes": 23590932,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2019-chevrolet-blazer-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-brochure.pdf",
+      "limitations": [
+        "The brochure is retained as visual corroboration; the normalized palette uses the more precise Order Guide below."
+      ]
+    },
+    {
+      "source_id": "gm-order-guide-us-2019-blazer",
+      "title": "2019 Chevrolet Truck All-New Blazer Order Guide",
+      "publisher": "General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "official_order_guide_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://gmauthority.com/blog/wp-content/uploads/2018/09/2019-Chevrolet-Blazer-Order-Guide-September-7-2018.pdf",
+      "landing_url": "https://gmauthority.com/blog/2018/09/2019-chevrolet-blazer-order-guide/",
+      "market": "United States",
+      "model_year_scope": [2019],
+      "model_scope": "2019 Chevrolet Blazer.",
+      "revision_or_document_date": "Published September 7, 2018",
+      "retrieved_at": "2026-08-06",
+      "page_count": 45,
+      "page_locator": "PDF page 35, COLOR AND TRIM.",
+      "sha256": "6f74bc108077a4fd3ff8984bd83bf293042cf8b14276ed9806fff0c538cff07c",
+      "bytes": 204478,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2019-chevrolet-blazer-order-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-order-guide.pdf",
+      "limitations": [
+        "This is a GM-authored Order Guide retained from an archival mirror, not a byte copy retrieved from direct GM hosting."
+      ]
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2011-volt",
+      "title": "2011 Chevrolet Volt brochure",
+      "publisher": "Chevrolet / General Motors",
+      "document_authority": "official_manufacturer_document_archival_mirror",
+      "source_type": "model_brochure_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://www.auto-brochures.com/makes/Chevrolet/Volt/Chevrolet_US%20Volt_2011.pdf",
+      "landing_url": "https://www.slideshare.net/slideshow/2011-volt-brochure/7581535",
+      "market": "United States",
+      "model_year_scope": [2011],
+      "model_scope": "2011 Chevrolet Volt.",
+      "revision_or_document_date": "2011 model year",
+      "retrieved_at": "2026-08-06",
+      "page_count": 28,
+      "page_locator": "PDF pages 25 and 26, COLORS; the linked July 21, 2010 initial ordering workbook prints the matching RPO codes on page 5.",
+      "sha256": "1ccc11f0b33839a0ebc4c43ef2c55635e9e8ba23b45e618fda57a1d6486a5c4f",
+      "bytes": 3092406,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2011-chevrolet-volt-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-volt-brochure.pdf",
+      "limitations": [
+        "The release asset preserves the brochure color list. RPO codes are corroborated by the separately linked GM initial ordering workbook because the brochure does not print them."
+      ]
+    },
+    {
+      "source_id": "gm-upfitter-us-2016-low-cab-forward",
+      "title": "2016 Chevrolet Low Cab Forward Upfitter Integration Guide",
+      "publisher": "General Motors Upfitter Integration",
+      "document_authority": "official_manufacturer_live",
+      "source_type": "official_upfitter_guide_pdf",
+      "direct_official_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/FFF_2016_LCF_060716_V2.pdf",
+      "retrieval_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/FFF_2016_LCF_060716_V2.pdf",
+      "landing_url": "https://www.gmupfitter.com/body-builder-manuals/",
+      "market": "United States",
+      "model_year_scope": [2016],
+      "model_scope": "2016 Chevrolet Low Cab Forward.",
+      "revision_or_document_date": "Revision May 31, 2016",
+      "retrieved_at": "2026-08-06",
+      "page_count": 198,
+      "page_locator": "PDF page 56, printed page 4.3, Paint Code Chart; duplicated at PDF page 198, printed page 12.1.",
+      "sha256": "f39a6e4e18bb0b54342a4f3837808caa1b0dde50a9da3e725c683c4261f2d7db",
+      "bytes": 44720349,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2016-chevrolet-low-cab-forward-upfitter-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-low-cab-forward-upfitter-guide.pdf",
+      "limitations": [
+        "The official chart prints cross-system paint codes. The normalized table uses the GM Ordering Color Name Exterior and adjacent Isuzu code values."
+      ]
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+      "title": "2023 Chevrolet Traverse brochure, applied to the unchanged 2024 Traverse Limited",
+      "publisher": "Chevrolet / General Motors; carryover corroboration by GM Authority",
+      "document_authority": "official_manufacturer_document_with_secondary_carryover_corroboration",
+      "source_type": "model_brochure_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://www.auto-brochures.com/makes/Chevrolet/Traverse/Chevrolet_US%20Traverse_2023.pdf",
+      "landing_url": "https://gmauthority.com/blog/gm/chevrolet/traverse/2024-chevrolet-traverse-limited/",
+      "market": "United States",
+      "model_year_scope": [2023, 2024],
+      "model_scope": "2023 Chevrolet Traverse and the unchanged, second-generation 2024 Chevrolet Traverse Limited carryover.",
+      "revision_or_document_date": "2023 model year; 2024 Limited carryover",
+      "retrieved_at": "2026-08-06",
+      "page_count": 25,
+      "page_locator": "PDF pages 6, 8, 10, 12, 14, and 16, trim palettes; GM Authority Changes, Updates, New Features section for unchanged 2024 Limited status.",
+      "sha256": "fb71400d95f3e9b17af4d2f91db0a216e1a763e00b8e6b60162febec674638bb",
+      "bytes": 3721580,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2023-chevrolet-traverse-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-traverse-brochure.pdf",
+      "limitations": [
+        "The 2024 Traverse Limited palette is a documented carryover inference from the official 2023 brochure, not a dedicated 2024 Limited color chart.",
+        "GM Authority states that the 2024 Traverse Limited has no changes from the 2023 Traverse; the original article is linked because its bot protection prevents a useful direct archive snapshot."
+      ]
+    },
+    {
+      "source_id": "new-jersey-contract-us-2008-malibu-classic",
+      "title": "New Jersey Contract A70357, 2008 Chevrolet Malibu Classic vehicle report",
+      "publisher": "State of New Jersey Division of Purchase and Property / Sansone Chevrolet / Chrome Systems",
+      "document_authority": "contemporary_government_procurement_record",
+      "source_type": "government_contract_pdf",
+      "direct_official_url": "https://www.nj.gov/treasury/purchase/noa/attachments/a0099-Section2.pdf",
+      "retrieval_url": "https://www.nj.gov/treasury/purchase/noa/attachments/a0099-Section2.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2008],
+      "model_scope": "2008 Chevrolet Malibu Classic 1ZS69 LS with 2FL.",
+      "revision_or_document_date": "October 9, 2007",
+      "retrieved_at": "2026-08-06",
+      "page_count": 17,
+      "page_locator": "PDF page 10, COLOR AVAILABILITY.",
+      "sha256": "b3660874a56e721286dc5ec811a7d0af4970f511f87f4321aedea85efa047a41",
+      "bytes": 268006,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2008-new-jersey-malibu-classic-fleet-contract.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-new-jersey-malibu-classic-fleet-contract.pdf",
+      "limitations": [
+        "This contemporary state contract is configuration-specific, but its vehicle report prints the six-color exterior availability table for the catalogued Malibu Classic fleet sedan."
+      ]
+    },
+    {
+      "source_id": "standox-color-index-us-2008-isuzu-npr-nqr",
+      "title": "2008 Import Advanced Information Report, Isuzu NPR/NQR colors",
+      "publisher": "Standox / ColorNet",
+      "document_authority": "contemporary_refinish_industry_color_index",
+      "source_type": "paint_color_index_pdf",
+      "direct_official_url": null,
+      "retrieval_url": "https://colornetws.com/InfinityMsdsPds/Standox%20Product%20Info/Color%20Charts/2008%20ADV%20INFO%20IMPORT%20NOV%2007.pdf",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2008],
+      "model_scope": "2008 Isuzu NPR/NQR, the badge-equivalent source vehicles for the Chevrolet W-Series catalog entry.",
+      "revision_or_document_date": "November 2007",
+      "retrieved_at": "2026-08-06",
+      "page_count": 45,
+      "page_locator": "PDF page 15, ISUZU EXTERIOR.",
+      "sha256": "8a1d2655b3ce29c2e6e51685de7d395c61e63c4e522d7c6684bcfa8644e6da28",
+      "bytes": 78437,
+      "content_type": "application/pdf",
+      "archive_asset_name": "2008-import-advanced-color-information.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-import-advanced-color-information.pdf",
+      "limitations": [
+        "This is not a Chevrolet color chart. It is a contemporary color index for the Isuzu NPR/NQR source vehicles, which were sold by GM as Chevrolet W-Series trucks in North America."
+      ]
+    },
+    {
+      "source_id": "autoweb-us-2015-captiva-sport",
+      "title": "2015 Chevrolet Captiva Sport Fleet colors",
+      "publisher": "Autoweb",
+      "document_authority": "third_party_contemporary_vehicle_catalog",
+      "source_type": "vehicle_catalog_html",
+      "direct_official_url": null,
+      "retrieval_url": "https://www.autoweb.com/chevrolet/captiva-sport-fleet/2015",
+      "landing_url": "https://www.gmpartsgiant.com/parts-list/2015-chevrolet-captiva_sport/front_end_sheet_metal_heater/paint_touch_up.html",
+      "market": "United States",
+      "model_year_scope": [2015],
+      "model_scope": "2015 Chevrolet Captiva Sport Fleet.",
+      "revision_or_document_date": "2015 model year",
+      "retrieved_at": "2026-08-06",
+      "page_count": 1,
+      "page_locator": "Archived HTML, Colors, Exterior; linked genuine GM parts fitment catalog for code corroboration.",
+      "sha256": "032644fa9b2aea80421a8d2e48e6bbe6d0ea91f416e830a916957b238e1e312e",
+      "bytes": 140861,
+      "content_type": "text/html",
+      "archive_asset_name": "2015-chevrolet-captiva-sport-colors.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-colors.html",
+      "limitations": [
+        "Autoweb is a third-party catalog, not a GM-authored order guide.",
+        "The archived GM parts fitment page corroborates Black, Blue Ray Metallic, Champagne Silver Metallic, Ashen Gray Metallic, Crystal Red Tintcoat, Silver Ice Metallic, and Arctic Ice codes. Brownstone Metallic and Sable Metallic codes remain secondary cross-reference assertions."
+      ]
+    },
+    {
+      "source_id": "gm-parts-fitment-us-2015-captiva-sport",
+      "title": "2015 Chevrolet Captiva Sport genuine GM paint touch-up fitment",
+      "publisher": "GMPartsGiant",
+      "document_authority": "third_party_catalog_of_genuine_gm_parts_fitment",
+      "source_type": "parts_catalog_html",
+      "direct_official_url": null,
+      "retrieval_url": "https://www.gmpartsgiant.com/parts-list/2015-chevrolet-captiva_sport/front_end_sheet_metal_heater/paint_touch_up.html",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2015],
+      "model_scope": "2015 Chevrolet Captiva Sport paint touch-up parts.",
+      "revision_or_document_date": null,
+      "retrieved_at": "2026-08-06",
+      "page_count": 1,
+      "page_locator": "Archived HTML, paint touch-up part descriptions and Fitting Vehicle Options RPO codes.",
+      "sha256": "bd08b3c596814ab6a31f0e2e67fdbfe0a396bf8efe7b296ffbf2becee1ffdfa0",
+      "bytes": 213801,
+      "content_type": "text/html",
+      "archive_asset_name": "2015-chevrolet-captiva-sport-paint-fitment.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-paint-fitment.html",
+      "limitations": [
+        "This parts catalog supports paint code attribution but is not a complete model-year color availability chart."
+      ]
+    },
+    {
+      "source_id": "work-truck-online-us-2009-isuzu-n-series",
+      "title": "Isuzu Truck Announces 2009 N-Series Low Cab Forward Trucks",
+      "publisher": "Work Truck Online",
+      "document_authority": "contemporary_trade_press_release_republication",
+      "source_type": "trade_press_html",
+      "direct_official_url": null,
+      "retrieval_url": "https://www.worktruckonline.com/news/isuzu-truck-announces-2009-n-series-low-cab-forward-trucks",
+      "landing_url": null,
+      "market": "United States",
+      "model_year_scope": [2009],
+      "model_scope": "2009 Isuzu N-Series diesel trucks, the badge-equivalent source vehicles for the Chevrolet W-Series catalog entry.",
+      "revision_or_document_date": "May 5, 2008",
+      "retrieved_at": "2026-08-06",
+      "page_count": 1,
+      "page_locator": "Archived HTML paragraph beginning, Isuzu 2009 N-Series diesel models are available from the factory.",
+      "sha256": "b8c382e061f27fc6496acbb90b07a8a480ffcd9ae9870c57a3f1376bb3096662",
+      "bytes": 247642,
+      "content_type": "text/html",
+      "archive_asset_name": "2009-isuzu-n-series-colors.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-isuzu-n-series-colors.html",
+      "limitations": [
+        "The article lists the source Isuzu N-Series palette, not a Chevrolet-badged W-Series chart.",
+        "The archive therefore publishes the 2009 Chevrolet W-Series mapping as badge-equivalent evidence, not direct Chevrolet evidence."
+      ]
     }
   ],
   "verified_palette_tables": [
@@ -5027,6 +5333,431 @@
       "bytes": 17883996,
       "pdf_page_count": 121,
       "archive_asset_name": "2023-gm-fleet-guide-v3-mirror.pdf"
+    },
+    {
+      "table_id": "chevrolet-brochure-us-2016-cruze:2016:cruze",
+      "source_id": "chevrolet-brochure-us-2016-cruze",
+      "market": "United States",
+      "model_year": 2016,
+      "catalog_model_ids": ["cruze"],
+      "source_model_label": "All-new 2016 Chevrolet Cruze",
+      "pdf_pages": [26, 27],
+      "page_locator": "PDF page 26, COLORS/WHEELS/FABRICS; restriction footnotes on PDF page 27.",
+      "colors": [
+        "Kinetic Blue Metallic",
+        "Silver Ice Metallic",
+        "Tungsten Metallic",
+        "Siren Red Tintcoat",
+        "Summit White",
+        "Blue Ray Metallic",
+        "Mosaic Black Metallic",
+        "Red Hot"
+      ],
+      "factory_codes": {
+        "Kinetic Blue Metallic": "GD1",
+        "Silver Ice Metallic": "GAN",
+        "Tungsten Metallic": "GXG",
+        "Siren Red Tintcoat": "G1E",
+        "Summit White": "GAZ",
+        "Blue Ray Metallic": "GXH",
+        "Mosaic Black Metallic": "GB8",
+        "Red Hot": "G7C"
+      },
+      "availability_scope": "Complete United States brochure palette for the all-new 2016 Cruze. This does not apply to the separately catalogued 2016 Cruze Limited.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The brochure prints names and restrictions but not RPO codes; codes are cross-checked against the same-model Canadian Chevrolet brochure and contemporary GM color records."
+      ],
+      "color_restrictions": {
+        "Kinetic Blue Metallic": ["Extra-cost color; not available on L or LS."],
+        "Tungsten Metallic": ["Not available on L or LS."],
+        "Siren Red Tintcoat": ["Extra-cost color; not available on L or LS."],
+        "Blue Ray Metallic": ["Not available on L."],
+        "Mosaic Black Metallic": ["Not available on L."],
+        "Red Hot": ["Not available on L."]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-cruze-brochure.pdf",
+      "sha256": "5a9a80a34c4c02e27a5b7a25564ce1d3f2217316dade7daddb73aad2b1ecd17c",
+      "bytes": 2930813,
+      "pdf_page_count": 30,
+      "archive_asset_name": "2016-chevrolet-cruze-brochure.pdf"
+    },
+    {
+      "table_id": "chevrolet-brochure-us-2017-bolt-ev:2017:bolt-ev",
+      "source_id": "chevrolet-brochure-us-2017-bolt-ev",
+      "market": "United States",
+      "model_year": 2017,
+      "catalog_model_ids": ["bolt-ev"],
+      "source_model_label": "2017 Chevrolet Bolt EV",
+      "pdf_pages": [12],
+      "page_locator": "PDF page 12, COLORS/FABRICS/WHEELS.",
+      "colors": [
+        "Arctic Blue Metallic",
+        "Summit White",
+        "Mosaic Black Metallic",
+        "Orange Burst Metallic",
+        "Kinetic Blue Metallic",
+        "Cajun Red Tintcoat",
+        "Nightfall Gray Metallic",
+        "Silver Ice Metallic"
+      ],
+      "factory_codes": {
+        "Arctic Blue Metallic": "GGB",
+        "Summit White": "GAZ",
+        "Mosaic Black Metallic": "GB8",
+        "Orange Burst Metallic": "GGQ",
+        "Kinetic Blue Metallic": "GD1",
+        "Cajun Red Tintcoat": "GPJ",
+        "Nightfall Gray Metallic": "G7Q",
+        "Silver Ice Metallic": "GAN"
+      },
+      "availability_scope": "Complete 2017 Bolt EV brochure palette, with printed interior and trim restrictions preserved per color.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The brochure prints names and restrictions but not RPO codes; codes are cross-checked against contemporary GM Fleet Guide records."
+      ],
+      "color_restrictions": {
+        "Arctic Blue Metallic": ["Requires Dark Galvanized Gray or Dark Galvanized Gray/Sky Cool Gray interior."],
+        "Orange Burst Metallic": ["Extra-cost color."],
+        "Kinetic Blue Metallic": ["Extra-cost color."],
+        "Cajun Red Tintcoat": ["Extra-cost color."],
+        "Silver Ice Metallic": ["Requires Dark Galvanized Gray or Light Ash Gray/Ceramic White interior; Premier only."]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-bolt-ev-brochure.pdf",
+      "sha256": "2fee3a2cc9d5784204430b70d01ce386f9546207b8ea86197baa7202e50c4698",
+      "bytes": 36277199,
+      "pdf_page_count": 18,
+      "archive_asset_name": "2017-chevrolet-bolt-ev-brochure.pdf"
+    },
+    {
+      "table_id": "gm-order-guide-us-2019-blazer:2019:blazer",
+      "source_id": "gm-order-guide-us-2019-blazer",
+      "market": "United States",
+      "model_year": 2019,
+      "catalog_model_ids": ["blazer"],
+      "source_model_label": "2019 Chevrolet Truck All-New Blazer",
+      "pdf_pages": [35],
+      "page_locator": "PDF page 35, COLOR AND TRIM.",
+      "colors": [
+        "Sunlit Bronze Metallic",
+        "Red Hot",
+        "Nightfall Gray Metallic",
+        "Silver Ice Metallic",
+        "Summit White",
+        "Black",
+        "Kinetic Blue Metallic",
+        "Oakwood Metallic",
+        "Graphite Metallic",
+        "Cajun Red Tintcoat"
+      ],
+      "factory_codes": {
+        "Sunlit Bronze Metallic": "G10",
+        "Red Hot": "G7C",
+        "Nightfall Gray Metallic": "G7Q",
+        "Silver Ice Metallic": "GAN",
+        "Summit White": "GAZ",
+        "Black": "GBA",
+        "Kinetic Blue Metallic": "GD1",
+        "Oakwood Metallic": "GE0",
+        "Graphite Metallic": "GPA",
+        "Cajun Red Tintcoat": "GPJ"
+      },
+      "touch_up_codes": {
+        "Sunlit Bronze Metallic": "WA-614D",
+        "Red Hot": "WA-130X",
+        "Nightfall Gray Metallic": "WA-139X",
+        "Silver Ice Metallic": "WA-636R",
+        "Summit White": "WA-8624",
+        "Black": "WA-8555",
+        "Kinetic Blue Metallic": "WA-388A",
+        "Oakwood Metallic": "WA-623D",
+        "Graphite Metallic": "WA-457B",
+        "Cajun Red Tintcoat": "WA-434B"
+      },
+      "availability_scope": "Complete 2019 Blazer Order Guide exterior palette, including RPO, touch-up code, and interior availability matrix.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The normalized union contains every exterior color in the Order Guide; trim and interior restrictions remain attached per color."
+      ],
+      "color_restrictions": {
+        "Sunlit Bronze Metallic": ["Not available on L."],
+        "Red Hot": ["Not available on L or Premier."],
+        "Nightfall Gray Metallic": ["Not available on L."],
+        "Kinetic Blue Metallic": ["Extra cost; not available on L or Premier."],
+        "Oakwood Metallic": ["Not available on L or RS."],
+        "Graphite Metallic": ["Not available on L."],
+        "Cajun Red Tintcoat": ["Extra cost; not available on L."]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-order-guide.pdf",
+      "sha256": "6f74bc108077a4fd3ff8984bd83bf293042cf8b14276ed9806fff0c538cff07c",
+      "bytes": 204478,
+      "pdf_page_count": 45,
+      "archive_asset_name": "2019-chevrolet-blazer-order-guide.pdf"
+    },
+    {
+      "table_id": "chevrolet-brochure-us-2011-volt:2011:volt",
+      "source_id": "chevrolet-brochure-us-2011-volt",
+      "market": "United States",
+      "model_year": 2011,
+      "catalog_model_ids": ["volt"],
+      "source_model_label": "2011 Chevrolet Volt",
+      "pdf_pages": [25, 26],
+      "page_locator": "PDF pages 25 and 26, COLORS; linked initial ordering workbook page 5 for RPO codes.",
+      "colors": [
+        "Silver Ice Metallic",
+        "Black",
+        "Crystal Red Tintcoat",
+        "White Diamond Tricoat",
+        "Cyber Gray Metallic",
+        "Viridian Joule Tricoat"
+      ],
+      "factory_codes": {
+        "Silver Ice Metallic": "GAN",
+        "Black": "GBA",
+        "Crystal Red Tintcoat": "GBE",
+        "White Diamond Tricoat": "GBN",
+        "Cyber Gray Metallic": "GBV",
+        "Viridian Joule Tricoat": "GLC"
+      },
+      "availability_scope": "Complete 2011 Volt brochure palette. The matching initial ordering workbook supplies the RPO code matrix.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The brochure color list is archived on GitHub Releases. RPO codes are transcribed from the linked GM initial ordering workbook because the brochure does not print them."
+      ],
+      "color_restrictions": {
+        "Crystal Red Tintcoat": ["Extra-cost color."],
+        "White Diamond Tricoat": ["Extra-cost color."],
+        "Viridian Joule Tricoat": ["Extra-cost color."]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-volt-brochure.pdf",
+      "sha256": "1ccc11f0b33839a0ebc4c43ef2c55635e9e8ba23b45e618fda57a1d6486a5c4f",
+      "bytes": 3092406,
+      "pdf_page_count": 28,
+      "archive_asset_name": "2011-chevrolet-volt-brochure.pdf"
+    },
+    {
+      "table_id": "gm-upfitter-us-2016-low-cab-forward:2016:low-cab-forward",
+      "source_id": "gm-upfitter-us-2016-low-cab-forward",
+      "market": "United States",
+      "model_year": 2016,
+      "catalog_model_ids": ["low-cab-forward"],
+      "source_model_label": "2016 Chevrolet Low Cab Forward",
+      "pdf_pages": [56],
+      "page_locator": "PDF page 56, printed page 4.3, Paint Code Chart, Figure 4.3.1.",
+      "colors": [
+        "White",
+        "Wheatland Yellow",
+        "Dark Woodland Green",
+        "Cardinal Red",
+        "Dark Blue",
+        "Black"
+      ],
+      "factory_codes": {
+        "White": "729",
+        "Wheatland Yellow": "812",
+        "Dark Woodland Green": "807",
+        "Cardinal Red": "736",
+        "Dark Blue": "695",
+        "Black": "508"
+      },
+      "availability_scope": "Complete exterior paint chart printed in the official 2016 Chevrolet Low Cab Forward Upfitter Integration Guide.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The numeric factory codes are the manufacturer paint codes printed across the official cross-reference chart; the chart does not label them as Chevrolet RPO codes."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-low-cab-forward-upfitter-guide.pdf",
+      "sha256": "f39a6e4e18bb0b54342a4f3837808caa1b0dde50a9da3e725c683c4261f2d7db",
+      "bytes": 44720349,
+      "pdf_page_count": 198,
+      "archive_asset_name": "2016-chevrolet-low-cab-forward-upfitter-guide.pdf"
+    },
+    {
+      "table_id": "new-jersey-contract-us-2008-malibu-classic:2008:malibu-classic-2008",
+      "source_id": "new-jersey-contract-us-2008-malibu-classic",
+      "market": "United States",
+      "model_year": 2008,
+      "catalog_model_ids": ["malibu-classic-2008"],
+      "source_model_label": "2008 Chevrolet Malibu Classic 1ZS69 LS with 2FL",
+      "pdf_pages": [10],
+      "page_locator": "PDF page 10, COLOR AVAILABILITY.",
+      "colors": [
+        "Sandstone Metallic",
+        "White",
+        "Amber Bronze Metallic",
+        "Silverstone Metallic",
+        "Dark Gray Metallic",
+        "Golden Pewter Metallic"
+      ],
+      "factory_codes": {
+        "Sandstone Metallic": "15",
+        "White": "40",
+        "Amber Bronze Metallic": "53",
+        "Silverstone Metallic": "67",
+        "Dark Gray Metallic": "75",
+        "Golden Pewter Metallic": "78"
+      },
+      "availability_scope": "Complete color availability chart for the catalogued 2008 Malibu Classic fleet sedan configuration in a contemporary state procurement record.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The evidence is specific to the 1ZS69 LS with 2FL fleet configuration and does not prove additional retail-only combinations."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-new-jersey-malibu-classic-fleet-contract.pdf",
+      "sha256": "b3660874a56e721286dc5ec811a7d0af4970f511f87f4321aedea85efa047a41",
+      "bytes": 268006,
+      "pdf_page_count": 17,
+      "archive_asset_name": "2008-new-jersey-malibu-classic-fleet-contract.pdf"
+    },
+    {
+      "table_id": "standox-color-index-us-2008-isuzu-npr-nqr:2008:tiltmaster-w-series",
+      "source_id": "standox-color-index-us-2008-isuzu-npr-nqr",
+      "market": "United States",
+      "model_year": 2008,
+      "catalog_model_ids": ["tiltmaster-w-series"],
+      "source_model_label": "Isuzu NPR/NQR badge-equivalent source vehicles for Chevrolet W-Series",
+      "pdf_pages": [15],
+      "page_locator": "PDF page 15, ISUZU EXTERIOR rows for NPR/NQR.",
+      "colors": [
+        "Arc White",
+        "Wheatland Yellow",
+        "Woodland Green",
+        "Cardinal Red",
+        "Dark Blue",
+        "Ebony Black II"
+      ],
+      "factory_codes": {
+        "Arc White": "729",
+        "Wheatland Yellow": "812",
+        "Woodland Green": "807",
+        "Cardinal Red": "736",
+        "Dark Blue": "695",
+        "Ebony Black II": "508"
+      },
+      "availability_scope": "Contemporary Isuzu NPR/NQR palette applied as badge-equivalent evidence for the Chevrolet W-Series catalog entry.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "This is not a direct Chevrolet chart. The archive exposes the badge-equivalent inference rather than silently presenting it as Chevrolet-authored evidence."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-import-advanced-color-information.pdf",
+      "sha256": "8a1d2655b3ce29c2e6e51685de7d395c61e63c4e522d7c6684bcfa8644e6da28",
+      "bytes": 78437,
+      "pdf_page_count": 45,
+      "archive_asset_name": "2008-import-advanced-color-information.pdf"
+    },
+    {
+      "table_id": "work-truck-online-us-2009-isuzu-n-series:2009:tiltmaster-w-series",
+      "source_id": "work-truck-online-us-2009-isuzu-n-series",
+      "market": "United States",
+      "model_year": 2009,
+      "catalog_model_ids": ["tiltmaster-w-series"],
+      "source_model_label": "2009 Isuzu N-Series badge-equivalent source vehicles for Chevrolet W-Series",
+      "pdf_pages": [1],
+      "page_locator": "Archived HTML paragraph listing factory exterior cab colors.",
+      "colors": [
+        "Arc White",
+        "Wheatland Yellow",
+        "Woodland Green",
+        "Cardinal Red",
+        "Dark Blue",
+        "Ebony Black II"
+      ],
+      "availability_scope": "Factory palette reported for the 2009 Isuzu N-Series and applied as badge-equivalent evidence for the Chevrolet W-Series catalog entry.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "This is not a direct Chevrolet chart and the article does not print factory paint codes."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-isuzu-n-series-colors.html",
+      "sha256": "b8c382e061f27fc6496acbb90b07a8a480ffcd9ae9870c57a3f1376bb3096662",
+      "bytes": 247642,
+      "pdf_page_count": 1,
+      "archive_asset_name": "2009-isuzu-n-series-colors.html"
+    },
+    {
+      "table_id": "autoweb-us-2015-captiva-sport:2015:captiva-sport",
+      "source_id": "autoweb-us-2015-captiva-sport",
+      "market": "United States",
+      "model_year": 2015,
+      "catalog_model_ids": ["captiva-sport"],
+      "source_model_label": "2015 Chevrolet Captiva Sport Fleet",
+      "pdf_pages": [1],
+      "page_locator": "Archived HTML, Colors, Exterior; linked genuine GM parts fitment page for code corroboration.",
+      "colors": [
+        "Black",
+        "Blue Ray Metallic",
+        "Brownstone Metallic",
+        "Champagne Silver Metallic",
+        "Ashen Gray Metallic",
+        "Sable Metallic",
+        "Crystal Red Tintcoat",
+        "Silver Ice Metallic",
+        "Arctic Ice"
+      ],
+      "factory_codes": {
+        "Black": "41U",
+        "Blue Ray Metallic": "GXH",
+        "Brownstone Metallic": "GWX",
+        "Champagne Silver Metallic": "GWT",
+        "Ashen Gray Metallic": "GLJ",
+        "Sable Metallic": "G7U",
+        "Crystal Red Tintcoat": "GBE",
+        "Silver Ice Metallic": "GAN",
+        "Arctic Ice": "GBU"
+      },
+      "availability_scope": "Complete nine-color list for the United States 2015 Captiva Sport Fleet catalog entry.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "The availability list is third-party catalog evidence, not a GM-authored color chart.",
+        "Most codes are corroborated by the archived genuine GM parts fitment page. Brownstone Metallic and Sable Metallic use contemporary GM paint cross-references because those two options are absent from the retained fitment page."
+      ],
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-colors.html",
+      "sha256": "032644fa9b2aea80421a8d2e48e6bbe6d0ea91f416e830a916957b238e1e312e",
+      "bytes": 140861,
+      "pdf_page_count": 1,
+      "archive_asset_name": "2015-chevrolet-captiva-sport-colors.html"
+    },
+    {
+      "table_id": "chevrolet-brochure-us-2023-traverse-carryover-2024-limited:2024:traverse-limited",
+      "source_id": "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+      "market": "United States",
+      "model_year": 2024,
+      "catalog_model_ids": ["traverse-limited"],
+      "source_model_label": "2024 Chevrolet Traverse Limited, unchanged second-generation carryover",
+      "pdf_pages": [6, 8, 10, 12, 14, 16],
+      "page_locator": "2023 brochure PDF pages 6, 8, 10, 12, 14, and 16, trim palettes; linked carryover source states the 2024 Traverse Limited has no changes from 2023.",
+      "colors": [
+        "Black Cherry Metallic",
+        "Iridescent Pearl Tricoat",
+        "Mosaic Black Metallic",
+        "Northsky Blue Metallic",
+        "Radiant Red Tintcoat",
+        "Silver Sage Metallic",
+        "Sterling Gray Metallic",
+        "Summit White"
+      ],
+      "factory_codes": {
+        "Black Cherry Metallic": "GLR",
+        "Iridescent Pearl Tricoat": "G1W",
+        "Mosaic Black Metallic": "GB8",
+        "Northsky Blue Metallic": "GA0",
+        "Radiant Red Tintcoat": "GNT",
+        "Silver Sage Metallic": "G6S",
+        "Sterling Gray Metallic": "GXD",
+        "Summit White": "GAZ"
+      },
+      "availability_scope": "Complete 2023 Traverse trim-union palette carried into the unchanged, second-generation 2024 Traverse Limited. This is separate from the redesigned 2024 Traverse palette.",
+      "ingestion_status": "ready_palette_union",
+      "limitations": [
+        "This is a documented carryover inference, not a dedicated 2024 Limited color chart.",
+        "The linked carryover source states that the 2024 Traverse Limited has no changes compared with 2023. Codes are cross-checked against 2023 vehicle labels and 2024 Limited ordering records."
+      ],
+      "color_restrictions": {
+        "Iridescent Pearl Tricoat": ["Extra-cost color."],
+        "Radiant Red Tintcoat": ["Extra-cost color."]
+      },
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-traverse-brochure.pdf",
+      "sha256": "fb71400d95f3e9b17af4d2f91db0a216e1a763e00b8e6b60162febec674638bb",
+      "bytes": 3721580,
+      "pdf_page_count": 25,
+      "archive_asset_name": "2023-chevrolet-traverse-brochure.pdf"
     }
   ],
   "verified_order_guide_samples": [

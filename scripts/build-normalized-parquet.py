@@ -27,6 +27,9 @@ BROCHURE_SOURCE_RELEASE_MANIFEST_PATH = (
 CURRENT_ORDER_GUIDE_SOURCE_RELEASE_MANIFEST_PATH = (
     ROOT / "data" / "sources" / "current-order-guide-source-release-manifest.json"
 )
+MODERN_SUPPLEMENTAL_SOURCE_RELEASE_MANIFEST_PATH = (
+    ROOT / "data" / "sources" / "modern-supplemental-source-release-manifest.json"
+)
 ROCKAUTO_LEADS_PATH = ROOT / "data" / "sources" / "rockauto-paint-code-leads.json"
 SUBURBAN_2000_2007_AUDIT_PATH = ROOT / "data" / "audits" / "suburban-2000-2007.json"
 CURRENT_MANUAL_REFERENCES_PATH = (
@@ -73,7 +76,7 @@ OFFICIAL_PALETTE_AUDIT_CONFIGS = (
         "published_palette_kinds": {"official-exterior-color-chart"},
     },
 )
-SCHEMA_VERSION = 12
+SCHEMA_VERSION = 13
 URL_PATTERN = re.compile(r"https?://[^\s<>\"`]+")
 PLACEHOLDER_SOURCE_HOSTS = frozenset(
     {"example.com", "example.net", "example.org", "example.invalid"}
@@ -115,8 +118,19 @@ SEO_CODE_REJECTED_PLACEHOLDERS = frozenset(
     {"not applicable", "not printed", "not stated", "tbd"}
 )
 SOURCE_OFFICIALITY_VALUES = frozenset({"official", "secondary", "licensed", "unknown"})
-DOCUMENT_AUTHORITY_VALUES = frozenset({"official_manufacturer_document"})
-RETRIEVAL_HOST_TYPE_VALUES = frozenset({"official_live", "archival_mirror"})
+DOCUMENT_AUTHORITY_VALUES = frozenset(
+    {
+        "official_manufacturer_document",
+        "government_procurement_record",
+        "refinish_industry_color_index",
+        "third_party_vehicle_catalog",
+        "genuine_parts_fitment_catalog",
+        "trade_press_release_republication",
+    }
+)
+RETRIEVAL_HOST_TYPE_VALUES = frozenset(
+    {"official_live", "archival_mirror", "publisher_live"}
+)
 MODERN_SOURCE_CLASSIFICATIONS = {
     "official_manufacturer_document_archival_mirror": (
         "official",
@@ -132,6 +146,36 @@ MODERN_SOURCE_CLASSIFICATIONS = {
         "official",
         "official_manufacturer_document",
         "official_live",
+    ),
+    "official_manufacturer_document_with_secondary_carryover_corroboration": (
+        "official",
+        "official_manufacturer_document",
+        "archival_mirror",
+    ),
+    "contemporary_government_procurement_record": (
+        "secondary",
+        "government_procurement_record",
+        "publisher_live",
+    ),
+    "contemporary_refinish_industry_color_index": (
+        "secondary",
+        "refinish_industry_color_index",
+        "publisher_live",
+    ),
+    "third_party_contemporary_vehicle_catalog": (
+        "secondary",
+        "third_party_vehicle_catalog",
+        "publisher_live",
+    ),
+    "third_party_catalog_of_genuine_gm_parts_fitment": (
+        "secondary",
+        "genuine_parts_fitment_catalog",
+        "publisher_live",
+    ),
+    "contemporary_trade_press_release_republication": (
+        "secondary",
+        "trade_press_release_republication",
+        "publisher_live",
     ),
 }
 PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = frozenset(
@@ -149,6 +193,16 @@ QUALIFIED_MODERN_PALETTE_SOURCE_IDS = frozenset(
         "chevrolet-ebrochure-us-2023-colorado",
         "chevrolet-ebrochure-us-2023-silverado-hd-commercial",
         "chevrolet-ebrochure-us-2023-silverado-4500-6500-hd",
+        "chevrolet-brochure-us-2016-cruze",
+        "chevrolet-brochure-us-2017-bolt-ev",
+        "gm-order-guide-us-2019-blazer",
+        "chevrolet-brochure-us-2011-volt",
+        "gm-upfitter-us-2016-low-cab-forward",
+        "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+        "new-jersey-contract-us-2008-malibu-classic",
+        "standox-color-index-us-2008-isuzu-npr-nqr",
+        "autoweb-us-2015-captiva-sport",
+        "work-truck-online-us-2009-isuzu-n-series",
     }
 ) | PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS
 RELEASE_ASSET_MEDIA_TYPES = {
@@ -425,6 +479,7 @@ def is_official_manufacturer_url(value: str) -> bool:
             "chevrolet.com",
             "gmfleet.com",
             "gmfleetorderguide.com",
+            "gmupfitter.com",
         )
     )
 
@@ -451,6 +506,11 @@ def modern_source_classification(item: dict[str, Any]) -> tuple[str, str, str]:
         raise ValueError(
             f"modern source classified as an archival mirror but retrieved from an "
             f"official host: {item.get('source_id')}"
+        )
+    if retrieval_host_type == "publisher_live" and retrieval_is_official:
+        raise ValueError(
+            f"modern secondary source is unexpectedly hosted on a GM domain: "
+            f"{item.get('source_id')}"
         )
     return officiality, document_authority, retrieval_host_type
 
@@ -1506,6 +1566,9 @@ class NormalizedArchiveBuilder:
         self.current_order_guide_source_release_manifest = json_load(
             CURRENT_ORDER_GUIDE_SOURCE_RELEASE_MANIFEST_PATH
         )
+        self.modern_supplemental_source_release_manifest = json_load(
+            MODERN_SUPPLEMENTAL_SOURCE_RELEASE_MANIFEST_PATH
+        )
         self.specialty_color_sources = json_load(
             ROOT / "data" / "sources" / "specialty-color-source-candidates.json"
         )
@@ -2031,6 +2094,11 @@ class NormalizedArchiveBuilder:
             set(current_order_release_entries)
             & PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS
         )
+        supplemental_release_entries = {
+            item["source_id"]: item
+            for item in self.modern_supplemental_source_release_manifest["entries"]
+        }
+        retained_source_ids.update(supplemental_release_entries)
         missing_qualified_palettes = sorted(
             QUALIFIED_MODERN_PALETTE_SOURCE_IDS - retained_source_ids
         )
@@ -2073,6 +2141,9 @@ class NormalizedArchiveBuilder:
                         f"modern source page count changed: {item['source_id']}"
                     )
             release_entry = current_order_release_entries.get(item["source_id"])
+            supplemental_release_entry = supplemental_release_entries.get(
+                item["source_id"]
+            )
             if item["source_id"] in PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS:
                 if release_entry is None:
                     raise ValueError(
@@ -2103,6 +2174,20 @@ class NormalizedArchiveBuilder:
                         f"published Order Guide source lacks cited-page review: "
                         f"{item['source_id']}"
                     )
+            if supplemental_release_entry is not None:
+                for source_key, release_key in (
+                    ("sha256", "sha256"),
+                    ("bytes", "bytes"),
+                    ("archive_asset_name", "asset_name"),
+                    ("archive_url", "archive_url"),
+                ):
+                    if item.get(source_key) != supplemental_release_entry.get(
+                        release_key
+                    ):
+                        raise ValueError(
+                            f"supplemental source Release metadata changed: "
+                            f"{item['source_id']}.{source_key}"
+                        )
             retrieval_url = item["retrieval_url"]
             direct_official_url = item.get("direct_official_url")
             historical_official_url = item.get("historical_official_url")
@@ -2130,7 +2215,10 @@ class NormalizedArchiveBuilder:
                 archive_relpath=local_relpath,
                 notes="; ".join(item.get("limitations") or []),
             )
-            if item.get("page_count") is not None:
+            if (
+                item.get("page_count") is not None
+                and str(item.get("content_type") or "").startswith("application/pdf")
+            ):
                 self.source_pdf_page_counts[source_id] = int(item["page_count"])
             self.add_source_link(
                 source_id,
@@ -5057,6 +5145,17 @@ class NormalizedArchiveBuilder:
             for item in self.modern_color_sources["sources"]
             if item.get("local_file_path")
         }
+        supplemental_source_ids = {
+            item["source_id"]
+            for item in self.modern_supplemental_source_release_manifest["entries"]
+        }
+        modern_artifacts.update(
+            {
+                item["source_id"]: item
+                for item in self.modern_color_sources["sources"]
+                if item["source_id"] in supplemental_source_ids
+            }
+        )
         current_order_artifacts = {
             item["source_id"]: item
             for item in self.current_order_guide_source_release_manifest["entries"]
@@ -5131,6 +5230,10 @@ class NormalizedArchiveBuilder:
                         if gm_artifact and gm_artifact.get("pdf_page_count") is not None
                         else int(modern_artifact["page_count"])
                         if modern_artifact
+                        and str(modern_artifact.get("content_type") or "").startswith(
+                            "application/pdf"
+                        )
+                        and modern_artifact.get("page_count") is not None
                         else int(current_order_artifact["pdf_page_count"])
                         if current_order_artifact
                         else int(specialty_artifact["pdf_page_count"])
@@ -5204,6 +5307,8 @@ class NormalizedArchiveBuilder:
                 evidence_locator_type = "pdf_page"
             elif str(revision["media_type"]).startswith("image/"):
                 evidence_locator_type = "image_region"
+            elif str(revision["media_type"]).startswith("text/html"):
+                evidence_locator_type = "html_section"
             else:
                 raise ValueError(
                     f"verified availability has no machine-readable evidence locator: "

@@ -25,7 +25,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
         cls.components = cls.builder.rows["paint_scheme_components"]
 
     def test_schema_uses_nullable_codes_and_required_controlled_statuses(self) -> None:
-        self.assertEqual(12, BUILD.SCHEMA_VERSION)
+        self.assertEqual(13, BUILD.SCHEMA_VERSION)
         expected = {
             "color_availability": ("factory_code", "factory_code_status"),
             "paint_scheme_components": ("factory_code", "factory_code_status"),
@@ -338,6 +338,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "ck-series:1993",
                 "colorado:2025",
                 "colorado:2026",
+                "express:2011",
                 "express:2012",
                 "express:2013",
                 "express:2014",
@@ -358,6 +359,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "silverado:2026",
                 "silverado-hd:2025",
                 "silverado-hd:2026",
+                "silverado-hd:2011",
                 "sportvan:1979",
                 "sportvan:1980",
                 "suburban:1979",
@@ -375,6 +377,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
                 "tahoe:2003",
                 "tahoe:2005",
                 "tahoe:2006",
+                "tahoe:2011",
                 "tahoe:2012",
                 "tahoe:2013",
                 "tahoe:2014",
@@ -389,7 +392,7 @@ class FactoryCodeNormalizationTest(unittest.TestCase):
             },
             {row["model_year_id"] for row in overlays},
         )
-        self.assertEqual(868, len(overlays))
+        self.assertEqual(899, len(overlays))
         self.assertEqual(
             {"specialty_palette_subset"},
             {row["evidence_class"] for row in overlays},

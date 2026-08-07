@@ -158,10 +158,12 @@ class CurrentPaletteParquetProvenanceTest(unittest.TestCase):
         expected_counts = {
             "blazer": 9,
             "blazer-ev": 8,
+            "camaro": 9,
             "colorado": 8,
             "corvette": 14,
             "equinox": 8,
             "express": 4,
+            "malibu": 6,
             "silverado": 11,
             "silverado-ev": 2,
             "silverado-hd": 14,
@@ -170,7 +172,7 @@ class CurrentPaletteParquetProvenanceTest(unittest.TestCase):
             "trailblazer": 9,
             "trax": 10,
         }
-        self.assertEqual(115, len(rows))
+        self.assertEqual(130, len(rows))
         self.assertEqual(
             expected_counts,
             dict(Counter(row["model_id"] for row in rows)),
@@ -215,6 +217,8 @@ class CurrentPaletteParquetProvenanceTest(unittest.TestCase):
             {
                 17,
                 20,
+                27,
+                31,
                 32,
                 36,
                 37,

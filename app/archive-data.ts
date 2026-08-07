@@ -8,6 +8,7 @@ import suburbanBrochurePaletteAudit from "../data/audits/suburban-brochure-palet
 import corvette1963to1972Audit from "../data/audits/corvette-official-palettes-1963-1972.json";
 import monteCarlo1970to1979Audit from "../data/audits/monte-carlo-official-palettes-1970-1979.json";
 import pSeries1969to1978Audit from "../data/audits/p-series-official-palettes-1969-1978.json";
+import modernFleetPaletteAudit from "../data/audits/modern-fleet-palettes-2008-2026.json";
 import modernColorSourceData from "../data/sources/modern-chevrolet-color-source-candidates.json";
 import specialtyColorSourceData from "../data/sources/specialty-color-source-candidates.json";
 
@@ -1007,6 +1008,7 @@ type OfficialPaletteSource = {
   title: string;
   publisher: string;
   source_type: string;
+  content_type?: string | null;
   url: string;
   archive_url: string | null;
   artifact_sha256: string;
@@ -4240,6 +4242,7 @@ type ModernPaletteSource = {
   source_id: string;
   title: string;
   source_type: string;
+  content_type?: string | null;
   direct_official_url: string | null;
   historical_official_url?: string | null;
   retrieval_url: string;
@@ -4268,6 +4271,28 @@ type ModernPaletteTable = {
   color_restrictions?: Record<string, string[]>;
   factory_codes?: Record<string, string>;
   touch_up_codes?: Record<string, string>;
+  evidence_class?: "qualified_palette_union" | "specialty_palette_subset";
+};
+
+type ModernFleetAuditRecord = {
+  record_id: string;
+  model_id: string;
+  model_name: string;
+  model_year: number;
+  audit_state: string;
+  evidence_class: "qualified_palette_union" | "specialty_palette_subset";
+  source_ids: string[];
+  pdf_pages: number[];
+  source_model_labels: string[];
+  program_scopes: string[];
+  colors: Array<{
+    name: string;
+    factory_codes: string[];
+    source_pages: number[];
+    regular_source_pages: number[];
+    program_scopes: string[];
+  }>;
+  limitations: string[];
 };
 
 const publishedModernPaletteSourceIds = new Set([
@@ -4300,6 +4325,16 @@ const publishedModernPaletteSourceIds = new Set([
   "gm-online-order-guide-pdf-22821",
   "gm-online-order-guide-pdf-22878",
   "gm-online-order-guide-pdf-23208",
+  "chevrolet-brochure-us-2016-cruze",
+  "chevrolet-brochure-us-2017-bolt-ev",
+  "gm-order-guide-us-2019-blazer",
+  "chevrolet-brochure-us-2011-volt",
+  "gm-upfitter-us-2016-low-cab-forward",
+  "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+  "new-jersey-contract-us-2008-malibu-classic",
+  "standox-color-index-us-2008-isuzu-npr-nqr",
+  "autoweb-us-2015-captiva-sport",
+  "work-truck-online-us-2009-isuzu-n-series",
 ]);
 
 const modernPaletteSources = new Map(
@@ -4308,6 +4343,70 @@ const modernPaletteSources = new Map(
     .map((source) => [source.source_id, source]),
 );
 
+const retainedModernPaletteTables =
+  modernColorSourceData.verified_palette_tables as ModernPaletteTable[];
+const retainedModernPaletteKeys = new Set(
+  retainedModernPaletteTables.flatMap((table) =>
+    table.catalog_model_ids.map((modelId) => `${modelId}:${table.model_year}`),
+  ),
+);
+const generatedModernPaletteTables: ModernPaletteTable[] = (
+  modernFleetPaletteAudit.records as ModernFleetAuditRecord[]
+)
+  .filter(
+    (record) =>
+      record.colors.length > 0 &&
+      !retainedModernPaletteKeys.has(`${record.model_id}:${record.model_year}`),
+  )
+  .map((record) => {
+    if (record.source_ids.length !== 1) {
+      throw new Error(`Generated modern palette has multiple sources: ${record.record_id}`);
+    }
+    const factoryCodes: Record<string, string> = {};
+    const colorRestrictions: Record<string, string[]> = {};
+    for (const color of record.colors) {
+      if (color.factory_codes.length > 1) {
+        colorRestrictions[color.name] = [
+          `The cited Fleet Guide pages print multiple factory codes for this normalized color name: ${color.factory_codes.join(", ")}. No single code is selected.`,
+        ];
+      } else if (color.factory_codes[0]) {
+        factoryCodes[color.name] = color.factory_codes[0];
+      }
+      if (color.program_scopes.length > 0 && color.regular_source_pages.length === 0) {
+        colorRestrictions[color.name] = [
+          ...(colorRestrictions[color.name] ?? []),
+          `Only printed on the cited ${color.program_scopes.join(", ")} program page or pages. This does not establish unrestricted retail availability.`,
+        ];
+      }
+    }
+    const pageLabel = record.pdf_pages.length === 1 ? "PDF page" : "PDF pages";
+    return {
+      table_id: record.record_id,
+      source_id: record.source_ids[0],
+      model_year: record.model_year,
+      catalog_model_ids: [record.model_id],
+      source_model_label: record.source_model_labels.join("; ") || record.model_name,
+      pdf_pages: record.pdf_pages,
+      page_locator: `${pageLabel} ${record.pdf_pages.join(", ")}, EXTERIOR COLORS and model identification.`,
+      colors: record.colors.map((color) => color.name),
+      availability_scope:
+        record.evidence_class === "specialty_palette_subset"
+          ? `Only the cited ${record.program_scopes.join(", ")} program palette is established.`
+          : "Official Fleet Guide model page palette union. Exact trim, equipment, body, and program restrictions remain subject to the governing Order Guide unless printed on the cited page.",
+      ingestion_status: "ready_palette_union",
+      limitations: record.limitations,
+      ...(Object.keys(factoryCodes).length ? { factory_codes: factoryCodes } : {}),
+      ...(Object.keys(colorRestrictions).length
+        ? { color_restrictions: colorRestrictions }
+        : {}),
+      evidence_class: record.evidence_class,
+    };
+  });
+const allModernPaletteTables = [
+  ...retainedModernPaletteTables,
+  ...generatedModernPaletteTables,
+];
+
 function buildModernPaletteGenerations() {
   type PaletteCitation = {
     source: ModernPaletteSource;
@@ -4315,6 +4414,7 @@ function buildModernPaletteGenerations() {
     pageLocators: Set<string>;
     availabilityScopes: Set<string>;
     limitations: Set<string>;
+    evidenceClasses: Set<string>;
   };
 
   type PaletteColor = {
@@ -4330,10 +4430,11 @@ function buildModernPaletteGenerations() {
     modelYear: number;
     citations: Map<string, PaletteCitation>;
     colors: Map<string, PaletteColor>;
+    evidenceClasses: Set<string>;
   };
 
   const aggregates = new Map<string, PaletteAggregate>();
-  for (const table of modernColorSourceData.verified_palette_tables as ModernPaletteTable[]) {
+  for (const table of allModernPaletteTables) {
     if (!publishedModernPaletteSourceIds.has(table.source_id)) continue;
     if (table.ingestion_status !== "ready_palette_union") {
       throw new Error(`Published modern table is not ingestion-ready: ${table.table_id}`);
@@ -4350,6 +4451,7 @@ function buildModernPaletteGenerations() {
           modelYear: table.model_year,
           citations: new Map<string, PaletteCitation>(),
           colors: new Map<string, PaletteColor>(),
+          evidenceClasses: new Set<string>(),
         };
 
       const citation = aggregate.citations.get(source.source_id) ?? {
@@ -4358,11 +4460,15 @@ function buildModernPaletteGenerations() {
         pageLocators: new Set<string>(),
         availabilityScopes: new Set<string>(),
         limitations: new Set<string>(),
+        evidenceClasses: new Set<string>(),
       };
       citation.sourceLabels.add(table.source_model_label);
       citation.pageLocators.add(table.page_locator);
       citation.availabilityScopes.add(table.availability_scope);
       table.limitations.forEach((limitation) => citation.limitations.add(limitation));
+      const tableEvidenceClass = table.evidence_class ?? "qualified_palette_union";
+      citation.evidenceClasses.add(tableEvidenceClass);
+      aggregate.evidenceClasses.add(tableEvidenceClass);
       aggregate.citations.set(source.source_id, citation);
 
       for (const color of table.colors) {
@@ -4398,6 +4504,11 @@ function buildModernPaletteGenerations() {
       (citation) => {
         const { source } = citation;
         const retrievedDate = source.retrieved_at?.slice(0, 10);
+        const citationEvidenceClass = citation.evidenceClasses.has(
+          "qualified_palette_union",
+        )
+          ? "qualified_palette_union"
+          : "specialty_palette_subset";
         return {
           name: source.title,
           chart: `EXTERIOR COLORS palette union for ${[...citation.sourceLabels].join("; ")}`,
@@ -4417,10 +4528,12 @@ function buildModernPaletteGenerations() {
             ? { historicalOfficialUrl: source.historical_official_url }
             : {}),
           ...(source.landing_url ? { landingUrl: source.landing_url } : {}),
-          evidenceClass: "qualified_palette_union",
+          evidenceClass: citationEvidenceClass,
           ...(source.sha256 ? { artifactSha256: source.sha256 } : {}),
           ...(source.bytes ? { artifactBytes: source.bytes } : {}),
-          ...(source.page_count ? { pdfPageCount: source.page_count } : {}),
+          ...(source.content_type === "application/pdf" && source.page_count
+            ? { pdfPageCount: source.page_count }
+            : {}),
           ...(source.retrieved_at ? { retrievedAt: source.retrieved_at } : {}),
           availabilityScope: [...citation.availabilityScopes].join(" "),
           limitations: [...citation.limitations],
@@ -4429,6 +4542,11 @@ function buildModernPaletteGenerations() {
     );
     const primarySource = citations[0];
     if (!primarySource) throw new Error(`No modern source citation for ${aggregate.modelId} ${year}`);
+    const generationEvidenceClass = aggregate.evidenceClasses.has(
+      "qualified_palette_union",
+    )
+      ? "qualified_palette_union"
+      : "specialty_palette_subset";
     const fleetGuideOnly = [...aggregate.citations.values()].every(
       ({ source }) => source.source_type === "fleet_guide_pdf",
     );
@@ -4452,7 +4570,9 @@ function buildModernPaletteGenerations() {
       years: [year],
       listingCount: colors.length,
       revisionNote:
-        `This ${sourceKind} palette was visually checked against every cited page. It is a qualified union across the cited trims or body series, not a complete option-code chart. Exact printed restrictions are retained; further applicability and paint codes require the governing Online Order Guide.`,
+        generationEvidenceClass === "specialty_palette_subset"
+          ? `This ${sourceKind} specialty palette was checked against every cited page. It establishes only the named program scope, not the regular retail palette. Exact printed restrictions are retained; further applicability requires the governing Online Order Guide.`
+          : `This ${sourceKind} palette was checked against every cited page. It is a qualified union across the cited trims or body series, not a complete option-code chart. Exact printed restrictions are retained; further applicability and paint codes require the governing Online Order Guide.`,
       sources: {
         [year]: {
           ...primarySource,
@@ -4488,6 +4608,7 @@ function buildModernPaletteGenerations() {
           availability: {
             [year]: {
               state: "restricted" as const,
+              applicationType: "manufacturer_listed",
               label: color,
               code: codeDisplay,
               ...(factoryCode !== "not printed"
@@ -5000,7 +5121,23 @@ function mergeCatalogModel(model: CatalogModel): ArchiveModel {
     ...(audited?.generations ?? []),
     ...(specialtyColorGenerationsByModel.get(model.id) ?? []),
     ...(modernPaletteGenerationsByModel.get(model.id) ?? []),
-  ].map((generation) => applyPlatformEra(model.id, generation));
+  ]
+    .map((generation) => applyPlatformEra(model.id, generation))
+    .map((generation) => ({
+      ...generation,
+      catalogSources: [
+        ...new Set([
+          ...(generation.catalogSources ?? []),
+          ...model.model_year_ranges
+            .filter((range) =>
+              generation.years.some(
+                (year) => Number(year) >= range.start && Number(year) <= range.end,
+              ),
+            )
+            .flatMap((range) => range.evidence_urls),
+        ]),
+      ],
+    }));
   const reviewedYears = new Set(
     auditedGenerations.flatMap((generation) => Object.keys(generation.sources)),
   );

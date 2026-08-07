@@ -1,33 +1,27 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_at": "2026-08-04T13:10:00Z",
   "scope": "Exact-year Wikimedia Commons color-photo leads for current Chevrolet U.S. archive rows. This is a discovery and staging queue, not an archive manifest and not factory-paint evidence.",
   "policy": {
     "required_before_manifest_merge": [
-      "VPS crawl preflight passes the project disk floor",
       "complete Commons API source response retained",
       "original and preview bytes fetched through the configured crawler host",
       "Commons SHA-1 and local SHA-256 verified",
       "complete vehicle visually reviewed",
       "license and attribution retained",
       "original and preview copied to the pinned ipadmom GitHub Release",
-      "GitHub-reported byte counts and downloaded SHA-256 verified"
+      "GitHub-reported byte counts and downloaded SHA-256 verified",
+      "exact VPS original, preview, and verification copies deleted after successful verification"
     ],
     "factory_paint_boundary": "A Commons caption that prints an exact palette label supports a qualified visual example only. It does not prove original factory finish or a paint code.",
     "market_boundary": "A non-U.S. vehicle is not linked to the U.S. palette merely because the same color words appear.",
     "adjacent_year_inference": false
   },
-  "vps_preflight": {
-    "checked_at": "2026-08-04T13:03:00Z",
-    "host_identifier_retained": false,
-    "free_gib": 32.28,
-    "total_gib": 179.4,
-    "free_percent": 18.0,
-    "minimum_free_gib": 40,
-    "minimum_free_percent": 20,
-    "dedicated_chevrolet_state_present": false,
-    "passed": false,
-    "result": "No original or preview was fetched. The shared VPS is below the project disk floor and has no dedicated Chevrolet crawler state."
+  "vps_transfer_policy": {
+    "staging_scope": "One bounded candidate batch in the dedicated Chevrolet crawler directory.",
+    "verification": "Upload each original and preview to the pinned ipadmom Release, download it again, and compare byte length and SHA-256.",
+    "cleanup": "Delete the exact VPS staging and verification copies immediately after the Release copy passes verification.",
+    "persistent_vps_payload": false
   },
   "queued_candidates": [
     {

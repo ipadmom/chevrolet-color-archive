@@ -24,14 +24,26 @@ const EXPECTED_PDF_PAGE_COUNT = 11_600;
 const EXPECTED_MODERN_SOURCE_COUNT = 24;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 20;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
-const EXPECTED_MODERN_TABLE_COUNT = 83;
-const EXPECTED_MODERN_ASSERTION_COUNT = 638;
+const EXPECTED_MODERN_TABLE_COUNT = 93;
+const EXPECTED_MODERN_ASSERTION_COUNT = 711;
 const PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS = new Set([
   "gm-online-order-guide-pdf-22745",
   "gm-online-order-guide-pdf-22775",
   "gm-online-order-guide-pdf-22821",
   "gm-online-order-guide-pdf-22878",
   "gm-online-order-guide-pdf-23208",
+]);
+const PUBLISHED_SUPPLEMENTAL_PALETTE_SOURCE_IDS = new Set([
+  "autoweb-us-2015-captiva-sport",
+  "chevrolet-brochure-us-2011-volt",
+  "chevrolet-brochure-us-2016-cruze",
+  "chevrolet-brochure-us-2017-bolt-ev",
+  "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+  "gm-order-guide-us-2019-blazer",
+  "gm-upfitter-us-2016-low-cab-forward",
+  "new-jersey-contract-us-2008-malibu-classic",
+  "standox-color-index-us-2008-isuzu-npr-nqr",
+  "work-truck-online-us-2009-isuzu-n-series",
 ]);
 const EXPECTED_PUBLISHED_RECORD_COUNT = 892;
 const EXPECTED_PUBLISHED_SPECIALTY_RECORD_COUNT = 888;
@@ -51,6 +63,8 @@ const SPECIALTY_COLOR_SOURCE_RELATIVE_PATH =
   "data/sources/specialty-color-source-candidates.json";
 const MODERN_COLOR_SOURCE_RELATIVE_PATH =
   "data/sources/modern-chevrolet-color-source-candidates.json";
+const MODERN_SUPPLEMENTAL_MANIFEST_RELATIVE_PATH =
+  "data/sources/modern-supplemental-source-release-manifest.json";
 const CURRENT_ORDER_GUIDE_MANIFEST_RELATIVE_PATH =
   "data/sources/current-order-guide-source-release-manifest.json";
 const DEFAULT_MANIFEST_RELATIVE_PATH =
@@ -930,6 +944,10 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     repositoryRoot,
     CURRENT_ORDER_GUIDE_MANIFEST_RELATIVE_PATH,
   );
+  const modernSupplementalManifestPath = path.join(
+    repositoryRoot,
+    MODERN_SUPPLEMENTAL_MANIFEST_RELATIVE_PATH,
+  );
   const [
     archiveDataSource,
     earlyAuditText,
@@ -940,6 +958,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     specialtyColorSourceText,
     modernColorSourceText,
     currentOrderGuideManifestText,
+    modernSupplementalManifestText,
     importedAppUrls,
   ] =
     await Promise.all([
@@ -952,6 +971,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
       readFile(specialtyColorSourcePath, "utf8"),
       readFile(modernColorSourcePath, "utf8"),
       readFile(currentOrderGuideManifestPath, "utf8"),
+      readFile(modernSupplementalManifestPath, "utf8"),
       collectAppReleaseUrls(path.join(repositoryRoot, "app"), repositoryRoot),
     ]);
 
@@ -1194,9 +1214,20 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
       entry,
     ]),
   );
+  const modernSupplementalManifest = JSON.parse(modernSupplementalManifestText);
+  invariant(
+    modernSupplementalManifest.release_tag === RELEASE_TAG &&
+      modernSupplementalManifest.verified_source_asset_count === 12 &&
+      modernSupplementalManifest.entries.length === 12,
+    "modern supplemental source manifest is incomplete or targets the wrong Release",
+  );
+  const modernSupplementalEntriesByUrl = new Map(
+    modernSupplementalManifest.entries.map((entry) => [entry.archive_url, entry]),
+  );
   const allReleaseEntriesByUrl = new Map([
     ...manifestEntriesByUrl,
     ...currentOrderGuideEntriesByUrl,
+    ...modernSupplementalEntriesByUrl,
   ]);
 
   const modernColorSource = JSON.parse(modernColorSourceText);
@@ -1320,6 +1351,29 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     allAppReleaseUrls.add(source.archive_url);
   }
 
+  const modernSupplementalEntriesBySourceId = new Map(
+    modernSupplementalManifest.entries.map((entry) => [entry.source_id, entry]),
+  );
+  const retainedModernSupplementalSources = modernColorSource.sources.filter(
+    ({ source_id: sourceId }) => modernSupplementalEntriesBySourceId.has(sourceId),
+  );
+  invariant(
+    retainedModernSupplementalSources.length === 12,
+    "modern source ledger must retain all twelve supplemental Release assets",
+  );
+  for (const source of retainedModernSupplementalSources) {
+    const entry = modernSupplementalEntriesBySourceId.get(source.source_id);
+    invariant(
+      source.archive_asset_name === entry.asset_name &&
+        source.archive_url === entry.archive_url &&
+        source.sha256 === entry.sha256 &&
+        source.bytes === entry.bytes,
+      `${source.source_id} does not match its supplemental Release artifact`,
+    );
+    modernSourcesById.set(source.source_id, source);
+    allAppReleaseUrls.add(source.archive_url);
+  }
+
   const modernPaletteTables = modernColorSource.verified_palette_tables;
   invariant(
     modernPaletteTables.length === EXPECTED_MODERN_TABLE_COUNT,
@@ -1378,6 +1432,7 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
         [
           ...expectedModernSourceIds,
           ...PUBLISHED_ORDER_GUIDE_PALETTE_SOURCE_IDS,
+          ...PUBLISHED_SUPPLEMENTAL_PALETTE_SOURCE_IDS,
         ].sort(),
       ),
     "modern palette tables must use all retained palette sources across both Releases",

@@ -21,14 +21,16 @@ const modern = JSON.parse(
   ),
 );
 
-test("current-model color-photo queue stays blocked below the VPS disk floor", () => {
-  assert.equal(queue.vps_preflight.passed, false);
-  assert.ok(queue.vps_preflight.free_gib < queue.vps_preflight.minimum_free_gib);
+test("current-model color-photo queue verifies Release bytes and deletes VPS payloads", () => {
+  assert.equal(queue.schema_version, 2);
+  assert.equal(queue.vps_transfer_policy.persistent_vps_payload, false);
+  assert.match(queue.vps_transfer_policy.verification, /byte length and SHA-256/);
+  assert.match(queue.vps_transfer_policy.cleanup, /Delete the exact VPS staging/);
   assert.ok(
-    queue.vps_preflight.free_percent < queue.vps_preflight.minimum_free_percent,
+    queue.policy.required_before_manifest_merge.some((item) =>
+      /deleted after successful verification/.test(item),
+    ),
   );
-  assert.equal(queue.vps_preflight.dedicated_chevrolet_state_present, false);
-  assert.match(queue.vps_preflight.result, /No original or preview was fetched/);
 });
 
 test("queued Commons captions match exact reviewed U.S. palette labels", () => {

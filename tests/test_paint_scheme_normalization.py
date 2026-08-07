@@ -596,9 +596,9 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         self.assertEqual(18, suburban_1980["verified_color_count"])
         tahoe_2011 = model_year_rows["tahoe:2011"]
         self.assertEqual(
-            "reviewed_specialty_palette_subset", tahoe_2011["research_status"]
+            "reviewed_qualified_palette_union", tahoe_2011["research_status"]
         )
-        self.assertEqual(1, tahoe_2011["verified_color_count"])
+        self.assertEqual(12, tahoe_2011["verified_color_count"])
 
     def test_specialty_overlap_keeps_the_governing_source_primary(self) -> None:
         availability = [
@@ -627,7 +627,7 @@ class PaintSchemeNormalizationTest(unittest.TestCase):
         )
 
     def test_schema_manifest_contract_exposes_both_tables(self) -> None:
-        self.assertEqual(12, BUILD.SCHEMA_VERSION)
+        self.assertEqual(13, BUILD.SCHEMA_VERSION)
         for field in ("d85_stripe_colors", "wheel_flare_color", "source_annotation"):
             self.assertIn(field, BUILD.SCHEMAS["paint_schemes"].names)
         self.assertEqual(["paint_scheme_id"], BUILD.PRIMARY_KEYS["paint_schemes"])

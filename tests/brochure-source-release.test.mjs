@@ -34,7 +34,7 @@ test("brochure source Release manifest closes every app-fed citation", async () 
       assetCount: 174,
       controllingAssetCount: 30,
       appFedCitationCount: 30,
-      appReleaseUrlCount: 171,
+      appReleaseUrlCount: 183,
       publishedRecordCount: 892,
       publishedSpecialtyRecordCount: 888,
       publishedQualifiedHistoricalRecordCount: 4,

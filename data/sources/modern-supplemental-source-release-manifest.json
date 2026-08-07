@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-06",
+  "release_tag": "brochure-source-archive-v1",
+  "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
+  "verified_source_asset_count": 12,
+  "verified_source_asset_bytes": 115486504,
+  "verification": "Each source was uploaded, downloaded again from GitHub Releases, compared by byte count and SHA-256, and then deleted from the exact VPS staging and verification paths.",
+  "entries": [
+    {
+      "source_id": "chevrolet-brochure-us-2016-cruze",
+      "asset_name": "2016-chevrolet-cruze-brochure.pdf",
+      "bytes": 2930813,
+      "sha256": "5a9a80a34c4c02e27a5b7a25564ce1d3f2217316dade7daddb73aad2b1ecd17c",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-cruze-brochure.pdf"
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2017-bolt-ev",
+      "asset_name": "2017-chevrolet-bolt-ev-brochure.pdf",
+      "bytes": 36277199,
+      "sha256": "2fee3a2cc9d5784204430b70d01ce386f9546207b8ea86197baa7202e50c4698",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-bolt-ev-brochure.pdf"
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2019-blazer",
+      "asset_name": "2019-chevrolet-blazer-brochure.pdf",
+      "bytes": 23590932,
+      "sha256": "fe4f6a320fe73504e5a07b5231f57ce859aa8d51c0bb381eec1b2be10bd1847a",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-brochure.pdf"
+    },
+    {
+      "source_id": "gm-order-guide-us-2019-blazer",
+      "asset_name": "2019-chevrolet-blazer-order-guide.pdf",
+      "bytes": 204478,
+      "sha256": "6f74bc108077a4fd3ff8984bd83bf293042cf8b14276ed9806fff0c538cff07c",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-order-guide.pdf"
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2011-volt",
+      "asset_name": "2011-chevrolet-volt-brochure.pdf",
+      "bytes": 3092406,
+      "sha256": "1ccc11f0b33839a0ebc4c43ef2c55635e9e8ba23b45e618fda57a1d6486a5c4f",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-volt-brochure.pdf"
+    },
+    {
+      "source_id": "gm-upfitter-us-2016-low-cab-forward",
+      "asset_name": "2016-chevrolet-low-cab-forward-upfitter-guide.pdf",
+      "bytes": 44720349,
+      "sha256": "f39a6e4e18bb0b54342a4f3837808caa1b0dde50a9da3e725c683c4261f2d7db",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-low-cab-forward-upfitter-guide.pdf"
+    },
+    {
+      "source_id": "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+      "asset_name": "2023-chevrolet-traverse-brochure.pdf",
+      "bytes": 3721580,
+      "sha256": "fb71400d95f3e9b17af4d2f91db0a216e1a763e00b8e6b60162febec674638bb",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-traverse-brochure.pdf"
+    },
+    {
+      "source_id": "new-jersey-contract-us-2008-malibu-classic",
+      "asset_name": "2008-new-jersey-malibu-classic-fleet-contract.pdf",
+      "bytes": 268006,
+      "sha256": "b3660874a56e721286dc5ec811a7d0af4970f511f87f4321aedea85efa047a41",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-new-jersey-malibu-classic-fleet-contract.pdf"
+    },
+    {
+      "source_id": "standox-color-index-us-2008-isuzu-npr-nqr",
+      "asset_name": "2008-import-advanced-color-information.pdf",
+      "bytes": 78437,
+      "sha256": "8a1d2655b3ce29c2e6e51685de7d395c61e63c4e522d7c6684bcfa8644e6da28",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-import-advanced-color-information.pdf"
+    },
+    {
+      "source_id": "autoweb-us-2015-captiva-sport",
+      "asset_name": "2015-chevrolet-captiva-sport-colors.html",
+      "bytes": 140861,
+      "sha256": "032644fa9b2aea80421a8d2e48e6bbe6d0ea91f416e830a916957b238e1e312e",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-colors.html"
+    },
+    {
+      "source_id": "gm-parts-fitment-us-2015-captiva-sport",
+      "asset_name": "2015-chevrolet-captiva-sport-paint-fitment.html",
+      "bytes": 213801,
+      "sha256": "bd08b3c596814ab6a31f0e2e67fdbfe0a396bf8efe7b296ffbf2becee1ffdfa0",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-paint-fitment.html"
+    },
+    {
+      "source_id": "work-truck-online-us-2009-isuzu-n-series",
+      "asset_name": "2009-isuzu-n-series-colors.html",
+      "bytes": 247642,
+      "sha256": "b8c382e061f27fc6496acbb90b07a8a480ffcd9ae9870c57a3f1376bb3096662",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-isuzu-n-series-colors.html"
+    }
+  ],
+  "rejected_release_assets": [
+    {
+      "asset_name": "2011-chevrolet-volt-ordering-workbook.html",
+      "bytes": 3038,
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "status": "access_challenge_not_evidence",
+      "reason": "The retrieved object is a client challenge page and contains no workbook content. It is not cited or ingested."
+    },
+    {
+      "asset_name": "2024-chevrolet-traverse-limited-carryover.txt",
+      "bytes": 513,
+      "sha256": "c676251624953b0311023a8269743a455da3d6e649ff29c61a4eda64becffcf5",
+      "status": "access_challenge_not_evidence",
+      "reason": "The retrieved object is a bot verification notice and contains no article content. It is not cited or ingested."
+    }
+  ]
+}

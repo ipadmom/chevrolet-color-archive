@@ -125,6 +125,7 @@ async function loadArchiveModels() {
     monteCarlo1970Source,
     pSeries1969Source,
     modernColorSource,
+    modernFleetPaletteAuditSource,
     specialtyColorSource,
   ] = await Promise.all([
       readFile(new URL("app/archive-data.ts", root), "utf8"),
@@ -152,6 +153,10 @@ async function loadArchiveModels() {
       ),
       readFile(
         new URL("data/sources/modern-chevrolet-color-source-candidates.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/modern-fleet-palettes-2008-2026.json", root),
         "utf8",
       ),
       readFile(
@@ -203,6 +208,10 @@ async function loadArchiveModels() {
     .replace(
       /^import modernColorSourceData from "\.\.\/data\/sources\/modern-chevrolet-color-source-candidates\.json";\r?\n/m,
       `const modernColorSourceData = ${modernColorSource};\n`,
+    )
+    .replace(
+      /^import modernFleetPaletteAudit from "\.\.\/data\/audits\/modern-fleet-palettes-2008-2026\.json";\r?\n/m,
+      `const modernFleetPaletteAudit = ${modernFleetPaletteAuditSource};\n`,
     )
     .replace(
       /^import specialtyColorSourceData from "\.\.\/data\/sources\/specialty-color-source-candidates\.json";\r?\n/m,
@@ -622,8 +631,8 @@ test("real Tahoe matrices join exact T1XX regular and specialty rows", async () 
 
   const matrix2022 = buildArchiveMatrix(tahoe, "2022");
   assert.deepEqual(matrix2022.years, ["2021", "2022", "2023", "2024"]);
-  assert.deepEqual(matrix2022.reviewedYears, ["2022", "2024"]);
-  assert.equal(matrix2022.colors.length, 13);
+  assert.deepEqual(matrix2022.reviewedYears, ["2021", "2022", "2023", "2024"]);
+  assert.equal(matrix2022.colors.length, 20);
   assert.equal(
     matrix2022.colors.filter((color) => color.availability["2022"]).length,
     10,
@@ -636,7 +645,7 @@ test("real Tahoe matrices join exact T1XX regular and specialty rows", async () 
     matrix2022.colors.every(
       (color) =>
         Object.keys(color.availability).every((year) =>
-          ["2022", "2024"].includes(year),
+          ["2021", "2022", "2023", "2024"].includes(year),
         ),
     ),
   );
@@ -733,15 +742,21 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
   const impala = buildArchiveMatrix(byId.get("impala"), "2012");
   assert.equal(
     impala.colors.filter((color) => color.availability["2012"]).length,
-    30,
+    38,
   );
-  assert.ok(
-    impala.colors.every(
-      (color) =>
-        !color.availability["2012"] ||
-        color.availability["2012"].applicationType ===
-          "authorized_upfitter_post_build",
+  assert.deepEqual(
+    Object.fromEntries(
+      Object.entries(
+        impala.colors
+          .filter((color) => color.availability["2012"])
+          .reduce((counts, color) => {
+            const applicationType = color.availability["2012"].applicationType;
+            counts[applicationType] = (counts[applicationType] ?? 0) + 1;
+            return counts;
+          }, {}),
+      ).sort(),
     ),
+    { authorized_upfitter_post_build: 30, manufacturer_listed: 8 },
   );
   const impalaLimited = buildArchiveMatrix(byId.get("impala-limited"), "2014");
   assert.equal(
@@ -823,7 +838,7 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
   const bolt = buildArchiveMatrix(byId.get("bolt-euv"), "2023");
   assert.equal(
     bolt.colors.filter((color) => color.availability["2023"]).length,
-    7,
+    13,
   );
 
   const capricePpv = byId.get("caprice-ppv");
@@ -853,7 +868,7 @@ test("real PPV, SSV, fleet, and authorized-upfitter tranches stay program-qualif
         caprice.colors.filter((item) => item.availability[year]).length,
       ]),
     ),
-    { 2011: 14, 2012: 16, 2013: 14, 2014: 7, 2015: 6, 2016: 6, 2017: 4 },
+    { 2011: 21, 2012: 23, 2013: 22, 2014: 13, 2015: 13, 2016: 12, 2017: 9 },
   );
   const hugoBlue = caprice.colors.filter(
     (item) => item.name === "Hugo Blue (Dark Blue) Metallic",

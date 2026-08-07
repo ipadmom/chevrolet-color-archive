@@ -74,6 +74,19 @@ QUALIFIED_PALETTE_ARTIFACTS = {
     },
 }
 
+SUPPLEMENTAL_QUALIFIED_PALETTE_ARTIFACTS = {
+    "autoweb-us-2015-captiva-sport",
+    "chevrolet-brochure-us-2011-volt",
+    "chevrolet-brochure-us-2016-cruze",
+    "chevrolet-brochure-us-2017-bolt-ev",
+    "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+    "gm-order-guide-us-2019-blazer",
+    "gm-upfitter-us-2016-low-cab-forward",
+    "new-jersey-contract-us-2008-malibu-classic",
+    "standox-color-index-us-2008-isuzu-npr-nqr",
+    "work-truck-online-us-2009-isuzu-n-series",
+}
+
 
 class SpecialtyProgramDataTest(unittest.TestCase):
     @classmethod
@@ -926,6 +939,9 @@ class ModernFleetProvenanceTest(unittest.TestCase):
         builder.current_order_guide_source_release_manifest = BUILD.json_load(
             BUILD.CURRENT_ORDER_GUIDE_SOURCE_RELEASE_MANIFEST_PATH
         )
+        builder.modern_supplemental_source_release_manifest = BUILD.json_load(
+            BUILD.MODERN_SUPPLEMENTAL_SOURCE_RELEASE_MANIFEST_PATH
+        )
         builder.rows = {name: [] for name in BUILD.SCHEMAS}
         builder.sources_by_url = {}
         builder.source_id_to_url = {}
@@ -958,6 +974,16 @@ class ModernFleetProvenanceTest(unittest.TestCase):
         cls.current_order_archive_source_ids = {
             BUILD.stable_id("src", BUILD.canonical_url(entry["archive_url"]))
             for entry in cls.current_order_entries.values()
+        }
+        cls.supplemental_entries = {
+            entry["source_id"]: entry
+            for entry in builder.modern_supplemental_source_release_manifest[
+                "entries"
+            ]
+        }
+        cls.supplemental_archive_source_ids = {
+            BUILD.stable_id("src", BUILD.canonical_url(entry["archive_url"]))
+            for entry in cls.supplemental_entries.values()
         }
 
     def test_gap_inventory_binds_artifacts_to_retrieval_urls(self) -> None:
@@ -1007,11 +1033,15 @@ class ModernFleetProvenanceTest(unittest.TestCase):
         self.assertEqual(
             set(self.retained_manifest)
             | set(self.current_order_entries)
-            | self.current_order_archive_source_ids,
+            | self.current_order_archive_source_ids
+            | set(self.supplemental_entries)
+            | self.supplemental_archive_source_ids,
             set(self.revisions) - set(self.brochure_release_source_ids.values()),
         )
         self.assertEqual(
-            set(QUALIFIED_PALETTE_ARTIFACTS) | set(self.current_order_entries),
+            set(QUALIFIED_PALETTE_ARTIFACTS)
+            | set(self.current_order_entries)
+            | SUPPLEMENTAL_QUALIFIED_PALETTE_ARTIFACTS,
             set(BUILD.QUALIFIED_MODERN_PALETTE_SOURCE_IDS),
         )
 

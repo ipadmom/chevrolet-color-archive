@@ -55,13 +55,15 @@ secondary component. Component rows explicitly set
 `standalone_availability_asserted = false`; they do not create color
 availability claims.
 
-Factory-code fields in schema version 12 retain the version 4 null semantics.
-Schema version 12 also requires `application_type` on every availability row and
+Factory-code fields in schema version 13 retain the version 4 null semantics.
+Schema version 13 also requires `application_type` on every availability row and
 an `other_availability_state_count` research aggregate so program-specific
 states remain explicit without breaking row-count reconciliation. Schema
 version 7 added `evidence_locator_type`. PDF claims use `pdf_page` and
 retain nonempty parsed PDF pages. A retained brochure photograph uses
-`image_region` and may legitimately have no parsed PDF page. A code printed by
+`image_region` and may legitimately have no parsed PDF page. Schema version 13
+adds `html_section` for an archived HTML source, retains the exact section
+locator, and records neither parsed PDF pages nor a PDF page count. A code printed by
 the governing source is stored with `printed_in_source`. When a reviewed source
 does not supply a code, the value is null and the status is either
 `not_printed_in_source` or `not_stated_in_source`. The matching evidence claim

@@ -17,7 +17,7 @@ test("2024 Fleet Guide publishes only exact current-model page labels", async ()
     (table) => table.source_id === sourceId && table.model_year === 2024,
   );
 
-  assert.equal(modern.summary.verified_palette_table_count, 83);
+  assert.equal(modern.summary.verified_palette_table_count, 93);
   assert.equal(tables.length, 15);
   assert.equal(
     tables.reduce((count, table) => count + table.colors.length, 0),

@@ -129,8 +129,8 @@ def main() -> int:
 
     if data["schema_version"] != 1:
         raise AssertionError("unexpected modern-source schema version")
-    if len(sources) != 37:
-        raise AssertionError("modern-source inventory no longer contains 37 sources")
+    if len(sources) != 49:
+        raise AssertionError("modern-source inventory no longer contains 49 sources")
     require_unique([source["source_id"] for source in sources], "source_id")
     require_unique([table["table_id"] for table in tables], "table_id")
     require_unique([sample["sample_id"] for sample in samples], "sample_id")

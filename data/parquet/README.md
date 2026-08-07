@@ -16,17 +16,19 @@ year-specific color availability, multi-color paint schemes, source documents,
 evidence links, and photo provenance. `manifest.json` records every table's row count, primary key,
 foreign keys, and SHA-256.
 
-The current export uses schema version 12. In this version,
+The current export uses schema version 13. In this version,
 `color_availability.application_type` is required and records how each color
 was offered or applied, separately from whether the source says it was
 available. RPO, SEO, literal SEO-cell state, normalized and literal WA values,
 authorized-upfitter order codes, minimum-batch, and factory-installation claims
 are structured fields rather than prose-only annotations.
-Schema version 12 adds normalized audited-program and program-entry tables. They
+Schema version 12 added normalized audited-program and program-entry tables. They
 retain alternate official regular tables, roof and top colors, two-tones,
 stripes, moldings, body-finish options, chassis and component finishes, and
 publication boundaries without promoting those rows to ordinary body-color
 availability.
+Schema version 13 adds archived HTML section locators without pretending those
+sources have PDF pages.
 
 Rows and dictionary inputs are deterministically sorted, and volatile build
 timestamps are kept out of Parquet metadata. Identical tracked inputs therefore
@@ -37,12 +39,12 @@ produce byte-identical Parquet files; a two-pass build check covers this rule.
 | Table | Grain | Current rows |
 |---|---|---:|
 | `models.parquet` | One Chevrolet U.S. nameplate | 149 |
-| `generations.parquet` | One contiguous display, platform band, or exact program timeline per model | 1,340 |
+| `generations.parquet` | One contiguous display, platform band, or exact program timeline per model | 1,584 |
 | `model_years.parquet` | One catalogued model and model-year pair | 1,792 |
-| `model_year_generation_memberships.parquet` | One generation, specialty overlay, or exact program partition attached to a model-year | 2,664 |
+| `model_year_generation_memberships.parquet` | One generation, specialty overlay, or exact program partition attached to a model-year | 2,695 |
 | `platform_eras.parquet` | One sourced base, platform, or era band | 218 |
-| `color_identities.parquet` | One normalized color timeline identity within a model generation | 2,378 |
-| `color_availability.parquet` | One source-backed model, year, and color listing | 2,753 |
+| `color_identities.parquet` | One normalized color timeline identity within a model generation | 5,028 |
+| `color_availability.parquet` | One source-backed model, year, and color listing | 5,403 |
 | `paint_schemes.parquet` | One exact model-year two-tone or decor-package combination | 1,369 |
 | `paint_scheme_components.parquet` | One primary or secondary component of a paint scheme | 2,738 |
 | `audited_color_programs.parquet` | One exact audited model-year color, finish, component, or combination program | 80 |
@@ -54,15 +56,15 @@ produce byte-identical Parquet files; a two-pass build check covers this rule.
 | `secondary_paint_fitments.parquet` | One product listed for one audited RockAuto configuration | 111 |
 | `color_code_crosswalk_candidates.parquet` | One unverified retailer code and model-year research lead | 96 |
 | `supplemental_color_mentions.parquet` | One exact research-only color mention from an incomplete model-year source | 0 |
-| `sources.parquet` | One canonical source URL | 2,981 |
-| `source_revisions.parquet` | One immutable file revision of a source | 1,909 |
-| `evidence_claims.parquet` | One exact source-revision and locator claim for a published availability row | 2,753 |
-| `source_links.parquet` | One source-to-claim citation | 32,316 |
+| `sources.parquet` | One canonical source URL | 3,009 |
+| `source_revisions.parquet` | One immutable file revision of a source | 1,933 |
+| `evidence_claims.parquet` | One exact source-revision and locator claim for a published availability row | 5,403 |
+| `source_links.parquet` | One source-to-claim citation | 39,653 |
 | `photo_assets.parquet` | One archived Wikimedia Commons original | 304 |
 | `model_photo_links.parquet` | One model or exact-year photo selection-context association | 307 |
 | `photo_color_links.parquet` | One qualified or tentative photo-to-color association | 6 |
 
-Counts in this README describe the 2026-08-04 build. `manifest.json` controls
+Counts in this README describe the 2026-08-06 build. `manifest.json` controls
 if later research changes them.
 
 ## Evidence guarantees
@@ -75,7 +77,8 @@ if later research changes them.
   `claim_type = color_availability_evidence`.
 - Every published availability also has one row in `evidence_claims.parquet`
   tied to an immutable `source_revisions.parquet` SHA-256 and either a parsed
-  list of exact PDF pages or a retained image-region locator. This is the
+  list of exact PDF pages, a retained image-region locator, or an archived HTML
+  section locator. This is the
   versioned evidence layer; the URL is only the logical source identity.
 - Schema version 12 retains nullable `factory_code` and
   `transcribed_factory_code` fields. The companion status is required and
@@ -135,18 +138,18 @@ if later research changes them.
 - A missing color row means only that the year remains unverified. It is never
   a negative availability claim.
 - `model_year_research.parquet` distinguishes 106 complete `color_chart_verified`
-  model-years, six `reviewed_qualified_historical_table` years, 72 qualified
-  palette-union years, 42 years whose strongest status is
-  `reviewed_specialty_palette_subset`, 13 reviewed no-chart years, and 1,553
+  model-years, six `reviewed_qualified_historical_table` years, 364 qualified
+  palette-union years, 11 years whose strongest status is
+  `reviewed_specialty_palette_subset`, 13 reviewed no-chart years, and 1,292
   `color_chart_unverified` years.
 - Rows with `claim_status = published_qualified_palette_union` preserve the
   exact reviewed official palette union without claiming more option-state
   coverage than the cited Fleet Guide, eBrochure, or Online Order Guide table
-  supplies. This build has 590 qualified-palette rows across 72 model-years.
+  supplies. This build has 3,240 qualified-palette rows across 364 model-years.
 - Rows with `claim_status = published_specialty_palette_subset` preserve 928
   exact, visually reviewed specialty or public-safety listings across 69
-  application model-years. In 42 of those model-years, the specialty subset is
-  the strongest research status. The other 27 coexist with a separately complete or
+  application model-years. In 11 of those model-years, the specialty subset is
+  the strongest research status. The other 58 coexist with a separately complete or
   qualified regular palette. A specialty subset never makes the regular
   palette complete.
 - Four rows with `claim_status = published_qualified_historical_table` preserve
@@ -164,7 +167,7 @@ if later research changes them.
   as supporting provenance. `supplemental_color_mentions.parquet` is therefore
   empty in this build.
 - `model_year_generation_memberships.parquet` makes every generation assignment
-  explicit. Each model-year has exactly one primary membership. There are 868
+  explicit. Each model-year has exactly one primary membership. There are 899
   `specialty_overlay` memberships and one `qualified_historical_overlay`
   membership, while three `program_partition` memberships preserve the other simultaneous 2000 Tahoe
   programs beside the primary base/LS program.
@@ -193,22 +196,22 @@ if later research changes them.
 
 ### `application_type` values
 
-`application_type` is non-null for all 2,753 availability rows. It describes
+`application_type` is non-null for all 5,403 availability rows. It describes
 the mechanism evidenced by the source, not the color’s availability state or
 whether the surrounding model-year palette is complete.
 
 | Value | All availability rows | Semantics |
 |---|---:|---|
-| `manufacturer_listed` | 1,821 | Ordinary manufacturer-listed color availability, including regular charts, qualified exact programs, and qualified palette unions. All rows of this type are outside the specialty subset. |
+| `manufacturer_listed` | 4,471 | Ordinary manufacturer-listed color availability, including regular charts, qualified exact programs, and qualified palette unions. All rows of this type are outside the specialty subset. |
 | `authorized_upfitter_post_build` | 180 | The vehicle was built in a required base finish, then painted by an authorized upfitter. This is not a factory-applied finish claim. |
 | `factory_installed_special_equipment_option` | 4 | The primary source expressly says the SEO paint was installed at the assembly plant. |
 | `manufacturer_special_equipment_option` | 32 | A manufacturer SEO paint listing with exact eligible model scope, without a separate assertion that the paint was applied at the assembly plant. |
 | `special_equipment_option_paint` | 589 | An SEO paint row for an exact police, special-service, retail-and-fleet, or configuration-specific program. Read `availability_state` for open, planned, unavailable, or closed timing. |
 | `specialty_program_unspecified` | 41 | A legacy reviewed specialty row whose source proves the restriction but does not support a narrower application-mechanism classification. It does not imply factory application. |
 | `standard_program_palette` | 86 | A standard, non-SEO color listed for an exact PPV or SSV program palette, or an ordinary qualified-historical chart row. This consists of 82 specialty-program rows and four qualified-historical rows. |
-| **All availability rows** | **2,753** | Every source-backed color availability row in the current export. |
+| **All availability rows** | **5,403** | Every source-backed color availability row in the current export. |
 
-Of the 2,753 rows, 928 have
+Of the 5,403 rows, 928 have
 `claim_status = published_specialty_palette_subset`; the four ordinary
 qualified-historical rows remain outside that specialty total.
 

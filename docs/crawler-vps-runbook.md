@@ -7,9 +7,9 @@ sources: crawler/README.md
 
 # Crawler VPS runbook
 
-This runbook stages the crawler on a dedicated Linux account. It does not
-authorize using an existing shared production VPS. Confirm the target host and
-storage budget before deployment.
+This runbook stages the crawler on the configured VPS. Keep each download batch
+bounded, upload completed archive assets promptly, verify the remote copy, then
+delete the exact uploaded payload from crawler storage.
 
 ## 1. Host prerequisites
 
@@ -17,7 +17,7 @@ Recommended minimum for an initial General Motors heritage pass:
 
 - 2 vCPU;
 - 4 GB RAM;
-- 40 GB free disk, measured before each large manifest;
+- enough free disk for the next bounded batch and its active temporary files;
 - Ubuntu 24.04 or equivalent;
 - outbound HTTPS;
 - no inbound public service.
@@ -107,9 +107,9 @@ sudo -u chevy-colors python3 -m unittest discover \
   -s /opt/chevy-color-archive/crawler/tests -v
 ```
 
-Do not begin if the projected source corpus plus two working copies would leave
-less than 20 percent free space. The second copy covers a partial download,
-rendered OCR images, and backup overhead.
+Measure free space before each batch. Size the batch to fit the current host.
+Do not retain uploaded binary payloads merely to preserve an arbitrary free
+space percentage.
 
 ## 4. Review and enqueue a manifest
 
@@ -287,6 +287,12 @@ Back up all of:
 - `derived/text/`;
 - the exact manifest and code revision used.
 
+After an asset is uploaded to its pinned GitHub Release, verify the uploaded
+byte count and SHA-256 against the crawler manifest. Then delete only that exact
+local or VPS binary payload. Keep the manifest, source metadata, attribution,
+hash, release URL, queue record, and research output. Never delete a partial
+download or an unverified asset.
+
 Never restore the SQLite file without its corresponding object and derived-text
 trees. After restoration, run `audit --full-hash` before resuming workers.
 
@@ -294,7 +300,7 @@ trees. After restoration, run `audit --full-hash` before resuming workers.
 
 Stop the timer and preserve state if:
 
-- free disk falls below 20 percent;
+- the next bounded job cannot fit in the currently available space;
 - an official host begins returning HTML, access challenges, or rate limits;
 - object or page-text hashes fail;
 - redirects leave the allowlisted host;

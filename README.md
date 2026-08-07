@@ -527,9 +527,11 @@ documented in [docs/modern-color-source-audit.md](docs/modern-color-source-audit
 [docs/gm-color-table-extraction.md](docs/gm-color-table-extraction.md), and
 [docs/gm-color-table-consolidation.md](docs/gm-color-table-consolidation.md).
 
-The VPS crawler runbook refuses large runs below 40 GB free or 20 percent free
-disk. Do not start this archive crawler on a host carrying an active court-data
-capture workload.
+The VPS crawler uses bounded batches. After each asset reaches its pinned GitHub
+Release and its byte count and SHA-256 are verified, the exact VPS payload is
+deleted while its manifest, attribution, hash, URL, queue state, and research
+output are retained. Do not start this archive crawler on a host carrying an
+active court-data capture workload.
 
 ## Known source boundaries
 
