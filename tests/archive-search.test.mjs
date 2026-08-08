@@ -5,6 +5,7 @@ import ts from "typescript";
 
 const root = new URL("../", import.meta.url);
 let searchModulePromise;
+let archiveModelsPromise;
 
 async function loadSearchModule() {
   searchModulePromise ??= (async () => {
@@ -112,10 +113,23 @@ async function loadSearchModule() {
 }
 
 async function loadArchiveModels() {
+  archiveModelsPromise ??= (async () => {
   const [
     archiveSource,
     catalogSource,
     platformSource,
+    currentHistoricalSource,
+    currentCorvette1973to1982Source,
+    currentCorvette1984to2007Source,
+    currentExpress1997to2005Source,
+    currentExpress1996to2007RemainingSource,
+    currentBlazer1983to1994Source,
+    currentPickup1999to2007Source,
+    currentSilveradoHd2001to2007RemainingSource,
+    currentTrailblazer2002to2007Source,
+    currentEquinox2005to2007Source,
+    currentBlazer1969to2005Source,
+    currentSuburban1935to2006Source,
     tahoe1995Source,
     tahoe2001Source,
     suburbanEarlySource,
@@ -131,6 +145,54 @@ async function loadArchiveModels() {
       readFile(new URL("app/archive-data.ts", root), "utf8"),
       readFile(new URL("data/catalog/chevrolet-us-nameplates.json", root), "utf8"),
       readFile(new URL("data/catalog/chevrolet-platform-eras.json", root), "utf8"),
+      readFile(
+        new URL("data/audits/current-nameplate-historical-palettes.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-corvette-1973-1982.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-corvette-1984-2007.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-express-1997-1998-2004-2005.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-express-1996-2007-remaining.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-blazer-1983-1994.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-pickups-silverado-1999-2007-colorado-2004-2007.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-silverado-hd-2001-2007-remaining.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-trailblazer-2002-2007.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-equinox-2005-2007.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/current-blazer-1969-1982-1995-2005.json", root),
+        "utf8",
+      ),
+      readFile(
+        new URL("data/audits/suburban-1935-1968-2006.json", root),
+        "utf8",
+      ),
       readFile(new URL("data/audits/tahoe-1995-2000.json", root), "utf8"),
       readFile(new URL("data/audits/tahoe-2001-2007.json", root), "utf8"),
       readFile(new URL("data/audits/suburban-1969-1976.json", root), "utf8"),
@@ -172,6 +234,54 @@ async function loadArchiveModels() {
     .replace(
       /^import platformEraData from "\.\.\/data\/catalog\/chevrolet-platform-eras\.json";\r?\n/m,
       `const platformEraData = ${platformSource};\n`,
+    )
+    .replace(
+      /^import currentHistoricalPaletteAudit from "\.\.\/data\/audits\/current-nameplate-historical-palettes\.json";\r?\n/m,
+      `const currentHistoricalPaletteAudit = ${currentHistoricalSource};\n`,
+    )
+    .replace(
+      /^import currentCorvette1973to1982Audit from "\.\.\/data\/audits\/current-corvette-1973-1982\.json";\r?\n/m,
+      `const currentCorvette1973to1982Audit = ${currentCorvette1973to1982Source};\n`,
+    )
+    .replace(
+      /^import currentCorvette1984to2007Audit from "\.\.\/data\/audits\/current-corvette-1984-2007\.json";\r?\n/m,
+      `const currentCorvette1984to2007Audit = ${currentCorvette1984to2007Source};\n`,
+    )
+    .replace(
+      /^import currentExpress1997to2005Audit from "\.\.\/data\/audits\/current-express-1997-1998-2004-2005\.json";\r?\n/m,
+      `const currentExpress1997to2005Audit = ${currentExpress1997to2005Source};\n`,
+    )
+    .replace(
+      /^import currentExpress1996to2007RemainingAudit from "\.\.\/data\/audits\/current-express-1996-2007-remaining\.json";\r?\n/m,
+      `const currentExpress1996to2007RemainingAudit = ${currentExpress1996to2007RemainingSource};\n`,
+    )
+    .replace(
+      /^import currentBlazer1983to1994Audit from "\.\.\/data\/audits\/current-blazer-1983-1994\.json";\r?\n/m,
+      `const currentBlazer1983to1994Audit = ${currentBlazer1983to1994Source};\n`,
+    )
+    .replace(
+      /^import currentPickup1999to2007Audit from "\.\.\/data\/audits\/current-pickups-silverado-1999-2007-colorado-2004-2007\.json";\r?\n/m,
+      `const currentPickup1999to2007Audit = ${currentPickup1999to2007Source};\n`,
+    )
+    .replace(
+      /^import currentSilveradoHd2001to2007RemainingAudit from "\.\.\/data\/audits\/current-silverado-hd-2001-2007-remaining\.json";\r?\n/m,
+      `const currentSilveradoHd2001to2007RemainingAudit = ${currentSilveradoHd2001to2007RemainingSource};\n`,
+    )
+    .replace(
+      /^import currentTrailblazer2002to2007Audit from "\.\.\/data\/audits\/current-trailblazer-2002-2007\.json";\r?\n/m,
+      `const currentTrailblazer2002to2007Audit = ${currentTrailblazer2002to2007Source};\n`,
+    )
+    .replace(
+      /^import currentEquinox2005to2007Audit from "\.\.\/data\/audits\/current-equinox-2005-2007\.json";\r?\n/m,
+      `const currentEquinox2005to2007Audit = ${currentEquinox2005to2007Source};\n`,
+    )
+    .replace(
+      /^import currentBlazer1969to2005Audit from "\.\.\/data\/audits\/current-blazer-1969-1982-1995-2005\.json";\r?\n/m,
+      `const currentBlazer1969to2005Audit = ${currentBlazer1969to2005Source};\n`,
+    )
+    .replace(
+      /^import currentSuburban1935to2006Audit from "\.\.\/data\/audits\/suburban-1935-1968-2006\.json";\r?\n/m,
+      `const currentSuburban1935to2006Audit = ${currentSuburban1935to2006Source};\n`,
     )
     .replace(
       /^import tahoe1995to2000Audit from "\.\.\/data\/audits\/tahoe-1995-2000\.json";\r?\n/m,
@@ -223,7 +333,9 @@ async function loadArchiveModels() {
       target: ts.ScriptTarget.ES2022,
     },
   }).outputText;
-  return (await import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`)).models;
+    return (await import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`)).models;
+  })();
+  return archiveModelsPromise;
 }
 
 function generation({
@@ -409,7 +521,15 @@ test("real Suburban no-chart years remain in exact era-bounded matrices", async 
     "1965",
     "1966",
   ]);
-  assert.deepEqual(matrix1963.reviewedYears, ["1963"]);
+  assert.deepEqual(matrix1963.reviewedYears, [
+    "1960",
+    "1961",
+    "1962",
+    "1963",
+    "1964",
+    "1965",
+    "1966",
+  ]);
   assert.equal(matrix1963.colors.length, 0);
 
   for (const selectedYear of ["1970", "1971"]) {
@@ -422,13 +542,66 @@ test("real Suburban no-chart years remain in exact era-bounded matrices", async 
       "1971",
       "1972",
     ]);
-    assert.deepEqual(matrix.reviewedYears, ["1969", "1970", "1971", "1972"]);
+    assert.deepEqual(matrix.reviewedYears, [
+      "1967",
+      "1968",
+      "1969",
+      "1970",
+      "1971",
+      "1972",
+    ]);
     assert.equal(
       matrix.colors.filter((color) => color.availability[selectedYear]).length,
       0,
     );
     assert.equal(matrix.colors.length, 30);
   }
+});
+
+test("Silverado HD 2005 cannot inherit colors from the later GMT910 era", async () => {
+  const [{ buildArchiveMatrix, relevantYearBand }, models] = await Promise.all([
+    loadSearchModule(),
+    loadArchiveModels(),
+  ]);
+  const silveradoHd = models.find((model) => model.id === "silverado-hd");
+  assert.ok(silveradoHd);
+
+  assert.deepEqual(relevantYearBand(silveradoHd, "2005"), [
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+  ]);
+
+  const matrix = buildArchiveMatrix(silveradoHd, "2005");
+  assert.deepEqual(matrix.years, [
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+  ]);
+  assert.deepEqual(matrix.reviewedYears, [
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+  ]);
+  assert.equal(
+    matrix.colors.filter((color) => color.availability["2005"]).length,
+    35,
+  );
+  assert.equal(
+    matrix.colors.some(
+      (color) => color.availability["2008"] || color.availability["2009"],
+    ),
+    false,
+  );
 });
 
 test("matrix bands retain era years but populate only exact sourced cells", async () => {
@@ -1566,6 +1739,11 @@ test("all-field search exposes Forest Service Green as an unresolved non-route r
     explorer,
     /THIS IS AN EXACT, REVIEWED SPECIALTY-PAINT SUBSET[^\n]+NOT THE COMPLETE MODEL-YEAR EXTERIOR-COLOR PALETTE/,
   );
+  assert.match(
+    explorer,
+    /THIS IS AN EXACT, REVIEWED PALETTE FOR THE NAMED MODEL, VARIANT, OR PAINT PROGRAM/,
+  );
+  assert.doesNotMatch(explorer, /ALL-TAHOE PALETTE/);
   assert.match(
     explorer,
     /open=\{[\s\S]*!yearSource \|\|[\s\S]*yearSourceIsIncompleteSubset \|\|[\s\S]*yearSourceIsReviewedNoChart[\s\S]*\}/,

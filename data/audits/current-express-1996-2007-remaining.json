@@ -1,0 +1,2485 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "market": "United States",
+  "visibility": "public",
+  "audit_as_of": "2026-08-07",
+  "dataset_kind": "current_nameplate_historical_variant_color_tables",
+  "scope": "Direct visual transcription of every exterior color table or complete named paint list printed for the 1996, 1999, 2000, 2006, and 2007 Chevrolet Express in the retained official General Motors vehicle information kits, plus explicit retained source gaps for 2001 through 2003. Passenger, Cargo, Commercial Cutaway, RV Cutaway, YF2 Ambulance, YF7 Upfitter, Mobility/Paratransit, regular ZY1, SEO solid paint, and other simultaneous programs remain separate. No color, code, restriction, or availability is projected across a variant or model year.",
+  "method": {
+    "review_type": "complete_document_visual_review",
+    "render_scale": "Every page was reviewed in contact sheets; cited chart pages were rendered at 4x for 1996, 1999, and 2000 and at 2x or higher for 2006 and 2007.",
+    "source_integrity": "Each retained PDF matched the SHA-256 and byte count in the GM Heritage artifact ledger.",
+    "code_policy": "source_color_code preserves the chart's Color Code 1, Color Code, or literal none value. rpo_code repeats a printed regular paint code. seo_code repeats a printed SEO option code. No WA number is supplied unless the reviewed year and chart printed it.",
+    "absence_policy": "A program marked not located documents only that no separate chart for that program was found in the complete reviewed kit. It does not prove that the program was unavailable through every ordering channel.",
+    "gap_policy": "No 2001, 2002, or 2003 Express kit appears in the retained official Chevrolet kit index or the 691 source artifact corpus. The available Astro kits for those years are different models and were not used as substitutes. Adjacent Express years were not used to infer a palette.",
+    "archive_manifest_review": "The three retained source release manifests were searched by SHA-256. None of the five reviewed PDFs was listed, so each source retains a null archive URL and an explicit not listed status."
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-1996-chevrolet-g-van",
+      "title": "1996 Chevrolet G Van Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-G-Van.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "ab/08/ab08a6e92b13d07b659617fb7214b732f49b1bd35ad9f8545d2111deb743617b.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "ab08a6e92b13d07b659617fb7214b732f49b1bd35ad9f8545d2111deb743617b",
+      "bytes": 2955878,
+      "pdf_page_count": 114,
+      "retrieval_started_at": "2026-07-21T06:32:02+00:00",
+      "retrieved_at": "2026-07-21T06:32:06+00:00",
+      "scope_note": "The official index calls this G Van. PDF page 5 identifies the 1996 Chevy Express introduction, and PDF pages 61 through 69 are a distinct Express Van order guide section. The legacy Chevy Van and Sportvan sections were excluded."
+    },
+    {
+      "source_id": "gm-heritage-1999-chevrolet-g-van",
+      "title": "1999 Chevrolet G Van Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-G-Van.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "54/ba/54ba2e9ef9e60c890ba9155f2e88b5fe9aa1f713d5a5c44cddb0b8cb21eac5b6.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "54ba2e9ef9e60c890ba9155f2e88b5fe9aa1f713d5a5c44cddb0b8cb21eac5b6",
+      "bytes": 3266823,
+      "pdf_page_count": 120,
+      "retrieval_started_at": "2026-07-21T06:32:51+00:00",
+      "retrieved_at": "2026-07-21T06:32:55+00:00",
+      "scope_note": "The official index calls this G Van. The internal cover identifies Express Passenger, Cargo, and Cutaway, and the complete kit contains separate Express charts for seven programs."
+    },
+    {
+      "source_id": "gm-heritage-2000-chevrolet-express-van",
+      "title": "2000 Chevrolet Express Van Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Express-Van.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "9b/8b/9b8b3f588894c0733de014e8f28a7632572e077d9683a8d6908f7e7afdf196a3.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "9b8b3f588894c0733de014e8f28a7632572e077d9683a8d6908f7e7afdf196a3",
+      "bytes": 13641113,
+      "pdf_page_count": 140,
+      "retrieval_started_at": "2026-07-21T06:33:20+00:00",
+      "retrieved_at": "2026-07-21T06:33:35+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2006-chevrolet-express-van",
+      "title": "2006 Chevrolet Express Van Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Express-Van.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "0f/26/0f26ae80c40fb3f86da6fb35a8830555441f4cfc9ced994fff989c83293beac4.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "0f26ae80c40fb3f86da6fb35a8830555441f4cfc9ced994fff989c83293beac4",
+      "bytes": 34269290,
+      "pdf_page_count": 222,
+      "retrieval_started_at": "2026-07-21T06:40:50+00:00",
+      "retrieved_at": "2026-07-21T06:41:28+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2007-chevrolet-express-van",
+      "title": "2007 Chevrolet Express Van Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Express-Van.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "41/eb/41ebba829f083762ba57276262d2c57e9c53bcaff2c8f86906ba639c9646bb3f.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "41ebba829f083762ba57276262d2c57e9c53bcaff2c8f86906ba639c9646bb3f",
+      "bytes": 35364623,
+      "pdf_page_count": 233,
+      "retrieval_started_at": "2026-07-21T06:42:35+00:00",
+      "retrieved_at": "2026-07-21T06:43:14+00:00"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "express",
+      "model_name": "Express",
+      "years": [
+        {
+          "year": 1996,
+          "coverage_status": "verified_complete_for_printed_express_charts",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete ZY1 color and interior trim chart printed in the distinct 1996 Express Van section.",
+          "limitations": [
+            "The chart does not print WA touch up paint numbers. No WA number is inferred.",
+            "The earlier summary on PDF page 33 calls codes 27, 50, and 51 Light Stellar Blue Metallic, Olympic White, and Toreador Red Metallic. The later Express order guide chart on PDF page 69 calls them Light Blue Metallic, Summit White, and Dark Carmine Red Metallic. This audit preserves the exact later Express chart labels and records the discrepancy without merging the names.",
+            "The Sportvan color chart on PDF page 78 belongs to the simultaneous legacy Sportvan, not the Express, and is excluded.",
+            "No separate Express Cargo, YF7, Cutaway, SEO, or two tone chart was located in the complete 114 page kit."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "express_van_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                69
+              ]
+            },
+            {
+              "program_type": "express_cargo_regular_zy1",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "yf7_upfitter",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "cutaway",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "legacy_sportvan",
+              "status": "located_but_excluded_as_different_nameplate",
+              "pdf_pages": [
+                78
+              ]
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "1996-express-van-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "1996-55u",
+                  "name": "Light Autumnwood Metallic",
+                  "source_label": "AUTUMNWOOD, LT (Met)",
+                  "source_color_code": "55U",
+                  "factory_code": "55U",
+                  "rpo_code": "55U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral"
+                  ]
+                },
+                {
+                  "identity_key": "1996-41u",
+                  "name": "Onyx Black",
+                  "source_label": "BLACK, ONYX",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-27u",
+                  "name": "Light Blue Metallic",
+                  "source_label": "BLUE, LT (Met)",
+                  "source_color_code": "27U",
+                  "factory_code": "27U",
+                  "rpo_code": "27U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Navy",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-30u",
+                  "name": "Medium Adriatic Blue Metallic",
+                  "source_label": "BLUE, MEDIUM ADRIATIC (Met)",
+                  "source_color_code": "30U",
+                  "factory_code": "30U",
+                  "rpo_code": "30U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Navy",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-43u",
+                  "name": "Emerald Green Metallic",
+                  "source_label": "GREEN, EMERALD (Met)",
+                  "source_color_code": "43U",
+                  "factory_code": "43U",
+                  "rpo_code": "43U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-96u",
+                  "name": "Quicksilver Metallic",
+                  "source_label": "QUICKSILVER (Met)",
+                  "source_color_code": "96U",
+                  "factory_code": "96U",
+                  "rpo_code": "96U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Navy",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-51u",
+                  "name": "Dark Carmine Red Metallic",
+                  "source_label": "RED, DK CARMINE (Met)",
+                  "source_color_code": "51U",
+                  "factory_code": "51U",
+                  "rpo_code": "51U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-74u",
+                  "name": "Victory Red",
+                  "source_label": "RED, VICTORY",
+                  "source_color_code": "74U",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1996-50u",
+                  "name": "Summit White",
+                  "source_label": "WHITE, SUMMIT",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Navy",
+                    "Neutral",
+                    "Gray"
+                  ]
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "express-van-zy1",
+              "program_label": "Express Van solid paint ZY1",
+              "variant": "Express Van",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1996-express-van-zy1",
+              "claim_scope": "Complete exterior color and interior trim list in the printed Express Van ZY1 chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1996-chevrolet-g-van",
+                "pdf_pages": [
+                  69
+                ],
+                "printed_page_label": "1996 Order Guide, Express Van page 9",
+                "section": "Express Van Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published March 19, 1996"
+              }
+            }
+          ]
+        },
+        {
+          "year": 1999,
+          "coverage_status": "verified_complete_for_printed_charts",
+          "complete_regular_palette": true,
+          "availability_scope": "Seven complete ZY1 charts printed separately for Passenger, Cargo, Commercial Cutaway, RV Cutaway, YF2 Ambulance Cargo, YF2 Ambulance Commercial Cutaway, and YF7 Conversion Van.",
+          "limitations": [
+            "The charts do not print WA touch up paint numbers. No WA number is inferred.",
+            "Passenger, Cargo, both Cutaway programs, and both YF2 Ambulance programs print the same color and interior combinations, but each remains a separate palette record.",
+            "The YF7 chart also permits Medium Gray with Light Autumnwood Metallic. It therefore uses a separate color set.",
+            "No separate SEO solid paint or two tone chart was located in the complete 120 page kit."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "passenger_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                38
+              ]
+            },
+            {
+              "program_type": "cargo_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                68
+              ]
+            },
+            {
+              "program_type": "commercial_cutaway_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                92
+              ]
+            },
+            {
+              "program_type": "rv_cutaway_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                98
+              ]
+            },
+            {
+              "program_type": "yf2_ambulance_cargo_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                99
+              ]
+            },
+            {
+              "program_type": "yf2_ambulance_cutaway_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                101
+              ]
+            },
+            {
+              "program_type": "yf7_upfitter_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                107
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "1999-regular-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "1999-55u",
+                  "name": "Light Autumnwood Metallic",
+                  "source_label": "AUTUMNWOOD, LT (Met)",
+                  "source_color_code": "55U",
+                  "factory_code": "55U",
+                  "rpo_code": "55U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral"
+                  ]
+                },
+                {
+                  "identity_key": "1999-25u",
+                  "name": "Cadet Blue Metallic",
+                  "source_label": "BLUE, CADET (Met)",
+                  "source_color_code": "25U",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Blue",
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-35u",
+                  "name": "Medium Blue-Green Metallic",
+                  "source_label": "BLUE-GREEN, MED (Met)",
+                  "source_color_code": "35U",
+                  "factory_code": "35U",
+                  "rpo_code": "35U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-76u",
+                  "name": "Medium Bronzemist Metallic",
+                  "source_label": "BRONZEMIST, MED (Met)",
+                  "source_color_code": "76U",
+                  "factory_code": "76U",
+                  "rpo_code": "76U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-69u",
+                  "name": "Dark Copper Metallic",
+                  "source_label": "COPPER, DARK (Met)",
+                  "source_color_code": "69U",
+                  "factory_code": "69U",
+                  "rpo_code": "69U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-14u",
+                  "name": "Medium Charcoal Gray Metallic",
+                  "source_label": "GRAY, CHARCOAL MED (Met)",
+                  "source_color_code": "14U",
+                  "factory_code": "14U",
+                  "rpo_code": "14U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Blue",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-31u",
+                  "name": "Medium Fernmist Green Metallic",
+                  "source_label": "GREEN, FERNMIST MED (Met)",
+                  "source_color_code": "31U",
+                  "factory_code": "31U",
+                  "rpo_code": "31U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-51u",
+                  "name": "Dark Carmine Red Metallic",
+                  "source_label": "RED, DARK CARMINE (Met)",
+                  "source_color_code": "51U",
+                  "factory_code": "51U",
+                  "rpo_code": "51U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-50u",
+                  "name": "Summit White",
+                  "source_label": "WHITE, SUMMIT",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Blue",
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                }
+              ]
+            },
+            {
+              "color_set_id": "1999-yf7-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "1999-55u",
+                  "name": "Light Autumnwood Metallic",
+                  "source_label": "AUTUMNWOOD, LT (Met)",
+                  "source_color_code": "55U",
+                  "factory_code": "55U",
+                  "rpo_code": "55U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-25u",
+                  "name": "Cadet Blue Metallic",
+                  "source_label": "BLUE, CADET (Met)",
+                  "source_color_code": "25U",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Blue",
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-35u",
+                  "name": "Medium Blue-Green Metallic",
+                  "source_label": "BLUE-GREEN, MED (Met)",
+                  "source_color_code": "35U",
+                  "factory_code": "35U",
+                  "rpo_code": "35U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-76u",
+                  "name": "Medium Bronzemist Metallic",
+                  "source_label": "BRONZEMIST MED (Met)",
+                  "source_color_code": "76U",
+                  "factory_code": "76U",
+                  "rpo_code": "76U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-69u",
+                  "name": "Dark Copper Metallic",
+                  "source_label": "COPPER, DARK (Met)",
+                  "source_color_code": "69U",
+                  "factory_code": "69U",
+                  "rpo_code": "69U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-14u",
+                  "name": "Medium Charcoal Gray Metallic",
+                  "source_label": "GRAY, CHARCOAL MED (Met)",
+                  "source_color_code": "14U",
+                  "factory_code": "14U",
+                  "rpo_code": "14U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Blue",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-31u",
+                  "name": "Medium Fernmist Green Metallic",
+                  "source_label": "GREEN, FERNMIST MED (Met)",
+                  "source_color_code": "31U",
+                  "factory_code": "31U",
+                  "rpo_code": "31U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-51u",
+                  "name": "Dark Carmine Red Metallic",
+                  "source_label": "RED, DARK CARMINE (Met)",
+                  "source_color_code": "51U",
+                  "factory_code": "51U",
+                  "rpo_code": "51U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                },
+                {
+                  "identity_key": "1999-50u",
+                  "name": "Summit White",
+                  "source_label": "WHITE, SUMMIT",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": null,
+                  "allowed_interior_trim_colors": [
+                    "Blue",
+                    "Neutral",
+                    "Medium Gray"
+                  ]
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "express-passenger-zy1",
+              "program_label": "Express Passenger Van solid paint ZY1",
+              "variant": "Passenger Van",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-regular-zy1",
+              "claim_scope": "Complete printed Passenger Van ZY1 chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  38
+                ],
+                "printed_page_label": "1999 Order Guide, Express Passenger Van page 8",
+                "section": "Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            },
+            {
+              "program_id": "express-cargo-zy1",
+              "program_label": "Express Cargo Van solid paint ZY1",
+              "variant": "Cargo Van",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-regular-zy1",
+              "claim_scope": "Complete printed Cargo Van ZY1 chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  68
+                ],
+                "printed_page_label": "1999 Order Guide, Express Cargo Van page 8",
+                "section": "Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            },
+            {
+              "program_id": "express-commercial-cutaway-zy1",
+              "program_label": "Express Commercial Cutaway Van solid paint ZY1",
+              "variant": "Commercial Cutaway Van",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-regular-zy1",
+              "claim_scope": "Complete printed Commercial Cutaway ZY1 chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  92
+                ],
+                "printed_page_label": "1999 Order Guide, G-Cutaway page 6",
+                "section": "Express Commercial Cutaway Van Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            },
+            {
+              "program_id": "express-rv-cutaway-zy1",
+              "program_label": "Express RV Cutaway Van solid paint ZY1",
+              "variant": "RV Cutaway Van",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-regular-zy1",
+              "claim_scope": "Complete printed RV Cutaway ZY1 chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  98
+                ],
+                "printed_page_label": "1999 Order Guide, G-Cutaway page 6",
+                "section": "Express RV Cutaway Van Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            },
+            {
+              "program_id": "express-yf2-ambulance-cargo-zy1",
+              "program_label": "YF2 Ambulance Package Express Cargo Van solid paint ZY1",
+              "variant": "Cargo Van YF2 Ambulance Package",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-regular-zy1",
+              "claim_scope": "Complete printed YF2 Ambulance Cargo Van ZY1 chart.",
+              "program_restriction": "YF2 applies to CG31705 at 9500 pound GVWR in this chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  99
+                ],
+                "printed_page_label": "1999 Order Guide, Upfitter Package page 1",
+                "section": "YF2 Ambulance Package Express Cargo Van Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            },
+            {
+              "program_id": "express-yf2-ambulance-cutaway-zy1",
+              "program_label": "YF2 Ambulance Package Express Commercial Cutaway Van solid paint ZY1",
+              "variant": "Commercial Cutaway Van YF2 Ambulance Package",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-regular-zy1",
+              "claim_scope": "Complete printed YF2 Ambulance Commercial Cutaway ZY1 chart.",
+              "program_restriction": "YF2 applies to CG31503 and CG31803 at 12000 pound GVWR in this chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  101
+                ],
+                "printed_page_label": "1999 Order Guide, Upfitter Package page 1",
+                "section": "YF2 Ambulance Package Express Commercial Cutaway Van Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            },
+            {
+              "program_id": "express-yf7-upfitter-zy1",
+              "program_label": "YF7 Upfitter Package Express Conversion Van solid paint ZY1",
+              "variant": "Conversion Van YF7 Upfitter Package",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "1999-yf7-zy1",
+              "claim_scope": "Complete printed YF7 Conversion Van ZY1 chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-1999-chevrolet-g-van",
+                "pdf_pages": [
+                  107
+                ],
+                "printed_page_label": "1999 Order Guide, Upfitter Package page 5",
+                "section": "YF7 Upfitter Package Express Conversion Van Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published April 1, 1998"
+              }
+            }
+          ]
+        },
+        {
+          "year": 2000,
+          "coverage_status": "verified_complete_for_printed_named_color_list",
+          "complete_regular_palette": false,
+          "availability_scope": "The restoration kit prints one complete nine name Paint Colors list across PDF pages 14 and 15 in the Cargo and Passenger Van exterior overview. It does not print codes or a color and trim matrix.",
+          "limitations": [
+            "The printed list does not supply RPO color codes, WA touch up paint numbers, interior compatibility, or configuration rows. No code or restriction is inferred.",
+            "The list appears in the Cargo and Passenger Van exterior overview. It is not projected to YF7, Cutaway, SEO, ambulance, or other programs.",
+            "No separate color chart for Cargo, Passenger, YF7, Cutaway, SEO, or two tone paint was located in the complete 140 page kit."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "cargo_and_passenger_named_paint_list",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                14,
+                15
+              ]
+            },
+            {
+              "program_type": "variant_regular_zy1_chart",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "yf7_upfitter_color_chart",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "cutaway_color_chart",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "2000-cargo-passenger-named-paints",
+              "application_type": "factory_named_paint_list",
+              "paint_scheme": null,
+              "code_column_semantics": "no_code_printed",
+              "colors": [
+                {
+                  "identity_key": "2000-indigo-blue-metallic",
+                  "name": "Indigo Blue Metallic",
+                  "source_label": "Indigo Blue Metallic",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-onyx-black",
+                  "name": "Onyx Black",
+                  "source_label": "Onyx Black",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-victory-red",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-medium-bronzemist-metallic",
+                  "name": "Medium Bronzemist Metallic",
+                  "source_label": "Medium Bronzemist Metallic",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-light-autumnwood-metallic",
+                  "name": "Light Autumnwood Metallic",
+                  "source_label": "Light Autumnwood Metallic",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-medium-charcoal-gray-metallic",
+                  "name": "Medium Charcoal Gray Metallic",
+                  "source_label": "Medium Charcoal Gray Metallic",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-medium-fernmist-green-metallic",
+                  "name": "Medium Fernmist Green Metallic",
+                  "source_label": "Medium Fernmist Green Metallic",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2000-dark-carmine-red-metallic",
+                  "name": "Dark Carmine Red Metallic",
+                  "source_label": "Dark Carmine Red Metallic",
+                  "source_color_code": null,
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": null
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "express-cargo-passenger-named-paints",
+              "program_label": "Express Cargo and Passenger Van named paint list",
+              "variant": "Cargo and Passenger Van",
+              "application_type": "factory_named_paint_list",
+              "evidence_class": "exact_complete_named_list_without_codes",
+              "color_set_id": "2000-cargo-passenger-named-paints",
+              "claim_scope": "Complete nine name Paint Colors list printed in the Cargo and Passenger Van exterior overview. This is not a color and trim matrix.",
+              "source_ref": {
+                "source_id": "gm-heritage-2000-chevrolet-express-van",
+                "pdf_pages": [
+                  14,
+                  15
+                ],
+                "printed_page_label": "2000 Chevrolet Express Van Restoration Kit pages 5 and 6",
+                "section": "Exterior/Structural Overview, Paint Colors",
+                "revision": null
+              }
+            }
+          ]
+        },
+        {
+          "year": 2001,
+          "coverage_status": "no_exact_retained_official_express_kit",
+          "complete_regular_palette": false,
+          "availability_scope": "No exact 2001 Express source was retained in the official Chevrolet kit corpus.",
+          "limitations": [
+            "The retained official index contains a 2001 Astro Van kit, which is a different model and was not used.",
+            "No 2000 or 2002 color is inferred into 2001."
+          ],
+          "source_discovery_audit": {
+            "official_index_url": "https://www.gm.com/heritage/archive/vehicle-information-kits",
+            "retained_corpus_source_count": 691,
+            "exact_express_match_count": 0,
+            "similarly_named_but_excluded": [
+              "2001 Chevrolet Astro Van Vehicle Information Kit"
+            ]
+          },
+          "program_presence_audit": [
+            {
+              "program_type": "all_express_color_programs",
+              "status": "not_auditable_without_exact_retained_official_kit"
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2002,
+          "coverage_status": "no_exact_retained_official_express_kit",
+          "complete_regular_palette": false,
+          "availability_scope": "No exact 2002 Express source was retained in the official Chevrolet kit corpus.",
+          "limitations": [
+            "The retained official index contains a 2002 Astro Van kit, which is a different model and was not used.",
+            "No adjacent year color is inferred into 2002."
+          ],
+          "source_discovery_audit": {
+            "official_index_url": "https://www.gm.com/heritage/archive/vehicle-information-kits",
+            "retained_corpus_source_count": 691,
+            "exact_express_match_count": 0,
+            "similarly_named_but_excluded": [
+              "2002 Chevrolet Astro Van Vehicle Information Kit"
+            ]
+          },
+          "program_presence_audit": [
+            {
+              "program_type": "all_express_color_programs",
+              "status": "not_auditable_without_exact_retained_official_kit"
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2003,
+          "coverage_status": "no_exact_retained_official_express_kit",
+          "complete_regular_palette": false,
+          "availability_scope": "No exact 2003 Express source was retained in the official Chevrolet kit corpus.",
+          "limitations": [
+            "The retained official index contains a 2003 Astro Van kit, which is a different model and was not used.",
+            "No 2002 or 2004 color is inferred into 2003."
+          ],
+          "source_discovery_audit": {
+            "official_index_url": "https://www.gm.com/heritage/archive/vehicle-information-kits",
+            "retained_corpus_source_count": 691,
+            "exact_express_match_count": 0,
+            "similarly_named_but_excluded": [
+              "2003 Chevrolet Astro Van Vehicle Information Kit"
+            ]
+          },
+          "program_presence_audit": [
+            {
+              "program_type": "all_express_color_programs",
+              "status": "not_auditable_without_exact_retained_official_kit"
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2006,
+          "coverage_status": "verified_complete_for_printed_charts",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete printed regular ZY1 and SEO solid paint tables for Passenger, Cargo, Cutaway, Mobility/Paratransit, and Cargo YF7 Upfitter. Each configuration and paint program remains a separate palette record.",
+          "limitations": [
+            "The regular nine color set is shared by Passenger, Cargo, Cutaway, and YF7, but their B46 restrictions differ and remain attached to each palette.",
+            "Mobility/Paratransit has a separate seven color regular set that omits Sandstone Metallic and Victory Red.",
+            "The 17 color SEO set is a specialty ordering program, not unrestricted retail availability.",
+            "No separate two tone exterior color table was located in the complete 222 page kit."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "passenger_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                149
+              ]
+            },
+            {
+              "program_type": "passenger_seo_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                150
+              ]
+            },
+            {
+              "program_type": "cargo_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                166
+              ]
+            },
+            {
+              "program_type": "cargo_seo_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                167
+              ]
+            },
+            {
+              "program_type": "cutaway_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                184
+              ]
+            },
+            {
+              "program_type": "cutaway_seo_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                185
+              ]
+            },
+            {
+              "program_type": "mobility_paratransit_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                202
+              ]
+            },
+            {
+              "program_type": "mobility_paratransit_seo_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                203
+              ]
+            },
+            {
+              "program_type": "yf7_upfitter_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                218
+              ]
+            },
+            {
+              "program_type": "yf7_upfitter_seo_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                218
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "2006-regular-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "wa-929l",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "seo_code": null,
+                  "wa_number": "WA-929L",
+                  "allowed_interior_trim_colors": [
+                    "Neutral"
+                  ]
+                },
+                {
+                  "identity_key": "wa-213m",
+                  "name": "Graystone Metallic",
+                  "source_label": "NEW! Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "rpo_code": "16U",
+                  "seo_code": null,
+                  "wa_number": "WA-213M",
+                  "allowed_interior_trim_colors": [
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-722j",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "Dark Blue Metallic",
+                  "source_color_code": "25U",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "seo_code": null,
+                  "wa_number": "WA-722J",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "seo_code": null,
+                  "wa_number": "WA-8555",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "source_color_code": "47U",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "seo_code": null,
+                  "wa_number": "WA-9539",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": "WA-8624",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "source_color_code": "59U",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "seo_code": null,
+                  "wa_number": "WA-926L",
+                  "allowed_interior_trim_colors": [
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-817k",
+                  "name": "Sport Red Metallic",
+                  "source_label": "NEW! Sport Red Metallic",
+                  "source_color_code": "63U",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "seo_code": null,
+                  "wa_number": "WA-817K",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "source_color_code": "74U",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "seo_code": null,
+                  "wa_number": "WA-9260",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                }
+              ]
+            },
+            {
+              "color_set_id": "2006-mobility-regular-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "wa-213m",
+                  "name": "Graystone Metallic",
+                  "source_label": "NEW! Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "rpo_code": "16U",
+                  "seo_code": null,
+                  "wa_number": "WA-213M",
+                  "allowed_interior_trim_colors": [
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-722j",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "Dark Blue Metallic",
+                  "source_color_code": "25U",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "seo_code": null,
+                  "wa_number": "WA-722J",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "seo_code": null,
+                  "wa_number": "WA-8555",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "source_color_code": "47U",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "seo_code": null,
+                  "wa_number": "WA-9539",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": "WA-8624",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "source_color_code": "59U",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "seo_code": null,
+                  "wa_number": "WA-926L",
+                  "allowed_interior_trim_colors": [
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-817k",
+                  "name": "Sport Red Metallic",
+                  "source_label": "NEW! Sport Red Metallic",
+                  "source_color_code": "63U",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "seo_code": null,
+                  "wa_number": "WA-817K",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                }
+              ]
+            },
+            {
+              "color_set_id": "2006-seo-solid-paint",
+              "application_type": "special_equipment_option_paint",
+              "paint_scheme": "SEO solid paint",
+              "code_column_semantics": "seo_color_code_or_literal_none",
+              "colors": [
+                {
+                  "identity_key": "wa-5456",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5456",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-7927",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7927",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-7941",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7941",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-8867",
+                  "name": "Silver Metallic",
+                  "source_label": "Silver Metallic",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-8867",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9015",
+                  "name": "Woodland Green",
+                  "source_label": "Green, Woodland",
+                  "source_color_code": "9V5",
+                  "factory_code": "9V5",
+                  "rpo_code": "9V5",
+                  "seo_code": "9V5",
+                  "wa_number": "WA-9015",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9403",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "source_color_code": "9V9",
+                  "factory_code": "9V9",
+                  "rpo_code": "9V9",
+                  "seo_code": "9V9",
+                  "wa_number": "WA-9403",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9417",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "source_color_code": "9W4",
+                  "factory_code": "9W4",
+                  "rpo_code": "9W4",
+                  "seo_code": "9W4",
+                  "wa_number": "WA-9417",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-146b",
+                  "name": "Light Stellar Blue",
+                  "source_label": "Light Stellar Blue",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-146B",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9419",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9419",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-215d",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-215D",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-253a",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "source_color_code": "9W3",
+                  "factory_code": "9W3",
+                  "rpo_code": "9W3",
+                  "seo_code": "9W3",
+                  "wa_number": "WA-253A",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-259l",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-259L",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-341d",
+                  "name": "Madrid Red",
+                  "source_label": "Madrid Red",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-341D",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-478g",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-478G",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-519f",
+                  "name": "Galaxy Silver Metallic",
+                  "source_label": "Galaxy Silver Metallic",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-519F",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-529f",
+                  "name": "Bronzemist",
+                  "source_label": "Bronzemist",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-529F",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9414",
+                  "name": "Yellow",
+                  "source_label": "NEW! Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9414",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Dark Pewter"
+                  ]
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "express-passenger-zy1",
+              "program_label": "Express Passenger solid paint ZY1",
+              "variant": "Passenger",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2006-regular-zy1",
+              "claim_scope": "Complete printed Passenger regular solid paint table.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555",
+                    "wa-817k",
+                    "wa-9260"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  149
+                ],
+                "printed_page_label": "Color and Trim page 1",
+                "section": "2006 Chevrolet Truck Express Passenger Color and Trim - Solid Paint ZY1",
+                "revision": "Published July 29, 2005"
+              }
+            },
+            {
+              "program_id": "express-passenger-seo-solid-paint",
+              "program_label": "Express Passenger SEO solid paint",
+              "variant": "Passenger",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "color_set_id": "2006-seo-solid-paint",
+              "claim_scope": "Complete printed Passenger SEO solid paint table.",
+              "program_restriction": "Exterior SEO solid paints are not available with B46 Trim, rear body colored halo.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  150
+                ],
+                "printed_page_label": "Color and Trim page 2",
+                "section": "2006 Chevrolet Truck Express Passenger Color and Trim - SEO Solid Paint",
+                "revision": "Published July 29, 2005"
+              }
+            },
+            {
+              "program_id": "express-cargo-zy1",
+              "program_label": "Express Cargo solid paint ZY1",
+              "variant": "Cargo",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2006-regular-zy1",
+              "claim_scope": "Complete printed Cargo regular solid paint table.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555",
+                    "wa-817k",
+                    "wa-9260"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  166
+                ],
+                "printed_page_label": "Color and Trim page 1",
+                "section": "2006 Chevrolet Truck Express Cargo Color and Trim - Solid Paint ZY1",
+                "revision": "Published July 29, 2005"
+              }
+            },
+            {
+              "program_id": "express-cargo-seo-solid-paint",
+              "program_label": "Express Cargo SEO solid paint",
+              "variant": "Cargo",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "color_set_id": "2006-seo-solid-paint",
+              "claim_scope": "Complete printed Cargo SEO solid paint table.",
+              "program_restriction": "Exterior SEO solid paints are not available with B46 Trim, rear body colored halo.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-9403",
+                    "wa-9417",
+                    "wa-253a",
+                    "wa-9015"
+                  ],
+                  "restriction": "Requires SEO TGK Special Paint, one color; not available with PRP Express Access; may require extended lead time."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  167
+                ],
+                "printed_page_label": "Color and Trim page 2",
+                "section": "2006 Chevrolet Truck Express Cargo Color and Trim - SEO Solid Paint",
+                "revision": "Published July 29, 2005"
+              }
+            },
+            {
+              "program_id": "express-cutaway-zy1",
+              "program_label": "Express Cutaway solid paint ZY1",
+              "variant": "Cutaway",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2006-regular-zy1",
+              "claim_scope": "Complete printed Cutaway regular solid paint table. The chart does not place a B46 restriction on any color.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  184
+                ],
+                "printed_page_label": "Color and Trim page 1",
+                "section": "2006 Chevrolet Truck Express Cutaway Color and Trim - Solid Paint ZY1",
+                "revision": "Published July 1, 2005"
+              }
+            },
+            {
+              "program_id": "express-cutaway-seo-solid-paint",
+              "program_label": "Express Cutaway SEO solid paint",
+              "variant": "Cutaway",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "color_set_id": "2006-seo-solid-paint",
+              "claim_scope": "Complete printed Cutaway SEO solid paint table. The chart does not print a B46 restriction.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-9403",
+                    "wa-9417",
+                    "wa-253a",
+                    "wa-9015"
+                  ],
+                  "restriction": "Requires SEO TGK Special Paint, one color, and may require extended lead time."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  185
+                ],
+                "printed_page_label": "Color and Trim page 2",
+                "section": "2006 Chevrolet Truck Express Cutaway Color and Trim - SEO Solid Paint",
+                "revision": "Published July 1, 2005"
+              }
+            },
+            {
+              "program_id": "express-mobility-paratransit-zy1",
+              "program_label": "Express Cargo Mobility/Paratransit solid paint ZY1",
+              "variant": "Cargo Mobility/Paratransit",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2006-mobility-regular-zy1",
+              "claim_scope": "Complete printed Mobility/Paratransit regular solid paint table.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-817k"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  202
+                ],
+                "printed_page_label": "Color and Trim page 1",
+                "section": "2006 Chevrolet Truck Express Cargo Mobility/Paratransit Color and Trim - Solid Paint ZY1",
+                "revision": "Published July 1, 2005"
+              }
+            },
+            {
+              "program_id": "express-mobility-paratransit-seo-solid-paint",
+              "program_label": "Express Cargo Mobility/Paratransit SEO solid paint",
+              "variant": "Cargo Mobility/Paratransit",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "color_set_id": "2006-seo-solid-paint",
+              "claim_scope": "Complete printed Mobility/Paratransit SEO solid paint table.",
+              "program_restriction": "Exterior SEO solid paints are not available with B46 Trim, rear body colored halo.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  203
+                ],
+                "printed_page_label": "Color and Trim page 2",
+                "section": "2006 Chevrolet Truck Express Cargo Mobility/Paratransit Color and Trim - SEO Solid Paint",
+                "revision": "Published July 1, 2005"
+              }
+            },
+            {
+              "program_id": "express-cargo-yf7-upfitter-zy1",
+              "program_label": "Express Cargo YF7 Upfitter solid paint ZY1",
+              "variant": "Cargo YF7 Upfitter",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2006-regular-zy1",
+              "claim_scope": "Complete printed regular solid paint table for the YF7 Express Conversion Van Upfitter Package.",
+              "program_restriction": "For information purposes only. Express Conversion Van Upfitter Package YF7 was available for ordering through authorized C.O.A.C.P. manufacturers only.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555",
+                    "wa-817k",
+                    "wa-9260"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  218
+                ],
+                "printed_page_label": "Color and Trim page 1",
+                "section": "2006 Chevrolet Truck Express Cargo YF7 Upfitter Color and Trim - Solid Paint ZY1",
+                "revision": "Published June 24, 2005"
+              }
+            },
+            {
+              "program_id": "express-cargo-yf7-upfitter-seo-solid-paint",
+              "program_label": "Express Cargo YF7 Upfitter SEO solid paint",
+              "variant": "Cargo YF7 Upfitter",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "color_set_id": "2006-seo-solid-paint",
+              "claim_scope": "Complete printed SEO solid paint table for the YF7 Express Conversion Van Upfitter Package.",
+              "program_restriction": "Exterior SEO solid paints are not available with B46 Trim, rear body colored halo. YF7 was available for ordering through authorized C.O.A.C.P. manufacturers only.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-express-van",
+                "pdf_pages": [
+                  218
+                ],
+                "printed_page_label": "Color and Trim page 2",
+                "section": "2006 Chevrolet Truck Express Cargo YF7 Upfitter Color and Trim - SEO Solid Paint",
+                "revision": "Published June 24, 2005"
+              }
+            }
+          ]
+        },
+        {
+          "year": 2007,
+          "coverage_status": "verified_complete_for_printed_charts_and_named_special_options",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular ZY1 tables for Passenger, Cargo, Cutaway, Mobility/Paratransit, and Cargo YF7 Upfitter. The kit does not print a complete SEO color table, but it names four TGK specialty paints for Passenger, Cargo, Cutaway, and Mobility/Paratransit; those named subsets remain separate from the regular palettes.",
+          "limitations": [
+            "The regular nine color set is shared by Passenger, Cargo, Cutaway, and YF7, but B46 restrictions differ by configuration.",
+            "Mobility/Paratransit has a seven color regular set that omits Sandstone Metallic and Victory Red.",
+            "The four named TGK options are exact specialty color evidence, not a complete SEO palette. No unprinted WA number or additional SEO color is carried forward from 2006.",
+            "No separate two tone exterior color table was located in the complete 233 page kit."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "passenger_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                157
+              ]
+            },
+            {
+              "program_type": "passenger_named_seo_tgk_options",
+              "status": "located_and_transcribed_as_named_subset",
+              "pdf_pages": [
+                158
+              ]
+            },
+            {
+              "program_type": "cargo_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                177
+              ]
+            },
+            {
+              "program_type": "cargo_named_seo_tgk_options",
+              "status": "located_and_transcribed_as_named_subset",
+              "pdf_pages": [
+                179
+              ]
+            },
+            {
+              "program_type": "cutaway_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                197
+              ]
+            },
+            {
+              "program_type": "cutaway_named_seo_tgk_options",
+              "status": "located_and_transcribed_as_named_subset",
+              "pdf_pages": [
+                198
+              ]
+            },
+            {
+              "program_type": "mobility_paratransit_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                227
+              ]
+            },
+            {
+              "program_type": "mobility_paratransit_named_seo_tgk_options",
+              "status": "located_and_transcribed_as_named_subset",
+              "pdf_pages": [
+                227
+              ]
+            },
+            {
+              "program_type": "yf7_upfitter_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                213
+              ]
+            },
+            {
+              "program_type": "yf7_upfitter_seo_solid_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "complete_seo_solid_paint_table",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "2007-regular-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "wa-929l",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "seo_code": null,
+                  "wa_number": "WA-929L",
+                  "allowed_interior_trim_colors": [
+                    "Neutral"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-213m",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "rpo_code": "16U",
+                  "seo_code": null,
+                  "wa_number": "WA-213M",
+                  "allowed_interior_trim_colors": [
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-722j",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "Dark Blue Metallic",
+                  "source_color_code": "25U",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "seo_code": null,
+                  "wa_number": "WA-722J",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "seo_code": null,
+                  "wa_number": "WA-8555",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "source_color_code": "47U",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "seo_code": null,
+                  "wa_number": "WA-9539",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": "WA-8624",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "source_color_code": "59U",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "seo_code": null,
+                  "wa_number": "WA-926L",
+                  "allowed_interior_trim_colors": [
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-817k",
+                  "name": "Sport Red Metallic",
+                  "source_label": "Sport Red Metallic",
+                  "source_color_code": "63U",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "seo_code": null,
+                  "wa_number": "WA-817K",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "source_color_code": "74U",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "seo_code": null,
+                  "wa_number": "WA-9260",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ]
+                }
+              ]
+            },
+            {
+              "color_set_id": "2007-mobility-regular-zy1",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "ZY1",
+              "code_column_semantics": "regular_rpo_color_code",
+              "colors": [
+                {
+                  "identity_key": "wa-213m",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "rpo_code": "16U",
+                  "seo_code": null,
+                  "wa_number": "WA-213M",
+                  "allowed_interior_trim_colors": [
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-722j",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "Dark Blue Metallic",
+                  "source_color_code": "25U",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "seo_code": null,
+                  "wa_number": "WA-722J",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "seo_code": null,
+                  "wa_number": "WA-8555",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "source_color_code": "47U",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "seo_code": null,
+                  "wa_number": "WA-9539",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "seo_code": null,
+                  "wa_number": "WA-8624",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ]
+                },
+                {
+                  "identity_key": "wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "source_color_code": "59U",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "seo_code": null,
+                  "wa_number": "WA-926L",
+                  "allowed_interior_trim_colors": [
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                },
+                {
+                  "identity_key": "wa-817k",
+                  "name": "Sport Red Metallic",
+                  "source_label": "Sport Red Metallic",
+                  "source_color_code": "63U",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "seo_code": null,
+                  "wa_number": "WA-817K",
+                  "allowed_interior_trim_colors": [
+                    "Neutral",
+                    "Medium Pewter"
+                  ],
+                  "source_note": "Additional charge."
+                }
+              ]
+            },
+            {
+              "color_set_id": "2007-named-seo-tgk-options",
+              "application_type": "special_equipment_option_paint",
+              "paint_scheme": "SEO TGK solid paint",
+              "code_column_semantics": "seo_option_code",
+              "completeness": "named_subset_only",
+              "colors": [
+                {
+                  "identity_key": "2007-9v9",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "source_color_code": "9V9",
+                  "factory_code": "9V9",
+                  "rpo_code": "9V9",
+                  "seo_code": "9V9",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2007-9w4",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "source_color_code": "9W4",
+                  "factory_code": "9W4",
+                  "rpo_code": "9W4",
+                  "seo_code": "9W4",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2007-9w3",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "source_color_code": "9W3",
+                  "factory_code": "9W3",
+                  "rpo_code": "9W3",
+                  "seo_code": "9W3",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "2007-9v5",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "source_color_code": "9V5",
+                  "factory_code": "9V5",
+                  "rpo_code": "9V5",
+                  "seo_code": "9V5",
+                  "wa_number": null
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "express-passenger-zy1",
+              "program_label": "Express Passenger solid paint ZY1",
+              "variant": "Passenger",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2007-regular-zy1",
+              "claim_scope": "Complete printed Passenger regular solid paint table.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555",
+                    "wa-9260"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                },
+                {
+                  "identity_keys": [
+                    "wa-817k"
+                  ],
+                  "restriction": "Additional charge and not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  157
+                ],
+                "printed_page_label": "Color and Trim page 22",
+                "section": "2007 Chevrolet Truck Express Passenger Color and Trim - Solid Paint ZY1",
+                "revision": "Published May 12, 2006"
+              }
+            },
+            {
+              "program_id": "express-passenger-named-seo-tgk",
+              "program_label": "Express Passenger named SEO TGK paints",
+              "variant": "Passenger",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_named_subset",
+              "color_set_id": "2007-named-seo-tgk-options",
+              "claim_scope": "Four specialty paint options named in the Passenger SEO options table. This is not a complete SEO palette.",
+              "program_restriction": "Each paint requires SEO TGK Solid Paint, one color; is not available with B46 Trim, rear body colored halo; and may require extended lead time.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  158
+                ],
+                "printed_page_label": "SEO Options/Ship Thru Codes page 24",
+                "section": "2007 Chevrolet Truck Express Passenger SEO Option/Ship Thru Codes",
+                "revision": "Published May 12, 2006"
+              }
+            },
+            {
+              "program_id": "express-cargo-zy1",
+              "program_label": "Express Cargo solid paint ZY1",
+              "variant": "Cargo",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2007-regular-zy1",
+              "claim_scope": "Complete printed Cargo regular solid paint table.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555",
+                    "wa-9260"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                },
+                {
+                  "identity_keys": [
+                    "wa-817k"
+                  ],
+                  "restriction": "Additional charge and not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  177
+                ],
+                "printed_page_label": "Color and Trim page 24",
+                "section": "2007 Chevrolet Truck Express Cargo Color and Trim - Solid Paint ZY1",
+                "revision": "Published May 12, 2006"
+              }
+            },
+            {
+              "program_id": "express-cargo-named-seo-tgk",
+              "program_label": "Express Cargo named SEO TGK paints",
+              "variant": "Cargo",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_named_subset",
+              "color_set_id": "2007-named-seo-tgk-options",
+              "claim_scope": "Four specialty paint options named in the Cargo SEO options table. This is not a complete SEO palette.",
+              "program_restriction": "Each paint requires SEO TGK Solid Paint, one color; is not available with B46 Trim, rear body colored halo or PRP Express Access; and may require extended lead time.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  179
+                ],
+                "printed_page_label": "SEO Options/Ship Thru Codes page 26",
+                "section": "2007 Chevrolet Truck Express Cargo SEO Option/Ship Thru Codes",
+                "revision": "Published May 12, 2006"
+              }
+            },
+            {
+              "program_id": "express-cutaway-zy1",
+              "program_label": "Express Cutaway solid paint ZY1",
+              "variant": "Cutaway",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2007-regular-zy1",
+              "claim_scope": "Complete printed Cutaway regular solid paint table. The chart does not place a B46 restriction on any color.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  197
+                ],
+                "printed_page_label": "Color and Trim page 21",
+                "section": "2007 Chevrolet Truck Express Cutaway Color and Trim - Solid Paint ZY1",
+                "revision": "Published May 5, 2006"
+              }
+            },
+            {
+              "program_id": "express-cutaway-named-seo-tgk",
+              "program_label": "Express Cutaway named SEO TGK paints",
+              "variant": "Cutaway",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_named_subset",
+              "color_set_id": "2007-named-seo-tgk-options",
+              "claim_scope": "Four specialty paint options named in the Cutaway SEO options table. This is not a complete SEO palette.",
+              "program_restriction": "Each paint requires SEO TGK Solid Paint, one color, and may require extended lead time. The reviewed Cutaway table does not print a B46 restriction.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  198
+                ],
+                "printed_page_label": "SEO Options/Ship Thru Codes page 23",
+                "section": "2007 Chevrolet Truck Express Cutaway SEO Option/Ship Thru Codes",
+                "revision": "Published May 5, 2006"
+              }
+            },
+            {
+              "program_id": "express-mobility-paratransit-zy1",
+              "program_label": "Express Cargo Mobility/Paratransit solid paint ZY1",
+              "variant": "Cargo Mobility/Paratransit",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2007-mobility-regular-zy1",
+              "claim_scope": "Complete printed Mobility/Paratransit regular solid paint table.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                },
+                {
+                  "identity_keys": [
+                    "wa-817k"
+                  ],
+                  "restriction": "Additional charge and not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  227
+                ],
+                "printed_page_label": "Color and Trim page 19",
+                "section": "2007 Chevrolet Truck Express Cargo Mobility/Paratransit Color and Trim - Solid Paint ZY1",
+                "revision": "Published April 28, 2006"
+              }
+            },
+            {
+              "program_id": "express-mobility-paratransit-named-seo-tgk",
+              "program_label": "Express Cargo Mobility/Paratransit named SEO TGK paints",
+              "variant": "Cargo Mobility/Paratransit",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_named_subset",
+              "color_set_id": "2007-named-seo-tgk-options",
+              "claim_scope": "Four specialty paint options named in the Mobility/Paratransit SEO options table. This is not a complete SEO palette.",
+              "program_restriction": "Available with the 1WT equipment group and not available with 5LT in this table. Each paint requires SEO TGK Solid Paint, one color; is not available with B46 Trim, rear body colored halo; and may require extended lead time.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  227
+                ],
+                "printed_page_label": "SEO Options/Ship Thru Codes page 20",
+                "section": "2007 Chevrolet Truck Express Cargo Mobility/Paratransit SEO Option/Ship Thru Codes",
+                "revision": "Published April 28, 2006"
+              }
+            },
+            {
+              "program_id": "express-cargo-yf7-upfitter-zy1",
+              "program_label": "Express Cargo YF7 Upfitter solid paint ZY1",
+              "variant": "Cargo YF7 Upfitter",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "color_set_id": "2007-regular-zy1",
+              "claim_scope": "Complete printed regular solid paint table for the YF7 Express Conversion Van Upfitter Package.",
+              "program_restriction": "For information purposes only. Express Conversion Van Upfitter Package YF7 was available for ordering through authorized C.O.A.C.P. manufacturers only.",
+              "additional_color_restrictions": [
+                {
+                  "identity_keys": [
+                    "wa-8555",
+                    "wa-9260"
+                  ],
+                  "restriction": "Not available with B46 Trim, rear body colored halo."
+                },
+                {
+                  "identity_keys": [
+                    "wa-817k"
+                  ],
+                  "restriction": "Additional charge and not available with B46 Trim, rear body colored halo."
+                }
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-express-van",
+                "pdf_pages": [
+                  213
+                ],
+                "printed_page_label": "Color and Trim page 17",
+                "section": "2007 Chevrolet Truck Express Cargo YF7 Upfitter Color and Trim - Solid Paint ZY1",
+                "revision": "Published April 28, 2006"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

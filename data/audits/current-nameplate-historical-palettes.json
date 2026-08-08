@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "market": "United States",
+  "visibility": "public",
+  "audit_as_of": "2026-08-07",
+  "dataset_kind": "current_nameplate_historical_color_tables",
+  "scope": "Directly reviewed historical color tables for model years attached to Chevrolet nameplates that remain current. Regular and specialty paint are retained as separate programs. No color is projected into an adjacent year or an unreviewed body series.",
+  "sources": [
+    {
+      "source_id": "gm-heritage-2003-chevrolet-silverado-2500",
+      "title": "2003 Chevrolet Silverado 2500 Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-2500.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-2500-vehicle-information-kit-gm.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "3ef230d8de762f959a010c0b21aa11717611f2ef14b94139e06d46b3ba79376a",
+      "bytes": 56946284,
+      "pdf_page_count": 304,
+      "retrieved_at": "2026-07-21T06:37:11+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2003-chevrolet-silverado-3500",
+      "title": "2003 Chevrolet Silverado 3500 Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-3500.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-3500-vehicle-information-kit-gm.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "c855e85a1fc777b8384aeff466edaf453d68a13c41a3664466cd47326f3f6afe",
+      "bytes": 54995249,
+      "pdf_page_count": 310,
+      "retrieved_at": "2026-07-21T06:37:25+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-silverado-1500hd",
+      "title": "2005 Chevrolet Silverado 1500HD Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-1500HD.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-1500hd-vehicle-information-kit-gm.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "3bd59ca10fb83fc2a25e7a698ac3ce41c271ed80914ef6aa911cd5014396fd57",
+      "bytes": 17307119,
+      "pdf_page_count": 132,
+      "retrieved_at": "2026-07-21T06:39:58+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-silverado-2500hd",
+      "title": "2005 Chevrolet Silverado 2500HD Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-2500HD.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-2500hd-vehicle-information-kit-gm.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "c8076d4dec55077d2d46ce7e426c675b67863ee225958bf1f037e0e5db9700a2",
+      "bytes": 30017319,
+      "pdf_page_count": 216,
+      "retrieved_at": "2026-07-21T06:40:10+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-silverado-3500hd",
+      "title": "2005 Chevrolet Silverado 3500HD Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-3500HD.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-3500hd-vehicle-information-kit-gm.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "aab1239ef7e10370cbefdf60335b62d88bbd70735909195ee5027de4048f8c46",
+      "bytes": 29390716,
+      "pdf_page_count": 212,
+      "retrieved_at": "2026-07-21T06:40:17+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-silverado-chassis-cab",
+      "title": "2005 Chevrolet Silverado Chassis Cab Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-Chassis-Cab.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-chassis-cab-vehicle-information-kit-gm.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "fab4752c866898e2c24db8623ecc41648a3d8a732465c4eddf8e1c43c66db313",
+      "bytes": 24350266,
+      "pdf_page_count": 190,
+      "retrieved_at": "2026-07-21T06:40:25+00:00"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "silverado-hd",
+      "model_name": "Silverado HD",
+      "years": [
+        {
+          "year": 2003,
+          "coverage_status": "verified_complete",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular solid paint union for Silverado 2500HD, Silverado 3500, Silverado 3500 chassis cab, and Silverado 3500 chassis cab YF2. Interior, cab, trim, and wheel flare restrictions remain attached to the reviewed source tables.",
+          "limitations": [
+            "The regular table is complete for the four reviewed HD configurations, not for Silverado 1500 or Silverado SS.",
+            "SEO solid paint is published as a separate program and is not presented as unrestricted retail availability."
+          ],
+          "source_refs": [
+            {
+              "source_id": "gm-heritage-2003-chevrolet-silverado-2500",
+              "pdf_pages": [279],
+              "section": "2003 Silverado 2500HD Color and Trim, Solid Paint ZY1",
+              "revision": "Chart page says published October 22, 2004."
+            },
+            {
+              "source_id": "gm-heritage-2003-chevrolet-silverado-3500",
+              "pdf_pages": [219, 261, 295],
+              "section": "2003 Silverado 3500, 3500 chassis cab, and chassis cab YF2 Color and Trim, Solid Paint ZY1",
+              "revision": "The three chart groups say published March 30, June 25, and October 22, 2004."
+            }
+          ],
+          "exterior_colors": [
+            {"name": "Light Pewter Metallic", "code": "11U", "wa_number": "WA-382E"},
+            {"name": "Black", "code": "41U", "wa_number": "WA-8555"},
+            {"name": "Dark Green Metallic", "code": "47U", "wa_number": "WA-9539"},
+            {"name": "Summit White", "code": "50U", "wa_number": "WA-8624"},
+            {"name": "Dark Carmine Red Metallic", "code": "51U", "wa_number": "WA-334D", "restriction": "Not available with Base models."},
+            {"name": "Dark Gray Metallic", "source_label": "NEW! Dark Gray Metallic", "code": "62U", "wa_number": "WA-805K"},
+            {"name": "Victory Red", "code": "74U", "wa_number": "WA-9260"},
+            {"name": "Arrival Blue Metallic", "source_label": "NEW! Arrival Blue Metallic", "code": "91U", "wa_number": "WA-815K"}
+          ],
+          "program_palettes": [
+            {
+              "program_id": "seo-solid-paint",
+              "program_label": "SEO solid paint",
+              "platform_family": "GMT880 SEO solid paint",
+              "claim_scope": "Complete SEO solid paint union for the reviewed 2500HD, 3500, 3500 chassis cab, and chassis cab YF2 tables. Every row remains restricted to this specialty program.",
+              "evidence_class": "qualified_exact_program_palette",
+              "application_type": "special_equipment_option_paint",
+              "code_column_semantics": "seo",
+              "source_refs": [
+                {
+                  "source_id": "gm-heritage-2003-chevrolet-silverado-2500",
+                  "pdf_pages": [280, 281],
+                  "section": "2003 Silverado 2500HD Color and Trim, SEO Solid Paint",
+                  "revision": "Chart pages say published October 22, 2004."
+                },
+                {
+                  "source_id": "gm-heritage-2003-chevrolet-silverado-3500",
+                  "pdf_pages": [220, 221, 262, 263, 296],
+                  "section": "2003 Silverado 3500, 3500 chassis cab, and chassis cab YF2 Color and Trim, SEO Solid Paint",
+                  "revision": "The three chart groups say published March 30, June 25, and October 22, 2004."
+                }
+              ],
+              "colors": [
+                {"identity_key": "wa-5405", "name": "Blue Metallic", "code": "none", "wa_number": "WA-5405"},
+                {"identity_key": "wa-5445", "name": "Yellow", "code": "none", "wa_number": "WA-5445"},
+                {"identity_key": "wa-5456", "name": "Yellow", "code": "none", "wa_number": "WA-5456", "note": "The 2500HD chart prints this exact identity twice. The archive retains one identity and does not infer a second color."},
+                {"identity_key": "wa-5758", "name": "Green", "code": "none", "wa_number": "WA-5758"},
+                {"identity_key": "wa-6237", "name": "Green - Low Gloss", "code": "none", "wa_number": "WA-6237"},
+                {"identity_key": "wa-6238", "name": "Tan - Low Gloss", "code": "none", "wa_number": "WA-6238"},
+                {"identity_key": "wa-7159", "name": "Blue Metallic", "code": "none", "wa_number": "WA-7159"},
+                {"identity_key": "wa-7840", "name": "Gray Metallic", "code": "none", "wa_number": "WA-7840"},
+                {"identity_key": "wa-7941", "name": "Green", "code": "none", "wa_number": "WA-7941"},
+                {"identity_key": "wa-7952", "name": "Yellow", "code": "none", "wa_number": "WA-7952"},
+                {"identity_key": "wa-9015", "name": "Woodland Green", "source_label": "Green, Woodland", "code": "9V5", "wa_number": "WA-9015"},
+                {"identity_key": "wa-9403", "name": "Doeskin Tan", "code": "9V9", "wa_number": "WA-9403"},
+                {"identity_key": "wa-9408", "name": "Orange", "code": "none", "wa_number": "WA-9408"},
+                {"identity_key": "wa-9414", "name": "Yellow", "code": "none", "wa_number": "WA-9414", "source_ids": ["gm-heritage-2003-chevrolet-silverado-3500"], "restriction": "Printed in the reviewed 3500 and 3500 chassis cab charts; not printed in the reviewed 2500HD chart."},
+                {"identity_key": "wa-9417", "name": "Tangier Orange", "code": "9W4", "wa_number": "WA-9417"},
+                {"identity_key": "wa-334d", "name": "Dark Toreador Red", "code": "none", "wa_number": "WA-334D"},
+                {"identity_key": "wa-770h", "name": "Orange", "code": "none", "wa_number": "WA-770H"},
+                {"identity_key": "wa-9419", "name": "Orange", "code": "none", "wa_number": "WA-9419"},
+                {"identity_key": "wa-9792", "name": "Indigo Blue", "code": "none", "wa_number": "WA-9792"},
+                {"identity_key": "wa-228a", "name": "Light Autumnwood Metallic", "code": "none", "wa_number": "WA-228A"},
+                {"identity_key": "wa-253a", "name": "Wheatland Yellow", "code": "9W3", "wa_number": "WA-253A"}
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2005,
+          "coverage_status": "verified_complete",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular solid paint union for Silverado 1500HD, 2500HD, 3500HD, and 3500 chassis cab. Interior, cab, trim, and wheel flare restrictions remain attached to the reviewed source tables.",
+          "limitations": [
+            "The regular table is complete for the four reviewed HD configurations, not for Silverado 1500 or Silverado SS.",
+            "SEO solid paint is published as a separate program and is not presented as unrestricted retail availability."
+          ],
+          "source_refs": [
+            {"source_id": "gm-heritage-2005-chevrolet-silverado-2500hd", "pdf_pages": [197], "section": "2005 Silverado 2500HD Color and Trim, Solid Paint ZY1", "revision": "Chart page says published February 4, 2005."},
+            {"source_id": "gm-heritage-2005-chevrolet-silverado-1500hd", "pdf_pages": [119], "section": "2005 Silverado 1500HD Color and Trim, Solid Paint ZY1", "revision": "Chart page says published December 3, 2004."},
+            {"source_id": "gm-heritage-2005-chevrolet-silverado-3500hd", "pdf_pages": [194], "section": "2005 Silverado 3500HD Color and Trim, Solid Paint ZY1", "revision": "Chart page says published February 4, 2005."},
+            {"source_id": "gm-heritage-2005-chevrolet-silverado-chassis-cab", "pdf_pages": [179], "section": "2005 Silverado 3500 chassis cab Color and Trim, Solid Paint ZY1", "revision": "Chart page says published January 21, 2005."}
+          ],
+          "exterior_colors": [
+            {"name": "Sandstone Metallic", "code": "15U", "wa_number": "WA-929L"},
+            {"name": "Dark Blue Metallic", "source_label": "NEW! Dark Blue Metallic", "code": "25U", "wa_number": "WA-722J"},
+            {"name": "Black", "code": "41U", "wa_number": "WA-8555"},
+            {"name": "Dark Green Metallic", "code": "47U", "wa_number": "WA-9539"},
+            {"name": "Summit White", "code": "50U", "wa_number": "WA-8624"},
+            {"name": "Silver Birch Metallic", "code": "59U", "wa_number": "WA-926L", "restriction": "Not available with the Tan interior in the reviewed charts."},
+            {"name": "Dark Gray Metallic", "code": "62U", "wa_number": "WA-805K"},
+            {"name": "Sport Red Metallic", "code": "63U", "wa_number": "WA-817K", "restriction": "Not available with Work Truck or Base on the reviewed 2500HD, 3500HD, and chassis cab charts."},
+            {"name": "Victory Red", "code": "74U", "wa_number": "WA-9260"}
+          ],
+          "program_palettes": [
+            {
+              "program_id": "seo-solid-paint",
+              "program_label": "SEO solid paint",
+              "platform_family": "GMT880 SEO solid paint",
+              "claim_scope": "Complete SEO solid paint union for the reviewed 1500HD, 2500HD, 3500HD, and 3500 chassis cab tables. Every row remains restricted to this specialty program.",
+              "evidence_class": "qualified_exact_program_palette",
+              "application_type": "special_equipment_option_paint",
+              "code_column_semantics": "seo",
+              "source_refs": [
+                {"source_id": "gm-heritage-2005-chevrolet-silverado-2500hd", "pdf_pages": [198, 199], "section": "2005 Silverado 2500HD Color and Trim, SEO Solid Paint", "revision": "Chart pages say published February 4, 2005."},
+                {"source_id": "gm-heritage-2005-chevrolet-silverado-1500hd", "pdf_pages": [120, 121], "section": "2005 Silverado 1500HD Color and Trim, SEO Solid Paint", "revision": "Chart pages say published December 3, 2004."},
+                {"source_id": "gm-heritage-2005-chevrolet-silverado-3500hd", "pdf_pages": [195, 196], "section": "2005 Silverado 3500HD Color and Trim, SEO Solid Paint", "revision": "Chart pages say published February 4, 2005."},
+                {"source_id": "gm-heritage-2005-chevrolet-silverado-chassis-cab", "pdf_pages": [180, 181], "section": "2005 Silverado 3500 chassis cab Color and Trim, SEO Solid Paint", "revision": "Chart pages say published January 21, 2005."}
+              ],
+              "colors": [
+                {"identity_key": "wa-5248", "name": "Yellow", "code": "none", "wa_number": "WA-5248"},
+                {"identity_key": "wa-5405", "name": "Blue Metallic", "code": "none", "wa_number": "WA-5405"},
+                {"identity_key": "wa-5445", "name": "Yellow", "code": "none", "wa_number": "WA-5445"},
+                {"identity_key": "wa-5456", "name": "Yellow", "code": "none", "wa_number": "WA-5456"},
+                {"identity_key": "wa-5663", "name": "Blue", "source_label": "NEW! Blue", "code": "none", "wa_number": "WA-5663"},
+                {"identity_key": "wa-6237", "name": "Green - Low Gloss", "code": "none", "wa_number": "WA-6237"},
+                {"identity_key": "wa-6238", "name": "Tan - Low Gloss", "code": "none", "wa_number": "WA-6238"},
+                {"identity_key": "wa-7154", "name": "Blue", "source_label": "NEW! Blue", "code": "none", "wa_number": "WA-7154"},
+                {"identity_key": "wa-7159", "name": "Blue Metallic", "code": "none", "wa_number": "WA-7159"},
+                {"identity_key": "wa-7840", "name": "Gray Metallic", "code": "none", "wa_number": "WA-7840"},
+                {"identity_key": "wa-7941", "name": "Green", "code": "none", "wa_number": "WA-7941"},
+                {"identity_key": "wa-7952", "name": "Yellow", "code": "none", "wa_number": "WA-7952", "source_ids": ["gm-heritage-2005-chevrolet-silverado-1500hd", "gm-heritage-2005-chevrolet-silverado-2500hd"], "restriction": "Printed only in the reviewed 1500HD and 2500HD SEO charts; not printed in the reviewed 3500HD or chassis cab charts."},
+                {"identity_key": "wa-9015", "name": "Woodland Green", "source_label": "Green, Woodland", "code": "9V5", "wa_number": "WA-9015"},
+                {"identity_key": "wa-9403", "name": "Doeskin Tan", "code": "9V9", "wa_number": "WA-9403"},
+                {"identity_key": "wa-9408", "name": "Orange", "code": "none", "wa_number": "WA-9408"},
+                {"identity_key": "wa-9414", "name": "Yellow", "code": "none", "wa_number": "WA-9414"},
+                {"identity_key": "wa-9417", "name": "Tangier Orange", "code": "9W4", "wa_number": "WA-9417"},
+                {"identity_key": "wa-9419", "name": "Orange", "code": "none", "wa_number": "WA-9419"},
+                {"identity_key": "wa-9792", "name": "Indigo Blue", "code": "none", "wa_number": "WA-9792"},
+                {"identity_key": "wa-228a", "name": "Light Autumnwood Metallic", "code": "none", "wa_number": "WA-228A"},
+                {"identity_key": "wa-253a", "name": "Wheatland Yellow", "code": "9W3", "wa_number": "WA-253A"},
+                {"identity_key": "wa-334d", "name": "Dark Toreador Red", "code": "none", "wa_number": "WA-334D"},
+                {"identity_key": "wa-382e", "name": "Pewter", "code": "none", "wa_number": "WA-382E"},
+                {"identity_key": "wa-769h", "name": "Blue", "source_label": "NEW! Blue", "code": "none", "wa_number": "WA-769H"},
+                {"identity_key": "wa-770h", "name": "Orange", "code": "none", "wa_number": "WA-770H"},
+                {"identity_key": "wa-995l", "name": "Green", "source_label": "NEW! Green", "code": "none", "wa_number": "WA-995L"}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

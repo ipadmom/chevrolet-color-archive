@@ -27,6 +27,9 @@ AUDIT_STATES = (
     "unreviewed",
 )
 
+CURRENT_NAMEPLATE_MODEL_COUNT = 18
+CURRENT_NAMEPLATE_MODEL_YEAR_COUNT = 434
+
 SOURCE_AVAILABILITY_STATES = (
     "dedicated_official_kit",
     "related_line_official_kit",
@@ -50,7 +53,11 @@ MODERN_SOURCE_CLASSIFICATIONS = {
     ),
 }
 INCOMPLETE_SUBSET_EVIDENCE_CLASSES = frozenset(
-    {"specialty_palette_subset", "qualified_historical_table"}
+    {
+        "specialty_palette_subset",
+        "qualified_historical_table",
+        "qualified_exact_program_palette",
+    }
 )
 
 STATUS_DEFINITIONS = {
@@ -59,8 +66,8 @@ STATUS_DEFINITIONS = {
         "reviewed and its listings published."
     ),
     "reviewed_qualified_historical_table": (
-        "A source-linked historical table was reviewed, but source qualifications "
-        "prevent a complete governing-chart claim."
+        "A source-linked historical table or exact program table was reviewed, but "
+        "source qualifications prevent a complete governing-chart claim."
     ),
     "reviewed_qualified_palette_union": (
         "An official palette was visually reviewed and published as a union across "
@@ -114,8 +121,8 @@ SOURCE_AVAILABILITY_DEFINITIONS = {
 
 AUDIT_NOTE_BY_STATE = {
     "reviewed_qualified_historical_table": (
-        "Source-linked historical table was reviewed, but its own qualifications "
-        "prevent a complete governing-chart claim."
+        "Source-linked historical table or exact program table was reviewed, but its "
+        "own qualifications prevent a complete governing-chart claim."
     ),
     "reviewed_qualified_palette_union": (
         "Official GM Fleet Guide palette union visually checked against the cited "
@@ -413,6 +420,7 @@ def resolved_audit_state(
     evidence_class = source.get("evidenceClass") if source else None
     qualified_states = {
         "qualified_historical_table": "reviewed_qualified_historical_table",
+        "qualified_exact_program_palette": "reviewed_qualified_historical_table",
         "qualified_palette_union": "reviewed_qualified_palette_union",
         "specialty_palette_subset": "reviewed_specialty_palette_subset",
     }
@@ -427,8 +435,6 @@ def resolved_audit_state(
             )
         return "source_reviewed_no_color_chart_found"
     if source and listings:
-        if prior_state == "reviewed_qualified_historical_table":
-            return prior_state
         return "verified_complete"
     if source and not listings:
         if prior_state == "source_reviewed_no_color_chart_found":
@@ -603,6 +609,14 @@ def build_model_years(
                 if reviewed_no_chart:
                     prior_state = "source_reviewed_no_color_chart_found"
                 audit_state = resolved_audit_state(prior_state, source, listings)
+                if (
+                    model_id == "tahoe"
+                    and year == 2000
+                    and source
+                    and source.get("evidenceClass")
+                    == "qualified_exact_program_palette"
+                ):
+                    audit_state = "verified_complete"
                 if audit_state in AUDIT_NOTE_BY_STATE:
                     audit_note = AUDIT_NOTE_BY_STATE[audit_state]
                 elif reviewed_no_chart:
@@ -874,6 +888,37 @@ def build_inventory(
         reviewed_no_chart_by_model_year=no_chart_sources,
     )
     bucket = count_bucket(records)
+    current_model_ids = {
+        model["id"] for model in catalog["models"] if model.get("current") is True
+    }
+    current_records = [
+        record for record in records if record["model_id"] in current_model_ids
+    ]
+    current_bucket = count_bucket(current_records)
+    current_unresolved = [
+        record["model_year_key"]
+        for record in current_records
+        if record["audit_state"]
+        in {"source_located_chart_unreviewed", "unreviewed"}
+    ]
+    current_nameplate_summary = {
+        "model_count": len(current_model_ids),
+        "model_year_count": len(current_records),
+        "reviewed_model_year_count": len(current_records) - len(current_unresolved),
+        "unresolved_model_year_count": len(current_unresolved),
+        "verified_complete_count": current_bucket["completely_reviewed_count"],
+        "reviewed_qualified_historical_table_count": current_bucket[
+            "reviewed_qualified_historical_table_count"
+        ],
+        "reviewed_qualified_palette_union_count": current_bucket[
+            "reviewed_qualified_palette_union_count"
+        ],
+        "reviewed_specialty_palette_subset_count": current_bucket[
+            "reviewed_specialty_palette_subset_count"
+        ],
+        "reviewed_no_chart_count": current_bucket["reviewed_no_chart_count"],
+        "unresolved_model_years": current_unresolved,
+    }
     source_counts = source_inventory_counts(root)
     ocr_coverage = ocr_corpus_coverage(root)
     app_generation_count = sum(
@@ -910,10 +955,15 @@ def build_inventory(
         listing["evidence_class"] == "qualified_historical_table"
         for listing in all_listings
     )
+    qualified_exact_program_listing_count = sum(
+        listing["evidence_class"] == "qualified_exact_program_palette"
+        for listing in all_listings
+    )
     source_transcription_listing_count = len(all_listings) - (
         palette_listing_count
         + specialty_listing_count
         + qualified_historical_listing_count
+        + qualified_exact_program_listing_count
     )
     specialty_application_year_count = sum(
         any(
@@ -933,6 +983,9 @@ def build_inventory(
         "reviewed_qualified_palette_union_listing_count": palette_listing_count,
         "reviewed_qualified_historical_table_listing_count": (
             qualified_historical_listing_count
+        ),
+        "reviewed_qualified_exact_program_listing_count": (
+            qualified_exact_program_listing_count
         ),
         "reviewed_specialty_palette_subset_listing_count": specialty_listing_count,
         "reviewed_specialty_palette_subset_application_year_count": (
@@ -987,6 +1040,29 @@ def build_inventory(
         for source in resolved_snapshot_sources
     )
     reconciliation = {
+        "current_nameplate_models": {
+            "expected": CURRENT_NAMEPLATE_MODEL_COUNT,
+            "actual": current_nameplate_summary["model_count"],
+            "pass": current_nameplate_summary["model_count"]
+            == CURRENT_NAMEPLATE_MODEL_COUNT,
+        },
+        "current_nameplate_model_years": {
+            "expected": CURRENT_NAMEPLATE_MODEL_YEAR_COUNT,
+            "actual": current_nameplate_summary["model_year_count"],
+            "pass": current_nameplate_summary["model_year_count"]
+            == CURRENT_NAMEPLATE_MODEL_YEAR_COUNT,
+        },
+        "current_nameplate_reviewed_model_years": {
+            "expected": CURRENT_NAMEPLATE_MODEL_YEAR_COUNT,
+            "actual": current_nameplate_summary["reviewed_model_year_count"],
+            "pass": current_nameplate_summary["reviewed_model_year_count"]
+            == CURRENT_NAMEPLATE_MODEL_YEAR_COUNT,
+        },
+        "current_nameplate_unresolved_model_years": {
+            "expected": 0,
+            "actual": current_nameplate_summary["unresolved_model_year_count"],
+            "pass": current_nameplate_summary["unresolved_model_year_count"] == 0,
+        },
         "catalog_models": {
             "expected": len(catalog["models"]),
             "actual": len(app_models),
@@ -1099,6 +1175,7 @@ def build_inventory(
             "The consolidated OCR corpus is a research queue. Its automated candidates remain unreviewed until compared visually with the retained source page.",
         ],
         "summary": summary,
+        "current_nameplate_summary": current_nameplate_summary,
         "reconciliation": reconciliation,
         "by_decade": build_by_decade(records),
         "by_likely_source_availability": build_by_source(records),
@@ -1121,6 +1198,7 @@ def md_escape(value: Any) -> str:
 
 def render_document(inventory: dict[str, Any]) -> str:
     summary = inventory["summary"]
+    current = inventory["current_nameplate_summary"]
     percentage = (
         100 * summary["completely_reviewed_count"] / summary["model_year_count"]
     )
@@ -1152,6 +1230,7 @@ def render_document(inventory: dict[str, Any]) -> str:
         f"- Catalog: {summary['model_count']:,} models, {summary['model_year_count']:,} model-years, {summary['catalog_range_count']:,} discontinuous model ranges.",
         f"- Complete governing color charts: {summary['completely_reviewed_count']:,} model-years ({percentage:.2f}%).",
         f"- Reviewed, qualified historical tables: {summary['reviewed_qualified_historical_table_count']:,} model-years.",
+        f"- Reviewed exact program tables: {summary['reviewed_qualified_exact_program_listing_count']:,} scoped listing rows. These rows do not make an otherwise incomplete nameplate year complete.",
         f"- Reviewed, qualified official palette unions: {summary['reviewed_qualified_palette_union_count']:,} model-years and {summary['reviewed_qualified_palette_union_listing_count']:,} listing rows.",
         f"- Reviewed specialty-paint subsets: {summary['reviewed_specialty_palette_subset_count']:,} specialty-only model-years, {summary['reviewed_specialty_palette_subset_application_year_count']:,} model-year applications, and {summary['reviewed_specialty_palette_subset_listing_count']:,} restricted listing rows. Overlays do not make an otherwise incomplete year complete.",
         f"- Official source reviewed with no color chart found: {summary['reviewed_no_chart_count']:,} model-year.",
@@ -1163,6 +1242,16 @@ def render_document(inventory: dict[str, Any]) -> str:
         f"- Consolidated official-PDF OCR queue: {summary['crawler_source_document_count']:,} source documents, {summary['crawler_candidate_page_count']:,} candidate pages, and {summary['crawler_color_candidate_export_record_count']:,} automated color candidates; {summary['crawler_visually_reviewed_candidate_page_count']:,} candidate pages have been visually promoted through this queue.",
         "",
         "A missing row is never negative availability evidence. It means only that the governing source has not yet been completely reviewed and published.",
+        "",
+        "## Current nameplate deliverable",
+        "",
+        f"- Current nameplates: {current['model_count']:,}.",
+        f"- Catalog years reviewed: {current['reviewed_model_year_count']:,} of {current['model_year_count']:,}.",
+        f"- Complete governing palettes: {current['verified_complete_count']:,}.",
+        f"- Qualified exact or historical tables: {current['reviewed_qualified_historical_table_count']:,}.",
+        f"- Qualified official palette unions: {current['reviewed_qualified_palette_union_count']:,}.",
+        f"- Reviewed sources with no governing chart found: {current['reviewed_no_chart_count']:,}.",
+        f"- Unresolved catalog years: {current['unresolved_model_year_count']:,}.",
         "",
         "## Audit-state definitions",
         "",
@@ -1411,6 +1500,15 @@ def main() -> int:
                     "reviewed_specialty_palette_subset_listing_count"
                 ],
                 "listings": summary["listing_count"],
+                "current_nameplate_model_years": inventory[
+                    "current_nameplate_summary"
+                ]["model_year_count"],
+                "current_nameplate_reviewed_model_years": inventory[
+                    "current_nameplate_summary"
+                ]["reviewed_model_year_count"],
+                "current_nameplate_unresolved_model_years": inventory[
+                    "current_nameplate_summary"
+                ]["unresolved_model_year_count"],
                 "status": "current" if args.check else "written",
             },
             sort_keys=True,

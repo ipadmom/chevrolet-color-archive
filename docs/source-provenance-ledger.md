@@ -114,15 +114,17 @@ The ledger currently covers:
   2023 Colorado and Silverado HD palettes, each bound to its exact live
   Chevrolet retrieval URL, local path, SHA-256, byte length, retrieval time,
   and PDF page count;
-- all 174 assets in the pinned `brochure-source-archive-v1` Release. The set
-  includes 148 PDFs totaling 1,565,404,205 bytes and 11,600 pages. Of those, 143
-  are retained source assets, including 139 retained source PDFs totaling
-  1,510,206,962 bytes. Other retained formats include the complete 16-image
+- all 345 assets in the pinned `brochure-source-archive-v1` Release. The set
+  includes 309 PDFs totaling 3,200,851,142 bytes and 27,639 pages. Of those, 307
+  entries have canonical source identifiers, including 300 PDFs totaling
+  3,145,653,899 bytes and 27,286 pages. Other retained formats include the complete 16-image
   1993 carrier set, one listing HTML file, the 2004 service-table image, and the
-  flat-filename checksum
-  manifest covering all 173 other assets. The set adds 31 exact-palette audit
+  latest checksum manifest covering all 344 other assets. Earlier checksum
+  snapshots remain preserved. The set adds 31 exact-palette audit
   PDFs for Corvette 1963-1972, Monte Carlo 1970-1979, and P-Series/Step-Van
-  1969-1978. The validated application surface uses 171 application Release
+  1969-1978, six exact Silverado HD source kits for 2003 and 2005, and 69
+  audited source artifacts used by the current nameplate audits. The
+  validated application surface uses 336 application Release
   URLs. It includes 888 published specialty records, four
   published ordinary qualified-history records, and 8 verified nonpublished,
   nonrouting specialty snapshots;
@@ -140,8 +142,8 @@ The ledger currently covers:
 - every photo license URL;
 - every pinned GitHub Release archive URL.
 
-The normalized ledger currently contains 2,981 canonical source rows, 1,909
-immutable source revisions, and 32,316 source-to-claim links.
+The normalized ledger currently contains 3,208 canonical source rows, 2,125
+immutable source revisions, and 46,269 source to claim links.
 
 The crawler database also retains three legacy Camaro aliases created by the
 original bounded example manifest. Each alias has the same canonical URL and
@@ -156,11 +158,11 @@ distinct SHA-256 identities totaling 5,133,028,799 bytes and 59,193 PDF pages,
 with requested and
 final URLs, retrieval times, safe response headers, declared and received byte
 counts, and content-addressed crawler object paths. The complete 5.1 GB corpus
-remains in ignored research storage. The 143 retained source assets, including
-139 retained source PDFs totaling 1,510,206,962 bytes, are independently copied
-to the pinned public Release. They close the current Tahoe and Suburban audits,
-preserve the 1963 comparison record, and retain the published modern and
-specialty sources.
+remains in ignored research storage. The 307 retained entries with source
+identifiers, including 300 retained PDFs, are independently copied to the
+pinned public Release. They close the current Tahoe, Suburban, Corvette,
+Blazer, Express, and Silverado HD audit tranches, preserve the 1963 comparison
+record, and retain the published modern and specialty sources.
 The artifact ledger makes those copies and future archive batches auditable
 without treating the working cache
 as a public host.
@@ -209,9 +211,9 @@ complete HTTPS source URLs,
 citation counts, per-year listing counts, one evidence link for every color
 availability row, qualified-palette and specialty-subset review flags, the
 empty post-promotion supplemental table, the bounded RockAuto 20/28/111/96
-counts, the published README row counts, 174 brochure Release assets, all 173
-non-manifest assets covered by the flat-filename checksum manifest, 31
-exact-palette audit PDFs, 171 application Release URLs, 888 published specialty
+counts, the published README row counts, 345 brochure Release assets, all 344
+other assets covered by the latest checksum manifest, 37
+exact-palette audit PDFs, 336 application Release URLs, 888 published specialty
 records, four published ordinary
 qualified-history records, eight verified nonpublished, nonrouting specialty
 snapshots, pinned photo archive URLs, 1,369 exact paint schemes,

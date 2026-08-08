@@ -1,0 +1,3805 @@
+{
+  "schema_version": 1,
+  "visibility": "public",
+  "classification": "archive-internal",
+  "dataset_kind": "current_nameplate_historical_variant_color_audit",
+  "make": "Chevrolet",
+  "nameplate": "Blazer",
+  "year_ranges": [
+    [
+      1969,
+      1982
+    ],
+    [
+      1995,
+      2005
+    ]
+  ],
+  "audit_as_of": "2026-08-07",
+  "scope": "Factory exterior paint evidence for the full size K5 Blazer through 1982 and the compact S or T Blazer from 1995 through 2005. Each model year and lineage remains source scoped. No color, paint program, top, stripe, or restriction is projected from an adjacent year or another Chevrolet truck line.",
+  "row_contract": {
+    "color_legend": "Exact source labels keyed by the printed paint code. When a source lists a color name without a code, the key begins uncoded: and is an audit identifier, not a GM code.",
+    "solid_rows": "Color legend keys that the cited table or year specific paint list makes available as regular exterior paint.",
+    "two_tone_rows": "Ordered [color_code_1, color_code_2] pairs. The order is the application order printed by GM and is not interchangeable.",
+    "stripe_rows": "Ordered [color_code_1, color_code_2, source stripe label] rows transcribed from a special paint package table.",
+    "stripe_availability_rows": "Ordered [body_color_code, stripe_or_decal_option_code] rows. These describe an available stripe or decal on a solid body color, not a two tone body paint pair.",
+    "specialty_rows": "Objects that preserve a specialty paint program code, printed color name, and restrictions. A program code is not silently converted into a body paint code.",
+    "top_rows": "Objects that preserve removable hardtop or folding top colors, codes when printed, and program scope.",
+    "source_pages": "One based PDF page numbers. Printed page locators, issue dates, and revision dates are retained beside each table.",
+    "duplicate_editions": "A duplicate or reordered retained GM packet is identified separately and never treated as a second independent availability source."
+  },
+  "method": [
+    "Used retained GM Heritage Vehicle Information Kit PDFs as the primary availability authority.",
+    "Matched every cited PDF to the crawler artifact ledger by SHA-256, byte length, page count, object path, and completed integrity status.",
+    "Rendered and visually reviewed every cited table page. OCR and candidate parquet rows were finding aids only.",
+    "Reviewed every page of packets that lacked an OCR color-table candidate before recording the packet as incomplete.",
+    "Kept full size K5 and compact S or T Blazer evidence separate and did not substitute Suburban, pickup, Tahoe, TrailBlazer, or adjacent year palettes."
+  ],
+  "sources": [
+    {
+      "source_id": "gm-heritage-1969-chevrolet-blazer",
+      "title": "1969 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "0d58bb4bd859f4b82f308a7a59c9e854bbd8283d6fb76723a8b136341a31087a",
+      "artifact_bytes": 1258422,
+      "pdf_page_count": 32,
+      "crawler_object_relpath": "0d/58/0d58bb4bd859f4b82f308a7a59c9e854bbd8283d6fb76723a8b136341a31087a.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1969 full size K5 Blazer specifications and color chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1970-chevrolet-blazer",
+      "title": "1970 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "artifact_sha256": "32f8c0f7180bde3344a0549dfa12b398d8429a2b65574655a32bbda0ac3d600e",
+      "artifact_bytes": 1220579,
+      "pdf_page_count": 10,
+      "crawler_object_relpath": "32/f8/32f8c0f7180bde3344a0549dfa12b398d8429a2b65574655a32bbda0ac3d600e.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1970 full size K5 Blazer specifications; references a separate color chart that is absent from the retained packet",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1971-chevrolet-blazer",
+      "title": "1971 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1971-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "artifact_sha256": "c956707f017b002cbd26995d57f66bc3b9446ae229030f494fcbd32847f9f7f0",
+      "artifact_bytes": 9145014,
+      "pdf_page_count": 64,
+      "crawler_object_relpath": "c9/56/c956707f017b002cbd26995d57f66bc3b9446ae229030f494fcbd32847f9f7f0.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1971 full size Blazer color selection chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1971-chevrolet-blazer-rv-full-size-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1972-chevrolet-blazer",
+      "title": "1972 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "976c8e45080abc6b372cbd09d2313f2c68d2524b94f3b99d3a239f2aee1c927d",
+      "artifact_bytes": 1610101,
+      "pdf_page_count": 12,
+      "crawler_object_relpath": "97/6c/976c8e45080abc6b372cbd09d2313f2c68d2524b94f3b99d3a239f2aee1c927d.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1972 full size K5 Blazer interior and exterior color chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1975-chevrolet-blazer",
+      "title": "1975 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "artifact_sha256": "d7c329c839b10a8dd4023cce5c4f50dcced34ec7efb88f5e8838bb897881f805",
+      "artifact_bytes": 3139432,
+      "pdf_page_count": 36,
+      "crawler_object_relpath": "d7/c3/d7c329c839b10a8dd4023cce5c4f50dcced34ec7efb88f5e8838bb897881f805.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1975 full size Blazer solid paint, special two tone, and top chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1976-chevrolet-blazer",
+      "title": "1976 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "artifact_sha256": "24544dcf3279059aa984f548449d93837eca7cd3ac87e88cbc51bfb74bab182d",
+      "artifact_bytes": 1471056,
+      "pdf_page_count": 12,
+      "crawler_object_relpath": "24/54/24544dcf3279059aa984f548449d93837eca7cd3ac87e88cbc51bfb74bab182d.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1976 full size Blazer solid paint, special two tone, and top chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1977-chevrolet-blazer",
+      "title": "1977 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "artifact_sha256": "4223ebf3990554e1bdc64ab1a4f646808233e353a4de120d7688d1413f4916ef",
+      "artifact_bytes": 2204918,
+      "pdf_page_count": 12,
+      "crawler_object_relpath": "42/23/4223ebf3990554e1bdc64ab1a4f646808233e353a4de120d7688d1413f4916ef.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1977 full size Blazer hardtop, convertible top, solid paint, special two tone, and exterior decor charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1978-chevrolet-blazer",
+      "title": "1978 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "e9793915d376aa27e4480a2481a504da692a64a1162c5570adc916d41d1ba036",
+      "artifact_bytes": 13364447,
+      "pdf_page_count": 64,
+      "crawler_object_relpath": "e9/79/e9793915d376aa27e4480a2481a504da692a64a1162c5570adc916d41d1ba036.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1978 full size Blazer hardtop, convertible top, solid paint, special two tone, and exterior decor charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1979-chevrolet-blazer",
+      "title": "1979 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add",
+      "artifact_bytes": 1739347,
+      "pdf_page_count": 22,
+      "crawler_object_relpath": "86/85/868566b1e9c3b1aebece1adfde7a9e3d6ce40661002275e8b4824c73ea333add.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1979 full size Blazer paint chart plus same year special paint and permanent fleet program page",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1980-chevrolet-blazer",
+      "title": "1980 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1980-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "bdb8781e14b6e241e957803d95d6fbade51da6800be962104039be149408b004",
+      "artifact_bytes": 2942641,
+      "pdf_page_count": 20,
+      "crawler_object_relpath": "bd/b8/bdb8781e14b6e241e957803d95d6fbade51da6800be962104039be149408b004.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1980 full size Blazer solid paint, special two tone, top, and exterior decor charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1981-chevrolet-blazer",
+      "title": "1981 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1981-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "fd4f8740b0f26c40d34ba184fdbb2d8cbb733171b5a147e69d04081d0296db74",
+      "artifact_bytes": 846769,
+      "pdf_page_count": 22,
+      "crawler_object_relpath": "fd/4f/fd4f8740b0f26c40d34ba184fdbb2d8cbb733171b5a147e69d04081d0296db74.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1981 full size Blazer solid paint, special two tone, top, and exterior decor charts; image scan independently reviewed",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1995-chevrolet-blazer",
+      "title": "1995 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "868c8f37048631a0b04f91a8a45de649ca9013cba29c34579cd44ee70a5a5fbe",
+      "artifact_bytes": 1244476,
+      "pdf_page_count": 10,
+      "crawler_object_relpath": "86/8c/868c8f37048631a0b04f91a8a45de649ca9013cba29c34579cd44ee70a5a5fbe.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1995 all new compact Blazer technical guide; this is not a continuation of the full size K5 line",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1995-chevrolet-s-10-blazer",
+      "title": "1995 Chevrolet S 10 Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-S-10-Blazer.pdf",
+      "artifact_sha256": "c03c5d579d3b4eb5d4233f6b113f95428254bf9cfa39d916ef879ca5af4086c5",
+      "artifact_bytes": 1713165,
+      "pdf_page_count": 10,
+      "crawler_object_relpath": "c0/3c/c03c5d579d3b4eb5d4233f6b113f95428254bf9cfa39d916ef879ca5af4086c5.pdf",
+      "integrity_status": "complete",
+      "source_scope": "Reordered duplicate 1995 compact Blazer technical guide",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1996-chevrolet-blazer",
+      "title": "1996 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "582f051a19688bda8e8673a7bd251b42728a2805e7181c7d0dacae454a501c51",
+      "artifact_bytes": 2341154,
+      "pdf_page_count": 26,
+      "crawler_object_relpath": "58/2f/582f051a19688bda8e8673a7bd251b42728a2805e7181c7d0dacae454a501c51.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1996 compact Blazer order guide including color charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1996-chevrolet-s-10-blazer",
+      "title": "1996 Chevrolet S 10 Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-S-10-Blazer.pdf",
+      "artifact_sha256": "a107cdf2f23f42c38819db16e4c50b58392208d1d3accc369b3367db8be301e5",
+      "artifact_bytes": 1408696,
+      "pdf_page_count": 19,
+      "crawler_object_relpath": "a1/07/a107cdf2f23f42c38819db16e4c50b58392208d1d3accc369b3367db8be301e5.pdf",
+      "integrity_status": "complete",
+      "source_scope": "Reordered duplicate 1996 compact Blazer order guide including the same revised color charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1997-chevrolet-s-10-blazer",
+      "title": "1997 Chevrolet S 10 Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-S-10-Blazer.pdf",
+      "artifact_sha256": "c4ad902cf216ac6d7683239b8b19d1300be6be3b26d38317a4d9b88631580548",
+      "artifact_bytes": 896519,
+      "pdf_page_count": 31,
+      "crawler_object_relpath": "c4/ad/c4ad902cf216ac6d7683239b8b19d1300be6be3b26d38317a4d9b88631580548.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1997 compact Blazer order guide including two door, four door, LT, and two tone charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1998-chevrolet-s-10-blazer",
+      "title": "1998 Chevrolet S 10 Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-S-10-Blazer.pdf",
+      "artifact_sha256": "0d228ac4270d9f0b7dd5666f8dca1a0f23f36d6e296e06408785121c639cf927",
+      "artifact_bytes": 793832,
+      "pdf_page_count": 23,
+      "crawler_object_relpath": "0d/22/0d228ac4270d9f0b7dd5666f8dca1a0f23f36d6e296e06408785121c639cf927.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1998 compact Blazer order guide including solid and two tone charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-1999-chevrolet-s-10-blazer",
+      "title": "1999 Chevrolet S 10 Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-S-10-Blazer.pdf",
+      "artifact_sha256": "ccd059ae9447e58a84e900aeef3c8c5d62708aab924d77efb04163535e42ecea",
+      "artifact_bytes": 1831705,
+      "pdf_page_count": 58,
+      "crawler_object_relpath": "cc/d0/ccd059ae9447e58a84e900aeef3c8c5d62708aab924d77efb04163535e42ecea.pdf",
+      "integrity_status": "complete",
+      "source_scope": "1999 compact Blazer order guide including base, TrailBlazer package, and two tone charts",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2000-chevrolet-blazer",
+      "title": "2000 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "0fc2ba0c42e675672d5a53eb8a7bfc3f15b2d994de4825f66ed33eec3b69ea93",
+      "artifact_bytes": 15651584,
+      "pdf_page_count": 118,
+      "crawler_object_relpath": "0f/c2/0fc2ba0c42e675672d5a53eb8a7bfc3f15b2d994de4825f66ed33eec3b69ea93.pdf",
+      "integrity_status": "complete",
+      "source_scope": "2000 compact Blazer restoration kit; year specific paint name list is authoritative, generic RPO dictionary is not treated as availability",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2001-chevrolet-blazer",
+      "title": "2001 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "bedfbc01a4b808dc6ae6384693de087d308d843fd09dee47b9bd4b467c340b0a",
+      "artifact_bytes": 13429465,
+      "pdf_page_count": 114,
+      "crawler_object_relpath": "be/df/bedfbc01a4b808dc6ae6384693de087d308d843fd09dee47b9bd4b467c340b0a.pdf",
+      "integrity_status": "complete",
+      "source_scope": "2001 compact Blazer restoration kit with a year specific exterior paint name list",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2002-chevrolet-blazer",
+      "title": "2002 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "7b3e1b6732ca5c4de515726c4aebd26c80f751f796e97d4000a459ad513bbbbd",
+      "artifact_bytes": 13152732,
+      "pdf_page_count": 106,
+      "crawler_object_relpath": "7b/3e/7b3e1b6732ca5c4de515726c4aebd26c80f751f796e97d4000a459ad513bbbbd.pdf",
+      "integrity_status": "complete",
+      "source_scope": "2002 compact Blazer restoration kit; documents new colors and an Xtreme stripe package but does not contain a complete paint chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2003-chevrolet-blazer",
+      "title": "2003 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "e70803dd12a8d9212263c996a57f4dd04ab61274e59746f46a0c33e4e2fd9220",
+      "artifact_bytes": 25216574,
+      "pdf_page_count": 158,
+      "crawler_object_relpath": "e7/08/e70803dd12a8d9212263c996a57f4dd04ab61274e59746f46a0c33e4e2fd9220.pdf",
+      "integrity_status": "complete",
+      "source_scope": "2003 compact Blazer restoration kit with a complete coded solid paint chart, Xtreme stripe and decal matrix, and specialty paint RPO list",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2004-chevrolet-blazer",
+      "title": "2004 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "1811a5fbd850cdb78354122dc8307d18c652b939b260515fd8132170fdda2121",
+      "artifact_bytes": 10626486,
+      "pdf_page_count": 102,
+      "crawler_object_relpath": "18/11/1811a5fbd850cdb78354122dc8307d18c652b939b260515fd8132170fdda2121.pdf",
+      "integrity_status": "complete",
+      "source_scope": "2004 compact Blazer restoration kit; full packet review found no model year paint list or availability chart",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-blazer",
+      "title": "2005 Chevrolet Blazer Vehicle Information Kit",
+      "direct_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Blazer.pdf",
+      "artifact_sha256": "0434571ccb4918cef0f3ba586e3fdb5b27ac1f4e9d2fd8f239086e710b5ab053",
+      "artifact_bytes": 15755723,
+      "pdf_page_count": 124,
+      "crawler_object_relpath": "04/34/0434571ccb4918cef0f3ba586e3fdb5b27ac1f4e9d2fd8f239086e710b5ab053.pdf",
+      "integrity_status": "complete",
+      "source_scope": "2005 compact two door Blazer restoration kit with complete coded solid paint and specialty paint tables",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-blazer-vehicle-information-kit-gm.pdf"
+    }
+  ],
+  "years": [
+    {
+      "year": 1969,
+      "coverage_status": "verified_complete_for_cited_table",
+      "limitations": [
+        "The retained color chart is solid only and does not publish removable top color availability."
+      ],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1969-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_table",
+          "color_legend": {
+            "500": "Black",
+            "503": "Green, Light",
+            "504": "Olive Green",
+            "505": "Green, Dark",
+            "507": "Blue, Light",
+            "508": "Blue, Dark",
+            "511": "Turquoise",
+            "514": "Red",
+            "516": "Orange",
+            "517": "Maroon",
+            "519": "Yellow, Dark",
+            "520": "Yellow",
+            "521": "White",
+            "523": "Silver",
+            "525": "Saddle"
+          },
+          "tables": [
+            {
+              "table_id": "solid-exterior",
+              "program_codes": [],
+              "program_name": "Blazer solid exterior colors",
+              "source_pages": [
+                8
+              ],
+              "printed_page_locators": [
+                "Conventional Gasoline - 10: Page 8"
+              ],
+              "document_date": "1969-04-01",
+              "solid_rows": [
+                "500",
+                "508",
+                "507",
+                "505",
+                "503",
+                "517",
+                "504",
+                "516",
+                "514",
+                "525",
+                "523",
+                "511",
+                "521",
+                "519",
+                "520"
+              ],
+              "restrictions": [
+                "The chart labels exterior paint as solid only."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "coverage_status": "official_packet_incomplete",
+      "limitations": [
+        "PDF page 6 directs the reader to a Color & Trim Chart, but the retained 10-page official packet does not contain that chart.",
+        "No 1969 or 1971 color is carried into 1970."
+      ],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1970-chevrolet-blazer"
+          ],
+          "coverage_status": "documented_without_color_rows",
+          "color_legend": {},
+          "tables": [
+            {
+              "table_id": "referenced-missing-solid-chart",
+              "program_codes": [],
+              "program_name": "Solid exterior paint",
+              "source_pages": [
+                6
+              ],
+              "printed_page_locators": [
+                "Conventional Gasoline - K/5 Blazer: Page 6"
+              ],
+              "document_date": "1969-08-25",
+              "solid_rows": [],
+              "restrictions": [
+                "The source says Paint, Exterior: See Color & Trim Chart; Solid color. The referenced chart is absent."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1971,
+      "coverage_status": "verified_complete_for_cited_table",
+      "limitations": [
+        "The source chart publishes solid exterior colors only."
+      ],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1971-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_table",
+          "color_legend": {
+            "500": "Black",
+            "504": "Olive, Medium",
+            "505": "Green, Dark",
+            "506": "Olive, Dark",
+            "510": "Blue, Medium",
+            "511": "Ochre",
+            "514": "Red, Medium",
+            "516": "Orange",
+            "518": "Green, Medium",
+            "519": "Yellow, Dark",
+            "521": "White",
+            "522": "Bronze, Medium",
+            "523": "Blue, Dark",
+            "524": "Orange, Red",
+            "525": "Yellow"
+          },
+          "tables": [
+            {
+              "table_id": "solid-exterior",
+              "program_codes": [],
+              "program_name": "Blazer exterior and interior color selection",
+              "source_pages": [
+                63
+              ],
+              "printed_page_locators": [
+                "Cabs, Bodies & Colors - Page 9"
+              ],
+              "document_date": "1971-03-15",
+              "solid_rows": [
+                "500",
+                "523",
+                "510",
+                "522",
+                "505",
+                "518",
+                "511",
+                "506",
+                "504",
+                "524",
+                "516",
+                "514",
+                "521",
+                "519",
+                "525"
+              ],
+              "restrictions": [
+                "The exterior heading states Solid only."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "coverage_status": "verified_complete_for_cited_table",
+      "limitations": [
+        "The source chart publishes solid exterior colors only."
+      ],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1972-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_table",
+          "color_legend": {
+            "500": "Black, Midnight",
+            "504": "Green, Willow",
+            "505": "Green, Glenwood",
+            "506": "Green, Spruce",
+            "510": "Blue, Hawaiian",
+            "511": "Gold, Spanish",
+            "514": "Red, Crimson",
+            "516": "Orange, Tangier",
+            "518": "Green, Meadow",
+            "519": "Yellow, Wheatland",
+            "521": "White, Frost",
+            "522": "Bronze, Classic",
+            "523": "Blue, Mariner",
+            "524": "Orange, Firebolt",
+            "525": "Yellow, Grapefruit"
+          },
+          "tables": [
+            {
+              "table_id": "solid-exterior",
+              "program_codes": [],
+              "program_name": "K/5 Blazer interior and exterior color chart",
+              "source_pages": [
+                12
+              ],
+              "printed_page_locators": [
+                "K/5 Blazer - Page 12"
+              ],
+              "document_date": "1972-01-28",
+              "solid_rows": [
+                "500",
+                "510",
+                "523",
+                "522",
+                "511",
+                "505",
+                "518",
+                "506",
+                "504",
+                "524",
+                "516",
+                "514",
+                "521",
+                "525",
+                "519"
+              ],
+              "restrictions": [
+                "Highlander Plaid Z84 is an interior restriction and requires the auxiliary top; it is not a separate exterior paint row."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1973,
+      "coverage_status": "missing_official_blazer_source",
+      "limitations": [
+        "The retained GM Heritage index has no 1973 Chevrolet Blazer kit. The retained 1973 Chevrolet and Suburban kits do not identify a Blazer or K5 color chart.",
+        "No pickup or Suburban palette is substituted."
+      ],
+      "variants": []
+    },
+    {
+      "year": 1974,
+      "coverage_status": "missing_official_blazer_source",
+      "limitations": [
+        "The retained GM Heritage index has no 1974 Chevrolet Blazer kit. The retained 1974 Chevrolet and Suburban kits do not identify a Blazer or K5 color chart.",
+        "No pickup or Suburban palette is substituted."
+      ],
+      "variants": []
+    },
+    {
+      "year": 1975,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1975-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "White, Frost",
+            "17": "Silver, Saratoga (M)",
+            "20": "Blue, Skyline (Light)",
+            "23": "Blue, Hawaiian (Medium)",
+            "25": "Blue, Catalina (Dark) (M)",
+            "41": "Green, Spring (Medium) (M)",
+            "43": "Green, Willoway (Light)",
+            "46": "Green, Glenwood (Dark)",
+            "53": "Gold, Yuba (Medium) (M)",
+            "60": "Tan, Santa Fe",
+            "61": "Bronze, Grecian",
+            "62": "Buckskin",
+            "71": "Red, Rosedale (Dark)",
+            "73": "Red, Crimson (Medium)",
+            "81": "Gold, Moss (Dark) (M)"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                6,
+                7
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 6",
+                "Blazer - Page 7"
+              ],
+              "document_date": "1974-09-16",
+              "solid_rows": [
+                "20",
+                "23",
+                "25",
+                "61",
+                "62",
+                "53",
+                "81",
+                "43",
+                "41",
+                "46",
+                "73",
+                "71",
+                "17",
+                "60",
+                "12"
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "solid paint"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "solid paint"
+                }
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1",
+                "Z58"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                6,
+                7
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 6",
+                "Blazer - Page 7"
+              ],
+              "document_date": "1974-09-16",
+              "two_tone_rows": [
+                [
+                  "20",
+                  "12"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "61",
+                  "12"
+                ],
+                [
+                  "62",
+                  "12"
+                ],
+                [
+                  "53",
+                  "12"
+                ],
+                [
+                  "81",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "41",
+                  "12"
+                ],
+                [
+                  "46",
+                  "12"
+                ],
+                [
+                  "73",
+                  "12"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "White",
+                  "rpo": "Z58",
+                  "scope": "all listed ZY3 rows"
+                }
+              ],
+              "restrictions": [
+                "ZY3 is available on open models and on closed models with a white top only. The area between YG1 moldings is Frost White."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1976-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "White, Frost",
+            "17": "Silver, Saratoga (M)",
+            "20": "Blue, Skyline (Light)",
+            "23": "Blue, Hawaiian (Medium)",
+            "25": "Blue, Catalina (Dark) (M)",
+            "41": "Green, Spring (Medium) (M)",
+            "43": "Green, Willoway (Light)",
+            "46": "Green, Glenwood (Dark)",
+            "53": "Gold, Yuba (Medium) (M)",
+            "60": "Tan, Santa Fe",
+            "61": "Bronze, Grecian",
+            "62": "Buckskin",
+            "71": "Red, Rosedale (Dark)",
+            "73": "Red, Crimson (Medium)",
+            "81": "Gold, Moss (Dark) (M)"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                6,
+                7
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 6",
+                "Blazer - Page 7"
+              ],
+              "document_date": "1975-08-29",
+              "solid_rows": [
+                "20",
+                "23",
+                "25",
+                "61",
+                "62",
+                "53",
+                "81",
+                "43",
+                "41",
+                "46",
+                "73",
+                "71",
+                "17",
+                "60",
+                "12"
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "solid paint"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "solid paint"
+                }
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1",
+                "Z58"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                6,
+                7
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 6",
+                "Blazer - Page 7"
+              ],
+              "document_date": "1975-08-29",
+              "two_tone_rows": [
+                [
+                  "20",
+                  "12"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "61",
+                  "12"
+                ],
+                [
+                  "62",
+                  "12"
+                ],
+                [
+                  "53",
+                  "12"
+                ],
+                [
+                  "81",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "41",
+                  "12"
+                ],
+                [
+                  "46",
+                  "12"
+                ],
+                [
+                  "73",
+                  "12"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "White",
+                  "rpo": "Z58",
+                  "scope": "all listed ZY3 rows"
+                }
+              ],
+              "restrictions": [
+                "ZY3 is available on open models and on closed models with a white top only. The area between YG1 moldings is Frost White."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1977,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1977-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "White, Frost",
+            "17": "Silver, Saratoga (M)",
+            "20": "Blue, Lite (Light)",
+            "23": "Blue, Hawaiian (Medium)",
+            "25": "Blue, Mariner (Dark) (M)",
+            "43": "Green, Seamist (Light) (M)",
+            "53": "Yellow, Colonial",
+            "60": "Tan, Santa Fe",
+            "65": "Buckskin",
+            "68": "Russet Metallic (M)",
+            "70": "Red, Cardinal (Medium)",
+            "71": "Red, Metallic (Dark) (M)",
+            "76": "Mahogany",
+            "81": "Brown, Cordova (Dark) (M)",
+            "86": "Black, Midnight"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid-and-top-availability",
+              "program_codes": [
+                "ZY1",
+                "Z58",
+                "Z59",
+                "C1A",
+                "C1B",
+                "C1C",
+                "C1D"
+              ],
+              "program_name": "Solid paint with hardtop and convertible top availability",
+              "source_pages": [
+                5,
+                6
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 5",
+                "Blazer - Page 6"
+              ],
+              "document_date": "1976-08-09",
+              "solid_rows": [
+                "86",
+                "20",
+                "23",
+                "25",
+                "81",
+                "65",
+                "43",
+                "76",
+                "70",
+                "71",
+                "68",
+                "17",
+                "60",
+                "12",
+                "53"
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "White",
+                  "rpo": "Z58",
+                  "scope": "removable hardtop"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Black",
+                  "rpo": "Z59",
+                  "scope": "removable hardtop"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "White",
+                  "rpo": "C1A",
+                  "scope": "folding convertible top"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Black",
+                  "rpo": "C1B",
+                  "scope": "folding convertible top"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Blue",
+                  "rpo": "C1C",
+                  "scope": "folding convertible top"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Buckskin",
+                  "rpo": "C1D",
+                  "scope": "folding convertible top"
+                }
+              ],
+              "restrictions": [
+                "The two source pages separately control hardtop and convertible top availability by body color."
+              ]
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                5,
+                6,
+                7
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 5",
+                "Blazer - Page 6",
+                "Blazer - Page 7"
+              ],
+              "document_date": "1976-08-09",
+              "two_tone_rows": [
+                [
+                  "86",
+                  "12"
+                ],
+                [
+                  "20",
+                  "12"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "81",
+                  "12"
+                ],
+                [
+                  "65",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "76",
+                  "12"
+                ],
+                [
+                  "70",
+                  "12"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "68",
+                  "12"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ],
+                [
+                  "53",
+                  "12"
+                ]
+              ],
+              "restrictions": [
+                "All ZY3 rows are available with a white top.",
+                "A black top is available only when Midnight Black is the primary body color.",
+                "A blue folding top is available when Hawaiian Blue or Mariner Blue is primary.",
+                "A buckskin folding top is available when Santa Fe Tan or Buckskin is primary."
+              ]
+            },
+            {
+              "table_id": "zy5-exterior-decor-package",
+              "program_codes": [
+                "ZY5",
+                "YG1",
+                "V37",
+                "B96"
+              ],
+              "program_name": "Exterior Decor Package",
+              "source_pages": [
+                7
+              ],
+              "printed_page_locators": [
+                "Blazer - Page 7"
+              ],
+              "document_date": "1976-08-09",
+              "stripe_rows": [
+                [
+                  "25",
+                  "12",
+                  "Dark Blue"
+                ],
+                [
+                  "43",
+                  "12",
+                  "Medium Green"
+                ],
+                [
+                  "53",
+                  "12",
+                  "Gold"
+                ],
+                [
+                  "70",
+                  "12",
+                  "Dark Red"
+                ],
+                [
+                  "71",
+                  "12",
+                  "Light Red"
+                ],
+                [
+                  "81",
+                  "12",
+                  "Bronze"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "all listed ZY5 combinations"
+                }
+              ],
+              "restrictions": [
+                "The source states white top only for ZY5."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1978-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "White, Frost",
+            "17": "Silver, Saratoga (M)",
+            "20": "Blue, Lite (Light)",
+            "23": "Blue, Hawaiian (Medium)",
+            "25": "Blue, Mariner (Dark) (M)",
+            "43": "Green, Seamist (Light) (M)",
+            "53": "Yellow, Colonial",
+            "60": "Tan, Santa Fe",
+            "65": "Buckskin",
+            "68": "Russet Metallic (M)",
+            "70": "Red, Cardinal (Medium)",
+            "71": "Red, Metallic (Dark) (M)",
+            "76": "Mahogany",
+            "81": "Brown, Cordova (Dark) (M)",
+            "86": "Black, Midnight"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid-and-top-availability",
+              "program_codes": [
+                "ZY1",
+                "Z58",
+                "Z59",
+                "C1A",
+                "C1B",
+                "C1C",
+                "C1D"
+              ],
+              "program_name": "Solid paint with hardtop and convertible top availability",
+              "source_pages": [
+                22,
+                23
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G"
+              ],
+              "document_date": "1977-12-23",
+              "solid_rows": [
+                "86",
+                "20",
+                "23",
+                "25",
+                "81",
+                "65",
+                "43",
+                "76",
+                "70",
+                "71",
+                "68",
+                "17",
+                "60",
+                "12",
+                "53"
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "White",
+                  "rpo": "Z58",
+                  "scope": "removable hardtop"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Black",
+                  "rpo": "Z59",
+                  "scope": "removable hardtop"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "White",
+                  "rpo": "C1A",
+                  "scope": "folding convertible top"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Black",
+                  "rpo": "C1B",
+                  "scope": "folding convertible top"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Blue",
+                  "rpo": "C1C",
+                  "scope": "folding convertible top"
+                },
+                {
+                  "paint_program": "ZY1",
+                  "top_color": "Buckskin",
+                  "rpo": "C1D",
+                  "scope": "folding convertible top"
+                }
+              ],
+              "restrictions": [
+                "The two source pages separately control hardtop and convertible top availability by body color."
+              ]
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                22,
+                23,
+                24
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G",
+                "Blazer - Page H"
+              ],
+              "document_date": "1977-12-23",
+              "two_tone_rows": [
+                [
+                  "86",
+                  "12"
+                ],
+                [
+                  "20",
+                  "12"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "81",
+                  "12"
+                ],
+                [
+                  "65",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "76",
+                  "12"
+                ],
+                [
+                  "70",
+                  "12"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "68",
+                  "12"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ],
+                [
+                  "53",
+                  "12"
+                ]
+              ],
+              "restrictions": [
+                "All ZY3 rows are available with a white top.",
+                "A black top is available only when Midnight Black is the primary body color.",
+                "A blue folding top is available when Hawaiian Blue or Mariner Blue is primary.",
+                "A buckskin folding top is available when Santa Fe Tan or Buckskin is primary."
+              ]
+            },
+            {
+              "table_id": "zy5-exterior-decor-package",
+              "program_codes": [
+                "ZY5",
+                "YG1",
+                "V37",
+                "B96"
+              ],
+              "program_name": "Exterior Decor Package",
+              "source_pages": [
+                24
+              ],
+              "printed_page_locators": [
+                "Blazer - Page H"
+              ],
+              "document_date": "1977-12-23",
+              "stripe_rows": [
+                [
+                  "25",
+                  "12",
+                  "Dark Blue"
+                ],
+                [
+                  "43",
+                  "12",
+                  "Medium Green"
+                ],
+                [
+                  "53",
+                  "12",
+                  "Gold"
+                ],
+                [
+                  "70",
+                  "12",
+                  "Dark Red"
+                ],
+                [
+                  "71",
+                  "12",
+                  "Light Red"
+                ],
+                [
+                  "81",
+                  "12",
+                  "Bronze"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "all listed ZY5 combinations"
+                }
+              ],
+              "restrictions": [
+                "The source states white top only for ZY5."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1979-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "Frost White",
+            "17": "Mystic Silver (Metallic)",
+            "18": "Charcoal (Metallic)",
+            "23": "Hawaiian Blue",
+            "25": "Mariner Blue (Metallic)",
+            "26": "Deep Blue",
+            "43": "Shamrock Green (Metallic)",
+            "46": "Holly Green",
+            "53": "Colonial Yellow",
+            "60": "Santa Fe Tan",
+            "65": "Light Camel (Metallic)",
+            "71": "Dark Carmine Red",
+            "73": "Cardinal Red",
+            "81": "Cordova Brown (Metallic)",
+            "86": "Midnight Black"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                20,
+                21
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G"
+              ],
+              "document_date": "1978-11-20",
+              "solid_rows": [
+                "12",
+                "17",
+                "18",
+                "23",
+                "25",
+                "26",
+                "43",
+                "46",
+                "53",
+                "60",
+                "65",
+                "71",
+                "73",
+                "81",
+                "86"
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                20,
+                21,
+                22
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G",
+                "Blazer - Page H"
+              ],
+              "document_date": "1978-11-20",
+              "two_tone_rows": [
+                [
+                  "12",
+                  "17"
+                ],
+                [
+                  "12",
+                  "26"
+                ],
+                [
+                  "12",
+                  "60"
+                ],
+                [
+                  "12",
+                  "71"
+                ],
+                [
+                  "12",
+                  "86"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "17",
+                  "86"
+                ],
+                [
+                  "18",
+                  "12"
+                ],
+                [
+                  "18",
+                  "17"
+                ],
+                [
+                  "18",
+                  "86"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "23",
+                  "26"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "25",
+                  "26"
+                ],
+                [
+                  "26",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "46",
+                  "12"
+                ],
+                [
+                  "53",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ],
+                [
+                  "65",
+                  "12"
+                ],
+                [
+                  "65",
+                  "60"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "73",
+                  "12"
+                ],
+                [
+                  "81",
+                  "12"
+                ],
+                [
+                  "86",
+                  "12"
+                ],
+                [
+                  "86",
+                  "17"
+                ],
+                [
+                  "86",
+                  "60"
+                ],
+                [
+                  "86",
+                  "71"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "rows not excluded by chart marker"
+                },
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "rows not excluded by chart marker"
+                }
+              ],
+              "restrictions": [
+                "Rows marked * are unavailable with black tops. Rows marked ** are unavailable with white tops."
+              ]
+            },
+            {
+              "table_id": "zy5-exterior-decor-package",
+              "program_codes": [
+                "ZY5",
+                "YG1",
+                "V37",
+                "B96"
+              ],
+              "program_name": "Exterior Decor Package",
+              "source_pages": [
+                22
+              ],
+              "printed_page_locators": [
+                "Blazer - Page H"
+              ],
+              "document_date": "1978-11-20",
+              "stripe_rows": [
+                [
+                  "12",
+                  "71",
+                  "Yellow to Orange"
+                ],
+                [
+                  "17",
+                  "86",
+                  "Orange to Red"
+                ],
+                [
+                  "25",
+                  "12",
+                  "Blues"
+                ],
+                [
+                  "65",
+                  "12",
+                  "Yellows"
+                ],
+                [
+                  "73",
+                  "86",
+                  "Orange to Red"
+                ],
+                [
+                  "86",
+                  "17",
+                  "Orange to Red"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "12/71, 25/12, and 65/12"
+                },
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "17/86, 73/86, and 86/17"
+                }
+              ],
+              "restrictions": [
+                "The printed chart fixes the top and interior color for each of the six combinations."
+              ]
+            },
+            {
+              "table_id": "seo-special-paints",
+              "program_codes": [
+                "9V2",
+                "9V4"
+              ],
+              "program_name": "Special Equipment Option solid paints",
+              "source_pages": [
+                14
+              ],
+              "printed_page_locators": [
+                "Color & Trim - Page 2"
+              ],
+              "document_date": "1978-11-20",
+              "specialty_rows": [
+                {
+                  "program_code": "9V2",
+                  "color_name": "Tangier Orange (Orange)",
+                  "paint_code": null,
+                  "scope": "Blazer and other named truck and van models"
+                },
+                {
+                  "program_code": "9V4",
+                  "color_name": "Wheatland Yellow (Dark Yellow)",
+                  "paint_code": null,
+                  "scope": "Blazer and other named truck and van models"
+                }
+              ],
+              "restrictions": [
+                "Special Equipment Option colors are available as solid colors only.",
+                "Crimson Red SEO 9V8 is excluded because the same source limits it to van models and does not name Blazer.",
+                "The option number 88 shown for Tangier Orange elsewhere on the page is limited to 50-90 series models and is not assigned to Blazer here."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1980,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [
+        "No separate Blazer specialty paint program is printed in the retained packet."
+      ],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1980-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "Frost White",
+            "17": "Mystic Silver (Metallic)",
+            "18": "Charcoal (Metallic)",
+            "23": "Medium Blue",
+            "25": "Light Blue Metallic",
+            "30": "Nordic Blue Metallic",
+            "43": "Emerald Green",
+            "60": "Santa Fe Tan",
+            "62": "Dark Camel Metallic",
+            "65": "Camel Metallic",
+            "70": "Carmine Red",
+            "71": "Dark Carmine Red",
+            "73": "Cardinal Red",
+            "86": "Midnight Black",
+            "95": "Burnt Orange Metallic"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                18,
+                19
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G"
+              ],
+              "document_date": "1979-08-03",
+              "solid_rows": [
+                "12",
+                "17",
+                "18",
+                "23",
+                "25",
+                "30",
+                "43",
+                "60",
+                "62",
+                "65",
+                "70",
+                "71",
+                "73",
+                "86",
+                "95"
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                18,
+                19,
+                20
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G",
+                "Blazer - Page H"
+              ],
+              "document_date": "1979-08-03",
+              "two_tone_rows": [
+                [
+                  "12",
+                  "17"
+                ],
+                [
+                  "12",
+                  "23"
+                ],
+                [
+                  "12",
+                  "60"
+                ],
+                [
+                  "12",
+                  "71"
+                ],
+                [
+                  "12",
+                  "86"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "17",
+                  "86"
+                ],
+                [
+                  "18",
+                  "12"
+                ],
+                [
+                  "18",
+                  "17"
+                ],
+                [
+                  "18",
+                  "86"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "23",
+                  "17"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "25",
+                  "23"
+                ],
+                [
+                  "30",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ],
+                [
+                  "62",
+                  "12"
+                ],
+                [
+                  "65",
+                  "12"
+                ],
+                [
+                  "70",
+                  "12"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "73",
+                  "12"
+                ],
+                [
+                  "86",
+                  "12"
+                ],
+                [
+                  "86",
+                  "17"
+                ],
+                [
+                  "86",
+                  "60"
+                ],
+                [
+                  "95",
+                  "12"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "rows not excluded by chart marker"
+                },
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "rows not excluded by chart marker"
+                }
+              ],
+              "restrictions": [
+                "Rows marked * are unavailable with black tops. Rows marked ** are unavailable with white tops."
+              ]
+            },
+            {
+              "table_id": "zy5-exterior-decor-package",
+              "program_codes": [
+                "ZY5",
+                "YG1",
+                "V37",
+                "B96"
+              ],
+              "program_name": "Exterior Decor Package",
+              "source_pages": [
+                20
+              ],
+              "printed_page_locators": [
+                "Blazer - Page H"
+              ],
+              "document_date": "1979-08-03",
+              "stripe_rows": [
+                [
+                  "12",
+                  "71",
+                  "Yellow to Orange"
+                ],
+                [
+                  "17",
+                  "86",
+                  "Orange to Red"
+                ],
+                [
+                  "30",
+                  "12",
+                  "Blues"
+                ],
+                [
+                  "62",
+                  "12",
+                  "Brown to Gold"
+                ],
+                [
+                  "86",
+                  "17",
+                  "Orange to Red"
+                ],
+                [
+                  "86",
+                  "60",
+                  "Brown to Gold"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "12/71, 30/12, and 62/12"
+                },
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "17/86, 86/17, and 86/60"
+                }
+              ],
+              "restrictions": [
+                "The printed chart fixes the top and interior color for each of the six combinations."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1981,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [
+        "The source is an image scan. Pages 20 and 21 were independently rendered from the embedded scan and reviewed at full resolution."
+      ],
+      "variants": [
+        {
+          "variant_id": "full-size-k5-blazer",
+          "source_ids": [
+            "gm-heritage-1981-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "12": "Frost White",
+            "17": "Light Silver Metallic",
+            "18": "Charcoal Metallic",
+            "23": "Medium Blue",
+            "25": "Light Blue Metallic",
+            "30": "Nordic Blue Metallic",
+            "43": "Emerald Green",
+            "53": "Colonial Yellow",
+            "60": "Santa Fe Tan",
+            "65": "Dark Chestnut Metallic",
+            "70": "Carmine Red",
+            "71": "Dark Carmine Red",
+            "73": "Cardinal Red",
+            "86": "Midnight Black",
+            "95": "Burnt Orange Metallic"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                20
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F"
+              ],
+              "document_date": "1980-08-08",
+              "solid_rows": [
+                "12",
+                "17",
+                "18",
+                "23",
+                "25",
+                "30",
+                "43",
+                "53",
+                "60",
+                "65",
+                "70",
+                "71",
+                "73",
+                "86",
+                "95"
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy3-special-two-tone",
+              "program_codes": [
+                "ZY3",
+                "YG1",
+                "V37",
+                "B96"
+              ],
+              "program_name": "Special two-tone",
+              "source_pages": [
+                20,
+                21
+              ],
+              "printed_page_locators": [
+                "Blazer - Page F",
+                "Blazer - Page G"
+              ],
+              "document_date": "1980-08-08",
+              "revision_note": "Explanatory page 21 is dated 1980-10-10.",
+              "two_tone_rows": [
+                [
+                  "12",
+                  "17"
+                ],
+                [
+                  "12",
+                  "23"
+                ],
+                [
+                  "12",
+                  "60"
+                ],
+                [
+                  "12",
+                  "71"
+                ],
+                [
+                  "17",
+                  "12"
+                ],
+                [
+                  "17",
+                  "86"
+                ],
+                [
+                  "18",
+                  "12"
+                ],
+                [
+                  "18",
+                  "86"
+                ],
+                [
+                  "23",
+                  "12"
+                ],
+                [
+                  "25",
+                  "12"
+                ],
+                [
+                  "30",
+                  "12"
+                ],
+                [
+                  "43",
+                  "12"
+                ],
+                [
+                  "53",
+                  "12"
+                ],
+                [
+                  "60",
+                  "12"
+                ],
+                [
+                  "65",
+                  "12"
+                ],
+                [
+                  "70",
+                  "71"
+                ],
+                [
+                  "71",
+                  "12"
+                ],
+                [
+                  "73",
+                  "12"
+                ],
+                [
+                  "86",
+                  "17"
+                ],
+                [
+                  "95",
+                  "12"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "rows not excluded by chart marker"
+                },
+                {
+                  "paint_program": "ZY3",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "rows not excluded by chart marker"
+                }
+              ],
+              "restrictions": [
+                "Rows marked * are unavailable with black tops. Rows marked ** are unavailable with white tops."
+              ]
+            },
+            {
+              "table_id": "zy5-exterior-decor-package",
+              "program_codes": [
+                "ZY5",
+                "YG1",
+                "V37",
+                "B96"
+              ],
+              "program_name": "Exterior Decor Package",
+              "source_pages": [
+                21
+              ],
+              "printed_page_locators": [
+                "Blazer - Page G"
+              ],
+              "document_date": "1980-10-10",
+              "stripe_rows": [
+                [
+                  "12",
+                  "23",
+                  "Lt. Blue/Med. Blue"
+                ],
+                [
+                  "12",
+                  "71",
+                  "Vermillion/Dk. Carmine Red"
+                ],
+                [
+                  "12",
+                  "86",
+                  "Vermillion/Black"
+                ],
+                [
+                  "86",
+                  "17",
+                  "Vermillion/Lt. Silver"
+                ]
+              ],
+              "top_rows": [
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "White",
+                  "rpo": null,
+                  "scope": "12/23, 12/71, and 12/86"
+                },
+                {
+                  "paint_program": "ZY5",
+                  "top_color": "Black",
+                  "rpo": null,
+                  "scope": "86/17"
+                }
+              ],
+              "restrictions": [
+                "The chart states that four combinations are available and fixes stripe, top, and interior colors for each row."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1982,
+      "coverage_status": "missing_official_blazer_source",
+      "limitations": [
+        "The retained GM Heritage index has no 1982 Chevrolet Blazer kit.",
+        "The retained 1982 Suburban and S-10 kits are different lineages and are not substituted."
+      ],
+      "variants": []
+    },
+    {
+      "year": 1995,
+      "coverage_status": "official_packets_incomplete",
+      "limitations": [
+        "Both retained official packets were reviewed in full. They document the all new compact Blazer and name ZY1 solid and ZY7 two tone paint programs, but neither packet contains a color list or pair chart.",
+        "The 1995 Blazer is the compact successor described by GM as formerly S-Blazer. No full size K5 or Tahoe palette is mixed into this year."
+      ],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-1995-chevrolet-blazer",
+            "gm-heritage-1995-chevrolet-s-10-blazer"
+          ],
+          "coverage_status": "documented_programs_without_color_rows",
+          "color_legend": {},
+          "tables": [
+            {
+              "table_id": "zy1-zy7-program-reference",
+              "program_codes": [
+                "ZY1",
+                "ZY7"
+              ],
+              "program_name": "Solid paint and two tone paint",
+              "source_pages": [
+                8
+              ],
+              "printed_page_locators": [
+                "1995 Chevrolet Light-Duty Truck Technical Guide exterior equipment table"
+              ],
+              "document_date": null,
+              "solid_rows": [],
+              "two_tone_rows": [],
+              "duplicate_editions": [
+                "The S-10 Blazer artifact is a reordered duplicate packet. Its corresponding exterior equipment table is PDF page 6."
+              ],
+              "restrictions": [
+                "No paint colors or ordered two tone pairs are printed in either retained packet."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [
+        "Two retained GM artifacts contain the same revised compact Blazer order guide in different page orders. They are treated as duplicate editions, not independent availability evidence."
+      ],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-1996-chevrolet-blazer",
+            "gm-heritage-1996-chevrolet-s-10-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "55U": "Autumnwood, Lt (Met)",
+            "41U": "Black, Onyx",
+            "27U": "Blue, Lt (Met)",
+            "43U": "Green, Emerald (Met)",
+            "38U": "Green, Teal (Met)",
+            "21U": "Purple (Met)",
+            "96U": "Quicksilver (Met)",
+            "72U": "Red, Apple",
+            "94U": "Red, Dk Cherry (Met)",
+            "50U": "White, Summit",
+            "55L": "Autumnwood, Lt (Met) secondary",
+            "41L": "Black, Onyx secondary",
+            "38L": "Green, Teal (Met) secondary",
+            "96L": "Quicksilver (Met) secondary",
+            "94L": "Red, Dk Cherry (Met) secondary",
+            "43L": "Green, Emerald (Met) secondary",
+            "21L": "Purple (Met) secondary"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid-all-body-styles",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                23,
+                24,
+                25
+              ],
+              "printed_page_locators": [
+                "Blazer Page 9",
+                "Blazer Page 10",
+                "Blazer Page 11"
+              ],
+              "document_date": "Revised 1996-01-29",
+              "solid_rows": [
+                "55U",
+                "41U",
+                "27U",
+                "43U",
+                "38U",
+                "21U",
+                "96U",
+                "72U",
+                "94U",
+                "50U"
+              ],
+              "duplicate_editions": [
+                "The same solid charts appear on PDF pages 16-18 of gm-heritage-1996-chevrolet-s-10-blazer."
+              ],
+              "restrictions": [
+                "The cited pages separately show 2-door, 4-door without YC6, and 4-door LT with YC6. All three publish the same ten body colors."
+              ]
+            },
+            {
+              "table_id": "zy7-two-tone-yc3-yc5",
+              "program_codes": [
+                "ZY7",
+                "YC3",
+                "YC5"
+              ],
+              "program_name": "Custom two-tone with YC3 or YC5",
+              "source_pages": [
+                24
+              ],
+              "printed_page_locators": [
+                "Blazer Page 10"
+              ],
+              "document_date": "Revised 1996-01-29",
+              "two_tone_rows": [
+                [
+                  "55U",
+                  "41L"
+                ],
+                [
+                  "41U",
+                  "55L"
+                ],
+                [
+                  "41U",
+                  "38L"
+                ],
+                [
+                  "41U",
+                  "96L"
+                ],
+                [
+                  "41U",
+                  "94L"
+                ],
+                [
+                  "27U",
+                  "96L"
+                ],
+                [
+                  "43U",
+                  "55L"
+                ],
+                [
+                  "43U",
+                  "96L"
+                ],
+                [
+                  "38U",
+                  "55L"
+                ],
+                [
+                  "38U",
+                  "96L"
+                ],
+                [
+                  "21U",
+                  "96L"
+                ],
+                [
+                  "96U",
+                  "41L"
+                ],
+                [
+                  "96U",
+                  "43L"
+                ],
+                [
+                  "96U",
+                  "38L"
+                ],
+                [
+                  "96U",
+                  "21L"
+                ],
+                [
+                  "96U",
+                  "94L"
+                ],
+                [
+                  "72U",
+                  "41L"
+                ],
+                [
+                  "72U",
+                  "55L"
+                ],
+                [
+                  "72U",
+                  "96L"
+                ],
+                [
+                  "94U",
+                  "41L"
+                ],
+                [
+                  "94U",
+                  "55L"
+                ],
+                [
+                  "94U",
+                  "96L"
+                ],
+                [
+                  "50U",
+                  "55L"
+                ],
+                [
+                  "50U",
+                  "96L"
+                ]
+              ],
+              "duplicate_editions": [
+                "The same chart appears on PDF page 17 of gm-heritage-1996-chevrolet-s-10-blazer."
+              ],
+              "restrictions": [
+                "The chart uses * for N/A with YC5 and ** for N/A with YC3. The source page controls those row markers."
+              ]
+            },
+            {
+              "table_id": "zy7-two-tone-yc6",
+              "program_codes": [
+                "ZY7",
+                "YC6"
+              ],
+              "program_name": "Custom two-tone requiring YC6",
+              "source_pages": [
+                25
+              ],
+              "printed_page_locators": [
+                "Blazer Page 11"
+              ],
+              "document_date": "Revised 1996-01-29",
+              "two_tone_rows": [
+                [
+                  "55U",
+                  "41L"
+                ],
+                [
+                  "41U",
+                  "55L"
+                ],
+                [
+                  "41U",
+                  "38L"
+                ],
+                [
+                  "41U",
+                  "96L"
+                ],
+                [
+                  "41U",
+                  "94L"
+                ],
+                [
+                  "27U",
+                  "96L"
+                ],
+                [
+                  "43U",
+                  "55L"
+                ],
+                [
+                  "43U",
+                  "96L"
+                ],
+                [
+                  "38U",
+                  "55L"
+                ],
+                [
+                  "38U",
+                  "96L"
+                ],
+                [
+                  "21U",
+                  "96L"
+                ],
+                [
+                  "96U",
+                  "41L"
+                ],
+                [
+                  "96U",
+                  "94L"
+                ],
+                [
+                  "72U",
+                  "41L"
+                ],
+                [
+                  "72U",
+                  "55L"
+                ],
+                [
+                  "72U",
+                  "96L"
+                ],
+                [
+                  "94U",
+                  "41L"
+                ],
+                [
+                  "94U",
+                  "55L"
+                ],
+                [
+                  "94U",
+                  "96L"
+                ],
+                [
+                  "50U",
+                  "55L"
+                ],
+                [
+                  "50U",
+                  "96L"
+                ]
+              ],
+              "duplicate_editions": [
+                "The same chart appears on PDF page 18 of gm-heritage-1996-chevrolet-s-10-blazer."
+              ],
+              "restrictions": [
+                "This table is scoped to 4-door vehicles requiring YC6."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-1997-chevrolet-s-10-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "55U": "Autumnwood, Lt (Met)",
+            "65U": "Beige, Med Mystique (Met)",
+            "41U": "Black, Onyx",
+            "27U": "Blue, Lt (Met)",
+            "43U": "Green, Emerald (Met)",
+            "87U": "Green, Fairway",
+            "96U": "Quicksilver (Met)",
+            "72U": "Red, Apple",
+            "94U": "Red, Dk Cherry (Met)",
+            "50U": "White, Summit",
+            "55L": "Autumnwood, Lt (Met) secondary",
+            "65L": "Beige, Med Mystique (Met) secondary",
+            "41L": "Black, Onyx secondary",
+            "27L": "Blue, Lt (Met) secondary",
+            "43L": "Green, Emerald (Met) secondary",
+            "96L": "Quicksilver (Met) secondary",
+            "94L": "Red, Dk Cherry (Met) secondary"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid-two-door",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "2-door solid paint",
+              "source_pages": [
+                16
+              ],
+              "printed_page_locators": [
+                "Blazer Page 9"
+              ],
+              "document_date": "Revised 1996-08-19",
+              "solid_rows": [
+                "55U",
+                "65U",
+                "41U",
+                "27U",
+                "43U",
+                "87U",
+                "96U",
+                "72U",
+                "94U",
+                "50U"
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy1-solid-four-door-without-yc6",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "4-door solid paint without YC6",
+              "source_pages": [
+                17
+              ],
+              "printed_page_locators": [
+                "Blazer Page 10"
+              ],
+              "document_date": "Revised 1996-08-19",
+              "solid_rows": [
+                "55U",
+                "65U",
+                "41U",
+                "27U",
+                "43U",
+                "87U",
+                "96U",
+                "72U",
+                "94U",
+                "50U"
+              ],
+              "restrictions": []
+            },
+            {
+              "table_id": "zy1-solid-four-door-lt-yc6",
+              "program_codes": [
+                "ZY1",
+                "YC6"
+              ],
+              "program_name": "4-door LT solid paint requiring YC6",
+              "source_pages": [
+                18
+              ],
+              "printed_page_locators": [
+                "Blazer Page 11"
+              ],
+              "document_date": "Revised 1996-08-19",
+              "solid_rows": [
+                "65U",
+                "41U",
+                "43U",
+                "72U",
+                "94U",
+                "50U"
+              ],
+              "restrictions": [
+                "This LT chart includes a color-keyed grille and requires YC6."
+              ]
+            },
+            {
+              "table_id": "zy7-two-tone-yc5-yc6",
+              "program_codes": [
+                "ZY7",
+                "YC5",
+                "YC6"
+              ],
+              "program_name": "4-door two-tone paint",
+              "source_pages": [
+                17,
+                18
+              ],
+              "printed_page_locators": [
+                "Blazer Page 10",
+                "Blazer Page 11"
+              ],
+              "document_date": "Revised 1996-08-19",
+              "two_tone_rows": [
+                [
+                  "55U",
+                  "41L"
+                ],
+                [
+                  "55U",
+                  "65L"
+                ],
+                [
+                  "65U",
+                  "41L"
+                ],
+                [
+                  "41U",
+                  "55L"
+                ],
+                [
+                  "41U",
+                  "65L"
+                ],
+                [
+                  "41U",
+                  "96L"
+                ],
+                [
+                  "41U",
+                  "94L"
+                ],
+                [
+                  "27U",
+                  "96L"
+                ],
+                [
+                  "43U",
+                  "41L"
+                ],
+                [
+                  "43U",
+                  "96L"
+                ],
+                [
+                  "87U",
+                  "41L"
+                ],
+                [
+                  "87U",
+                  "96L"
+                ],
+                [
+                  "96U",
+                  "41L"
+                ],
+                [
+                  "96U",
+                  "27L"
+                ],
+                [
+                  "96U",
+                  "43L"
+                ],
+                [
+                  "72U",
+                  "41L"
+                ],
+                [
+                  "72U",
+                  "55L"
+                ],
+                [
+                  "72U",
+                  "96L"
+                ],
+                [
+                  "94U",
+                  "41L"
+                ],
+                [
+                  "94U",
+                  "96L"
+                ],
+                [
+                  "50U",
+                  "27L"
+                ],
+                [
+                  "50U",
+                  "65L"
+                ],
+                [
+                  "50U",
+                  "55L"
+                ]
+              ],
+              "restrictions": [
+                "PDF page 17 scopes the table to YC5. PDF page 18 repeats the same ordered pairs for YC6 and distinguishes the grille treatment."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-1998-chevrolet-s-10-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "65U": "Beige, Med Mystique (Met)",
+            "41U": "Black, Onyx",
+            "69U": "Copper, Dk (Met)",
+            "43U": "Green, Emerald (Met)",
+            "87U": "Green, Fairway (Met)",
+            "11U": "Pewter, Lt (Met)",
+            "72U": "Red, Apple",
+            "94U": "Red, Dk Cherry (Met)",
+            "50U": "White, Summit",
+            "65L": "Beige, Med Mystique (Met) secondary",
+            "41L": "Black, Onyx secondary",
+            "11L": "Pewter, Lt (Met) secondary",
+            "43L": "Green, Emerald (Met) secondary"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid-all-body-styles",
+              "program_codes": [
+                "ZY1",
+                "YC6"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                15
+              ],
+              "printed_page_locators": [
+                "Blazer Page 10"
+              ],
+              "document_date": "Published 1997-04-14",
+              "solid_rows": [
+                "65U",
+                "41U",
+                "69U",
+                "43U",
+                "87U",
+                "11U",
+                "72U",
+                "94U",
+                "50U"
+              ],
+              "restrictions": [
+                "The page separately prints 2-door, 4-door LT with YC6, and 4-door without YC6. All three publish the same nine colors."
+              ]
+            },
+            {
+              "table_id": "zy7-two-tone-yc5-yc6",
+              "program_codes": [
+                "ZY7",
+                "YC5",
+                "YC6"
+              ],
+              "program_name": "4-door two-tone paint",
+              "source_pages": [
+                16
+              ],
+              "printed_page_locators": [
+                "Blazer Page 11"
+              ],
+              "document_date": "Published 1997-04-14",
+              "two_tone_rows": [
+                [
+                  "65U",
+                  "41L"
+                ],
+                [
+                  "65U",
+                  "11L"
+                ],
+                [
+                  "41U",
+                  "11L"
+                ],
+                [
+                  "41U",
+                  "65L"
+                ],
+                [
+                  "69U",
+                  "11L"
+                ],
+                [
+                  "43U",
+                  "41L"
+                ],
+                [
+                  "43U",
+                  "11L"
+                ],
+                [
+                  "87U",
+                  "11L"
+                ],
+                [
+                  "11U",
+                  "41L"
+                ],
+                [
+                  "11U",
+                  "43L"
+                ],
+                [
+                  "72U",
+                  "11L"
+                ],
+                [
+                  "94U",
+                  "11L"
+                ],
+                [
+                  "50U",
+                  "65L"
+                ]
+              ],
+              "restrictions": [
+                "The page separately prints YC5 and YC6 tables. Both contain the same thirteen ordered pairs."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-1999-chevrolet-s-10-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "65U": "Beige, Med Mystique (Met)",
+            "41U": "Black, Onyx",
+            "39U": "Blue, Indigo (Met)",
+            "69U": "Copper, Dk (Met)",
+            "60U": "Gold, Sunset (Met)",
+            "68U": "Green, Meadow (Met)",
+            "11U": "Pewter, Lt (Met)",
+            "74U": "Red, Victory",
+            "94U": "Red, Dk Cherry (Met)",
+            "50U": "White, Summit",
+            "65L": "Beige, Med Mystique (Met) secondary",
+            "41L": "Black, Onyx secondary",
+            "60L": "Gold, Sunset (Met) secondary",
+            "11L": "Pewter, Lt (Met) secondary"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid-blazer",
+              "program_codes": [
+                "ZY1",
+                "YC6"
+              ],
+              "program_name": "Blazer solid paint",
+              "source_pages": [
+                42
+              ],
+              "printed_page_locators": [
+                "Blazer Page 12"
+              ],
+              "document_date": "Revised 1998-06-01",
+              "solid_rows": [
+                "65U",
+                "41U",
+                "39U",
+                "69U",
+                "60U",
+                "68U",
+                "11U",
+                "74U",
+                "94U",
+                "50U"
+              ],
+              "restrictions": [
+                "The table covers the regular Blazer equipment groups and notes that AM6 seating is four door only."
+              ]
+            },
+            {
+              "table_id": "zy1-solid-trailblazer-package",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "TrailBlazer package solid paint subset",
+              "source_pages": [
+                42
+              ],
+              "printed_page_locators": [
+                "Blazer Page 12"
+              ],
+              "document_date": "Revised 1998-06-01",
+              "solid_rows": [
+                "41U",
+                "39U",
+                "68U",
+                "11U",
+                "74U",
+                "50U"
+              ],
+              "restrictions": [
+                "This is the TrailBlazer package on the compact Blazer, not the separate TrailBlazer vehicle line introduced later."
+              ]
+            },
+            {
+              "table_id": "zy7-two-tone-yc5-yc6",
+              "program_codes": [
+                "ZY7",
+                "YC5",
+                "YC6"
+              ],
+              "program_name": "4-door two-tone paint",
+              "source_pages": [
+                43
+              ],
+              "printed_page_locators": [
+                "Blazer Page 13"
+              ],
+              "document_date": "Revised 1998-06-01",
+              "two_tone_rows": [
+                [
+                  "65U",
+                  "11L"
+                ],
+                [
+                  "41U",
+                  "11L"
+                ],
+                [
+                  "41U",
+                  "60L"
+                ],
+                [
+                  "39U",
+                  "60L"
+                ],
+                [
+                  "39U",
+                  "11L"
+                ],
+                [
+                  "69U",
+                  "11L"
+                ],
+                [
+                  "68U",
+                  "60L"
+                ],
+                [
+                  "68U",
+                  "11L"
+                ],
+                [
+                  "11U",
+                  "41L"
+                ],
+                [
+                  "74U",
+                  "11L"
+                ],
+                [
+                  "94U",
+                  "60L"
+                ],
+                [
+                  "94U",
+                  "11L"
+                ],
+                [
+                  "50U",
+                  "65L"
+                ],
+                [
+                  "50U",
+                  "60L"
+                ],
+                [
+                  "50U",
+                  "11L"
+                ]
+              ],
+              "restrictions": [
+                "The chart is scoped to 4-door Blazer with YC5 and notes the upper body color-keyed grille treatment with YC6."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "coverage_status": "verified_complete_names_uncoded",
+      "limitations": [
+        "The year specific GM paint list publishes complete color names but not paint codes.",
+        "A generic RPO dictionary elsewhere in the packet is not used as availability evidence because it contains primary and secondary color labels outside the year specific Blazer paint list."
+      ],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-2000-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_names_uncoded",
+          "color_legend": {
+            "uncoded:space-blue-metallic": "Space Blue Metallic",
+            "uncoded:majestic-red-metallic": "Majestic Red Metallic",
+            "uncoded:medium-beige-mystique-metallic": "Medium Beige Mystique Metallic",
+            "uncoded:onyx-black": "Onyx Black",
+            "uncoded:summit-white": "Summit White",
+            "uncoded:dark-cherry-red-metallic": "Dark Cherry Red Metallic",
+            "uncoded:light-pewter-metallic": "Light Pewter Metallic",
+            "uncoded:indigo-blue-metallic": "Indigo Blue Metallic",
+            "uncoded:victory-red": "Victory Red",
+            "uncoded:meadow-green-metallic": "Meadow Green Metallic",
+            "uncoded:sunset-gold-metallic": "Sunset Gold Metallic"
+          },
+          "tables": [
+            {
+              "table_id": "year-specific-paint-colors",
+              "program_codes": [],
+              "program_name": "Exterior Paint - Paint Colors",
+              "source_pages": [
+                14
+              ],
+              "printed_page_locators": [
+                "2000 Chevrolet Blazer Restoration Kit - Page 6"
+              ],
+              "document_date": null,
+              "solid_rows": [
+                "uncoded:space-blue-metallic",
+                "uncoded:majestic-red-metallic",
+                "uncoded:medium-beige-mystique-metallic",
+                "uncoded:onyx-black",
+                "uncoded:summit-white",
+                "uncoded:dark-cherry-red-metallic",
+                "uncoded:light-pewter-metallic",
+                "uncoded:indigo-blue-metallic",
+                "uncoded:victory-red",
+                "uncoded:meadow-green-metallic",
+                "uncoded:sunset-gold-metallic"
+              ],
+              "restrictions": [
+                "Space Blue Metallic is two door only.",
+                "Majestic Red Metallic is four door only and carries the source extra cost marker."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "coverage_status": "verified_complete_names_uncoded",
+      "limitations": [
+        "The year specific GM paint list publishes complete color names but not paint codes."
+      ],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-2001-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_names_uncoded",
+          "color_legend": {
+            "uncoded:space-blue-metallic": "Space Blue Metallic",
+            "uncoded:majestic-red-metallic": "Majestic Red Metallic",
+            "uncoded:onyx-black": "Onyx Black",
+            "uncoded:summit-white": "Summit White",
+            "uncoded:light-pewter-metallic": "Light Pewter Metallic",
+            "uncoded:indigo-blue-metallic": "Indigo Blue Metallic",
+            "uncoded:victory-red": "Victory Red",
+            "uncoded:medium-sage-green-metallic": "Medium Sage Green Metallic",
+            "uncoded:forest-green-metallic": "Forest Green Metallic",
+            "uncoded:dark-cherry-red-metallic": "Dark Cherry Red Metallic"
+          },
+          "tables": [
+            {
+              "table_id": "year-specific-paint-colors",
+              "program_codes": [],
+              "program_name": "Exterior Paint - Paint Colors",
+              "source_pages": [
+                13
+              ],
+              "printed_page_locators": [
+                "2001 Chevrolet Blazer Restoration Kit - Page 13"
+              ],
+              "document_date": null,
+              "solid_rows": [
+                "uncoded:space-blue-metallic",
+                "uncoded:majestic-red-metallic",
+                "uncoded:onyx-black",
+                "uncoded:summit-white",
+                "uncoded:light-pewter-metallic",
+                "uncoded:indigo-blue-metallic",
+                "uncoded:victory-red",
+                "uncoded:medium-sage-green-metallic",
+                "uncoded:forest-green-metallic",
+                "uncoded:dark-cherry-red-metallic"
+              ],
+              "restrictions": [
+                "Space Blue Metallic is two door only.",
+                "Majestic Red Metallic is four door only and carries the source extra cost marker.",
+                "Forest Green Metallic has interim availability.",
+                "Space Blue Metallic, Onyx Black, Summit White, Victory Red, and Dark Cherry Red Metallic carry the source Xtreme model colors marker."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "coverage_status": "verified_partial_change_notice",
+      "limitations": [
+        "The retained official packet documents only new color changes and does not contain a complete 2002 paint list or availability chart.",
+        "No 2001 or 2003 palette is carried into this year."
+      ],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-2002-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_partial_change_notice",
+          "color_legend": {
+            "uncoded:indigo-blue-metallic": "Indigo Blue Metallic",
+            "uncoded:forest-green-metallic": "Forest Green Metallic",
+            "uncoded:sandalwood": "Sandalwood"
+          },
+          "tables": [
+            {
+              "table_id": "new-for-2002-color-evidence",
+              "program_codes": [],
+              "program_name": "New For 2002 paint changes",
+              "source_pages": [
+                10
+              ],
+              "printed_page_locators": [
+                "2002 Chevrolet Blazer Restoration Kit - Page 2"
+              ],
+              "document_date": null,
+              "solid_rows": [
+                "uncoded:indigo-blue-metallic",
+                "uncoded:forest-green-metallic",
+                "uncoded:sandalwood"
+              ],
+              "restrictions": [
+                "Indigo Blue Metallic is identified for the two door Xtreme.",
+                "Forest Green Metallic and Sandalwood are identified for two door and four door models."
+              ]
+            },
+            {
+              "table_id": "xtreme-stripe-package-change-notice",
+              "program_codes": [],
+              "program_name": "Optional Stripe Package for two door Xtreme",
+              "source_pages": [
+                10
+              ],
+              "printed_page_locators": [
+                "2002 Chevrolet Blazer Restoration Kit - Page 2"
+              ],
+              "document_date": null,
+              "stripe_color_names": [
+                "Silver",
+                "Red",
+                "Yellow",
+                "Black"
+              ],
+              "restrictions": [
+                "The source describes wide hood and tailgate stripes but does not publish option codes or body color pairings on this page."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-2003-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "11U": "Light Pewter Metallic",
+            "39U": "Indigo Blue Metallic",
+            "41U": "Black",
+            "47U": "Dark Green Metallic",
+            "50U": "Summit White",
+            "58U": "Sandalwood",
+            "74U": "Victory Red",
+            "94U": "Dark Cherry Red Metallic",
+            "43U": "Yellow"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                143
+              ],
+              "printed_page_locators": [
+                "2003 Chevrolet Truck Blazer - Color and Trim - Solid Paint ZY1 - Page 1"
+              ],
+              "document_date": "Published 2004-03-30",
+              "solid_rows": [
+                "11U",
+                "39U",
+                "41U",
+                "47U",
+                "50U",
+                "58U",
+                "74U",
+                "94U",
+                "43U"
+              ],
+              "color_restrictions": {
+                "39U": "Source footnote 1: Only color available with Xtreme model.",
+                "41U": "Source footnote 1: Only color available with Xtreme model.",
+                "50U": "Source footnote 1: Only color available with Xtreme model.",
+                "74U": "Source footnote 1: Only color available with Xtreme model.",
+                "43U": "Source footnote 2: Only color available with Xtreme model. Extra cost color."
+              },
+              "restrictions": [
+                "The chart header identifies model year 2003. The later publication date is preserved and is not treated as 2004 model year availability."
+              ]
+            },
+            {
+              "table_id": "xtreme-stripes-decals-and-gold-package",
+              "program_codes": [
+                "13A",
+                "41A",
+                "70A",
+                "59A",
+                "38A",
+                "54A",
+                "B94"
+              ],
+              "program_name": "Xtreme accent stripe colors, Flame Decal, and Gold Package",
+              "source_pages": [
+                143
+              ],
+              "printed_page_locators": [
+                "2003 Chevrolet Truck Blazer - Color and Trim - Solid Paint ZY1 - Page 1"
+              ],
+              "document_date": "Published 2004-03-30",
+              "stripe_option_legend": {
+                "13A": "Sparkle Silver",
+                "41A": "Black",
+                "70A": "Torch Red",
+                "59A": "Competition Yellow",
+                "38A": "Flame Decal",
+                "54A": "Gold Package"
+              },
+              "stripe_availability_rows": [
+                [
+                  "39U",
+                  "13A"
+                ],
+                [
+                  "39U",
+                  "41A"
+                ],
+                [
+                  "39U",
+                  "70A"
+                ],
+                [
+                  "39U",
+                  "59A"
+                ],
+                [
+                  "39U",
+                  "38A"
+                ],
+                [
+                  "39U",
+                  "54A"
+                ],
+                [
+                  "41U",
+                  "13A"
+                ],
+                [
+                  "41U",
+                  "70A"
+                ],
+                [
+                  "41U",
+                  "59A"
+                ],
+                [
+                  "41U",
+                  "38A"
+                ],
+                [
+                  "41U",
+                  "54A"
+                ],
+                [
+                  "50U",
+                  "13A"
+                ],
+                [
+                  "50U",
+                  "41A"
+                ],
+                [
+                  "50U",
+                  "70A"
+                ],
+                [
+                  "50U",
+                  "38A"
+                ],
+                [
+                  "50U",
+                  "54A"
+                ],
+                [
+                  "74U",
+                  "13A"
+                ],
+                [
+                  "74U",
+                  "41A"
+                ],
+                [
+                  "74U",
+                  "59A"
+                ],
+                [
+                  "74U",
+                  "38A"
+                ],
+                [
+                  "94U",
+                  "13A"
+                ],
+                [
+                  "94U",
+                  "41A"
+                ],
+                [
+                  "94U",
+                  "38A"
+                ],
+                [
+                  "94U",
+                  "54A"
+                ],
+                [
+                  "43U",
+                  "13A"
+                ],
+                [
+                  "43U",
+                  "41A"
+                ],
+                [
+                  "43U",
+                  "70A"
+                ],
+                [
+                  "43U",
+                  "38A"
+                ]
+              ],
+              "restrictions": [
+                "54A requires B94 and includes gold stripes, badges, and wheels.",
+                "The chart prints n/a for all stripe and decal columns on 11U, 47U, and 58U."
+              ]
+            },
+            {
+              "table_id": "seo-solid-paints",
+              "program_codes": [
+                "9V5",
+                "9V9",
+                "9W3",
+                "9W4"
+              ],
+              "program_name": "Special paint solid colors",
+              "source_pages": [
+                155
+              ],
+              "printed_page_locators": [
+                "2003 Chevrolet Truck Blazer - RPO Codes - Page 1"
+              ],
+              "document_date": "Published 2004-03-30",
+              "specialty_rows": [
+                {
+                  "program_code": "9V5",
+                  "color_name": "Woodland Green",
+                  "paint_code": null,
+                  "scope": "2003 Blazer RPO list"
+                },
+                {
+                  "program_code": "9V9",
+                  "color_name": "Doeskin Tan",
+                  "paint_code": null,
+                  "scope": "2003 Blazer RPO list"
+                },
+                {
+                  "program_code": "9W3",
+                  "color_name": "Wheatland Yellow",
+                  "paint_code": null,
+                  "scope": "2003 Blazer RPO list"
+                },
+                {
+                  "program_code": "9W4",
+                  "color_name": "Tangier Orange",
+                  "paint_code": null,
+                  "scope": "2003 Blazer RPO list"
+                }
+              ],
+              "restrictions": [
+                "The source describes each as Paints, solid and lists no separate body paint code."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "coverage_status": "official_packet_incomplete",
+      "limitations": [
+        "The retained 102-page official packet was reviewed in full. It contains a year overview, service information, an exterior color label definition, and generic RPO appendices, but no 2004 Blazer paint name list or availability chart.",
+        "No 2003 or 2005 palette is carried into 2004."
+      ],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-2004-chevrolet-blazer"
+          ],
+          "coverage_status": "documented_without_color_rows",
+          "color_legend": {},
+          "tables": []
+        }
+      ]
+    },
+    {
+      "year": 2005,
+      "coverage_status": "verified_complete_for_cited_tables",
+      "limitations": [],
+      "variants": [
+        {
+          "variant_id": "compact-s-t-blazer",
+          "source_ids": [
+            "gm-heritage-2005-chevrolet-blazer"
+          ],
+          "coverage_status": "verified_complete_for_cited_tables",
+          "color_legend": {
+            "11U": "Light Pewter Metallic",
+            "39U": "Indigo Blue Metallic",
+            "41U": "Black",
+            "47U": "Dark Green Metallic",
+            "50U": "Summit White",
+            "58U": "Sandalwood",
+            "74U": "Victory Red",
+            "94U": "Dark Cherry Red Metallic"
+          },
+          "tables": [
+            {
+              "table_id": "zy1-solid",
+              "program_codes": [
+                "ZY1"
+              ],
+              "program_name": "Solid paint",
+              "source_pages": [
+                116
+              ],
+              "printed_page_locators": [
+                "2005 Chevrolet Truck Blazer - Color and Trim - Solid Paint ZY1 - Page 20"
+              ],
+              "document_date": "Published 2004-08-06",
+              "solid_rows": [
+                "11U",
+                "39U",
+                "41U",
+                "47U",
+                "50U",
+                "58U",
+                "74U",
+                "94U"
+              ],
+              "restrictions": [
+                "The source table is scoped to all 2005 Blazer models in the retained guide."
+              ]
+            },
+            {
+              "table_id": "seo-solid-paints",
+              "program_codes": [
+                "9V9",
+                "9W4",
+                "9W3",
+                "9V5",
+                "TGK"
+              ],
+              "program_name": "SEO solid paint colors",
+              "source_pages": [
+                117
+              ],
+              "printed_page_locators": [
+                "2005 Chevrolet Truck Blazer - SEO Options/Ship Thru Codes - Page 21"
+              ],
+              "document_date": "Published 2004-08-06",
+              "specialty_rows": [
+                {
+                  "program_code": "9V9",
+                  "color_name": "Doeskin Tan",
+                  "paint_code": null,
+                  "scope": "2-door equipment groups 1SA, 1SB, and 1SC"
+                },
+                {
+                  "program_code": "9W4",
+                  "color_name": "Tangier Orange",
+                  "paint_code": null,
+                  "scope": "2-door equipment groups 1SA, 1SB, and 1SC"
+                },
+                {
+                  "program_code": "9W3",
+                  "color_name": "Wheatland Yellow",
+                  "paint_code": null,
+                  "scope": "2-door equipment groups 1SA, 1SB, and 1SC"
+                },
+                {
+                  "program_code": "9V5",
+                  "color_name": "Woodland Green",
+                  "paint_code": null,
+                  "scope": "2-door equipment groups 1SA, 1SB, and 1SC"
+                }
+              ],
+              "restrictions": [
+                "Each specialty row requires TGK Special Paint, one color.",
+                "Each includes dark gray or black front and rear fascia components instead of color keyed components.",
+                "Each is not available with ANL front fog lamps.",
+                "Each requires Z85 Touring Suspension Package on model CT10516."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage_summary": {
+    "requested_year_count": 25,
+    "represented_year_count": 25,
+    "verified_complete_table_years": 16,
+    "verified_complete_name_only_years": 2,
+    "official_source_partial_years": 4,
+    "missing_official_blazer_source_years": 3,
+    "complete_years": [
+      1969,
+      1971,
+      1972,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2003,
+      2005
+    ],
+    "partial_years": [
+      1970,
+      1995,
+      2002,
+      2004
+    ],
+    "source_gap_years": [
+      1973,
+      1974,
+      1982
+    ],
+    "scope_note": "Complete means complete for the retained year specific GM table or paint name list. It does not claim that a missing specialty supplement never existed. Partial and source gap years remain visible as explicit records."
+  },
+  "row_count_summary": {
+    "source_records": 24,
+    "year_records": 25,
+    "variant_records": 22,
+    "table_records": 46,
+    "color_legend_entries": 252,
+    "solid_rows": 252,
+    "two_tone_rows": 226,
+    "stripe_rows": 28,
+    "stripe_availability_rows": 28,
+    "specialty_rows": 10,
+    "top_rows": 32
+  },
+  "source_registers": {
+    "verified_retained_artifacts": 24,
+    "all_retained_artifacts_rehashed": true,
+    "all_retained_byte_lengths_reconciled": true,
+    "all_cited_pages_within_pdf_bounds": true,
+    "duplicate_artifact_groups": [
+      {
+        "year": 1995,
+        "source_ids": [
+          "gm-heritage-1995-chevrolet-blazer",
+          "gm-heritage-1995-chevrolet-s-10-blazer"
+        ],
+        "relationship": "Same compact Blazer technical guide in different retained page orders; neither contains a color list."
+      },
+      {
+        "year": 1996,
+        "source_ids": [
+          "gm-heritage-1996-chevrolet-blazer",
+          "gm-heritage-1996-chevrolet-s-10-blazer"
+        ],
+        "relationship": "Same revised compact Blazer order guide in different retained page orders; color charts are PDF pages 23-25 in the first and 16-18 in the second."
+      }
+    ],
+    "excluded_as_non_blazer_availability": [
+      "1973 and 1974 general Chevrolet and Suburban kits because they do not identify a Blazer or K5 color chart.",
+      "1982 Suburban and S-10 kits because they are separate lineages and no 1982 Blazer kit is retained.",
+      "Generic RPO dictionaries when a year specific Blazer color list or chart is absent.",
+      "Tahoe and the later separate TrailBlazer vehicle line. The 1999 TrailBlazer table retained here is the compact Blazer package explicitly printed in the Blazer order guide."
+    ],
+    "specialty_name_resolution": [
+      "The retained Blazer sources do not print the exact name Forest Service Green.",
+      "They separately print Forest Green Metallic as a regular 2001 color and a new 2002 color, and Woodland Green as specialty program 9V5 for 2003 and 2005.",
+      "Those names remain separate. No Forest Service Green synonym is inferred."
+    ]
+  }
+}

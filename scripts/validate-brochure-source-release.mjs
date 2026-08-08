@@ -17,10 +17,10 @@ const CURRENT_ORDER_GUIDE_RELEASE_TAG = "current-order-guide-source-archive-v1";
 const CURRENT_ORDER_GUIDE_RELEASE_DOWNLOAD_BASE =
   `https://github.com/${REPOSITORY}/releases/download/` +
   `${CURRENT_ORDER_GUIDE_RELEASE_TAG}/`;
-const EXPECTED_ASSET_COUNT = 174;
-const EXPECTED_PDF_COUNT = 148;
-const EXPECTED_PDF_BYTES = 1_565_404_205;
-const EXPECTED_PDF_PAGE_COUNT = 11_600;
+const EXPECTED_ASSET_COUNT = 345;
+const EXPECTED_PDF_COUNT = 309;
+const EXPECTED_PDF_BYTES = 3_200_851_142;
+const EXPECTED_PDF_PAGE_COUNT = 27_639;
 const EXPECTED_MODERN_SOURCE_COUNT = 24;
 const EXPECTED_MODERN_FLEET_GUIDE_COUNT = 20;
 const EXPECTED_MODERN_BROCHURE_COUNT = 4;
@@ -1239,6 +1239,63 @@ async function validateAppCitationClosure(repositoryRoot, manifestEntriesByName)
     Array.isArray(modernColorSource.verified_palette_tables),
     "modern Chevrolet verified_palette_tables must be an array",
   );
+  const modernColorSourcesById = new Map(
+    modernColorSource.sources.map((source) => [source.source_id, source]),
+  );
+  for (const supplementalEntry of modernSupplementalManifest.entries) {
+    const manifestEntry = manifestEntriesByName.get(supplementalEntry.asset_name);
+    const source = modernColorSourcesById.get(supplementalEntry.source_id);
+    invariant(
+      manifestEntry && source,
+      `missing reconciled supplemental source: ${supplementalEntry.asset_name}`,
+    );
+    invariant(
+      manifestEntry.source_id === supplementalEntry.source_id &&
+        manifestEntry.archive_url === supplementalEntry.archive_url &&
+        manifestEntry.sha256 === supplementalEntry.sha256 &&
+        manifestEntry.bytes === supplementalEntry.bytes,
+      `supplemental Release metadata does not match the main manifest: ${supplementalEntry.asset_name}`,
+    );
+    const expectedOriginalUrl =
+      source.direct_official_url ?? source.retrieval_url ?? source.landing_url ?? null;
+    invariant(
+      manifestEntry.original_source_url === expectedOriginalUrl,
+      `supplemental original source URL does not match: ${supplementalEntry.asset_name}`,
+    );
+    if (supplementalEntry.asset_name.toLowerCase().endsWith(".pdf")) {
+      invariant(
+        manifestEntry.pdf_page_count === source.page_count,
+        `supplemental PDF page count does not match: ${supplementalEntry.asset_name}`,
+      );
+    }
+  }
+  invariant(
+    modernSupplementalManifest.rejected_release_assets.length === 2,
+    "modern supplemental manifest must retain both rejected access challenges",
+  );
+  for (const rejected of modernSupplementalManifest.rejected_release_assets) {
+    const manifestEntry = manifestEntriesByName.get(rejected.asset_name);
+    invariant(
+      manifestEntry &&
+        manifestEntry.source_id === null &&
+        manifestEntry.role === "rejected_access_challenge_not_evidence" &&
+        manifestEntry.status === rejected.status &&
+        manifestEntry.sha256 === rejected.sha256 &&
+        manifestEntry.bytes === rejected.bytes,
+      `rejected access challenge is not isolated in the main manifest: ${rejected.asset_name}`,
+    );
+  }
+  const rejectedSourceIds = new Set(
+    modernSupplementalManifest.rejected_release_assets
+      .map((entry) => entry.source_id)
+      .filter(Boolean),
+  );
+  invariant(
+    [...rejectedSourceIds].every(
+      (sourceId) => !PUBLISHED_SUPPLEMENTAL_PALETTE_SOURCE_IDS.has(sourceId),
+    ),
+    "rejected access challenges may not be published as palette evidence",
+  );
   const retainedModernSources = modernColorSource.sources.filter(
     ({ local_file_path: localFilePath }) => Boolean(localFilePath),
   );
@@ -1748,6 +1805,61 @@ async function stagingExists(stagingDirectory) {
   }
 }
 
+async function validateCurrentNameplateAuditSources(
+  repositoryRoot,
+  manifestEntriesByName,
+) {
+  const auditRoot = path.join(repositoryRoot, "data", "audits");
+  const auditNames = (await readdir(auditRoot))
+    .filter((name) => name.startsWith("current-") && name.endsWith(".json"));
+  const retainedBySourceId = new Map();
+  for (const auditName of auditNames) {
+    const audit = JSON.parse(
+      await readFile(path.join(auditRoot, auditName), "utf8"),
+    );
+    for (const source of audit.sources ?? []) {
+      const digest = source.sha256 ?? source.artifact_sha256;
+      if (!source.source_id?.startsWith("gm-heritage-") || !digest) continue;
+      const record = {
+        sourceId: source.source_id,
+        archiveUrl: source.archive_url,
+        sha256: digest,
+        bytes: source.bytes ?? source.artifact_bytes,
+        pdfPageCount: source.pdf_page_count,
+      };
+      const prior = retainedBySourceId.get(record.sourceId);
+      if (prior) {
+        invariant(
+          JSON.stringify(prior) === JSON.stringify(record),
+          `conflicting current nameplate source metadata: ${record.sourceId}`,
+        );
+      } else {
+        retainedBySourceId.set(record.sourceId, record);
+      }
+    }
+  }
+  const entriesByUrl = new Map(
+    [...manifestEntriesByName.values()].map((entry) => [entry.archive_url, entry]),
+  );
+  for (const record of retainedBySourceId.values()) {
+    invariant(
+      typeof record.archiveUrl === "string" &&
+        record.archiveUrl.startsWith(RELEASE_DOWNLOAD_BASE),
+      `${record.sourceId} is not pinned to ${RELEASE_TAG}`,
+    );
+    const entry = entriesByUrl.get(record.archiveUrl);
+    invariant(entry, `missing current nameplate source asset: ${record.sourceId}`);
+    invariant(
+      entry.source_id === record.sourceId &&
+        entry.sha256 === record.sha256 &&
+        entry.bytes === record.bytes &&
+        entry.pdf_page_count === record.pdfPageCount,
+      `current nameplate source metadata does not match the Release manifest: ${record.sourceId}`,
+    );
+  }
+  return retainedBySourceId.size;
+}
+
 async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
   const children = await readdir(stagingDirectory, { withFileTypes: true });
   invariant(
@@ -1773,7 +1885,18 @@ async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
     );
   }
 
-  const checksumAssetName = "source-sha256-manifest-173-reviewed.txt";
+  const checksumEntry = [...manifestEntriesByName.values()]
+    .filter(({ role }) => role === "checksum_manifest_snapshot")
+    .sort(
+      (left, right) =>
+        right.covered_asset_count - left.covered_asset_count,
+    )[0];
+  invariant(checksumEntry, "manifest must include a checksum snapshot");
+  invariant(
+    checksumEntry.covered_asset_count === manifestEntriesByName.size - 1,
+    "latest checksum snapshot must cover every other Release asset",
+  );
+  const checksumAssetName = checksumEntry.asset_name;
   const checksumText = await readFile(
     path.join(stagingDirectory, checksumAssetName),
     "utf8",
@@ -1785,7 +1908,7 @@ async function validateLocalStaging(stagingDirectory, manifestEntriesByName) {
     .map(({ asset_name: assetName, sha256: digest }) => `${digest}  ${assetName}`);
   invariant(
     JSON.stringify(checksumLines) === JSON.stringify(expectedChecksumLines),
-    "source-sha256-manifest-173-reviewed.txt must cover every other Release asset by its flat asset name",
+    `${checksumAssetName} must cover every other Release asset by its flat asset name`,
   );
 }
 
@@ -1825,6 +1948,11 @@ export async function validateBrochureSourceRelease({
     repositoryRoot,
     manifestEntriesByName,
   );
+  const currentNameplateAuditedSourceCount =
+    await validateCurrentNameplateAuditSources(
+      repositoryRoot,
+      manifestEntriesByName,
+    );
   const hasStaging = await stagingExists(stagingDirectory);
   invariant(
     hasStaging || !requireStaging,
@@ -1846,6 +1974,8 @@ export async function validateBrochureSourceRelease({
       controllingAssets.size + tahoeGoverningAssets.size,
     app_fed_citation_count: appCitationReport.appFedCitationCount,
     app_release_url_count: appCitationReport.appReleaseUrlCount,
+    current_nameplate_audited_source_count:
+      currentNameplateAuditedSourceCount,
     modern_palette_source_count: appCitationReport.modernPaletteSourceCount,
     modern_palette_table_count: appCitationReport.modernPaletteTableCount,
     modern_palette_assertion_count:

@@ -1318,7 +1318,8 @@ def validate_specialty_code_rows(
                 )
             if status != "printed_in_source":
                 raise ValueError(
-                    f"{table_name}[{index}] has an SEO code but status is {status!r}"
+                    f"{table_name}[{index}] has an SEO code but status is {status!r}: "
+                    f"{row.get('availability_id') or row.get('record_id') or row.get('component_id')}"
                 )
         elif status == "printed_in_source":
             raise ValueError(
@@ -3513,6 +3514,7 @@ class NormalizedArchiveBuilder:
                                 {
                                     "specialty_palette_subset",
                                     "qualified_historical_table",
+                                    "qualified_exact_program_palette",
                                 }
                             )
                             and not is_exact_program_partition
@@ -3527,6 +3529,7 @@ class NormalizedArchiveBuilder:
                         "qualified_palette_union",
                         "specialty_palette_subset",
                         "qualified_historical_table",
+                        "qualified_exact_program_palette",
                     }
                     audit_state = gap_audit_state_by_model_year.get(model_year_id)
                     if combined_color_count and (
@@ -3534,7 +3537,13 @@ class NormalizedArchiveBuilder:
                         or "qualified_historical_table" in combined_classes
                     ):
                         status = "reviewed_qualified_historical_table"
-                    elif combined_color_count and governing_classes:
+                    elif combined_color_count and (
+                        governing_classes
+                        or (
+                            model_year_id == "tahoe:2000"
+                            and "qualified_exact_program_palette" in combined_classes
+                        )
+                    ):
                         status = "color_chart_verified"
                     elif (
                         combined_color_count
@@ -3546,6 +3555,11 @@ class NormalizedArchiveBuilder:
                         and "specialty_palette_subset" in combined_classes
                     ):
                         status = "reviewed_specialty_palette_subset"
+                    elif (
+                        combined_color_count
+                        and "qualified_exact_program_palette" in combined_classes
+                    ):
+                        status = "reviewed_qualified_exact_program_palette"
                     elif audit_state == "source_reviewed_no_color_chart_found":
                         status = "official_kit_reviewed_no_color_table_found"
                     else:
@@ -3562,10 +3576,12 @@ class NormalizedArchiveBuilder:
                             {
                                 "specialty_palette_subset",
                                 "qualified_historical_table",
+                                "qualified_exact_program_palette",
                             }
                         ) and evidence_classes - {
                             "specialty_palette_subset",
                             "qualified_historical_table",
+                            "qualified_exact_program_palette",
                         }:
                             existing_row["generation_id"] = generation_id
                         existing_row["research_status"] = status
@@ -3621,6 +3637,8 @@ class NormalizedArchiveBuilder:
                 "generation_id"
             ].startswith("tahoe:tahoe-2000-"):
                 membership["membership_role"] = "program_partition"
+            elif membership["evidence_class"] == "qualified_exact_program_palette":
+                membership["membership_role"] = "program_overlay"
             else:
                 raise ValueError(
                     "non-primary model-year generation is not an explicit specialty "
@@ -4144,7 +4162,10 @@ class NormalizedArchiveBuilder:
                     for row in self.rows["color_availability"]
                     if row["model_year_id"] == model_year_id
                     and row["claim_status"]
-                    == "published_qualified_exact_program_palette"
+                    in {
+                        "published_source_transcription",
+                        "published_qualified_exact_program_palette",
+                    }
                 ]
                 if bool(published_entries) != bool(app_entries):
                     raise ValueError(

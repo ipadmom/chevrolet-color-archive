@@ -24,22 +24,25 @@ class GapInventoryRefreshTest(unittest.TestCase):
         summary = self.inventory["summary"]
         self.assertEqual(149, summary["model_count"])
         self.assertEqual(1_792, summary["model_year_count"])
-        self.assertEqual(5_403, summary["listing_count"])
-        self.assertEqual(106, summary["completely_reviewed_count"])
-        self.assertEqual(6, summary["reviewed_qualified_historical_table_count"])
-        self.assertEqual(364, summary["reviewed_qualified_palette_union_count"])
-        self.assertEqual(3_240, summary["reviewed_qualified_palette_union_listing_count"])
-        self.assertEqual(11, summary["reviewed_specialty_palette_subset_count"])
+        self.assertEqual(8_922, summary["listing_count"])
+        self.assertEqual(162, summary["completely_reviewed_count"])
+        self.assertEqual(39, summary["reviewed_qualified_historical_table_count"])
+        self.assertEqual(372, summary["reviewed_qualified_palette_union_count"])
+        self.assertEqual(3_354, summary["reviewed_qualified_palette_union_listing_count"])
+        self.assertEqual(
+            2_855, summary["reviewed_qualified_exact_program_listing_count"]
+        )
+        self.assertEqual(9, summary["reviewed_specialty_palette_subset_count"])
         self.assertEqual(
             69, summary["reviewed_specialty_palette_subset_application_year_count"]
         )
         self.assertEqual(
             928, summary["reviewed_specialty_palette_subset_listing_count"]
         )
-        self.assertEqual(1_231, summary["source_transcription_listing_count"])
-        self.assertEqual(13, summary["reviewed_no_chart_count"])
+        self.assertEqual(1_765, summary["source_transcription_listing_count"])
+        self.assertEqual(59, summary["reviewed_no_chart_count"])
         self.assertEqual(0, summary["source_located_chart_unreviewed_count"])
-        self.assertEqual(1_292, summary["wholly_unreviewed_count"])
+        self.assertEqual(1_151, summary["wholly_unreviewed_count"])
         self.assertEqual(1_862, summary["official_source_candidate_link_count"])
         self.assertEqual(691, summary["crawler_source_document_count"])
         self.assertEqual(2_774, summary["crawler_candidate_page_count"])
@@ -47,6 +50,22 @@ class GapInventoryRefreshTest(unittest.TestCase):
         self.assertEqual(0, summary["crawler_visually_reviewed_candidate_page_count"])
         self.assertTrue(
             all(check["pass"] for check in self.inventory["reconciliation"].values())
+        )
+
+    def test_all_current_nameplate_years_are_reviewed(self) -> None:
+        current = self.inventory["current_nameplate_summary"]
+        self.assertEqual(18, current["model_count"])
+        self.assertEqual(434, current["model_year_count"])
+        self.assertEqual(434, current["reviewed_model_year_count"])
+        self.assertEqual(0, current["unresolved_model_year_count"])
+        self.assertEqual([], current["unresolved_model_years"])
+        self.assertEqual(
+            434,
+            current["verified_complete_count"]
+            + current["reviewed_qualified_historical_table_count"]
+            + current["reviewed_qualified_palette_union_count"]
+            + current["reviewed_specialty_palette_subset_count"]
+            + current["reviewed_no_chart_count"],
         )
 
     def test_suburban_explicit_no_chart_reviews_are_preserved(self) -> None:
@@ -93,7 +112,7 @@ class GapInventoryRefreshTest(unittest.TestCase):
             for row in self.inventory["model_years"]
             if row["audit_state"] == "reviewed_qualified_palette_union"
         ]
-        self.assertEqual(364, len(palette_rows))
+        self.assertEqual(372, len(palette_rows))
         self.assertTrue(all(row["color_chart_reviewed"] for row in palette_rows))
         self.assertTrue(
             all(not row["completely_reviewed_color_chart"] for row in palette_rows)
@@ -109,10 +128,41 @@ class GapInventoryRefreshTest(unittest.TestCase):
             self.inventory["parquet_schema_recommendation"]["audit_state_enum"],
         )
 
+    def test_exact_program_tables_do_not_fill_missing_blazer_variants(self) -> None:
+        rows = {
+            row["model_year"]: row
+            for row in self.inventory["model_years"]
+            if row["model_id"] == "blazer"
+            and row["model_year"] in {1987, 1988, 1989, 1990, 1993}
+        }
+        self.assertEqual({1987, 1988, 1989, 1990, 1993}, set(rows))
+        for row in rows.values():
+            self.assertEqual(
+                "reviewed_qualified_historical_table", row["audit_state"]
+            )
+            self.assertTrue(row["color_chart_reviewed"])
+            self.assertFalse(row["completely_reviewed_color_chart"])
+            self.assertEqual(
+                "qualified_exact_program_palette",
+                row["current_app_source"]["evidenceClass"],
+            )
+
+    def test_partial_corvette_and_express_sources_remain_qualified_or_explicit_no_chart(self) -> None:
+        rows = {row["model_year_key"]: row for row in self.inventory["model_years"]}
+        for key in ["corvette:2004", "corvette:2006", "express:2000"]:
+            self.assertEqual(
+                "reviewed_qualified_historical_table", rows[key]["audit_state"]
+            )
+            self.assertTrue(rows[key]["color_chart_reviewed"])
+            self.assertFalse(rows[key]["completely_reviewed_color_chart"])
+        for key in ["corvette:2002", "corvette:2007", "express:2001", "express:2002", "express:2003"]:
+            self.assertEqual(
+                "source_reviewed_no_color_chart_found", rows[key]["audit_state"]
+            )
+            self.assertEqual(0, rows[key]["exact_listing_count"])
+
     def test_specialty_subsets_remain_incomplete_and_program_scoped(self) -> None:
         expected_counts = {
-            "blazer:1979": 2,
-            "blazer:1980": 3,
             "ck-series:1979": 2,
             "ck-series:1980": 3,
             "ck-series:1983": 4,

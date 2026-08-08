@@ -895,7 +895,7 @@ def main() -> int:
         "tahoe:2026",
     }
     if (
-        len(specialty_memberships) != 899
+        len(specialty_memberships) != 901
         or {row["model_year_id"] for row in specialty_memberships}
         != expected_specialty_overlay_model_years
         or any(
@@ -1959,13 +1959,36 @@ def main() -> int:
         )
     expected_application_type_counts = Counter(
         {
-            "manufacturer_listed": 4_471,
+            "manufacturer_listed": 5_081,
             "authorized_upfitter_post_build": 180,
-            "special_equipment_option_paint": 589,
+            "special_equipment_option_paint": 888,
             "specialty_program_unspecified": 41,
             "manufacturer_special_equipment_option": 32,
             "standard_program_palette": 86,
             "factory_installed_special_equipment_option": 4,
+            "convertible_top": 60,
+            "custom_two_tone_body_paint": 18,
+            "factory_stripe_program": 321,
+            "factory_two_tone_paint": 1_171,
+            "included_stripe_program": 8,
+            "qualified_plant_regular_body_paint": 11,
+            "qualified_revised_regular_body_paint": 7,
+            "regular_body_paint": 312,
+            "removable_hardtop_vinyl_cover": 2,
+            "special_edition_model_variant_body_paint": 1,
+            "special_edition_body_paint": 5,
+            "special_edition_convertible_top": 5,
+            "special_edition_stripe": 1,
+            "special_edition_two_tone_body_paint": 2,
+            "late_model_year_change_notice": 2,
+            "two_tone_body_paint": 8,
+            "factory_regular_solid_paint": 416,
+            "factory_named_paint_list": 9,
+            "factory_regular_paint": 81,
+            "factory_seo_solid_paint": 117,
+            "factory_top_paint": 32,
+            "secondary_palette_name": 12,
+            "factory_specialty_variant_paint": 9,
         }
     )
     application_type_counts = Counter(

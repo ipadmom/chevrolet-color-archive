@@ -39,12 +39,12 @@ produce byte-identical Parquet files; a two-pass build check covers this rule.
 | Table | Grain | Current rows |
 |---|---|---:|
 | `models.parquet` | One Chevrolet U.S. nameplate | 149 |
-| `generations.parquet` | One contiguous display, platform band, or exact program timeline per model | 1,584 |
+| `generations.parquet` | One contiguous display, platform band, or exact program timeline per model | 1,893 |
 | `model_years.parquet` | One catalogued model and model-year pair | 1,792 |
-| `model_year_generation_memberships.parquet` | One generation, specialty overlay, or exact program partition attached to a model-year | 2,695 |
+| `model_year_generation_memberships.parquet` | One generation, specialty overlay, or exact program partition attached to a model-year | 2,891 |
 | `platform_eras.parquet` | One sourced base, platform, or era band | 218 |
-| `color_identities.parquet` | One normalized color timeline identity within a model generation | 5,028 |
-| `color_availability.parquet` | One source-backed model, year, and color listing | 5,403 |
+| `color_identities.parquet` | One normalized color timeline identity within a model generation | 8,547 |
+| `color_availability.parquet` | One source-backed model, year, and color listing | 8,922 |
 | `paint_schemes.parquet` | One exact model-year two-tone or decor-package combination | 1,369 |
 | `paint_scheme_components.parquet` | One primary or secondary component of a paint scheme | 2,738 |
 | `audited_color_programs.parquet` | One exact audited model-year color, finish, component, or combination program | 80 |
@@ -56,15 +56,15 @@ produce byte-identical Parquet files; a two-pass build check covers this rule.
 | `secondary_paint_fitments.parquet` | One product listed for one audited RockAuto configuration | 111 |
 | `color_code_crosswalk_candidates.parquet` | One unverified retailer code and model-year research lead | 96 |
 | `supplemental_color_mentions.parquet` | One exact research-only color mention from an incomplete model-year source | 0 |
-| `sources.parquet` | One canonical source URL | 3,033 |
-| `source_revisions.parquet` | One immutable file revision of a source | 1,957 |
-| `evidence_claims.parquet` | One exact source-revision and locator claim for a published availability row | 5,403 |
-| `source_links.parquet` | One source-to-claim citation | 39,853 |
+| `sources.parquet` | One canonical source URL | 3,208 |
+| `source_revisions.parquet` | One immutable file revision of a source | 2,125 |
+| `evidence_claims.parquet` | One exact source-revision and locator claim for a published availability row | 8,922 |
+| `source_links.parquet` | One source-to-claim citation | 46,269 |
 | `photo_assets.parquet` | One archived Wikimedia Commons original | 312 |
 | `model_photo_links.parquet` | One model or exact-year photo selection-context association | 315 |
 | `photo_color_links.parquet` | One qualified or tentative photo-to-color association | 14 |
 
-Counts in this README describe the 2026-08-07 build. `manifest.json` controls
+Counts in this README describe the 2026-08-08 build. `manifest.json` controls
 if later research changes them.
 
 ## Evidence guarantees
@@ -80,7 +80,7 @@ if later research changes them.
   list of exact PDF pages, a retained image-region locator, or an archived HTML
   section locator. This is the
   versioned evidence layer; the URL is only the logical source identity.
-- Schema version 12 retains nullable `factory_code` and
+- Schema version 13 retains nullable `factory_code` and
   `transcribed_factory_code` fields. The companion status is required and
   limited to `explicit_none_in_source`, `printed_in_source`,
   `not_printed_in_source`, or `not_stated_in_source`. Source-printed WA
@@ -89,7 +89,7 @@ if later research changes them.
   Placeholder prose is never stored in a code column, and the evidence claim
   repeats both the nullable value and its status so the reason for a missing
   code remains source-linked.
-- Schema version 12 stores `rpo_code`, `seo_code`, `seo_code_status`,
+- Schema version 13 stores `rpo_code`, `seo_code`, `seo_code_status`,
   `source_seo_code_raw`, `source_seo_code_cell_state`, `minimum_batch_units`,
   and nullable `factory_installation_claim` on each applicable availability
   row. The paired `transcribed_*` SEO and RPO fields in
@@ -99,22 +99,22 @@ if later research changes them.
   recorded only when the source supports them. The controlled SEO-cell states
   include printed codes, blanks, literal `TBD`, literal `NONE`, an em dash, and
   a source table with no SEO column.
-- Schema version 12 adds `wa_code`, `source_wa_code_raw`, and
+- Schema version 13 adds `wa_code`, `source_wa_code_raw`, and
   `source_wa_code_cell_state`, plus `upfitter_code_1`, `upfitter_code_2`,
   `upfitter_solid_color_option`, and `upfitter_two_tone_color_option`.
   Normalized WA values remain distinct from whether the table printed `WA-`.
   Kerr order codes and AAS/AAT options are not mislabeled as GM SEO codes.
   `evidence_claims.parquet` repeats the corresponding `transcribed_*` values.
-- Schema version 12 also requires `color_availability.application_type` for
+- Schema version 13 also requires `color_availability.application_type` for
   every row. `availability_state` records whether and when the source says the
   color was offered. `application_type` separately records the source-backed
   offering or application mechanism. This prevents an authorized post-build
   upfitter finish from being mislabeled as factory-applied paint.
-- Schema version 12 retains nullable `program_id` and `program_label` columns in
+- Schema version 13 retains nullable `program_id` and `program_label` columns in
   `generations.parquet`. They preserve exact simultaneous program identities,
   including separate Caprice 9C1 PPV and 9C3 Detective timelines, without
   breaking the shared sourced platform or era band.
-- Schema version 12 retains
+- Schema version 13 retains
   `model_year_research.other_availability_state_count`. For every model-year,
   `listed_count + restricted_count + other_availability_state_count` equals
   `exact_listing_count`. The new aggregate counts listings whose exact state is
@@ -137,30 +137,34 @@ if later research changes them.
   entries assert standalone body-color availability.
 - A missing color row means only that the year remains unverified. It is never
   a negative availability claim.
-- `model_year_research.parquet` distinguishes 106 complete `color_chart_verified`
-  model-years, six `reviewed_qualified_historical_table` years, 364 qualified
+- `model_year_research.parquet` distinguishes 146 complete `color_chart_verified`
+  model-years, 14 `reviewed_qualified_historical_table` years, 371 qualified
   palette-union years, 11 years whose strongest status is
-  `reviewed_specialty_palette_subset`, 13 reviewed no-chart years, and 1,292
+  `reviewed_specialty_palette_subset`, 13 reviewed no-chart years, and 1,237
   `color_chart_unverified` years.
 - Rows with `claim_status = published_qualified_palette_union` preserve the
   exact reviewed official palette union without claiming more option-state
   coverage than the cited Fleet Guide, eBrochure, or Online Order Guide table
-  supplies. This build has 3,240 qualified-palette rows across 364 model-years.
+  supplies. This build has 3,342 qualified palette rows across 371 model-years.
 - Rows with `claim_status = published_specialty_palette_subset` preserve 928
   exact, visually reviewed specialty or public-safety listings across 69
   application model-years. In 11 of those model-years, the specialty subset is
   the strongest research status. The other 58 coexist with a separately complete or
   qualified regular palette. A specialty subset never makes the regular
   palette complete.
-- Four rows with `claim_status = published_qualified_historical_table` preserve
-  ordinary 1981 exterior-color-table evidence for Sportvan, Chevy Van,
+- Twenty rows with `claim_status = published_qualified_historical_table`
+  preserve the 16 qualified 1954, 1955, and 1959 Corvette listings plus four
+  ordinary 1981 exterior color table listings for Sportvan, Chevy Van,
   Cutaway/Hi-Cube Van, and Step-Van/Step-Van King. They are not specialty rows,
   do not assert factory installation, and do not infer continuity with SEO 9V5.
-- 277 rows across 22 model-years use
+- 1,973 rows across 47 model-years use
   `claim_status = published_qualified_exact_program_palette`. These comprise
-  exact Corvette, Monte Carlo, P-Series/Step-Van, and Tahoe program rows. The
-  app-selected row set reconciles exactly to the normalized audited-program
-  entries, while alternate complete official tables remain nonpublishing rows.
+  exact Tahoe partitions plus Corvette, Express, and Blazer variant or specialty
+  programs. The Corvette records preserve body paint conflicts, convertible
+  tops, custom two tone programs, special editions, stripes, and late changes as
+  separate scopes. A separate governing row set makes a year complete where the
+  source supports that claim. Scoped program rows never fill an otherwise
+  missing model or variant chart.
 - The earlier supplemental-only 2002-2004 Suburban change statements have been
   superseded by complete exact-year evidence. Those years now contribute 24
   source-backed availability rows, while the change statements remain linked
@@ -169,8 +173,9 @@ if later research changes them.
 - `model_year_generation_memberships.parquet` makes every generation assignment
   explicit. Each model-year has exactly one primary membership. There are 899
   `specialty_overlay` memberships and one `qualified_historical_overlay`
-  membership, while three `program_partition` memberships preserve the other simultaneous 2000 Tahoe
-  programs beside the primary base/LS program.
+  membership, 145 `program_overlay` memberships, and three `program_partition`
+  memberships that preserve the other simultaneous 2000 Tahoe programs beside
+  the primary base/LS program.
   Availability may reference only a registered membership.
 - Forest Service Green remains represented by two unresolved identities and an
   exhaustively linked specialty-source trail. External-only references appear
@@ -196,22 +201,40 @@ if later research changes them.
 
 ### `application_type` values
 
-`application_type` is non-null for all 5,403 availability rows. It describes
+`application_type` is non-null for all 7,878 availability rows. It describes
 the mechanism evidenced by the source, not the color’s availability state or
 whether the surrounding model-year palette is complete.
 
 | Value | All availability rows | Semantics |
 |---|---:|---|
-| `manufacturer_listed` | 4,471 | Ordinary manufacturer-listed color availability, including regular charts, qualified exact programs, and qualified palette unions. All rows of this type are outside the specialty subset. |
+| `manufacturer_listed` | 4,829 | Ordinary manufacturer-listed color availability, including regular charts, qualified exact programs, and qualified palette unions. All rows of this type are outside the specialty subset. |
 | `authorized_upfitter_post_build` | 180 | The vehicle was built in a required base finish, then painted by an authorized upfitter. This is not a factory-applied finish claim. |
+| `convertible_top` | 60 | A complete printed convertible top color program, kept separate from body paint. |
+| `custom_two_tone_body_paint` | 18 | A complete printed Corvette custom two tone body paint program. |
 | `factory_installed_special_equipment_option` | 4 | The primary source expressly says the SEO paint was installed at the assembly plant. |
+| `factory_named_paint_list` | 9 | A complete named Express paint list whose retained source does not print codes. |
+| `factory_regular_solid_paint` | 249 | A regular Express solid paint table for the cited body configuration. |
+| `factory_stripe_program` | 265 | A complete printed Blazer stripe or decor program. |
+| `factory_two_tone_paint` | 880 | A complete printed Blazer two tone combination. |
+| `included_stripe_program` | 8 | A stripe included with a cited Corvette two tone program. |
 | `manufacturer_special_equipment_option` | 32 | A manufacturer SEO paint listing with exact eligible model scope, without a separate assertion that the paint was applied at the assembly plant. |
-| `special_equipment_option_paint` | 589 | An SEO paint row for an exact police, special-service, retail-and-fleet, or configuration-specific program. Read `availability_state` for open, planned, unavailable, or closed timing. |
+| `qualified_plant_regular_body_paint` | 11 | A Corvette body paint table limited to the stated production plant scope. |
+| `qualified_revised_regular_body_paint` | 7 | A Corvette body paint table limited to the stated revised guide scope. |
+| `regular_body_paint` | 312 | A complete Corvette regular body paint row. |
+| `removable_hardtop_vinyl_cover` | 2 | A printed removable hardtop vinyl cover color. |
+| `special_edition_model_variant_body_paint` | 1 | A body color limited to a named special edition model. |
+| `special_edition_body_paint` | 5 | A body paint row limited to an exact Corvette special edition. |
+| `special_edition_convertible_top` | 5 | A convertible top row limited to an exact Corvette special edition. |
+| `special_edition_stripe` | 1 | A stripe scheme limited to an exact Corvette special edition. |
+| `special_edition_two_tone_body_paint` | 2 | A complete special edition two tone body paint program. |
+| `late_model_year_change_notice` | 2 | A late Corvette model year replacement notice kept separate from the published chart. |
+| `special_equipment_option_paint` | 861 | An SEO paint row for an exact police, service, retail, fleet, or configuration program. Read `availability_state` for open, planned, unavailable, or closed timing. |
 | `specialty_program_unspecified` | 41 | A legacy reviewed specialty row whose source proves the restriction but does not support a narrower application-mechanism classification. It does not imply factory application. |
 | `standard_program_palette` | 86 | A standard, non-SEO color listed for an exact PPV or SSV program palette, or an ordinary qualified-historical chart row. This consists of 82 specialty-program rows and four qualified-historical rows. |
-| **All availability rows** | **5,403** | Every source-backed color availability row in the current export. |
+| `two_tone_body_paint` | 8 | A complete Corvette two tone body paint row. |
+| **All availability rows** | **7,878** | Every source-backed color availability row in the current export. |
 
-Of the 5,403 rows, 928 have
+Of the 7,878 rows, 928 have
 `claim_status = published_specialty_palette_subset`; the four ordinary
 qualified-historical rows remain outside that specialty total.
 

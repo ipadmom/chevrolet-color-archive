@@ -2,7 +2,7 @@
 title: Chevrolet current-model color and photo coverage audit
 visibility: public
 classification: archive-internal
-period: 2025-2026 model years
+period: 1935-2026 current-nameplate model years
 sources:
   - https://www.gmfleetorderguide.com/
   - https://commons.wikimedia.org/w/api.php
@@ -39,13 +39,13 @@ The independent 2025–2026 live-source comparison is retained separately in
 
 | Model | Catalog years | Complete | Qualified palette | Specialty subset | Unreviewed or no-chart years | Archived Commons candidates |
 |---|---:|---|---|---|---|---:|
-| Corvette | 73 | 1956–1958, 1960–1972 | 1954–1955, 1959; 2008–2026 | None | 1953 no chart; 1973–1982, 1984–2007 unreviewed | 10 |
+| Corvette | 73 | 1956–1958, 1960–1980, 1982, 1984–1985, 1987–1988, 1990–1995, 1997–1998, 2001, 2005 | 1954–1955, 1959, 1981, 1986, 1989, 1996, 1999–2000, 2003–2004, 2006, 2008–2026 | Scoped top, two tone, stripe, anniversary, special edition, revision conflict, and late change programs remain separate | 1953 no chart; 2002 and 2007 unreviewed | 10 |
 | Suburban | 89 | 1969, 1972–2005, 2007 | 2008–2026 | None | 1963, 1970–1971 no chart; 1935–1942, 1946–1962, 1964–1968, 2006 unreviewed | 3 |
-| Blazer | 45 | None | 2019–2026 | 1979–1980 | 1969–1978, 1981–2005 | 2 |
+| Blazer | 45 | 1983–1986, 1991–1992, 1994 | 1987–1990, 1993; 2019–2026 | 1979–1980 plus 68 separately scoped 1983–1994 variant programs | 1969–1978, 1981–1982, 1995–2005 | 2 |
 | Tahoe | 32 | 1995–2007 | 2008–2026 | None | None | 5 |
-| Express | 31 | None | 2008–2026 | None | 1996–2007 | 2 |
+| Express | 31 | 1996–1999, 2004–2007 | 2000, 2008–2026 | Passenger, Cargo, Cutaway, YF2, YF7, mobility, SEO, and TGK tables remain separate | 2001–2003 | 2 |
 | Silverado | 28 | None | 2008–2026 | None | 1999–2007 | 2 |
-| Silverado HD | 26 | None | 2008–2026 | None | 2001–2007 | 2 |
+| Silverado HD | 26 | 2003, 2005 | 2008–2026 | Separate SEO tables for 2003 and 2005 | 2001–2002, 2004, 2006–2007 | 2 |
 | TrailBlazer | 14 | None | 2008–2009, 2021–2026 | None | 2002–2007 | 2 |
 | Colorado | 21 | None | 2008–2012, 2015–2026 | None | 2004–2007 | 5 |
 | Equinox | 22 | None | 2008–2026 | None | 2005–2007 | 2 |
@@ -61,13 +61,13 @@ The independent 2025–2026 live-source comparison is retained separately in
 Totals:
 
 - 434 catalog model years.
-- 65 model years with complete reviewed charts.
-- 219 model years with qualified regular palettes and 3 with qualified
-  historical tables.
+- 105 model years with complete reviewed charts.
+- 226 model years with qualified regular palettes and 11 with qualified
+  historical or exact program tables.
 - 2 model years represented only by a reviewed specialty subset.
 - 4 model years whose inspected source had no governing color chart.
-- 141 unreviewed model years, all before 2008.
-- 3,336 published availability rows.
+- 86 unreviewed model years, all before 2008.
+- 5,811 published availability rows.
 - 54 archived Commons originals and 54 archived previews for current
   nameplates.
 - 9 current model photo to color links visually reviewed as qualified examples;

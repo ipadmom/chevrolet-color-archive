@@ -1,5 +1,17 @@
 import modelCatalog from "../data/catalog/chevrolet-us-nameplates.json";
 import platformEraData from "../data/catalog/chevrolet-platform-eras.json";
+import currentHistoricalPaletteAudit from "../data/audits/current-nameplate-historical-palettes.json";
+import currentCorvette1973to1982Audit from "../data/audits/current-corvette-1973-1982.json";
+import currentCorvette1984to2007Audit from "../data/audits/current-corvette-1984-2007.json";
+import currentExpress1997to2005Audit from "../data/audits/current-express-1997-1998-2004-2005.json";
+import currentExpress1996to2007RemainingAudit from "../data/audits/current-express-1996-2007-remaining.json";
+import currentBlazer1983to1994Audit from "../data/audits/current-blazer-1983-1994.json";
+import currentPickup1999to2007Audit from "../data/audits/current-pickups-silverado-1999-2007-colorado-2004-2007.json";
+import currentSilveradoHd2001to2007RemainingAudit from "../data/audits/current-silverado-hd-2001-2007-remaining.json";
+import currentTrailblazer2002to2007Audit from "../data/audits/current-trailblazer-2002-2007.json";
+import currentEquinox2005to2007Audit from "../data/audits/current-equinox-2005-2007.json";
+import currentBlazer1969to2005Audit from "../data/audits/current-blazer-1969-1982-1995-2005.json";
+import currentSuburban1935to2006Audit from "../data/audits/suburban-1935-1968-2006.json";
 import tahoe1995to2000Audit from "../data/audits/tahoe-1995-2000.json";
 import tahoe2001to2007Audit from "../data/audits/tahoe-2001-2007.json";
 import suburban1969to1976Audit from "../data/audits/suburban-1969-1976.json";
@@ -77,7 +89,7 @@ export type YearSourceCitation = {
   name: string;
   chart: string;
   locator: string;
-  revision: string;
+  revision: string | null;
   url: string;
   sourceId?: string;
   sourceType?: string;
@@ -266,6 +278,27 @@ const restrictedCorvette1959 = (label: string): Availability => ({
     "Historical table quantities cover 9,582 cars; five were non-standard and 83 export colors are unknown.",
 });
 
+const corvette1953ReviewedNoChart: Generation = {
+  id: "corvette-1953-reviewed-no-chart",
+  label: "C1 Corvette source review",
+  range: "1953",
+  years: ["1953"],
+  listingCount: 0,
+  revisionNote:
+    "The complete dedicated 1953 Chevrolet Corvette vehicle information kit was reviewed. It contains production, specification, and equipment material, but no governing exterior color table. No palette is inferred.",
+  sources: {
+    "1953": {
+      name: "GM Heritage Vehicle Information Kit",
+      chart: "Complete kit reviewed; no exterior color table found",
+      locator: "Complete PDF reviewed",
+      revision: "Undated historical vehicle information kit",
+      url: gmCorvetteKit("1953"),
+      evidenceClass: "reviewed_no_complete_palette",
+    },
+  },
+  colors: [],
+};
+
 const earlyCorvetteTables: Generation = {
   id: "early-corvette-audited-tables",
   label: "C1 Corvette audited tables",
@@ -281,6 +314,7 @@ const earlyCorvetteTables: Generation = {
       locator: "PDF p. 4, printed p. 23",
       revision: "Undated historical table with explicit estimate warning",
       url: gmCorvetteKit("1954"),
+      evidenceClass: "qualified_historical_table",
     },
     "1955": {
       name: "GM Heritage Vehicle Information Kit",
@@ -288,6 +322,7 @@ const earlyCorvetteTables: Generation = {
       locator: "PDF p. 3, printed p. 25",
       revision: "Undated historical table with explicit estimate warning",
       url: gmCorvetteKit("1955"),
+      evidenceClass: "qualified_historical_table",
     },
     "1956": {
       name: "GM Heritage Vehicle Information Kit",
@@ -316,6 +351,7 @@ const earlyCorvetteTables: Generation = {
       locator: "PDF p. 5, printed p. 33",
       revision: "Undated historical table with non-standard and unknown export colors",
       url: gmCorvetteKit("1959"),
+      evidenceClass: "qualified_historical_table",
     },
     "1960": {
       name: "GM Heritage Vehicle Information Kit",
@@ -791,10 +827,17 @@ type AuditedSolidColor = {
   year: string;
   code: string;
   name: string;
+  identityKey?: string;
+  note?: string;
   label?: string;
   restriction?: string;
   sourceIds?: string[];
-};
+} & Partial<
+  Omit<
+    Availability,
+    "state" | "label" | "code" | "restriction" | "sourceIds"
+  >
+>;
 
 const chevelleSolidInventory: AuditedSolidColor[] = [
   { year: "1964", code: "900", name: "Tuxedo Black" },
@@ -966,37 +1009,55 @@ function buildExactNameTimeline(
   const grouped = new Map<string, ArchiveColor>();
   const rowCodes = new Map<string, string[]>();
   for (const row of rows) {
+    const {
+      year,
+      code,
+      name,
+      identityKey,
+      note,
+      label,
+      restriction,
+      sourceIds,
+      ...availabilityDetails
+    } = row;
     const availability: Availability = row.restriction
       ? {
           state: "restricted",
-          label: row.label ?? row.name,
-          code: row.code,
-          restriction: row.restriction,
-          ...(row.sourceIds?.length ? { sourceIds: row.sourceIds } : {}),
+          label: label ?? name,
+          code,
+          restriction,
+          ...(sourceIds?.length ? { sourceIds } : {}),
+          ...availabilityDetails,
         }
       : {
           state: "listed",
-          label: row.label ?? row.name,
-          code: row.code,
-          ...(row.sourceIds?.length ? { sourceIds: row.sourceIds } : {}),
+          label: label ?? name,
+          code,
+          ...(sourceIds?.length ? { sourceIds } : {}),
+          ...availabilityDetails,
         };
-    const existing = grouped.get(row.name);
+    const identity = identityKey ?? name;
+    const existing = grouped.get(identity);
     if (existing) {
-      existing.availability[row.year] = availability;
-      const codes = rowCodes.get(row.name)!;
-      if (!codes.includes(row.code)) {
-        codes.push(row.code);
+      existing.availability[year] = availability;
+      const codes = rowCodes.get(identity)!;
+      if (!codes.includes(code)) {
+        codes.push(code);
         existing.rowCode = codes.join("; ");
+      }
+      if (note && !existing.note?.includes(note)) {
+        existing.note = [existing.note, note].filter(Boolean).join(" ");
       }
       continue;
     }
-    rowCodes.set(row.name, [row.code]);
-    grouped.set(row.name, {
-      id: `${modelId}-${archiveColorId(row.name)}-${row.year}`,
-      name: row.name,
-      swatch: interpretiveArchiveSwatch(row.name),
-      rowCode: row.code,
-      availability: { [row.year]: availability },
+    rowCodes.set(identity, [code]);
+    grouped.set(identity, {
+      id: `${modelId}-${archiveColorId(identity)}-${year}`,
+      name,
+      swatch: interpretiveArchiveSwatch(name),
+      rowCode: code,
+      note,
+      availability: { [year]: availability },
     });
   }
   return [...grouped.values()];
@@ -1138,7 +1199,6 @@ function officialPaletteSource(
     ...(source.archive_url
       ? { archiveUrl: source.archive_url, officialUrl: source.url }
       : {}),
-    evidenceClass: "qualified_exact_program_palette",
     artifactSha256: source.artifact_sha256,
     artifactBytes: source.artifact_bytes,
     pdfPageCount: source.pdf_page_count,
@@ -1420,6 +1480,8 @@ type TahoeAuditDocument = {
   bytes?: number;
   pdf_page_count?: number;
   retrieved_at?: string;
+  availability_scope?: string;
+  limitations?: string[];
   supporting_sources?: TahoeAuditDocument[];
 };
 
@@ -1447,6 +1509,72 @@ type TahoeAuditYear = {
   exterior_colors: TahoeAuditColor[];
   program_palettes?: TahoeAuditProgramPalette[];
   two_tone_combinations?: unknown[];
+};
+
+type CurrentHistoricalColor = {
+  identity_key?: string;
+  name: string;
+  source_label?: string;
+  code: string;
+  wa_number: string;
+  restriction?: string;
+  note?: string;
+  source_ids?: string[];
+};
+
+type CurrentHistoricalSourceRef = {
+  source_id: string;
+  pdf_pages: number[];
+  section: string;
+  revision: string;
+};
+
+type CurrentHistoricalProgram = {
+  program_id: string;
+  program_label: string;
+  platform_family: string;
+  claim_scope: string;
+  evidence_class: "qualified_exact_program_palette";
+  application_type: string;
+  code_column_semantics: "seo";
+  source_refs: CurrentHistoricalSourceRef[];
+  colors: CurrentHistoricalColor[];
+};
+
+type CurrentHistoricalYear = {
+  year: number;
+  coverage_status: "verified_complete";
+  complete_regular_palette: boolean;
+  availability_scope: string;
+  limitations: string[];
+  source_refs: CurrentHistoricalSourceRef[];
+  exterior_colors: CurrentHistoricalColor[];
+  program_palettes: CurrentHistoricalProgram[];
+};
+
+type CurrentHistoricalSource = {
+  source_id: string;
+  title: string;
+  publisher: string;
+  source_type: string;
+  content_type: string;
+  url: string;
+  archive_url: string;
+  document_authority: string;
+  retrieval_host_type: "official_live" | "archival_mirror";
+  sha256: string;
+  bytes: number;
+  pdf_page_count: number;
+  retrieved_at: string;
+};
+
+type CurrentHistoricalAudit = {
+  sources: CurrentHistoricalSource[];
+  models: Array<{
+    model_id: string;
+    model_name: string;
+    years: CurrentHistoricalYear[];
+  }>;
 };
 
 function tahoeAuditIsVerified(item: TahoeAuditYear) {
@@ -1526,6 +1654,8 @@ function tahoeAuditCitation(
     artifactBytes: source.bytes,
     pdfPageCount: source.pdf_page_count,
     retrievedAt: source.retrieved_at,
+    availabilityScope: source.availability_scope,
+    limitations: source.limitations,
   };
 }
 
@@ -1694,6 +1824,1520 @@ const tahoeAuditGenerations = [
 const tahoeAuditVerifiedYearCount = new Set(
   tahoeAuditGenerations.flatMap((generation) => generation.years),
 ).size;
+
+const currentHistoricalAudit =
+  currentHistoricalPaletteAudit as CurrentHistoricalAudit;
+const currentHistoricalSources = new Map(
+  currentHistoricalAudit.sources.map((source) => [source.source_id, source]),
+);
+
+function currentHistoricalDocument(
+  sourceRefs: CurrentHistoricalSourceRef[],
+  availabilityScope: string,
+  limitations: string[],
+): TahoeAuditDocument {
+  if (!sourceRefs.length) {
+    throw new Error("Current-nameplate historical palette has no source refs");
+  }
+  const documents = sourceRefs.map((sourceRef): TahoeAuditDocument => {
+    const source = currentHistoricalSources.get(sourceRef.source_id);
+    if (!source) {
+      throw new Error(`Missing historical source ${sourceRef.source_id}`);
+    }
+    return {
+      ...source,
+      pdf_pages: sourceRef.pdf_pages,
+      section: sourceRef.section,
+      publication_date_note: sourceRef.revision,
+    };
+  });
+  return {
+    ...documents[0],
+    availability_scope: availabilityScope,
+    limitations,
+    supporting_sources: documents.slice(1),
+  };
+}
+
+function currentHistoricalSource(
+  source: TahoeAuditDocument,
+  evidenceClass?: YearSourceCitation["evidenceClass"],
+): YearSource {
+  return {
+    ...tahoeAuditCitation(source, evidenceClass),
+    supportingSources: source.supporting_sources?.map((supportingSource) =>
+      tahoeAuditCitation(supportingSource, evidenceClass),
+    ),
+  };
+}
+
+function currentHistoricalRows(
+  year: number,
+  colors: CurrentHistoricalColor[],
+  sourceRefs: CurrentHistoricalSourceRef[],
+  program?: CurrentHistoricalProgram,
+): AuditedSolidColor[] {
+  const defaultSourceIds = sourceRefs.map((sourceRef) => sourceRef.source_id);
+  return colors.map((color) => {
+    const waCode = color.wa_number;
+    const sourceCode = color.code;
+    const codeIsNone = sourceCode.toLocaleLowerCase() === "none";
+    const programRestriction = program
+      ? `${program.program_label}; this is specialty paint, not unrestricted retail availability.`
+      : null;
+    const restriction = [programRestriction, color.restriction]
+      .filter(Boolean)
+      .join(" ") || undefined;
+    const sourceLiteralNote =
+      color.source_label && color.source_label !== color.name
+        ? `Source literal: ${color.source_label}.`
+        : null;
+    const note = [color.note, sourceLiteralNote].filter(Boolean).join(" ") || undefined;
+    const sourceIds = color.source_ids ?? defaultSourceIds;
+    const codeDisplay = `${sourceCode} / ${waCode}`;
+    const shared: AuditedSolidColor = {
+      year: String(year),
+      identityKey: `${program?.program_id ?? "regular"}:${color.identity_key ?? waCode}`,
+      code: codeDisplay,
+      name: color.name,
+      label: color.source_label ?? color.name,
+      note,
+      restriction,
+      sourceIds,
+      applicationType:
+        program?.application_type ?? "manufacturer_listed",
+      touchUpCode: waCode,
+      waCode,
+      sourceWaCodeRaw: waCode,
+      sourceWaCodeCellState: "printed_with_prefix",
+    };
+    if (!program) {
+      return {
+        ...shared,
+        factoryCode: sourceCode,
+        factoryCodeStatus: "printed",
+      };
+    }
+    return {
+      ...shared,
+      factoryCode: waCode,
+      factoryCodeStatus: "printed",
+      seoCode: codeIsNone ? null : sourceCode,
+      seoCodeStatus: codeIsNone
+        ? "not_applicable_in_source"
+        : "printed_in_source",
+      sourceSeoCodeRaw: sourceCode,
+      sourceSeoCodeCellState: codeIsNone ? "literal_none" : "printed",
+    };
+  });
+}
+
+function buildCurrentHistoricalGenerations() {
+  const byModel = new Map<string, Generation[]>();
+  for (const modelAudit of currentHistoricalAudit.models) {
+    const modelGenerations: Generation[] = [];
+    for (const item of modelAudit.years) {
+      if (item.complete_regular_palette && item.exterior_colors.length) {
+        const source = currentHistoricalDocument(
+          item.source_refs,
+          item.availability_scope,
+          item.limitations,
+        );
+        const rows = currentHistoricalRows(
+          item.year,
+          item.exterior_colors,
+          item.source_refs,
+        );
+        const year = String(item.year);
+        modelGenerations.push({
+          id: `current-historical-${modelAudit.model_id}-${year}-regular`,
+          label: "Reviewed official model-year charts",
+          range: year,
+          years: [year],
+          listingCount: rows.length,
+          revisionNote:
+            `${rows.length} regular colors are transcribed from complete reviewed charts for the exact cited body series. ` +
+            "Specialty paint remains a separate program and no adjacent year is inferred.",
+          sources: { [year]: currentHistoricalSource(source) },
+          colors: buildExactNameTimeline(modelAudit.model_id, rows),
+        });
+      }
+      for (const program of item.program_palettes) {
+        const source = currentHistoricalDocument(
+          program.source_refs,
+          program.claim_scope,
+          item.limitations,
+        );
+        const rows = currentHistoricalRows(
+          item.year,
+          program.colors,
+          program.source_refs,
+          program,
+        );
+        const year = String(item.year);
+        modelGenerations.push({
+          id: `current-historical-${modelAudit.model_id}-${year}-${program.program_id}`,
+          label: program.platform_family,
+          programId: program.program_id,
+          programLabel: program.program_label,
+          range: year,
+          years: [year],
+          listingCount: rows.length,
+          revisionNote:
+            `${rows.length} exact color identities are transcribed from the complete reviewed ${program.program_label} tables. ` +
+            "They remain separate from the regular palette.",
+          sources: {
+            [year]: currentHistoricalSource(source, program.evidence_class),
+          },
+          colors: buildExactNameTimeline(
+            `${modelAudit.model_id}-${program.program_id}`,
+            rows,
+          ),
+        });
+      }
+    }
+    byModel.set(modelAudit.model_id, modelGenerations);
+  }
+  return byModel;
+}
+
+const currentHistoricalGenerationsByModel =
+  buildCurrentHistoricalGenerations();
+
+type VariantHistoricalColor = {
+  identity_key: string;
+  name: string;
+  source_label?: string;
+  source_color_code?: string | null;
+  factory_code?: string | null;
+  rpo_code?: string | null;
+  seo_code?: string | null;
+  wa_number?: string | null;
+  allowed_interior_trim_colors?: string[];
+  restriction?: string;
+  condition?: string;
+  upper?: string;
+  lower?: string;
+  note?: string;
+};
+
+type VariantHistoricalSourceRef = {
+  source_id: string;
+  pdf_pages: number[];
+  printed_page_label?: string;
+  section: string;
+  revision: string | null;
+};
+
+type VariantHistoricalPalette = {
+  program_id: string;
+  program_label: string;
+  variant?: string;
+  application_type: string;
+  evidence_class: string;
+  claim_scope: string;
+  program_restriction?: string;
+  additional_color_restrictions?: Array<{
+    identity_keys: string[];
+    restriction: string;
+  }>;
+  source_ref: VariantHistoricalSourceRef;
+  color_set_id?: string;
+  colors?: VariantHistoricalColor[];
+};
+
+type VariantHistoricalSource = {
+  source_id: string;
+  title: string;
+  publisher: string;
+  source_type: string;
+  content_type: string;
+  url: string;
+  archive_url?: string | null;
+  document_authority: "official_manufacturer_document";
+  retrieval_host_type:
+    | "official_live"
+    | "archival_mirror"
+    | "third_party_document_mirror";
+  sha256: string;
+  bytes: number;
+  pdf_page_count: number;
+  retrieved_at: string;
+};
+
+type VariantHistoricalYear = {
+  year: number;
+  coverage_status: string;
+  complete_regular_palette: boolean;
+  availability_scope: string;
+  limitations: string[];
+  color_sets?: Array<{
+    color_set_id: string;
+    colors: VariantHistoricalColor[];
+  }>;
+  palettes: VariantHistoricalPalette[];
+  reviewed_source_refs?: Array<{
+    source_id: string;
+    pdf_pages: number[];
+  }>;
+};
+
+type VariantHistoricalAudit = {
+  sources: VariantHistoricalSource[];
+  models: Array<{
+    model_id: string;
+    model_name: string;
+    years: VariantHistoricalYear[];
+  }>;
+};
+
+function variantHistoricalCitation(
+  source: VariantHistoricalSource,
+  sourceRef: VariantHistoricalSourceRef,
+  availabilityScope: string,
+  limitations: string[],
+  evidenceClass?: YearSourceCitation["evidenceClass"],
+): YearSource {
+  return {
+    name: source.title,
+    chart: sourceRef.section,
+    locator: [
+      `PDF ${sourceRef.pdf_pages.length === 1 ? "p." : "pp."} ${naturalList(sourceRef.pdf_pages)}`,
+      sourceRef.printed_page_label,
+    ].filter(Boolean).join(". "),
+    revision: sourceRef.revision ?? "Model year publication; revision not printed",
+    url: source.url,
+    sourceId: source.source_id,
+    sourceType: source.source_type,
+    publisher: source.publisher,
+    contentType: source.content_type,
+    ...(source.document_authority === "official_manufacturer_document"
+      ? { documentAuthority: "official_manufacturer_document" as const }
+      : {}),
+    retrievalHostType: source.retrieval_host_type === "third_party_document_mirror"
+      ? "archival_mirror"
+      : source.retrieval_host_type,
+    archiveUrl: source.archive_url ?? undefined,
+    originalUrl: source.archive_url ? source.url : undefined,
+    evidenceClass,
+    artifactSha256: source.sha256,
+    artifactBytes: source.bytes,
+    pdfPageCount: source.pdf_page_count,
+    retrievedAt: source.retrieved_at,
+    availabilityScope,
+    limitations,
+  };
+}
+
+function variantHistoricalRows(
+  year: number,
+  colors: VariantHistoricalColor[],
+  palette: VariantHistoricalPalette,
+): AuditedSolidColor[] {
+  return colors.map((color) => {
+    const sourceCode = color.source_color_code ?? color.factory_code ?? null;
+    const codeIsNone = sourceCode?.toLocaleLowerCase() === "none";
+    const extraRestriction = palette.additional_color_restrictions?.find((item) =>
+      item.identity_keys.includes(color.identity_key),
+    )?.restriction;
+    const interiorRestriction = color.allowed_interior_trim_colors?.length
+      ? `Permitted interior trim colors: ${naturalList(color.allowed_interior_trim_colors)}.`
+      : undefined;
+    const programRestriction = palette.evidence_class === "qualified_exact_program_palette"
+      ? `Program scope: ${palette.program_label}.`
+      : undefined;
+    const restriction = [
+      programRestriction,
+      palette.program_restriction,
+      color.restriction,
+      color.condition,
+      extraRestriction,
+      interiorRestriction,
+    ].filter(Boolean).join(" ") || undefined;
+    const sourceLiteralNote = color.source_label && color.source_label !== color.name
+      ? `Source literal: ${color.source_label}.`
+      : undefined;
+    const waNumber = color.wa_number ?? null;
+    const normalizedSingleWaNumber = waNumber && /^WA-[0-9A-Z]+$/i.test(waNumber)
+      ? waNumber.toLocaleUpperCase()
+      : null;
+    const factoryCode = color.factory_code ?? color.rpo_code ?? (codeIsNone ? "none" : null);
+    const isSeoProgram = palette.application_type === "special_equipment_option_paint" ||
+      palette.application_type.includes("seo");
+    const seoCode = color.seo_code ?? (
+      palette.application_type === "special_equipment_option_paint" && !codeIsNone
+        ? sourceCode
+        : null
+    );
+    return {
+      year: String(year),
+      identityKey: `${palette.program_id}:${color.identity_key}`,
+      code: [sourceCode, waNumber].filter(Boolean).join(" / ") || "Not printed",
+      name: color.name,
+      label: color.source_label ?? color.name,
+      note: [color.note, sourceLiteralNote].filter(Boolean).join(" ") || undefined,
+      restriction,
+      sourceIds: [palette.source_ref.source_id],
+      applicationType: palette.application_type,
+      factoryCode,
+      factoryCodeStatus: codeIsNone
+        ? "explicit none"
+        : factoryCode
+          ? "printed"
+          : "not printed",
+      touchUpCode: waNumber ?? undefined,
+      rpoCode: color.rpo_code ?? null,
+      seoCode,
+      seoCodeStatus: isSeoProgram
+        ? seoCode
+          ? "printed_in_source"
+          : codeIsNone
+            ? "not_applicable_in_source"
+            : "not_printed_in_source"
+        : undefined,
+      sourceSeoCodeRaw: isSeoProgram
+        ? seoCode ?? (codeIsNone ? sourceCode : null)
+        : undefined,
+      sourceSeoCodeCellState: isSeoProgram
+        ? seoCode
+          ? "printed"
+          : codeIsNone
+          ? "literal_none"
+          : "blank"
+        : undefined,
+      waCode: normalizedSingleWaNumber,
+      sourceWaCodeRaw: normalizedSingleWaNumber,
+      sourceWaCodeCellState: normalizedSingleWaNumber
+        ? "printed_with_prefix"
+        : null,
+    };
+  });
+}
+
+function buildVariantHistoricalGenerations(audit: VariantHistoricalAudit) {
+  const sources = new Map(audit.sources.map((source) => [source.source_id, source]));
+  const byModel = new Map<string, Generation[]>();
+  for (const model of audit.models) {
+    const generations: Generation[] = [];
+    for (const item of model.years) {
+      const colorSets = new Map(
+        (item.color_sets ?? []).map((set) => [set.color_set_id, set.colors]),
+      );
+      if (!item.palettes.length) {
+        const sourceRef = item.reviewed_source_refs?.[0];
+        const source = sourceRef
+          ? sources.get(sourceRef.source_id)
+          : [...sources.values()].find((candidate) =>
+            candidate.source_id.includes(`-${item.year}-`) &&
+            candidate.source_id.includes(model.model_id)
+          );
+        if (sourceRef && !source) {
+          throw new Error(`Missing reviewed no-chart source ${sourceRef.source_id}`);
+        }
+        const year = String(item.year);
+        generations.push({
+          id: `current-variant-${model.model_id}-${year}-reviewed-no-color-table`,
+          label: `${year} official kit reviewed, no color table found`,
+          range: year,
+          years: [year],
+          listingCount: 0,
+          revisionNote:
+            "The complete retained official source was reviewed, but no governing exterior color table was found. No adjacent model year is inferred.",
+          sources: {
+            [year]: {
+              name: source?.title ?? "General Motors Heritage vehicle information kit index",
+              chart: source
+                ? "Official kit reviewed; no governing exterior color table found"
+                : "Official source index and retained corpus reviewed; no governing exterior color table retained",
+              locator: source
+                ? `Entire ${source.pdf_page_count}-page PDF reviewed`
+                : "Exact model year source search and retained corpus audit",
+              revision: "Source audit completed August 2026",
+              url: source?.url ?? "https://www.gm.com/heritage/archive/vehicle-information-kits",
+              sourceId: source?.source_id ?? "gm-heritage-chevrolet-kit-index",
+              sourceType: source?.source_type ?? "official_vehicle_information_kit_index",
+              publisher: source?.publisher ?? "General Motors",
+              contentType: source?.content_type ?? "text/html",
+              ...(source?.document_authority === "official_manufacturer_document"
+                ? { documentAuthority: "official_manufacturer_document" as const }
+                : {}),
+              retrievalHostType: source?.retrieval_host_type === "third_party_document_mirror"
+                ? "archival_mirror"
+                : source?.retrieval_host_type ?? "official_live",
+              archiveUrl: source?.archive_url ?? undefined,
+              originalUrl: source?.archive_url ? source.url : undefined,
+              evidenceClass: "reviewed_no_complete_palette",
+              artifactSha256: source?.sha256,
+              artifactBytes: source?.bytes,
+              pdfPageCount: source?.pdf_page_count,
+              retrievedAt: source?.retrieved_at,
+              availabilityScope: item.availability_scope,
+              limitations: item.limitations,
+            },
+          },
+          colors: [],
+        });
+      }
+      const firstGoverningProgram = item.complete_regular_palette
+        ? item.palettes.find((palette) =>
+          palette.evidence_class === "exact_governing_palette" ||
+          palette.evidence_class === "exact_governing_named_programs"
+        )?.program_id
+        : undefined;
+      for (const palette of item.palettes) {
+        const source = sources.get(palette.source_ref.source_id);
+        if (!source) {
+          throw new Error(`Missing variant historical source ${palette.source_ref.source_id}`);
+        }
+        const colors = palette.colors ?? colorSets.get(palette.color_set_id ?? "");
+        if (!colors?.length) {
+          continue;
+        }
+        const isPrimaryGoverningProgram =
+          palette.program_id === firstGoverningProgram;
+        const evidenceClass = isPrimaryGoverningProgram
+          ? undefined
+          : "qualified_exact_program_palette";
+        const rows = variantHistoricalRows(item.year, colors, {
+          ...palette,
+          evidence_class: evidenceClass ?? "exact_governing_palette",
+        });
+        const year = String(item.year);
+        generations.push({
+          id: `current-variant-${model.model_id}-${year}-${palette.program_id}`,
+          label: palette.variant
+            ? `${palette.variant}: ${palette.program_label}`
+            : palette.program_label,
+          programId: palette.program_id,
+          programLabel: palette.program_label,
+          range: year,
+          years: [year],
+          listingCount: rows.length,
+          revisionNote: isPrimaryGoverningProgram
+            ? `${rows.length} regular colors are transcribed from the complete governing chart. Other body and specialty programs remain separate.`
+            : `${rows.length} colors are transcribed for the exact ${palette.program_label} scope and are not projected to other configurations.`,
+          sources: {
+            [year]: variantHistoricalCitation(
+              source,
+              palette.source_ref,
+              palette.claim_scope || item.availability_scope,
+              item.limitations,
+              evidenceClass,
+            ),
+          },
+          colors: buildExactNameTimeline(`${model.model_id}-${palette.program_id}`, rows),
+        });
+      }
+    }
+    byModel.set(model.model_id, generations);
+  }
+  return byModel;
+}
+
+type CorvetteHistoricalSource = {
+  source_id: string;
+  title: string;
+  publisher: string;
+  source_type: string;
+  url: string;
+  archive_url?: string | null;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count: number;
+  reviewed_pages: Array<{
+    pdf_page: number;
+    printed_page?: string;
+    section: string;
+    document_revision_date_raw?: string | null;
+  }>;
+  limitations?: string[];
+};
+
+type CorvetteHistoricalProgram = {
+  program_id: string;
+  program_label: string;
+  palette_kind: string;
+  source_scope: string;
+  source_ids?: string[];
+  complete: boolean;
+  colors: Array<{
+    order: number;
+    label: string;
+    source_label_raw: string;
+    factory_code: string | null;
+    factory_code_status: string;
+    alternate_factory_codes?: string[];
+    wa_code?: string;
+    approved_master_source_code?: string;
+    component_role: string;
+    combination_code: string | null;
+    secondary_label?: string;
+    secondary_factory_code?: string | null;
+    secondary_factory_code_status?: string;
+    alternate_source_label?: string;
+    restrictions: string[];
+  }>;
+};
+
+type CorvetteHistoricalAudit = {
+  model: { id: string; name: string };
+  sources: CorvetteHistoricalSource[];
+  years: Array<{
+    model_year: number;
+    audit_status: string;
+    coverage_status: string;
+    complete_regular_palette: boolean;
+    source_ids: string[];
+    programs: CorvetteHistoricalProgram[];
+    limitations: string[];
+  }>;
+};
+
+function corvetteHistoricalCitation(
+  source: CorvetteHistoricalSource,
+  chart: string,
+  locator: string,
+  limitations: string[],
+  evidenceClass?: YearSourceCitation["evidenceClass"],
+): YearSource {
+  const explicitRevision = locator.match(/\brevised\s+([0-9-]+)/i)?.[1];
+  const citedPages = [...locator.matchAll(/PDF page\s+(\d+)/gi)]
+    .map((match) => Number(match[1]));
+  const citedPageRevisions = source.reviewed_pages
+    .filter((page) => citedPages.includes(page.pdf_page))
+    .map((page) => page.document_revision_date_raw)
+    .filter((value): value is string => Boolean(value));
+  return {
+    name: source.title,
+    chart,
+    locator,
+    revision: explicitRevision
+      ? `Revised ${explicitRevision}`
+      : citedPageRevisions.length
+      ? [...new Set(citedPageRevisions)].join("; ")
+      : "Model year publication; chart date not printed",
+    url: source.url,
+    sourceId: source.source_id,
+    sourceType: source.source_type,
+    publisher: source.publisher,
+    contentType: "application/pdf",
+    documentAuthority: "official_manufacturer_document",
+    retrievalHostType: "official_live",
+    archiveUrl: source.archive_url ?? undefined,
+    originalUrl: source.archive_url ? source.url : undefined,
+    evidenceClass,
+    artifactSha256: source.artifact_sha256,
+    artifactBytes: source.artifact_bytes,
+    pdfPageCount: source.pdf_page_count,
+    availabilityScope: chart,
+    limitations: [...limitations, ...(source.limitations ?? [])],
+  };
+}
+
+function corvetteHistoricalRows(
+  year: number,
+  program: CorvetteHistoricalProgram,
+  qualified: boolean,
+): AuditedSolidColor[] {
+  return program.colors.map((color) => {
+    const alternateCodes = color.alternate_factory_codes ?? [];
+    const secondaryCode = color.secondary_factory_code ?? null;
+    const waCode = color.wa_code ?? null;
+    const normalizedWaCode = waCode
+      ? waCode.toLocaleUpperCase().startsWith("WA-")
+        ? waCode
+        : `WA-${waCode}`
+      : null;
+    const rpoCode = color.combination_code?.match(/^RPO\s+(\S+)/)?.[1] ?? null;
+    const note = [
+      alternateCodes.length
+        ? `Alternate factory code${alternateCodes.length === 1 ? "" : "s"}: ${naturalList(alternateCodes)}.`
+        : undefined,
+      color.approved_master_source_code
+        ? `Approved master source code: ${color.approved_master_source_code}.`
+        : undefined,
+      color.secondary_label && secondaryCode
+        ? `Secondary color: ${color.secondary_label}, code ${secondaryCode}.`
+        : undefined,
+      color.alternate_source_label
+        ? `Alternate source label: ${color.alternate_source_label}.`
+        : undefined,
+    ].filter(Boolean).join(" ") || undefined;
+    return {
+      year: String(year),
+      identityKey: `${program.program_id}:${color.order}:${color.factory_code ?? "none"}:${color.label}`,
+      code: [
+        color.factory_code,
+        alternateCodes.length ? `also ${alternateCodes.join(", ")}` : undefined,
+        secondaryCode ? `secondary ${secondaryCode}` : undefined,
+        waCode ? `WA ${waCode}` : undefined,
+        color.combination_code,
+      ].filter(Boolean).join(" / ") || "Not printed",
+      name: color.label,
+      label: color.source_label_raw,
+      note,
+      restriction: [
+        qualified ? `Program scope: ${program.program_label}.` : undefined,
+        ...color.restrictions,
+      ].filter(Boolean).join(" ") || undefined,
+      sourceIds: [],
+      applicationType: program.palette_kind,
+      factoryCode: color.factory_code,
+      factoryCodeStatus: color.factory_code_status === "printed"
+        ? "printed"
+        : color.factory_code_status === "explicit_none"
+          ? "explicit none"
+          : "not printed",
+      touchUpCode: normalizedWaCode ?? undefined,
+      rpoCode,
+      waCode: normalizedWaCode,
+      sourceWaCodeRaw: waCode,
+      sourceWaCodeCellState: waCode
+        ? waCode.toLocaleUpperCase().startsWith("WA-")
+          ? "printed_with_prefix"
+          : "printed_without_prefix"
+        : null,
+    };
+  });
+}
+
+function buildCorvetteHistoricalGenerations(audit: CorvetteHistoricalAudit) {
+  const sources = new Map(audit.sources.map((source) => [source.source_id, source]));
+  const generations: Generation[] = [];
+  for (const item of audit.years) {
+    const year = String(item.model_year);
+    if (
+      !item.complete_regular_palette &&
+      !item.programs.some((program) => program.complete)
+    ) {
+      const source = item.source_ids.map((sourceId) => sources.get(sourceId)).find(Boolean);
+      const sourceCitation: YearSource = source
+        ? corvetteHistoricalCitation(
+          source,
+          "Exact Corvette source review; no complete governing body paint chart retained",
+          source.reviewed_pages.length
+            ? `PDF ${naturalList(source.reviewed_pages.map((page) => page.pdf_page))}`
+            : `Entire ${source.pdf_page_count}-page PDF reviewed`,
+          item.limitations,
+          "reviewed_no_complete_palette",
+        )
+        : {
+          name: "General Motors Heritage vehicle information kit index",
+          chart: "Exact Corvette source review; no governing body paint chart retained",
+          locator: "Exact model year source search and retained corpus audit",
+          revision: "Source audit completed August 2026",
+          url: "https://www.gm.com/heritage/archive/vehicle-information-kits",
+          sourceId: "gm-heritage-chevrolet-kit-index",
+          sourceType: "official_vehicle_information_kit_index",
+          publisher: "General Motors",
+          contentType: "text/html",
+          retrievalHostType: "official_live",
+          evidenceClass: "reviewed_no_complete_palette",
+          availabilityScope: "Exact Chevrolet Corvette model year source review.",
+          limitations: item.limitations,
+        };
+      generations.push({
+        id: `current-corvette-${year}-reviewed-no-complete-body-paint-chart`,
+        label: `${year} exact Corvette source review`,
+        range: year,
+        years: [year],
+        listingCount: 0,
+        revisionNote:
+          "The exact model year source or official source index was reviewed, but no complete governing body paint chart was retained. No adjacent year is inferred.",
+        sources: { [year]: sourceCitation },
+        colors: [],
+      });
+      continue;
+    }
+    const sourceForProgram = (program: CorvetteHistoricalProgram) => {
+      const sourceIds = program.source_ids ?? item.source_ids;
+      const source = sourceIds.map((sourceId) => sources.get(sourceId)).find(Boolean);
+      if (!source) {
+        throw new Error(
+          `Missing Corvette source for ${item.model_year} ${program.program_id}`,
+        );
+      }
+      return { source, sourceIds };
+    };
+    const regularPrograms = item.programs.filter((program) =>
+      program.palette_kind.includes("regular_body_paint"),
+    );
+    if (item.complete_regular_palette && regularPrograms.length) {
+      const governingPrograms = regularPrograms.filter((program) => program.complete);
+      if (!governingPrograms.length) {
+        throw new Error(
+          `Complete Corvette year ${item.model_year} has no complete regular program`,
+        );
+      }
+      const governingSources = governingPrograms.map(sourceForProgram);
+      const rows = regularPrograms.flatMap((program) =>
+        program.complete
+          ? corvetteHistoricalRows(
+              item.model_year,
+              program,
+              governingPrograms.length > 1,
+            ).map((row) => ({
+              ...row,
+              sourceIds: sourceForProgram(program).sourceIds,
+            }))
+          : [],
+      );
+      const locator = governingPrograms
+        .map((program) => program.source_scope)
+        .join("; ");
+      const programLabel = governingPrograms.length > 1
+        ? "Complete official body paint scope union"
+        : governingPrograms[0].program_label;
+      generations.push({
+        id: `current-corvette-${year}-regular-body-paint`,
+        label: programLabel,
+        range: year,
+        years: [year],
+        listingCount: rows.length,
+        revisionNote: governingPrograms.length > 1
+          ? `${rows.length} body paint entries preserve the separate official plant and revision scopes that together cover the model year.`
+          : `${rows.length} body paint colors are transcribed from the complete governing chart.`,
+        sources: {
+          [year]: corvetteHistoricalCitation(
+            governingSources[0].source,
+            programLabel,
+            locator,
+            item.limitations,
+            governingPrograms.length > 1 ? "qualified_palette_union" : undefined,
+          ),
+        },
+        colors: buildExactNameTimeline("corvette", rows),
+      });
+    }
+    for (const program of item.programs.filter(
+      (candidate) =>
+        candidate.complete &&
+        (!regularPrograms.includes(candidate) || !item.complete_regular_palette),
+    )) {
+      const { source, sourceIds } = sourceForProgram(program);
+      const rows = corvetteHistoricalRows(item.model_year, program, true)
+        .map((row) => ({ ...row, sourceIds }));
+      const evidenceClass: YearSourceCitation["evidenceClass"] =
+        "qualified_exact_program_palette";
+      generations.push({
+        id: `current-corvette-${year}-${program.program_id}`,
+        label: program.program_label,
+        programId: program.program_id,
+        programLabel: program.program_label,
+        range: year,
+        years: [year],
+        listingCount: rows.length,
+        revisionNote: `${rows.length} entries preserve the complete printed ${program.program_label} program.`,
+        sources: {
+          [year]: corvetteHistoricalCitation(
+            source,
+            program.program_label,
+            program.source_scope,
+            item.limitations,
+            evidenceClass,
+          ),
+        },
+        colors: buildExactNameTimeline(`corvette-${program.program_id}`, rows),
+      });
+    }
+  }
+  return new Map([[audit.model.id, generations]]);
+}
+
+type BlazerHistoricalSource = {
+  source_id: string;
+  title: string;
+  direct_url: string;
+  archive_url?: string | null;
+  artifact_sha256: string;
+  artifact_bytes: number;
+  pdf_page_count: number;
+};
+
+type BlazerHistoricalTable = {
+  table_id: string;
+  program_codes: string[];
+  program_name: string;
+  source_pages: number[];
+  printed_page_locators: string[];
+  document_date: string;
+  solid_rows?: string[];
+  two_tone_rows?: Array<[string, string]>;
+  stripe_rows?: Array<[string, string, string]>;
+  stripe_availability_rows?: Array<[string, string]>;
+  stripe_option_legend?: Record<string, string>;
+  specialty_rows?: Array<{
+    program_code: string;
+    color_name: string;
+    paint_code: string | null;
+    scope: string;
+  }>;
+  top_rows?: Array<{
+    paint_program: string;
+    top_color: string;
+    rpo: string | null;
+    scope: string;
+  }>;
+  restrictions?: string[];
+};
+
+type BlazerHistoricalVariant = {
+  variant_id: string;
+  source_id?: string;
+  source_ids?: string[];
+  coverage_status: string;
+  color_legend: Record<string, string>;
+  tables: BlazerHistoricalTable[];
+};
+
+type BlazerHistoricalAudit = {
+  sources: BlazerHistoricalSource[];
+  years: Array<{
+    year: number;
+    coverage_status: string;
+    limitations: string[];
+    variants: BlazerHistoricalVariant[];
+  }>;
+};
+
+function historicalDisplayName(value: string) {
+  return value
+    .toLocaleLowerCase()
+    .replace(/(^|[\s/,(\-])([a-z])/g, (_match, prefix, letter) =>
+      `${prefix}${letter.toLocaleUpperCase()}`,
+    )
+    .replace(/\(Met\)/gi, "(Metallic)");
+}
+
+function blazerVariantLabel(variantId: string) {
+  return variantId === "full-size-k-blazer"
+    ? "Full Size K Blazer"
+    : variantId === "full-size-k5-blazer"
+      ? "Full Size K5 Blazer"
+    : variantId === "compact-s-10-blazer"
+      ? "Compact S-10 Blazer"
+      : variantId;
+}
+
+function blazerHistoricalCitation(
+  source: BlazerHistoricalSource,
+  year: number,
+  variantLabel: string,
+  tables: BlazerHistoricalTable[],
+  limitations: string[],
+  evidenceClass?: YearSourceCitation["evidenceClass"],
+): YearSourceCitation {
+  const pages = [...new Set(tables.flatMap((table) => table.source_pages))];
+  const printedPages = [
+    ...new Set(tables.flatMap((table) => table.printed_page_locators)),
+  ];
+  const revisions = [...new Set(tables.map((table) => table.document_date))];
+  const programs = [...new Set(tables.map((table) => table.program_name))];
+  return {
+    name: source.title,
+    chart: `${year} Chevrolet Blazer ${variantLabel}: ${programs.join("; ")}`,
+    locator: [
+      `PDF ${pages.length === 1 ? "p." : "pp."} ${naturalList(pages)}`,
+      printedPages.join("; "),
+    ].filter(Boolean).join(", "),
+    revision: revisions.join("; "),
+    url: source.direct_url,
+    sourceId: source.source_id,
+    sourceType: "official_vehicle_information_kit",
+    publisher: "General Motors",
+    contentType: "application/pdf",
+    documentAuthority: "official_manufacturer_document",
+    retrievalHostType: "official_live",
+    archiveUrl: source.archive_url ?? undefined,
+    originalUrl: source.archive_url ? source.direct_url : undefined,
+    evidenceClass,
+    artifactSha256: source.artifact_sha256,
+    artifactBytes: source.artifact_bytes,
+    pdfPageCount: source.pdf_page_count,
+    availabilityScope: `${variantLabel}, exact printed programs only.`,
+    limitations,
+  };
+}
+
+function blazerHistoricalTableRows(
+  year: number,
+  variant: BlazerHistoricalVariant,
+  table: BlazerHistoricalTable,
+): AuditedSolidColor[] {
+  const variantLabel = blazerVariantLabel(variant.variant_id);
+  const programScope = `${variantLabel}, ${table.program_name} (${table.program_codes.join("/")}).`;
+  const baseRestriction = [programScope, ...(table.restrictions ?? [])].join(" ");
+  const sourceIds = variant.source_ids ?? (variant.source_id ? [variant.source_id] : []);
+  if (!sourceIds.length) throw new Error(`Missing Blazer source scope ${year} ${variant.variant_id}`);
+  const rows: AuditedSolidColor[] = [];
+  for (const [index, code] of (table.solid_rows ?? []).entries()) {
+    const sourceLabel = variant.color_legend[code];
+    if (!sourceLabel) throw new Error(`Missing Blazer color legend ${year} ${code}`);
+    rows.push({
+      year: String(year),
+      identityKey: `${table.table_id}:solid:${index}:${code}`,
+      code,
+      name: historicalDisplayName(sourceLabel),
+      label: sourceLabel,
+      restriction: baseRestriction,
+      sourceIds,
+      applicationType: "manufacturer_listed",
+      factoryCode: code,
+      factoryCodeStatus: "printed",
+      rpoCode: table.program_codes[0] ?? null,
+    });
+  }
+  for (const [index, [primaryCode, secondaryCode]] of (
+    table.two_tone_rows ?? []
+  ).entries()) {
+    const primaryLabel = variant.color_legend[primaryCode];
+    const secondaryLabel = variant.color_legend[secondaryCode];
+    if (!primaryLabel || !secondaryLabel) {
+      throw new Error(`Missing Blazer two tone legend ${year} ${primaryCode}/${secondaryCode}`);
+    }
+    rows.push({
+      year: String(year),
+      identityKey: `${table.table_id}:two-tone:${index}:${primaryCode}:${secondaryCode}`,
+      code: `${primaryCode} / ${secondaryCode}`,
+      name: `${historicalDisplayName(primaryLabel)} / ${historicalDisplayName(secondaryLabel)}`,
+      label: `${primaryLabel} / ${secondaryLabel}`,
+      note: `Primary factory code ${primaryCode}; secondary factory code ${secondaryCode}.`,
+      restriction: baseRestriction,
+      sourceIds,
+      applicationType: "factory_two_tone_paint",
+      factoryCode: primaryCode,
+      factoryCodeStatus: "printed",
+      rpoCode: table.program_codes[0] ?? null,
+    });
+  }
+  for (const [index, [primaryCode, secondaryCode, stripeLabel]] of (
+    table.stripe_rows ?? []
+  ).entries()) {
+    const primaryLabel = variant.color_legend[primaryCode];
+    const secondaryLabel = variant.color_legend[secondaryCode];
+    if (!primaryLabel || !secondaryLabel) {
+      throw new Error(`Missing Blazer stripe legend ${year} ${primaryCode}/${secondaryCode}`);
+    }
+    rows.push({
+      year: String(year),
+      identityKey: `${table.table_id}:stripe:${index}:${primaryCode}:${secondaryCode}:${stripeLabel}`,
+      code: `${primaryCode} / ${secondaryCode}`,
+      name: `${historicalDisplayName(primaryLabel)} / ${historicalDisplayName(secondaryLabel)} with ${stripeLabel}`,
+      label: `${primaryLabel} / ${secondaryLabel}; ${stripeLabel}`,
+      note: `Primary factory code ${primaryCode}; secondary factory code ${secondaryCode}; printed stripe colors ${stripeLabel}.`,
+      restriction: baseRestriction,
+      sourceIds,
+      applicationType: "factory_stripe_program",
+      factoryCode: primaryCode,
+      factoryCodeStatus: "printed",
+      rpoCode: table.program_codes[0] ?? null,
+    });
+  }
+  for (const [index, specialty] of (table.specialty_rows ?? []).entries()) {
+    rows.push({
+      year: String(year),
+      identityKey: `${table.table_id}:specialty:${index}:${specialty.program_code}`,
+      code: [specialty.program_code, specialty.paint_code].filter(Boolean).join(" / "),
+      name: historicalDisplayName(specialty.color_name),
+      label: specialty.color_name,
+      restriction: `${baseRestriction} ${specialty.scope}`,
+      sourceIds,
+      applicationType: "special_equipment_option_paint",
+      factoryCode: specialty.paint_code,
+      factoryCodeStatus: specialty.paint_code ? "printed" : "not printed",
+      seoCode: specialty.program_code,
+      seoCodeStatus: "printed_in_source",
+      sourceSeoCodeRaw: specialty.program_code,
+      sourceSeoCodeCellState: "printed",
+    });
+  }
+  for (const [index, top] of (table.top_rows ?? []).entries()) {
+    rows.push({
+      year: String(year),
+      identityKey: `${table.table_id}:top:${index}:${top.paint_program}:${top.top_color}`,
+      code: top.rpo ?? top.paint_program,
+      name: `${historicalDisplayName(top.top_color)} removable top`,
+      label: `${top.top_color} removable top`,
+      restriction: `${baseRestriction} ${top.scope}`,
+      sourceIds,
+      applicationType: "factory_top_paint",
+      factoryCode: top.rpo,
+      factoryCodeStatus: top.rpo ? "printed" : "not printed",
+      rpoCode: top.rpo ?? top.paint_program,
+    });
+  }
+  for (const [index, [bodyCode, stripeCode]] of (
+    table.stripe_availability_rows ?? []
+  ).entries()) {
+    const bodyLabel = variant.color_legend[bodyCode];
+    const stripeLabel = table.stripe_option_legend?.[stripeCode];
+    if (!bodyLabel || !stripeLabel) {
+      throw new Error(`Missing Blazer stripe option legend ${year} ${bodyCode}/${stripeCode}`);
+    }
+    rows.push({
+      year: String(year),
+      identityKey: `${table.table_id}:stripe-option:${index}:${bodyCode}:${stripeCode}`,
+      code: `${bodyCode} / ${stripeCode}`,
+      name: `${historicalDisplayName(bodyLabel)} with ${historicalDisplayName(stripeLabel)} stripe`,
+      label: `${bodyLabel} / ${stripeLabel}`,
+      restriction: baseRestriction,
+      sourceIds,
+      applicationType: "factory_stripe_program",
+      factoryCode: bodyCode,
+      factoryCodeStatus: "printed",
+      rpoCode: stripeCode,
+    });
+  }
+  return rows;
+}
+
+function buildBlazer1983to1994Generations(audit: BlazerHistoricalAudit) {
+  const sources = new Map(audit.sources.map((source) => [source.source_id, source]));
+  const generations: Generation[] = [];
+  for (const item of audit.years) {
+    const year = String(item.year);
+    const itemHasRows = item.variants.some((variant) =>
+      variant.tables.some((table) =>
+        (table.solid_rows?.length ?? 0) +
+          (table.two_tone_rows?.length ?? 0) +
+          (table.stripe_rows?.length ?? 0) +
+          (table.stripe_availability_rows?.length ?? 0) +
+          (table.specialty_rows?.length ?? 0) +
+          (table.top_rows?.length ?? 0) > 0
+      )
+    );
+    if (!itemHasRows) {
+      const sourceId = item.variants.flatMap((variant) =>
+        variant.source_ids ?? (variant.source_id ? [variant.source_id] : [])
+      )[0] ?? [...sources.keys()].find((candidate) => candidate.includes(`-${item.year}-`));
+      const source = sourceId ? sources.get(sourceId) : undefined;
+      const tables = item.variants.flatMap((variant) => variant.tables);
+      const sourceCitation = source && tables.length
+        ? blazerHistoricalCitation(
+          source,
+          item.year,
+          item.variants[0]
+            ? blazerVariantLabel(item.variants[0].variant_id)
+            : "exact model scope",
+          tables,
+          item.limitations,
+          "reviewed_no_complete_palette",
+        )
+        : {
+          name: source?.title ?? "General Motors Heritage vehicle information kit index",
+          chart: "Exact Blazer source review; no governing exterior color chart retained",
+          locator: source
+            ? `Entire ${source.pdf_page_count}-page PDF reviewed`
+            : "Exact model year source search and retained corpus audit",
+          revision: "Source audit completed August 2026",
+          url: source?.direct_url ?? "https://www.gm.com/heritage/archive/vehicle-information-kits",
+          sourceId: source?.source_id ?? "gm-heritage-chevrolet-kit-index",
+          sourceType: source ? "official_vehicle_information_kit" : "official_vehicle_information_kit_index",
+          publisher: "General Motors",
+          contentType: source ? "application/pdf" : "text/html",
+          ...(source ? { documentAuthority: "official_manufacturer_document" as const } : {}),
+          retrievalHostType: "official_live" as const,
+          evidenceClass: "reviewed_no_complete_palette" as const,
+          artifactSha256: source?.artifact_sha256,
+          artifactBytes: source?.artifact_bytes,
+          pdfPageCount: source?.pdf_page_count,
+          availabilityScope: "Exact Chevrolet Blazer model year source review.",
+          limitations: item.limitations,
+        };
+      generations.push({
+        id: `current-blazer-${year}-reviewed-no-complete-color-table`,
+        label: `${year} exact Blazer source review`,
+        range: year,
+        years: [year],
+        listingCount: 0,
+        revisionNote:
+          "The exact model year source or official source index was reviewed, but no governing exterior color chart was retained. No adjacent year is inferred.",
+        sources: { [year]: sourceCitation },
+        colors: [],
+      });
+      continue;
+    }
+    if (item.coverage_status === "verified_both_variants") {
+      const unionRows = new Map<string, AuditedSolidColor>();
+      for (const variant of item.variants) {
+        for (const table of variant.tables.filter((candidate) => candidate.solid_rows?.length)) {
+          for (const row of blazerHistoricalTableRows(item.year, variant, table)
+            .filter((candidate) => candidate.applicationType === "manufacturer_listed")) {
+            const key = `${row.code}\0${row.name}`;
+            const existing = unionRows.get(key);
+            if (existing) {
+              existing.sourceIds = [
+                ...new Set([...(existing.sourceIds ?? []), ...(row.sourceIds ?? [])]),
+              ];
+            } else {
+              unionRows.set(key, {
+                ...row,
+                identityKey: `solid-union:${row.code}:${row.name}`,
+                restriction: "Complete reconciled solid paint scope across the reviewed full size and compact Blazer variants.",
+              });
+            }
+          }
+        }
+      }
+      const sourceGroups = item.variants.map((variant) => {
+        const sourceId = variant.source_ids?.[0] ?? variant.source_id;
+        const source = sourceId ? sources.get(sourceId) : undefined;
+        if (!source) throw new Error(`Missing Blazer source ${sourceId}`);
+        return {
+          source,
+          variant,
+          tables: variant.tables.filter((table) => table.solid_rows?.length),
+        };
+      });
+      const [primary, ...supporting] = sourceGroups;
+      const primaryCitation = blazerHistoricalCitation(
+        primary.source,
+        item.year,
+        blazerVariantLabel(primary.variant.variant_id),
+        primary.tables,
+        item.limitations,
+      );
+      generations.push({
+        id: `current-blazer-${year}-solid-paint-scope-union`,
+        label: "Complete full size and compact solid paint scope",
+        range: year,
+        years: [year],
+        listingCount: unionRows.size,
+        revisionNote: `${unionRows.size} distinct solid paint rows reconcile the complete reviewed full size and compact Blazer charts. Program combinations remain separate.`,
+        sources: {
+          [year]: {
+            ...primaryCitation,
+            supportingSources: supporting.map(({ source, variant, tables }) =>
+              blazerHistoricalCitation(
+                source,
+                item.year,
+                blazerVariantLabel(variant.variant_id),
+                tables,
+                item.limitations,
+              ),
+            ),
+          },
+        },
+        colors: buildExactNameTimeline("blazer", [...unionRows.values()]),
+      });
+    }
+
+    for (const variant of item.variants) {
+      const [sourceId, ...supportingSourceIds] =
+        variant.source_ids ?? (variant.source_id ? [variant.source_id] : []);
+      const source = sourceId ? sources.get(sourceId) : undefined;
+      if (!source) throw new Error(`Missing Blazer source ${sourceId}`);
+      for (const table of variant.tables) {
+        const rows = blazerHistoricalTableRows(item.year, variant, table);
+        if (!rows.length) continue;
+        const primaryCitation = blazerHistoricalCitation(
+          source,
+          item.year,
+          blazerVariantLabel(variant.variant_id),
+          [table],
+          item.limitations,
+          "qualified_exact_program_palette",
+        );
+        generations.push({
+          id: `current-blazer-${year}-${variant.variant_id}-${table.table_id}`,
+          label: `${blazerVariantLabel(variant.variant_id)}: ${table.program_name}`,
+          programId: `${variant.variant_id}-${table.table_id}`,
+          programLabel: `${blazerVariantLabel(variant.variant_id)} ${table.program_name}`,
+          range: year,
+          years: [year],
+          listingCount: rows.length,
+          revisionNote: `${rows.length} exact printed rows remain scoped to ${blazerVariantLabel(variant.variant_id)} and ${table.program_name}.`,
+          sources: {
+            [year]: {
+              ...primaryCitation,
+              supportingSources: supportingSourceIds.map((supportingSourceId) => {
+                const supportingSource = sources.get(supportingSourceId);
+                if (!supportingSource) {
+                  throw new Error(`Missing Blazer supporting source ${supportingSourceId}`);
+                }
+                return blazerHistoricalCitation(
+                  supportingSource,
+                  item.year,
+                  blazerVariantLabel(variant.variant_id),
+                  [table],
+                  item.limitations,
+                  "qualified_exact_program_palette",
+                );
+              }),
+            },
+          },
+          colors: buildExactNameTimeline(
+            `blazer-${variant.variant_id}-${table.table_id}`,
+            rows,
+          ),
+        });
+      }
+    }
+  }
+  return new Map([["blazer", generations]]);
+}
+
+type SuburbanScopedAudit = {
+  years: Array<{
+    year: number;
+    audit_status: string;
+    source_refs: string[];
+    evidence_scope_ids: string[];
+    finding: string;
+  }>;
+  sources: Array<{
+    source_id: string;
+    year: number;
+    title: string;
+    publisher: string;
+    source_type: string;
+    document_authority: string;
+    url: string;
+    artifact_sha256?: string | null;
+    artifact_bytes?: number | null;
+    pdf_page_count?: number | null;
+    revision?: string | Record<string, string> | null;
+    review_scope: string;
+    evidence_limit: string;
+  }>;
+  evidence_scopes: Array<{
+    scope_id: string;
+    year: number;
+    source_id: string;
+    market: string;
+    model: string;
+    series: string | null;
+    body_style: string | null;
+    drivetrain: string | null;
+    trim_or_use: string;
+    model_code: string | null;
+    record_class: string;
+    source_revision_scope: string;
+    palette_status: string;
+    promotion_status: string;
+    source_locator: string;
+    component_finish_note?: string;
+    exact_model_availability_note?: string;
+  }>;
+  color_records: Array<{
+    year: number;
+    scope_id: string;
+    order: number;
+    name: string;
+    factory_code: string | null;
+    factory_code_status: string;
+    record_class: string;
+    availability_note: string;
+  }>;
+};
+
+function suburbanScopedSource(
+  source: SuburbanScopedAudit["sources"][number],
+  chart: string,
+  locator: string,
+  availabilityScope: string,
+  limitations: string[],
+  evidenceClass: YearSourceCitation["evidenceClass"],
+): YearSource {
+  const revision = typeof source.revision === "string"
+    ? source.revision
+    : source.revision
+    ? Object.entries(source.revision)
+      .map(([key, value]) => `${key.replaceAll("_", " ")}: ${value}`)
+      .join("; ")
+    : "Revision not stated";
+  return {
+    name: source.title,
+    chart,
+    locator,
+    revision,
+    url: source.url,
+    sourceId: source.source_id,
+    sourceType: source.source_type,
+    publisher: source.publisher,
+    contentType: source.url.toLocaleLowerCase().endsWith(".pdf")
+      ? "application/pdf"
+      : "text/html",
+    ...(source.document_authority === "official_manufacturer_document"
+      ? { documentAuthority: "official_manufacturer_document" as const }
+      : {}),
+    retrievalHostType: source.url.includes("gm.com/")
+      ? "official_live"
+      : "archival_mirror",
+    evidenceClass,
+    artifactSha256: source.artifact_sha256 ?? undefined,
+    artifactBytes: source.artifact_bytes ?? undefined,
+    pdfPageCount: source.pdf_page_count ?? undefined,
+    availabilityScope,
+    limitations,
+  };
+}
+
+function buildSuburbanScopedAuditGenerations(audit: SuburbanScopedAudit) {
+  const sources = new Map(audit.sources.map((source) => [source.source_id, source]));
+  const generations: Generation[] = [];
+  for (const yearRecord of audit.years) {
+    const year = String(yearRecord.year);
+    if (!yearRecord.evidence_scope_ids.length) {
+      const source = yearRecord.source_refs
+        .map((sourceId) => sources.get(sourceId))
+        .find(Boolean);
+      if (!source) continue;
+      generations.push({
+        id: `current-suburban-${year}-reviewed-no-exact-suburban-color-table`,
+        label: `${year} exact Suburban source review`,
+        range: year,
+        years: [year],
+        listingCount: 0,
+        revisionNote:
+          "The retained source was reviewed for exact Chevrolet Suburban or Carryall color evidence. No adjacent truck or model palette is inferred.",
+        sources: {
+          [year]: suburbanScopedSource(
+            source,
+            "Complete source reviewed; no exact Suburban color table promoted",
+            source.review_scope,
+            "No color rows are published from this source for the exact Chevrolet Suburban scope.",
+            [source.evidence_limit, yearRecord.finding],
+            "reviewed_no_complete_palette",
+          ),
+        },
+        colors: [],
+      });
+      continue;
+    }
+    for (const scopeId of yearRecord.evidence_scope_ids) {
+      const scope = audit.evidence_scopes.find((candidate) => candidate.scope_id === scopeId);
+      if (!scope) throw new Error(`Missing Suburban evidence scope ${scopeId}`);
+      const source = sources.get(scope.source_id);
+      if (!source) throw new Error(`Missing Suburban scoped source ${scope.source_id}`);
+      const scopeColors = audit.color_records.filter((record) => record.scope_id === scopeId);
+      if (!scopeColors.length) continue;
+      const applicationType = scope.record_class === "special_equipment_solid_paint"
+        ? "special_equipment_option_paint"
+        : scope.record_class === "secondary_palette_name"
+          ? "secondary_palette_name"
+          : "factory_regular_solid_paint";
+      const rows: AuditedSolidColor[] = scopeColors.map((record) => ({
+        year,
+        identityKey: `${scopeId}:${record.order}:${record.factory_code ?? record.name}`,
+        code: record.factory_code ?? "Not printed",
+        name: record.name,
+        label: record.name,
+        restriction: [
+          record.availability_note,
+          scope.component_finish_note,
+          scope.exact_model_availability_note,
+        ].filter(Boolean).join(" "),
+        sourceIds: [scope.source_id],
+        applicationType,
+        factoryCode: record.factory_code,
+        factoryCodeStatus: record.factory_code ? "printed" : "not printed",
+        seoCode: scope.record_class === "special_equipment_solid_paint"
+          ? record.factory_code
+          : undefined,
+        seoCodeStatus: scope.record_class === "special_equipment_solid_paint"
+          ? "printed_in_source"
+          : undefined,
+      }));
+      const scopeLabel = [
+        scope.market,
+        scope.model,
+        scope.series,
+        scope.model_code,
+        scope.trim_or_use,
+      ].filter(Boolean).join(" ");
+      generations.push({
+        id: `current-suburban-${year}-${scopeId}`,
+        label: scopeLabel,
+        programId: scopeId,
+        programLabel: scopeLabel,
+        range: year,
+        years: [year],
+        listingCount: rows.length,
+        revisionNote: `${rows.length} exact records remain confined to ${scopeLabel}; they are not promoted as a complete United States Suburban model year palette.`,
+        sources: {
+          [year]: suburbanScopedSource(
+            source,
+            `${scopeLabel}: ${scope.record_class}`,
+            scope.source_locator,
+            `${scope.palette_status}; ${scope.promotion_status}.`,
+            [source.evidence_limit, yearRecord.finding],
+            scope.record_class === "secondary_palette_name"
+              ? "qualified_palette_union"
+              : "qualified_exact_program_palette",
+          ),
+        },
+        colors: buildExactNameTimeline(`suburban-${scopeId}`, rows),
+      });
+    }
+  }
+  return new Map([["suburban", generations]]);
+}
+
+function appendHistoricalGenerations(additions: Map<string, Generation[]>) {
+  for (const [modelId, generations] of additions) {
+    currentHistoricalGenerationsByModel.set(modelId, [
+      ...(currentHistoricalGenerationsByModel.get(modelId) ?? []),
+      ...generations,
+    ]);
+  }
+}
+
+appendHistoricalGenerations(
+  buildVariantHistoricalGenerations(
+    currentExpress1997to2005Audit as VariantHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildVariantHistoricalGenerations(
+    currentExpress1996to2007RemainingAudit as VariantHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildVariantHistoricalGenerations(
+    currentPickup1999to2007Audit as VariantHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildVariantHistoricalGenerations(
+    currentSilveradoHd2001to2007RemainingAudit as VariantHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildVariantHistoricalGenerations(
+    currentTrailblazer2002to2007Audit as VariantHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildVariantHistoricalGenerations(
+    currentEquinox2005to2007Audit as VariantHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildCorvetteHistoricalGenerations(
+    currentCorvette1973to1982Audit as CorvetteHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildCorvetteHistoricalGenerations(
+    currentCorvette1984to2007Audit as CorvetteHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildBlazer1983to1994Generations(
+    currentBlazer1983to1994Audit as BlazerHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildBlazer1983to1994Generations(
+    currentBlazer1969to2005Audit as BlazerHistoricalAudit,
+  ),
+);
+appendHistoricalGenerations(
+  buildSuburbanScopedAuditGenerations(
+    currentSuburban1935to2006Audit as SuburbanScopedAudit,
+  ),
+);
 
 const camaro1970to1975Inventory: AuditedSolidColor[] = [
   { year: "1970", code: "10", name: "Classic White" },
@@ -4925,10 +6569,14 @@ const auditedModels: ArchiveModel[] = [
     generations: [],
   },
   {
-    id: "corvette", name: "Corvette", vehicleClass: "sports car", era: "1953–1972 source series", status: "19 exact model-year color tables audited",
-    pendingCopy: "The dedicated 1953 GM kit contains no exterior-color table. That year remains unverified while additional official documentation is sought.",
+    id: "corvette", name: "Corvette", vehicleClass: "sports car", era: "1953–2007 official source series", status: "49 exact model year tables or complete official scopes audited through 2005; later partial and missing years remain explicit",
+    pendingCopy: "The dedicated 1953 and 2002 sources do not contain complete exterior color tables. The 2004 and 2006 records preserve only exact special program scopes, and no 2007 official artifact is retained. No adjacent year is inferred.",
     current: true,
-    generations: [earlyCorvetteTables, ...corvette1963To1972Generations],
+    generations: [
+      corvette1953ReviewedNoChart,
+      earlyCorvetteTables,
+      ...corvette1963To1972Generations,
+    ],
   },
   {
     id: "monte-carlo", name: "Monte Carlo", vehicleClass: "personal luxury coupe", era: "1970–1979 source series", status: "10 complete official regular palettes verified (1970–1979)",
@@ -5119,6 +6767,7 @@ function mergeCatalogModel(model: CatalogModel): ArchiveModel {
   const audited = auditedModels.find((item) => item.id === model.id);
   const auditedGenerations = [
     ...(audited?.generations ?? []),
+    ...(currentHistoricalGenerationsByModel.get(model.id) ?? []),
     ...(specialtyColorGenerationsByModel.get(model.id) ?? []),
     ...(modernPaletteGenerationsByModel.get(model.id) ?? []),
   ]

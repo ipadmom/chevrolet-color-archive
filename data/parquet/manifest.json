@@ -1,15 +1,15 @@
 {
   "schema_version": 13,
-  "generated_at": "2026-08-07T20:02:19Z",
+  "generated_at": "2026-08-08T16:44:59Z",
   "archive": "Chevrolet Color Archive",
   "normalization_contract": "Missing color rows mean unverified research coverage, not negative availability. Every published color availability row has one direct evidence_source_id. Qualified GM Fleet Guide palette unions, qualified historical-table subsets, and reviewed specialty-paint subsets remain distinct from complete governing charts. Exact simultaneous model programs remain separate generation memberships within one model-year. Missing factory codes are null and carry a controlled source-status value. RPO, SEO, literal SEO-cell state, normalized WA code, literal WA-cell state, authorized-upfitter order codes, minimum-batch, and factory-installation fields remain structured and source-linked. Paint schemes preserve primary and secondary components separately and never create standalone color availability. Audited color programs preserve every alternate table, component finish, roof, top, stripe, two-tone, and body-finish entry separately from the one selected regular palette. RockAuto retailer observations remain isolated in four secondary-lead tables and never create color availability or evidence claims.",
   "coverage": {
     "models": 149,
     "model_years": 1792,
-    "model_year_generation_memberships": 2695,
+    "model_year_generation_memberships": 2891,
     "platform_eras": 218,
-    "color_identities": 5028,
-    "verified_color_availability_rows": 5403,
+    "color_identities": 8547,
+    "verified_color_availability_rows": 8922,
     "paint_schemes": 1369,
     "paint_scheme_components": 2738,
     "audited_color_programs": 80,
@@ -21,20 +21,20 @@
     "supplemental_color_mentions": 0,
     "secondary_paint_fitments": 111,
     "color_code_crosswalk_candidates": 96,
-    "color_chart_verified_model_years": 106,
-    "reviewed_qualified_historical_table_model_years": 6,
-    "reviewed_qualified_palette_union_model_years": 364,
-    "qualified_palette_union_availability_rows": 3240,
-    "qualified_historical_table_availability_rows": 4,
-    "qualified_exact_program_palette_availability_rows": 277,
-    "reviewed_specialty_palette_subset_model_years": 11,
+    "color_chart_verified_model_years": 162,
+    "reviewed_qualified_historical_table_model_years": 39,
+    "reviewed_qualified_palette_union_model_years": 372,
+    "qualified_palette_union_availability_rows": 3354,
+    "qualified_historical_table_availability_rows": 20,
+    "qualified_exact_program_palette_availability_rows": 2855,
+    "reviewed_specialty_palette_subset_model_years": 9,
     "specialty_palette_subset_model_years": 69,
     "specialty_palette_subset_availability_rows": 928,
-    "unverified_model_years": 1292,
-    "sources": 3033,
-    "source_revisions": 1957,
-    "evidence_claims": 5403,
-    "source_links": 39853,
+    "unverified_model_years": 1151,
+    "sources": 3208,
+    "source_revisions": 2125,
+    "evidence_claims": 8922,
+    "source_links": 46269,
     "photo_assets": 312,
     "photo_color_links": 14
   },
@@ -44,7 +44,7 @@
       "path": "data/parquet/models.parquet",
       "rows": 149,
       "columns": 11,
-      "sha256": "e37da0b6196e262aae84e5a9fd8f3e5d81ef42c22f802082230611a8e79c2247",
+      "sha256": "057260fc3dc2f516ba609e0a744044b3cd90392d459e51bf47161757c9a1d698",
       "primary_key": [
         "model_id"
       ],
@@ -53,9 +53,9 @@
     {
       "table": "generations",
       "path": "data/parquet/generations.parquet",
-      "rows": 1584,
+      "rows": 1893,
       "columns": 14,
-      "sha256": "5b1ca804802345404cea3dc1d2ac73d5488e9a81cff59eefb359cead3195fcc7",
+      "sha256": "f68169b706b020ad24d33eb7b9748fc4c7b653539173e69ff0af85a3d3faea23",
       "primary_key": [
         "generation_id"
       ],
@@ -68,7 +68,7 @@
       "path": "data/parquet/model_years.parquet",
       "rows": 1792,
       "columns": 10,
-      "sha256": "2e6b2b19d7386368cba207afd46229df2f7f5ccff1966719e338071ca643a357",
+      "sha256": "2df37b4ae1dca4c5fbd72df1e2eb990f0cc3172e13e16c4488f5189702a2c0bf",
       "primary_key": [
         "model_year_id"
       ],
@@ -81,9 +81,9 @@
     {
       "table": "model_year_generation_memberships",
       "path": "data/parquet/model_year_generation_memberships.parquet",
-      "rows": 2695,
+      "rows": 2891,
       "columns": 9,
-      "sha256": "64fe3a20dd9e44ee38684268ad8c9598f7a1e64b71974db764a8abf5352dec0e",
+      "sha256": "38f5443e4a0d8d888afd9e9279c73fdf086a57a43da95776e1afa1b55e4196bf",
       "primary_key": [
         "model_year_generation_membership_id"
       ],
@@ -109,9 +109,9 @@
     {
       "table": "color_identities",
       "path": "data/parquet/color_identities.parquet",
-      "rows": 5028,
+      "rows": 8547,
       "columns": 9,
-      "sha256": "f03e33e00e08912627e783701db148f1078f0a52ebb237cced4482d6a5b23ecf",
+      "sha256": "66a2f8bc209099e821543857a99e2e4443166b0def61a55ab9aff4a2140a21af",
       "primary_key": [
         "color_identity_id"
       ],
@@ -123,9 +123,9 @@
     {
       "table": "color_availability",
       "path": "data/parquet/color_availability.parquet",
-      "rows": 5403,
+      "rows": 8922,
       "columns": 32,
-      "sha256": "78570ffc935a4a0d95c61a6f92597bc9c6e82a8319fbbdbca8f51e242323126d",
+      "sha256": "bc8878c5d56c47007c7cc333a8000b2da1b766c572bb79d282f1a3724322e542",
       "primary_key": [
         "availability_id"
       ],
@@ -201,7 +201,7 @@
       "path": "data/parquet/model_year_research.parquet",
       "rows": 1792,
       "columns": 17,
-      "sha256": "e4dd10f165d52ca1eb2b13d373c2ff940dfdd85f8c3a5683410f57cbeaa2a550",
+      "sha256": "649e109687dcf74b5d1d96420b7a1a09b60481a99c516522d0af44dfe4a9ebd0",
       "primary_key": [
         "model_year_id"
       ],
@@ -215,7 +215,7 @@
       "path": "data/parquet/model_year_source_candidates.parquet",
       "rows": 1862,
       "columns": 14,
-      "sha256": "c7a41475f852fb95537eeffaf81a99b42ef9fbc6c87a6b95ebfb089f8283fb74",
+      "sha256": "f269200ae2e0f51afa1d5abec2d21ef985992752cf736a27f38663224275d0ca",
       "primary_key": [
         "source_candidate_link_id"
       ],
@@ -299,9 +299,9 @@
     {
       "table": "sources",
       "path": "data/parquet/sources.parquet",
-      "rows": 3033,
+      "rows": 3208,
       "columns": 19,
-      "sha256": "a9e906da185c9ed0657e81cb8206660523b624a89881b6083b1203508fc20ab6",
+      "sha256": "41ef106b1609111dbdc519331aec581d878b543b520835671830d94960ae9427",
       "primary_key": [
         "source_id"
       ],
@@ -310,9 +310,9 @@
     {
       "table": "source_revisions",
       "path": "data/parquet/source_revisions.parquet",
-      "rows": 1957,
+      "rows": 2125,
       "columns": 14,
-      "sha256": "8942fe0a93767e17bdedbfff57078fbe5ae9541abfc0f9442e8e31c6fa1a120a",
+      "sha256": "ac1def19da11857ac7e4277196582bc80c5bba71b50e0a627147f6f427ca2bea",
       "primary_key": [
         "source_revision_id"
       ],
@@ -323,9 +323,9 @@
     {
       "table": "evidence_claims",
       "path": "data/parquet/evidence_claims.parquet",
-      "rows": 5403,
+      "rows": 8922,
       "columns": 33,
-      "sha256": "8e12b029f4086696a6130769b6508c4502952688c47d7acd9df307c2bdf86aa6",
+      "sha256": "d20b03beae8c18eac434ca8471921c6618ec9814275578474d1ce608a214aa1e",
       "primary_key": [
         "evidence_claim_id"
       ],
@@ -340,9 +340,9 @@
     {
       "table": "source_links",
       "path": "data/parquet/source_links.parquet",
-      "rows": 39853,
+      "rows": 46269,
       "columns": 14,
-      "sha256": "af415b3e664d7b7c1df8f8ed6b936bf5ed580f39aeed890ebbdf162ac9a8e4fb",
+      "sha256": "9b1d802e625d492890f860a003a5640b14ceedb31009cc021472d405dca7ce6c",
       "primary_key": [
         "source_link_id"
       ],

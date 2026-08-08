@@ -328,7 +328,7 @@ export function ArchiveExplorer() {
   const [modelId, setModelId] = useState(defaultModelId);
   const [year, setYear] = useState(defaultYear);
   const [colorId, setColorId] = useState(defaultColorId);
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState(false);
   const [apiPhotos, setApiPhotos] = useState<ApiPhoto[]>([]);
   const [stagedPhotos, setStagedPhotos] = useState<StagedPhoto[]>([]);
   const [selectedPhotos, setSelectedPhotos] = useState<string[]>([]);
@@ -393,7 +393,7 @@ export function ArchiveExplorer() {
       return "THIS IS AN EXACT, REVIEWED SUBSET FROM THE CITED STANDARD EXTERIOR-COLOR TABLE. IT IS NOT A SPECIALTY-PAINT CLAIM OR A COMPLETE MODEL-YEAR PALETTE.";
     }
     if (yearSource?.evidenceClass === "qualified_exact_program_palette") {
-      return "THIS IS AN EXACT, REVIEWED PROGRAM-SPECIFIC PALETTE FROM A MANUFACTURER DOCUMENT CARRIED BY THE CITED ARCHIVAL HOST. IT IS NOT AN UNQUALIFIED ALL-TAHOE PALETTE.";
+      return "THIS IS AN EXACT, REVIEWED PALETTE FOR THE NAMED MODEL, VARIANT, OR PAINT PROGRAM. IT IS NOT THE COMPLETE REGULAR MODEL-YEAR PALETTE UNLESS A SEPARATE GOVERNING CHART SAYS SO.";
     }
     if (yearSource?.evidenceClass === "qualified_palette_union") {
       return "THIS IS A REVIEWED OFFICIAL PALETTE UNION. THE ONLINE ORDER GUIDE REMAINS CONTROLLING FOR CODES, TRIM RESTRICTIONS, AND COMPLETENESS.";
@@ -489,7 +489,7 @@ export function ArchiveExplorer() {
           (item) => item.id === params.get("model"),
         );
         setSidebarOpen(false);
-        setShowAll(true);
+        setShowAll(false);
         setStructuredSearchError("");
         setApiPhotos([]);
         setSelectedPhotos([]);
@@ -668,7 +668,7 @@ export function ArchiveExplorer() {
     setColorId(nextColor?.id ?? "");
     setView("archive");
     setSidebarOpen(false);
-    setShowAll(true);
+    setShowAll(false);
     setStructuredYear(nextYear);
     setStructuredModel(nextModel.name);
     setStructuredColor(
@@ -722,7 +722,7 @@ export function ArchiveExplorer() {
     setModelId(nextModelId);
     setView("years");
     setSidebarOpen(false);
-    setShowAll(true);
+    setShowAll(false);
     clearLocalPhotoState();
     const next = models.find((item) => item.id === nextModelId);
     if (next?.generations[0]) {
@@ -768,7 +768,7 @@ export function ArchiveExplorer() {
     setYear(nextYear);
     setView("archive");
     setSidebarOpen(false);
-    setShowAll(true);
+    setShowAll(false);
     clearLocalPhotoState();
     setStructuredYear(nextYear);
     setStructuredModel(model.name);
@@ -849,7 +849,7 @@ export function ArchiveExplorer() {
     setColorId("hugger-orange");
     setView("archive");
     setSidebarOpen(false);
-    setShowAll(true);
+    setShowAll(false);
     setStructuredYear("1969");
     setStructuredModel("Camaro");
     setStructuredColor(structuredColorValue("camaro", "1969", "hugger-orange"));

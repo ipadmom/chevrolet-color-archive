@@ -20,6 +20,8 @@ test("brochure source Release manifest closes every app-fed citation", async () 
       controllingAssetCount: report.controlling_asset_count,
       appFedCitationCount: report.app_fed_citation_count,
       appReleaseUrlCount: report.app_release_url_count,
+      currentNameplateAuditedSourceCount:
+        report.current_nameplate_audited_source_count,
       publishedRecordCount: report.published_record_count,
       publishedSpecialtyRecordCount: report.published_specialty_record_count,
       publishedQualifiedHistoricalRecordCount:
@@ -31,10 +33,11 @@ test("brochure source Release manifest closes every app-fed citation", async () 
       ok: true,
       repository: "ipadmom/chevrolet-color-archive",
       releaseTag: "brochure-source-archive-v1",
-      assetCount: 174,
+      assetCount: 345,
       controllingAssetCount: 30,
       appFedCitationCount: 30,
-      appReleaseUrlCount: 183,
+      appReleaseUrlCount: 336,
+      currentNameplateAuditedSourceCount: 115,
       publishedRecordCount: 892,
       publishedSpecialtyRecordCount: 888,
       publishedQualifiedHistoricalRecordCount: 4,
@@ -44,7 +47,7 @@ test("brochure source Release manifest closes every app-fed citation", async () 
   assert.ok(["verified", "not-present"].includes(report.local_staging));
   assert.equal(
     report.local_staging_verified_asset_count,
-    report.local_staging === "verified" ? 174 : 0,
+    report.local_staging === "verified" ? 345 : 0,
   );
 });
 

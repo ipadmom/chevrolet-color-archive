@@ -38,15 +38,20 @@ each matrix spans only the selected sourced platform, base, or era band. An
 unreviewed year remains as an explicit blank column instead of borrowing colors
 from an adjacent year.
 
-The reviewed public matrices currently contain 2,753 source-linked listings.
-They divide into 1,231 direct source transcriptions, 590 qualified official
-palette-union rows across 72 model-years, 928 reviewed specialty-paint subset
-rows across 69 application model-years, and four ordinary qualified-historical
-table rows. Specialty evidence is the strongest research status for 42
-model-years; the other 27 specialty model-years coexist with a separately
-complete or qualified regular palette. Six model-years have a
-reviewed-qualified-historical research status. The four 1981 Woodland Green
-rows are ordinary chart evidence in that class, not specialty-paint records.
+All 434 catalog years for the 18 current Chevrolet nameplates have now been
+reviewed. The current nameplate set contains 121 years with complete governing
+palettes, 36 years with qualified historical or exact program evidence, 227
+years with qualified official palette unions, and 50 years where a located
+source was reviewed but contained no governing color chart. No current
+nameplate year remains unexplained or inherits colors from an adjacent year.
+
+Across the whole archive, the public matrices contain 8,922 source linked
+listings. They divide into 1,765 direct source transcriptions, 3,354 qualified
+official palette union rows, 2,855 qualified exact program rows, 928 reviewed
+specialty paint subset rows, and 20 qualified historical table rows. The
+specialty rows cover 69 model and year applications and remain separate from
+the governing regular palette.
+
 The exact-program layer now preserves 80 audited programs and 552 literal
 entries for Corvette 1963-1972, Monte Carlo 1970-1979, and P-Series/Step-Van
 1969-1978. It publishes only the 258 selected regular-palette entries and keeps
@@ -133,9 +138,9 @@ require upper/lower order and body-series restrictions. The 1964 Goldwood
 Yellow row has no compatible interior mark and remains unverified rather than
 being published as available.
 
-Every nameplate outside the reviewed matrices remains in the color-research
-queue. It does not publish availability rows until the cited chart for that
-year has been completely reviewed.
+Discontinued model years outside the reviewed matrices remain in the research
+queue. They do not publish availability rows until the cited source has been
+reviewed.
 
 C1 Corvette:
 
@@ -315,18 +320,19 @@ remain illustrations only and never establish factory paint availability. Nine
 current model examples have exact model year and palette label links, but their
 original factory finish and paint codes remain unverified.
 
-The pinned `brochure-source-archive-v1` Release preserves 174 audited assets,
-including 148 PDFs totaling 1,565,404,205 bytes and 11,600 pages. Of those, 143
-are retained source assets, including 139 retained source PDFs totaling
-1,510,206,962 bytes. The archive closes the Tahoe 1995–2007 evidence set, 20
+The pinned `brochure-source-archive-v1` Release preserves 345 audited assets,
+including 309 PDFs totaling 3,200,851,142 bytes and 27,639 pages. Of those, 307
+entries have canonical source identifiers, including 300 PDFs totaling
+3,145,653,899 bytes and 27,286 pages. The archive closes the Tahoe 1995–2007 evidence set, 20
 audited GM Fleet Guide artifacts covering 2008–2026, the retained eBrochure
-set, every currently published specialty citation, and 31 exact-palette audit
-PDFs for Corvette, Monte Carlo, and P-Series/Step-Van. The versioned checksum
-snapshot covers all 173 assets that preceded it while the
-older checksum manifest remains immutable. Release validation
+set, every currently published specialty citation, 31 exact-palette audit PDFs
+for Corvette, Monte Carlo, and P-Series/Step-Van, six exact Silverado HD
+source kits for 2003 and 2005, and 115 audited source artifacts used by the
+current nameplate audits. The latest checksum snapshot covers all 344 other assets,
+while earlier checksum snapshots remain immutable. Release validation
 identifies 30 legacy governing audit assets, 31 additional exact-palette audit
-assets, 30 legacy app-fed audit citations, 171
-application Release URLs, 83 modern palette tables, 638 modern color
+assets, 30 legacy app-fed audit citations, 336
+application Release URLs, 93 modern palette tables, 711 modern color
 assertions, 888 published specialty records, four published ordinary
 qualified-history records, and eight verified nonpublished, nonrouting specialty
 snapshots.

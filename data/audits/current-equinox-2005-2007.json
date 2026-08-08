@@ -1,0 +1,752 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "market": "United States",
+  "visibility": "public",
+  "audit_as_of": "2026-08-07",
+  "dataset_kind": "current_nameplate_historical_variant_color_tables",
+  "scope": "Direct visual transcription of the complete exterior solid-paint charts printed in the retained official 2005 and 2007 Chevrolet Equinox vehicle information kits, plus a qualified 2006 Equinox palette reconstructed without adjacent-year inference from an exact Equinox list and code crosswalk in the 2006 General Motors Color Compatibility Guide, a complete General Motors of Canada Equinox brochure, and an exact United States secondary model-year listing. The 2006 palette remains qualified because no governing United States order guide or vehicle information kit was retained.",
+  "method": {
+    "review_type": "complete_document_visual_review_plus_secondary_triangulation",
+    "render_scale": "Every page of the 100-page 2005 kit and 114-page 2007 kit was reviewed in contact sheets rendered at 72 dpi. The governing paint tables were rendered at 300 dpi. Every page of the 24-page 2006 General Motors of Canada brochure and 40-page 2006 General Motors Color Compatibility Guide was also reviewed in contact sheets, and every Equinox code row and brochure color page was rendered at 300 dpi.",
+    "source_integrity": "Each retained official GM Heritage PDF matched the SHA-256, byte count, and page count in the 691-source artifact ledger. Both retained 2006 corroborating PDFs were downloaded in full, hashed, opened, and visually reviewed.",
+    "code_policy": "For 2005 and 2007, source_color_code and wa_number preserve the Color Code and Touch Up Paint Number printed in the governing Chevrolet chart. For 2006, Chevrolet marketing names and two-digit codes come from the complete General Motors of Canada brochure and the exact United States CarsDirect list, while U-suffix codes and WA numbers come from the Equinox rows in the 2006 General Motors Color Compatibility Guide. No adjacent-year code is projected.",
+    "absence_policy": "A program marked not located documents only that no separate chart for that program was found in the complete reviewed sources. It does not prove that the program was unavailable through every ordering or fleet channel.",
+    "gap_policy": "The official GM Heritage Chevrolet kit index and the retained 691-source artifact corpus contain no 2006 Chevrolet Equinox vehicle information kit. The 2005 and 2007 kits were not used to infer the 2006 palette. The exact 2006 cross-source result remains qualified because the retained manufacturer brochure is Canadian and the retained United States source is secondary.",
+    "market_policy": "Canadian trim compatibility is recorded only as corroborating evidence and is not asserted as a United States restriction. The United States palette claim is limited to the nine exterior color names independently listed by CarsDirect and matched to exact Equinox code rows in the compatibility guide.",
+    "archive_manifest_review": "The retained public Release manifests were searched by SHA-256. The 2005 and 2007 GM Heritage PDFs were not yet listed when this audit was created, so each retains a null archive URL and an explicit not-listed status. The two 2006 corroborating PDFs are retained complete under tmp for source review and are not represented as public Release assets in this audit."
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-2005-chevrolet-equinox",
+      "title": "2005 Chevrolet Equinox Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Equinox.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-equinox-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "8c/8d/8c8d075774945c99c8a772ed25ca3c2e356066eb2045f7bc068783efed88aec7.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "8c8d075774945c99c8a772ed25ca3c2e356066eb2045f7bc068783efed88aec7",
+      "bytes": 11939668,
+      "pdf_page_count": 100,
+      "retrieval_started_at": "2026-07-21T06:39:08+00:00",
+      "retrieved_at": "2026-07-21T06:39:21+00:00",
+      "scope_note": "PDF page 93 is the complete Equinox Color and Trim - Solid Paint chart. The complete kit contains no second exterior paint chart."
+    },
+    {
+      "source_id": "gm-heritage-2007-chevrolet-equinox",
+      "title": "2007 Chevrolet Equinox Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Equinox.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-equinox-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "65/fb/65fb8b5b8095505f677f20f1a65fa50ef473e504025a2a66f9bbb120cb644e63.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "65fb8b5b8095505f677f20f1a65fa50ef473e504025a2a66f9bbb120cb644e63",
+      "bytes": 16778106,
+      "pdf_page_count": 114,
+      "retrieval_started_at": "2026-07-21T06:42:23+00:00",
+      "retrieved_at": "2026-07-21T06:42:38+00:00",
+      "scope_note": "PDF page 102 is the complete Equinox Color and Trim - Solid Paint chart. PDF page 114 is the only distribution update and changes an audio-system description, not paint. The complete kit contains no second exterior paint chart."
+    },
+    {
+      "source_id": "gm-canada-2006-chevrolet-equinox-brochure-xr793",
+      "title": "2006 Chevrolet Equinox Brochure, Canada",
+      "publisher": "General Motors of Canada Limited",
+      "source_type": "official_sales_brochure_independent_mirror",
+      "content_type": "application/pdf",
+      "url": "https://www.xr793.com/wp-content/uploads/2020/05/2006-Chevrolet-Equinox-CN.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/gm-canada-2006-chevrolet-equinox-brochure-xr793.pdf",
+      "archive_status": "archived_in_public_release",
+      "local_research_relpath": "tmp/pdfs/equinox-2005-2007/2006-chevrolet-equinox-canada-brochure-xr793.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "archival_mirror",
+      "sha256": "a64ee530c103a449a5dbb8ec1069671b85eeedad65a2c93217e1638b956117a9",
+      "bytes": 2999115,
+      "pdf_page_count": 24,
+      "retrieved_at": "2026-08-08T02:18:41Z",
+      "scope_note": "PDF pages 22 and 23 print the complete nine-color Equinox list, two-digit Chevrolet marketing codes, color names, illustrations, and Canadian interior compatibility. This Canadian brochure corroborates the 2006 names and list but does not govern United States availability."
+    },
+    {
+      "source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+      "title": "2006 General Motors Color Compatibility Guide",
+      "publisher": "Sherwin-Williams Automotive Finishes",
+      "source_type": "authoritative_refinish_color_compatibility_guide",
+      "content_type": "application/pdf",
+      "url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/de/de-de/pdfs/marketing-uploads/swaf-2006_gm_ccg.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-sherwin-williams-gm-color-compatibility-guide.pdf",
+      "archive_status": "archived_in_public_release",
+      "local_research_relpath": "tmp/pdfs/equinox-2005-2007/2006-gm-color-compatibility-guide-sherwin-williams.pdf",
+      "document_authority": "authoritative_paint_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "e97ee68bca34867244a933db1bd6df11cf0e18781671207348db08bfb8cca31b",
+      "bytes": 148670,
+      "pdf_page_count": 40,
+      "retrieved_at": "2026-08-08T02:18:41Z",
+      "scope_note": "PDF pages 5, 6, 9, 11, and 38 contain nine separate Equinox exterior body-color rows. Together they print WA227M/21, WA228M/64, WA231M/15, WA232M/42, WA365N/36, WA366N/71, WA686H/96U, WA687H/18U, and WA990A/19U. The guide establishes exact model-to-code compatibility, not retail ordering completeness."
+    }
+  ],
+  "secondary_web_observations": [
+    {
+      "source_id": "carsdirect-2006-chevrolet-equinox-colors",
+      "title": "2006 Chevrolet Equinox Colors",
+      "publisher": "CarsDirect",
+      "source_type": "commercial_automotive_model_year_color_reference",
+      "content_type": "text/html",
+      "url": "https://www.carsdirect.com/chevrolet/equinox/2006/colors",
+      "observed_at": "2026-08-08T02:18:41Z",
+      "claim": "The United States model-year page states that nine exterior colors were available and names Black, Black Amethyst Metallic, Dark Silver Metallic, Galaxy Silver Metallic, Laser Blue Metallic, Salsa Red Metallic, Sandstone Metallic, Summit White, and Bermuda Green Metallic.",
+      "use_limit": "Used only to corroborate the United States nine-name exterior list. It does not supply codes or trim restrictions."
+    },
+    {
+      "source_id": "edmunds-2006-chevrolet-equinox-color-images",
+      "title": "2006 Chevrolet Equinox Color Options",
+      "publisher": "Edmunds",
+      "source_type": "commercial_automotive_model_year_image_reference",
+      "content_type": "text/html",
+      "url": "https://www.edmunds.com/chevrolet/equinox/2006/pictures/colors/",
+      "observed_at": "2026-08-08T02:18:41Z",
+      "claim": "The model-year image page identifies eight photographed colors, including Bermuda Green Metallic and Black Amethyst Metallic, but omits Laser Blue Metallic from its displayed color-image set.",
+      "use_limit": "Retained as an explicit incomplete comparison source. It was not used to remove Laser Blue Metallic from the complete brochure, CarsDirect, and compatibility-guide intersection."
+    }
+  ],
+  "models": [
+    {
+      "model_id": "equinox",
+      "model_name": "Equinox",
+      "years": [
+        {
+          "year": 2005,
+          "coverage_status": "verified_complete_for_printed_equinox_chart",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular exterior solid-paint and interior compatibility chart printed for the 2005 Chevrolet Equinox.",
+          "limitations": [
+            "The reviewed chart contains only solid paint. No two-tone, fleet, special-equipment, stripe, or special-edition exterior paint chart was located in the complete 100-page kit.",
+            "Laser Blue Metallic is extra cost and is not available on LS, exactly as footnote 3 states.",
+            "The chart footnotes refer to seat codes 1SE and 1SC, but do not expand those codes. No expansion is inferred."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                93
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "fleet_or_special_equipment_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "stripe_or_special_edition_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "2005-equinox-regular-solid-paint",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "solid paint",
+              "code_column_semantics": "regular_rpo_color_code_and_touch_up_wa_number",
+              "colors": [
+                {
+                  "identity_key": "wa-231m",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "seo_code": null,
+                  "wa_number": "WA-231M",
+                  "allowed_interior_trim_colors": [
+                    "Light Cashmere"
+                  ]
+                },
+                {
+                  "identity_key": "wa-687h",
+                  "name": "Galaxy Silver Metallic",
+                  "source_label": "Galaxy Silver Metallic",
+                  "source_color_code": "18U",
+                  "factory_code": "18U",
+                  "rpo_code": "18U",
+                  "seo_code": null,
+                  "wa_number": "WA-687H",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-990a",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "19U",
+                  "factory_code": "19U",
+                  "rpo_code": "19U",
+                  "seo_code": null,
+                  "wa_number": "WA-990A",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray",
+                    "Light Cashmere"
+                  ]
+                },
+                {
+                  "identity_key": "wa-227m",
+                  "name": "Laser Blue Metallic",
+                  "source_label": "Laser Blue Metallic",
+                  "source_color_code": "21U",
+                  "factory_code": "21U",
+                  "rpo_code": "21U",
+                  "seo_code": null,
+                  "wa_number": "WA-227M",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray",
+                    "Light Cashmere"
+                  ],
+                  "restriction": "Extra cost. Not available on LS."
+                },
+                {
+                  "identity_key": "wa-232m",
+                  "name": "Dark Silver Metallic",
+                  "source_label": "Dark Silver Metallic",
+                  "source_color_code": "42U",
+                  "factory_code": "42U",
+                  "rpo_code": "42U",
+                  "seo_code": null,
+                  "wa_number": "WA-232M",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-228m",
+                  "name": "Salsa Red Metallic",
+                  "source_label": "Salsa Red Metallic",
+                  "source_color_code": "64U",
+                  "factory_code": "64U",
+                  "rpo_code": "64U",
+                  "seo_code": null,
+                  "wa_number": "WA-228M",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray",
+                    "Light Cashmere"
+                  ]
+                },
+                {
+                  "identity_key": "wa-230m",
+                  "name": "Meander Green Metallic",
+                  "source_label": "Meander Green Metallic",
+                  "source_color_code": "83U",
+                  "factory_code": "83U",
+                  "rpo_code": "83U",
+                  "seo_code": null,
+                  "wa_number": "WA-230M",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray",
+                    "Light Cashmere"
+                  ]
+                },
+                {
+                  "identity_key": "wa-686h",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "96U",
+                  "factory_code": "96U",
+                  "rpo_code": "96U",
+                  "seo_code": null,
+                  "wa_number": "WA-686H",
+                  "allowed_interior_trim_colors": [
+                    "Light Gray",
+                    "Light Cashmere"
+                  ]
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "regular-solid-paint",
+              "program_label": "Equinox regular solid paint",
+              "variant": "Equinox",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "solid paint",
+              "color_set_id": "2005-equinox-regular-solid-paint",
+              "claim_scope": "Complete exterior solid-paint list and printed interior compatibility in the governing Equinox chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-equinox",
+                "pdf_pages": [
+                  93
+                ],
+                "printed_page_label": "2005 Chevrolet Truck Equinox, Color and Trim - Solid Paint, page 1",
+                "section": "Color and Trim - Solid Paint",
+                "revision": "Published December 17, 2004"
+              }
+            }
+          ]
+        },
+        {
+          "year": 2006,
+          "coverage_status": "qualified_exact_cross_source_palette_without_governing_us_chart",
+          "complete_regular_palette": false,
+          "availability_scope": "Qualified nine-color United States Equinox palette. Exact United States names are corroborated by CarsDirect, exact Equinox U-suffix and WA codes are printed in the compatibility guide, and the same complete nine-color set is printed in the official Canadian brochure.",
+          "limitations": [
+            "No 2006 Equinox vehicle information kit or governing United States order-guide chart appears in the retained official GM Heritage Chevrolet index or 691-source artifact corpus.",
+            "The General Motors of Canada brochure is an official manufacturer document but governs Canada, not the United States. Its interior compatibility and trim restrictions are not projected into the United States claim.",
+            "CarsDirect supplies an exact United States nine-name list but no codes or trim restrictions. The compatibility guide supplies exact Equinox U-suffix and WA code rows but is a refinishing compatibility source rather than an ordering guide.",
+            "Edmunds displays eight photographed colors and omits Laser Blue Metallic from the image set. That incomplete image set does not overcome the exact nine-color Canadian brochure, CarsDirect list, and Equinox compatibility-guide rows.",
+            "No adjacent-year color, restriction, or availability is inferred into 2006."
+          ],
+          "source_discovery_audit": {
+            "official_index_url": "https://www.gm.com/heritage/archive/vehicle-information-kits",
+            "retained_corpus_source_count": 691,
+            "exact_equinox_vehicle_information_kit_match_count": 0,
+            "official_owner_manual_excluded_as_no_color_chart": "https://contentdelivery.ext.gm.com/content/dam/cope/en_us/public/pdf_assets/active/owners_manuals_browse/2006ChevroletEquinoxOwnersManual.pdf"
+          },
+          "program_presence_audit": [
+            {
+              "program_type": "regular_solid_paint",
+              "status": "qualified_exact_cross_source_list_and_codes",
+              "source_ids": [
+                "sherwin-williams-gm-2006-color-compatibility-guide",
+                "gm-canada-2006-chevrolet-equinox-brochure-xr793",
+                "carsdirect-2006-chevrolet-equinox-colors"
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_reviewed_sources"
+            },
+            {
+              "program_type": "fleet_or_special_equipment_paint",
+              "status": "not_located_in_reviewed_sources"
+            },
+            {
+              "program_type": "stripe_or_special_edition_paint",
+              "status": "not_located_in_reviewed_sources"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "2006-equinox-qualified-regular-solid-paint",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "solid paint",
+              "code_column_semantics": "marketing_code_from_gm_canada_brochure_plus_u_suffix_and_wa_number_from_compatibility_guide",
+              "colors": [
+                {
+                  "identity_key": "wa-231m",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "seo_code": null,
+                  "wa_number": "WA-231M",
+                  "note": "The compatibility guide calls this Cashmere Metallic. The Chevrolet marketing name is Sandstone Metallic.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 6
+                },
+                {
+                  "identity_key": "wa-687h",
+                  "name": "Galaxy Silver Metallic",
+                  "source_label": "Galaxy Silver Metallic",
+                  "source_color_code": "18U",
+                  "factory_code": "18U",
+                  "rpo_code": "18U",
+                  "seo_code": null,
+                  "wa_number": "WA-687H",
+                  "note": "The compatibility guide calls this Silver Metallic. The Chevrolet marketing name is Galaxy Silver Metallic.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 11
+                },
+                {
+                  "identity_key": "wa-990a",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "19U",
+                  "factory_code": "19U",
+                  "rpo_code": "19U",
+                  "seo_code": null,
+                  "wa_number": "WA-990A",
+                  "note": "The compatibility guide calls this Black Licorice. The Chevrolet marketing name is Black.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 38
+                },
+                {
+                  "identity_key": "wa-227m",
+                  "name": "Laser Blue Metallic",
+                  "source_label": "Laser Blue Metallic",
+                  "source_color_code": "21U",
+                  "factory_code": "21U",
+                  "rpo_code": "21U",
+                  "seo_code": null,
+                  "wa_number": "WA-227M",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 5
+                },
+                {
+                  "identity_key": "wa-365n",
+                  "name": "Bermuda Green Metallic",
+                  "source_label": "Bermuda Green Metallic",
+                  "source_color_code": "36U",
+                  "factory_code": "36U",
+                  "rpo_code": "36U",
+                  "seo_code": null,
+                  "wa_number": "WA-365N",
+                  "note": "The compatibility guide calls this Marlin Green Met. The Chevrolet marketing name is Bermuda Green Metallic.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 9
+                },
+                {
+                  "identity_key": "wa-232m",
+                  "name": "Dark Silver Metallic",
+                  "source_label": "Dark Silver Metallic",
+                  "source_color_code": "42U",
+                  "factory_code": "42U",
+                  "rpo_code": "42U",
+                  "seo_code": null,
+                  "wa_number": "WA-232M",
+                  "note": "The compatibility guide calls this Tarnished Silver Met. The Chevrolet marketing name is Dark Silver Metallic.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 6
+                },
+                {
+                  "identity_key": "wa-228m",
+                  "name": "Salsa Red Metallic",
+                  "source_label": "Salsa Red Metallic",
+                  "source_color_code": "64U",
+                  "factory_code": "64U",
+                  "rpo_code": "64U",
+                  "seo_code": null,
+                  "wa_number": "WA-228M",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 6
+                },
+                {
+                  "identity_key": "wa-366n",
+                  "name": "Black Amethyst Metallic",
+                  "source_label": "Black Amethyst",
+                  "source_color_code": "71U",
+                  "factory_code": "71U",
+                  "rpo_code": "71U",
+                  "seo_code": null,
+                  "wa_number": "WA-366N",
+                  "note": "The compatibility guide calls this Lunar Quartz Metallic. CarsDirect supplies the United States marketing name Black Amethyst Metallic; the General Motors of Canada brochure prints Black Amethyst.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 9
+                },
+                {
+                  "identity_key": "wa-686h",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "96U",
+                  "factory_code": "96U",
+                  "rpo_code": "96U",
+                  "seo_code": null,
+                  "wa_number": "WA-686H",
+                  "note": "The compatibility guide calls this Bright White. The Chevrolet marketing name is Summit White.",
+                  "code_source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                  "code_source_pdf_page": 11
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "qualified-regular-solid-paint",
+              "program_label": "Equinox qualified regular solid paint",
+              "variant": "Equinox",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "solid paint",
+              "color_set_id": "2006-equinox-qualified-regular-solid-paint",
+              "claim_scope": "Nine exact Equinox exterior body-color identities and codes in the complete compatibility guide, corroborated by the complete official Canadian brochure and exact United States CarsDirect list. This is not promoted to a strict governing United States palette.",
+              "program_restriction": "No governing United States order guide or vehicle information kit was retained. Treat every row as a qualified exact cross-source record, not unrestricted retail availability.",
+              "source_ref": {
+                "source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
+                "pdf_pages": [
+                  5,
+                  6,
+                  9,
+                  11,
+                  38
+                ],
+                "printed_page_label": "2006 General Motors Color Compatibility Guide, Equinox rows",
+                "section": "Exterior Body Color - Equinox",
+                "revision": "2006 edition; retained PDF metadata reflects later digital republication"
+              },
+              "supporting_source_refs": [
+                {
+                  "source_id": "gm-canada-2006-chevrolet-equinox-brochure-xr793",
+                  "pdf_pages": [
+                    22,
+                    23
+                  ],
+                  "section": "Colours. Fabrics. Wheels."
+                },
+                {
+                  "source_id": "carsdirect-2006-chevrolet-equinox-colors",
+                  "section": "Exterior Colors"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2007,
+          "coverage_status": "verified_complete_for_printed_equinox_chart",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular exterior solid-paint and interior compatibility chart printed for the 2007 Chevrolet Equinox.",
+          "limitations": [
+            "The reviewed chart contains only solid paint. No two-tone, fleet, special-equipment, stripe, or special-edition exterior paint chart was located in the complete 114-page kit.",
+            "Bermuda Green Metallic is extra cost and is not available on 1LS, exactly as footnote 3 states.",
+            "The only retained distribution update, on PDF page 114, changes an audio-system description and does not amend the color chart."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_solid_paint",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                102
+              ]
+            },
+            {
+              "program_type": "distribution_update",
+              "status": "located_reviewed_no_paint_change",
+              "pdf_pages": [
+                114
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "fleet_or_special_equipment_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "stripe_or_special_edition_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "color_sets": [
+            {
+              "color_set_id": "2007-equinox-regular-solid-paint",
+              "application_type": "factory_regular_solid_paint",
+              "paint_scheme": "solid paint",
+              "code_column_semantics": "regular_rpo_color_code_and_touch_up_wa_number",
+              "colors": [
+                {
+                  "identity_key": "wa-231m",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "seo_code": null,
+                  "wa_number": "WA-231M",
+                  "allowed_interior_trim_colors": [
+                    "Light Cashmere"
+                  ]
+                },
+                {
+                  "identity_key": "wa-990a",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "19U",
+                  "factory_code": "19U",
+                  "rpo_code": "19U",
+                  "seo_code": null,
+                  "wa_number": "WA-990A",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Cashmere",
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-227m",
+                  "name": "Laser Blue Metallic",
+                  "source_label": "Laser Blue Metallic",
+                  "source_color_code": "21U",
+                  "factory_code": "21U",
+                  "rpo_code": "21U",
+                  "seo_code": null,
+                  "wa_number": "WA-227M",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Cashmere",
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-365n",
+                  "name": "Bermuda Green Metallic",
+                  "source_label": "Bermuda Green Metallic",
+                  "source_color_code": "36U",
+                  "factory_code": "36U",
+                  "rpo_code": "36U",
+                  "seo_code": null,
+                  "wa_number": "WA-365N",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Cashmere",
+                    "Light Gray"
+                  ],
+                  "restriction": "Extra cost. Not available on 1LS."
+                },
+                {
+                  "identity_key": "wa-434p",
+                  "name": "Granite Gray Metallic",
+                  "source_label": "NEW! Granite Gray Metallic",
+                  "source_color_code": "44U",
+                  "factory_code": "44U",
+                  "rpo_code": "44U",
+                  "seo_code": null,
+                  "wa_number": "WA-434P",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-431p",
+                  "name": "Deep Ruby Metallic",
+                  "source_label": "NEW! Deep Ruby Metallic",
+                  "source_color_code": "66U",
+                  "factory_code": "66U",
+                  "rpo_code": "66U",
+                  "seo_code": null,
+                  "wa_number": "WA-431P",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Cashmere",
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-433p",
+                  "name": "Silverstone Metallic",
+                  "source_label": "NEW! Silverstone Metallic",
+                  "source_color_code": "67U",
+                  "factory_code": "67U",
+                  "rpo_code": "67U",
+                  "seo_code": null,
+                  "wa_number": "WA-433P",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-366n",
+                  "name": "Black Amethyst Metallic",
+                  "source_label": "Black Amethyst Metallic",
+                  "source_color_code": "71U",
+                  "factory_code": "71U",
+                  "rpo_code": "71U",
+                  "seo_code": null,
+                  "wa_number": "WA-366N",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Cashmere",
+                    "Light Gray"
+                  ]
+                },
+                {
+                  "identity_key": "wa-686h",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "96U",
+                  "factory_code": "96U",
+                  "rpo_code": "96U",
+                  "seo_code": null,
+                  "wa_number": "WA-686H",
+                  "allowed_interior_trim_colors": [
+                    "Dark Gray",
+                    "Light Cashmere",
+                    "Light Gray"
+                  ]
+                }
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "regular-solid-paint",
+              "program_label": "Equinox regular solid paint",
+              "variant": "Equinox",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "solid paint",
+              "color_set_id": "2007-equinox-regular-solid-paint",
+              "claim_scope": "Complete exterior solid-paint list and printed interior compatibility in the governing Equinox chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-equinox",
+                "pdf_pages": [
+                  102
+                ],
+                "printed_page_label": "2007 Chevrolet Truck Equinox, Color and Trim - Solid Paint, page 20",
+                "section": "Color and Trim - Solid Paint",
+                "revision": "Published May 5, 2006"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage_summary": {
+    "year_count": 3,
+    "years_with_verified_complete_governing_us_chart": [
+      2005,
+      2007
+    ],
+    "years_with_qualified_exact_cross_source_palette": [
+      2006
+    ],
+    "unsupported_projection_rule": "No color, code, restriction, or availability is projected across model years. The 2006 palette is exact at the cross-source identity-and-code level but remains qualified until a governing United States order guide or equivalent official chart is retained."
+  },
+  "row_count_summary": {
+    "counting_rule": "Each exterior solid-paint identity counts once per model year.",
+    "years": [
+      {
+        "year": 2005,
+        "regular_solid_rows": 8,
+        "qualified_rows": 0,
+        "total_rows": 8
+      },
+      {
+        "year": 2006,
+        "regular_solid_rows": 0,
+        "qualified_rows": 9,
+        "total_rows": 9
+      },
+      {
+        "year": 2007,
+        "regular_solid_rows": 9,
+        "qualified_rows": 0,
+        "total_rows": 9
+      }
+    ],
+    "total_rows": 26
+  },
+  "source_registers": [
+    "data/research/gm-official-color-tables/source_documents.parquet",
+    "data/research/gm-official-color-tables/candidate_pages.parquet",
+    "data/research/gm-official-color-tables/color_candidates.parquet",
+    "data/sources/gm-heritage-chevrolet-kits.json",
+    "data/sources/gm-heritage-chevrolet-artifacts.json",
+    "data/sources/brochure-source-release-manifest.json"
+  ]
+}

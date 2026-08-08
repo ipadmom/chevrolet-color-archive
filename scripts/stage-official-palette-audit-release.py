@@ -60,6 +60,10 @@ def asset_name(source_id: str) -> str:
 
 
 def main() -> int:
+    raise RuntimeError(
+        "This one-time 174-asset staging script is retired. Use the current "
+        "brochure source manifest and its 195-asset checksum workflow."
+    )
     manifest = load_json(MANIFEST_PATH)
     artifact_ledger = load_json(ARTIFACT_LEDGER_PATH)
     artifacts_by_source_id = {

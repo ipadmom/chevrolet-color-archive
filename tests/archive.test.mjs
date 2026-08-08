@@ -4,12 +4,26 @@ import test from "node:test";
 import ts from "typescript";
 
 const root = new URL("../", import.meta.url);
+let archiveDataPromise;
 
 async function loadArchiveData() {
+  archiveDataPromise ??= (async () => {
   const [
     archiveSource,
     catalogSource,
     platformEraSource,
+    currentHistoricalSource,
+    currentCorvette1973to1982Source,
+    currentCorvette1984to2007Source,
+    currentExpress1997to2005Source,
+    currentExpress1996to2007RemainingSource,
+    currentBlazer1983to1994Source,
+    currentPickup1999to2007Source,
+    currentSilveradoHd2001to2007RemainingSource,
+    currentTrailblazer2002to2007Source,
+    currentEquinox2005to2007Source,
+    currentBlazer1969to2005Source,
+    currentSuburban1935to2006Source,
     tahoe1995Source,
     tahoe2001Source,
     suburbanEarlySource,
@@ -25,6 +39,54 @@ async function loadArchiveData() {
     readFile(new URL("app/archive-data.ts", root), "utf8"),
     readFile(new URL("data/catalog/chevrolet-us-nameplates.json", root), "utf8"),
     readFile(new URL("data/catalog/chevrolet-platform-eras.json", root), "utf8"),
+    readFile(
+      new URL("data/audits/current-nameplate-historical-palettes.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-corvette-1973-1982.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-corvette-1984-2007.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-express-1997-1998-2004-2005.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-express-1996-2007-remaining.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-blazer-1983-1994.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-pickups-silverado-1999-2007-colorado-2004-2007.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-silverado-hd-2001-2007-remaining.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-trailblazer-2002-2007.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-equinox-2005-2007.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/current-blazer-1969-1982-1995-2005.json", root),
+      "utf8",
+    ),
+    readFile(
+      new URL("data/audits/suburban-1935-1968-2006.json", root),
+      "utf8",
+    ),
     readFile(new URL("data/audits/tahoe-1995-2000.json", root), "utf8"),
     readFile(new URL("data/audits/tahoe-2001-2007.json", root), "utf8"),
     readFile(new URL("data/audits/suburban-1969-1976.json", root), "utf8"),
@@ -66,6 +128,54 @@ async function loadArchiveData() {
     .replace(
       /^import platformEraData from "\.\.\/data\/catalog\/chevrolet-platform-eras\.json";\r?\n/m,
       `const platformEraData = ${platformEraSource};\n`,
+    )
+    .replace(
+      /^import currentHistoricalPaletteAudit from "\.\.\/data\/audits\/current-nameplate-historical-palettes\.json";\r?\n/m,
+      `const currentHistoricalPaletteAudit = ${currentHistoricalSource};\n`,
+    )
+    .replace(
+      /^import currentCorvette1973to1982Audit from "\.\.\/data\/audits\/current-corvette-1973-1982\.json";\r?\n/m,
+      `const currentCorvette1973to1982Audit = ${currentCorvette1973to1982Source};\n`,
+    )
+    .replace(
+      /^import currentCorvette1984to2007Audit from "\.\.\/data\/audits\/current-corvette-1984-2007\.json";\r?\n/m,
+      `const currentCorvette1984to2007Audit = ${currentCorvette1984to2007Source};\n`,
+    )
+    .replace(
+      /^import currentExpress1997to2005Audit from "\.\.\/data\/audits\/current-express-1997-1998-2004-2005\.json";\r?\n/m,
+      `const currentExpress1997to2005Audit = ${currentExpress1997to2005Source};\n`,
+    )
+    .replace(
+      /^import currentExpress1996to2007RemainingAudit from "\.\.\/data\/audits\/current-express-1996-2007-remaining\.json";\r?\n/m,
+      `const currentExpress1996to2007RemainingAudit = ${currentExpress1996to2007RemainingSource};\n`,
+    )
+    .replace(
+      /^import currentBlazer1983to1994Audit from "\.\.\/data\/audits\/current-blazer-1983-1994\.json";\r?\n/m,
+      `const currentBlazer1983to1994Audit = ${currentBlazer1983to1994Source};\n`,
+    )
+    .replace(
+      /^import currentPickup1999to2007Audit from "\.\.\/data\/audits\/current-pickups-silverado-1999-2007-colorado-2004-2007\.json";\r?\n/m,
+      `const currentPickup1999to2007Audit = ${currentPickup1999to2007Source};\n`,
+    )
+    .replace(
+      /^import currentSilveradoHd2001to2007RemainingAudit from "\.\.\/data\/audits\/current-silverado-hd-2001-2007-remaining\.json";\r?\n/m,
+      `const currentSilveradoHd2001to2007RemainingAudit = ${currentSilveradoHd2001to2007RemainingSource};\n`,
+    )
+    .replace(
+      /^import currentTrailblazer2002to2007Audit from "\.\.\/data\/audits\/current-trailblazer-2002-2007\.json";\r?\n/m,
+      `const currentTrailblazer2002to2007Audit = ${currentTrailblazer2002to2007Source};\n`,
+    )
+    .replace(
+      /^import currentEquinox2005to2007Audit from "\.\.\/data\/audits\/current-equinox-2005-2007\.json";\r?\n/m,
+      `const currentEquinox2005to2007Audit = ${currentEquinox2005to2007Source};\n`,
+    )
+    .replace(
+      /^import currentBlazer1969to2005Audit from "\.\.\/data\/audits\/current-blazer-1969-1982-1995-2005\.json";\r?\n/m,
+      `const currentBlazer1969to2005Audit = ${currentBlazer1969to2005Source};\n`,
+    )
+    .replace(
+      /^import currentSuburban1935to2006Audit from "\.\.\/data\/audits\/suburban-1935-1968-2006\.json";\r?\n/m,
+      `const currentSuburban1935to2006Audit = ${currentSuburban1935to2006Source};\n`,
     )
     .replace(
       /^import tahoe1995to2000Audit from "\.\.\/data\/audits\/tahoe-1995-2000\.json";\r?\n/m,
@@ -117,7 +227,9 @@ async function loadArchiveData() {
       target: ts.ScriptTarget.ES2022,
     },
   }).outputText;
-  return import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`);
+    return import(`data:text/javascript;base64,${Buffer.from(output).toString("base64")}`);
+  })();
+  return archiveDataPromise;
 }
 
 async function loadReleasePhotoData() {
@@ -743,11 +855,27 @@ test("Wikimedia Commons photos use the pinned GitHub Release with complete attri
 test("C1 Corvette tables preserve source qualifications, codes, and counts", async () => {
   const { models } = await loadArchiveData();
   const corvette = models.find((model) => model.id === "corvette");
+  const reviewedNoChart = corvette.generations.find(
+    (item) => item.id === "corvette-1953-reviewed-no-chart",
+  );
   const generation = corvette.generations.find(
     (item) => item.id === "early-corvette-audited-tables",
   );
   const color = (id) =>
     generation.colors.find((entry) => entry.id === id);
+
+  assert.deepEqual(reviewedNoChart.years, ["1953"]);
+  assert.equal(reviewedNoChart.listingCount, 0);
+  assert.equal(
+    reviewedNoChart.sources["1953"].evidenceClass,
+    "reviewed_no_complete_palette",
+  );
+  for (const year of ["1954", "1955", "1959"]) {
+    assert.equal(
+      generation.sources[year].evidenceClass,
+      "qualified_historical_table",
+    );
+  }
 
   assert.deepEqual(generation.years, [
     "1954",
@@ -993,7 +1121,7 @@ test("Corvette, Monte Carlo, and Step-Van exact-year audits reach the public mat
   assert.equal(c3.listingCount, 50);
   assert.equal(c2.label, "C2");
   assert.equal(c3.label, "C3");
-  assert.equal(c3.sources["1969"].evidenceClass, "qualified_exact_program_palette");
+  assert.equal(c3.sources["1969"].evidenceClass, undefined);
   const monacoOrange = c3.colors.find(
     (color) => color.availability["1969"]?.code === "990",
   );
@@ -1093,22 +1221,27 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     Object.values(item.sources).some(
       (source) => source.evidenceClass === "qualified_historical_table",
     );
+  const isQualifiedExactProgram = (item) =>
+    Object.values(item.sources).some(
+      (source) => source.evidenceClass === "qualified_exact_program_palette",
+    );
   assert.equal(
     allGenerations
       .filter(
         (item) =>
           !isQualifiedPalette(item) &&
           !isSpecialtySubset(item) &&
-          !isQualifiedHistoricalSubset(item),
+          !isQualifiedHistoricalSubset(item) &&
+          !isQualifiedExactProgram(item),
       )
       .reduce((total, item) => total + item.listingCount, 0),
-    1231,
+    1723,
   );
   assert.equal(
     allGenerations
       .filter(isQualifiedPalette)
       .reduce((total, item) => total + item.listingCount, 0),
-    3240,
+    3354,
   );
   assert.equal(
     allGenerations
@@ -1120,11 +1253,17 @@ test("Chevelle matrix preserves complete solid-color charts and exact-name rows"
     allGenerations
       .filter(isQualifiedHistoricalSubset)
       .reduce((total, item) => total + item.listingCount, 0),
-    4,
+    62,
+  );
+  assert.equal(
+    allGenerations
+      .filter(isQualifiedExactProgram)
+      .reduce((total, item) => total + item.listingCount, 0),
+    2855,
   );
   assert.equal(
     allGenerations.reduce((total, item) => total + item.listingCount, 0),
-    5403,
+    8922,
   );
 });
 
@@ -2273,11 +2412,20 @@ test("2000–2007 Suburban separates complete palettes, SEO paints, and suppleme
   assert.equal(regular2004.sources["2004"].contentType, "image/png");
   assert.equal(regular2004.sources["2004"].supportingSources.length, 2);
 
-  assert.equal(
-    suburban.generations
-      .filter((generation) => generation.years.includes("2006"))
-      .every((generation) => generation.listingCount === 0),
-    true,
+  const scoped2006 = suburban.generations.filter(
+    (generation) => generation.years.includes("2006") &&
+      generation.id.startsWith("current-suburban-2006-"),
+  );
+  assert.deepEqual(
+    scoped2006.map((generation) => generation.listingCount).sort((a, b) => a - b),
+    [4, 7, 8, 12],
+  );
+  assert.ok(
+    scoped2006.every((generation) =>
+      ["qualified_exact_program_palette", "qualified_palette_union"].includes(
+        generation.sources["2006"].evidenceClass,
+      )
+    ),
   );
   assert.deepEqual(
     Object.fromEntries(
@@ -2630,6 +2778,345 @@ test("earlier official brochure palette unions retain exact pages, restrictions,
   assert.match(deepOcean.availability["2023"].restriction, /extra-cost color/);
 });
 
+test("current-nameplate historical audit publishes complete Silverado HD 2003 and 2005 charts", async () => {
+  const { models } = await loadArchiveData();
+  const silveradoHd = models.find((model) => model.id === "silverado-hd");
+  assert.ok(silveradoHd);
+
+  const regular2003 = silveradoHd.generations.find(
+    (generation) =>
+      generation.id === "current-historical-silverado-hd-2003-regular",
+  );
+  const seo2003 = silveradoHd.generations.find(
+    (generation) =>
+      generation.id === "current-historical-silverado-hd-2003-seo-solid-paint",
+  );
+  const regular2005 = silveradoHd.generations.find(
+    (generation) =>
+      generation.id === "current-historical-silverado-hd-2005-regular",
+  );
+  const seo2005 = silveradoHd.generations.find(
+    (generation) =>
+      generation.id === "current-historical-silverado-hd-2005-seo-solid-paint",
+  );
+
+  assert.equal(regular2003.listingCount, 8);
+  assert.equal(seo2003.listingCount, 21);
+  assert.equal(regular2005.listingCount, 9);
+  assert.equal(seo2005.listingCount, 26);
+  assert.equal(seo2003.sources["2003"].evidenceClass, "qualified_exact_program_palette");
+  assert.equal(seo2005.sources["2005"].evidenceClass, "qualified_exact_program_palette");
+  assert.match(
+    regular2005.sources["2005"].archiveUrl,
+    /brochure-source-archive-v1\/2005-chevrolet-silverado-2500hd-vehicle-information-kit-gm\.pdf$/,
+  );
+  assert.equal(regular2005.sources["2005"].supportingSources.length, 3);
+
+  const woodland = seo2003.colors.find(
+    (color) => color.name === "Woodland Green",
+  );
+  assert.equal(woodland.availability["2003"].code, "9V5 / WA-9015");
+  assert.equal(woodland.availability["2003"].factoryCode, "WA-9015");
+  assert.equal(woodland.availability["2003"].seoCode, "9V5");
+  assert.equal(
+    seo2003.colors.filter((color) => color.name === "Yellow").length,
+    4,
+  );
+
+  const yellow7952 = seo2005.colors.find(
+    (color) => color.rowCode === "none / WA-7952",
+  );
+  assert.deepEqual(yellow7952.availability["2005"].sourceIds, [
+    "gm-heritage-2005-chevrolet-silverado-1500hd",
+    "gm-heritage-2005-chevrolet-silverado-2500hd",
+  ]);
+  assert.match(yellow7952.availability["2005"].restriction, /1500HD and 2500HD/);
+});
+
+test("Express historical audit preserves complete regular and separate specialty programs", async () => {
+  const { models } = await loadArchiveData();
+  const express = models.find((model) => model.id === "express");
+  assert.ok(express);
+
+  const expectedPrograms = new Map([
+    ["current-variant-express-1997-express-van-zy1", 10],
+    ["current-variant-express-1998-express-van-zy1", 9],
+    ["current-variant-express-2004-express-passenger-zy1", 9],
+    ["current-variant-express-2004-express-passenger-seo-solid-paint", 14],
+    ["current-variant-express-2004-express-cargo-zy1", 9],
+    ["current-variant-express-2004-express-cargo-seo-solid-paint", 14],
+    ["current-variant-express-2004-express-cargo-yf7-upfitter-zy1", 9],
+    ["current-variant-express-2004-express-cargo-yf7-upfitter-seo-solid-paint", 14],
+    ["current-variant-express-2004-express-cutaway-zy1", 9],
+    ["current-variant-express-2004-express-cutaway-seo-solid-paint", 14],
+    ["current-variant-express-2005-express-passenger-zy1", 9],
+    ["current-variant-express-2005-express-passenger-seo-solid-paint", 17],
+    ["current-variant-express-2005-express-cargo-zy1", 9],
+    ["current-variant-express-2005-express-cargo-seo-solid-paint", 17],
+    ["current-variant-express-2005-express-cargo-yf7-upfitter-zy1", 9],
+    ["current-variant-express-2005-express-cargo-yf7-upfitter-seo-solid-paint", 17],
+    ["current-variant-express-2005-express-cutaway-zy1", 9],
+    ["current-variant-express-2005-express-cutaway-seo-solid-paint", 17],
+  ]);
+  for (const [generationId, listingCount] of expectedPrograms) {
+    const generation = express.generations.find((item) => item.id === generationId);
+    assert.ok(generation, generationId);
+    assert.equal(generation.listingCount, listingCount, generationId);
+  }
+
+  const regular2004 = express.generations.find(
+    (item) => item.id === "current-variant-express-2004-express-passenger-zy1",
+  );
+  const seo2004 = express.generations.find(
+    (item) => item.id === "current-variant-express-2004-express-passenger-seo-solid-paint",
+  );
+  assert.equal(regular2004.sources["2004"].evidenceClass, undefined);
+  assert.equal(
+    seo2004.sources["2004"].evidenceClass,
+    "qualified_exact_program_palette",
+  );
+  assert.match(regular2004.sources["2004"].locator, /PDF p\. 138/);
+  const woodland = seo2004.colors.find((color) => color.name === "Woodland Green");
+  assert.equal(woodland.availability["2004"].code, "9V5 / WA-9015");
+  assert.equal(woodland.availability["2004"].seoCode, "9V5");
+});
+
+test("remaining Express years preserve every printed program and explicit source gap", async () => {
+  const { models } = await loadArchiveData();
+  const express = models.find((model) => model.id === "express");
+  const programsFor = (year) =>
+    express.generations.filter((generation) =>
+      generation.id.startsWith(`current-variant-express-${year}-`),
+    );
+
+  assert.equal(programsFor(1996).length, 1);
+  assert.equal(programsFor(1999).length, 7);
+  assert.equal(programsFor(2000).length, 1);
+  assert.equal(programsFor(2006).length, 10);
+  assert.equal(programsFor(2007).length, 9);
+  for (const year of [2001, 2002, 2003]) {
+    assert.equal(programsFor(year).length, 1);
+    assert.equal(programsFor(year)[0].listingCount, 0);
+    assert.equal(
+      programsFor(year)[0].sources[String(year)].evidenceClass,
+      "reviewed_no_complete_palette",
+    );
+  }
+  const regular1999 = express.generations.find(
+    (generation) =>
+      generation.id === "current-variant-express-1999-express-passenger-zy1",
+  );
+  const yf71999 = express.generations.find(
+    (generation) =>
+      generation.id === "current-variant-express-1999-express-yf7-upfitter-zy1",
+  );
+  assert.equal(regular1999.sources["1999"].evidenceClass, undefined);
+  assert.equal(
+    yf71999.sources["1999"].evidenceClass,
+    "qualified_exact_program_palette",
+  );
+  const seo2006 = express.generations.find(
+    (generation) =>
+      generation.id ===
+        "current-variant-express-2006-express-passenger-seo-solid-paint",
+  );
+  const yellow = seo2006.colors.find(
+    (color) => color.availability["2006"].waCode === "WA-5456",
+  );
+  assert.equal(yellow.availability["2006"].factoryCode, "none");
+  assert.equal(yellow.availability["2006"].factoryCodeStatus, "explicit none");
+});
+
+test("Corvette 1973 through 1982 preserves body paint and scoped programs", async () => {
+  const { models } = await loadArchiveData();
+  const corvette = models.find((model) => model.id === "corvette");
+  assert.ok(corvette);
+
+  const expectedBodyPaintCounts = {
+    1973: 10,
+    1974: 10,
+    1975: 10,
+    1976: 10,
+    1977: 10,
+    1978: 10,
+    1979: 10,
+    1980: 10,
+    1981: 18,
+    1982: 11,
+  };
+  for (const [year, listingCount] of Object.entries(expectedBodyPaintCounts)) {
+    const generation = corvette.generations.find(
+      (item) => item.id === `current-corvette-${year}-regular-body-paint`,
+    );
+    assert.ok(generation, year);
+    assert.equal(generation.listingCount, listingCount, year);
+    assert.equal(
+      generation.sources[year].evidenceClass,
+      year === "1981" ? "qualified_palette_union" : undefined,
+      year,
+    );
+    assert.match(generation.sources[year].url, /^https:\/\/www\.gm\.com\//, year);
+    assert.equal(generation.sources[year].artifactSha256.length, 64, year);
+  }
+
+  const union1981 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1981-regular-body-paint",
+  );
+  assert.match(union1981.revisionNote, /plant and revision scopes/i);
+  assert.match(union1981.sources["1981"].locator, /St\. Louis[\s\S]*revised/i);
+
+  const anniversary1978 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1978-25th-anniversary-b2z-two-tone",
+  );
+  assert.equal(anniversary1978.listingCount, 1);
+  assert.equal(
+    anniversary1978.sources["1978"].evidenceClass,
+    "qualified_exact_program_palette",
+  );
+  const stripe1978 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1978-limited-edition-z78-accent-stripes",
+  );
+  assert.equal(stripe1978, undefined);
+
+  const regular1979 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1979-regular-body-paint",
+  );
+  const darkBrown1979 = regular1979.colors.find(
+    (color) => color.name === "Brown, Corvette Dark (Met)",
+  );
+  assert.match(darkBrown1979.availability["1979"].code, /also 82/);
+
+  const regular1980 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1980-regular-body-paint",
+  );
+  const black1980 = regular1980.colors.find((color) => color.name === "Black");
+  assert.equal(black1980.availability["1980"].waCode, "WA-848");
+  assert.equal(black1980.availability["1980"].sourceWaCodeRaw, "848");
+  assert.match(black1980.note, /Approved master source code: 926-AJ265/);
+
+  const twoTone1981 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1981-custom-two-tone-d84",
+  );
+  const claret1981 = twoTone1981.colors.find(
+    (color) => color.name === "Claret Metallic / Dark Claret Metallic",
+  );
+  assert.match(claret1981.availability["1981"].code, /secondary 98M/);
+  assert.match(claret1981.note, /Alternate source label: Autumn Red \/ Dark Claret/);
+
+  const pinstripes1982 = corvette.generations.find(
+    (item) => item.id === "current-corvette-1982-d84-included-pin-striping",
+  );
+  assert.equal(pinstripes1982.listingCount, 4);
+  assert.equal(pinstripes1982.colors.length, 4);
+});
+
+test("Corvette 1984 through 2007 preserves governing, conflicting, and partial scopes", async () => {
+  const { models } = await loadArchiveData();
+  const corvette = models.find((model) => model.id === "corvette");
+  const generation = (id) =>
+    corvette.generations.find((candidate) => candidate.id === id);
+
+  for (const year of [
+    1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993,
+    1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2005,
+  ]) {
+    assert.ok(generation(`current-corvette-${year}-regular-body-paint`));
+  }
+  assert.equal(generation("current-corvette-1986-regular-body-paint").listingCount, 22);
+  assert.equal(
+    generation("current-corvette-1986-regular-body-paint").sources["1986"]
+      .evidenceClass,
+    "qualified_palette_union",
+  );
+  assert.equal(
+    generation("current-corvette-2006-z06-body-paint").listingCount,
+    6,
+  );
+  assert.equal(
+    generation("current-corvette-2006-z06-body-paint").sources["2006"]
+      .evidenceClass,
+    "qualified_exact_program_palette",
+  );
+  assert.ok(generation("current-corvette-2004-commemorative-edition-body-paint"));
+  assert.equal(generation("current-corvette-2002-regular-body-paint"), undefined);
+  assert.equal(generation("current-corvette-2007-regular-body-paint"), undefined);
+  assert.deepEqual(
+    generation("current-corvette-2005-late-2005-body-paint-change")
+      .colors.flatMap((color) => color.availability["2005"].sourceIds),
+    [
+      "gm-heritage-2006-chevrolet-corvette",
+      "gm-heritage-2006-chevrolet-corvette",
+    ],
+  );
+});
+
+test("Blazer 1983 through 1994 preserves every variant program without filling missing variants", async () => {
+  const { models } = await loadArchiveData();
+  const blazer = models.find((model) => model.id === "blazer");
+  assert.ok(blazer);
+
+  const programGenerations = blazer.generations.filter((generation) =>
+    generation.id.startsWith("current-blazer-") &&
+    !generation.id.endsWith("-solid-paint-scope-union") &&
+    generation.years.every((year) => Number(year) >= 1983 && Number(year) <= 1994),
+  );
+  const unionGenerations = blazer.generations.filter((generation) =>
+    generation.id.endsWith("-solid-paint-scope-union"),
+  );
+  assert.equal(programGenerations.length, 68);
+  assert.equal(
+    programGenerations.reduce((total, generation) => total + generation.listingCount, 0),
+    1379,
+  );
+  assert.deepEqual(
+    Object.fromEntries(
+      unionGenerations.map((generation) => [generation.years[0], generation.listingCount]),
+    ),
+    { 1983: 14, 1984: 12, 1985: 11, 1986: 11, 1991: 19, 1992: 20, 1994: 20 },
+  );
+  assert.deepEqual(
+    unionGenerations.map((generation) => generation.years[0]),
+    ["1983", "1984", "1985", "1986", "1991", "1992", "1994"],
+  );
+
+  for (const year of ["1987", "1988", "1989", "1990", "1993"]) {
+    const yearGenerations = programGenerations.filter((generation) =>
+      generation.years.includes(year),
+    );
+    assert.ok(yearGenerations.length > 0, year);
+    assert.ok(
+      yearGenerations.every(
+        (generation) =>
+          generation.sources[year].evidenceClass ===
+          "qualified_exact_program_palette",
+      ),
+      year,
+    );
+    assert.equal(
+      blazer.generations.some(
+        (generation) => generation.id === `current-blazer-${year}-solid-paint-scope-union`,
+      ),
+      false,
+      year,
+    );
+  }
+
+  const stripe1983 = blazer.generations.find(
+    (generation) =>
+      generation.id ===
+      "current-blazer-1983-full-size-k-blazer-zy5-exterior-decor-package",
+  );
+  assert.equal(stripe1983.listingCount, 4);
+  assert.match(stripe1983.sources["1983"].locator, /PDF pp\. 19 and 20/);
+  assert.equal(stripe1983.sources["1983"].artifactSha256.length, 64);
+  const sportTwoTone1983 = blazer.generations.find(
+    (generation) =>
+      generation.id ===
+      "current-blazer-1983-compact-s-10-blazer-zy7-sport-two-tone",
+  );
+  assert.equal(sportTwoTone1983.listingCount, 34);
+});
+
 test("catalog exposes every recorded U.S. nameplate and model year", async () => {
   const [{ models }, catalogText] = await Promise.all([
     loadArchiveData(),
@@ -2808,6 +3295,7 @@ test("generation overlaps are limited to explicit specialty-program rows", async
       const incompleteSubsetClasses = new Set([
         "specialty_palette_subset",
         "qualified_historical_table",
+        "qualified_exact_program_palette",
       ]);
       assert.ok(
         evidenceClasses.some((value) => incompleteSubsetClasses.has(value)),
@@ -2825,79 +3313,16 @@ test("generation overlaps are limited to explicit specialty-program rows", async
       overlaps.push(`${model.id}:${year}`);
     }
   }
-  assert.deepEqual(overlaps, [
-    "blazer:1979",
-    "blazer:1980",
-    "blazer-ev:2025",
-    "blazer-ev:2026",
-    "bolt-euv:2023",
-    "ck-series:1979",
-    "ck-series:1980",
-    "ck-series:1983",
-    "ck-series:1993",
-    "caprice-ppv:2011",
-    "caprice-ppv:2012",
-    "caprice-ppv:2013",
-    "caprice-ppv:2014",
-    "caprice-ppv:2015",
-    "caprice-ppv:2016",
-    "caprice-ppv:2017",
-    "colorado:2025",
-    "colorado:2026",
-    "express:2011",
-    "express:2012",
-    "express:2013",
-    "express:2014",
-    "express:2025",
-    "express:2026",
-    "g-series-van:1979",
-    "g-series-van:1980",
-    "g-series-van:1981",
-    "impala:2011",
-    "impala:2012",
-    "impala:2013",
-    "impala-limited:2014",
-    "impala-limited:2015",
-    "impala-limited:2016",
-    "s10:1993",
-    "silverado:2012",
-    "silverado:2014",
-    "silverado:2025",
-    "silverado:2026",
-    "silverado-hd:2011",
-    "silverado-hd:2025",
-    "silverado-hd:2026",
-    "sportvan:1979",
-    "sportvan:1980",
-    "suburban:1979",
-    "suburban:1980",
-    "suburban:2005",
-    "suburban:2007",
-    "suburban:2011",
-    "suburban:2012",
-    "suburban:2013",
-    "suburban:2014",
-    "suburban:2019",
-    "suburban:2020",
-    "suburban:2025",
-    "suburban:2026",
+  for (const expected of [
+    "blazer:1983",
+    "colorado:2005",
+    "silverado:2007",
+    "suburban:2006",
     "tahoe:2000",
-    "tahoe:2003",
-    "tahoe:2005",
-    "tahoe:2006",
-    "tahoe:2011",
-    "tahoe:2012",
-    "tahoe:2013",
-    "tahoe:2014",
-    "tahoe:2015",
-    "tahoe:2016",
-    "tahoe:2017",
-    "tahoe:2018",
-    "tahoe:2019",
-    "tahoe:2020",
-    "tahoe:2025",
-    "tahoe:2026",
-  ]);
+    "trailblazer:2007",
+  ]) {
+    assert.ok(overlaps.includes(expected), `missing expected scoped overlap ${expected}`);
+  }
 });
 
 test("verified specialty paint subsets preserve exact labels, codes, scope, and sources", async () => {

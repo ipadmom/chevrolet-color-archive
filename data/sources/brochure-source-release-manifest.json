@@ -2,12 +2,262 @@
   "schema_version": 1,
   "visibility": "public",
   "classification": "archive-internal",
-  "captured_at": "2026-08-04",
+  "captured_at": "2026-08-07",
   "repository": "ipadmom/chevrolet-color-archive",
   "release_tag": "brochure-source-archive-v1",
   "release_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/tag/brochure-source-archive-v1",
-  "scope": "Retained governing, reviewed-no-chart, supporting, carrier, and comparison sources for the 1963, 1969-1976, 1982, 1989, 1993, and 2000-2007 Chevrolet Suburban color audits and the 1995-2007 Chevrolet Tahoe audits, including retained Tahoe sales brochures, specification sheets, code guides, and police-configuration contracts, plus the complete 1963 comparison record: the GM truck kit, exact Service News extract, its complete parent issue, and the Corvair 95 paint-and-trim compilation. The archive also retains the 1979 Blazer and 1993 S-10 vehicle information kits, the 1980 Chevrolet truck color-and-trim kit, the 1981 Chevrolet G Van and Motorhome vehicle information kits, the 1983 Chevrolet truck color-and-trim kit, the 2011-2014 Chevrolet municipal and police manuals, the 2015-2017 Caprice PPV 9C1 specification guides, eleven exact 2015-2020 Tahoe 9C1/5W4, Impala Limited 9C1/9C3 Kerr, and Suburban 1FL/3500HD specification guides, the 2023 Bolt EUV SSV guide, the 2024-2026 Blazer EV municipal guides, two dated Blazer EV order-guide snapshots, and the April 14, 2026 Silverado 9C1 and 5W4 guides. It also retains 20 audited GM Fleet Guide artifacts covering 2008-2026, including the first retained 2025 revision with explicitly labeled 2024 Equinox EV and Traverse pages, and four audited 2022-2023 Chevrolet eBrochures that govern qualified modern palette unions. Original, retrieval, independent mirror, and parent URLs are recorded separately where applicable. No source or carrier states a reuse license. It also retains 31 exact official GM vehicle information kits used by the 1963-1972 Corvette, 1970-1979 Monte Carlo, and 1969-1978 P-Series and Step-Van audits, including reviewed partial evidence that was not promoted to a complete palette.",
+  "scope": "Retained governing, reviewed-no-chart, supporting, carrier, and comparison sources for the 1963, 1969-1976, 1982, 1989, 1993, and 2000-2007 Chevrolet Suburban color audits and the 1995-2007 Chevrolet Tahoe audits, including retained Tahoe sales brochures, specification sheets, code guides, and police-configuration contracts, plus the complete 1963 comparison record: the GM truck kit, exact Service News extract, its complete parent issue, and the Corvair 95 paint-and-trim compilation. The archive also retains the 1979 Blazer and 1993 S-10 vehicle information kits, the 1980 Chevrolet truck color-and-trim kit, the 1981 Chevrolet G Van and Motorhome vehicle information kits, the 1983 Chevrolet truck color-and-trim kit, the 2011-2014 Chevrolet municipal and police manuals, the 2015-2017 Caprice PPV 9C1 specification guides, eleven exact 2015-2020 Tahoe 9C1/5W4, Impala Limited 9C1/9C3 Kerr, and Suburban 1FL/3500HD specification guides, the 2023 Bolt EUV SSV guide, the 2024-2026 Blazer EV municipal guides, two dated Blazer EV order-guide snapshots, and the April 14, 2026 Silverado 9C1 and 5W4 guides. It also retains 20 audited GM Fleet Guide artifacts covering 2008-2026, including the first retained 2025 revision with explicitly labeled 2024 Equinox EV and Traverse pages, and four audited 2022-2023 Chevrolet eBrochures that govern qualified modern palette unions. Original, retrieval, independent mirror, and parent URLs are recorded separately where applicable. No source or carrier states a reuse license. It also retains 31 exact official GM vehicle information kits used by the 1963-1972 Corvette, 1970-1979 Monte Carlo, and 1969-1978 P-Series and Step-Van audits, including reviewed partial evidence that was not promoted to a complete palette. It also retains six exact 2003 and 2005 Silverado HD vehicle information kits used for complete regular solid paint unions and separately scoped SEO solid paint programs. The inventory also includes twelve verified modern supplemental sources and two retained access challenge artifacts that are explicitly rejected as evidence. It also retains 157 source artifacts used by audited current Chevrolet nameplates.",
   "entries": [
+    {
+      "asset_name": "1935-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1935-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "a939c6a14262bf169058343a7776a8259fcdb288ef13d1d3ad83ce2fda6ab5f9",
+      "bytes": 3472131,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1935-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1935-Chevrolet.pdf",
+      "pdf_page_count": 99
+    },
+    {
+      "asset_name": "1936-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1936-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "ff43aa784f049a8f2ff6fb14c82f55a5dbd17e8ee0559b220bf8163bfe8dadc9",
+      "bytes": 5464962,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1936-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1936-Chevrolet.pdf",
+      "pdf_page_count": 127
+    },
+    {
+      "asset_name": "1937-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1937-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "618183d89f765e6f6b7e95a4da629219290d68100afe80334694608d7a8fc2e0",
+      "bytes": 1726369,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1937-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1937-Chevrolet.pdf",
+      "pdf_page_count": 47
+    },
+    {
+      "asset_name": "1938-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1938-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "536c24bb90cc62c85fbcdd0e2774fdf68310e842e69aa7f608a74f0dd4f88045",
+      "bytes": 5189075,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1938-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1938-Chevrolet.pdf",
+      "pdf_page_count": 73
+    },
+    {
+      "asset_name": "1939-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1939-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "20d130bbb4b051fe071b74103ec55486d247065f7e753784a6a9064313d72ba5",
+      "bytes": 2677595,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1939-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1939-Chevrolet.pdf",
+      "pdf_page_count": 70
+    },
+    {
+      "asset_name": "1940-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1940-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "8ed26799cb127ca7710152190250547f99fbd895ef6908f5b06d5b1bc5f0e07a",
+      "bytes": 2623828,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1940-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1940-Chevrolet.pdf",
+      "pdf_page_count": 97
+    },
+    {
+      "asset_name": "1941-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1941-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "e31c67f595b11242a183b36deb33b3cff5325ad61feb7587d59113e4288a818e",
+      "bytes": 8742058,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1941-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1941-Chevrolet.pdf",
+      "pdf_page_count": 157
+    },
+    {
+      "asset_name": "1942-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1942-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "b458ebba7d75386a39aef66ac13c6e4e15ff5fcb0db43b598dcac06c443f0923",
+      "bytes": 2276415,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1942-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1942-Chevrolet.pdf",
+      "pdf_page_count": 81
+    },
+    {
+      "asset_name": "1946-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1946-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "78f0dffc79519ac370595a9a8916c6e992613e986a152e3daf8471903c796205",
+      "bytes": 2007608,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1946-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1946-Chevrolet.pdf",
+      "pdf_page_count": 41
+    },
+    {
+      "asset_name": "1947-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1947-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "21ee60a6707fa9aef974e90ce38c5fcc706b681cfa00e7188a30ed6f123ba41a",
+      "bytes": 2484497,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1947-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1947-Chevrolet.pdf",
+      "pdf_page_count": 101
+    },
+    {
+      "asset_name": "1948-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1948-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "dcd4c46ab9d7518c2db439b813507b60bfbf03d39d65d4e2ec16e906c485adb6",
+      "bytes": 2042633,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1948-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1948-Chevrolet.pdf",
+      "pdf_page_count": 47
+    },
+    {
+      "asset_name": "1949-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1949-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "9fd5e0408ed5244d586e68e12d92e39844280a21d7c59203fc616ece0615f78c",
+      "bytes": 1440053,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1949-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1949-Chevrolet.pdf",
+      "pdf_page_count": 37
+    },
+    {
+      "asset_name": "1950-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1950-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "7f651f6ebdbfe3f6f3ccfb6eb1e2d31b2f3804281bdb687f5651b2e161a5d634",
+      "bytes": 1904223,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1950-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1950-Chevrolet.pdf",
+      "pdf_page_count": 49
+    },
+    {
+      "asset_name": "1951-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1951-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "02cc77ad64bc3421b09a1d4344a10e1853d5e9693382405c3ade37f02b220903",
+      "bytes": 1945779,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1951-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1951-Chevrolet.pdf",
+      "pdf_page_count": 87
+    },
+    {
+      "asset_name": "1952-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1952-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "a50e1e14e86425480c7f00c28d703f2218ea5556110b435390b6faef0afbded1",
+      "bytes": 1875781,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1952-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1952-Chevrolet.pdf",
+      "pdf_page_count": 53
+    },
+    {
+      "asset_name": "1953-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1953-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "a5c5efaf23db4d2c04ab4f6579c7202e553aa179466916a139145b1b8909fe79",
+      "bytes": 2571168,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1953-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1953-Chevrolet.pdf",
+      "pdf_page_count": 75
+    },
+    {
+      "asset_name": "1954-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1954-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "6d1937c59b638c56e12936ed1d091f7186f72180b94d3199f488caa99e854c7f",
+      "bytes": 2008595,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1954-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1954-Chevrolet.pdf",
+      "pdf_page_count": 57
+    },
+    {
+      "asset_name": "1955-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1955-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "95dceb4425e0e1ad46a31a135692b4333521d065539df9c512d4914ed9298ec3",
+      "bytes": 3828731,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1955-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1955-Chevrolet.pdf",
+      "pdf_page_count": 97
+    },
+    {
+      "asset_name": "1956-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1956-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "79ed537610668542d89b9e7138c3cf3c50ecc0ea69ca77d0a7f1b84136eb0a06",
+      "bytes": 2359672,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1956-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1956-Chevrolet.pdf",
+      "pdf_page_count": 59
+    },
+    {
+      "asset_name": "1957-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1957-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "89a935b4e439c483f30d7d45cb127ba70cdf3a30b273f75206db6682370ea600",
+      "bytes": 5079722,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1957-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1957-Chevrolet.pdf",
+      "pdf_page_count": 145
+    },
+    {
+      "asset_name": "1958-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1958-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "aad9cda5032d41c12fbda71882bb43d5def757f1ec03972b0129c8492f53bb63",
+      "bytes": 2609667,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1958-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1958-Chevrolet.pdf",
+      "pdf_page_count": 75
+    },
+    {
+      "asset_name": "1959-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1959-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "240173ee8447d115b74d4fcbf8719580070b6c406d19d20c7f9f66ef25c2e994",
+      "bytes": 6028122,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1959-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1959-Chevrolet.pdf",
+      "pdf_page_count": 165
+    },
+    {
+      "asset_name": "1960-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1960-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "52811766dbf5c21736304579a8248ea104fc70184c1565481d07ec7be7959311",
+      "bytes": 3605590,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1960-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1960-Chevrolet.pdf",
+      "pdf_page_count": 128
+    },
+    {
+      "asset_name": "1961-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1961-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "9ac7a55a8e702a42dcd6f7afe35aad1b5f6d6e98786a30e23ed249933c48943e",
+      "bytes": 3754296,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1961-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1961-Chevrolet.pdf",
+      "pdf_page_count": 103
+    },
+    {
+      "asset_name": "1962-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1962-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "f5299e89272c4771fe5a53cd74d6a125f477910b0d178bb6ca93923766b1933a",
+      "bytes": 7330107,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1962-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1962-Chevrolet.pdf",
+      "pdf_page_count": 126
+    },
     {
       "asset_name": "1962-october-chevrolet-service-news-vol-34-no-9.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1962-october-chevrolet-service-news-vol-34-no-9.pdf",
@@ -72,6 +322,16 @@
       "pdf_page_count": 119
     },
     {
+      "asset_name": "1964-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1964-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "4611feeb8cdf8983fea6910abd184d439db6b851335e15bb7ef52c459a807ca0",
+      "bytes": 5364133,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1964-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1964-Chevrolet.pdf",
+      "pdf_page_count": 161
+    },
+    {
       "asset_name": "1965-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1965-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "sha256": "049cf2e957d41d7fe34b96612bf4102d85a60f2a8f9eb3c53a1b448a194cef43",
@@ -80,6 +340,16 @@
       "source_id": "gm-heritage-1965-chevrolet-corvette",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1965-Chevrolet-Corvette.pdf",
       "pdf_page_count": 99
+    },
+    {
+      "asset_name": "1965-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1965-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "fe17c4f99901dafde3895207b6f29eeab35bfac245147b4c71c47e87821ce99e",
+      "bytes": 4602182,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1965-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1965-Chevrolet.pdf",
+      "pdf_page_count": 137
     },
     {
       "asset_name": "1966-chevrolet-corvette-vehicle-information-kit-gm.pdf",
@@ -92,6 +362,16 @@
       "pdf_page_count": 105
     },
     {
+      "asset_name": "1966-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1966-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "50a3b8d8444ea34f9457ed87c4d803f63d9ba21496baef26f7094c1931ac7a73",
+      "bytes": 3611644,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1966-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1966-Chevrolet.pdf",
+      "pdf_page_count": 138
+    },
+    {
       "asset_name": "1967-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1967-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "sha256": "30c1f0ae34e13b2e14f8abd45ad8797de2b2152209529fb5c06e178251d75c8c",
@@ -102,6 +382,16 @@
       "pdf_page_count": 85
     },
     {
+      "asset_name": "1967-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1967-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "2ab4a341705e8aa4f9c7a1b61b68aa9dae381e0687e8e78efa6f970c543e6f7a",
+      "bytes": 3148449,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1967-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1967-Chevrolet.pdf",
+      "pdf_page_count": 95
+    },
+    {
       "asset_name": "1968-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1968-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "sha256": "1d9c80702b58a04027f528ff24329803bba18489ec1b5873e251141f1be93fc4",
@@ -110,6 +400,26 @@
       "source_id": "gm-heritage-1968-chevrolet-corvette",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1968-Chevrolet-Corvette.pdf",
       "pdf_page_count": 139
+    },
+    {
+      "asset_name": "1968-chevrolet-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1968-chevrolet-vehicle-information-kit-gm.pdf",
+      "sha256": "40561f8261e615cb66810badadc4b30125fe881f0230d955a586e32dc2fa3eb1",
+      "bytes": 3092926,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1968-chevrolet",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1968-Chevrolet.pdf",
+      "pdf_page_count": 97
+    },
+    {
+      "asset_name": "1969-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1969-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "0d58bb4bd859f4b82f308a7a59c9e854bbd8283d6fb76723a8b136341a31087a",
+      "bytes": 1258422,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1969-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 32
     },
     {
       "asset_name": "1969-chevrolet-corvette-vehicle-information-kit-gm.pdf",
@@ -150,6 +460,16 @@
       "source_id": "gm-heritage-1969-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1969-Chevrolet-Suburban.pdf",
       "pdf_page_count": 34
+    },
+    {
+      "asset_name": "1970-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1970-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "32f8c0f7180bde3344a0549dfa12b398d8429a2b65574655a32bbda0ac3d600e",
+      "bytes": 1220579,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1970-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1970-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 10
     },
     {
       "asset_name": "1970-chevrolet-corvette-vehicle-information-kit-gm.pdf",
@@ -242,6 +562,16 @@
       "pdf_page_count": 17
     },
     {
+      "asset_name": "1972-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "976c8e45080abc6b372cbd09d2313f2c68d2524b94f3b99d3a239f2aee1c927d",
+      "bytes": 1610101,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1972-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1972-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 12
+    },
+    {
       "asset_name": "1972-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1972-chevrolet-corvette-vehicle-information-kit-gm.pdf",
       "sha256": "14155e664b176334a36c30c5b9d6a42c35694a693c701d76474449bec6603bc6",
@@ -282,6 +612,16 @@
       "pdf_page_count": 19
     },
     {
+      "asset_name": "1973-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "88609b7a681d82260758c80197a72ff50f1421f9e93a168e99671505a8182dd4",
+      "bytes": 2307892,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1973-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 69
+    },
+    {
       "asset_name": "1973-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "sha256": "e1dc6515c3db8cde2990f10660720eba4f79be5e2f98be0c4844c5c6c544d705",
@@ -310,6 +650,16 @@
       "source_id": "gm-heritage-1973-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Suburban.pdf",
       "pdf_page_count": 29
+    },
+    {
+      "asset_name": "1974-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "f0f445f60f5b9a7ea3ca5b6a17b307530590de53f6d0162b42fe75948baa157d",
+      "bytes": 2801491,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1974-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 95
     },
     {
       "asset_name": "1974-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
@@ -342,6 +692,26 @@
       "pdf_page_count": 29
     },
     {
+      "asset_name": "1975-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "d7c329c839b10a8dd4023cce5c4f50dcced34ec7efb88f5e8838bb897881f805",
+      "bytes": 3139432,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1975-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 36
+    },
+    {
+      "asset_name": "1975-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "963dbf287aa17baead0627b1327800a80b4f97e090ba7f989b81a91daf67b249",
+      "bytes": 3139580,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1975-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 105
+    },
+    {
       "asset_name": "1975-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "sha256": "57c75e86b7b754d0d9a1d425b65693140d4b01fefd14782196930c50485f2700",
@@ -370,6 +740,26 @@
       "source_id": "gm-heritage-1975-chevrolet-suburban",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Suburban.pdf",
       "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1976-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "24544dcf3279059aa984f548449d93837eca7cd3ac87e88cbc51bfb74bab182d",
+      "bytes": 1471056,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1976-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 12
+    },
+    {
+      "asset_name": "1976-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "f539f278356b76c27f17adbf085610ff323234b77aeb08c93b0e03d7078497e0",
+      "bytes": 3446464,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1976-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 119
     },
     {
       "asset_name": "1976-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
@@ -402,6 +792,26 @@
       "pdf_page_count": 28
     },
     {
+      "asset_name": "1977-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "4223ebf3990554e1bdc64ab1a4f646808233e353a4de120d7688d1413f4916ef",
+      "bytes": 2204918,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1977-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 12
+    },
+    {
+      "asset_name": "1977-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "e80e54c3ce24311b07dca8069c47a8828653106d735313b9a69d87f563215066",
+      "bytes": 3013388,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1977-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 111
+    },
+    {
       "asset_name": "1977-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "sha256": "c630e124f0f24b527385eb1874a6c08c7f73066e726e66034b44943f742512f2",
@@ -420,6 +830,26 @@
       "source_id": "gm-heritage-1977-chevrolet-motorhome",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Motorhome.pdf",
       "pdf_page_count": 13
+    },
+    {
+      "asset_name": "1978-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "e9793915d376aa27e4480a2481a504da692a64a1162c5570adc916d41d1ba036",
+      "bytes": 13364447,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1978-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 64
+    },
+    {
+      "asset_name": "1978-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "3f6a192c84dd7e9bf063c9e5f5c7ffa296e695effbf50067732bffeaa43fdcfc",
+      "bytes": 4241261,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1978-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 153
     },
     {
       "asset_name": "1978-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
@@ -452,6 +882,16 @@
       "pdf_page_count": 22
     },
     {
+      "asset_name": "1979-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "54b85d8fdbdfe3da84430944080b80e4fd2da0a796cf2e459213dfeaea0e16dc",
+      "bytes": 3716859,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1979-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 133
+    },
+    {
       "asset_name": "1979-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-monte-carlo-vehicle-information-kit-gm.pdf",
       "sha256": "d862313a154d3d0fac8a8f4c3951805e8d8a79a1b1657d95e97b2989d22eed73",
@@ -462,6 +902,26 @@
       "pdf_page_count": 143
     },
     {
+      "asset_name": "1980-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "bdb8781e14b6e241e957803d95d6fbade51da6800be962104039be149408b004",
+      "bytes": 2942641,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1980-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1980-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1980-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "89e0c59aed90f0a3115f1e2280380d17752488c29f76287b0269884be503e84f",
+      "bytes": 2965188,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1980-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1980-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 111
+    },
+    {
       "asset_name": "1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "sha256": "b44e4e8af7bba172885d003d5f88d2dab55bcefb5a15d0ce124b9a181ed89008",
@@ -470,6 +930,26 @@
       "source_id": "gm-1980-chevrolet-truck-color-trim",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1980-Chevrolet-Truck.pdf",
       "pdf_page_count": 125
+    },
+    {
+      "asset_name": "1981-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "fd4f8740b0f26c40d34ba184fdbb2d8cbb733171b5a147e69d04081d0296db74",
+      "bytes": 846769,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1981-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1981-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 22
+    },
+    {
+      "asset_name": "1981-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "16152d059ade39fc89b456bffbfa1882e86dd0433e5d1316593581aa7ce3c0ca",
+      "bytes": 2039579,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1981-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1981-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 75
     },
     {
       "asset_name": "1981-chevrolet-g-van-vehicle-information-kit-gm.pdf",
@@ -490,6 +970,16 @@
       "source_id": "gm-heritage-1981-chevrolet-motorhome",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1981-Chevrolet-Motorhome.pdf",
       "pdf_page_count": 50
+    },
+    {
+      "asset_name": "1982-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "e44d8544f31cdc816482d2c47892e68fc4455567337d0226766b77155d1aa807",
+      "bytes": 2189192,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1982-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1982-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 75
     },
     {
       "asset_name": "1982-chevrolet-suburban-brochure-xr793.pdf",
@@ -521,6 +1011,26 @@
       "pdf_page_count": 115
     },
     {
+      "asset_name": "1983-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1983-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "fec3e514628f876891a848379e8107c70169cc7e9950e097dc8febb0695b333e",
+      "bytes": 2134866,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1983-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1983-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1983-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1983-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "d05108b287b35e5b81713f7a28bc6e2cff25fee14c1231bb50138c48ae2bcbdc",
+      "bytes": 814073,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1983-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1983-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 18
+    },
+    {
       "asset_name": "1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1983-chevrolet-truck-vehicle-information-kit-gm.pdf",
       "sha256": "4e8b447e6617d7be8b9c56fa4ef6e1e5e62918c8d8d45c5abc71f74e5ee04ce1",
@@ -529,6 +1039,156 @@
       "source_id": "gm-1983-chevrolet-truck-color-trim",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet-trucks/1983-Chevrolet-Truck.pdf",
       "pdf_page_count": 181
+    },
+    {
+      "asset_name": "1984-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1984-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "2bc25387bf879f78b5546385a40a3d44a2632f9c24e6bcef373f72612e68e703",
+      "bytes": 3589066,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1984-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1984-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1984-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1984-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "6dbd700c27084548ea8a10ab355f7a4e5b70c3317ab67baa13ef22f4a5ff0fcc",
+      "bytes": 1991189,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1984-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1984-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 79
+    },
+    {
+      "asset_name": "1984-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1984-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "35188ff3b96495e0433e07c12e25831a266c951839cae2ea30f03a920145e98f",
+      "bytes": 1108245,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1984-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1984-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 24
+    },
+    {
+      "asset_name": "1985-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1985-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "fa43850aa5022c957a58b8969a229bb0071ab8ff26c8cf0a089b1adc78d76b9b",
+      "bytes": 3113801,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1985-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1985-Chevrolet-Blazer_RV_Full-Size.pdf",
+      "pdf_page_count": 22
+    },
+    {
+      "asset_name": "1985-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1985-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "9552a830a2b34fa4432ec7d8eaffbbb21332316dd7c32c462c83fe23465f5b55",
+      "bytes": 3249041,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1985-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1985-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 93
+    },
+    {
+      "asset_name": "1985-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1985-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "7a621bd8940112f1f650e6403cb4ff7259e8a2d856859c55d774eb7984b2158e",
+      "bytes": 1440562,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1985-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1985-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 36
+    },
+    {
+      "asset_name": "1986-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1986-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "c52ef78a3ca0c88c129fdf8a45ba929db020aa587693c95acb8410b399dbbf8e",
+      "bytes": 3213590,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1986-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1986-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 22
+    },
+    {
+      "asset_name": "1986-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1986-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "a52ccd2e9a2c74aad2dc4ae3be939b4ad844e9cd0c3b860ff33bd730bd383235",
+      "bytes": 3342180,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1986-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1986-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 115
+    },
+    {
+      "asset_name": "1986-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1986-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "15c9a8c36afc54f48be5c6d713b2dd2adcc34b50b6a99232ad8ec112e9308f38",
+      "bytes": 1504653,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1986-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1986-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 40
+    },
+    {
+      "asset_name": "1987-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1987-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "56c5917bc53aa6b6e1da791dbf761af801e579b819169f0d50e0364b07db5643",
+      "bytes": 3621785,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1987-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1987-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 77
+    },
+    {
+      "asset_name": "1987-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1987-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "79c9f25617e53bf4424a33aaab972dce2c7005b0c8f4ae71531db6985d2333aa",
+      "bytes": 2125764,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1987-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1987-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 48
+    },
+    {
+      "asset_name": "1988-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1988-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "522b42317812e9d3167d7475d7a5fa0e105362d1643c38b5bd69fac8aaccc94e",
+      "bytes": 4174904,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1988-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1988-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 135
+    },
+    {
+      "asset_name": "1988-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1988-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "ff55d63c53d463c5538837ff567504f94477a64308b57596c77557a67c9080d7",
+      "bytes": 1040175,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1988-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1988-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1989-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "dccda1a61061101607cef63e64e982194451957cf0d5c3676ad1569930c138d8",
+      "bytes": 3837643,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1989-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1989-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1989-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1989-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "1d55f70e903a06afe83c7211b77b7c708ea00ea1d9b23b3e0788ce064135daa7",
+      "bytes": 5494573,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1989-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1989-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 183
     },
     {
       "asset_name": "1989-chevrolet-suburban-brochure-xr793.pdf",
@@ -567,6 +1227,96 @@
       "role": "comparison_source",
       "original_source_url": "https://xr793.com/wp-content/uploads/2025/03/1989-Chevrolet-Trucks-Full-Line.pdf",
       "pdf_page_count": 38
+    },
+    {
+      "asset_name": "1990-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1990-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "6863b8df1713f86fe6a14ebc7337f1608adb3b81a1eef1dfe85e36777c11cb4b",
+      "bytes": 747966,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1990-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1990-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1990-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1990-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "b6e460650ffefad5320522f4c01d3db444db370ea0d1a93bbfefbc8661d46c86",
+      "bytes": 7372640,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1990-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1990-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 209
+    },
+    {
+      "asset_name": "1990-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1990-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "6c5d041fc42318936f241eaed9ee5180046d1164ed0199dd89ae29f75270a40e",
+      "bytes": 1092980,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1990-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1990-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "1991-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1991-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "0cc8230c006c49275e55a2edd5ab54c5e4f4890588b2d0f67745659745d078fe",
+      "bytes": 696343,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1991-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1991-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1991-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1991-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "004158ab51c983d8b614e8771086c113804b2721939dfc202881d577d5a896e9",
+      "bytes": 1758905,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1991-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1991-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 61
+    },
+    {
+      "asset_name": "1991-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1991-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "6b5e1707a837679efa2ef42137a158d81b8c8770547cc69ec7c9f44b2a8aef80",
+      "bytes": 1105297,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1991-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1991-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 24
+    },
+    {
+      "asset_name": "1992-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1992-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "db6ccf7c2de87d9f540d02076269aa5858ee688d2b7a87d6fe8394db3ae847bc",
+      "bytes": 2517088,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1992-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1992-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1992-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "d9b230327be2903dc46150149f9beb32501256f55878da19a94a85b74f32fd8a",
+      "bytes": 24804036,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1992-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 214
+    },
+    {
+      "asset_name": "1992-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1992-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "be253bb51d8d68620b553c58c6adfd5995ee7f2038fa6d69d2089e6845e155c4",
+      "bytes": 953323,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1992-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1992-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 24
     },
     {
       "asset_name": "1993-chevrolet-blazer-suburban-brochure-image-01.jpg",
@@ -705,6 +1455,26 @@
       "original_source_url": "https://poshmark.com/listing/1993-Chevy-BlazersSuburban-Sales-Brochure-68080685b14a060a76921027"
     },
     {
+      "asset_name": "1993-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "d30a8e3d3b065e07d0339ea3dab94864d060f45c45a043d3f40c49129051d944",
+      "bytes": 1343705,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1993-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 40
+    },
+    {
+      "asset_name": "1993-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "6336acfee9b9f4856f74747c1dce99b0814fd06c22aff1eef68de41d25ff0d4d",
+      "bytes": 10293158,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1993-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 223
+    },
+    {
       "asset_name": "1993-chevrolet-full-line-brochure-xr793.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-full-line-brochure-xr793.pdf",
       "sha256": "c187be3f400eb8268ed302cc62bd902f5cdcff0710904a490019d4a3eef57d2d",
@@ -721,6 +1491,16 @@
       "role": "comparison_source",
       "original_source_url": "https://gmt400.info/wp-content/uploads/2023/09/1993-Chevrolet-Truck.pdf",
       "pdf_page_count": 94
+    },
+    {
+      "asset_name": "1993-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1993-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "65a737c031b1ca2f0ed28bec9218d07d99a721d90e636b9531188e1e86b28ed5",
+      "bytes": 857434,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1993-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1993-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 28
     },
     {
       "asset_name": "1993-chevrolet-s-10-vehicle-information-kit-gm.pdf",
@@ -762,6 +1542,66 @@
       "pdf_page_count": 13
     },
     {
+      "asset_name": "1994-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1994-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "b5efcd31850a65f7b12fdcd4d7cf8804dc9737076bacf4a7a68095dc46e7153b",
+      "bytes": 678847,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1994-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1994-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1994-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "beaa6f8b681f0e1e6119015570cea6070e0731c2d1d577dd5c5e2db3cd1e8eb8",
+      "bytes": 6331705,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1994-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 171
+    },
+    {
+      "asset_name": "1994-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1994-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "198f6b618ac21ec32c315d577fd96e20a48ebaa79a4cbf938497fc09ef01ef56",
+      "bytes": 1412174,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1994-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1994-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 56
+    },
+    {
+      "asset_name": "1995-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "868c8f37048631a0b04f91a8a45de649ca9013cba29c34579cd44ee70a5a5fbe",
+      "bytes": 1244476,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1995-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 10
+    },
+    {
+      "asset_name": "1995-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "e85ec87570bea6b15064f9c930767941b4b7af1530f420fa4b198a6219873f2b",
+      "bytes": 5669023,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1995-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 167
+    },
+    {
+      "asset_name": "1995-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "c03c5d579d3b4eb5d4233f6b113f95428254bf9cfa39d916ef879ca5af4086c5",
+      "bytes": 1713165,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1995-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 10
+    },
+    {
       "asset_name": "1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1995-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "sha256": "4049fe25311a8482f5c40db31eacda7946e0ac39aa44e750cad23c8dc5eb1ec7",
@@ -770,6 +1610,46 @@
       "source_id": "gm-heritage-1995-chevrolet-tahoe",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1995-Chevrolet-Tahoe.pdf",
       "pdf_page_count": 20
+    },
+    {
+      "asset_name": "1996-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "582f051a19688bda8e8673a7bd251b42728a2805e7181c7d0dacae454a501c51",
+      "bytes": 2341154,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1996-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 26
+    },
+    {
+      "asset_name": "1996-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "f122ff7e207a7cbcbc2b707d03bd4e67806870f5962d32d32b853ebd4d6934c4",
+      "bytes": 9173738,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1996-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 157
+    },
+    {
+      "asset_name": "1996-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "sha256": "ab08a6e92b13d07b659617fb7214b732f49b1bd35ad9f8545d2111deb743617b",
+      "bytes": 2955878,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1996-chevrolet-g-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-G-Van.pdf",
+      "pdf_page_count": 114
+    },
+    {
+      "asset_name": "1996-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1996-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "a107cdf2f23f42c38819db16e4c50b58392208d1d3accc369b3367db8be301e5",
+      "bytes": 1408696,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1996-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1996-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 19
     },
     {
       "asset_name": "1996-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
@@ -782,6 +1662,36 @@
       "pdf_page_count": 39
     },
     {
+      "asset_name": "1997-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "8ba57216d9a604cf784de47a745ff20767839150048a3b97de9fefe63a2da6e8",
+      "bytes": 1833770,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1997-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 51
+    },
+    {
+      "asset_name": "1997-chevrolet-express-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-express-vehicle-information-kit-gm.pdf",
+      "sha256": "c61460e26d3592116ea5ba6e2685179a6f14d1d92d7bc9d4c1cf1f91680fe398",
+      "bytes": 1562918,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1997-chevrolet-express",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Express.pdf",
+      "pdf_page_count": 87
+    },
+    {
+      "asset_name": "1997-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "c4ad902cf216ac6d7683239b8b19d1300be6be3b26d38317a4d9b88631580548",
+      "bytes": 896519,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1997-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 31
+    },
+    {
       "asset_name": "1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1997-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "sha256": "8e1612dd85ecaa7320cc4fd4c66f439a57a5f93a3bffc026a8c62ec55992e7bb",
@@ -790,6 +1700,36 @@
       "source_id": "gm-heritage-1997-chevrolet-tahoe",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1997-Chevrolet-Tahoe.pdf",
       "pdf_page_count": 41
+    },
+    {
+      "asset_name": "1998-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "5397d901f48a61b856b959646362d612a19defe0201dec4349a39631d6dea7a6",
+      "bytes": 1683665,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1998-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 51
+    },
+    {
+      "asset_name": "1998-chevrolet-express-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-express-vehicle-information-kit-gm.pdf",
+      "sha256": "56274497852e601036556a805765cda99bd35665e93d7a549831b9b8b48ac01a",
+      "bytes": 1359927,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1998-chevrolet-express",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-Express.pdf",
+      "pdf_page_count": 63
+    },
+    {
+      "asset_name": "1998-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1998-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "0d228ac4270d9f0b7dd5666f8dca1a0f23f36d6e296e06408785121c639cf927",
+      "bytes": 793832,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1998-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1998-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 23
     },
     {
       "asset_name": "1998-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
@@ -802,6 +1742,36 @@
       "pdf_page_count": 55
     },
     {
+      "asset_name": "1999-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "6642de78f723b4cb15bbad0fd504d0fb40f33dc127e2f06d04cad2f89996d746",
+      "bytes": 3144491,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1999-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 93
+    },
+    {
+      "asset_name": "1999-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-g-van-vehicle-information-kit-gm.pdf",
+      "sha256": "54ba2e9ef9e60c890ba9155f2e88b5fe9aa1f713d5a5c44cddb0b8cb21eac5b6",
+      "bytes": 3266823,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-1999-chevrolet-g-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-G-Van.pdf",
+      "pdf_page_count": 120
+    },
+    {
+      "asset_name": "1999-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-s-10-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "ccd059ae9447e58a84e900aeef3c8c5d62708aab924d77efb04163535e42ecea",
+      "bytes": 1831705,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-1999-chevrolet-s-10-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-S-10-Blazer.pdf",
+      "pdf_page_count": 58
+    },
+    {
       "asset_name": "1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1999-chevrolet-tahoe-vehicle-information-kit-gm.pdf",
       "sha256": "e1f9cd07d4c6a2b0e18b4c28900c9ba9c5834eeabc18d12d38239dae183f3735",
@@ -810,6 +1780,36 @@
       "source_id": "gm-heritage-1999-chevrolet-tahoe",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1999-Chevrolet-Tahoe.pdf",
       "pdf_page_count": 71
+    },
+    {
+      "asset_name": "2000-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "0fc2ba0c42e675672d5a53eb8a7bfc3f15b2d994de4825f66ed33eec3b69ea93",
+      "bytes": 15651584,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2000-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 118
+    },
+    {
+      "asset_name": "2000-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "30f1fee980a2b8ae572a46a92f2a0f032484196bcbc7ef3d72a6315f1992b916",
+      "bytes": 13543044,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2000-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 108
+    },
+    {
+      "asset_name": "2000-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2000-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "sha256": "9b8b3f588894c0733de014e8f28a7632572e077d9683a8d6908f7e7afdf196a3",
+      "bytes": 13641113,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2000-chevrolet-express-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2000-Chevrolet-Express-Van.pdf",
+      "pdf_page_count": 140
     },
     {
       "asset_name": "2000-chevrolet-suburban-vehicle-information-kit-gm.pdf",
@@ -876,6 +1876,46 @@
       "parent_source_url": "https://www.gmt400.com/threads/gmt400-tahoe-z71.67412/"
     },
     {
+      "asset_name": "2001-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "bedfbc01a4b808dc6ae6384693de087d308d843fd09dee47b9bd4b467c340b0a",
+      "bytes": 13429465,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2001-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 114
+    },
+    {
+      "asset_name": "2001-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "23b0855bd8ec0ffa9826229f9af660c3e4a26e1e5ce8ce98fcae3ea3c190b85f",
+      "bytes": 15231991,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2001-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 114
+    },
+    {
+      "asset_name": "2001-chevrolet-silverado-hd-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-silverado-hd-vehicle-information-kit-gm.pdf",
+      "sha256": "10b03021d49f6be257d013be5352f3c7525e23095e40646564528a7fc3515617",
+      "bytes": 20982124,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2001-chevrolet-silverado-hd",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Silverado-HD.pdf",
+      "pdf_page_count": 160
+    },
+    {
+      "asset_name": "2001-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "sha256": "c26a39fd1dbb2bc26c08464279b77c462e3535218347e6ac12be739df7fe693e",
+      "bytes": 21874167,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2001-chevrolet-silverado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Silverado.pdf",
+      "pdf_page_count": 174
+    },
+    {
       "asset_name": "2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-suburban-vehicle-information-kit-gm.pdf",
       "sha256": "fd24c0732861c15cb7754db8138c94fe6945fe76a4a90ee54400dc98bc98085a",
@@ -894,6 +1934,46 @@
       "source_id": "gm-heritage-2001-chevrolet-tahoe",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Tahoe.pdf",
       "pdf_page_count": 128
+    },
+    {
+      "asset_name": "2002-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "7b3e1b6732ca5c4de515726c4aebd26c80f751f796e97d4000a459ad513bbbbd",
+      "bytes": 13152732,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2002-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 106
+    },
+    {
+      "asset_name": "2002-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "400719752c91743f96d166c17fe4431efb8f32ac0e1e1f363804d54c17f27340",
+      "bytes": 13693696,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2002-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 98
+    },
+    {
+      "asset_name": "2002-chevrolet-silverado-hd-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-silverado-hd-vehicle-information-kit-gm.pdf",
+      "sha256": "947458c5c984f45579fa478c509503f687d67ad01d827c92531712e1e6afed05",
+      "bytes": 17718053,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2002-chevrolet-silverado-hd",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Silverado-HD.pdf",
+      "pdf_page_count": 136
+    },
+    {
+      "asset_name": "2002-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "sha256": "e6e054e554cba7e20d532a0edab0e2d4d1ebf332915360ed19de7148f88ae168",
+      "bytes": 20442659,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2002-chevrolet-silverado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Silverado.pdf",
+      "pdf_page_count": 160
     },
     {
       "asset_name": "2002-chevrolet-suburban-brochure-auto-brochures.pdf",
@@ -936,6 +2016,76 @@
       "pdf_page_count": 102
     },
     {
+      "asset_name": "2002-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "sha256": "efa342a6fe05e6e5bf7f314ee34d88decb5e8c07ece577c69473bbb14859d5e6",
+      "bytes": 8558580,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2002-chevrolet-trailblazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Trailblazer.pdf",
+      "pdf_page_count": 84
+    },
+    {
+      "asset_name": "2003-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "e70803dd12a8d9212263c996a57f4dd04ab61274e59746f46a0c33e4e2fd9220",
+      "bytes": 25216574,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2003-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 158
+    },
+    {
+      "asset_name": "2003-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "794399ec8f41e35eb5789870782edf2e17585bcf101a3504f457b71d1affa330",
+      "bytes": 18382601,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2003-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 128
+    },
+    {
+      "asset_name": "2003-chevrolet-silverado-1500-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-1500-vehicle-information-kit-gm.pdf",
+      "sha256": "642e252566d819bff0eb91b1e0bfff79480e9acaa8b5fdcbaa174cfc6694fcf4",
+      "bytes": 36770697,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2003-chevrolet-silverado-1500",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-1500.pdf",
+      "pdf_page_count": 210
+    },
+    {
+      "asset_name": "2003-chevrolet-silverado-2500-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-2500-vehicle-information-kit-gm.pdf",
+      "sha256": "3ef230d8de762f959a010c0b21aa11717611f2ef14b94139e06d46b3ba79376a",
+      "bytes": 56946284,
+      "role": "controlling_exact_current_nameplate_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-2003-chevrolet-silverado-2500",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-2500.pdf",
+      "pdf_page_count": 304
+    },
+    {
+      "asset_name": "2003-chevrolet-silverado-3500-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-3500-vehicle-information-kit-gm.pdf",
+      "sha256": "c855e85a1fc777b8384aeff466edaf453d68a13c41a3664466cd47326f3f6afe",
+      "bytes": 54995249,
+      "role": "controlling_exact_current_nameplate_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-2003-chevrolet-silverado-3500",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-3500.pdf",
+      "pdf_page_count": 310
+    },
+    {
+      "asset_name": "2003-chevrolet-silverado-ss-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-ss-vehicle-information-kit-gm.pdf",
+      "sha256": "bc318594730a42f22d057c31367bb1ac38a4b7d6c256e8216380a18a3c9ae144",
+      "bytes": 31093762,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2003-chevrolet-silverado-ss",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-SS.pdf",
+      "pdf_page_count": 210
+    },
+    {
       "asset_name": "2003-chevrolet-suburban-brochure-auto-brochures.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-suburban-brochure-auto-brochures.pdf",
       "sha256": "67569652d048c8aaf091a3534dbd1809d9d6c0efcbc0784f2cf54c6cceb6aab7",
@@ -974,6 +2124,66 @@
       "source_id": "gm-heritage-2003-chevrolet-tahoe",
       "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Tahoe.pdf",
       "pdf_page_count": 182
+    },
+    {
+      "asset_name": "2003-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "sha256": "11cf96181ebe12bb85ed9090a355ecf0136918003d31108f511d0a7b130dd54f",
+      "bytes": 27570629,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2003-chevrolet-trailblazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Trailblazer.pdf",
+      "pdf_page_count": 180
+    },
+    {
+      "asset_name": "2004-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "1811a5fbd850cdb78354122dc8307d18c652b939b260515fd8132170fdda2121",
+      "bytes": 10626486,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2004-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 102
+    },
+    {
+      "asset_name": "2004-chevrolet-colorado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-colorado-vehicle-information-kit-gm.pdf",
+      "sha256": "9e6fcced8d18d6026a761bac9ddb9b6a941b48c55911f954c8fb1b275cc55bfe",
+      "bytes": 11300307,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2004-chevrolet-colorado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Colorado.pdf",
+      "pdf_page_count": 110
+    },
+    {
+      "asset_name": "2004-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "124d9a3835b75fb27359902a416b6705a95dc21d75008b2305ad7be207b652e3",
+      "bytes": 10916772,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2004-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 104
+    },
+    {
+      "asset_name": "2004-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "sha256": "aa43ae825440baf4a6e688fbf7fc42b5e29e4b35f220f71d3ac070ce803039cd",
+      "bytes": 47443818,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2004-chevrolet-express-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Express-Van.pdf",
+      "pdf_page_count": 276
+    },
+    {
+      "asset_name": "2004-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "sha256": "4306dc41146589b9507f08c4a8038a9a16b0def1c2e519fef891fb6db04bcb5c",
+      "bytes": 28504623,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2004-chevrolet-silverado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Silverado.pdf",
+      "pdf_page_count": 238
     },
     {
       "asset_name": "2004-chevrolet-suburban-service-color-table.png",
@@ -1015,6 +2225,16 @@
       "pdf_page_count": 120
     },
     {
+      "asset_name": "2004-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "sha256": "9e613ce12fb7d7d95a350f69475c9331bb79178a9d428043ef4fc2117cce4e16",
+      "bytes": 11632477,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2004-chevrolet-trailblazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Trailblazer.pdf",
+      "pdf_page_count": 110
+    },
+    {
       "asset_name": "2004-sherwin-williams-gm-color-compatibility-guide.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-sherwin-williams-gm-color-compatibility-guide.pdf",
       "sha256": "3bd3709b52baae003adf94126fc63e49c64c7b9b46d817b4035910932b73bdd5",
@@ -1031,6 +2251,116 @@
       "bytes": 1428651,
       "role": "comparison_source",
       "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2004_sw_domestic_colorboo.pdf",
+      "pdf_page_count": 132
+    },
+    {
+      "asset_name": "2005-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-blazer-vehicle-information-kit-gm.pdf",
+      "sha256": "0434571ccb4918cef0f3ba586e3fdb5b27ac1f4e9d2fd8f239086e710b5ab053",
+      "bytes": 15755723,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2005-chevrolet-blazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Blazer.pdf",
+      "pdf_page_count": 124
+    },
+    {
+      "asset_name": "2005-chevrolet-colorado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-colorado-vehicle-information-kit-gm.pdf",
+      "sha256": "d012255e8ed1fb1fbcfcfa058cd3a111ec81fbfe5be730a2983b73fdc73a5ffe",
+      "bytes": 28237127,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2005-chevrolet-colorado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Colorado.pdf",
+      "pdf_page_count": 172
+    },
+    {
+      "asset_name": "2005-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "45172972a9a255e87c555eb6822ce1f30bda0087955603267bcf4dfd3b9b994f",
+      "bytes": 13746141,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 110
+    },
+    {
+      "asset_name": "2005-chevrolet-equinox-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-equinox-vehicle-information-kit-gm.pdf",
+      "sha256": "8c8d075774945c99c8a772ed25ca3c2e356066eb2045f7bc068783efed88aec7",
+      "bytes": 11939668,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2005-chevrolet-equinox",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Equinox.pdf",
+      "pdf_page_count": 100
+    },
+    {
+      "asset_name": "2005-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "sha256": "fb96a1ef6317df9aac520b2188a53f341b2d2ee3ba28564fa0c249293d349e90",
+      "bytes": 37005017,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-express-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Express-Van.pdf",
+      "pdf_page_count": 236
+    },
+    {
+      "asset_name": "2005-chevrolet-silverado-1500-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-1500-vehicle-information-kit-gm.pdf",
+      "sha256": "54a60b498c2a81dd42d81a715c8f2a132f01dcc2fcd0162a9fd84e86789adc15",
+      "bytes": 34439118,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2005-chevrolet-silverado-1500",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-1500.pdf",
+      "pdf_page_count": 204
+    },
+    {
+      "asset_name": "2005-chevrolet-silverado-1500hd-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-1500hd-vehicle-information-kit-gm.pdf",
+      "sha256": "3bd59ca10fb83fc2a25e7a698ac3ce41c271ed80914ef6aa911cd5014396fd57",
+      "bytes": 17307119,
+      "role": "controlling_exact_current_nameplate_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-silverado-1500hd",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-1500HD.pdf",
+      "pdf_page_count": 132
+    },
+    {
+      "asset_name": "2005-chevrolet-silverado-2500hd-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-2500hd-vehicle-information-kit-gm.pdf",
+      "sha256": "c8076d4dec55077d2d46ce7e426c675b67863ee225958bf1f037e0e5db9700a2",
+      "bytes": 30017319,
+      "role": "controlling_exact_current_nameplate_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-silverado-2500hd",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-2500HD.pdf",
+      "pdf_page_count": 216
+    },
+    {
+      "asset_name": "2005-chevrolet-silverado-3500hd-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-3500hd-vehicle-information-kit-gm.pdf",
+      "sha256": "aab1239ef7e10370cbefdf60335b62d88bbd70735909195ee5027de4048f8c46",
+      "bytes": 29390716,
+      "role": "controlling_exact_current_nameplate_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-silverado-3500hd",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-3500HD.pdf",
+      "pdf_page_count": 212
+    },
+    {
+      "asset_name": "2005-chevrolet-silverado-chassis-cab-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-chassis-cab-vehicle-information-kit-gm.pdf",
+      "sha256": "fab4752c866898e2c24db8623ecc41648a3d8a732465c4eddf8e1c43c66db313",
+      "bytes": 24350266,
+      "role": "controlling_exact_current_nameplate_palette_vehicle_information_kit",
+      "source_id": "gm-heritage-2005-chevrolet-silverado-chassis-cab",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-Chassis-Cab.pdf",
+      "pdf_page_count": 190
+    },
+    {
+      "asset_name": "2005-chevrolet-silverado-ss-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-ss-vehicle-information-kit-gm.pdf",
+      "sha256": "57a019b37a6272acb0ba824e1456fe9ebf54e26050a3bc264b27ec28f2546867",
+      "bytes": 16684375,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2005-chevrolet-silverado-ss",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-SS.pdf",
       "pdf_page_count": 132
     },
     {
@@ -1076,6 +2406,16 @@
       "pdf_page_count": 148
     },
     {
+      "asset_name": "2005-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "sha256": "163b3297bdeeefa385d8ea502fe675810a3b470ce461ea7be47a91bbf2221da7",
+      "bytes": 26113990,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2005-chevrolet-trailblazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Trailblazer.pdf",
+      "pdf_page_count": 182
+    },
+    {
       "asset_name": "2005-new-jersey-tahoe-police-contract.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-new-jersey-tahoe-police-contract.pdf",
       "sha256": "74f219fe7c2ccc7141e0a15098c421a02e2aad198421344effeb4f2c19897cfa",
@@ -1094,6 +2434,36 @@
       "source_id": "sherwin-williams-gm-2005-color-compatibility-guide",
       "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/nl/nl-nl/pdfs/swaf-2005_gm_ccg.pdf",
       "pdf_page_count": 43
+    },
+    {
+      "asset_name": "2006-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "sha256": "b2ac5a50499d55ebbc52d50686921b31fddc385a442766d2da6388f4825805c0",
+      "bytes": 16791367,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2006-chevrolet-corvette",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Corvette.pdf",
+      "pdf_page_count": 122
+    },
+    {
+      "asset_name": "2006-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "sha256": "0f26ae80c40fb3f86da6fb35a8830555441f4cfc9ced994fff989c83293beac4",
+      "bytes": 34269290,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2006-chevrolet-express-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Express-Van.pdf",
+      "pdf_page_count": 222
+    },
+    {
+      "asset_name": "2006-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "sha256": "70787af3e823023d09c0f843be7206a5775ee72aeefa997799514c664aa42082",
+      "bytes": 65281698,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2006-chevrolet-silverado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Silverado.pdf",
+      "pdf_page_count": 390
     },
     {
       "asset_name": "2006-chevrolet-tahoe-spec-sheet.pdf",
@@ -1128,6 +2498,16 @@
       "pdf_page_count": 204
     },
     {
+      "asset_name": "2006-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "sha256": "0c94c541002c4981b14235296a35d70d347fb96749ccda554bfbc67e511a6e7f",
+      "bytes": 31835174,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2006-chevrolet-trailblazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Trailblazer.pdf",
+      "pdf_page_count": 195
+    },
+    {
       "asset_name": "2006-new-jersey-tahoe-police-contract.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-new-jersey-tahoe-police-contract.pdf",
       "sha256": "9a6ce020fbd6ecdba97094ebc15c748118d7d1d95b5888f358f8d6436dbf0e7f",
@@ -1146,6 +2526,46 @@
       "source_id": "sherwin-williams-gm-2006-color-compatibility-guide",
       "original_source_url": "https://industrial.sherwin-williams.com/content/dam/pcg/sherwin-williams/automotive/emeai/de/de-de/pdfs/marketing-uploads/swaf-2006_gm_ccg.pdf",
       "pdf_page_count": 40
+    },
+    {
+      "asset_name": "2007-chevrolet-colorado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-colorado-vehicle-information-kit-gm.pdf",
+      "sha256": "9a434ad4eb2fe76006e6e29d032278a398725bd9819cd9344ccadcd849064a30",
+      "bytes": 46370400,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2007-chevrolet-colorado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Colorado.pdf",
+      "pdf_page_count": 238
+    },
+    {
+      "asset_name": "2007-chevrolet-equinox-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-equinox-vehicle-information-kit-gm.pdf",
+      "sha256": "65fb8b5b8095505f677f20f1a65fa50ef473e504025a2a66f9bbb120cb644e63",
+      "bytes": 16778106,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2007-chevrolet-equinox",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Equinox.pdf",
+      "pdf_page_count": 114
+    },
+    {
+      "asset_name": "2007-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-express-van-vehicle-information-kit-gm.pdf",
+      "sha256": "41ebba829f083762ba57276262d2c57e9c53bcaff2c8f86906ba639c9646bb3f",
+      "bytes": 35364623,
+      "role": "controlling_current_nameplate_color_audit_vehicle_information_kit",
+      "source_id": "gm-heritage-2007-chevrolet-express-van",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Express-Van.pdf",
+      "pdf_page_count": 233
+    },
+    {
+      "asset_name": "2007-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-silverado-vehicle-information-kit-gm.pdf",
+      "sha256": "0491c6179d2cc7f0223ce8ed0673d7d0d01edf718c805ac5b74a4840869a5dc7",
+      "bytes": 66571736,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2007-chevrolet-silverado",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Silverado.pdf",
+      "pdf_page_count": 397
     },
     {
       "asset_name": "2007-chevrolet-suburban-vehicle-information-kit-gm.pdf",
@@ -1168,6 +2588,16 @@
       "pdf_page_count": 206
     },
     {
+      "asset_name": "2007-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "sha256": "f35a2938212b4aa11041bc4616d7cb3c3a4f108491347cfa91ccb79b3a92d12b",
+      "bytes": 28456594,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-heritage-2007-chevrolet-trailblazer",
+      "original_source_url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Trailblazer.pdf",
+      "pdf_page_count": 170
+    },
+    {
       "asset_name": "2008-gm-fleet-guide-v2-mirror.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-gm-fleet-guide-v2-mirror.pdf",
       "sha256": "d9bcb174998f30051e0da47f5cd4fe02eae1afa97af1d04b71f9c06689050ac7",
@@ -1178,6 +2608,26 @@
       "pdf_page_count": 121
     },
     {
+      "asset_name": "2008-import-advanced-color-information.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-import-advanced-color-information.pdf",
+      "sha256": "8a1d2655b3ce29c2e6e51685de7d395c61e63c4e522d7c6684bcfa8644e6da28",
+      "bytes": 78437,
+      "role": "supporting_qualified_refinish_color_index",
+      "source_id": "standox-color-index-us-2008-isuzu-npr-nqr",
+      "original_source_url": "https://colornetws.com/InfinityMsdsPds/Standox%20Product%20Info/Color%20Charts/2008%20ADV%20INFO%20IMPORT%20NOV%2007.pdf",
+      "pdf_page_count": 45
+    },
+    {
+      "asset_name": "2008-new-jersey-malibu-classic-fleet-contract.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2008-new-jersey-malibu-classic-fleet-contract.pdf",
+      "sha256": "b3660874a56e721286dc5ec811a7d0af4970f511f87f4321aedea85efa047a41",
+      "bytes": 268006,
+      "role": "controlling_qualified_fleet_configuration_contract",
+      "source_id": "new-jersey-contract-us-2008-malibu-classic",
+      "original_source_url": "https://www.nj.gov/treasury/purchase/noa/attachments/a0099-Section2.pdf",
+      "pdf_page_count": 17
+    },
+    {
       "asset_name": "2009-gm-fleet-guide-v2-mirror.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-gm-fleet-guide-v2-mirror.pdf",
       "sha256": "402f99dddb300b7862315a90ec94b8e69416e71aa043141af0e7c23c8e39ae79",
@@ -1186,6 +2636,15 @@
       "source_id": "gm-fleet-guide-us-2009-v2",
       "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2009-GM-Fleet-Guide-V2.pdf",
       "pdf_page_count": 139
+    },
+    {
+      "asset_name": "2009-isuzu-n-series-colors.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2009-isuzu-n-series-colors.html",
+      "sha256": "b8c382e061f27fc6496acbb90b07a8a480ffcd9ae9870c57a3f1376bb3096662",
+      "bytes": 247642,
+      "role": "supporting_qualified_trade_press_source",
+      "source_id": "work-truck-online-us-2009-isuzu-n-series",
+      "original_source_url": "https://www.worktruckonline.com/news/isuzu-truck-announces-2009-n-series-low-cab-forward-trucks"
     },
     {
       "asset_name": "2010-gm-fleet-guide-mirror.pdf",
@@ -1206,6 +2665,27 @@
       "source_id": "gm-2011-police-manual",
       "original_source_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/2011_Chevrolet-Police-Technical-Manual.pdf",
       "pdf_page_count": 182
+    },
+    {
+      "asset_name": "2011-chevrolet-volt-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-volt-brochure.pdf",
+      "sha256": "1ccc11f0b33839a0ebc4c43ef2c55635e9e8ba23b45e618fda57a1d6486a5c4f",
+      "bytes": 3092406,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-brochure-us-2011-volt",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Volt/Chevrolet_US%20Volt_2011.pdf",
+      "pdf_page_count": 28
+    },
+    {
+      "asset_name": "2011-chevrolet-volt-ordering-workbook.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2011-chevrolet-volt-ordering-workbook.html",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "bytes": 3038,
+      "role": "rejected_access_challenge_not_evidence",
+      "source_id": null,
+      "original_source_url": "https://www.slideshare.net/slideshow/2011-volt-brochure/7581535",
+      "status": "access_challenge_not_evidence",
+      "reason": "The retrieved object is a client challenge page and contains no workbook content. It is not cited or ingested."
     },
     {
       "asset_name": "2011-gm-fleet-guide-mirror.pdf",
@@ -1288,6 +2768,24 @@
       "pdf_page_count": 37
     },
     {
+      "asset_name": "2015-chevrolet-captiva-sport-colors.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-colors.html",
+      "sha256": "032644fa9b2aea80421a8d2e48e6bbe6d0ea91f416e830a916957b238e1e312e",
+      "bytes": 140861,
+      "role": "supporting_qualified_contemporary_vehicle_catalog",
+      "source_id": "autoweb-us-2015-captiva-sport",
+      "original_source_url": "https://www.autoweb.com/chevrolet/captiva-sport-fleet/2015"
+    },
+    {
+      "asset_name": "2015-chevrolet-captiva-sport-paint-fitment.html",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-captiva-sport-paint-fitment.html",
+      "sha256": "bd08b3c596814ab6a31f0e2e67fdbfe0a396bf8efe7b296ffbf2becee1ffdfa0",
+      "bytes": 213801,
+      "role": "supporting_color_code_parts_fitment",
+      "source_id": "gm-parts-fitment-us-2015-captiva-sport",
+      "original_source_url": "https://www.gmpartsgiant.com/parts-list/2015-chevrolet-captiva_sport/front_end_sheet_metal_heater/paint_touch_up.html"
+    },
+    {
       "asset_name": "2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2015-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
       "sha256": "e6247f215d4ea186b39a663eccd6454a27ad3adf05134e11318a19be39981f94",
@@ -1328,6 +2826,16 @@
       "pdf_page_count": 37
     },
     {
+      "asset_name": "2016-chevrolet-cruze-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-cruze-brochure.pdf",
+      "sha256": "5a9a80a34c4c02e27a5b7a25564ce1d3f2217316dade7daddb73aad2b1ecd17c",
+      "bytes": 2930813,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-brochure-us-2016-cruze",
+      "original_source_url": "https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2016-cruze.pdf",
+      "pdf_page_count": 30
+    },
+    {
       "asset_name": "2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-impala-limited-9c1-9c3-specification-guide-gm.pdf",
       "sha256": "74f946e2a505d2c113002afc75188871e0f9b5f20361a42167d8329ec8b731fd",
@@ -1336,6 +2844,16 @@
       "source_id": "gm-2016-impala-limited-9c1-9c3",
       "original_source_url": "https://www.gmupfitter.com/wp-content/uploads/2021/05/2016-Impala-Limited-Police-Specification-Guide.pdf",
       "pdf_page_count": 36
+    },
+    {
+      "asset_name": "2016-chevrolet-low-cab-forward-upfitter-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2016-chevrolet-low-cab-forward-upfitter-guide.pdf",
+      "sha256": "f39a6e4e18bb0b54342a4f3837808caa1b0dde50a9da3e725c683c4261f2d7db",
+      "bytes": 44720349,
+      "role": "controlling_qualified_palette_upfitter_guide",
+      "source_id": "gm-upfitter-us-2016-low-cab-forward",
+      "original_source_url": "https://www.gmupfitter.com/wp-content/uploads/2021/07/FFF_2016_LCF_060716_V2.pdf",
+      "pdf_page_count": 198
     },
     {
       "asset_name": "2016-chevrolet-tahoe-5w4-specification-guide-gm.pdf",
@@ -1366,6 +2884,16 @@
       "source_id": "gm-fleet-guide-us-2016-november",
       "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2016-GM-Fleet-Guide-November-Update.pdf",
       "pdf_page_count": 148
+    },
+    {
+      "asset_name": "2017-chevrolet-bolt-ev-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2017-chevrolet-bolt-ev-brochure.pdf",
+      "sha256": "2fee3a2cc9d5784204430b70d01ce386f9546207b8ea86197baa7202e50c4698",
+      "bytes": 36277199,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-brochure-us-2017-bolt-ev",
+      "original_source_url": "https://evnet.ca/wp-content/uploads/2019/10/2017-Bolt.pdf",
+      "pdf_page_count": 18
     },
     {
       "asset_name": "2017-chevrolet-caprice-ppv-9c1-specification-guide-gm.pdf",
@@ -1416,6 +2944,26 @@
       "source_id": "gm-fleet-guide-us-2018",
       "original_source_url": "https://xr793.com/wp-content/uploads/2021/03/2018-GM-Fleet-Guide.pdf",
       "pdf_page_count": 126
+    },
+    {
+      "asset_name": "2019-chevrolet-blazer-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-brochure.pdf",
+      "sha256": "fe4f6a320fe73504e5a07b5231f57ce859aa8d51c0bb381eec1b2be10bd1847a",
+      "bytes": 23590932,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-brochure-us-2019-blazer",
+      "original_source_url": "https://cdn.dealereprocess.org/cdn/brochures/chevrolet/2019-blazer.pdf",
+      "pdf_page_count": 31
+    },
+    {
+      "asset_name": "2019-chevrolet-blazer-order-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2019-chevrolet-blazer-order-guide.pdf",
+      "sha256": "6f74bc108077a4fd3ff8984bd83bf293042cf8b14276ed9806fff0c538cff07c",
+      "bytes": 204478,
+      "role": "controlling_exact_palette_order_guide",
+      "source_id": "gm-order-guide-us-2019-blazer",
+      "original_source_url": "https://gmauthority.com/blog/wp-content/uploads/2018/09/2019-Chevrolet-Blazer-Order-Guide-September-7-2018.pdf",
+      "pdf_page_count": 45
     },
     {
       "asset_name": "2019-chevrolet-suburban-1fl-3500hd-specification-guide-gm.pdf",
@@ -1548,6 +3096,16 @@
       "pdf_page_count": 32
     },
     {
+      "asset_name": "2023-chevrolet-traverse-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-chevrolet-traverse-brochure.pdf",
+      "sha256": "fb71400d95f3e9b17af4d2f91db0a216e1a763e00b8e6b60162febec674638bb",
+      "bytes": 3721580,
+      "role": "controlling_qualified_palette_brochure",
+      "source_id": "chevrolet-brochure-us-2023-traverse-carryover-2024-limited",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Traverse/Chevrolet_US%20Traverse_2023.pdf",
+      "pdf_page_count": 25
+    },
+    {
       "asset_name": "2023-gm-fleet-guide-v3-mirror.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2023-gm-fleet-guide-v3-mirror.pdf",
       "sha256": "697423b1c274d8fe30f9e58fc5dc9ecf365d119f7f1155f54dc4c3fd9d8484ef",
@@ -1566,6 +3124,18 @@
       "source_id": "gm-2024-blazer-ev-9c1-9c3",
       "original_source_url": "https://www.gmupfitter.com/wp-content/uploads/2023/12/2024-BLAZER-EV-9C1-Municipal-Specification-Guide-V112525.pdf",
       "pdf_page_count": 54
+    },
+    {
+      "asset_name": "2024-chevrolet-traverse-limited-carryover.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2024-chevrolet-traverse-limited-carryover.txt",
+      "sha256": "c676251624953b0311023a8269743a455da3d6e649ff29c61a4eda64becffcf5",
+      "bytes": 513,
+      "role": "rejected_access_challenge_not_evidence",
+      "source_id": null,
+      "original_source_url": "https://gmauthority.com/blog/gm/chevrolet/traverse/2024-chevrolet-traverse-limited/",
+      "status": "access_challenge_not_evidence",
+      "reason": "The retrieved object is a bot verification notice and contains no article content. It is not cited or ingested.",
+      "retrieval_url": "https://r.jina.ai/http://gmauthority.com/blog/gm/chevrolet/traverse/2024-chevrolet-traverse-limited/"
     },
     {
       "asset_name": "2024-gm-fleet-guide-v3-mirror.pdf",
@@ -1670,6 +3240,66 @@
       "pdf_page_count": 184
     },
     {
+      "asset_name": "chevrolet-2002-silverado-sales-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2002-silverado-sales-brochure.pdf",
+      "sha256": "7f37acf61d79277737e1e301edee2d6c54fd2d75c258d8e102f6d0ca91e9499b",
+      "bytes": 3870610,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "chevrolet-2002-silverado-sales-brochure",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Silverado/Chevrolet_US%20Silverado_2002.pdf",
+      "pdf_page_count": 29
+    },
+    {
+      "asset_name": "chevrolet-2004-colorado-us-sales-brochure.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2004-colorado-us-sales-brochure.pdf",
+      "sha256": "ac2397a0912d98803b94a0c3793bacc2f6970561760392aa13b7e2a51e57f4bc",
+      "bytes": 1326171,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "chevrolet-2004-colorado-us-sales-brochure",
+      "original_source_url": "https://www.auto-brochures.com/makes/Chevrolet/Colorado/Chevrolet_US%20Colorado_2004.pdf",
+      "pdf_page_count": 17
+    },
+    {
+      "asset_name": "chevrolet-2004-silverado-hd-spec-sheet.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2004-silverado-hd-spec-sheet.pdf",
+      "sha256": "0469cba0a28cde1aeda9a63c2e40fb3a341f4455c485546064e60c172d166357",
+      "bytes": 380117,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "chevrolet-2004-silverado-hd-spec-sheet",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2021/11/2004-Chevrolet-Silverado-HD-Spec-Sheet.pdf",
+      "pdf_page_count": 2
+    },
+    {
+      "asset_name": "chevrolet-2004-silverado-spec-sheet.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2004-silverado-spec-sheet.pdf",
+      "sha256": "737156f331b9208c86e44b4cd81138533e89b1656289d918ddcdad1b49e8c661",
+      "bytes": 246226,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "chevrolet-2004-silverado-spec-sheet",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2021/11/2004-Chevrolet-Silverado-Spec-Sheet.pdf",
+      "pdf_page_count": 2
+    },
+    {
+      "asset_name": "chevrolet-2006-colorado-select-specifications.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2006-colorado-select-specifications.pdf",
+      "sha256": "d3e73586ce5f7f0e519f0f4e9aaf14ef8260394e70ed769a8c132479b43528d1",
+      "bytes": 1268568,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "chevrolet-2006-colorado-select-specifications",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Colorado-Spec-Sheet.pdf",
+      "pdf_page_count": 2
+    },
+    {
+      "asset_name": "chevrolet-2007-silverado-1500-select-specifications.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2007-silverado-1500-select-specifications.pdf",
+      "sha256": "b11b141b6de8ed6dc81dc4cd5c1131630ada3c6842fe53af44aafb97bd4ef5ab",
+      "bytes": 911153,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "chevrolet-2007-silverado-1500-select-specifications",
+      "original_source_url": "https://directechs.blob.core.windows.net/directwirebrochures/brochure2172_0.pdf",
+      "pdf_page_count": 2
+    },
+    {
       "asset_name": "corvair95-paint-trim-refinish-codes.pdf",
       "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/corvair95-paint-trim-refinish-codes.pdf",
       "sha256": "083bbdc28cd5e2e494a4285fbd786487f081a48a62d8edeab49fb3d0df3fbca5",
@@ -1679,6 +3309,36 @@
       "original_source_url": "https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf",
       "pdf_page_count": 11,
       "retrieval_url": "https://web.archive.org/web/20240519115026id_/https://www.corvair.org/chapters/corvanatics/files/resources/PainTrimRefinCodes.pdf"
+    },
+    {
+      "asset_name": "gm-2007-fleet-guide.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/gm-2007-fleet-guide.pdf",
+      "sha256": "7d5663ef6d3b265a1fb5a67346a291e0dffb7d3902009ff7ae04d79f2853f079",
+      "bytes": 11817075,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-2007-fleet-guide",
+      "original_source_url": "https://xr793.com/wp-content/uploads/2020/03/2007-GM-Fleet-Guide.pdf",
+      "pdf_page_count": 121
+    },
+    {
+      "asset_name": "gm-canada-2006-chevrolet-equinox-brochure-xr793.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/gm-canada-2006-chevrolet-equinox-brochure-xr793.pdf",
+      "sha256": "a64ee530c103a449a5dbb8ec1069671b85eeedad65a2c93217e1638b956117a9",
+      "bytes": 2999115,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "gm-canada-2006-chevrolet-equinox-brochure-xr793",
+      "original_source_url": "https://www.xr793.com/wp-content/uploads/2020/05/2006-Chevrolet-Equinox-CN.pdf",
+      "pdf_page_count": 24
+    },
+    {
+      "asset_name": "new-jersey-purchase-bureau-2006-suburban-2500-commercial-2wd.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/new-jersey-purchase-bureau-2006-suburban-2500-commercial-2wd.pdf",
+      "sha256": "86128cbc377720d55099ab0c61c308aff6628e78841d7927b9bf377c8c29fced",
+      "bytes": 289887,
+      "role": "current_nameplate_color_audit_source_artifact",
+      "source_id": "new-jersey-purchase-bureau-2006-suburban-2500-commercial-2wd",
+      "original_source_url": "https://www.nj.gov/treasury/purchase/noa/attachments/a2007-sec7.pdf",
+      "pdf_page_count": 36
     },
     {
       "asset_name": "source-sha256-manifest-141-reviewed.txt",
@@ -1698,6 +3358,55 @@
       "role": "checksum_manifest_snapshot",
       "source_id": null,
       "original_source_url": null
+    },
+    {
+      "asset_name": "source-sha256-manifest-180-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-180-reviewed.txt",
+      "sha256": "c590c21f4ea61cc10ef86410ce7970ba2a603165ee6e43c7636b2ddc8f88aed1",
+      "bytes": 21099,
+      "role": "checksum_manifest_snapshot",
+      "source_id": null,
+      "original_source_url": null
+    },
+    {
+      "asset_name": "source-sha256-manifest-195-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-195-reviewed.txt",
+      "sha256": "80d81714aaabb1be4325212da4b06795e027246b9d989bcab0c1adca7bc0b312",
+      "bytes": 22695,
+      "role": "checksum_manifest_snapshot",
+      "source_id": null,
+      "original_source_url": null,
+      "covered_asset_count": 195
+    },
+    {
+      "asset_name": "source-sha256-manifest-254-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-254-reviewed.txt",
+      "sha256": "248998c8609aa706528f8faf8c016383d501e48c040b1b25fbea580952919e95",
+      "bytes": 29836,
+      "role": "checksum_manifest_snapshot",
+      "source_id": null,
+      "original_source_url": null,
+      "covered_asset_count": 254
+    },
+    {
+      "asset_name": "source-sha256-manifest-260-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-260-reviewed.txt",
+      "sha256": "f054d0455e0a960b37499081ea39005962f19c635b25836d801968b0fd77af5f",
+      "bytes": 30550,
+      "role": "checksum_manifest_snapshot",
+      "source_id": null,
+      "original_source_url": null,
+      "covered_asset_count": 260
+    },
+    {
+      "asset_name": "source-sha256-manifest-344-reviewed.txt",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/source-sha256-manifest-344-reviewed.txt",
+      "sha256": "5440c75b5cdc4bff34c5a748d256c59695688fa9a372c029f257f968e91a0cd1",
+      "bytes": 40384,
+      "role": "checksum_manifest_snapshot",
+      "source_id": null,
+      "original_source_url": null,
+      "covered_asset_count": 344
     },
     {
       "asset_name": "source-sha256-manifest.txt",

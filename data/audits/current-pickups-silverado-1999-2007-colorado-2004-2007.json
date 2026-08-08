@@ -1,0 +1,3016 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "market": "United States",
+  "visibility": "public",
+  "audit_as_of": "2026-08-07",
+  "dataset_kind": "current_nameplate_historical_variant_color_tables",
+  "scope": "Exact-year exterior-color audit for Chevrolet Silverado model years 1999 through 2007 and Chevrolet Colorado model years 2004 through 2007. Regular paint, two-tone paint, SEO or fleet paint, stripes, and SS or Classic variants remain separate. A Silverado 1500 claim is never projected to Silverado HD, a Silverado HD claim is never projected to Silverado 1500, and no color is projected across an adjacent model year.",
+  "method": {
+    "source_priority": [
+      "Retained official General Motors Heritage vehicle information kits",
+      "Official Chevrolet sales brochures or specification sheets preserved by third-party document mirrors",
+      "Official General Motors fleet guides preserved by third-party document mirrors"
+    ],
+    "source_integrity": "Every retained GM Heritage PDF is identified by the SHA-256 hash and byte count in the crawler artifact ledger. Every external PDF used for a color claim was fetched in full during this audit and hashed in memory; it was not added to the crawler or a GitHub release by this audit.",
+    "code_policy": "Paint and SEO codes are recorded only when printed in the cited exact-year source. A missing code is null. No WA number, RPO, pair, restriction, or marketing name is carried from another year.",
+    "scope_policy": "Source scope is explicit at the palette level. Unified Silverado source tables are not treated as proof of a separate HD palette. The 2007 Silverado Classic 1500 and the new-body Silverado 1500 are separate palettes. The 2007 Silverado Classic 1500HD page is documented as excluded evidence.",
+    "absence_policy": "Not located means only that the reviewed exact-year sources did not contain a governing table for that program. It is not proof that no dealer, fleet, or special-order channel offered the program."
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-2001-chevrolet-silverado",
+      "title": "2001 Chevrolet Silverado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2001-Chevrolet-Silverado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "c2/6a/c26a39fd1dbb2bc26c08464279b77c462e3535218347e6ac12be739df7fe693e.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "c26a39fd1dbb2bc26c08464279b77c462e3535218347e6ac12be739df7fe693e",
+      "bytes": 21874167,
+      "pdf_page_count": 174,
+      "retrieved_at": "2026-07-21T06:34:43+00:00",
+      "exact_source_scope": "Unified Silverado vehicle information kit. Its exterior color list does not print a separate 1500 versus HD applicability matrix.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2001-chevrolet-silverado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2002-chevrolet-silverado",
+      "title": "2002 Chevrolet Silverado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Silverado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "e6/e0/e6e054e554cba7e20d532a0edab0e2d4d1ebf332915360ed19de7148f88ae168.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "e6e054e554cba7e20d532a0edab0e2d4d1ebf332915360ed19de7148f88ae168",
+      "bytes": 20442659,
+      "pdf_page_count": 160,
+      "retrieved_at": "2026-07-21T06:35:36+00:00",
+      "exact_source_scope": "Unified Silverado vehicle information kit; retained for provenance but not used to supply the 2002 palette.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-silverado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "chevrolet-2002-silverado-sales-brochure",
+      "title": "2002 Chevrolet Silverado sales brochure",
+      "publisher": "Chevrolet, General Motors",
+      "source_type": "official_sales_brochure",
+      "content_type": "application/pdf",
+      "url": "https://www.auto-brochures.com/makes/Chevrolet/Silverado/Chevrolet_US%20Silverado_2002.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": null,
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "third_party_document_mirror",
+      "sha256": "7f37acf61d79277737e1e301edee2d6c54fd2d75c258d8e102f6d0ca91e9499b",
+      "bytes": 3870610,
+      "pdf_page_count": 29,
+      "retrieved_at": "2026-08-07",
+      "exact_source_scope": "United States Silverado brochure covering 1500, 1500HD, 2500, 2500HD, and 3500. The printed exterior color list is shared; the brochure does not provide a model-by-model exterior color matrix.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2002-silverado-sales-brochure.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2003-chevrolet-silverado-1500",
+      "title": "2003 Chevrolet Silverado 1500 Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-1500.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "64/2e/642e252566d819bff0eb91b1e0bfff79480e9acaa8b5fdcbaa174cfc6694fcf4.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "642e252566d819bff0eb91b1e0bfff79480e9acaa8b5fdcbaa174cfc6694fcf4",
+      "bytes": 36770697,
+      "pdf_page_count": 210,
+      "retrieved_at": "2026-07-21T06:37:08+00:00",
+      "exact_source_scope": "Silverado 1500. The located product page identifies new colors but is not a complete palette.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-1500-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2003-chevrolet-silverado-ss",
+      "title": "2003 Chevrolet Silverado SS Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Silverado-SS.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "bc/31/bc318594730a42f22d057c31367bb1ac38a4b7d6c256e8216380a18a3c9ae144.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "bc318594730a42f22d057c31367bb1ac38a4b7d6c256e8216380a18a3c9ae144",
+      "bytes": 31093762,
+      "pdf_page_count": 210,
+      "retrieved_at": "2026-07-21T06:37:14+00:00",
+      "exact_source_scope": "Silverado SS only.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-silverado-ss-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2004-chevrolet-silverado",
+      "title": "2004 Chevrolet Silverado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Silverado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "43/06/4306dc41146589b9507f08c4a8038a9a16b0def1c2e519fef891fb6db04bcb5c.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "4306dc41146589b9507f08c4a8038a9a16b0def1c2e519fef891fb6db04bcb5c",
+      "bytes": 28504623,
+      "pdf_page_count": 238,
+      "retrieved_at": "2026-07-21T06:38:44+00:00",
+      "exact_source_scope": "Unified Silverado kit. The cited product page separates Silverado changes from Silverado HD changes.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-silverado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "chevrolet-2004-silverado-spec-sheet",
+      "title": "2004 Chevy Silverado specification sheet",
+      "publisher": "Chevrolet, General Motors",
+      "source_type": "official_specification_brochure",
+      "content_type": "application/pdf",
+      "url": "https://xr793.com/wp-content/uploads/2021/11/2004-Chevrolet-Silverado-Spec-Sheet.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": null,
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "third_party_document_mirror",
+      "sha256": "737156f331b9208c86e44b4cd81138533e89b1656289d918ddcdad1b49e8c661",
+      "bytes": 246226,
+      "pdf_page_count": 2,
+      "retrieved_at": "2026-08-07",
+      "document_identifier": "04CHESILSPE01",
+      "revision": "MSRP as of 2003-07-14; copyright 2003 General Motors",
+      "exact_source_scope": "Silverado 1500 and 2500 specification sheet with an SS column. HD models are not part of the table.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2004-silverado-spec-sheet.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-silverado-1500",
+      "title": "2005 Chevrolet Silverado 1500 Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-1500.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "54/a6/54a60b498c2a81dd42d81a715c8f2a132f01dcc2fcd0162a9fd84e86789adc15.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "54a60b498c2a81dd42d81a715c8f2a132f01dcc2fcd0162a9fd84e86789adc15",
+      "bytes": 34439118,
+      "pdf_page_count": 204,
+      "retrieved_at": "2026-07-21T06:40:12+00:00",
+      "exact_source_scope": "Silverado 1500 ordering material. Separate Silverado 1500HD, 2500HD, 3500HD, and Chassis Cab kits are not used.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-1500-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-silverado-ss",
+      "title": "2005 Chevrolet Silverado SS Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Silverado-SS.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "57/a0/57a019b37a6272acb0ba824e1456fe9ebf54e26050a3bc264b27ec28f2546867.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "57a019b37a6272acb0ba824e1456fe9ebf54e26050a3bc264b27ec28f2546867",
+      "bytes": 16684375,
+      "pdf_page_count": 132,
+      "retrieved_at": "2026-07-21T06:40:28+00:00",
+      "exact_source_scope": "Silverado SS only.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-silverado-ss-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2006-chevrolet-silverado",
+      "title": "2006 Chevrolet Silverado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Silverado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "70/78/70787af3e823023d09c0f843be7206a5775ee72aeefa997799514c664aa42082.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "70787af3e823023d09c0f843be7206a5775ee72aeefa997799514c664aa42082",
+      "bytes": 65281698,
+      "pdf_page_count": 390,
+      "retrieved_at": "2026-07-21T06:42:23+00:00",
+      "exact_source_scope": "Unified Silverado kit with appended ordering material. The cited 1500 chart restrictions and the Silverado SS chart are preserved separately.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-silverado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2007-chevrolet-silverado",
+      "title": "2007 Chevrolet Silverado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Silverado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "04/91/0491c6179d2cc7f0223ce8ed0673d7d0d01edf718c805ac5b74a4840869a5dc7.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "0491c6179d2cc7f0223ce8ed0673d7d0d01edf718c805ac5b74a4840869a5dc7",
+      "bytes": 66571736,
+      "pdf_page_count": 397,
+      "retrieved_at": "2026-07-21T06:44:19+00:00",
+      "exact_source_scope": "Silverado Classic and Silverado HD Classic only. It is not evidence for the new-body GMT900 Silverado 1500.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-silverado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "gm-2007-fleet-guide",
+      "title": "2007 GM Car and Truck Guide",
+      "publisher": "General Motors Fleet and Commercial Operations",
+      "source_type": "official_fleet_guide",
+      "content_type": "application/pdf",
+      "url": "https://xr793.com/wp-content/uploads/2020/03/2007-GM-Fleet-Guide.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": null,
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "third_party_document_mirror",
+      "sha256": "7d5663ef6d3b265a1fb5a67346a291e0dffb7d3902009ff7ae04d79f2853f079",
+      "bytes": 11817075,
+      "pdf_page_count": 121,
+      "retrieved_at": "2026-08-07",
+      "exact_source_scope": "PDF page 82, printed page 81, is Chevrolet Silverado Classic 1500. PDF page 83, printed page 82, is Silverado Classic 1500HD and is explicitly excluded from the Classic 1500 palette.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/gm-2007-fleet-guide.pdf"
+    },
+    {
+      "source_id": "chevrolet-2007-silverado-1500-select-specifications",
+      "title": "2007 Chevy Silverado 1500 Select Specifications",
+      "publisher": "Chevrolet, General Motors",
+      "source_type": "official_specification_brochure",
+      "content_type": "application/pdf",
+      "url": "https://directechs.blob.core.windows.net/directwirebrochures/brochure2172_0.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": null,
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "third_party_document_mirror",
+      "sha256": "b11b141b6de8ed6dc81dc4cd5c1131630ada3c6842fe53af44aafb97bd4ef5ab",
+      "bytes": 911153,
+      "pdf_page_count": 2,
+      "retrieved_at": "2026-08-07",
+      "document_identifier": "07CHESI9SPE01",
+      "revision": "Copyright 2006 General Motors",
+      "exact_source_scope": "New-body GMT900 Chevrolet Silverado 1500 only. Silverado Classic and all HD models are outside the source table.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2007-silverado-1500-select-specifications.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2004-chevrolet-colorado",
+      "title": "2004 Chevrolet Colorado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Colorado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "9e/6f/9e6fcced8d18d6026a761bac9ddb9b6a941b48c55911f954c8fb1b275cc55bfe.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "9e6fcced8d18d6026a761bac9ddb9b6a941b48c55911f954c8fb1b275cc55bfe",
+      "bytes": 11300307,
+      "pdf_page_count": 110,
+      "retrieved_at": "2026-07-21T06:38:03+00:00",
+      "exact_source_scope": "Colorado vehicle information kit. The complete regular palette is supplied by the separate official United States sales brochure.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-colorado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "chevrolet-2004-colorado-us-sales-brochure",
+      "title": "2004 Chevrolet Colorado United States sales brochure",
+      "publisher": "Chevrolet, General Motors",
+      "source_type": "official_sales_brochure",
+      "content_type": "application/pdf",
+      "url": "https://www.auto-brochures.com/makes/Chevrolet/Colorado/Chevrolet_US%20Colorado_2004.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": null,
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "third_party_document_mirror",
+      "sha256": "ac2397a0912d98803b94a0c3793bacc2f6970561760392aa13b7e2a51e57f4bc",
+      "bytes": 1326171,
+      "pdf_page_count": 17,
+      "retrieved_at": "2026-08-07",
+      "exact_source_scope": "United States Colorado sales brochure. It is not the similar Canadian brochure, which uses different market terminology.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2004-colorado-us-sales-brochure.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-colorado",
+      "title": "2005 Chevrolet Colorado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Colorado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "d0/12/d012255e8ed1fb1fbcfcfa058cd3a111ec81fbfe5be730a2983b73fdc73a5ffe.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "d012255e8ed1fb1fbcfcfa058cd3a111ec81fbfe5be730a2983b73fdc73a5ffe",
+      "bytes": 28237127,
+      "pdf_page_count": 172,
+      "retrieved_at": "2026-07-21T06:39:31+00:00",
+      "exact_source_scope": "Colorado regular paint, SEO solid paint, and Xtreme stripe ordering material.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-colorado-vehicle-information-kit-gm.pdf"
+    },
+    {
+      "source_id": "chevrolet-2006-colorado-select-specifications",
+      "title": "2006 Chevrolet Colorado Select Specifications",
+      "publisher": "Chevrolet, General Motors",
+      "source_type": "official_specification_brochure",
+      "content_type": "application/pdf",
+      "url": "https://xr793.com/wp-content/uploads/2023/07/2006-Chevrolet-Colorado-Spec-Sheet.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": null,
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "third_party_document_mirror",
+      "sha256": "d3e73586ce5f7f0e519f0f4e9aaf14ef8260394e70ed769a8c132479b43528d1",
+      "bytes": 1268568,
+      "pdf_page_count": 2,
+      "retrieved_at": "2026-08-07",
+      "document_identifier": "06CHECOLSPE01",
+      "revision": "Copyright 2005 General Motors",
+      "exact_source_scope": "United States Colorado regular paint and Xtreme or Street Pak base-color restrictions. It does not publish an SEO special-paint table.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/chevrolet-2006-colorado-select-specifications.pdf"
+    },
+    {
+      "source_id": "gm-heritage-2007-chevrolet-colorado",
+      "title": "2007 Chevrolet Colorado Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Colorado.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "9a/43/9a434ad4eb2fe76006e6e29d032278a398725bd9819cd9344ccadcd849064a30.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "9a434ad4eb2fe76006e6e29d032278a398725bd9819cd9344ccadcd849064a30",
+      "bytes": 46370400,
+      "pdf_page_count": 238,
+      "retrieved_at": "2026-07-21T06:42:55+00:00",
+      "exact_source_scope": "Colorado regular paint, SEO solid paint, and Xtreme stripe ordering material.",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-colorado-vehicle-information-kit-gm.pdf"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "silverado",
+      "model_name": "Silverado",
+      "requested_year_range": [
+        1999,
+        2007
+      ],
+      "years": [
+        {
+          "year": 1999,
+          "coverage_status": "unresolved_no_exact_year_official_palette_source",
+          "complete_regular_palette": false,
+          "availability_scope": "Silverado 1500 only; no color claim is made.",
+          "limitations": [
+            "No 1999 Silverado kit exists in the retained GM Heritage manifest.",
+            "The file served from a guessed 1999 auto-brochures URL is actually a 1996 Chevrolet C/K brochure and was rejected after content review.",
+            "The official 1999 Silverado owner's manual does not provide a governing exterior-color palette."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "specialty_variant",
+              "status": "unresolved"
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2000,
+          "coverage_status": "unresolved_no_exact_year_official_palette_source",
+          "complete_regular_palette": false,
+          "availability_scope": "Silverado 1500 only; no color claim is made.",
+          "limitations": [
+            "No 2000 Silverado kit exists in the retained GM Heritage manifest.",
+            "The official 2000 Silverado owner's manual does not provide a governing exterior-color palette.",
+            "No complete official United States sales brochure or order-guide color table was located during this audit."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "specialty_variant",
+              "status": "unresolved"
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2001,
+          "coverage_status": "verified_complete_shared_lineup_list_without_series_matrix",
+          "complete_regular_palette": true,
+          "availability_scope": "The official kit prints one Silverado exterior-color list. It does not divide the list between 1500 and HD series, so the list is preserved as shared-lineup evidence and is not converted into separate 1500 or HD availability claims.",
+          "limitations": [
+            "No exterior paint codes are printed on the cited page.",
+            "No complete exact-year two-tone or SEO combination table was located."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_shared_lineup_list",
+              "pdf_pages": [
+                13
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "not_located_in_reviewed_source"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "not_located_in_reviewed_source"
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-shared-lineup-regular",
+              "program_label": "Silverado exterior colors",
+              "variant": "Silverado lineup, series applicability not printed",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_year_complete_name_list_scope_limited",
+              "paint_scheme": null,
+              "claim_scope": "Complete name list printed for Silverado; not a 1500-versus-HD matrix.",
+              "source_ref": {
+                "source_id": "gm-heritage-2001-chevrolet-silverado",
+                "pdf_pages": [
+                  13
+                ],
+                "printed_page_label": "Page 4",
+                "section": "Color and Trim / Exterior Colors",
+                "revision": null
+              },
+              "colors": [
+                {
+                  "identity_key": "onyx-black",
+                  "name": "Onyx Black",
+                  "source_label": "Onyx Black",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-carmine-red-metallic",
+                  "name": "Dark Carmine Red Metallic",
+                  "source_label": "Dark Carmine Red Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "indigo-blue-metallic",
+                  "name": "Indigo Blue Metallic",
+                  "source_label": "Indigo Blue Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "victory-red",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "sunset-gold-metallic",
+                  "name": "Sunset Gold Metallic",
+                  "source_label": "Sunset Gold Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "sunset-orange-metallic",
+                  "name": "Sunset Orange Metallic",
+                  "source_label": "Sunset Orange Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "medium-charcoal-gray-metallic",
+                  "name": "Medium Charcoal Gray Metallic",
+                  "source_label": "Medium Charcoal Gray Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "forest-green-metallic",
+                  "name": "Forest Green Metallic",
+                  "source_label": "Forest Green Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "light-pewter-metallic",
+                  "name": "Light Pewter Metallic",
+                  "source_label": "Light Pewter Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2002,
+          "coverage_status": "verified_complete_shared_lineup_list_two_tone_presence_only",
+          "complete_regular_palette": true,
+          "availability_scope": "United States Silverado brochure. Base, LS, and LT color availability is shown, but the exterior list is shared across 1500, 1500HD, 2500, 2500HD, and 3500 and is not converted into separate HD claims.",
+          "limitations": [
+            "The brochure names Conventional Two-Tone ZY2 but does not print the individual upper and lower paint pairs in text.",
+            "No WA paint numbers are printed."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                27,
+                28
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "program_verified_pairs_unresolved",
+              "pdf_pages": [
+                28
+              ],
+              "paint_scheme": "ZY2"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "not_located_in_reviewed_sources"
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-shared-lineup-regular",
+              "program_label": "Silverado exterior colors",
+              "variant": "Silverado lineup, series applicability not printed",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_year_complete_name_list_scope_limited",
+              "paint_scheme": null,
+              "claim_scope": "Complete exterior color name list printed in the United States brochure.",
+              "source_ref": {
+                "source_id": "chevrolet-2002-silverado-sales-brochure",
+                "pdf_pages": [
+                  27,
+                  28
+                ],
+                "printed_page_label": "Brochure pages 52 and 54",
+                "section": "Base Color Availability / Exterior Colors",
+                "revision": "2CHSL001"
+              },
+              "colors": [
+                {
+                  "identity_key": "onyx-black",
+                  "name": "Onyx Black",
+                  "source_label": "Onyx Black",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "indigo-blue-metallic",
+                  "name": "Indigo Blue Metallic",
+                  "source_label": "Indigo Blue Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "medium-charcoal-gray-metallic",
+                  "name": "Medium Charcoal Gray Metallic",
+                  "source_label": "Medium Charcoal Gray Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "forest-green-metallic",
+                  "name": "Forest Green Metallic",
+                  "source_label": "Forest Green Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "light-pewter-metallic",
+                  "name": "Light Pewter Metallic",
+                  "source_label": "Light Pewter Metallic",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-carmine-red-metallic",
+                  "name": "Dark Carmine Red Metallic",
+                  "source_label": "Dark Carmine Red Metallic",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Shown for LS and LT, not Base, in the brochure matrix."
+                },
+                {
+                  "identity_key": "victory-red",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "factory_code": null,
+                  "wa_number": null
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-conventional-two-tone-zy2",
+              "program_label": "Conventional Two-Tone",
+              "variant": "Silverado lineup",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "program_presence_only",
+              "paint_scheme": "ZY2",
+              "claim_scope": "The brochure verifies the ZY2 program but does not provide transcribable pair definitions.",
+              "source_ref": {
+                "source_id": "chevrolet-2002-silverado-sales-brochure",
+                "pdf_pages": [
+                  28
+                ],
+                "printed_page_label": "Brochure page 54",
+                "section": "Conventional Two-Tone (ZY2)",
+                "revision": "2CHSL001"
+              },
+              "colors": []
+            }
+          ]
+        },
+        {
+          "year": 2003,
+          "coverage_status": "partial_regular_complete_ss",
+          "complete_regular_palette": false,
+          "availability_scope": "Silverado 1500 regular palette is incomplete. Silverado SS is separately complete.",
+          "limitations": [
+            "The retained Silverado 1500 kit identifies two new regular colors but does not provide a complete governing regular-paint table.",
+            "No regular 1500 two-tone or SEO table is claimed."
+          ],
+          "documented_changes": [
+            {
+              "change_type": "new_regular_colors",
+              "colors": [
+                "Dark Gray Metallic",
+                "Arrival Blue"
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2003-chevrolet-silverado-1500",
+                "pdf_pages": [
+                  13
+                ],
+                "printed_page_label": "Product Information Page 1",
+                "section": "What is New for Model Year 2003",
+                "revision": null
+              }
+            }
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "partial_new_colors_only",
+              "pdf_pages": [
+                13
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "silverado_ss",
+              "status": "located_complete",
+              "pdf_pages": [
+                200
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-ss-regular",
+              "program_label": "Silverado SS exterior colors",
+              "variant": "Silverado SS",
+              "application_type": "factory_specialty_variant_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete Silverado SS solid-paint table only.",
+              "source_ref": {
+                "source_id": "gm-heritage-2003-chevrolet-silverado-ss",
+                "pdf_pages": [
+                  200
+                ],
+                "printed_page_label": "Page 1",
+                "section": "Color and Trim - Solid Paint ZY1",
+                "revision": "Published March 30, 2004"
+              },
+              "colors": [
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260"
+                },
+                {
+                  "identity_key": "arrival-blue-metallic-wa-815k",
+                  "name": "Arrival Blue Metallic",
+                  "source_label": "Arrival Blue Metallic",
+                  "factory_code": "91U",
+                  "rpo_code": "91U",
+                  "wa_number": "WA-815K"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2004,
+          "coverage_status": "verified_complete_regular_and_ss_eligibility",
+          "complete_regular_palette": true,
+          "availability_scope": "Silverado 1500 and 2500 regular paint from the official specification sheet. Silverado SS eligible colors are identified by the source footnote. Silverado HD is outside the specification table.",
+          "limitations": [
+            "The specification sheet prints marketing names but not paint codes.",
+            "No exact-year two-tone pair table or SEO table was located."
+          ],
+          "documented_changes": [
+            {
+              "change_type": "regular_color_changes",
+              "added": [
+                "Sandstone Metallic",
+                "Silver Birch Metallic",
+                "Sport Red Metallic"
+              ],
+              "replaced": [
+                "Pewter Metallic",
+                "Dark Carmine Red Metallic"
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2004-chevrolet-silverado",
+                "pdf_pages": [
+                  21
+                ],
+                "printed_page_label": "Page 7",
+                "section": "New For 2004 - Silverado",
+                "revision": null
+              }
+            }
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                2
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "silverado_ss",
+              "status": "eligible_colors_identified",
+              "pdf_pages": [
+                2
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-1500-2500-regular",
+              "program_label": "Available exterior colors",
+              "variant": "Silverado 1500 and 2500",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete available exterior-color list printed on the 1500 and 2500 specification sheet.",
+              "source_ref": {
+                "source_id": "chevrolet-2004-silverado-spec-sheet",
+                "pdf_pages": [
+                  2
+                ],
+                "printed_page_label": "Specification sheet reverse",
+                "section": "Available Exterior Colors",
+                "revision": "04CHESILSPE01"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic",
+                  "name": "Sandstone Metallic",
+                  "source_label": "SANDSTONE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "BLACK",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Eligible for Silverado SS."
+                },
+                {
+                  "identity_key": "dark-green-metallic",
+                  "name": "Dark Green Metallic",
+                  "source_label": "DARK GREEN METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "SUMMIT WHITE",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "silver-birch-metallic",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "SILVER BIRCH METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "DARK GRAY METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "sport-red",
+                  "name": "Sport Red",
+                  "source_label": "SPORT RED",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "victory-red",
+                  "name": "Victory Red",
+                  "source_label": "VICTORY RED",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Eligible for Silverado SS; not available on Base model."
+                },
+                {
+                  "identity_key": "arrival-blue-metallic",
+                  "name": "Arrival Blue Metallic",
+                  "source_label": "ARRIVAL BLUE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Eligible for Silverado SS."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2005,
+          "coverage_status": "verified_complete_1500_regular_two_tone_seo_and_ss",
+          "complete_regular_palette": true,
+          "availability_scope": "Silverado 1500 regular, two-tone, and SEO tables plus a separate Silverado SS table. Silverado 1500HD, 2500HD, 3500HD, and Chassis Cab kits are excluded.",
+          "limitations": [
+            "SEO colors with no printed RPO retain a null rpo_code.",
+            "The SEO table is not projected to excluded C/K15543 applications or to any HD series."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_zy1",
+              "status": "located_complete",
+              "pdf_pages": [
+                183
+              ]
+            },
+            {
+              "program_type": "two_tone_zy2",
+              "status": "located_complete",
+              "pdf_pages": [
+                184
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint_tgk_tgl",
+              "status": "located_complete",
+              "pdf_pages": [
+                185,
+                186
+              ]
+            },
+            {
+              "program_type": "silverado_ss",
+              "status": "located_complete",
+              "pdf_pages": [
+                123
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-1500-solid-zy1",
+              "program_label": "Silverado 1500 Solid Paint ZY1",
+              "variant": "Silverado 1500",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete 1500 solid-paint table.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-silverado-1500",
+                "pdf_pages": [
+                  183
+                ],
+                "printed_page_label": "Page 1",
+                "section": "Color and Trim - Solid Paint ZY1",
+                "revision": "Published January 21, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic-wa-929l",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "wa_number": "WA-929L",
+                  "restriction": "Requires B71 front and rear wheel flares."
+                },
+                {
+                  "identity_key": "dark-blue-metallic-wa-722j",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "Dark Blue Metallic",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "wa_number": "WA-722J",
+                  "condition": "New for 2005."
+                },
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "dark-green-metallic-wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "wa_number": "WA-9539"
+                },
+                {
+                  "identity_key": "summit-white-wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "silver-birch-metallic-wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": "WA-926L"
+                },
+                {
+                  "identity_key": "dark-gray-metallic-wa-805k",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "factory_code": "62U",
+                  "rpo_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "sport-red-metallic-wa-817k",
+                  "name": "Sport Red Metallic",
+                  "source_label": "Sport Red Metallic",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "wa_number": "WA-817K",
+                  "restriction": "Not available on Work Truck or Base."
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260"
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-1500-two-tone-zy2",
+              "program_label": "Silverado 1500 Conventional Two-Tone ZY2",
+              "variant": "Silverado 1500",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY2",
+              "claim_scope": "Complete printed ZY2 pair table for C*15753 models.",
+              "program_restriction": "Requires C*15753 models; unavailable with NYS four-wheel steering or E62 Sportside box.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-silverado-1500",
+                "pdf_pages": [
+                  184
+                ],
+                "printed_page_label": "Page 2",
+                "section": "Color and Trim - Two-Tone Paint ZY2",
+                "revision": "Published January 21, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "dark-blue-over-silver-birch",
+                  "name": "Dark Blue Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Dark Blue Metallic",
+                    "code": "25U",
+                    "wa_number": "WA-722J"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "black-over-silver-birch",
+                  "name": "Black / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Black",
+                    "code": "41U",
+                    "wa_number": "WA-8555"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "dark-green-over-silver-birch",
+                  "name": "Dark Green Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Dark Green Metallic",
+                    "code": "47U",
+                    "wa_number": "WA-9539"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "summit-white-over-silver-birch",
+                  "name": "Summit White / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Summit White",
+                    "code": "50U",
+                    "wa_number": "WA-8624"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "summit-white-over-dark-gray",
+                  "name": "Summit White / Dark Gray Metallic",
+                  "upper": {
+                    "name": "Summit White",
+                    "code": "50U",
+                    "wa_number": "WA-8624"
+                  },
+                  "lower": {
+                    "name": "Dark Gray Metallic",
+                    "code": "62L",
+                    "wa_number": "WA-805K"
+                  }
+                },
+                {
+                  "identity_key": "silver-birch-over-dark-gray",
+                  "name": "Silver Birch Metallic / Dark Gray Metallic",
+                  "upper": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59U",
+                    "wa_number": "WA-926L"
+                  },
+                  "lower": {
+                    "name": "Dark Gray Metallic",
+                    "code": "62L",
+                    "wa_number": "WA-805K"
+                  }
+                },
+                {
+                  "identity_key": "dark-gray-over-silver-birch",
+                  "name": "Dark Gray Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Dark Gray Metallic",
+                    "code": "62U",
+                    "wa_number": "WA-805K"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "sport-red-over-silver-birch",
+                  "name": "Sport Red Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Sport Red Metallic",
+                    "code": "63U",
+                    "wa_number": "WA-817K"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "victory-red-over-silver-birch",
+                  "name": "Victory Red / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Victory Red",
+                    "code": "74U",
+                    "wa_number": "WA-9260"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-1500-seo-solid-tgk-tgl",
+              "program_label": "Silverado 1500 SEO Solid Paint",
+              "variant": "Silverado 1500 fleet and special order",
+              "application_type": "factory_seo_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "TGK/TGL",
+              "claim_scope": "Complete two-page SEO color table.",
+              "program_restriction": "All wheel flares are Black. TGK/TGL is unavailable with NYS four-wheel steering. All SEO special paints are unavailable on C/K15543.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-silverado-1500",
+                "pdf_pages": [
+                  185,
+                  186
+                ],
+                "printed_page_label": "Pages 3-4",
+                "section": "Color and Trim - SEO Solid Paint",
+                "revision": "Published January 21, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "yellow-wa-5248",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5248"
+                },
+                {
+                  "identity_key": "blue-metallic-wa-5405",
+                  "name": "Blue Metallic",
+                  "source_label": "Blue Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5405"
+                },
+                {
+                  "identity_key": "yellow-wa-5445",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5445"
+                },
+                {
+                  "identity_key": "yellow-wa-5456",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5456"
+                },
+                {
+                  "identity_key": "blue-wa-5663",
+                  "name": "Blue",
+                  "source_label": "Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5663"
+                },
+                {
+                  "identity_key": "green-low-gloss-wa-6237",
+                  "name": "Green Low Gloss",
+                  "source_label": "Green Low Gloss",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-6237"
+                },
+                {
+                  "identity_key": "tan-low-gloss-wa-6238",
+                  "name": "Tan Low Gloss",
+                  "source_label": "Tan Low Gloss",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-6238"
+                },
+                {
+                  "identity_key": "blue-wa-7154",
+                  "name": "Blue",
+                  "source_label": "Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7154"
+                },
+                {
+                  "identity_key": "blue-metallic-wa-7159",
+                  "name": "Blue Metallic",
+                  "source_label": "Blue Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7159"
+                },
+                {
+                  "identity_key": "gray-metallic-wa-7840",
+                  "name": "Gray Metallic",
+                  "source_label": "Gray Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7840"
+                },
+                {
+                  "identity_key": "green-wa-7941",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7941"
+                },
+                {
+                  "identity_key": "woodland-green-wa-9015",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "rpo_code": "9V5",
+                  "seo_code": "9V5",
+                  "wa_number": "WA-9015"
+                },
+                {
+                  "identity_key": "doeskin-tan-wa-9403",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "rpo_code": "9V9",
+                  "seo_code": "9V9",
+                  "wa_number": "WA-9403"
+                },
+                {
+                  "identity_key": "orange-wa-9408",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9408"
+                },
+                {
+                  "identity_key": "yellow-wa-9414",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9414"
+                },
+                {
+                  "identity_key": "tangier-orange-wa-9417",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "rpo_code": "9W4",
+                  "seo_code": "9W4",
+                  "wa_number": "WA-9417"
+                },
+                {
+                  "identity_key": "orange-wa-9419",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9419"
+                },
+                {
+                  "identity_key": "indigo-blue-wa-9792",
+                  "name": "Indigo Blue",
+                  "source_label": "Indigo Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9792"
+                },
+                {
+                  "identity_key": "light-autumnwood-metallic-wa-228a",
+                  "name": "Light Autumnwood Metallic",
+                  "source_label": "Light Autumnwood Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-228A"
+                },
+                {
+                  "identity_key": "wheatland-yellow-wa-253a",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "rpo_code": "9W3",
+                  "seo_code": "9W3",
+                  "wa_number": "WA-253A"
+                },
+                {
+                  "identity_key": "dark-toreador-red-wa-334d",
+                  "name": "Dark Toreador Red",
+                  "source_label": "Dark Toreador Red",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-334D"
+                },
+                {
+                  "identity_key": "pewter-wa-382e",
+                  "name": "Pewter",
+                  "source_label": "Pewter",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-382E"
+                },
+                {
+                  "identity_key": "blue-wa-769h",
+                  "name": "Blue",
+                  "source_label": "Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-769H"
+                },
+                {
+                  "identity_key": "orange-wa-770h",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-770H"
+                },
+                {
+                  "identity_key": "green-wa-995l",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-995L"
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-ss-regular",
+              "program_label": "Silverado SS solid paint",
+              "variant": "Silverado SS",
+              "application_type": "factory_specialty_variant_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete Silverado SS solid-paint table only.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-silverado-ss",
+                "pdf_pages": [
+                  123
+                ],
+                "printed_page_label": "Page 1",
+                "section": "Color and Trim - Solid Paint ZY1",
+                "revision": "Published February 4, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "silver-birch-metallic-wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": "WA-926L"
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2006,
+          "coverage_status": "verified_complete_1500_regular_two_tone_seo_and_ss",
+          "complete_regular_palette": true,
+          "availability_scope": "Silverado 1500 regular, two-tone, and SEO tables plus a separate Silverado SS table. No palette is projected to Silverado HD.",
+          "limitations": [
+            "The appended order guide is scanned sideways, with two printed pages on each cited PDF page. Page rotations are preserved in source references.",
+            "SEO colors without a printed RPO retain null codes."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_zy1",
+              "status": "located_complete",
+              "pdf_pages": [
+                259
+              ]
+            },
+            {
+              "program_type": "two_tone_zy2",
+              "status": "located_complete",
+              "pdf_pages": [
+                260
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint_tgk_tgl",
+              "status": "located_complete",
+              "pdf_pages": [
+                259,
+                260
+              ]
+            },
+            {
+              "program_type": "silverado_ss",
+              "status": "located_complete",
+              "pdf_pages": [
+                300
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-1500-solid-zy1",
+              "program_label": "Silverado 1500 Solid Paint ZY1",
+              "variant": "Silverado 1500",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete 1500 solid-paint table.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-silverado",
+                "pdf_pages": [
+                  259
+                ],
+                "printed_page_label": "Page 1, left half",
+                "section": "Color and Trim - Solid Paint ZY1",
+                "revision": "Published July 29, 2005",
+                "layout_note": "Two order-guide pages are scanned sideways on the PDF page; rotate PDF page 259 by 270 degrees."
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic-wa-929l",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "wa_number": "WA-929L",
+                  "restriction": "Requires B71 front and rear wheel flares."
+                },
+                {
+                  "identity_key": "graystone-metallic-wa-213m",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "factory_code": "16U",
+                  "rpo_code": "16U",
+                  "wa_number": "WA-213M",
+                  "condition": "New for 2006."
+                },
+                {
+                  "identity_key": "dark-blue-metallic-wa-722j",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "Dark Blue Metallic",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "wa_number": "WA-722J"
+                },
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "blue-granite-metallic-wa-928l",
+                  "name": "Blue Granite Metallic",
+                  "source_label": "Blue Granite Metallic",
+                  "factory_code": "46U",
+                  "rpo_code": "46U",
+                  "wa_number": "WA-928L",
+                  "condition": "New for 2006."
+                },
+                {
+                  "identity_key": "dark-green-metallic-wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "wa_number": "WA-9539"
+                },
+                {
+                  "identity_key": "summit-white-wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "silver-birch-metallic-wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": "WA-926L"
+                },
+                {
+                  "identity_key": "sport-red-metallic-wa-817k",
+                  "name": "Sport Red Metallic",
+                  "source_label": "Sport Red Metallic",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "wa_number": "WA-817K",
+                  "restriction": "Requires Crew Cab LS, LT1, LT2, or LT3."
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260"
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-1500-two-tone-zy2",
+              "program_label": "Silverado 1500 Conventional Two-Tone ZY2",
+              "variant": "Silverado 1500",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY2",
+              "claim_scope": "Complete printed ZY2 pair table.",
+              "program_restriction": "Requires C*15753 or C*15553 and B71 wheel flares.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-silverado",
+                "pdf_pages": [
+                  260
+                ],
+                "printed_page_label": "Page 4, right half",
+                "section": "Color and Trim - Two-Tone Paint ZY2",
+                "revision": "Published July 29, 2005",
+                "layout_note": "Two order-guide pages are scanned sideways on the PDF page; rotate PDF page 260 by 90 degrees."
+              },
+              "colors": [
+                {
+                  "identity_key": "dark-blue-over-silver-birch",
+                  "name": "Dark Blue Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Dark Blue Metallic",
+                    "code": "25U",
+                    "wa_number": "WA-722J"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "black-over-silver-birch",
+                  "name": "Black / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Black",
+                    "code": "41U",
+                    "wa_number": "WA-8555"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "blue-granite-over-silver-birch",
+                  "name": "Blue Granite Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Blue Granite Metallic",
+                    "code": "46U",
+                    "wa_number": "WA-928L"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "dark-green-over-silver-birch",
+                  "name": "Dark Green Metallic / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Dark Green Metallic",
+                    "code": "47U",
+                    "wa_number": "WA-9539"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "summit-white-over-silver-birch",
+                  "name": "Summit White / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Summit White",
+                    "code": "50U",
+                    "wa_number": "WA-8624"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                },
+                {
+                  "identity_key": "silver-birch-over-graystone",
+                  "name": "Silver Birch Metallic / Graystone Metallic",
+                  "upper": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59U",
+                    "wa_number": "WA-926L"
+                  },
+                  "lower": {
+                    "name": "Graystone Metallic",
+                    "code": "16L",
+                    "wa_number": "WA-213M"
+                  }
+                },
+                {
+                  "identity_key": "victory-red-over-silver-birch",
+                  "name": "Victory Red / Silver Birch Metallic",
+                  "upper": {
+                    "name": "Victory Red",
+                    "code": "74U",
+                    "wa_number": "WA-9260"
+                  },
+                  "lower": {
+                    "name": "Silver Birch Metallic",
+                    "code": "59L",
+                    "wa_number": "WA-926L"
+                  }
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-1500-seo-solid-tgk-tgl",
+              "program_label": "Silverado 1500 SEO Solid Paint",
+              "variant": "Silverado 1500 fleet and special order",
+              "application_type": "factory_seo_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "TGK/TGL",
+              "claim_scope": "Complete two-page SEO color table.",
+              "program_restriction": "All wheel flares are Black. TGK/TGL is unavailable with NYS four-wheel steering. All SEO paints are unavailable on C/K15753 and C/K15543.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-silverado",
+                "pdf_pages": [
+                  259,
+                  260
+                ],
+                "printed_page_label": "Pages 2-3",
+                "section": "Color and Trim - SEO Solid Paint",
+                "revision": "Published July 29, 2005",
+                "layout_note": "Printed page 2 is the right half of PDF page 259 rotated 270 degrees; printed page 3 is the left half of PDF page 260 rotated 90 degrees."
+              },
+              "colors": [
+                {
+                  "identity_key": "yellow-wa-5248",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5248"
+                },
+                {
+                  "identity_key": "blue-metallic-wa-5405",
+                  "name": "Blue Metallic",
+                  "source_label": "Blue Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5405"
+                },
+                {
+                  "identity_key": "yellow-wa-5445",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5445"
+                },
+                {
+                  "identity_key": "yellow-wa-5456",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5456"
+                },
+                {
+                  "identity_key": "blue-wa-5663",
+                  "name": "Blue",
+                  "source_label": "Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5663"
+                },
+                {
+                  "identity_key": "green-low-gloss-wa-6237",
+                  "name": "Green Low Gloss",
+                  "source_label": "Green Low Gloss",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-6237"
+                },
+                {
+                  "identity_key": "tan-low-gloss-wa-6238",
+                  "name": "Tan Low Gloss",
+                  "source_label": "Tan Low Gloss",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-6238"
+                },
+                {
+                  "identity_key": "blue-wa-7154",
+                  "name": "Blue",
+                  "source_label": "Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7154"
+                },
+                {
+                  "identity_key": "blue-metallic-wa-7159",
+                  "name": "Blue Metallic",
+                  "source_label": "Blue Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7159"
+                },
+                {
+                  "identity_key": "gray-metallic-wa-7840",
+                  "name": "Gray Metallic",
+                  "source_label": "Gray Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7840"
+                },
+                {
+                  "identity_key": "green-wa-7941",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7941"
+                },
+                {
+                  "identity_key": "woodland-green-wa-9015",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "rpo_code": "9V5",
+                  "seo_code": "9V5",
+                  "wa_number": "WA-9015"
+                },
+                {
+                  "identity_key": "doeskin-tan-wa-9403",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "rpo_code": "9V9",
+                  "seo_code": "9V9",
+                  "wa_number": "WA-9403"
+                },
+                {
+                  "identity_key": "orange-wa-9408",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9408"
+                },
+                {
+                  "identity_key": "yellow-wa-9414",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9414"
+                },
+                {
+                  "identity_key": "tangier-orange-wa-9417",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "rpo_code": "9W4",
+                  "seo_code": "9W4",
+                  "wa_number": "WA-9417"
+                },
+                {
+                  "identity_key": "orange-wa-9419",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9419"
+                },
+                {
+                  "identity_key": "indigo-blue-wa-9792",
+                  "name": "Indigo Blue",
+                  "source_label": "Indigo Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9792"
+                },
+                {
+                  "identity_key": "light-autumnwood-metallic-wa-228a",
+                  "name": "Light Autumnwood Metallic",
+                  "source_label": "Light Autumnwood Metallic",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-228A"
+                },
+                {
+                  "identity_key": "wheatland-yellow-wa-253a",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "rpo_code": "9W3",
+                  "seo_code": "9W3",
+                  "wa_number": "WA-253A"
+                },
+                {
+                  "identity_key": "dark-toreador-red-wa-334d",
+                  "name": "Dark Toreador Red",
+                  "source_label": "Dark Toreador Red",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-334D"
+                },
+                {
+                  "identity_key": "pewter-wa-382e",
+                  "name": "Pewter",
+                  "source_label": "Pewter",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-382E"
+                },
+                {
+                  "identity_key": "blue-wa-769h",
+                  "name": "Blue",
+                  "source_label": "Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-769H"
+                },
+                {
+                  "identity_key": "orange-wa-770h",
+                  "name": "Orange",
+                  "source_label": "Orange",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-770H"
+                },
+                {
+                  "identity_key": "green-wa-5758",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5758",
+                  "condition": "New for 2006."
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-ss-regular",
+              "program_label": "Silverado SS solid paint",
+              "variant": "Silverado SS",
+              "application_type": "factory_specialty_variant_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete Silverado SS solid-paint table only.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-silverado",
+                "pdf_pages": [
+                  300
+                ],
+                "printed_page_label": "Page 1, right half",
+                "section": "Silverado SS Color and Trim - Solid Paint ZY1",
+                "revision": "Published June 17, 2005",
+                "layout_note": "Two order-guide pages are scanned sideways on the PDF page; rotate PDF page 300 by 270 degrees."
+              },
+              "colors": [
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "silver-birch-metallic-wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": "WA-926L"
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2007,
+          "coverage_status": "verified_complete_regular_for_classic_1500_and_new_body_1500",
+          "complete_regular_palette": true,
+          "availability_scope": "Two distinct regular palettes: GMT800 Silverado Classic 1500 and new-body GMT900 Silverado 1500. Silverado Classic 1500HD and all other HD models are excluded.",
+          "limitations": [
+            "The official GM Heritage 2007 kit covers Classic models only and is not used for the GMT900 palette.",
+            "No complete exact-year two-tone or SEO table was located for either 1500 body family."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "classic_1500_regular",
+              "status": "located_complete",
+              "pdf_pages": [
+                82
+              ]
+            },
+            {
+              "program_type": "classic_1500hd",
+              "status": "located_but_excluded",
+              "pdf_pages": [
+                83
+              ]
+            },
+            {
+              "program_type": "new_body_1500_regular",
+              "status": "located_complete",
+              "pdf_pages": [
+                2
+              ]
+            },
+            {
+              "program_type": "two_tone_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "silverado-classic-1500-regular",
+              "program_label": "Silverado Classic 1500 exterior colors",
+              "variant": "Silverado Classic 1500, GMT800",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete color list printed on the Silverado Classic 1500 fleet-guide page. The following Classic 1500HD page is not merged.",
+              "source_ref": {
+                "source_id": "gm-2007-fleet-guide",
+                "pdf_pages": [
+                  82
+                ],
+                "printed_page_label": "Page 81",
+                "section": "Chevrolet Silverado Classic 1500",
+                "revision": "2007 model year fleet guide"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic-15u",
+                  "name": "Sandstone Metallic",
+                  "source_label": "15U Sandstone Metallic",
+                  "factory_code": "15U",
+                  "rpo_code": "15U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "graystone-metallic-16u",
+                  "name": "Graystone Metallic",
+                  "source_label": "16U Graystone Metallic",
+                  "factory_code": "16U",
+                  "rpo_code": "16U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-blue-metallic-25u",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "25U Dark Blue Metallic",
+                  "factory_code": "25U",
+                  "rpo_code": "25U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "black-41u",
+                  "name": "Black",
+                  "source_label": "41U Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "blue-granite-metallic-46u",
+                  "name": "Blue Granite Metallic",
+                  "source_label": "46U Blue Granite Metallic",
+                  "factory_code": "46U",
+                  "rpo_code": "46U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-green-metallic-47u",
+                  "name": "Dark Green Metallic",
+                  "source_label": "47U Dark Green Metallic",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "summit-white-50u",
+                  "name": "Summit White",
+                  "source_label": "50U Summit White",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "silver-birch-metallic-59u",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "59U Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "sport-red-metallic-63u",
+                  "name": "Sport Red Metallic",
+                  "source_label": "63U Sport Red Metallic",
+                  "factory_code": "63U",
+                  "rpo_code": "63U",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "victory-red-74u",
+                  "name": "Victory Red",
+                  "source_label": "74U Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": null
+                }
+              ]
+            },
+            {
+              "program_id": "silverado-new-body-1500-regular",
+              "program_label": "New-body Silverado 1500 exterior colors",
+              "variant": "Silverado 1500, GMT900",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete available exterior-color list printed on the new-body Silverado 1500 specification sheet.",
+              "source_ref": {
+                "source_id": "chevrolet-2007-silverado-1500-select-specifications",
+                "pdf_pages": [
+                  2
+                ],
+                "printed_page_label": "Specification sheet reverse",
+                "section": "Available Exterior Colors",
+                "revision": "07CHESI9SPE01"
+              },
+              "colors": [
+                {
+                  "identity_key": "sport-red-metallic",
+                  "name": "Sport Red Metallic",
+                  "source_label": "SPORT RED METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Requires 1LT, 2LT, or LTZ."
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "BLACK",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-blue-metallic",
+                  "name": "Dark Blue Metallic",
+                  "source_label": "DARK BLUE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "victory-red",
+                  "name": "Victory Red",
+                  "source_label": "VICTORY RED",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "SUMMIT WHITE",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "blue-granite-metallic",
+                  "name": "Blue Granite Metallic",
+                  "source_label": "BLUE GRANITE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "graystone-metallic",
+                  "name": "Graystone Metallic",
+                  "source_label": "GRAYSTONE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "desert-brown-metallic",
+                  "name": "Desert Brown Metallic",
+                  "source_label": "DESERT BROWN METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Requires 1LT, 2LT, or LTZ."
+                },
+                {
+                  "identity_key": "silver-birch-metallic",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "SILVER BIRCH METALLIC",
+                  "factory_code": null,
+                  "wa_number": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model_id": "colorado",
+      "model_name": "Colorado",
+      "requested_year_range": [
+        2004,
+        2007
+      ],
+      "years": [
+        {
+          "year": 2004,
+          "coverage_status": "verified_complete_regular",
+          "complete_regular_palette": true,
+          "availability_scope": "United States Colorado regular exterior colors.",
+          "limitations": [
+            "The official United States sales brochure prints the complete regular palette but not WA numbers.",
+            "No exact-year United States SEO solid-paint or stripe table was located. A similar Canadian brochure was reviewed but not used for United States claims."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                17
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "xtreme_accent_stripe_d98",
+              "status": "unresolved"
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "colorado-regular",
+              "program_label": "Colorado exterior colors",
+              "variant": "Colorado",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete United States exterior-color list.",
+              "source_ref": {
+                "source_id": "chevrolet-2004-colorado-us-sales-brochure",
+                "pdf_pages": [
+                  17
+                ],
+                "printed_page_label": "Back cover",
+                "section": "Exterior Colours",
+                "revision": "2004 model year"
+              },
+              "colors": [
+                {
+                  "identity_key": "silver-birch-metallic-59",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "59 - Silver Birch Metallic",
+                  "factory_code": "59",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "indigo-blue-metallic-39",
+                  "name": "Indigo Blue Metallic",
+                  "source_label": "39 - Indigo Blue Metallic",
+                  "factory_code": "39",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "victory-red-74",
+                  "name": "Victory Red",
+                  "source_label": "74 - Victory Red",
+                  "factory_code": "74",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "black-41",
+                  "name": "Black",
+                  "source_label": "41 - Black",
+                  "factory_code": "41",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "sunburst-orange-metallic-85",
+                  "name": "Sunburst Orange Metallic",
+                  "source_label": "85 - Sunburst Orange Metallic",
+                  "factory_code": "85",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "yellow-43",
+                  "name": "Yellow",
+                  "source_label": "43 - Yellow",
+                  "factory_code": "43",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-cherry-red-metallic-94",
+                  "name": "Dark Cherry Red Metallic",
+                  "source_label": "94 - Dark Cherry Red Metallic",
+                  "factory_code": "94",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "dark-green-metallic-47",
+                  "name": "Dark Green Metallic",
+                  "source_label": "47 - Dark Green Metallic",
+                  "factory_code": "47",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "summit-white-50",
+                  "name": "Summit White",
+                  "source_label": "50 - Summit White",
+                  "factory_code": "50",
+                  "wa_number": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2005,
+          "coverage_status": "verified_complete_regular_seo_and_stripe_program",
+          "complete_regular_palette": true,
+          "availability_scope": "Colorado regular paint, SEO solid paint, and Xtreme D98 stripe program.",
+          "limitations": [
+            "The source names the D98 stripe package and permitted base colors but does not name the stripe hue.",
+            "SEO applicability varies by body and suspension configuration; the palette is not flattened into universal availability."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                156
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                157
+              ]
+            },
+            {
+              "program_type": "xtreme_accent_stripe_d98",
+              "status": "program_and_base_colors_verified_stripe_hue_unpublished",
+              "pdf_pages": [
+                119,
+                141,
+                145
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "colorado-solid-paint",
+              "program_label": "Colorado solid paint",
+              "variant": "Colorado",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete regular solid-paint table.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-colorado",
+                "pdf_pages": [
+                  156
+                ],
+                "printed_page_label": "Page 56",
+                "section": "Color and Trim - Solid Paint",
+                "revision": "Published August 13, 2004"
+              },
+              "colors": [
+                {
+                  "identity_key": "superior-blue-metallic-wa-703j",
+                  "name": "Superior Blue Metallic",
+                  "source_label": "Superior Blue Metallic",
+                  "factory_code": "22U",
+                  "rpo_code": "22U",
+                  "wa_number": "WA-703J",
+                  "condition": "New for 2005.",
+                  "restriction": "Not available with ZQ8 Sport, Sport, or B4U Color-keyed Appearance."
+                },
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555",
+                  "restriction": "Required when ZQ8, V4A Xtreme, or B4U is ordered."
+                },
+                {
+                  "identity_key": "yellow-wa-5456",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "factory_code": "43U",
+                  "rpo_code": "43U",
+                  "wa_number": "WA-5456",
+                  "restriction": "Required when ZQ8, V4A Xtreme, or B4U is ordered."
+                },
+                {
+                  "identity_key": "dark-green-metallic-wa-9539",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "factory_code": "47U",
+                  "rpo_code": "47U",
+                  "wa_number": "WA-9539",
+                  "restriction": "Not available with ZQ8 Sport, Sport, or B4U Color-keyed Appearance."
+                },
+                {
+                  "identity_key": "summit-white-wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "wa_number": "WA-8624",
+                  "restriction": "Required when ZQ8, V4A Xtreme, or B4U is ordered."
+                },
+                {
+                  "identity_key": "silver-birch-metallic-wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": "WA-926L",
+                  "restriction": "Not available with ZQ8 Sport, Sport, or B4U Color-keyed Appearance."
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260",
+                  "restriction": "Required when ZQ8, V4A Xtreme, or B4U is ordered."
+                },
+                {
+                  "identity_key": "sunburst-orange-metallic-wa-802k",
+                  "name": "Sunburst Orange Metallic",
+                  "source_label": "Sunburst Orange Metallic",
+                  "factory_code": "85U",
+                  "rpo_code": "85U",
+                  "wa_number": "WA-802K",
+                  "restriction": "Not available with ZQ8 Sport, Sport, or B4U Color-keyed Appearance."
+                },
+                {
+                  "identity_key": "dark-cherry-red-metallic-wa-9088",
+                  "name": "Dark Cherry Red Metallic",
+                  "source_label": "Dark Cherry Red Metallic",
+                  "factory_code": "94U",
+                  "rpo_code": "94U",
+                  "wa_number": "WA-9088",
+                  "restriction": "Not available with ZQ8 Sport, Sport, or B4U Color-keyed Appearance."
+                }
+              ]
+            },
+            {
+              "program_id": "colorado-seo-solid-paint",
+              "program_label": "Colorado SEO solid paint",
+              "variant": "Colorado fleet and special order",
+              "application_type": "factory_seo_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete SEO color table; availability remains configuration dependent.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-colorado",
+                "pdf_pages": [
+                  157
+                ],
+                "printed_page_label": "Page 57",
+                "section": "Color and Trim - SEO Solid Paint",
+                "revision": "Published August 13, 2004"
+              },
+              "colors": [
+                {
+                  "identity_key": "yellow-wa-5456",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-5456"
+                },
+                {
+                  "identity_key": "green-wa-7941",
+                  "name": "Green",
+                  "source_label": "Green",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-7941"
+                },
+                {
+                  "identity_key": "woodland-green-wa-9015",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "rpo_code": "9V5",
+                  "seo_code": "9V5",
+                  "wa_number": "WA-9015"
+                },
+                {
+                  "identity_key": "doeskin-tan-wa-9403",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "rpo_code": "9V9",
+                  "seo_code": "9V9",
+                  "wa_number": "WA-9403"
+                },
+                {
+                  "identity_key": "yellow-wa-9411",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9411"
+                },
+                {
+                  "identity_key": "yellow-wa-9414",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-9414"
+                },
+                {
+                  "identity_key": "tangier-orange-wa-9417",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "rpo_code": "9W4",
+                  "seo_code": "9W4",
+                  "wa_number": "WA-9417"
+                },
+                {
+                  "identity_key": "light-stellar-blue-wa-146b",
+                  "name": "Light Stellar Blue",
+                  "source_label": "Light Stellar Blue",
+                  "rpo_code": null,
+                  "seo_code": null,
+                  "wa_number": "WA-146B"
+                },
+                {
+                  "identity_key": "wheatland-yellow-wa-253a",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "rpo_code": "9W3",
+                  "seo_code": "9W3",
+                  "wa_number": "WA-253A"
+                }
+              ]
+            },
+            {
+              "program_id": "colorado-xtreme-accent-stripe-d98",
+              "program_label": "Xtreme Accent Stripe Package",
+              "variant": "Colorado with V4A Xtreme Appearance",
+              "application_type": "factory_stripe_package",
+              "evidence_class": "program_presence_and_base_color_eligibility",
+              "paint_scheme": "D98",
+              "claim_scope": "Dual hood stripes and driver and front passenger door stripes. The source does not name a stripe paint color.",
+              "program_restriction": "Requires V4A Xtreme Appearance.",
+              "stripe_hue_unpublished": true,
+              "eligible_base_colors": [
+                "Black",
+                "Yellow",
+                "Summit White",
+                "Victory Red"
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-colorado",
+                "pdf_pages": [
+                  119,
+                  141,
+                  145
+                ],
+                "printed_page_label": "Order Guide pages 19, 41, and 45",
+                "section": "D98 Xtreme Accent Stripe Package and V4A exterior-color restrictions",
+                "revision": "Published August 13, 2004"
+              },
+              "colors": []
+            }
+          ]
+        },
+        {
+          "year": 2006,
+          "coverage_status": "verified_complete_regular_special_programs_partial",
+          "complete_regular_palette": true,
+          "availability_scope": "United States Colorado regular paint plus Street Pak and Xtreme base-color restrictions.",
+          "limitations": [
+            "No exact-year official SEO solid-paint table was located, so 2005 or 2007 SEO colors are not projected into 2006.",
+            "The specification sheet verifies Xtreme and Street Pak eligible base colors but does not publish a D98 stripe program or stripe hue."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                2
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "unresolved"
+            },
+            {
+              "program_type": "street_pak",
+              "status": "eligible_base_colors_verified",
+              "pdf_pages": [
+                2
+              ]
+            },
+            {
+              "program_type": "xtreme_appearance",
+              "status": "eligible_base_colors_verified",
+              "pdf_pages": [
+                2
+              ]
+            },
+            {
+              "program_type": "xtreme_accent_stripe_d98",
+              "status": "unresolved"
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "colorado-regular",
+              "program_label": "Colorado available exterior colors",
+              "variant": "Colorado",
+              "application_type": "factory_regular_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete available exterior-color list in the United States specification sheet.",
+              "source_ref": {
+                "source_id": "chevrolet-2006-colorado-select-specifications",
+                "pdf_pages": [
+                  2
+                ],
+                "printed_page_label": "Specification sheet reverse",
+                "section": "Available Exterior Colors",
+                "revision": "06CHECOLSPE01"
+              },
+              "colors": [
+                {
+                  "identity_key": "victory-red",
+                  "name": "Victory Red",
+                  "source_label": "VICTORY RED",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "condition": "Eligible for Street Pak and Xtreme."
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "BLACK",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "condition": "Eligible for Street Pak and Xtreme."
+                },
+                {
+                  "identity_key": "superior-blue-metallic",
+                  "name": "Superior Blue Metallic",
+                  "source_label": "SUPERIOR BLUE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Not available with Sport Suspension; eligible for Xtreme."
+                },
+                {
+                  "identity_key": "cherry-red-metallic",
+                  "name": "Cherry Red Metallic",
+                  "source_label": "CHERRY RED METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Not available with Sport Suspension."
+                },
+                {
+                  "identity_key": "sunburst-orange-metallic",
+                  "name": "Sunburst Orange Metallic",
+                  "source_label": "SUNBURST ORANGE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Not available with Sport Suspension."
+                },
+                {
+                  "identity_key": "blue-granite-metallic",
+                  "name": "Blue Granite Metallic",
+                  "source_label": "BLUE GRANITE METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Not available with Sport Suspension."
+                },
+                {
+                  "identity_key": "yellow",
+                  "name": "Yellow",
+                  "source_label": "YELLOW",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "condition": "Extra-cost color; eligible for Street Pak and Xtreme."
+                },
+                {
+                  "identity_key": "silver-birch-metallic",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "SILVER BIRCH METALLIC",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "restriction": "Not available with Sport Suspension."
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "SUMMIT WHITE",
+                  "factory_code": null,
+                  "wa_number": null,
+                  "condition": "Eligible for Street Pak and Xtreme."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2007,
+          "coverage_status": "verified_complete_regular_seo_and_stripe_program",
+          "complete_regular_palette": true,
+          "availability_scope": "Colorado regular paint, named SEO paint programs, and Xtreme D98 stripe program.",
+          "limitations": [
+            "The 2007 SEO order-guide pages print SEO codes but not WA numbers; no WA number is carried from 2005.",
+            "The D98 stripe package is named and tied to V4A base colors, but the stripe hue is not published."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "regular_paint",
+              "status": "located_complete",
+              "pdf_pages": [
+                204
+              ]
+            },
+            {
+              "program_type": "seo_solid_paint",
+              "status": "located_complete_named_programs",
+              "pdf_pages": [
+                205,
+                206,
+                207,
+                208,
+                209
+              ]
+            },
+            {
+              "program_type": "xtreme_accent_stripe_d98",
+              "status": "program_and_base_colors_verified_stripe_hue_unpublished",
+              "pdf_pages": [
+                135,
+                146,
+                154,
+                182,
+                188,
+                193
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "colorado-solid-paint",
+              "program_label": "Colorado solid paint",
+              "variant": "Colorado",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": null,
+              "claim_scope": "Complete regular solid-paint table.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-colorado",
+                "pdf_pages": [
+                  204
+                ],
+                "printed_page_label": "Page 104",
+                "section": "Color and Trim - Solid Paint",
+                "revision": "Published May 5, 2006"
+              },
+              "colors": [
+                {
+                  "identity_key": "pace-blue-wa-408p",
+                  "name": "Pace Blue",
+                  "source_label": "Pace Blue",
+                  "factory_code": "20U",
+                  "rpo_code": "20U",
+                  "wa_number": "WA-408P",
+                  "condition": "New for 2007."
+                },
+                {
+                  "identity_key": "imperial-blue-metallic-wa-403p",
+                  "name": "Imperial Blue Metallic",
+                  "source_label": "Imperial Blue Metallic",
+                  "factory_code": "37U",
+                  "rpo_code": "37U",
+                  "wa_number": "WA-403P",
+                  "condition": "New for 2007."
+                },
+                {
+                  "identity_key": "black-wa-8555",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "factory_code": "41U",
+                  "rpo_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "yellow-wa-5456",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "factory_code": "43U",
+                  "rpo_code": "43U",
+                  "wa_number": "WA-5456",
+                  "condition": "Extra-cost color."
+                },
+                {
+                  "identity_key": "blue-granite-metallic-wa-928l",
+                  "name": "Blue Granite Metallic",
+                  "source_label": "Blue Granite Metallic",
+                  "factory_code": "46U",
+                  "rpo_code": "46U",
+                  "wa_number": "WA-928L",
+                  "restriction": "Not available with ZQ8 Sport."
+                },
+                {
+                  "identity_key": "summit-white-wa-8624",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "factory_code": "50U",
+                  "rpo_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "silver-birch-metallic-wa-926l",
+                  "name": "Silver Birch Metallic",
+                  "source_label": "Silver Birch Metallic",
+                  "factory_code": "59U",
+                  "rpo_code": "59U",
+                  "wa_number": "WA-926L",
+                  "restriction": "Not available with ZQ8 Sport."
+                },
+                {
+                  "identity_key": "deep-ruby-metallic-wa-412p",
+                  "name": "Deep Ruby Metallic",
+                  "source_label": "Deep Ruby Metallic",
+                  "factory_code": "66U",
+                  "rpo_code": "66U",
+                  "wa_number": "WA-412P",
+                  "condition": "New for 2007.",
+                  "restriction": "Not available with ZQ8 Sport."
+                },
+                {
+                  "identity_key": "victory-red-wa-9260",
+                  "name": "Victory Red",
+                  "source_label": "Victory Red",
+                  "factory_code": "74U",
+                  "rpo_code": "74U",
+                  "wa_number": "WA-9260"
+                },
+                {
+                  "identity_key": "sunburst-orange-metallic-wa-802k",
+                  "name": "Sunburst Orange Metallic",
+                  "source_label": "Sunburst Orange Metallic",
+                  "factory_code": "85U",
+                  "rpo_code": "85U",
+                  "wa_number": "WA-802K",
+                  "restriction": "Not available with ZQ8 Sport."
+                }
+              ]
+            },
+            {
+              "program_id": "colorado-seo-solid-paint",
+              "program_label": "Colorado SEO solid paint",
+              "variant": "Colorado fleet and special order",
+              "application_type": "factory_seo_solid_paint",
+              "evidence_class": "exact_governing_named_programs",
+              "paint_scheme": "TGK",
+              "claim_scope": "Named SEO programs printed across the regular, chassis cab, extended cab, and crew cab order-guide pages. Applicability is configuration dependent.",
+              "program_restriction": "TGK is required and may require extended lead time. Grilles are Dark Smoke Gray instead of color keyed, rear bumpers are Black instead of chrome, and flares are Dark Smoke Gray. Some applications exclude ZQ8.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-colorado",
+                "pdf_pages": [
+                  205,
+                  206,
+                  207,
+                  208,
+                  209
+                ],
+                "printed_page_label": "Pages 105-109",
+                "section": "Color and Trim - SEO Solid Paint",
+                "revision": "Published May 5, 2006"
+              },
+              "colors": [
+                {
+                  "identity_key": "doeskin-tan-9v9",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "rpo_code": "9V9",
+                  "seo_code": "9V9",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "tangier-orange-9w4",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "rpo_code": "9W4",
+                  "seo_code": "9W4",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "wheatland-yellow-9w3",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "rpo_code": "9W3",
+                  "seo_code": "9W3",
+                  "wa_number": null
+                },
+                {
+                  "identity_key": "woodland-green-9v5",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "rpo_code": "9V5",
+                  "seo_code": "9V5",
+                  "wa_number": null
+                }
+              ]
+            },
+            {
+              "program_id": "colorado-xtreme-accent-stripe-d98",
+              "program_label": "Xtreme Accent Stripe Package",
+              "variant": "Colorado 2WD with V4A Xtreme Appearance",
+              "application_type": "factory_stripe_package",
+              "evidence_class": "program_presence_and_base_color_eligibility",
+              "paint_scheme": "D98",
+              "claim_scope": "Dual hood stripes and driver and front passenger door stripes. The source does not name a stripe paint color.",
+              "program_restriction": "2WD only; requires V4A Xtreme Appearance.",
+              "stripe_hue_unpublished": true,
+              "eligible_base_colors": [
+                "Pace Blue (20U)",
+                "Black (41U)",
+                "Yellow (43U)",
+                "Summit White (50U)",
+                "Victory Red (74U)"
+              ],
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-colorado",
+                "pdf_pages": [
+                  135,
+                  146,
+                  154,
+                  182,
+                  188,
+                  193
+                ],
+                "printed_page_label": "Order Guide pages 35, 46, 54, 82, 88, and 93",
+                "section": "D98 Xtreme Accent Stripe Package and V4A exterior-color restrictions",
+                "revision": "Published May 5, 2006"
+              },
+              "colors": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "validation_expectations": {
+    "model_year_grain": "One year object per requested model and year.",
+    "required_silverado_years": [
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007
+    ],
+    "required_colorado_years": [
+      2004,
+      2005,
+      2006,
+      2007
+    ],
+    "source_reference_integrity": "Every source_ref.source_id must resolve to exactly one source object.",
+    "program_uniqueness": "program_id values must be unique within each model year.",
+    "scope_guard": "No palette claims Silverado HD availability. HD strings appear only in exact source-scope descriptions, shared-lineup caveats, and explicit exclusions, including the separately reviewed 2007 Classic 1500HD page.",
+    "unresolved_year_policy": "An unresolved or partial year must contain an explicit limitation and must not receive colors inferred from another year."
+  }
+}

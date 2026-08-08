@@ -1,0 +1,2303 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-08-07",
+  "visibility": "public",
+  "model": {
+    "id": "corvette",
+    "name": "Chevrolet Corvette",
+    "years": [
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982
+    ]
+  },
+  "archive_note": "The official GM URLs and artifact metadata are verified. These ten artifacts were not present in the public brochure-source-archive-v1 release when checked on 2026-08-07. Each source therefore records a null archive_url and the deterministic planned_archive_url without claiming that the planned link is live.",
+  "sources": [
+    {
+      "source_id": "gm-heritage-1973-chevrolet-corvette",
+      "model_year": 1973,
+      "title": "1973 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1973-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1973-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "88609b7a681d82260758c80197a72ff50f1421f9e93a168e99671505a8182dd4",
+      "crawler_object_relpath": "88/60/88609b7a681d82260758c80197a72ff50f1421f9e93a168e99671505a8182dd4.pdf",
+      "artifact_bytes": 2307892,
+      "pdf_page_count": 69,
+      "reviewed_pages": [
+        {
+          "pdf_page": 37,
+          "printed_page": "12/Corvette",
+          "section": "Corvette Color & Trim",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete exterior color table, body codes, vinyl roof cover row, and convertible top statement were visually checked. PDF page 11 contains the same chart."
+        }
+      ],
+      "limitations": [
+        "No revision date is printed on the reviewed chart.",
+        "The chart uses generic exterior labels rather than separate marketing paint names."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1974-chevrolet-corvette",
+      "model_year": 1974,
+      "title": "1974 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1974-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1974-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "f0f445f60f5b9a7ea3ca5b6a17b307530590de53f6d0162b42fe75948baa157d",
+      "crawler_object_relpath": "f0/f4/f0f445f60f5b9a7ea3ca5b6a17b307530590de53f6d0162b42fe75948baa157d.pdf",
+      "artifact_bytes": 2801491,
+      "pdf_page_count": 95,
+      "reviewed_pages": [
+        {
+          "pdf_page": 33,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Corvette Interior and Exterior Selection Chart",
+          "document_revision_date_raw": "8-17-73",
+          "visual_verification": "Rendered from the retained artifact; the complete solid-paint table, lower and upper codes, model scope, combination note, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 94,
+          "printed_page": "12/Corvette",
+          "section": "Corvette Interior Trim Chart",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete exterior table and the statements about the vinyl roof cover and convertible top were visually checked."
+        }
+      ],
+      "limitations": [
+        "The Dealer Order Guide chart governs the body palette. PDF page 94 supplies the separately stated top-cover programs."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1975-chevrolet-corvette",
+      "model_year": 1975,
+      "title": "1975 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1975-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1975-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "963dbf287aa17baead0627b1327800a80b4f97e090ba7f989b81a91daf67b249",
+      "crawler_object_relpath": "96/3d/963dbf287aa17baead0627b1327800a80b4f97e090ba7f989b81a91daf67b249.pdf",
+      "artifact_bytes": 3139580,
+      "pdf_page_count": 105,
+      "reviewed_pages": [
+        {
+          "pdf_page": 46,
+          "printed_page": "BODY-3",
+          "section": "1975 Corvette Interior-Exterior Color Combinations",
+          "document_revision_date_raw": "SEPTEMBER 1974",
+          "visual_verification": "Rendered from the retained artifact; the complete exterior rows, codes, new and carryover marks, and interior-combination grid were visually checked."
+        }
+      ],
+      "limitations": [
+        "The chart's exact BODY labels are retained. Later production-summary sales labels in the same kit are not substituted for them."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1976-chevrolet-corvette",
+      "model_year": 1976,
+      "title": "1976 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1976-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1976-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "f539f278356b76c27f17adbf085610ff323234b77aeb08c93b0e03d7078497e0",
+      "crawler_object_relpath": "f5/39/f539f278356b76c27f17adbf085610ff323234b77aeb08c93b0e03d7078497e0.pdf",
+      "artifact_bytes": 3446464,
+      "pdf_page_count": 119,
+      "reviewed_pages": [
+        {
+          "pdf_page": 23,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Color and Trim Selection",
+          "document_revision_date_raw": "12-15-75",
+          "visual_verification": "Rendered from the retained artifact; the complete exterior paint table, lower and upper codes, model scope, combination note, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 94,
+          "printed_page": "BODY-3",
+          "section": "1976 Corvette Interior-Exterior Color Combinations",
+          "document_revision_date_raw": "SEPTEMBER 1975",
+          "visual_verification": "Rendered from the retained artifact; the complete BODY table and white trim marker were visually checked as corroboration."
+        }
+      ],
+      "limitations": [
+        "The revised Dealer Order Guide supplies the retained body labels. BODY-3 is corroborating evidence."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1977-chevrolet-corvette",
+      "model_year": 1977,
+      "title": "1977 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1977-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1977-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "e80e54c3ce24311b07dca8069c47a8828653106d735313b9a69d87f563215066",
+      "crawler_object_relpath": "e8/0e/e80e54c3ce24311b07dca8069c47a8828653106d735313b9a69d87f563215066.pdf",
+      "artifact_bytes": 3013388,
+      "pdf_page_count": 111,
+      "reviewed_pages": [
+        {
+          "pdf_page": 49,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Color and Trim Selection",
+          "document_revision_date_raw": "10-8-76",
+          "visual_verification": "Rendered from the retained artifact; the complete exterior paint table, codes, model scope, combination note, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 20,
+          "printed_page": "BODY-3",
+          "section": "1977 Corvette Interior/Exterior Color Combinations",
+          "document_revision_date_raw": "SEPTEMBER 1976",
+          "visual_verification": "Rendered from the retained artifact; the complete BODY table and white trim marker were visually checked as corroboration."
+        }
+      ],
+      "limitations": [
+        "The revised Dealer Order Guide supplies the retained body labels. BODY-3 is corroborating evidence."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1978-chevrolet-corvette",
+      "model_year": 1978,
+      "title": "1978 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1978-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1978-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "3f6a192c84dd7e9bf063c9e5f5c7ffa296e695effbf50067732bffeaa43fdcfc",
+      "crawler_object_relpath": "3f/6a/3f6a192c84dd7e9bf063c9e5f5c7ffa296e695effbf50067732bffeaa43fdcfc.pdf",
+      "artifact_bytes": 4241261,
+      "pdf_page_count": 153,
+      "reviewed_pages": [
+        {
+          "pdf_page": 21,
+          "printed_page": null,
+          "section": "Limited Edition Corvette Color and Trim Selection",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the Z78 model scope, package statement, two-tone lower and upper codes, interior codes, and statement about accent stripes were visually checked."
+        },
+        {
+          "pdf_page": 23,
+          "printed_page": "1978 Dealer Order Guide color selection page",
+          "section": "Color and Trim Selection",
+          "document_revision_date_raw": "REVISED: 1-2[remainder clipped in source scan]",
+          "visual_verification": "Rendered from the retained artifact; the complete regular exterior table, B2Z anniversary row, codes, and printed but clipped revision were visually checked."
+        },
+        {
+          "pdf_page": 84,
+          "printed_page": "BODY-3",
+          "section": "1978 Corvette Interior/Exterior Color Combinations",
+          "document_revision_date_raw": "OCTOBER 1977",
+          "visual_verification": "Rendered from the retained artifact; the complete BODY table and codes were visually checked as corroboration."
+        },
+        {
+          "pdf_page": 130,
+          "printed_page": "Corvette/9",
+          "section": "1978 Corvette Color Selections",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete regular palette and the B2Z Silver with Dark Silver Metallic treatment on the body side were visually checked."
+        }
+      ],
+      "limitations": [
+        "The right edge of the Dealer Order Guide scan clips the final characters of its revision date; the audit preserves the legible text and does not infer the missing characters.",
+        "The Z78 order sheet states that accent stripes are included but does not print a stripe hue or paint code."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1979-chevrolet-corvette",
+      "model_year": 1979,
+      "title": "1979 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1979-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1979-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "54b85d8fdbdfe3da84430944080b80e4fd2da0a796cf2e459213dfeaea0e16dc",
+      "crawler_object_relpath": "54/b8/54b85d8fdbdfe3da84430944080b80e4fd2da0a796cf2e459213dfeaea0e16dc.pdf",
+      "artifact_bytes": 3716859,
+      "pdf_page_count": 133,
+      "reviewed_pages": [
+        {
+          "pdf_page": 33,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Color and Trim Selection",
+          "document_revision_date_raw": "2-5-79",
+          "visual_verification": "Rendered from the retained artifact; the complete exterior table, lower and upper codes, model scope, combination note, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 51,
+          "printed_page": "14/Corvette",
+          "section": "Color and Trim Combinations",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete brochure palette was visually checked."
+        },
+        {
+          "pdf_page": 68,
+          "printed_page": "BODY-3",
+          "section": "1979 Corvette Interior/Exterior Color Combinations",
+          "document_revision_date_raw": "OCTOBER 1978",
+          "visual_verification": "Rendered from the retained artifact; the complete BODY table and the code 82 row for dark brown were visually checked."
+        },
+        {
+          "pdf_page": 7,
+          "printed_page": "73",
+          "section": "1979 Colors",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete production color list and the printed note that code 82 may also be coded 67 were visually checked."
+        }
+      ],
+      "limitations": [
+        "The late revised Dealer Order Guide uses code 67 for Corvette Dark Brown. BODY-3 and the production summary use code 82, and the production summary explicitly says code 82 may also be coded 67."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1980-chevrolet-corvette",
+      "model_year": 1980,
+      "title": "1980 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1980-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1980-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "89e0c59aed90f0a3115f1e2280380d17752488c29f76287b0269884be503e84f",
+      "crawler_object_relpath": "89/e0/89e0c59aed90f0a3115f1e2280380d17752488c29f76287b0269884be503e84f.pdf",
+      "artifact_bytes": 2965188,
+      "pdf_page_count": 111,
+      "reviewed_pages": [
+        {
+          "pdf_page": 63,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Color and Trim Selection",
+          "document_revision_date_raw": "3-24-80",
+          "visual_verification": "Rendered from the retained artifact; the complete exterior table, lower and upper codes, model scope, combination note, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 50,
+          "printed_page": "BODY-3",
+          "section": "1980 Corvette Exterior Color Chart",
+          "document_revision_date_raw": "OCTOBER 1979",
+          "visual_verification": "Rendered from the retained artifact; all ten GM codes, Fisher WA numbers, approved master source codes, and the complete interior-combination table were visually checked."
+        }
+      ],
+      "limitations": [
+        "The revised Dealer Order Guide supplies the retained sales labels. BODY-3 supplies exact Fisher WA and approved master source codes."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1981-chevrolet-corvette",
+      "model_year": 1981,
+      "title": "1981 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1981-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1981-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "16152d059ade39fc89b456bffbfa1882e86dd0433e5d1316593581aa7ce3c0ca",
+      "crawler_object_relpath": "16/15/16152d059ade39fc89b456bffbfa1882e86dd0433e5d1316593581aa7ce3c0ca.pdf",
+      "artifact_bytes": 2039579,
+      "pdf_page_count": 75,
+      "reviewed_pages": [
+        {
+          "pdf_page": 4,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Color and Trim Selection",
+          "document_revision_date_raw": "6-15-81",
+          "visual_verification": "Rendered from the retained artifact; the complete revised solid-paint table, all four D84 combinations, accent ordering codes, included stripe colors, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 21,
+          "printed_page": "77",
+          "section": "1981 Colors",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete St. Louis production palette, four Bowling Green two-tone combinations, note about plant scope, and option code were visually checked."
+        },
+        {
+          "pdf_page": 28,
+          "printed_page": "Corvette 7",
+          "section": "Corvette Color and Trim Combinations",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the brochure's complete early regular palette was visually checked as corroboration."
+        }
+      ],
+      "limitations": [
+        "The source explicitly limits the production quantities for the early palette to St. Louis and says all two-tone combinations were painted at Bowling Green.",
+        "The June 15 revised Dealer Order Guide adds a separately scoped solid paint table. The audit preserves both scopes rather than treating either as the sole palette for the entire model year."
+      ]
+    },
+    {
+      "source_id": "gm-heritage-1982-chevrolet-corvette",
+      "model_year": 1982,
+      "title": "1982 Chevrolet Corvette Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_gm_heritage_vehicle_information_kit",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/1982-Chevrolet-Corvette.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "planned_archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/1982-chevrolet-corvette-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "artifact_sha256": "e44d8544f31cdc816482d2c47892e68fc4455567337d0226766b77155d1aa807",
+      "crawler_object_relpath": "e4/4d/e44d8544f31cdc816482d2c47892e68fc4455567337d0226766b77155d1aa807.pdf",
+      "artifact_bytes": 2189192,
+      "pdf_page_count": 75,
+      "reviewed_pages": [
+        {
+          "pdf_page": 33,
+          "printed_page": "Dealer Order Guide Page 4",
+          "section": "Corvette Color and Trim Selection",
+          "document_revision_date_raw": "1-11-82",
+          "visual_verification": "Rendered from the retained artifact; the complete regular paint table, all four D84 combinations, accent ordering codes, included stripe colors, interior-dependent stripe notes, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 31,
+          "printed_page": "Dealer Order Guide Page 2",
+          "section": "Corvette Collector Edition H/B Coupe Color and Trim Selection",
+          "document_revision_date_raw": "1-11-82",
+          "visual_verification": "Rendered from the retained artifact; the Collector Edition model, seat, exterior label, lower and upper codes, and printed revision were visually checked."
+        },
+        {
+          "pdf_page": 24,
+          "printed_page": "Corvette 9",
+          "section": "Color and Trim Combinations",
+          "document_revision_date_raw": null,
+          "visual_verification": "Rendered from the retained artifact; the complete brochure palette, custom two-tone list, and Collector Edition entry were visually checked as corroboration."
+        }
+      ],
+      "limitations": [
+        "The Collector Edition is retained as a separate model-variant program.",
+        "Interior compatibility marks were not promoted to exterior colors."
+      ]
+    }
+  ],
+  "years": [
+    {
+      "model_year": 1973,
+      "audit_status": "official_palette_transcribed",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1973-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 37, printed 12/Corvette, complete Exterior Colors rows in Corvette Color & Trim. PDF page 11 is a duplicate of the same chart.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Blue, Medium (Metallic)",
+              "source_label_raw": "Blue, Medium (Metallic)",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Blue, Dark (Metallic)",
+              "source_label_raw": "Blue, Dark (Metallic)",
+              "factory_code": "27",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Blue-Green (Metallic)",
+              "source_label_raw": "Blue-Green (Metallic)",
+              "factory_code": "45",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Green, Elkhart (Metallic)",
+              "source_label_raw": "Green, Elkhart (Metallic)",
+              "factory_code": "47",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Orange (Metallic)",
+              "source_label_raw": "Orange (Metallic)",
+              "factory_code": "80",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Red, Mille Miglia",
+              "source_label_raw": "Red, Mille Miglia",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Silver (Metallic)",
+              "source_label_raw": "Silver (Metallic)",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Yellow",
+              "source_label_raw": "Yellow",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow (Metallic)",
+              "source_label_raw": "Yellow (Metallic)",
+              "factory_code": "53",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "removable-hardtop-vinyl-cover",
+          "program_label": "Vinyl roof cover",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 37, Vinyl Roof Cover row.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "removable_hardtop_vinyl_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Auxiliary hardtop only.",
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 37, Convertible Top Colors statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior compatibility marks were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1974,
+      "audit_status": "official_palette_transcribed",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1974-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Solid body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 33, revised 8-17-73 Dealer Order Guide Page 2, complete SOLID table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Blue, Corvette Medium (Metallic)",
+              "source_label_raw": "Blue, Corvette Medium (Metallic)",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Brown, Dark (Metallic)",
+              "source_label_raw": "Brown, Dark (Metallic)",
+              "factory_code": "68",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Gray, Corvette (Metallic)",
+              "source_label_raw": "Gray, Corvette (Metallic)",
+              "factory_code": "17",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Green, Dark (Metallic)",
+              "source_label_raw": "Green, Dark (Metallic)",
+              "factory_code": "48",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Orange, Corvette (Metallic)",
+              "source_label_raw": "Orange, Corvette (Metallic)",
+              "factory_code": "80",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Red, Mille Miglia",
+              "source_label_raw": "Red, Mille Miglia",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Red, Medium (Metallic)",
+              "source_label_raw": "Red, Medium (Metallic)",
+              "factory_code": "74",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver Mist, Corvette",
+              "source_label_raw": "Silver Mist, Corvette",
+              "factory_code": "14",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow, Bright Corvette",
+              "source_label_raw": "Yellow, Bright Corvette",
+              "factory_code": "56",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "removable-hardtop-vinyl-cover",
+          "program_label": "Vinyl roof cover",
+          "palette_kind": "removable_hardtop_vinyl_cover",
+          "source_scope": "PDF page 94, Vinyl Roof Cover row.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "removable_hardtop_vinyl_cover",
+              "combination_code": "RPO C08",
+              "restrictions": [
+                "Auxiliary hardtop only.",
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "convertible-folding-top",
+          "program_label": "Convertible top colors",
+          "palette_kind": "convertible_top",
+          "source_scope": "PDF page 94, Convertible Top Colors statement.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "white",
+              "factory_code": "AA",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "black",
+              "factory_code": "BB",
+              "factory_code_status": "printed",
+              "component_role": "convertible_folding_top",
+              "combination_code": null,
+              "restrictions": [
+                "Available with all exterior colors."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The Dealer Order Guide note allows non-recommended solid exterior and interior combinations on Coupe with dealer initials; Convertible combinations shown are the only approved combinations."
+      ]
+    },
+    {
+      "model_year": 1975,
+      "audit_status": "official_palette_transcribed",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1975-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 46, printed BODY-3, complete 1975 Corvette Interior-Exterior Color Combinations exterior rows.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color C/O (carryover)."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver Metallic",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color C/O (carryover)."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Red Metallic",
+              "source_label_raw": "Red Metallic",
+              "factory_code": "74",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color C/O (carryover)."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Med. Brt. Blue Metallic",
+              "source_label_raw": "Med. Brt. Blue Metallic",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Dark Steel Blue",
+              "source_label_raw": "Dark Steel Blue",
+              "factory_code": "27",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Flame Red",
+              "source_label_raw": "Flame Red",
+              "factory_code": "70",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Bright Yellow",
+              "source_label_raw": "Bright Yellow",
+              "factory_code": "56",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Bright Green Metallic",
+              "source_label_raw": "Bright Green Metallic",
+              "factory_code": "42",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Medium Saddle Metallic",
+              "source_label_raw": "Medium Saddle Metallic",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Chart marks this color N (new)."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior compatibility marks were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1976,
+      "audit_status": "official_palette_transcribed",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1976-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 23, revised 12-15-75 Dealer Order Guide Page 2, complete Exterior Paint Color table; corroborated by BODY-3 on PDF page 94.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Blue, Corvette Bright (Met)",
+              "source_label_raw": "Blue, Corvette Bright (Met)",
+              "factory_code": "22",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Brown, Corvette Dark (Met)",
+              "source_label_raw": "Brown, Corvette Dark (Met)",
+              "factory_code": "69",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Buckskin, Corvette Light",
+              "source_label_raw": "Buckskin, Corvette Light",
+              "factory_code": "64",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Green, Corvette Dark (Met)",
+              "source_label_raw": "Green, Corvette Dark (Met)",
+              "factory_code": "33",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Mahogany (Met)",
+              "source_label_raw": "Mahogany (Met)",
+              "factory_code": "37",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Orange Flame, Corvette",
+              "source_label_raw": "Orange Flame, Corvette",
+              "factory_code": "70",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Red, Medium",
+              "source_label_raw": "Red, Medium",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow, Corvette Bright",
+              "source_label_raw": "Yellow, Corvette Bright",
+              "factory_code": "56",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior compatibility marks and the BODY chart's white trim markers were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1977,
+      "audit_status": "official_palette_transcribed",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1977-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 49, revised 10-8-76 Dealer Order Guide Page 2, complete Exterior Paint Color table; corroborated by BODY-3 on PDF page 20.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Blue, Corvette Dark",
+              "source_label_raw": "Blue, Corvette Dark",
+              "factory_code": "28",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Blue, Corvette Light (Met)",
+              "source_label_raw": "Blue, Corvette Light (Met)",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Orange, Corvette",
+              "source_label_raw": "Orange, Corvette",
+              "factory_code": "66",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Red, Corvette Dark",
+              "source_label_raw": "Red, Corvette Dark",
+              "factory_code": "83",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Red, Medium",
+              "source_label_raw": "Red, Medium",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Tan, Corvette",
+              "source_label_raw": "Tan, Corvette",
+              "factory_code": "80",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow, Corvette",
+              "source_label_raw": "Yellow, Corvette",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Interior compatibility marks and the BODY chart's white trim markers were not promoted to exterior colors."
+      ]
+    },
+    {
+      "model_year": 1978,
+      "audit_status": "official_palette_transcribed_with_special_programs",
+      "coverage_status": "complete_regular_chart_and_qualified_special_programs",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1978-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 23, 1978 Dealer Order Guide complete regular exterior table; corroborated by BODY-3 on PDF page 84 and Corvette Color Selections on PDF page 130.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige, Corvette Light",
+              "source_label_raw": "Beige, Corvette Light",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Blue, Corvette Dark (Met)",
+              "source_label_raw": "Blue, Corvette Dark (Met)",
+              "factory_code": "83",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Blue, Corvette Light",
+              "source_label_raw": "Blue, Corvette Light",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Brown, Corvette Dark (Met)",
+              "source_label_raw": "Brown, Corvette Dark (Met)",
+              "factory_code": "89",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Mahogany, Corvette (Met)",
+              "source_label_raw": "Mahogany, Corvette (Met)",
+              "factory_code": "82",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Red, Corvette",
+              "source_label_raw": "Red, Corvette",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow, Corvette",
+              "source_label_raw": "Yellow, Corvette",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "25th-anniversary-b2z-two-tone",
+          "program_label": "25th Anniversary Paint",
+          "palette_kind": "special_edition_two_tone_body_paint",
+          "source_scope": "PDF page 130, 25th Anniversary Paint (RPO B2Z), corroborated by the B2Z row on PDF page 23.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Silver / Dark Silver Metallic",
+              "source_label_raw": "Silver with Dark Silver Metallic body side color",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_body_side_accent",
+              "combination_code": "RPO B2Z",
+              "secondary_label": "Dark Silver Metallic",
+              "secondary_factory_code": null,
+              "secondary_factory_code_status": "not_printed",
+              "restrictions": [
+                "The complete anniversary treatment is RPO B2Z."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "limited-edition-z78-two-tone",
+          "program_label": "Limited Edition Corvette two-tone paint",
+          "palette_kind": "special_edition_two_tone_body_paint",
+          "source_scope": "PDF page 21, model 1YZ87/Z78 Limited Edition Corvette Coupe Color and Trim Selection.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Silver Metallic / Black",
+              "source_label_raw": "Silver Met./Black",
+              "factory_code": "47",
+              "factory_code_status": "printed",
+              "component_role": "lower_body_paint_with_upper_body_paint",
+              "combination_code": "Z78",
+              "secondary_label": "Black",
+              "secondary_factory_code": "19",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Lower code 47 and upper code 19 are printed in the Z78 model chart.",
+                "Available only as part of the Limited Edition Corvette package described on the same page."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "limited-edition-z78-accent-stripes",
+          "program_label": "Limited Edition Corvette accent stripes",
+          "palette_kind": "special_edition_stripe_program",
+          "source_scope": "PDF page 21, Z78 package content statement.",
+          "complete": false,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Accent stripes (hue not stated)",
+              "source_label_raw": "Accent Stripes",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "accent_stripes",
+              "combination_code": "Z78",
+              "restrictions": [
+                "The governing order sheet states that accent stripes are included but does not print their hue or paint code. This incomplete program must not be promoted as a named color."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The clipped revision date is preserved exactly as visible.",
+        "The Z78 stripe hue remains unverified from the governing order sheet."
+      ]
+    },
+    {
+      "model_year": 1979,
+      "audit_status": "official_palette_transcribed_with_code_alias",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1979-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 33, revised 2-5-79 Dealer Order Guide Page 2, complete Exterior Paint Color table; corroborated by PDF pages 7, 51, and 68.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige, Corvette Light",
+              "source_label_raw": "Beige, Corvette Light",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Blue, Corvette Dark (Met)",
+              "source_label_raw": "Blue, Corvette Dark (Met)",
+              "factory_code": "83",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Blue, Corvette Light",
+              "source_label_raw": "Blue, Corvette Light",
+              "factory_code": "28",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Brown, Corvette Dark (Met)",
+              "source_label_raw": "Brown, Corvette Dark (Met)",
+              "factory_code": "67",
+              "factory_code_status": "printed",
+              "alternate_factory_codes": [
+                "82"
+              ],
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "The revised Dealer Order Guide prints code 67. BODY-3 prints code 82. The kit's production summary explicitly states: Code 82 Corvette Dark Brown may also be coded 67."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Green, Corvette Dark (Met)",
+              "source_label_raw": "Green, Corvette Dark (Met)",
+              "factory_code": "58",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Red, Corvette",
+              "source_label_raw": "Red, Corvette",
+              "factory_code": "72",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver",
+              "source_label_raw": "Silver",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow, Corvette",
+              "source_label_raw": "Yellow, Corvette",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Code 67 and code 82 are retained as documented aliases for the same finish in dark brown, not as two colors."
+      ]
+    },
+    {
+      "model_year": 1980,
+      "audit_status": "official_palette_transcribed_with_wa_crosswalk",
+      "coverage_status": "complete_governing_chart",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1980-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Regular body paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 63, revised 3-24-80 Dealer Order Guide Page 2, complete Exterior Paint Color table; PDF page 50 BODY-3 supplies Fisher WA and approved master source codes.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige, Corvette Light",
+              "source_label_raw": "Beige, Corvette Light",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "wa_code": "7084",
+              "approved_master_source_code": "926-AJ222",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "wa_code": "848",
+              "approved_master_source_code": "926-AJ265",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Blue, Corvette Dark (Met)",
+              "source_label_raw": "Blue, Corvette Dark (Met)",
+              "factory_code": "28",
+              "factory_code_status": "printed",
+              "wa_code": "7193",
+              "approved_master_source_code": "927-F-59811",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Brown, Corvette Dark (Met)",
+              "source_label_raw": "Brown, Corvette Dark (Met)",
+              "factory_code": "47",
+              "factory_code_status": "printed",
+              "wa_code": "4518",
+              "approved_master_source_code": "927-AF917",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Claret, Dark (Met)",
+              "source_label_raw": "Claret, Dark (Met)",
+              "factory_code": "76",
+              "factory_code_status": "printed",
+              "wa_code": "7112",
+              "approved_master_source_code": "927-AJ619",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Green, Corvette Dark (Met)",
+              "source_label_raw": "Green, Corvette Dark (Met)",
+              "factory_code": "58",
+              "factory_code_status": "printed",
+              "wa_code": "8175",
+              "approved_master_source_code": "927-AJ525",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Red, Corvette",
+              "source_label_raw": "Red, Corvette",
+              "factory_code": "83",
+              "factory_code_status": "printed",
+              "wa_code": "7195",
+              "approved_master_source_code": "926-E-59008",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Silver, Corvette",
+              "source_label_raw": "Silver, Corvette",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "wa_code": "4963",
+              "approved_master_source_code": "927-AH789",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "White, Classic",
+              "source_label_raw": "White, Classic",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "wa_code": "3465",
+              "approved_master_source_code": "926-97686",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Yellow, Corvette",
+              "source_label_raw": "Yellow, Corvette",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "wa_code": "7196",
+              "approved_master_source_code": "926-E-30710",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The Fisher WA and approved master source codes are retained exactly as printed on BODY-3."
+      ]
+    },
+    {
+      "model_year": 1981,
+      "audit_status": "official_palette_transcribed_with_plant_and_revision_scopes",
+      "coverage_status": "complete_model_year_scope_union",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1981-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "st-louis-regular-body-paint",
+          "program_label": "St. Louis regular body paint",
+          "palette_kind": "qualified_plant_regular_body_paint",
+          "source_scope": "PDF page 21, printed 77, complete 1981 Colors production list. The source explicitly states that the color quantities shown are for St. Louis production.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Mahogany Metallic",
+              "source_label_raw": "Mahogany Metallic",
+              "factory_code": "06",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "White",
+              "source_label_raw": "White",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Silver Metallic",
+              "source_label_raw": "Silver Metallic",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Bright Blue Metallic",
+              "source_label_raw": "Bright Blue Metallic",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Dark Blue Metallic",
+              "source_label_raw": "Dark Blue Metallic",
+              "factory_code": "28",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Yellow",
+              "source_label_raw": "Yellow",
+              "factory_code": "52",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 8,
+              "label": "Beige",
+              "source_label_raw": "Beige",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 9,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": "75",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 10,
+              "label": "Maroon Metallic",
+              "source_label_raw": "Maroon Metallic",
+              "factory_code": "79",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            },
+            {
+              "order": 11,
+              "label": "Charcoal Metallic",
+              "source_label_raw": "Charcoal Metallic",
+              "factory_code": "84",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "St. Louis production scope."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "revised-dealer-guide-solid-paint",
+          "program_label": "Without D84 Custom Two-Tone Paint",
+          "palette_kind": "qualified_revised_regular_body_paint",
+          "source_scope": "PDF page 4, revised 6-15-81 Dealer Order Guide Page 2, complete WITHOUT D84 CUSTOM TWO-TONE PAINT table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige, Corvette",
+              "source_label_raw": "Beige, Corvette",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Blue, Corvette Dark (Met)",
+              "source_label_raw": "Blue, Corvette Dark (Met)",
+              "factory_code": "38",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Bronze, Corvette Dark (Met)",
+              "source_label_raw": "Bronze, Corvette Dark (Met)",
+              "factory_code": "74",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Charcoal, Corvette (Met)",
+              "source_label_raw": "Charcoal, Corvette (Met)",
+              "factory_code": "39",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            },
+            {
+              "order": 5,
+              "label": "Claret, Corvette (Met)",
+              "source_label_raw": "Claret, Corvette (Met)",
+              "factory_code": "80",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            },
+            {
+              "order": 6,
+              "label": "Claret, Corvette Dark (Met)",
+              "source_label_raw": "Claret, Corvette Dark (Met)",
+              "factory_code": "98",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            },
+            {
+              "order": 7,
+              "label": "Silver, Corvette (Met)",
+              "source_label_raw": "Silver, Corvette (Met)",
+              "factory_code": "33",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": [
+                "Documented by the June 15 revised guide."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "custom-two-tone-d84",
+          "program_label": "D84 Custom Two-Tone Paint",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF page 4, revised 6-15-81 Dealer Order Guide Page 2, complete WITH D84 CUSTOM TWO-TONE PAINT table; PDF page 21 states that all two-tone combinations were painted at Bowling Green.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Beige / Dark Bronze Metallic",
+              "source_label_raw": "Beige (Met) / Dk Bronze (Met)",
+              "factory_code": "50",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 50-74M",
+              "secondary_label": "Dark Bronze Metallic",
+              "secondary_factory_code": "74M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted.",
+                "Painted at Bowling Green according to PDF page 21."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Claret Metallic / Dark Claret Metallic",
+              "source_label_raw": "Claret (Met) / Dk Claret (Met)",
+              "factory_code": "80",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 80-98M",
+              "secondary_label": "Dark Claret Metallic",
+              "secondary_factory_code": "98M",
+              "secondary_factory_code_status": "printed",
+              "alternate_source_label": "Autumn Red / Dark Claret",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted.",
+                "PDF page 21 labels this combination Autumn Red/Dark Claret and assigns codes 80/98.",
+                "Painted at Bowling Green according to PDF page 21."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Silver Metallic / Dark Blue Metallic",
+              "source_label_raw": "Silver (Met) / Dk Blue (Met)",
+              "factory_code": "33",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 33-38M",
+              "secondary_label": "Dark Blue Metallic",
+              "secondary_factory_code": "38M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted.",
+                "Painted at Bowling Green according to PDF page 21."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Silver Metallic / Charcoal Metallic",
+              "source_label_raw": "Silver (Met) / Charcoal (Met)",
+              "factory_code": "33",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 33-39M",
+              "secondary_label": "Charcoal Metallic",
+              "secondary_factory_code": "39M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted.",
+                "Painted at Bowling Green according to PDF page 21."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "d84-included-pin-striping",
+          "program_label": "Pin Striping with D84 Custom Two-Tone Paint",
+          "palette_kind": "included_stripe_program",
+          "source_scope": "PDF page 4, revised 6-15-81 Dealer Order Guide Page 2, complete PIN STRIPING WITH D84 CUSTOM TWO-TONE PAINT table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Gold",
+              "source_label_raw": "Gold",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 50-74M",
+              "restrictions": [
+                "Included with Beige / Dark Bronze Metallic."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Red",
+              "source_label_raw": "Red",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 80-98M",
+              "restrictions": [
+                "Included with Claret Metallic / Dark Claret Metallic."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Blue",
+              "source_label_raw": "Blue",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 33-38M",
+              "restrictions": [
+                "Included with Silver Metallic / Dark Blue Metallic."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Gray",
+              "source_label_raw": "Gray",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 33-39M",
+              "restrictions": [
+                "Included with Silver Metallic / Charcoal Metallic."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The early St. Louis palette and June 15 revised guide palette are separate scopes.",
+        "The two-tone program is explicitly scoped to Bowling Green in the source.",
+        "The production summary label Autumn Red and the revised guide label Claret Metallic for code 80 are both preserved."
+      ]
+    },
+    {
+      "model_year": 1982,
+      "audit_status": "official_palette_transcribed_with_special_programs",
+      "coverage_status": "complete_regular_and_special_program_charts",
+      "complete_regular_palette": true,
+      "source_ids": [
+        "gm-heritage-1982-chevrolet-corvette"
+      ],
+      "programs": [
+        {
+          "program_id": "regular-body-paint",
+          "program_label": "Without D84 Custom Two-Tone Paint",
+          "palette_kind": "regular_body_paint",
+          "source_scope": "PDF page 33, revised 1-11-82 Dealer Order Guide Page 4, complete WITHOUT D84 CUSTOM TWO-TONE PAINT table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Black",
+              "source_label_raw": "Black",
+              "factory_code": "19",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 2,
+              "label": "Blue, Corvette Bright (Met)",
+              "source_label_raw": "Blue, Corvette Bright (Met)",
+              "factory_code": "31",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 3,
+              "label": "Blue, Corvette Dark (Met)",
+              "source_label_raw": "Blue, Corvette Dark (Met)",
+              "factory_code": "26",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 4,
+              "label": "Blue, Corvette Slvr (Met)",
+              "source_label_raw": "Blue, Corvette Slvr (Met)",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 5,
+              "label": "Charcoal, Corvette (Met)",
+              "source_label_raw": "Charcoal, Corvette (Met)",
+              "factory_code": "39",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 6,
+              "label": "Claret, Corvette Dark (Met)",
+              "source_label_raw": "Claret, Corvette Dark (Met)",
+              "factory_code": "99",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 7,
+              "label": "Gold, Corvette (Met)",
+              "source_label_raw": "Gold, Corvette (Met)",
+              "factory_code": "56",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 8,
+              "label": "Green, Corvette Slvr (Met)",
+              "source_label_raw": "Green, Corvette Slvr (Met)",
+              "factory_code": "40",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 9,
+              "label": "Red, Corvette",
+              "source_label_raw": "Red, Corvette",
+              "factory_code": "70",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 10,
+              "label": "Silver, Corvette (Met)",
+              "source_label_raw": "Silver, Corvette (Met)",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            },
+            {
+              "order": 11,
+              "label": "White, Corvette",
+              "source_label_raw": "White, Corvette",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint",
+              "combination_code": null,
+              "restrictions": []
+            }
+          ]
+        },
+        {
+          "program_id": "custom-two-tone-d84",
+          "program_label": "D84 Custom Two-Tone Paint",
+          "palette_kind": "two_tone_body_paint",
+          "source_scope": "PDF page 33, revised 1-11-82 Dealer Order Guide Page 4, complete WITH D84 CUSTOM TWO-TONE PAINT table.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Blue, Silver Metallic / Dark Blue Metallic",
+              "source_label_raw": "Blue, Silver (Met) / Dk Blue (Met)",
+              "factory_code": "24",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 24-26M",
+              "secondary_label": "Dark Blue Metallic",
+              "secondary_factory_code": "26M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Silver Metallic / Dark Claret Metallic",
+              "source_label_raw": "Silver (Met) / Dk Claret (Met)",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 13-99M",
+              "secondary_label": "Dark Claret Metallic",
+              "secondary_factory_code": "99M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Silver Metallic / Charcoal Metallic",
+              "source_label_raw": "Silver (Met) / Charcoal (Met)",
+              "factory_code": "13",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 13-39M",
+              "secondary_label": "Charcoal Metallic",
+              "secondary_factory_code": "39M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "White / Silver Metallic",
+              "source_label_raw": "White / Silver (Met)",
+              "factory_code": "10",
+              "factory_code_status": "printed",
+              "component_role": "body_paint_with_accent_color",
+              "combination_code": "RPO D84 10-13M",
+              "secondary_label": "Silver Metallic",
+              "secondary_factory_code": "13M",
+              "secondary_factory_code_status": "printed",
+              "restrictions": [
+                "Accent color must be specified.",
+                "D60 non-recommended color combination is not permitted."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "d84-included-pin-striping",
+          "program_label": "Pin Striping with D84 Custom Two-Tone Paint",
+          "palette_kind": "included_stripe_program",
+          "source_scope": "PDF page 33, revised 1-11-82 Dealer Order Guide Page 4, complete PIN STRIPING WITH D84 CUSTOM TWO-TONE PAINT table and footnotes.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Blue",
+              "source_label_raw": "Blue",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 24-26M",
+              "restrictions": [
+                "Included with Blue, Silver Metallic / Dark Blue Metallic.",
+                "Stripe color is Gray with Silver Gray interior."
+              ]
+            },
+            {
+              "order": 2,
+              "label": "Gray",
+              "source_label_raw": "Gray",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 13-99M",
+              "restrictions": [
+                "Included with Silver Metallic / Dark Claret Metallic.",
+                "Stripe color is Red with Dark Red interior."
+              ]
+            },
+            {
+              "order": 3,
+              "label": "Gray",
+              "source_label_raw": "Gray",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 13-39M",
+              "restrictions": [
+                "Included with Silver Metallic / Charcoal Metallic."
+              ]
+            },
+            {
+              "order": 4,
+              "label": "Gray",
+              "source_label_raw": "Gray",
+              "factory_code": null,
+              "factory_code_status": "not_printed",
+              "component_role": "included_pin_stripe",
+              "combination_code": "RPO D84 10-13M",
+              "restrictions": [
+                "Included with White / Silver Metallic."
+              ]
+            }
+          ]
+        },
+        {
+          "program_id": "collector-edition-1yy07",
+          "program_label": "Corvette Collector Edition H/B Coupe",
+          "palette_kind": "special_edition_model_variant_body_paint",
+          "source_scope": "PDF page 31, revised 1-11-82 Dealer Order Guide Page 2, complete Collector Edition Color and Trim Selection.",
+          "complete": true,
+          "colors": [
+            {
+              "order": 1,
+              "label": "Slvr. Beige, Corvette (Met)",
+              "source_label_raw": "Slvr. Beige, Corvette (Met)",
+              "factory_code": "59",
+              "factory_code_status": "printed",
+              "component_role": "collector_edition_body_paint",
+              "combination_code": "Model 1YY07",
+              "restrictions": [
+                "Collector Edition H/B Coupe only.",
+                "Lower and upper codes are both 59.",
+                "Full Leather Bucket trim BUU2 is the sole trim shown."
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "The order guide's abbreviations Slvr and Met are retained in source_label_raw.",
+        "Interior compatibility marks were not promoted to exterior colors."
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "issue_id": "1978-dealer-order-guide-revision-clipped",
+      "model_year": 1978,
+      "status": "unresolved_source_scan_clipping",
+      "source_ids": [
+        "gm-heritage-1978-chevrolet-corvette"
+      ],
+      "description": "The retained Dealer Order Guide color selection page visibly prints REVISED: 1-2 at the right edge, but the remaining characters are clipped from the source scan. The audit does not infer the missing date characters."
+    },
+    {
+      "issue_id": "1978-z78-accent-stripe-hue-not-printed",
+      "model_year": 1978,
+      "status": "qualified_program_incomplete",
+      "source_ids": [
+        "gm-heritage-1978-chevrolet-corvette"
+      ],
+      "description": "The governing Limited Edition Corvette order sheet states that special two-tone paint with accent stripes is included, but it does not identify the stripe hue or paint code. The stripe program is retained as incomplete and must not be promoted as a named color."
+    }
+  ]
+}

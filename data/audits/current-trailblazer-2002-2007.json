@@ -1,0 +1,1765 @@
+{
+  "schema_version": 1,
+  "make": "Chevrolet",
+  "market": "United States",
+  "visibility": "public",
+  "audit_as_of": "2026-08-07",
+  "dataset_kind": "current_nameplate_historical_variant_color_tables",
+  "scope": "Direct visual transcription of every exterior paint table printed for Chevrolet TrailBlazer model years 2002 through 2007 in retained official General Motors vehicle information kits. Regular solid paint, two tone paint, TrailBlazer EXT, SS restrictions, and special equipment paint remain separate. No color is projected across a model year or program.",
+  "method": {
+    "review_type": "complete_document_visual_review",
+    "render_and_ocr": "Every PDF page was rendered and reviewed in contact sheets. Candidate chart pages were rendered at higher resolution and OCR was used only to locate text; values were visually checked against the page image.",
+    "source_integrity": "Every retained PDF matched the SHA-256, byte count, and page count in the crawler artifact ledger.",
+    "code_policy": "Source paint codes and WA numbers are preserved exactly without projecting codes across years. Combined two tone records preserve both upper and lower codes.",
+    "absence_policy": "No chart located documents the result of a complete review of the retained official kit. It does not prove that no other dealer, fleet, or brochure source ever listed a color.",
+    "naming_policy": "The source label Woodland Green is preserved. It is not renamed Forest Service Green without a source that prints that name."
+  },
+  "sources": [
+    {
+      "source_id": "gm-heritage-2002-chevrolet-trailblazer",
+      "title": "2002 Chevrolet Trailblazer Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2002-Chevrolet-Trailblazer.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2002-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "ef/a3/efa342a6fe05e6e5bf7f314ee34d88decb5e8c07ece577c69473bbb14859d5e6.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "efa342a6fe05e6e5bf7f314ee34d88decb5e8c07ece577c69473bbb14859d5e6",
+      "bytes": 8558580,
+      "pdf_page_count": 84,
+      "retrieved_at": "2026-07-21T06:35:44+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2003-chevrolet-trailblazer",
+      "title": "2003 Chevrolet Trailblazer Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2003-Chevrolet-Trailblazer.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2003-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "11/cf/11cf96181ebe12bb85ed9090a355ecf0136918003d31108f511d0a7b130dd54f.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "11cf96181ebe12bb85ed9090a355ecf0136918003d31108f511d0a7b130dd54f",
+      "bytes": 27570629,
+      "pdf_page_count": 180,
+      "retrieved_at": "2026-07-21T06:37:45+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2004-chevrolet-trailblazer",
+      "title": "2004 Chevrolet Trailblazer Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2004-Chevrolet-Trailblazer.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2004-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "9e/61/9e613ce12fb7d7d95a350f69475c9331bb79178a9d428043ef4fc2117cce4e16.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "9e613ce12fb7d7d95a350f69475c9331bb79178a9d428043ef4fc2117cce4e16",
+      "bytes": 11632477,
+      "pdf_page_count": 110,
+      "retrieved_at": "2026-07-21T06:38:36+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2005-chevrolet-trailblazer",
+      "title": "2005 Chevrolet Trailblazer Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2005-Chevrolet-Trailblazer.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2005-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "16/3b/163b3297bdeeefa385d8ea502fe675810a3b470ce461ea7be47a91bbf2221da7.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "163b3297bdeeefa385d8ea502fe675810a3b470ce461ea7be47a91bbf2221da7",
+      "bytes": 26113990,
+      "pdf_page_count": 182,
+      "retrieved_at": "2026-07-21T06:40:53+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2006-chevrolet-trailblazer",
+      "title": "2006 Chevrolet Trailblazer Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2006-Chevrolet-Trailblazer.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2006-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "0c/94/0c94c541002c4981b14235296a35d70d347fb96749ccda554bfbc67e511a6e7f.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "0c94c541002c4981b14235296a35d70d347fb96749ccda554bfbc67e511a6e7f",
+      "bytes": 31835174,
+      "pdf_page_count": 195,
+      "retrieved_at": "2026-07-21T06:42:00+00:00"
+    },
+    {
+      "source_id": "gm-heritage-2007-chevrolet-trailblazer",
+      "title": "2007 Chevrolet Trailblazer Vehicle Information Kit",
+      "publisher": "General Motors",
+      "source_type": "official_vehicle_information_kit",
+      "content_type": "application/pdf",
+      "url": "https://www.gm.com/content/dam/company/no_search/heritage-archive-docs/vehicle-information-kits/chevrolet/2007-Chevrolet-Trailblazer.pdf",
+      "archive_url": "https://github.com/ipadmom/chevrolet-color-archive/releases/download/brochure-source-archive-v1/2007-chevrolet-trailblazer-vehicle-information-kit-gm.pdf",
+      "archive_status": "archived_in_public_release",
+      "crawler_archive_relpath": "f3/5a/f35a2938212b4aa11041bc4616d7cb3c3a4f108491347cfa91ccb79b3a92d12b.pdf",
+      "document_authority": "official_manufacturer_document",
+      "retrieval_host_type": "official_live",
+      "sha256": "f35a2938212b4aa11041bc4616d7cb3c3a4f108491347cfa91ccb79b3a92d12b",
+      "bytes": 28456594,
+      "pdf_page_count": 170,
+      "retrieved_at": "2026-07-21T06:43:59+00:00"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "trailblazer",
+      "model_name": "TrailBlazer",
+      "years": [
+        {
+          "year": 2002,
+          "coverage_status": "reviewed_official_kit_no_governing_color_chart",
+          "complete_regular_palette": false,
+          "availability_scope": "The complete retained official TrailBlazer kit was reviewed; it contains technical and restoration information but no governing exterior color chart.",
+          "limitations": [
+            "No exact exterior color palette is published from this source.",
+            "No color is projected from 2003 or from a secondary summary."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "trailblazer_regular_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "trailblazer_two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "trailblazer_special_equipment_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "reviewed_source_refs": [
+            {
+              "source_id": "gm-heritage-2002-chevrolet-trailblazer",
+              "pdf_pages": [
+                1,
+                84
+              ]
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2003,
+          "coverage_status": "verified_complete_regular_and_variant_programs",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular TrailBlazer ZY1 chart plus separate TrailBlazer ZY7, TrailBlazer EXT ZY1, and EXT or North Face ZY7 programs.",
+          "limitations": [
+            "The source prints a March 4, 2005 publication date inside a 2003 model year kit. The anomaly is preserved exactly and does not alter the model year scope.",
+            "No SEO paint table was located on the reviewed TrailBlazer SEO options page."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "trailblazer_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                137
+              ]
+            },
+            {
+              "program_type": "trailblazer_two_tone_zy7",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                138
+              ]
+            },
+            {
+              "program_type": "trailblazer_seo_paint",
+              "status": "reviewed_no_paint_table",
+              "pdf_pages": [
+                139
+              ]
+            },
+            {
+              "program_type": "trailblazer_ext_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                170
+              ]
+            },
+            {
+              "program_type": "trailblazer_ext_two_tone_zy7_y92",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                171
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "trailblazer-zy1",
+              "program_label": "TrailBlazer solid paint ZY1",
+              "variant": "TrailBlazer",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2003-chevrolet-trailblazer",
+                "pdf_pages": [
+                  137
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 1",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published March 4, 2005; the date conflicts with the 2003 model year title and is preserved as printed"
+              },
+              "colors": [
+                {
+                  "identity_key": "light-pewter-metallic",
+                  "name": "Light Pewter Metallic",
+                  "source_label": "Light Pewter Metallic",
+                  "source_color_code": "11U",
+                  "factory_code": "11U",
+                  "wa_number": "WA-382E"
+                },
+                {
+                  "identity_key": "indigo-blue-metallic",
+                  "name": "Indigo Blue Metallic",
+                  "source_label": "Indigo Blue Metallic",
+                  "source_color_code": "39U",
+                  "factory_code": "39U",
+                  "wa_number": "WA-9792"
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "dark-green-metallic",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "source_color_code": "47U",
+                  "factory_code": "47U",
+                  "wa_number": "WA-9539"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "sandalwood-metallic",
+                  "name": "Sandalwood Metallic",
+                  "source_label": "Sandalwood Metallic",
+                  "source_color_code": "58U",
+                  "factory_code": "58U",
+                  "wa_number": "WA-711J"
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "source_color_code": "62U",
+                  "factory_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "majestic-red-metallic",
+                  "name": "Majestic Red Metallic",
+                  "source_label": "Majestic Red Metallic",
+                  "source_color_code": "86U",
+                  "factory_code": "86U",
+                  "wa_number": "WA-379E",
+                  "restriction": "Extra charge; not available on LS."
+                },
+                {
+                  "identity_key": "silver-green-metallic",
+                  "name": "Silver Green Metallic",
+                  "source_label": "Silver Green Metallic",
+                  "source_color_code": "92U",
+                  "factory_code": "92U",
+                  "wa_number": "WA-816K"
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-zy7",
+              "program_label": "TrailBlazer special two tone paint ZY7",
+              "variant": "TrailBlazer",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY7",
+              "claim_scope": "Complete TrailBlazer ZY7 upper and lower paint combination chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2003-chevrolet-trailblazer",
+                "pdf_pages": [
+                  138
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 2",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY7 Paint",
+                "revision": "Published March 4, 2005; the date conflicts with the 2003 model year title and is preserved as printed"
+              },
+              "colors": [
+                {
+                  "identity_key": "indigo-blue-metallic-light-pewter-metallic",
+                  "name": "Indigo Blue Metallic / Light Pewter Metallic",
+                  "source_label": "Indigo Blue Metallic / Light Pewter Metallic",
+                  "source_color_code": "39U/11L",
+                  "factory_code": "39U/11L",
+                  "wa_number": "WA-9792/WA-382E"
+                },
+                {
+                  "identity_key": "indigo-blue-metallic-sandalwood-metallic",
+                  "name": "Indigo Blue Metallic / Sandalwood Metallic",
+                  "source_label": "Indigo Blue Metallic / Sandalwood Metallic",
+                  "source_color_code": "39U/58L",
+                  "factory_code": "39U/58L",
+                  "wa_number": "WA-9792/WA-711J"
+                },
+                {
+                  "identity_key": "black-light-pewter-metallic",
+                  "name": "Black / Light Pewter Metallic",
+                  "source_label": "Black / Light Pewter Metallic",
+                  "source_color_code": "41U/11L",
+                  "factory_code": "41U/11L",
+                  "wa_number": "WA-8555/WA-382E"
+                },
+                {
+                  "identity_key": "black-sandalwood-metallic",
+                  "name": "Black / Sandalwood Metallic",
+                  "source_label": "Black / Sandalwood Metallic",
+                  "source_color_code": "41U/58L",
+                  "factory_code": "41U/58L",
+                  "wa_number": "WA-8555/WA-711J"
+                },
+                {
+                  "identity_key": "dark-green-metallic-light-pewter-metallic",
+                  "name": "Dark Green Metallic / Light Pewter Metallic",
+                  "source_label": "Dark Green Metallic / Light Pewter Metallic",
+                  "source_color_code": "47U/11L",
+                  "factory_code": "47U/11L",
+                  "wa_number": "WA-9539/WA-382E"
+                },
+                {
+                  "identity_key": "dark-green-metallic-sandalwood-metallic",
+                  "name": "Dark Green Metallic / Sandalwood Metallic",
+                  "source_label": "Dark Green Metallic / Sandalwood Metallic",
+                  "source_color_code": "47U/58L",
+                  "factory_code": "47U/58L",
+                  "wa_number": "WA-9539/WA-711J"
+                },
+                {
+                  "identity_key": "summit-white-light-pewter-metallic",
+                  "name": "Summit White / Light Pewter Metallic",
+                  "source_label": "Summit White / Light Pewter Metallic",
+                  "source_color_code": "50U/11L",
+                  "factory_code": "50U/11L",
+                  "wa_number": "WA-8624/WA-382E"
+                },
+                {
+                  "identity_key": "dark-gray-metallic-light-pewter-metallic",
+                  "name": "Dark Gray Metallic / Light Pewter Metallic",
+                  "source_label": "Dark Gray Metallic / Light Pewter Metallic",
+                  "source_color_code": "62U/11L",
+                  "factory_code": "62U/11L",
+                  "wa_number": "WA-805K/WA-382E"
+                },
+                {
+                  "identity_key": "majestic-red-metallic-light-pewter-metallic",
+                  "name": "Majestic Red Metallic / Light Pewter Metallic",
+                  "source_label": "Majestic Red Metallic / Light Pewter Metallic",
+                  "source_color_code": "86U/11L",
+                  "factory_code": "86U/11L",
+                  "wa_number": "WA-379E/WA-382E",
+                  "restriction": "Extra charge."
+                },
+                {
+                  "identity_key": "majestic-red-metallic-sandalwood-metallic",
+                  "name": "Majestic Red Metallic / Sandalwood Metallic",
+                  "source_label": "Majestic Red Metallic / Sandalwood Metallic",
+                  "source_color_code": "86U/58L",
+                  "factory_code": "86U/58L",
+                  "wa_number": "WA-379E/WA-711J",
+                  "restriction": "Extra charge."
+                },
+                {
+                  "identity_key": "silver-green-metallic-light-pewter-metallic",
+                  "name": "Silver Green Metallic / Light Pewter Metallic",
+                  "source_label": "Silver Green Metallic / Light Pewter Metallic",
+                  "source_color_code": "92U/11L",
+                  "factory_code": "92U/11L",
+                  "wa_number": "WA-816K/WA-382E"
+                },
+                {
+                  "identity_key": "silver-green-metallic-sandalwood-metallic",
+                  "name": "Silver Green Metallic / Sandalwood Metallic",
+                  "source_label": "Silver Green Metallic / Sandalwood Metallic",
+                  "source_color_code": "92U/58L",
+                  "factory_code": "92U/58L",
+                  "wa_number": "WA-816K/WA-711J"
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-ext-zy1",
+              "program_label": "TrailBlazer EXT solid paint ZY1",
+              "variant": "TrailBlazer EXT",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer EXT ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2003-chevrolet-trailblazer",
+                "pdf_pages": [
+                  170
+                ],
+                "printed_page_label": "TrailBlazer EXT Color and Trim page 1",
+                "section": "TrailBlazer EXT Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published March 4, 2005; the date conflicts with the 2003 model year title and is preserved as printed"
+              },
+              "colors": [
+                {
+                  "identity_key": "light-pewter-metallic",
+                  "name": "Light Pewter Metallic",
+                  "source_label": "Light Pewter Metallic",
+                  "source_color_code": "11U",
+                  "factory_code": "11U",
+                  "wa_number": "WA-382E"
+                },
+                {
+                  "identity_key": "indigo-blue-metallic",
+                  "name": "Indigo Blue Metallic",
+                  "source_label": "Indigo Blue Metallic",
+                  "source_color_code": "39U",
+                  "factory_code": "39U",
+                  "wa_number": "WA-9792"
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "dark-green-metallic",
+                  "name": "Dark Green Metallic",
+                  "source_label": "Dark Green Metallic",
+                  "source_color_code": "47U",
+                  "factory_code": "47U",
+                  "wa_number": "WA-9539"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "sandalwood-metallic",
+                  "name": "Sandalwood Metallic",
+                  "source_label": "Sandalwood Metallic",
+                  "source_color_code": "58U",
+                  "factory_code": "58U",
+                  "wa_number": "WA-711J"
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "source_color_code": "62U",
+                  "factory_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "majestic-red-metallic",
+                  "name": "Majestic Red Metallic",
+                  "source_label": "Majestic Red Metallic",
+                  "source_color_code": "86U",
+                  "factory_code": "86U",
+                  "wa_number": "WA-379E",
+                  "restriction": "Extra charge; not available on LS."
+                },
+                {
+                  "identity_key": "silver-green-metallic",
+                  "name": "Silver Green Metallic",
+                  "source_label": "Silver Green Metallic",
+                  "source_color_code": "92U",
+                  "factory_code": "92U",
+                  "wa_number": "WA-816K"
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-ext-zy7-y92",
+              "program_label": "TrailBlazer EXT and North Face special two tone paint ZY7",
+              "variant": "TrailBlazer EXT and North Face",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY7 / Y92",
+              "claim_scope": "Complete TrailBlazer EXT LT and North Face two tone combination chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2003-chevrolet-trailblazer",
+                "pdf_pages": [
+                  171
+                ],
+                "printed_page_label": "TrailBlazer EXT Color and Trim page 2",
+                "section": "TrailBlazer EXT Interior and Exterior Color Availability Chart with ZY7 Paint",
+                "revision": "Published March 4, 2005; the date conflicts with the 2003 model year title and is preserved as printed"
+              },
+              "colors": [
+                {
+                  "identity_key": "light-pewter-metallic-dark-gray-metallic",
+                  "name": "Light Pewter Metallic / Dark Gray Metallic",
+                  "source_label": "Light Pewter Metallic / Dark Gray Metallic",
+                  "source_color_code": "11U/62L",
+                  "factory_code": "11U/62L",
+                  "wa_number": "WA-382E/WA-805K"
+                },
+                {
+                  "identity_key": "black-light-pewter-metallic",
+                  "name": "Black / Light Pewter Metallic",
+                  "source_label": "Black / Light Pewter Metallic",
+                  "source_color_code": "41U/11L",
+                  "factory_code": "41U/11L",
+                  "wa_number": "WA-8555/WA-382E"
+                },
+                {
+                  "identity_key": "summit-white-light-pewter-metallic",
+                  "name": "Summit White / Light Pewter Metallic",
+                  "source_label": "Summit White / Light Pewter Metallic",
+                  "source_color_code": "50U/11L",
+                  "factory_code": "50U/11L",
+                  "wa_number": "WA-8624/WA-382E"
+                },
+                {
+                  "identity_key": "summit-white-dark-gray-metallic",
+                  "name": "Summit White / Dark Gray Metallic",
+                  "source_label": "Summit White / Dark Gray Metallic",
+                  "source_color_code": "50U/62L",
+                  "factory_code": "50U/62L",
+                  "wa_number": "WA-8624/WA-805K"
+                },
+                {
+                  "identity_key": "majestic-red-metallic-light-pewter-metallic",
+                  "name": "Majestic Red Metallic / Light Pewter Metallic",
+                  "source_label": "Majestic Red Metallic / Light Pewter Metallic",
+                  "source_color_code": "86U/11L",
+                  "factory_code": "86U/11L",
+                  "wa_number": "WA-379E/WA-382E",
+                  "restriction": "Extra charge."
+                },
+                {
+                  "identity_key": "majestic-red-metallic-dark-gray-metallic",
+                  "name": "Majestic Red Metallic / Dark Gray Metallic",
+                  "source_label": "Majestic Red Metallic / Dark Gray Metallic",
+                  "source_color_code": "86U/62L",
+                  "factory_code": "86U/62L",
+                  "wa_number": "WA-379E/WA-805K",
+                  "restriction": "Extra charge."
+                },
+                {
+                  "identity_key": "silver-green-metallic-light-pewter-metallic",
+                  "name": "Silver Green Metallic / Light Pewter Metallic",
+                  "source_label": "Silver Green Metallic / Light Pewter Metallic",
+                  "source_color_code": "92U/11L",
+                  "factory_code": "92U/11L",
+                  "wa_number": "WA-816K/WA-382E"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2004,
+          "coverage_status": "reviewed_official_kit_no_governing_color_chart",
+          "complete_regular_palette": false,
+          "availability_scope": "The complete retained official TrailBlazer kit was reviewed; no governing color and trim table or exact exterior paint chart was located.",
+          "limitations": [
+            "No exact exterior color palette is published from this source.",
+            "Secondary refinish lists and trim pages were not promoted to a complete factory palette."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "trailblazer_regular_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "trailblazer_two_tone_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            },
+            {
+              "program_type": "trailblazer_special_equipment_paint",
+              "status": "not_located_in_complete_reviewed_kit"
+            }
+          ],
+          "reviewed_source_refs": [
+            {
+              "source_id": "gm-heritage-2004-chevrolet-trailblazer",
+              "pdf_pages": [
+                1,
+                110
+              ]
+            }
+          ],
+          "palettes": []
+        },
+        {
+          "year": 2005,
+          "coverage_status": "verified_complete_regular_and_specialty_programs",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular ZY1 chart plus separate ZY7, SEO solid paint, and EXT ZY1 programs.",
+          "limitations": [
+            "The EXT chart states that no separate two tone data were available; no EXT two tone palette is inferred.",
+            "The SEO restriction is preserved separately from the regular palette."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "trailblazer_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                134
+              ]
+            },
+            {
+              "program_type": "trailblazer_two_tone_zy7",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                135
+              ]
+            },
+            {
+              "program_type": "trailblazer_seo_solid",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                136,
+                137
+              ]
+            },
+            {
+              "program_type": "trailblazer_ext_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                173
+              ]
+            },
+            {
+              "program_type": "trailblazer_ext_two_tone",
+              "status": "source_explicitly_no_data",
+              "pdf_pages": [
+                174
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "trailblazer-zy1",
+              "program_label": "TrailBlazer solid paint ZY1",
+              "variant": "TrailBlazer",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-trailblazer",
+                "pdf_pages": [
+                  134
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 1",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published February 4, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "wa_number": "WA-929L"
+                },
+                {
+                  "identity_key": "graystone-metallic",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "wa_number": "WA-213M"
+                },
+                {
+                  "identity_key": "superior-blue-metallic",
+                  "name": "Superior Blue Metallic",
+                  "source_label": "Superior Blue Metallic",
+                  "source_color_code": "22U",
+                  "factory_code": "22U",
+                  "wa_number": "WA-703J"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic",
+                  "name": "Emerald Jewel Metallic",
+                  "source_label": "Emerald Jewel Metallic",
+                  "source_color_code": "38U",
+                  "factory_code": "38U",
+                  "wa_number": "WA-215M"
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "medium-red-metallic",
+                  "name": "Medium Red Metallic",
+                  "source_label": "Medium Red Metallic",
+                  "source_color_code": "44U",
+                  "factory_code": "44U",
+                  "wa_number": "WA-408G"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "source_color_code": "62U",
+                  "factory_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "silverstone-metallic",
+                  "name": "Silverstone Metallic",
+                  "source_label": "Silverstone Metallic",
+                  "source_color_code": "67U",
+                  "factory_code": "67U",
+                  "wa_number": "WA-994L"
+                },
+                {
+                  "identity_key": "majestic-red-metallic",
+                  "name": "Majestic Red Metallic",
+                  "source_label": "Majestic Red Metallic",
+                  "source_color_code": "86U",
+                  "factory_code": "86U",
+                  "wa_number": "WA-379E",
+                  "restriction": "Extra charge; not available on LS."
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-zy7",
+              "program_label": "TrailBlazer special two tone paint ZY7",
+              "variant": "TrailBlazer",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY7",
+              "claim_scope": "Complete TrailBlazer ZY7 upper and lower paint combination chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-trailblazer",
+                "pdf_pages": [
+                  135
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 2",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY7 Paint",
+                "revision": "Published February 4, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "superior-blue-metallic-silverstone-metallic",
+                  "name": "Superior Blue Metallic / Silverstone Metallic",
+                  "source_label": "Superior Blue Metallic / Silverstone Metallic",
+                  "source_color_code": "22U/67L",
+                  "factory_code": "22U/67L",
+                  "wa_number": "WA-703J/WA-994L"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic-sandstone-metallic",
+                  "name": "Emerald Jewel Metallic / Sandstone Metallic",
+                  "source_label": "Emerald Jewel Metallic / Sandstone Metallic",
+                  "source_color_code": "38U/15L",
+                  "factory_code": "38U/15L",
+                  "wa_number": "WA-215M/WA-929L"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic-silverstone-metallic",
+                  "name": "Emerald Jewel Metallic / Silverstone Metallic",
+                  "source_label": "Emerald Jewel Metallic / Silverstone Metallic",
+                  "source_color_code": "38U/67L",
+                  "factory_code": "38U/67L",
+                  "wa_number": "WA-215M/WA-994L"
+                },
+                {
+                  "identity_key": "black-sandstone-metallic",
+                  "name": "Black / Sandstone Metallic",
+                  "source_label": "Black / Sandstone Metallic",
+                  "source_color_code": "41U/15L",
+                  "factory_code": "41U/15L",
+                  "wa_number": "WA-8555/WA-929L"
+                },
+                {
+                  "identity_key": "black-silverstone-metallic",
+                  "name": "Black / Silverstone Metallic",
+                  "source_label": "Black / Silverstone Metallic",
+                  "source_color_code": "41U/67L",
+                  "factory_code": "41U/67L",
+                  "wa_number": "WA-8555/WA-994L"
+                },
+                {
+                  "identity_key": "medium-red-metallic-sandstone-metallic",
+                  "name": "Medium Red Metallic / Sandstone Metallic",
+                  "source_label": "Medium Red Metallic / Sandstone Metallic",
+                  "source_color_code": "44U/15L",
+                  "factory_code": "44U/15L",
+                  "wa_number": "WA-408G/WA-929L"
+                },
+                {
+                  "identity_key": "medium-red-metallic-silverstone-metallic",
+                  "name": "Medium Red Metallic / Silverstone Metallic",
+                  "source_label": "Medium Red Metallic / Silverstone Metallic",
+                  "source_color_code": "44U/67L",
+                  "factory_code": "44U/67L",
+                  "wa_number": "WA-408G/WA-994L"
+                },
+                {
+                  "identity_key": "summit-white-silverstone-metallic",
+                  "name": "Summit White / Silverstone Metallic",
+                  "source_label": "Summit White / Silverstone Metallic",
+                  "source_color_code": "50U/67L",
+                  "factory_code": "50U/67L",
+                  "wa_number": "WA-8624/WA-994L"
+                },
+                {
+                  "identity_key": "dark-gray-metallic-silverstone-metallic",
+                  "name": "Dark Gray Metallic / Silverstone Metallic",
+                  "source_label": "Dark Gray Metallic / Silverstone Metallic",
+                  "source_color_code": "62U/67L",
+                  "factory_code": "62U/67L",
+                  "wa_number": "WA-805K/WA-994L"
+                },
+                {
+                  "identity_key": "majestic-red-metallic-sandstone-metallic",
+                  "name": "Majestic Red Metallic / Sandstone Metallic",
+                  "source_label": "Majestic Red Metallic / Sandstone Metallic",
+                  "source_color_code": "86U/15L",
+                  "factory_code": "86U/15L",
+                  "wa_number": "WA-379E/WA-929L",
+                  "restriction": "Extra charge."
+                },
+                {
+                  "identity_key": "majestic-red-metallic-silverstone-metallic",
+                  "name": "Majestic Red Metallic / Silverstone Metallic",
+                  "source_label": "Majestic Red Metallic / Silverstone Metallic",
+                  "source_color_code": "86U/67L",
+                  "factory_code": "86U/67L",
+                  "wa_number": "WA-379E/WA-994L",
+                  "restriction": "Extra charge."
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-seo-solid",
+              "program_label": "TrailBlazer special equipment solid paint",
+              "variant": "TrailBlazer LS fleet program",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "SEO solid paint",
+              "claim_scope": "Complete TrailBlazer special equipment solid paint list and printed ordering restrictions.",
+              "program_restriction": "Fleet program. Special paint requires TGK; see the adjacent SEO options chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-trailblazer",
+                "pdf_pages": [
+                  136,
+                  137
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim SEO pages",
+                "section": "SEO Solid Paint and SEO Options",
+                "revision": "Published February 4, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "woodland-green",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "source_color_code": "9V5",
+                  "factory_code": "9V5",
+                  "wa_number": "WA-9015",
+                  "seo_code": "9V5"
+                },
+                {
+                  "identity_key": "doeskin-tan",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "source_color_code": "9V9",
+                  "factory_code": "9V9",
+                  "wa_number": "WA-9403",
+                  "seo_code": "9V9"
+                },
+                {
+                  "identity_key": "tangier-orange",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "source_color_code": "9W4",
+                  "factory_code": "9W4",
+                  "wa_number": "WA-9417",
+                  "seo_code": "9W4"
+                },
+                {
+                  "identity_key": "yellow",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "wa_number": "WA-9418"
+                },
+                {
+                  "identity_key": "indigo-blue",
+                  "name": "Indigo Blue",
+                  "source_label": "Indigo Blue",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "wa_number": "WA-9792"
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-ext-zy1",
+              "program_label": "TrailBlazer EXT solid paint ZY1",
+              "variant": "TrailBlazer EXT",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer EXT ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2005-chevrolet-trailblazer",
+                "pdf_pages": [
+                  173
+                ],
+                "printed_page_label": "TrailBlazer EXT Color and Trim page 1",
+                "section": "TrailBlazer EXT Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published February 4, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "wa_number": "WA-929L"
+                },
+                {
+                  "identity_key": "graystone-metallic",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "wa_number": "WA-213M"
+                },
+                {
+                  "identity_key": "superior-blue-metallic",
+                  "name": "Superior Blue Metallic",
+                  "source_label": "Superior Blue Metallic",
+                  "source_color_code": "22U",
+                  "factory_code": "22U",
+                  "wa_number": "WA-703J"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic",
+                  "name": "Emerald Jewel Metallic",
+                  "source_label": "Emerald Jewel Metallic",
+                  "source_color_code": "38U",
+                  "factory_code": "38U",
+                  "wa_number": "WA-215M"
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "medium-red-metallic",
+                  "name": "Medium Red Metallic",
+                  "source_label": "Medium Red Metallic",
+                  "source_color_code": "44U",
+                  "factory_code": "44U",
+                  "wa_number": "WA-408G"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "source_color_code": "62U",
+                  "factory_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "silverstone-metallic",
+                  "name": "Silverstone Metallic",
+                  "source_label": "Silverstone Metallic",
+                  "source_color_code": "67U",
+                  "factory_code": "67U",
+                  "wa_number": "WA-994L"
+                },
+                {
+                  "identity_key": "majestic-red-metallic",
+                  "name": "Majestic Red Metallic",
+                  "source_label": "Majestic Red Metallic",
+                  "source_color_code": "86U",
+                  "factory_code": "86U",
+                  "wa_number": "WA-379E",
+                  "restriction": "Extra charge; not available on LS."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2006,
+          "coverage_status": "verified_complete_regular_and_specialty_programs",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular ZY1 chart plus separate ZY7, SEO solid paint, and EXT ZY1 programs.",
+          "limitations": [
+            "The EXT chart states that no further color data were available; no EXT two tone palette is inferred.",
+            "SS restrictions are retained on the regular colors and are not treated as a separate complete SS palette."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "trailblazer_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                149
+              ]
+            },
+            {
+              "program_type": "trailblazer_two_tone_zy7",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                150
+              ]
+            },
+            {
+              "program_type": "trailblazer_seo_solid",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                151,
+                152
+              ]
+            },
+            {
+              "program_type": "trailblazer_ext_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                186
+              ]
+            },
+            {
+              "program_type": "trailblazer_ext_two_tone",
+              "status": "source_explicitly_no_further_data",
+              "pdf_pages": [
+                187
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "trailblazer-zy1",
+              "program_label": "TrailBlazer solid paint ZY1",
+              "variant": "TrailBlazer",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-trailblazer",
+                "pdf_pages": [
+                  149
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 1",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published July 29, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "wa_number": "WA-929L"
+                },
+                {
+                  "identity_key": "graystone-metallic",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "wa_number": "WA-213M"
+                },
+                {
+                  "identity_key": "superior-blue-metallic",
+                  "name": "Superior Blue Metallic",
+                  "source_label": "Superior Blue Metallic",
+                  "source_color_code": "22U",
+                  "factory_code": "22U",
+                  "wa_number": "WA-703J"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic",
+                  "name": "Emerald Jewel Metallic",
+                  "source_label": "Emerald Jewel Metallic",
+                  "source_color_code": "38U",
+                  "factory_code": "38U",
+                  "wa_number": "WA-215M"
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic",
+                  "name": "Bordeaux Red Metallic",
+                  "source_label": "Bordeaux Red Metallic",
+                  "source_color_code": "49U",
+                  "factory_code": "49U",
+                  "wa_number": "WA-204M"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "source_color_code": "62U",
+                  "factory_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "silverstone-metallic",
+                  "name": "Silverstone Metallic",
+                  "source_label": "Silverstone Metallic",
+                  "source_color_code": "67U",
+                  "factory_code": "67U",
+                  "wa_number": "WA-994L"
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat",
+                  "name": "Red Jewel Tintcoat",
+                  "source_label": "Red Jewel Tintcoat",
+                  "source_color_code": "80U",
+                  "factory_code": "80U",
+                  "wa_number": "WA-301N",
+                  "restriction": "Extra charge; not available on LS. Only Black, Summit White, and Silverstone Metallic are otherwise printed as available on SS."
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-zy7",
+              "program_label": "TrailBlazer special two tone paint ZY7",
+              "variant": "TrailBlazer",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY7",
+              "claim_scope": "Complete TrailBlazer ZY7 upper and lower paint combination chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-trailblazer",
+                "pdf_pages": [
+                  150
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 2",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY7 Paint",
+                "revision": "Published July 29, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "superior-blue-metallic-silverstone-metallic",
+                  "name": "Superior Blue Metallic / Silverstone Metallic",
+                  "source_label": "Superior Blue Metallic / Silverstone Metallic",
+                  "source_color_code": "22U/67L",
+                  "factory_code": "22U/67L",
+                  "wa_number": "WA-703J/WA-994L"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic-sandstone-metallic",
+                  "name": "Emerald Jewel Metallic / Sandstone Metallic",
+                  "source_label": "Emerald Jewel Metallic / Sandstone Metallic",
+                  "source_color_code": "38U/15L",
+                  "factory_code": "38U/15L",
+                  "wa_number": "WA-215M/WA-929L"
+                },
+                {
+                  "identity_key": "black-sandstone-metallic",
+                  "name": "Black / Sandstone Metallic",
+                  "source_label": "Black / Sandstone Metallic",
+                  "source_color_code": "41U/15L",
+                  "factory_code": "41U/15L",
+                  "wa_number": "WA-8555/WA-929L"
+                },
+                {
+                  "identity_key": "black-silverstone-metallic",
+                  "name": "Black / Silverstone Metallic",
+                  "source_label": "Black / Silverstone Metallic",
+                  "source_color_code": "41U/67L",
+                  "factory_code": "41U/67L",
+                  "wa_number": "WA-8555/WA-994L"
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic-sandstone-metallic",
+                  "name": "Bordeaux Red Metallic / Sandstone Metallic",
+                  "source_label": "Bordeaux Red Metallic / Sandstone Metallic",
+                  "source_color_code": "49U/15L",
+                  "factory_code": "49U/15L",
+                  "wa_number": "WA-204M/WA-929L"
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic-silverstone-metallic",
+                  "name": "Bordeaux Red Metallic / Silverstone Metallic",
+                  "source_label": "Bordeaux Red Metallic / Silverstone Metallic",
+                  "source_color_code": "49U/67L",
+                  "factory_code": "49U/67L",
+                  "wa_number": "WA-204M/WA-994L"
+                },
+                {
+                  "identity_key": "summit-white-silverstone-metallic",
+                  "name": "Summit White / Silverstone Metallic",
+                  "source_label": "Summit White / Silverstone Metallic",
+                  "source_color_code": "50U/67L",
+                  "factory_code": "50U/67L",
+                  "wa_number": "WA-8624/WA-994L"
+                },
+                {
+                  "identity_key": "dark-gray-metallic-silverstone-metallic",
+                  "name": "Dark Gray Metallic / Silverstone Metallic",
+                  "source_label": "Dark Gray Metallic / Silverstone Metallic",
+                  "source_color_code": "62U/67L",
+                  "factory_code": "62U/67L",
+                  "wa_number": "WA-805K/WA-994L"
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat-sandstone-metallic",
+                  "name": "Red Jewel Tintcoat / Sandstone Metallic",
+                  "source_label": "Red Jewel Tintcoat / Sandstone Metallic",
+                  "source_color_code": "80U/15L",
+                  "factory_code": "80U/15L",
+                  "wa_number": "WA-301N/WA-929L",
+                  "restriction": "Extra charge."
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat-silverstone-metallic",
+                  "name": "Red Jewel Tintcoat / Silverstone Metallic",
+                  "source_label": "Red Jewel Tintcoat / Silverstone Metallic",
+                  "source_color_code": "80U/67L",
+                  "factory_code": "80U/67L",
+                  "wa_number": "WA-301N/WA-994L",
+                  "restriction": "Extra charge."
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-seo-solid",
+              "program_label": "TrailBlazer special equipment solid paint",
+              "variant": "TrailBlazer LS fleet program",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "SEO solid paint",
+              "claim_scope": "Complete TrailBlazer special equipment solid paint list and printed ordering restrictions.",
+              "program_restriction": "Available only on base LS 1SA; requires TGK and substitutes dark gray or black front and rear fascias for color keyed fascias.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-trailblazer",
+                "pdf_pages": [
+                  151,
+                  152
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim SEO pages",
+                "section": "SEO Solid Paint and SEO Options",
+                "revision": "Published July 29, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "doeskin-tan",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "source_color_code": "9V9",
+                  "factory_code": "9V9",
+                  "wa_number": "WA-9403",
+                  "seo_code": "9V9"
+                },
+                {
+                  "identity_key": "tangier-orange",
+                  "name": "Tangier Orange",
+                  "source_label": "Tangier Orange",
+                  "source_color_code": "9W4",
+                  "factory_code": "9W4",
+                  "wa_number": "WA-9417",
+                  "seo_code": "9W4"
+                },
+                {
+                  "identity_key": "wheatland-yellow",
+                  "name": "Wheatland Yellow",
+                  "source_label": "Wheatland Yellow",
+                  "source_color_code": "9W3",
+                  "factory_code": "9W3",
+                  "wa_number": "WA-9418",
+                  "seo_code": "9W3"
+                },
+                {
+                  "identity_key": "woodland-green",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "source_color_code": "9V5",
+                  "factory_code": "9V5",
+                  "wa_number": "WA-9015",
+                  "seo_code": "9V5"
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-ext-zy1",
+              "program_label": "TrailBlazer EXT solid paint ZY1",
+              "variant": "TrailBlazer EXT",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer EXT ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2006-chevrolet-trailblazer",
+                "pdf_pages": [
+                  186
+                ],
+                "printed_page_label": "TrailBlazer EXT Color and Trim page 1",
+                "section": "TrailBlazer EXT Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published July 29, 2005"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "wa_number": "WA-929L"
+                },
+                {
+                  "identity_key": "graystone-metallic",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "wa_number": "WA-213M"
+                },
+                {
+                  "identity_key": "superior-blue-metallic",
+                  "name": "Superior Blue Metallic",
+                  "source_label": "Superior Blue Metallic",
+                  "source_color_code": "22U",
+                  "factory_code": "22U",
+                  "wa_number": "WA-703J"
+                },
+                {
+                  "identity_key": "emerald-jewel-metallic",
+                  "name": "Emerald Jewel Metallic",
+                  "source_label": "Emerald Jewel Metallic",
+                  "source_color_code": "38U",
+                  "factory_code": "38U",
+                  "wa_number": "WA-215M"
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555"
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic",
+                  "name": "Bordeaux Red Metallic",
+                  "source_label": "Bordeaux Red Metallic",
+                  "source_color_code": "49U",
+                  "factory_code": "49U",
+                  "wa_number": "WA-204M"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624"
+                },
+                {
+                  "identity_key": "dark-gray-metallic",
+                  "name": "Dark Gray Metallic",
+                  "source_label": "Dark Gray Metallic",
+                  "source_color_code": "62U",
+                  "factory_code": "62U",
+                  "wa_number": "WA-805K"
+                },
+                {
+                  "identity_key": "silverstone-metallic",
+                  "name": "Silverstone Metallic",
+                  "source_label": "Silverstone Metallic",
+                  "source_color_code": "67U",
+                  "factory_code": "67U",
+                  "wa_number": "WA-994L"
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat",
+                  "name": "Red Jewel Tintcoat",
+                  "source_label": "Red Jewel Tintcoat",
+                  "source_color_code": "80U",
+                  "factory_code": "80U",
+                  "wa_number": "WA-301N",
+                  "restriction": "Extra charge; not available on LS. Only Black, Summit White, and Silverstone Metallic are otherwise printed as available on SS."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2007,
+          "coverage_status": "verified_complete_regular_and_specialty_programs",
+          "complete_regular_palette": true,
+          "availability_scope": "Complete regular ZY1 chart plus separate ZY7 and SEO solid paint programs.",
+          "limitations": [
+            "The two tone combinations are restricted to YC6 TrailBlazer LT Package 2.",
+            "The SEO chart prints no numeric color code for Yellow or Indigo Blue; no code is inferred."
+          ],
+          "program_presence_audit": [
+            {
+              "program_type": "trailblazer_regular_zy1",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                149
+              ]
+            },
+            {
+              "program_type": "trailblazer_two_tone_zy7",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                150
+              ]
+            },
+            {
+              "program_type": "trailblazer_seo_solid",
+              "status": "located_and_transcribed",
+              "pdf_pages": [
+                151,
+                152
+              ]
+            }
+          ],
+          "palettes": [
+            {
+              "program_id": "trailblazer-zy1",
+              "program_label": "TrailBlazer solid paint ZY1",
+              "variant": "TrailBlazer",
+              "application_type": "factory_regular_solid_paint",
+              "evidence_class": "exact_governing_palette",
+              "paint_scheme": "ZY1",
+              "claim_scope": "Complete TrailBlazer ZY1 exterior color chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-trailblazer",
+                "pdf_pages": [
+                  149
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 1",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY1 Paint",
+                "revision": "Published July 28, 2006"
+              },
+              "colors": [
+                {
+                  "identity_key": "sandstone-metallic",
+                  "name": "Sandstone Metallic",
+                  "source_label": "Sandstone Metallic",
+                  "source_color_code": "15U",
+                  "factory_code": "15U",
+                  "wa_number": "WA-929L"
+                },
+                {
+                  "identity_key": "graystone-metallic",
+                  "name": "Graystone Metallic",
+                  "source_label": "Graystone Metallic",
+                  "source_color_code": "16U",
+                  "factory_code": "16U",
+                  "wa_number": "WA-213M"
+                },
+                {
+                  "identity_key": "moondust-metallic",
+                  "name": "Moondust Metallic",
+                  "source_label": "Moondust Metallic",
+                  "source_color_code": "32U",
+                  "factory_code": "32U",
+                  "wa_number": "WA-407P"
+                },
+                {
+                  "identity_key": "imperial-blue-metallic",
+                  "name": "Imperial Blue Metallic",
+                  "source_label": "Imperial Blue Metallic",
+                  "source_color_code": "37U",
+                  "factory_code": "37U",
+                  "wa_number": "WA-403P",
+                  "restriction": "Available on SS."
+                },
+                {
+                  "identity_key": "black",
+                  "name": "Black",
+                  "source_label": "Black",
+                  "source_color_code": "41U",
+                  "factory_code": "41U",
+                  "wa_number": "WA-8555",
+                  "restriction": "Available on SS."
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic",
+                  "name": "Bordeaux Red Metallic",
+                  "source_label": "Bordeaux Red Metallic",
+                  "source_color_code": "49U",
+                  "factory_code": "49U",
+                  "wa_number": "WA-204M"
+                },
+                {
+                  "identity_key": "summit-white",
+                  "name": "Summit White",
+                  "source_label": "Summit White",
+                  "source_color_code": "50U",
+                  "factory_code": "50U",
+                  "wa_number": "WA-8624",
+                  "restriction": "Available on SS."
+                },
+                {
+                  "identity_key": "graphite-metallic",
+                  "name": "Graphite Metallic",
+                  "source_label": "Graphite Metallic",
+                  "source_color_code": "54U",
+                  "factory_code": "54U",
+                  "wa_number": "WA-323N"
+                },
+                {
+                  "identity_key": "silverstone-metallic",
+                  "name": "Silverstone Metallic",
+                  "source_label": "Silverstone Metallic",
+                  "source_color_code": "67U",
+                  "factory_code": "67U",
+                  "wa_number": "WA-994L",
+                  "restriction": "Available on SS."
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat",
+                  "name": "Red Jewel Tintcoat",
+                  "source_label": "Red Jewel Tintcoat",
+                  "source_color_code": "80U",
+                  "factory_code": "80U",
+                  "wa_number": "WA-301N",
+                  "restriction": "Extra charge; available on SS beginning August 2006."
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-zy7",
+              "program_label": "TrailBlazer special two tone paint ZY7",
+              "variant": "TrailBlazer",
+              "application_type": "factory_two_tone_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "ZY7",
+              "claim_scope": "Complete TrailBlazer ZY7 upper and lower paint combination chart.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-trailblazer",
+                "pdf_pages": [
+                  150
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim page 2",
+                "section": "TrailBlazer Interior and Exterior Color Availability Chart with ZY7 Paint",
+                "revision": "Published July 28, 2006"
+              },
+              "colors": [
+                {
+                  "identity_key": "imperial-blue-metallic-silverstone-metallic",
+                  "name": "Imperial Blue Metallic / Silverstone Metallic",
+                  "source_label": "Imperial Blue Metallic / Silverstone Metallic",
+                  "source_color_code": "37U/67L",
+                  "factory_code": "37U/67L",
+                  "wa_number": "WA-403P/WA-994L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "black-sandstone-metallic",
+                  "name": "Black / Sandstone Metallic",
+                  "source_label": "Black / Sandstone Metallic",
+                  "source_color_code": "41U/15L",
+                  "factory_code": "41U/15L",
+                  "wa_number": "WA-8555/WA-929L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "black-silverstone-metallic",
+                  "name": "Black / Silverstone Metallic",
+                  "source_label": "Black / Silverstone Metallic",
+                  "source_color_code": "41U/67L",
+                  "factory_code": "41U/67L",
+                  "wa_number": "WA-8555/WA-994L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic-sandstone-metallic",
+                  "name": "Bordeaux Red Metallic / Sandstone Metallic",
+                  "source_label": "Bordeaux Red Metallic / Sandstone Metallic",
+                  "source_color_code": "49U/15L",
+                  "factory_code": "49U/15L",
+                  "wa_number": "WA-204M/WA-929L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "bordeaux-red-metallic-silverstone-metallic",
+                  "name": "Bordeaux Red Metallic / Silverstone Metallic",
+                  "source_label": "Bordeaux Red Metallic / Silverstone Metallic",
+                  "source_color_code": "49U/67L",
+                  "factory_code": "49U/67L",
+                  "wa_number": "WA-204M/WA-994L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "summit-white-silverstone-metallic",
+                  "name": "Summit White / Silverstone Metallic",
+                  "source_label": "Summit White / Silverstone Metallic",
+                  "source_color_code": "50U/67L",
+                  "factory_code": "50U/67L",
+                  "wa_number": "WA-8624/WA-994L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "graphite-metallic-silverstone-metallic",
+                  "name": "Graphite Metallic / Silverstone Metallic",
+                  "source_label": "Graphite Metallic / Silverstone Metallic",
+                  "source_color_code": "54U/67L",
+                  "factory_code": "54U/67L",
+                  "wa_number": "WA-323N/WA-994L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat-sandstone-metallic",
+                  "name": "Red Jewel Tintcoat / Sandstone Metallic",
+                  "source_label": "Red Jewel Tintcoat / Sandstone Metallic",
+                  "source_color_code": "80U/15L",
+                  "factory_code": "80U/15L",
+                  "wa_number": "WA-301N/WA-929L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                },
+                {
+                  "identity_key": "red-jewel-tintcoat-silverstone-metallic",
+                  "name": "Red Jewel Tintcoat / Silverstone Metallic",
+                  "source_label": "Red Jewel Tintcoat / Silverstone Metallic",
+                  "source_color_code": "80U/67L",
+                  "factory_code": "80U/67L",
+                  "wa_number": "WA-301N/WA-994L",
+                  "restriction": "Available with YC6 TrailBlazer LT Package 2 only."
+                }
+              ]
+            },
+            {
+              "program_id": "trailblazer-seo-solid",
+              "program_label": "TrailBlazer special equipment solid paint",
+              "variant": "TrailBlazer LS fleet program",
+              "application_type": "special_equipment_option_paint",
+              "evidence_class": "qualified_exact_program_palette",
+              "paint_scheme": "SEO solid paint",
+              "claim_scope": "Complete TrailBlazer special equipment solid paint list and printed ordering restrictions.",
+              "program_restriction": "Available only on LS; requires TGK where printed, and all non sheet metal parts are gloss Black.",
+              "source_ref": {
+                "source_id": "gm-heritage-2007-chevrolet-trailblazer",
+                "pdf_pages": [
+                  151,
+                  152
+                ],
+                "printed_page_label": "TrailBlazer Color and Trim SEO pages",
+                "section": "SEO Solid Paint and SEO Options",
+                "revision": "Published July 28, 2006"
+              },
+              "colors": [
+                {
+                  "identity_key": "woodland-green",
+                  "name": "Woodland Green",
+                  "source_label": "Woodland Green",
+                  "source_color_code": "9V5",
+                  "factory_code": "9V5",
+                  "wa_number": "WA-9015",
+                  "seo_code": "9V5"
+                },
+                {
+                  "identity_key": "doeskin-tan",
+                  "name": "Doeskin Tan",
+                  "source_label": "Doeskin Tan",
+                  "source_color_code": "9V9",
+                  "factory_code": "9V9",
+                  "wa_number": "WA-9403",
+                  "seo_code": "9V9"
+                },
+                {
+                  "identity_key": "yellow",
+                  "name": "Yellow",
+                  "source_label": "Yellow",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "wa_number": "WA-9418"
+                },
+                {
+                  "identity_key": "indigo-blue",
+                  "name": "Indigo Blue",
+                  "source_label": "Indigo Blue",
+                  "source_color_code": "none",
+                  "factory_code": null,
+                  "wa_number": "WA-9792"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
